@@ -6,12 +6,13 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
 - [Temenos @ AWS Architecture Diagrams](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/Temenos-on-aws.pdf?did=wp_card&trk=wp_card)
 
-## Strategies 
+## Strategies/Appraoches
 - [Strategies for Working with Message Queues ](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
 - [Distributed architecture concepts I learned while building a large payments system](https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/)
 - [Video: Developing Asynchronous Microservices • Chris Richardson](https://www.youtube.com/watch?v=kyNL7yCvQQc)
 - [Collection of Software development Videos](https://dev.tube/)
+- [Slides Managing Data Consistency in Microservices Architecture ](https://www.slideshare.net/chris.e.richardson/saturn-2018-managing-data-consistency-in-a-microservice-architecture-using-sagas)
 
 ## Automation 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/)
@@ -33,3 +34,4 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html#AllDatabaseArtifactsAreVersionControlledWithApplicationCode)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [What’s in a CI pipeline](https://deors.wordpress.com/2019/04/19/whats-in-a-ci-pipeline/)
+- [Repository of DevOps Questions n Answers](https://github.com/bregman-arie/devops-exercises#readme)
