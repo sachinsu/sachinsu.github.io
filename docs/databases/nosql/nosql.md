@@ -2,7 +2,7 @@
 
 ## Amazon DynamoDB 
 - [Data Modelling in DynamoDB](https://www.youtube.com/watch?v=6yqfmXiZTlM)
-- [Must follow Twitter handle of Rick Houlihan] (https://twitter.com/houlihan_rick?lang=en)
+- [Must follow Twitter handle of Rick Houlihan](https://twitter.com/houlihan_rick?lang=en)
 
 
 ## Apache Cassandra 
