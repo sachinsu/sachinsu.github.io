@@ -1,5 +1,3 @@
-# Welcome to My Collection
-
 ## [About](https://in.linkedin.com/in/sachinsunkle)
 I am a coder, currently working at [@worldlineglobal](https://twitter.com/WorldlineGlobal). This is my personal site where i share helpful content (gathered or authored) Technology (and other topics) in form of static site hosted on GitHub. **Opinions expressed here are my own and not that of my employer.
 
