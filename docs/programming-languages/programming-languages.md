@@ -6,10 +6,6 @@
 ## Programming languages 
 - [Go](Go/go.md)
 
-## Databases
-- [PostgreSQL](postgresql/postgresql.md)
-- [Oracle](oracle/oracle.md)
-
 ## General 
 - [You are not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
 - [Production Launch Checklist](https://devchecklists.com/production-launch-checklist/)
