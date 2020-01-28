@@ -28,6 +28,10 @@ I also appreciate any [ideas you have](https://github.com/sachinsu/sachinsu.gith
   - [PostgreSQL](docs/databases/postgresql/postgresql.md)
   - [NoSQL](docs/databases/nosql/nosql.md)
 
+### Must follow Community Sites 
+- [Hacker news](https://news.ycombinator.com)
+- [Lobsters](https://lobste.rs)
+
 ### Disclaimer
 
 - Opinions expressed here are my own and not that of my employer. 
