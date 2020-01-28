@@ -18,6 +18,7 @@ I also appreciate any [ideas you have](https://github.com/sachinsu/sachinsu.gith
 
 - [Awesome](http://awesome.re/) remains de-facto repository covering wide range of technical topics.
 - [Concepts, Strategies etc.](docs/programming/programming.md)
+- [Testing](docs/programming/testing/testing.md)
 - [Programming languages](docs/programming-languages/programming-languages.md)
   - [Go](docs/programming-languages/go/go.md)
   - [.NET/C#](docs/programming-languages/dotnet/dotnet.md)
