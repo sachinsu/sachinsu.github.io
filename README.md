@@ -9,6 +9,8 @@ I also appreciate any [ideas you have](https://github.com/sachinsu/sachinsu.gith
 
 - [Tracfee](https://tracfee.com) One stop for Tutors to manage students, track fees. Developed using [Golang](https://golang.org) and hosted on [Netlify](https://netlify.com).
 
+- [RSS APP][https://github.com/sachinsu/rssapp] RSS Reader app, to be used in lieu of Google Reader. Developed in Python with MongoDB as database. 
+
 ### Gists
 
 - [Run OpenFaas on Windows 10 Home Edition with Minikube and Virtualbox](https://gist.github.com/sachinsu/1785ac68221d093559623dd0716696c1)
