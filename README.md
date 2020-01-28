@@ -5,7 +5,7 @@ I also appreciate any [ideas you have](https://github.com/sachinsu/sachinsu.gith
 
 ### My Work
 
-- [Tracfee](https://tracfee.com) One stop for Tutors to manage students, track fees. Developed using [Golang](https://golang.org) and hosted on [Netlify](https://netlify.com).
+- [Tracfee](https://tracfee.com) One stop for Tutors to manage students, track fees. Developed as SPA in VueJS + Quasar using API in [Golang](https://golang.org), Oracle Database and hosted on [Netlify](https://netlify.com).
 
 - [RSS APP](https://github.com/sachinsu/rssapp) RSS Reader app, to be used in lieu of Google Reader. Developed in Python with MongoDB as database.
 
