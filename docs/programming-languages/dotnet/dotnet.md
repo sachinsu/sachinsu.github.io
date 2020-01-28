@@ -11,9 +11,6 @@ Platform where i have spent most time till now.
 - [Multiple ways how to limit parallel tasks processing](https://docs.microsoft.com/en-us/archive/blogs/fkaduk/multiple-ways-how-to-limit-parallel-tasks-processing)
 - [Parallel programming in .NET](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/)
 - [Clean Architecture in .NET](https://github.com/ardalis/CleanArchitecture)
-- [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
-- [The Service Mesh: What Every Software Engineer Needs to Know about the World's Most Over-Hyped Technology](https://servicemesh.io/)
-- [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
 - [Security Code Scan in .NET](https://security-code-scan.github.io/)
 - [You’re (probably still) using HttpClient wrong and it is destabilizing your software](https://josefottosson.se/you-are-probably-still-using-httpclient-wrong-and-it-is-destabilizing-your-software/)
 
