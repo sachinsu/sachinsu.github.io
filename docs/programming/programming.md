@@ -4,6 +4,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 
 ## Architectural Case studies 
 - [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
+- [Temenos @ AWS Architecture Diagrams](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/Temenos-on-aws.pdf?did=wp_card&trk=wp_card)
 
 ## Strategies 
 - [Strategies for Working with Message Queues ](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
