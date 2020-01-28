@@ -1,6 +1,9 @@
 # Programming 
 
-Links covering programming concepts. 
+Links covering programming concepts, Architectural Approaches, Cases Studies etc.
+
+## Architectural Case studies 
+- [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
 
 ## Strategies 
 - [Strategies for Working with Message Queues ](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
