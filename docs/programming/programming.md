@@ -21,7 +21,6 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
 
 
-
 ## Automation 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/)
 - [Four bad ways to use RPA](https://www.thoughtworks.com/insights/articles/four-bad-ways-use-rpa?utm_campaign=ping-jun19&utm_medium=email&utm_source=marketo)
@@ -43,3 +42,4 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [What’s in a CI pipeline](https://deors.wordpress.com/2019/04/19/whats-in-a-ci-pipeline/)
 - [Repository of DevOps Questions n Answers](https://github.com/bregman-arie/devops-exercises#readme)
+- [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
