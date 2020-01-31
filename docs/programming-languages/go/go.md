@@ -22,6 +22,7 @@ My current Favourite Language
 - [Quick list of performance improvement targets in Go](https://stephen.sh/posts/quick-go-performance-improvements)
 - [10 things you probably don't know about Go](https://talks.golang.org/2012/10things.slide)
 - [Learn Go with test-driven development](https://github.com/quii/learn-go-with-tests)
+- [Cancellable Pipelines in Go](https://blog.golang.org/pipelines)
 
 ## Libraries, Tools
 ### Task queues
@@ -35,6 +36,7 @@ My current Favourite Language
 - [Justforfunc: Programming in Go](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw)
 - [A Channel Compendium](https://www.youtube.com/watch?v=SmoM1InWXr0)
 - [Visualize Concurrency in Go](https://divan.dev/posts/go_concurrency_visualize/)
+- [Real-world systems in Go](https://www.youtube.com/watch?v=_YK0viplIl4)
 
 ## Podcasts
 - [Go Time](https://changelog.com/gotime)
