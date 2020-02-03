@@ -29,6 +29,8 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 
 ## Tools, Libraries
 - [Awesome Design tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
+- [Regex Repository](https://ihateregex.io/)
+- [SpiderFoot, the most complete OSINT collection and reconnaissance tool](https://github.com/smicallef/spiderfoot)
 
 ## Devops/Monitoring
 - [Instrumenting Your Node/Express Application: Viewing Your Data](https://www.influxdata.com/blog/instrumenting-your-node-express-application-viewing-your-data/)
