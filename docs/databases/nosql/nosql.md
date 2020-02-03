@@ -10,3 +10,6 @@
 
 ## Apache Geode
 - [How Mastercard fights fraud with Apache Geode](https://content.pivotal.io/blog/how-mastercard-fights-fraud-with-apache-geode)
+
+## Apache Pinot
+- [Pinot- Enabling Real-time Analytics @ linkedin](https://www.slideshare.net/seunghyunlee1460/pinot-enabling-realtime-analytics-applications-linkedins-scale)

@@ -19,6 +19,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [The Service Mesh: What Every Software Engineer Needs to Know about the World's Most Over-Hyped Technology](https://servicemesh.io/)
 - [E-book kubernetes Up & Running](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
 - [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
+- [Containers - Training resources](https://container.training/)
 
 
 ## Automation 

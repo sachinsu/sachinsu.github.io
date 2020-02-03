@@ -12,6 +12,7 @@ Knowledge base around general database related topics.
 - [Criteria for Choosing Data store](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-comparison)
 - [Building Real Time Analytics APIs at Scale](https://blog.algolia.com/building-real-time-analytics-apis/)
 - [Streaming Database Changes with Debezium](https://www.youtube.com/watch?v=Qvrhh0sHCrc)
+- [Why you should pick strong consistency, whenever possible](https://cloud.google.com/blog/products/gcp/why-you-should-pick-strong-consistency-whenever-possible)
 
 ## Services and Offerings
 
