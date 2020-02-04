@@ -19,4 +19,4 @@
 - [Simple script to analyse your PostgreSQL database configuration, and give tuning advice](https://postgresqltuner.pl)
 - [Tuning PostgreSQL for High Write Throughput](https://www.slideshare.net/GrantMcAlister/tuning-postgresql-for-high-write-throughput)
 - [Postgres is a great pub/sub & job server](https://layerci.com/blog/postgres-is-the-answer/)
-- [PostgreSQL - Optimze Configuration](https://postgresqlco.nf/en/doc/param/)
+- [PostgreSQL - Optimize Configuration](https://postgresqlco.nf/en/doc/param/)
