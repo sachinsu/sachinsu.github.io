@@ -9,6 +9,7 @@
 - [PostgreSQL rocks, except when it blocks: Understanding locks](https://www.citusdata.com/blog/2018/02/15/when-postgresql-blocks/)
 - [Connection handling best practice with PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/connection-handling-best-practice-with-postgresql/ba-p/790883)
 
+
 ## Performance tuning, configuration etc.
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
 - [Database configuration for Web Services](https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/)
@@ -18,3 +19,4 @@
 - [Simple script to analyse your PostgreSQL database configuration, and give tuning advice](https://postgresqltuner.pl)
 - [Tuning PostgreSQL for High Write Throughput](https://www.slideshare.net/GrantMcAlister/tuning-postgresql-for-high-write-throughput)
 - [Postgres is a great pub/sub & job server](https://layerci.com/blog/postgres-is-the-answer/)
+- [PostgreSQL - Optimze Configuration](https://postgresqlco.nf/en/doc/param/)

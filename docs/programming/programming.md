@@ -13,6 +13,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Video: Developing Asynchronous Microservices • Chris Richardson](https://www.youtube.com/watch?v=kyNL7yCvQQc)
 - [Collection of Software development Videos](https://dev.tube/)
 - [Slides Managing Data Consistency in Microservices Architecture ](https://www.slideshare.net/chris.e.richardson/saturn-2018-managing-data-consistency-in-a-microservice-architecture-using-sagas)
+- [Reliable Microservices Data Exchange With the Outbox Pattern](https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/)
 
 ## Distributed Systems
 - [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
