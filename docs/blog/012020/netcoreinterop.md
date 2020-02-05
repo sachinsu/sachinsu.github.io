@@ -45,7 +45,7 @@ Below is approach adopted to create usable libraries across .NET framework & .NE
 
         * Create New Console Application and ensure that it is targeted at .NET Framework 4.6.1 or Higher.
         * Before consuming .NET standard library, few steps are needed since VS 2015 only has legacy support for consuming .NET core artifacts also it does not have latest version of Nuget, so lets do below,
-            * NuGet 3.6.0 or higher for VS 2015 from [NuGet's download site](https://www.nuget.org/downloads)
+            * Install NuGet 3.6.0 or higher for VS 2015 from [NuGet's download site](https://www.nuget.org/downloads)
             * Install the ".NET Standard Support for Visual Studio 2015" from [here](https://www.microsoft.com/net/download/core)
             * Open the csproj file in Text Editor and add  ```<ImplicitlyExpandDesignTimeFacades>``` tag as shown in below example,
             
