@@ -49,6 +49,7 @@ Below is approach adopted to create usable libraries across .NET framework & .NE
             * Install the ".NET Standard Support for Visual Studio 2015" from [here](https://www.microsoft.com/net/download/core)
             * Open the csproj file in Text Editor and add  ```<ImplicitlyExpandDesignTimeFacades>``` tag as shown in below example,
             
+
             ```
             <?xml version="1.0" encoding="utf-8"?>
             <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -64,7 +65,8 @@ Below is approach adopted to create usable libraries across .NET framework & .NE
                 <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
             </PropertyGroup>
             ```
-            
+
+
             Post update to file, VS 2015 will prompt to reload the project. 
             
             Now we are set to consume .NET standard library, authored in .NET Core, in this project. 
