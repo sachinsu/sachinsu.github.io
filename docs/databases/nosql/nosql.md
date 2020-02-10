@@ -13,3 +13,6 @@
 
 ## Apache Pinot
 - [Pinot- Enabling Real-time Analytics @ linkedin](https://www.slideshare.net/seunghyunlee1460/pinot-enabling-realtime-analytics-applications-linkedins-scale)
+
+## CockroachDB
+- [Case study - Migration from PostgreSQL to CockroachDB](https://www.openmymind.net/Migrating-To-CockroachDB/)
