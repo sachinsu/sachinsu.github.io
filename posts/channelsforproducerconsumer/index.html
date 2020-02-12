@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Sachin Sunkle">
+    <meta name="description" content="Sachin Sunkle&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal,golang,dotnetcore,architecture">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Channels for High performance Producer consumer implementation"/>
+<meta name="twitter:description" content="Using Channels to implement Producer Consumer pattern Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100&#43; transactions per second.
+This application is developed in .NET Framework &#43; .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s)."/>
+
+    <meta property="og:title" content="Using Channels for High performance Producer consumer implementation" />
+<meta property="og:description" content="Using Channels to implement Producer Consumer pattern Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100&#43; transactions per second.
+This application is developed in .NET Framework &#43; .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/channelsforproducerconsumer/" />
+<meta property="article:published_time" content="2020-02-12T10:25:04+05:30" />
+<meta property="article:modified_time" content="2020-02-12T10:25:04+05:30" />
+
+
+    
+      <base href="https://sachinsu.github.io/posts/channelsforproducerconsumer/">
+    
+    <title>
+  Using Channels for High performance Producer consumer implementation · SachinSunkle
+</title>
+
+    
+      <link rel="canonical" href="https://sachinsu.github.io/posts/channelsforproducerconsumer/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://sachinsu.github.io/css/coder.min.624134b411585efffadab6a91e7d0383f0d4e22ad49de3690eccbc96f528e670.css" integrity="sha256-YkE0tBFYXv/62rapHn0Dg/DU4irUneNpDsy8lvUo5nA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://sachinsu.github.io/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.64.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://sachinsu.github.io/">
+      SachinSunkle
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://gist.github.com/sachinsu">Gists</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/links/">Useful Links</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Using Channels for High performance Producer consumer implementation</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-02-12T10:25:04&#43;05:30'>
+                February 12, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="using-channels-to-implement-producer-consumer-pattern">Using Channels to implement Producer Consumer pattern</h1>
+<h2 id="background">Background</h2>
+<p>Recently, i got involved in assignment where in  an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.</p>
+<p>This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).</p>
+<h2 id="approach">Approach</h2>
+<p>The high level approach decided to perform diagnostics and subsequent corrective action(s) were,</p>
+<ul>
+<li>Benchmark code that involves Database and take corrective action</li>
+<li>Identify tasks in hot code path that could potentially be decoupled or done in fire-n-forget mode.</li>
+</ul>
+<p>For point 2 from above, some of the tasks identified were,</p>
+<ul>
+<li>Sending Email/SMS on myriad of events</li>
+<li>Integration with External Applications over HTTP</li>
+</ul>
+<p>Next task was to arrive at approach on how to perform them effectively outside of hot code path without incurring need of any additional resources (hardware or software)as far as possible. Accordingly, we had two options,</p>
+<ul>
+<li><em>Polling</em> - Periodically polling database to check for occurance of event and then performing the action.</li>
+<li><em>Event Driven</em> - Using Event notification feature of database (e.g. <a href="https://www.postgresql.org/docs/current/sql-notify.html">Listen/Notify</a> in PostgreSQL or <a href="https://docs.oracle.com/cd/B28359_01/appdev.111/b28424/adfns_cqn.htm">Change Notification</a>/<a href="https://www.oracle.com/database/technologies/advanced-queuing.html">Advanced Queuing</a> in Oracle).</li>
+</ul>
+<p>We decided to go with <em>Event driven</em> as,</p>
+<ul>
+<li>Cleaner approach that doesn&rsquo;t require perodically checking for events thus consuming a database connection and more code.</li>
+<li>We may have to have more than one such daemons to cater to different events in application.</li>
+</ul>
+<p>Post finalizing on event driven approach for gathering events, next task was to determine how to effectively send email/sms or any other HTTP requests considering that rate of arrival of events will not be matching rate of processing them. Also these</p>
+<p>So what are the options available in .NET Ecosystem, Below are the ones i am aware of,</p>
+<ul>
+<li><a href="https://devblogs.microsoft.com/dotnet/an-introduction-to-system-threading-channels/">Channels</a> - High performance implementation of In-memory producer/consumer pattern.</li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library">TPL Dataflow</a> - Super set of Channels Library. Aimed at use cases where blocks of logic are to be linked together to same or different consumers and so on. Also all these features come with additional overheads.</li>
+</ul>
+<p>For the task at hand, functionality offered by Channels is sufficient to implement in-memory producer consumer pattern.</p>
+<p>So we wrapped above event processing in a Windows service implemented as <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&amp;tabs=visual-studio">.NET Core Worker
+Service</a></p>
+<p>Generic Implementation is as follows,</p>
+<ul>
+<li>Event Generator - In practice, this class will be responsible for wiring up to receive events from database</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">using System;
+using System.Threading.Channels;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace channels {
+public class EventGenerator {
+
+    public struct StringArgs {
+        internal string Id { get; }
+        
+        internal StringArgs(string id) {
+            Id = id;
+        }
+    }
+    
+    public event EventHandler&lt;StringArgs&gt; DataChanged;
+    
+    public void GenerateLoad(int loadFactor) {
+        for (int i = 0; i &lt; loadFactor; i++) {
+            DataChanged?.Invoke(this,new StringArgs(i.ToString()));
+        }            
+    }
+    
+}
+}
+</code></pre></div><ul>
+<li>Event Consumer which uses channels to process events in parallel</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">using System;
+using System.Collections.Generic;
+using System.Threading.Channels;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace channels
+{
+
+    public class EventConsumer
+    {
+
+        private readonly System.Threading.Channels.Channel&lt;string&gt; channel;
+        private readonly int workerCount;
+        private readonly IWebService _service;
+        private readonly ILogger _logger;
+
+        public EventConsumer(ILogger&lt;EventConsumer&gt; logger, IWebService service, int maxMessageCount, int workerCount)
+        {
+            this.workerCount = workerCount;
+            this._service = service;
+            this._logger = logger;
+            this.channel = Channel.CreateBounded&lt;string&gt;(maxMessageCount);
+        }
+
+        // Using ValueTask: https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/
+        public async ValueTask SetupChannel()
+        {
+
+            var tasks = new List&lt;Task&gt;(this.workerCount);
+            for (var count = 1; count &lt; this.workerCount; count++)
+            {
+                tasks.Add(Task.Run(() =&gt; this.ProcessChannelMessage(this.channel.Reader)));
+            }
+
+            //        writer.Complete();
+
+            await this.channel.Reader.Completion;
+            await Task.WhenAll(tasks);
+        }
+
+        public async ValueTask Send(string request)
+        {
+            await this.channel.Writer.WriteAsync(request);
+        }
+
+
+        private async ValueTask ProcessChannelMessage(ChannelReader&lt;string&gt; reader)
+        {
+            //because async methods use a state machine to handle awaits
+            //it is safe to await in an infinte loop. Thank you C# compiler gods!
+
+            while (await reader.WaitToReadAsync())//if this returns false the channel is completed
+            {
+                //as a note, if there are multiple readers but only one message, only one reader
+                //wakes up. This prevents inefficent races.
+
+                string messageString;
+                while (reader.TryRead(out messageString))//yes, yes I know about &#39;out var messageString&#39;...
+                {
+                    var RequestTime = DateTime.Now;
+                    this._logger.LogDebug($&#34;The listener just read {messageString} at {RequestTime}!&#34;);
+                    await this._service.GetPage(messageString).ConfigureAwait(false);
+                    var ResponseTime = DateTime.Now;
+                    this._logger.LogDebug($&#34;The listener  done {messageString}  at {ResponseTime}!&#34;, DateTime.Now);
+                }
+            }
+        }
+    }
+
+}
+
+</code></pre></div><h2 id="summary">Summary</h2>
+<p>Other languages (notably <a href="https://tour.golang.org/concurrency/2">Channels in Go</a>) have been providing out of the box implementation for in-memory producer with concurrent, parallel consumers. With Channels, .NET Ecosystem finally has construct that can be effectively put to use for high performance, concurrent use cases.</p>
+<h3 id="useful-references">Useful References,</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/event-pattern#defining-and-raising-field-like-events">Event Pattern in C#</a></li>
+<li><a href="https://gist.github.com/AlgorithmsAreCool/b0960ce8a3400305e43fe8ffdf89b32c">Gist on using Channels</a></li>
+</ul>
+<p>Happy Coding !!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2019 - 2020
+      
+       Sachin Sunkle 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

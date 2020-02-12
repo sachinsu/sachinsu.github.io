@@ -6,9 +6,155 @@
     <description>Recent content on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Channels for High performance Producer consumer implementation</title>
+      <link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link>
+      <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid>
+      <description>Using Channels to implement Producer Consumer pattern Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://sachinsu.github.io/links/oracle/</link>
+      <pubDate>Fri, 07 Feb 2020 15:09:50 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/oracle/</guid>
+      <description>Oracle Database Performance, Best Practices  Connection Strategies for Database Applications Using High-Speed Data Loading and Rolling Window Operations with Partitioning Designing Applications for Oracle Real-World Performance Best Practices for Extreme Performance with Oracle Data Warehousing Blog on Oracle Performance troubleshooting  Videos  Real world performance video series How to:Analyze AWR Report  </description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://sachinsu.github.io/links/postgresql/</link>
+      <pubDate>Fri, 07 Feb 2020 15:08:50 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/postgresql/</guid>
+      <description>PostgreSQL Links  Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don&amp;rsquo;t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL  Performance tuning, configuration etc.  PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer Vertically scaling PostgreSQL A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration  </description>
+    </item>
+    
+    <item>
+      <title>NOSQL</title>
+      <link>https://sachinsu.github.io/links/nosql/</link>
+      <pubDate>Fri, 07 Feb 2020 15:08:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/nosql/</guid>
+      <description>NOSQL Databases Amazon DynamoDB  Data Modelling in DynamoDB Must follow Twitter handle of Rick Houlihan  Apache Cassandra  7 mistakes when using Apache Cassandra  Apache Geode  How Mastercard fights fraud with Apache Geode  Apache Pinot  Pinot- Enabling Real-time Analytics @ linkedin  </description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://sachinsu.github.io/links/mysql/</link>
+      <pubDate>Fri, 07 Feb 2020 15:07:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/mysql/</guid>
+      <description>MySQL Links  Query analytics for the day-to-day developer with MySQL 8.0  Vitess,a Distributed MySQL  Massively scaling MySQL database  </description>
+    </item>
+    
+    <item>
+      <title>Databases</title>
+      <link>https://sachinsu.github.io/links/databases/</link>
+      <pubDate>Fri, 07 Feb 2020 15:02:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/databases/</guid>
+      <description>Database Knowledge base around general database related topics.
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sachinsu.github.io/projects/</link>
+      <pubDate>Fri, 07 Feb 2020 14:29:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/projects/</guid>
+      <description>Below are some of my project(s),
+  Tracfee.com One stop for Tutors to manage students, track fees. Developed as SPA in VueJS + Quasar using API in Golang, Oracle Database and hosted on Netlify.
+  RSS APP RSS Reader app, to be used in lieu of Google Reader. Developed in Python with MongoDB as database.
+  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sachinsu.github.io/about/</link>
+      <pubDate>Fri, 07 Feb 2020 14:28:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/about/</guid>
+      <description>I am a coder, currently working at @worldlineglobal. This is my personal site where i share helpful content (gathered or authored) on Technology (and other topics).
+I appreciate any ideas/suggestions you have on how I can improve this site.</description>
+    </item>
+    
+    <item>
+      <title>Programming Languages - .NET</title>
+      <link>https://sachinsu.github.io/links/dotnet/</link>
+      <pubDate>Fri, 07 Feb 2020 14:14:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/dotnet/</guid>
+      <description>Microsoft .NET Platform where i have spent most time till now.
+General Links  Async in Depth .NET Presentations - Events in a Box Building Microservices in .NET Oracle DB &amp;amp; .NET - Optimizing Real-World Performance with Static Connection Pools Clean Code concepts and tools adapted for .NET Multiple ways how to limit parallel tasks processing Parallel programming in .NET Clean Architecture in .NET Security Code Scan in .NET You’re (probably still) using HttpClient wrong and it is destabilizing your software  Performance related  List of Awesome Resources C# Job Queues with TPL Dataflow and Failure Handling Know about Threadpool, types of Threads in CLR and changing them to improve performance  Windows Forms  Task.</description>
+    </item>
+    
+    <item>
+      <title>Programming Languages - Go</title>
+      <link>https://sachinsu.github.io/links/go/</link>
+      <pubDate>Fri, 07 Feb 2020 14:13:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/go/</guid>
+      <description>Go Language My current Favourite Language
+Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker  Libraries, Tools Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine  Videos, Talks  Best practices for Industrial Programming - by Peter Bourgon Profiling &amp;amp; Optimizing in Go Rethinking classical Concurrency patterns Justforfunc: Programming in Go A Channel Compendium Visualize Concurrency in Go Real-world systems in Go  Podcasts  Go Time  </description>
+    </item>
+    
+    <item>
+      <title>Programming - Testing</title>
+      <link>https://sachinsu.github.io/links/testing/</link>
+      <pubDate>Fri, 07 Feb 2020 14:05:07 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/testing/</guid>
+      <description>Testing Links  HTTP(S) benchmark tools, testing/debugging, &amp;amp; restAPI (RESTful)  </description>
+    </item>
+    
+    <item>
+      <title>Programming Languages</title>
+      <link>https://sachinsu.github.io/links/planguages/</link>
+      <pubDate>Fri, 07 Feb 2020 13:38:46 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/planguages/</guid>
+      <description>Programming Languages Links  Hello world in every Programming Language  General  You are not Google Production Launch Checklist Things I Learnt The Hard Way in 30 Years of Software Development A collection of (mostly) technical things every software developer should know  Startup idea Checklist System Design Primer Developer Roadmaps Why our team cancelled our move to microservices How Does HTTPS Work? RSA Encryption Explained How do you cut a monolith in half?</description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://sachinsu.github.io/links/programming/</link>
+      <pubDate>Fri, 07 Feb 2020 12:33:07 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/programming/</guid>
+      <description>Programming Links covering programming concepts, Architectural Approaches, Cases Studies etc.
+Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB Temenos @ AWS Architecture Diagrams  Strategies/Approaches  Strategies for Working with Message Queues  Break Monolith into Microservices Distributed architecture concepts I learned while building a large payments system Video: Developing Asynchronous Microservices • Chris Richardson Collection of Software development Videos Slides Managing Data Consistency in Microservices Architecture  Reliable Microservices Data Exchange With the Outbox Pattern Scaling to 100k Users  Distributed Systems  Build your own (insert technology here) The Service Mesh: What Every Software Engineer Needs to Know about the World&amp;rsquo;s Most Over-Hyped Technology E-book kubernetes Up &amp;amp; Running Class materials for a distributed systems lecture series Containers - Training resources  Automation  Automate the Boring Stuff with Python Four bad ways to use RPA  Tools, Libraries  Awesome Design tools Regex Repository SpiderFoot, the most complete OSINT collection and reconnaissance tool  Devops/Monitoring  Instrumenting Your Node/Express Application: Viewing Your Data Zabbix, Time Series Data and TimescaleDB – Zabbix Blog Infrastructure Monitoring with Postgres Tracing, Fast and Slow – roguelynn Metrics, tracing, and logging How to Create and Manage CRON Jobs Web Application Security Testing lazydocker - Docker mgmt tool for linux Evolutionary Database Design OWASP Cheat Sheet Series What’s in a CI pipeline Repository of DevOps Questions n Answers Microsoft App Inspector  </description>
+    </item>
+    
+    <item>
+      <title>Useful Links</title>
+      <link>https://sachinsu.github.io/links/</link>
+      <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/</guid>
+      <description>Below is list of Useful links for various technical topics as below,  Awesome - de-facto repository covering wide range of technical topics. Concepts, Strategies etc. Testing Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL    Must follow Community Sites  Hacker news Lobsters  </description>
+    </item>
+    
+    <item>
+      <title>Using .NET standard Assembly in .NET core and .NET Framework</title>
+      <link>https://sachinsu.github.io/posts/dotnetstandard/</link>
+      <pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/dotnetstandard/</guid>
+      <description>Using .NET standard Assembly in both .NET core and .NET Framework Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+ High availability Lightweight, High throughput (Need to support few thousand(s) active users)  Accordingly, we have been exploring developing this Web Application in .</description>
+    </item>
     
   </channel>
 </rss>
