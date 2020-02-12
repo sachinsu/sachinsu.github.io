@@ -1,7 +1,7 @@
 # Using .NET standard Assembly in both .NET core and .NET Framework
 
 ## Background
-One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as [Modular Monolith](https://www.youtube.com/watch?v=5OjqD-ow8GE). As part of it's functionality, it supports different channels like Mobiles, Terminals and Web. For the *Web* channel, there was need to develop a Web application with,
+One of the key project(s), i am working on, is developed on .NET 4.6.1. It is developed as [Modular Monolith](https://www.youtube.com/watch?v=5OjqD-ow8GE). As part of it's functionality, it supports different channels like Mobiles, Terminals and Web. For the *Web* channel, there was need to develop a Web application with,
 * High availability
 * Lightweight, High throughput (Need to support few thousand(s) active users)
 
