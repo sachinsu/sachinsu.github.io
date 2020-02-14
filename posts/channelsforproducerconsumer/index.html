@@ -129,7 +129,7 @@ This application is developed in .NET Framework &#43; .NET Core and primarily us
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              4-minute read
+              3-minute read
             </span>
           </div>
           
@@ -175,116 +175,16 @@ This application is developed in .NET Framework &#43; .NET Core and primarily us
 Service</a></p>
 <p>Generic Implementation is as follows,</p>
 <ul>
-<li>Event Generator - In practice, this class will be responsible for wiring up to receive events from database</li>
+<li>
+<p>Event Generator - In practice, this class will be responsible for wiring up to receive events from database</p>
+</li>
+<li>
+<p>Event Consumer which uses channels to process events in parallel</p>
+</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">using System;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+<script type="application/javascript" src="https://gist.github.com/sachinsu/6fcbc36e6e5cc58c7b5ba9007e276afc.js"></script>
 
-namespace channels {
-public class EventGenerator {
-
-    public struct StringArgs {
-        internal string Id { get; }
-        
-        internal StringArgs(string id) {
-            Id = id;
-        }
-    }
-    
-    public event EventHandler&lt;StringArgs&gt; DataChanged;
-    
-    public void GenerateLoad(int loadFactor) {
-        for (int i = 0; i &lt; loadFactor; i++) {
-            DataChanged?.Invoke(this,new StringArgs(i.ToString()));
-        }            
-    }
-    
-}
-}
-</code></pre></div><ul>
-<li>Event Consumer which uses channels to process events in parallel</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">using System;
-using System.Collections.Generic;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-
-namespace channels
-{
-
-    public class EventConsumer
-    {
-
-        private readonly System.Threading.Channels.Channel&lt;string&gt; channel;
-        private readonly int workerCount;
-        private readonly IWebService _service;
-        private readonly ILogger _logger;
-
-        public EventConsumer(ILogger&lt;EventConsumer&gt; logger, IWebService service, int maxMessageCount, int workerCount)
-        {
-            this.workerCount = workerCount;
-            this._service = service;
-            this._logger = logger;
-            this.channel = Channel.CreateBounded&lt;string&gt;(maxMessageCount);
-        }
-
-        // Using ValueTask: https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/
-        public async ValueTask SetupChannel()
-        {
-
-            var tasks = new List&lt;Task&gt;(this.workerCount);
-            for (var count = 1; count &lt; this.workerCount; count++)
-            {
-                tasks.Add(Task.Run(() =&gt; this.ProcessChannelMessage(this.channel.Reader)));
-            }
-
-            //        writer.Complete();
-
-            await this.channel.Reader.Completion;
-            await Task.WhenAll(tasks);
-        }
-
-        public async ValueTask Send(string request)
-        {
-            await this.channel.Writer.WriteAsync(request);
-        }
-
-
-        private async ValueTask ProcessChannelMessage(ChannelReader&lt;string&gt; reader)
-        {
-            //because async methods use a state machine to handle awaits
-            //it is safe to await in an infinte loop. Thank you C# compiler gods!
-
-            while (await reader.WaitToReadAsync())//if this returns false the channel is completed
-            {
-                //as a note, if there are multiple readers but only one message, only one reader
-                //wakes up. This prevents inefficent races.
-
-                string messageString;
-                while (reader.TryRead(out messageString))//yes, yes I know about &#39;out var messageString&#39;...
-                {
-                    var RequestTime = DateTime.Now;
-                    this._logger.LogDebug($&#34;The listener just read {messageString} at {RequestTime}!&#34;);
-                    await this._service.GetPage(messageString).ConfigureAwait(false);
-                    var ResponseTime = DateTime.Now;
-                    this._logger.LogDebug($&#34;The listener  done {messageString}  at {ResponseTime}!&#34;, DateTime.Now);
-                }
-            }
-        }
-    }
-
-}
-
-</code></pre></div><h2 id="summary">Summary</h2>
+<h2 id="summary">Summary</h2>
 <p>Other languages (notably <a href="https://tour.golang.org/concurrency/2">Channels in Go</a>) have been providing out of the box implementation for in-memory producer with concurrent, parallel consumers. With Channels, .NET Ecosystem finally has construct that can be effectively put to use for high performance, concurrent use cases.</p>
 <h3 id="useful-references">Useful References,</h3>
 <ul>
