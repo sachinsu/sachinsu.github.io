@@ -44,7 +44,7 @@
       <pubDate>Fri, 07 Feb 2020 15:07:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/mysql/</guid>
-      <description>MySQL Links  Query analytics for the day-to-day developer with MySQL 8.0  Vitess,a Distributed MySQL  Massively scaling MySQL database  </description>
+      <description>MySQL Links  Query analytics for the day-to-day developer with MySQL 8.0 Schema Change Management for MySQL  Vitess,a Distributed MySQL  Massively scaling MySQL database  </description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       
       <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>Database Knowledge base around general database related topics.
-General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems  </description>
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
     </item>
     
     <item>
