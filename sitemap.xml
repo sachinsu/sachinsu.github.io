@@ -4,8 +4,18 @@
   
   <url>
     <loc>https://sachinsu.github.io/</loc>
-    <lastmod>2020-02-12T10:25:04+05:30</lastmod>
+    <lastmod>2020-02-18T12:33:07+05:30</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/</loc>
+    <lastmod>2020-02-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/perspectives/</loc>
+    <lastmod>2020-02-18T12:33:07+05:30</lastmod>
   </url>
   
   <url>
@@ -16,12 +26,6 @@
   <url>
     <loc>https://sachinsu.github.io/posts/channelsforproducerconsumer/</loc>
     <lastmod>2020-02-12T10:25:04+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sachinsu.github.io/links/</loc>
-    <lastmod>2020-02-07T15:09:50+05:30</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -85,7 +89,7 @@
   </url>
   
   <url>
-    <loc>https://sachinsu.github.io/links/</loc>
+    <loc>https://sachinsu.github.io/links/home/</loc>
     <lastmod>2020-02-07T11:38:27+05:30</lastmod>
   </url>
   

@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SachinSunkle</title>
+    <title>Links on SachinSunkle</title>
     <link>https://sachinsu.github.io/links/</link>
-    <description>Recent content on SachinSunkle</description>
+    <description>Recent content in Links on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Feb 2020 15:09:50 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 12:33:07 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perspectives</title>
+      <link>https://sachinsu.github.io/links/perspectives/</link>
+      <pubDate>Tue, 18 Feb 2020 12:33:07 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/perspectives/</guid>
+      <description>Perspectives Section covering Business, project/programming perspectives
+ The New Business of AI (and How It’s Different From Traditional Software) Momentum vs Urgency in Software Project Management  </description>
+    </item>
     
     <item>
       <title>Oracle</title>
@@ -107,11 +117,11 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
     
     <item>
       <title>Useful Links</title>
-      <link>https://sachinsu.github.io/links/</link>
+      <link>https://sachinsu.github.io/links/home/</link>
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
-      <guid>https://sachinsu.github.io/links/</guid>
-      <description>Below is list of Useful links for various technical topics as below,  Awesome - de-facto repository covering wide range of technical topics. Concepts, Strategies etc. Testing Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL    Must follow Community Sites  Hacker news Lobsters  </description>
+      <guid>https://sachinsu.github.io/links/home/</guid>
+      <description>Below is list of Useful links for various technical topics as below,  Awesome - de-facto repository covering wide range of technical topics. Perspectives Concepts, Strategies etc. Testing Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL    Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
   </channel>
