@@ -6,10 +6,20 @@
     <description>Recent content in Posts on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Feb 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ASP.NET Core - Mind the Samesite settings</title>
+      <link>https://sachinsu.github.io/posts/samesitecookies/</link>
+      <pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/samesitecookies/</guid>
+      <description>Mind the Samesite settings Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description>
+    </item>
     
     <item>
       <title>Using Channels for High performance Producer consumer implementation</title>

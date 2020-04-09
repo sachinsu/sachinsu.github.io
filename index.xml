@@ -6,10 +6,20 @@
     <description>Recent content on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Feb 2020 12:33:07 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ASP.NET Core - Mind the Samesite settings</title>
+      <link>https://sachinsu.github.io/posts/samesitecookies/</link>
+      <pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/samesitecookies/</guid>
+      <description>Mind the Samesite settings Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description>
+    </item>
     
     <item>
       <title>Perspectives</title>
@@ -18,7 +28,7 @@
       
       <guid>https://sachinsu.github.io/links/perspectives/</guid>
       <description>Perspectives Section covering Business, project/programming perspectives
- The New Business of AI (and How It’s Different From Traditional Software) Momentum vs Urgency in Software Project Management Data Science: Reality Doesn&amp;rsquo;t Meet Expectations  </description>
+ The New Business of AI (and How It’s Different From Traditional Software) Momentum vs Urgency in Software Project Management Data Science: Reality Doesn&amp;rsquo;t Meet Expectations Quantum computing for the very curious  </description>
     </item>
     
     <item>
@@ -46,7 +56,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       <pubDate>Fri, 07 Feb 2020 15:08:50 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/postgresql/</guid>
-      <description>PostgreSQL Links  Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don&amp;rsquo;t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL  Performance tuning, configuration etc.  PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer Vertically scaling PostgreSQL A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration  </description>
+      <description>PostgreSQL Links  Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don&amp;rsquo;t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL 10 Things I Hate About PostgreSQL  Performance tuning, configuration etc.  PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer Vertically scaling PostgreSQL A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration  </description>
     </item>
     
     <item>
