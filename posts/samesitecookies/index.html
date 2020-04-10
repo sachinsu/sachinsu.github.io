@@ -11,11 +11,11 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ASP.NET Core - Mind the SameSite HTTP Cookie settings"/>
-<meta name="twitter:description" content="Mind the Samesite settings Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+<meta name="twitter:description" content="Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
 During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine."/>
 
     <meta property="og:title" content="ASP.NET Core - Mind the SameSite HTTP Cookie settings" />
-<meta property="og:description" content="Mind the Samesite settings Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+<meta property="og:description" content="Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
 During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sachinsu.github.io/posts/samesitecookies/" />
@@ -139,8 +139,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 
       <div>
         
-        <h1 id="mind-the-samesite-settings">Mind the Samesite settings</h1>
-<h2 id="background">Background</h2>
+        <h2 id="background">Background</h2>
 <p>A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.</p>
 <p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,</p>
 <ul>
@@ -186,6 +185,7 @@ services.AddAntiforgery(options =&gt;
 <ul>
 <li><a href="https://techcommunity.microsoft.com/t5/iis-support-blog/samesite-cookie-updates-in-asp-net-or-how-the-net-framework-from/ba-p/1156246">SameSite cookie updates in ASP.net, or how the .Net Framework from December changed my cookie usage. </a></li>
 <li><a href="https://techcommunity.microsoft.com/t5/iis-support-blog/changes-in-samesite-cookie-in-asp-net-core-and-how-it-impacts/ba-p/1150771">Changes in SameSite Cookie in ASP.NET/Core and How it Impacts the Browser (Specifically Chrome) </a></li>
+<li><a href="https://http203.libsyn.com/fish-scripts-special">HTTP 203 Podcast covering CORS,CORB, Samesite</a></li>
 </ul>
 <p>Happy Coding !!</p>
 

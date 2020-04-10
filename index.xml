@@ -17,7 +17,7 @@
       <pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/samesitecookies/</guid>
-      <description>Mind the Samesite settings Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+      <description>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
 During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description>
     </item>
     
