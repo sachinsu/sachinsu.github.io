@@ -84,7 +84,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       
       <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>Database Knowledge base around general database related topics.
-General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
     </item>
     
     <item>
@@ -163,7 +163,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/home/</guid>
-      <description>Below is list of Useful links for various technical topics as below,  Awesome - de-facto repository covering wide range of technical topics. Perspectives Concepts, Strategies etc. Testing Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL    Must follow Community Sites  Hacker news Lobsters  </description>
+      <description>Below is list of Useful links for various technical topics as below,  Awesome - de-facto repository covering wide range of technical topics. Awesome List of Free Learning Resources Perspectives Concepts, Strategies etc. Testing Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL    Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
     <item>
