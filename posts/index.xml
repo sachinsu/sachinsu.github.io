@@ -6,10 +6,20 @@
     <description>Recent content in Posts on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 12:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows Service with Cancelable Task</title>
+      <link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link>
+      <pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid>
+      <description>Windows Service/Daemon with Long running, Cancelable task Background Recently, we had requirement wherein a process should,
+ Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.</description>
+    </item>
     
     <item>
       <title>Optimizing  .NET Code using Benchmarks</title>
