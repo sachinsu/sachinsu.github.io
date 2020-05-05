@@ -6,10 +6,21 @@
     <description>Recent content on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimizing  .NET Code using Benchmarks</title>
+      <link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link>
+      <pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid>
+      <description>Benchmarking .NET code Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
+ Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks  What if it is possible to Benchmark code for,
+ Set of varying parameter(s) Different runtimes (.</description>
+    </item>
     
     <item>
       <title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title>
@@ -84,7 +95,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       
       <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>Database Knowledge base around general database related topics.
-General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora Interactive Book about SQL SQL Interview Questions  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
     </item>
     
     <item>

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimizing  .NET Code using Benchmarks</title>
+      <link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link>
+      <pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid>
+      <description>Benchmarking .NET code Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
+ Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks  What if it is possible to Benchmark code for,
+ Set of varying parameter(s) Different runtimes (.</description>
+    </item>
     
     <item>
       <title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title>
