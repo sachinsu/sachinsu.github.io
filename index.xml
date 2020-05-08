@@ -6,10 +6,19 @@
     <description>Recent content on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 12:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2020 15:07:27 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UI/UX</title>
+      <link>https://sachinsu.github.io/links/uiux/</link>
+      <pubDate>Fri, 08 May 2020 15:07:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/uiux/</guid>
+      <description>User Interface / User Experience Design Approach  How Stripe Designs Beautiful Websites  </description>
+    </item>
     
     <item>
       <title>Windows Service with Cancelable Task</title>
@@ -105,7 +114,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       
       <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>Database Knowledge base around general database related topics.
-General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora Interactive Book about SQL SQL Interview Questions  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora Interactive Book about SQL SQL Interview Questions  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it Analytics Academy by Segment Analytics Whitepapers by Sisense  ETL, Evolutionary Practices  Database CI/CD practices using Redshift  </description>
     </item>
     
     <item>
@@ -147,7 +156,7 @@ General Links  Async in Depth Using Async/Await in WCF or ASMX with AsyncEx .NET
       
       <guid>https://sachinsu.github.io/links/go/</guid>
       <description>Go Language My current Favourite Language
-Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency  Libraries, Tools Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels  Videos, Talks  Best practices for Industrial Programming - by Peter Bourgon Profiling &amp;amp; Optimizing in Go Rethinking classical Concurrency patterns Justforfunc: Programming in Go A Channel Compendium Visualize Concurrency in Go Real-world systems in Go Zen of Go - Ten engineering values for writing simple, readable, maintainable Go code  Code snippets  Remote service with Retries  Podcasts  Go Time  </description>
+Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency  Libraries, Tools Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels  Videos, Talks  Best practices for Industrial Programming - by Peter Bourgon Profiling &amp;amp; Optimizing in Go Rethinking classical Concurrency patterns Justforfunc: Programming in Go A Channel Compendium Visualize Concurrency in Go Real-world systems in Go Zen of Go - Ten engineering values for writing simple, readable, maintainable Go code Ultimate Go Study Guide  Code snippets  Remote service with Retries  Podcasts  Go Time  </description>
     </item>
     
     <item>
