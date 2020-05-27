@@ -6,10 +6,20 @@
     <description>Recent content in Links on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 May 2020 15:07:27 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 14:13:27 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS</title>
+      <link>https://sachinsu.github.io/links/aws/</link>
+      <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/aws/</guid>
+      <description>Useful links for deepdiving in AWS Ecosystem
+Articles  What a typical 100% Serverless Architecture looks like in AWS!  Videos, Talks  DynamoDB - Advanced Design Patterns  </description>
+    </item>
     
     <item>
       <title>UI/UX</title>
