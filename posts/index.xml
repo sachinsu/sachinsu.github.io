@@ -17,7 +17,7 @@
       <pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/usinggithubactions/</guid>
-      <description>Background The source code of [tracfee.com](https://tracfee.com is hosted on Github Private.
+      <description>Background The source code of tracfee.com is hosted on Github Private.
 At a High level, Tracfee&amp;rsquo;s Architecture involves,
  Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud  So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description>
     </item>
