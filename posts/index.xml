@@ -6,10 +6,22 @@
     <description>Recent content in Posts on SachinSunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 12:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Githug Actions for Automated Testing and Deployment</title>
+      <link>https://sachinsu.github.io/posts/usinggithubactions/</link>
+      <pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/usinggithubactions/</guid>
+      <description>Using Github Actions for deployment
+Background The source code of [tracfee.com](https://tracfee.com is hosted on Github Private.
+At a High level, Tracfee&amp;rsquo;s Architecture involves,
+ Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud  So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description>
+    </item>
     
     <item>
       <title>Windows Service with Cancelable Task</title>
