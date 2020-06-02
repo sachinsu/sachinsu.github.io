@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Sachin Sunkle">
+    <meta name="description" content="My Technical Blog">
+    <meta name="keywords" content="blog,developer,personal,golang,dotnetcore,databases,architecture,c#,.net core, Vuejs, Quasar, Oracle">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Is WebAssembly future of Web Development"/>
+<meta name="twitter:description" content="Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML&#43;CSS&#43;Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others."/>
+
+    <meta property="og:title" content="Is WebAssembly future of Web Development" />
+<meta property="og:description" content="Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML&#43;CSS&#43;Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/webassembly/" />
+<meta property="article:published_time" content="2020-06-02T10:25:04+05:30" />
+<meta property="article:modified_time" content="2020-06-02T10:25:04+05:30" />
+
+
+    
+      <base href="https://sachinsu.github.io/posts/webassembly/">
+    
+    <title>
+  Is WebAssembly future of Web Development · Sachin Sunkle
+</title>
+
+    
+      <link rel="canonical" href="https://sachinsu.github.io/posts/webassembly/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://sachinsu.github.io/css/coder.min.624134b411585efffadab6a91e7d0383f0d4e22ad49de3690eccbc96f528e670.css" integrity="sha256-YkE0tBFYXv/62rapHn0Dg/DU4irUneNpDsy8lvUo5nA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://sachinsu.github.io/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.64.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://sachinsu.github.io/">
+      Sachin Sunkle
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://gist.github.com/sachinsu">Gists</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/links/home">Useful Links</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Is WebAssembly future of Web Development</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-06-02T10:25:04&#43;05:30'>
+                June 2, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like <a href="https://reactjs.org">React</a> and <a href="https://vuejs.org">Vue</a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. <a href="https://getbootstrap.com">Bootstrap</a>. Offline Support soon came in ref: <a href="https://electronjs.org">Electron</a> and <a href="https://web.dev/progressive-web-apps/">Progressive Web Applications</a>.</p>
+<p>As a result, Javascript has become lingua franca of Web Development and is being used on server side development (<a href="https://nodejs.org">Nodejs</a>).</p>
+<p>The reason for this whole rant on history (which you are most likely to be aware of) is that latest kid on the Block could possibly challenge Monopoly of Javascript (and its ilk) at far as browsers are concerned.</p>
+<p><em><strong>Enter WebAssembly (A.K.A. WASM)</strong></em></p>
+<h2 id="webassembly">WebAssembly</h2>
+<p>As per <a href="https://en.wikipedia.org/wiki/WebAssembly">Wikipedia</a>,</p>
+<blockquote>
+<p>WebAssembly (often shortened to Wasm) is an open standard that defines a portable binary-code format for executable programs, and a corresponding textual assembly language, as well as interfaces for facilitating interactions between such programs and their host environment.</p>
+</blockquote>
+<blockquote>
+<p>WebAssembly or wasm is a low-level bytecode format for in-browser client-side scripting, evolved from JavaScript.</p>
+</blockquote>
+<p>WebAssembly executables are precompiled, hence it is possible to use a variety of programming languages to make them. This essentially means that one can use same language for Server Side as well as Client side (i.e. in browser) development like (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a> or <a href="https://golang.org/">Golang</a>).</p>
+<p>WebAssembly was announced in 2015 and has since being supported by prominent browser(s) like Chrome and Firefox.</p>
+<p>Along side browsers, many Vendors and open source communities/contributors have released libraries to make development of WebAssembly easy.  We will look at how a WebAssembly can be developed in C# and Golang.</p>
+<p><em>Note: <a href="https://github.com/appcypher/awesome-wasm-langs">All major languages</a> now support WebAssembly.</em></p>
+<h3 id="c">C#</h3>
+<p>During Microsoft Build 2020 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> event, Steve Sanderson had very good session on building WebAssembly using Blazor framework in .NET. Highly recommended to watch it.</p>
+<p>Blazor scaffolding provided with .NET core allows,</p>
+<ul>
+<li>
+<p>Blazor Server App - A Template that runs server-side inside an ASP.NET Core app and handles user interactions over a SignalR connection.</p>
+</li>
+<li>
+<p>Blazor WebAssembly App - A Template for creating a Blazor app that runs on WebAssembly.</p>
+</li>
+</ul>
+<p>Choosing Blazor WebAssembly App project type generates a project that has sample WebAssembly running. Overall, it makes development easy for any .NET developer easy since, it uses<a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-3.1">Razor</a> syntax to add C# code along with HTML. During Build, it generates assembly for C# Code. When Accessed via browser, it downloads .NET runtime for WebAssembly (~ 621 KB) and the project assembly itself apart from static content (i.e. HTML files, images etc). The default scafolding includes Bootstrap CSS and prepares the UI to be responsive.</p>
+<p>The repository referenced by Steve during presentation is available <a href="https://aka.ms/blazor-carchecker">here</a>.</p>
+<h3 id="golang">Golang</h3>
+<p><a href="https://golang.org">Go</a> has got clean, fast tooling. it produces static binaries and has superb concurrency primitives.</p>
+<p><a href="https://www.vugu.org/">Vugu</a> is an open source library that allows building a Web front-end in Go using WebAssembly. Generally static binaries are bulky and Vugu has addressed it using <a href="https://tinygo.org">TinyGo</a> compiler. Vugu is still work in progress but does work great in its current form.</p>
+<h2 id="summary">Summary</h2>
+<p>In nutshell, Concept of WebAssembly provides compelling way to have full stack development in a language of your choice. It remains to be seen how and whether it provides viable alternative to current Javascript driven ecosystem. Check out their <a href="https://www.vugu.org/doc/start">getting started</a> page.</p>
+<h3 id="useful-references">Useful References,</h3>
+<p>Happy Coding !!</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://channel9.msdn.com/Events/Build/2020/BOD104">Modern Web UI with Blazor</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2019 - 2020
+      
+       Sachin Sunkle 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
