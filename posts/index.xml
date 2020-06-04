@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Sachin Sunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Jun 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 10:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web Security Measures in .NET Applications</title>
+      <link>https://sachinsu.github.io/posts/websecurity/</link>
+      <pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/websecurity/</guid>
+      <description>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
+While all our .NET applications adhere to below guidelines,
+ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP  We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline.</description>
+    </item>
     
     <item>
       <title>Is WebAssembly future of Web Development</title>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Sachin Sunkle">
+    <meta name="description" content="My Technical Blog">
+    <meta name="keywords" content="blog,developer,personal,golang,dotnetcore,databases,architecture,c#,.net core, Vuejs, Quasar, Oracle">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web Security Measures in .NET Applications"/>
+<meta name="twitter:description" content="At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
+While all our .NET applications adhere to below guidelines,
+ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP  We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline."/>
+
+    <meta property="og:title" content="Web Security Measures in .NET Applications" />
+<meta property="og:description" content="At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
+While all our .NET applications adhere to below guidelines,
+ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP  We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/websecurity/" />
+<meta property="article:published_time" content="2020-06-04T10:25:04+05:30" />
+<meta property="article:modified_time" content="2020-06-04T10:25:04+05:30" />
+
+
+    
+      <base href="https://sachinsu.github.io/posts/websecurity/">
+    
+    <title>
+  Web Security Measures in .NET Applications · Sachin Sunkle
+</title>
+
+    
+      <link rel="canonical" href="https://sachinsu.github.io/posts/websecurity/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://sachinsu.github.io/css/coder.min.624134b411585efffadab6a91e7d0383f0d4e22ad49de3690eccbc96f528e670.css" integrity="sha256-YkE0tBFYXv/62rapHn0Dg/DU4irUneNpDsy8lvUo5nA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://sachinsu.github.io/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://sachinsu.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.64.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://sachinsu.github.io/">
+      Sachin Sunkle
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://gist.github.com/sachinsu">Gists</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://sachinsu.github.io/links/home">Useful Links</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Web Security Measures in .NET Applications</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-06-04T10:25:04&#43;05:30'>
+                June 4, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>At my current workplace, All Applications are expected to adhere to  <a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS standards</a> meant for Data protection, Access Regulation and so on.  Dedicated <a href="https://en.wikipedia.org/wiki/Information_security_operations_center">SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
+<p>While all our .NET applications adhere to below guidelines,</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-in/help/891028/asp-net-security-overview">ASP.NET Security Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/security/secure-coding-guidelines">Secure Coding Guidelines</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html">Security Guidelines by OWASP</a></li>
+</ul>
+<p>We also use tools like <a href="https://www.snyk.io/">Snyk</a> to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline. In spite of above, we do come across  vulnerabilities identified by SOC Team which we needs to be addressed quickly. SOC team uses tools such as <a href="https://portswigger.net/burp">Burp Suite</a>.</p>
+<p>This post is going to summarize such incidents reported so far (and will keep updating it). In most of these cases, These issues required additional efforts over and above those provided by library or framework. Hopefully, it will be helpful to anyone trying address such vulnerabilities.</p>
+<h3 id="cookie-path">Cookie Path</h3>
+<p>Every cookie being sent by the Web application has attributes like,</p>
+<ul>
+<li>HTTPOnly - Indicates whether a cookie is accessible by client-side script</li>
+<li>Domain - Indicates the domain to associate the cookie with</li>
+<li>Path - the virtual path to transmit with the current cookie</li>
+<li>Secure - Indicates whether cookie is sent only on Secure (HTTPS) Connections.</li>
+</ul>
+<p>OWASP has nice primer on <a href="https://owasp.org/www-chapter-london/assets/slides/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf">Cookie Security</a>.</p>
+<p>Of the above, <strong>Path</strong> attribute limits the scope of a cookie to a specific path on the server and can therefore be used to prevent unauthorized access to it from other applications on the same host.  Accordingly, SOC Team had recommended that all cookies issued by application must have path attribute set.</p>
+<p>In case of typical ASP.NET Application, there are cookies generated by .NET framework (like for Session, Anti XSRF Token and son on) and custom ones which are issued and used by Application itself.</p>
+<p>While it is fairly easy to set path for custom ones, we had to make code changes for cookies issued by .NET framework libraries. Lets take case of <a href="https://docs.microsoft.com/en-us/previous-versions/iis/6.0-sdk/ms525506(v%3Dvs.90)">Session ID</a> cookie, by default, this cookie always has root <code>/</code> as path. So how can this be changed as per the application&rsquo;s deployment settings (i.e. specific virtual directory in IIS)?</p>
+<p>We tried below,</p>
+<ul>
+<li>Step 1, try using <a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.configuration.httpcookiessection?view=netframework-4.8">httpcookies</a> section in web.config like,</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    &lt;httpCookies requireSSL=&#34;false&#34; httpOnlyCookies=&#34;true&#34;  domain=&#34;site.com/myapp&#34;/&gt;
+</code></pre></div><p>First of all, this configuration element does not allow setting <strong>Path</strong> property and even during runtime, only the <strong>Domain</strong> property is populated while issuing the cookie. So this definitely does not help address the issue.</p>
+<p>So other way is to programmatically set the path for Session Cookie. This can be done by providing custom implementation of SessionIDManager class like below,</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  public class MySessionIDManager : SessionIDManager, ISessionIDManager
+    {
+        void ISessionIDManager.SaveSessionID(HttpContext context, string id, out bool redirected, out bool cookieAdded)
+        {
+            base.SaveSessionID(context, id, out redirected, out cookieAdded);
+
+            if (cookieAdded)
+            {
+                var name = &#34;ASP.NET_SessionId&#34;;
+                var cookie = context.Response.Cookies[name];
+                // this will be possibly read from configuration
+                cookie.Path = &#34;/myapp&#34;; 
+           }
+        }
+    }
+
+</code></pre></div><p>Thanks to <a href="https://stackoverflow.com/questions/2326521/asp-net-session-cookies-specifying-the-base-domain">this</a> Stackoverflow thread for listing this approach. Application under consideration only had this particular cookie however, for all other .NET framework issued cookies, similar technique will have to be used.</p>
+<h3 id="samesite-cookie">SameSite Cookie</h3>
+<p>This is already detailed <a href="https://sachinsu.github.io/posts/samesitecookies">here</a></p>
+<h3 id="masking-of-sensitive-data">Masking of Sensitive Data</h3>
+<p>This typically involves masking the sensitive data like</p>
+<ul>
+<li>E-mail id</li>
+<li>Phone Number</li>
+<li>Credit/Debit Card Number</li>
+</ul>
+<p>It could well be used in Web Application or be received or sent as part of HTTP API.</p>
+<p>The best bet in this case is to mask it on the server side itself before sending/rendering the data in browser. Note that, in some cases, above fields are used for data binding purposes. The approach we followed in such scenario was to use Hash value of it instead of merely masking the data. We have always used <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.sha256?view=netcore-3.1">SHA256</a> or above for hashing.</p>
+<h2 id="summary">Summary</h2>
+<p>Addressing security vulnerabilities is continuous process as hackers keep on inventing new ways for breaching and exploiting weak spots. As Application Architect/Developers, we need to brace ourselves for the same.</p>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2019 - 2020
+      
+       Sachin Sunkle 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
