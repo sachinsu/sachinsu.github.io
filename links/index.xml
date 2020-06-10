@@ -6,10 +6,20 @@
     <description>Recent content in Links on Sachin Sunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 May 2020 14:13:27 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 14:13:27 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Programming Languages - Python</title>
+      <link>https://sachinsu.github.io/links/python/</link>
+      <pubDate>Sun, 07 Jun 2020 14:13:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/python/</guid>
+      <description>Python has become pervasive all throught Data Science be it Machine learning, Deep learning, Data Processing and general purpose tasks like Web Development.
+Courses, Trainings  Python for Beginners from MSDN Nice Collection of trainings per level of complexity  Articles  Getting machine learning to production A quick-and-dirty guide on how to install packages for Python  Podcasts  Talkpython  </description>
+    </item>
     
     <item>
       <title>AWS</title>
@@ -140,7 +150,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/home/</guid>
-      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Awesome List of Free Learning Resources Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C#   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS    Must follow Community Sites  Hacker news Lobsters  </description>
+      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Awesome List of Free Learning Resources Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS    Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
   </channel>
