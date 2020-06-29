@@ -5,7 +5,7 @@
     <link>https://sachinsu.github.io/</link>
     <description>Recent content on Sachin Sunkle</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sun, 07 Jun 2020 14:13:27 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -78,8 +78,8 @@ Articles  What a typical 100% Serverless Architecture looks like in AWS! Automat
       <pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid>
-      <description>Windows Service/Daemon with Long running, Cancelable task Background Recently, we had requirement wherein a process should,
- Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.</description>
+      <description>Background Recently, we had requirement wherein a process should,
+ Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .</description>
     </item>
     
     <item>
@@ -88,9 +88,9 @@ Articles  What a typical 100% Serverless Architecture looks like in AWS! Automat
       <pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid>
-      <description>Benchmarking .NET code Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
+      <description>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
  Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks  What if it is possible to Benchmark code for,
- Set of varying parameter(s) Different runtimes (.</description>
+ Set of varying parameter(s) Different runtimes (.NET Framework versions, .</description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
       <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid>
-      <description>Using Channels to implement Producer Consumer pattern Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+      <description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
 This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description>
     </item>
     
@@ -208,7 +208,7 @@ General Links  Async in Depth Using Async/Await in WCF or ASMX with AsyncEx .NET
       
       <guid>https://sachinsu.github.io/links/go/</guid>
       <description>Go Language My current Favourite Language
-Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency  Libraries, Tools  Right way to check weather  Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels Hydra - OAuth 2.</description>
+Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency Why you should be using errgroup withcontext in Golang  Libraries, Tools  Right way to check weather  Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels Hydra - OAuth 2.</description>
     </item>
     
     <item>
@@ -254,7 +254,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/posts/dotnetstandard/</guid>
-      <description>Using .NET standard Assembly in both .NET core and .NET Framework Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+      <description>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
  High availability Lightweight, High throughput (Need to support few thousand(s) active users)  Accordingly, we have been exploring developing this Web Application in .</description>
     </item>
     
