@@ -6,10 +6,20 @@
     <description>Recent content on Sachin Sunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2020 14:13:27 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 12:33:07 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resources for Online Learning</title>
+      <link>https://sachinsu.github.io/links/onlearn/</link>
+      <pubDate>Thu, 18 Jun 2020 12:33:07 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/onlearn/</guid>
+      <description>Section covering resources for Online learning etc.
+ Exploring basics of Computer Science, bit by bit Exploring basics of Distributed Systems Awesome List of Free Learning Resources Collection of online learning resources  </description>
+    </item>
     
     <item>
       <title>Programming Languages - Python</title>
@@ -255,7 +265,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/home/</guid>
-      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Awesome List of Free Learning Resources Collection of online learning resources Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
+      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Online Learning Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
     <item>
