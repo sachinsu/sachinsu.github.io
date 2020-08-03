@@ -63,6 +63,16 @@ At a High level, Tracfee&amp;rsquo;s Architecture involves,
     </item>
     
     <item>
+      <title>Artificial Intellgence, Machine Learning</title>
+      <link>https://sachinsu.github.io/links/aiml/</link>
+      <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/links/aiml/</guid>
+      <description>Useful links related from AI, ML space
+Collections  Collection of resources related to Applied ML  Free courses  Fast AI by Jeremy Howard  </description>
+    </item>
+    
+    <item>
       <title>AWS</title>
       <link>https://sachinsu.github.io/links/aws/</link>
       <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
@@ -176,7 +186,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       <pubDate>Fri, 07 Feb 2020 15:07:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/mysql/</guid>
-      <description>MySQL Links  Query analytics for the day-to-day developer with MySQL 8.0 Schema Change Management for MySQL Temporal Data tables in MariaDB  Vitess,a Distributed MySQL  Massively scaling MySQL database  </description>
+      <description>MySQL Links  Query analytics for the day-to-day developer with MySQL 8.0 Schema Change Management for MySQL Temporal Data tables in MariaDB MySQL 8.0 Indexes, Histograms, and Other Ways to Speed Up Your Queries  Vitess,a Distributed MySQL  Massively scaling MySQL database  </description>
     </item>
     
     <item>
@@ -186,7 +196,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
       
       <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>Database Knowledge base around general database related topics.
-General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora Interactive Book about SQL SQL Interview Questions Hadoop or Laptop The lightweight, distributed relational database built on SQLite Optimizing SQL Queries, Regardless of Platform How to do Data Modelling the right way Primer on Database Replication Connection pool sizing for databases  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it Analytics Academy by Segment Analytics Whitepapers by Sisense SQL Analytics Training A Beginner&amp;rsquo;s Guide to Data Engineering - 3-part series Chart types and its usage Rudder - Open source Customer Data Infrastructure DuckDB - Embeddable OLAP DBMS Data Lake - Solution Patterns Catalog of Widgets for Data Visualization  ETL, Evolutionary Practices  Database CI/CD practices using Redshift Awesome Apache Airflow A Python library for building data applications: ETL, ML, Data Pipelines, and more.</description>
+General Links  Modern SQL in databases Eventual consistency by Werner Vogels Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed Options for scaling from 1 to 100,000 tenants Amazon Aurora: design considerations for high throughput cloud-native relational databases | the morning paper NOSQL - Key Points Criteria for Choosing Data store Building Real Time Analytics APIs at Scale Streaming Database Changes with Debezium Why you should pick strong consistency, whenever possible Change Data Capture, Outbox and Event Sourcing Using Streamsets for CDC From Oracle to Other destinations Transactions in Google Spanner Things I Wished More Developers Knew About Databases MySQL Sharding at Quora Interactive Book about SQL SQL Interview Questions Hadoop or Laptop The lightweight, distributed relational database built on SQLite Optimizing SQL Queries, Regardless of Platform How to do Data Modelling the right way Primer on Database Replication Connection pool sizing for databases Some SQL tricks from Application DBA Using Outer/Cross Apply in SQL  Services and Offerings Data Analytics  List of Computational Data Analysis Workflow Systems Data Visualization framework for Python Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it Analytics Academy by Segment Analytics Whitepapers by Sisense SQL Analytics Training A Beginner&amp;rsquo;s Guide to Data Engineering - 3-part series Chart types and its usage Rudder - Open source Customer Data Infrastructure DuckDB - Embeddable OLAP DBMS Data Lake - Solution Patterns Catalog of Widgets for Data Visualization  ETL, Evolutionary Practices  Database CI/CD practices using Redshift Awesome Apache Airflow A Python library for building data applications: ETL, ML, Data Pipelines, and more.</description>
     </item>
     
     <item>
@@ -228,7 +238,7 @@ General Links  Async in Depth Using Async/Await in WCF or ASMX with AsyncEx .NET
       
       <guid>https://sachinsu.github.io/links/go/</guid>
       <description>Go Language My current Favourite Language
-Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency Why you should be using errgroup withcontext in Golang WebAssembly in Go gRPC in Go  Libraries, Tools  Right way to check weather  Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels Hydra - OAuth 2.</description>
+Articles, E-books  High performance GO Workshop Thoughts on Go performance optimization Effective Go Handling 1M websockets connections in Go  Notes on Go language Standard Go Project Layout 10 things you (probably) don&amp;rsquo;t know about Go Useful patterns in Go Interesting ways of using Go channels How i writer web services in Go Embed static file(s) in Go Executable and expose over HTTP Go Useful patterns by Roberto Clapis Strategies for Working with Message Queues Continuous build &amp;amp; Testing using Go Convey Why American Express chose Go Thoughts on Performance Optimizations in Go by Damian Gryski Quick list of performance improvement targets in Go 10 things you probably don&amp;rsquo;t know about Go Learn Go with test-driven development Cancellable Pipelines in Go Running Go binary in Docker Go for Cloud - Tips and Techniques Why and what to instrument in Go Web Apps Continuous Profiling of Go programs How I write HTTP services after eight years Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency Why you should be using errgroup withcontext in Golang WebAssembly in Go gRPC in Go Go: Discovery of the Trace Package  Libraries, Tools  Right way to check weather  Task queues  Machinery - Asynchronous task queue/job queue Bleve - Full text Search Engine Event Sourcing, pub/sub using AMQP/SQL/Channels Hydra - OAuth 2.</description>
     </item>
     
     <item>
@@ -265,7 +275,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/home/</guid>
-      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Online Learning Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
+      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Online Learning Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS   AI, Machine Learning  Machine Learning   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
     <item>
