@@ -73,13 +73,13 @@ Collections  Collection of resources related to Applied ML  Free courses  Fast A
     </item>
     
     <item>
-      <title>AWS</title>
-      <link>https://sachinsu.github.io/links/aws/</link>
+      <title>Cloud Tech</title>
+      <link>https://sachinsu.github.io/links/cloud/</link>
       <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
       
-      <guid>https://sachinsu.github.io/links/aws/</guid>
-      <description>Useful links for deep diving in AWS Ecosystem
-Articles  What a typical 100% Serverless Architecture looks like in AWS! Automating safe, hands-off deployments Containerizing legacy ASP.NET applications using AWS App2Container (A2C) Replacing web server functionality with serverless services AWS Lambda vs Cloudflare Workers Unbound  Videos, Talks  DynamoDB - Advanced Design Patterns DynamoDB - Deep Dive  </description>
+      <guid>https://sachinsu.github.io/links/cloud/</guid>
+      <description>Useful links for deep diving in various Cloud Ecosystems
+Articles (GCP)  13 sample architectures to kickstart your Google Cloud journey  Articles (AWS)  What a typical 100% Serverless Architecture looks like in AWS! Automating safe, hands-off deployments Containerizing legacy ASP.NET applications using AWS App2Container (A2C) Replacing web server functionality with serverless services AWS Lambda vs Cloudflare Workers Unbound  Videos, Talks (AWS)  DynamoDB - Advanced Design Patterns DynamoDB - Deep Dive  </description>
     </item>
     
     <item>
@@ -228,7 +228,7 @@ I appreciate any ideas/suggestions you have on how I can improve this site.</des
       
       <guid>https://sachinsu.github.io/links/dotnet/</guid>
       <description>Microsoft .NET Platform where i have spent most time till now.
-General Links  Async in Depth Using Async/Await in WCF or ASMX with AsyncEx .NET Presentations - Events in a Box Building Microservices in .NET Oracle DB &amp;amp; .NET - Optimizing Real-World Performance with Static Connection Pools Clean Code concepts and tools adapted for .NET Multiple ways how to limit parallel tasks processing Parallel programming in .NET Clean Architecture in .</description>
+General Links  What is .NET? by Scott Hanselman Async in Depth Using Async/Await in WCF or ASMX with AsyncEx .NET Presentations - Events in a Box Building Microservices in .NET Oracle DB &amp;amp; .NET - Optimizing Real-World Performance with Static Connection Pools Clean Code concepts and tools adapted for .NET Multiple ways how to limit parallel tasks processing Parallel programming in .</description>
     </item>
     
     <item>
@@ -266,7 +266,7 @@ Articles, E-books  High performance GO Workshop Thoughts on Go performance optim
       
       <guid>https://sachinsu.github.io/links/programming/</guid>
       <description>Programming Links covering programming concepts, Architectural Approaches, Cases Studies etc.
-Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB Temenos @ AWS Architecture Diagrams Architecture for Generations Uber&amp;rsquo;s Domain-Oriented Microservice Architecture  Strategies/Approaches  Strategies for Working with Message Queues  Break Monolith into Microservices Distributed architecture concepts I learned while building a large payments system Video: Developing Asynchronous Microservices • Chris Richardson Collection of Software development Videos Slides Managing Data Consistency in Microservices Architecture  Reliable Microservices Data Exchange With the Outbox Pattern Scaling to 100k Users Monolith - Modular Approach You don&amp;rsquo;t need Microservices Event Modelling - Approach Ready for changes with Hexagonal Architecture How to fix Overloaded Web server How gov.</description>
+Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB Temenos @ AWS Architecture Diagrams Architecture for Generations Uber&amp;rsquo;s Domain-Oriented Microservice Architecture  Strategies/Approaches  Rob Pike&amp;rsquo;s 5 Rules of Programming Strategies for Working with Message Queues Break Monolith into Microservices Distributed architecture concepts I learned while building a large payments system Video: Developing Asynchronous Microservices • Chris Richardson Collection of Software development Videos Slides Managing Data Consistency in Microservices Architecture  Reliable Microservices Data Exchange With the Outbox Pattern Scaling to 100k Users Monolith - Modular Approach You don&amp;rsquo;t need Microservices Event Modelling - Approach Ready for changes with Hexagonal Architecture How to fix Overloaded Web server How gov.</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@ Architectural Case studies  Temenos Serverless banking at Scale @ AWS using CQRS
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/links/home/</guid>
-      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Online Learning Perspectives Concepts, Strategies etc. Testing UI/UX Programming languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud  AWS   AI, Machine Learning  Machine Learning   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
+      <description>Below is list of Curated links for various technical topics,  Awesome - de-facto repository covering wide range of technical topics. Online Learning Perspectives Programming Concepts, Strategies etc. Testing UI/UX Languages  Go .NET/C# Python   Databases  MySQL Oracle PostgreSQL NoSQL   Cloud Tech AI, Machine Learning  Machine Learning   General Purpose tools  Must follow Community Sites  Hacker news Lobsters  </description>
     </item>
     
     <item>
