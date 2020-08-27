@@ -5,8 +5,189 @@
         <description>Recent content in Posts on Sachin Sunkle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 04 Jun 2020 10:25:04 +0530</lastBuildDate>
+        <lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate>
         <atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Trobleshooting TCP Connection request time outs</title>
+            <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
+            <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
+            <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
+Simplified deployment Architecture is as below,
+  High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.</p>
+<p>Simplified deployment Architecture is as below,</p>
+<figure>
+    <img src="/images/conntimeoutarch.png"/> <figcaption>
+            <h4>High Level Architecture</h4>
+        </figcaption>
+</figure>
+
+<p>Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.</p>
+<p>Team is experienced in developing and running .NET Apps, but they needed help to diagnose and fix &ldquo;Connection request timed out&rdquo; exceptions being thrown while connecting to backend database.</p>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>Host of .NET Applications (Web Applications, Web APIs) connect to Oracle Database. Each of them use <a href="https://www.oracle.com/database/technologies/appdev/dotnet/odp.html">ODP.NET</a>. ODP.NET maintains connection pool per Application domain (Database resident Connection pool is not used). Some of these applications receive high number of requests per second compared to others.</p>
+<p><code>Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out....</code> has been reported randomly which results in failure of business transactions. ODP.NET provides extensive trace and along with above trace also contains <code>OracleInternal.Network.NetworkException (0x80004005): Network Transport: TCP transport address connect failure ---&gt; System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</code></p>
+<p>Specifically, Applications, receiving less traffic, were reporting it often compared to those with high traffic.</p>
+<h2 id="approach">Approach</h2>
+<ul>
+<li>Simulate the Exception in Test Environment - We decided to try and simulate this exception in a Test Environment. Test environment is scaled down (50%) compared to production. Random Exceptions in production could not be simulated due to lack of Test Automation. for example, In Production, each server receives traffic for multiple HTTP End points whereas in Test environment, load testing was being done only against Single Application.</li>
+</ul>
+<p>This was like a end of the road since simulation would have greatly helped in diagnosing the issue. However, the show must go on so we decided to,</p>
+<ul>
+<li>
+<p>Check online documentation regarding this exception,</p>
+<ul>
+<li>
+<p>&ldquo;Pooled&rdquo; or &ldquo;Non-pooled&rdquo; Connection - Whenever, ODP.NET raises &ldquo;..timed out&rdquo; error, it diffrentiates the same to indicate whether error is due to delay in retrieving connection from pool or if it is due to delay from the database server (Ref: <a href="https://docs.oracle.com/en/database/oracle/oracle-data-access-components/19.3/odpnt/featConnecting.html#GUID-1152D13D-464C-4FE7-9949-32FCA9572B59">Here</a>). From this, it was clear that issue is clearly due to delay in obtaining response from database server.While this was happening , Database server (8 CPU Core box) was reporting less than 50% CPU Usage but it still had large number of inactive sessions originated from IIS Servers.</p>
+</li>
+<li>
+<p>Since the exception was reported frequently in low traffic applications, it was decided to track and verify the same on firewall and database server,</p>
+<ul>
+<li>
+<p>Firewall - Firewall had TCP Timeout of 30 minutes and  maintains detailed log of sessions. Quick analysis of it revealed that,</p>
+<ul>
+<li>Production Environment - Unusually high number of sessions were being destroyed due to &ldquo;Age out&rdquo; (i.e. time out)</li>
+<li>Test Environment - No abnormal activity was reported. Most probably because of differences in traffic.</li>
+</ul>
+</li>
+<li>
+<p>Database Server - Listener Log on Oracle Database server did not had any log entry for request at the precise time when Application(s) had reported Exception.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Next is to check settings in Application for connectivity with Oracle. Though ODP.NET does not have any direct  &ldquo;Time out&rdquo; or &ldquo;Time to live&rdquo; settings, it does provide few parameters that can influence it,</p>
+<ul>
+<li>&ldquo;Connection Lifetime&rdquo; - ODP.NET uses this whenever Connection is closed and disposed by the Application. It will be destroyed (after maintaining number of connections as per &ldquo;Min Pool Size&rdquo;)  if it has exceeded life time. For whatever reasons, this was set to unusually high duration (i.e. 90000 seconds).</li>
+<li>&ldquo;Connection Timeout&rdquo; - Period for which ODP.NET waits for the connection to be made available. This was set to 60 Seconds.</li>
+</ul>
+</li>
+<li>
+<p>Oracle has articles titled &ldquo;ODP-1000 &ldquo;Connection Request Timed Out&rdquo; Explained&rdquo; and &ldquo;Resolving Problems with Connection Idle Timeout With Firewall (Doc ID 257650.1)&rdquo; where it primarily recommends measures for tuning Application as well as database.</p>
+</li>
+</ul>
+<p>On the basis of above, it was decided to modify the code for below,</p>
+<ul>
+<li>
+<p>Thorough code review to verify that every ODP.NET Project is closed/disposed.</p>
+</li>
+<li>
+<p>Upgrade ODP.NET to latest version (v19.8.0 as of this writing)</p>
+</li>
+<li>
+<p>Turn &ldquo;KeepAlive&rdquo; while connecting to database</p>
+</li>
+<li>
+<p>Leverage ODP.NET tracing in case of exception</p>
+</li>
+<li>
+<p>Modify the connection lifetime to be less than time out at firewall and increase the &ldquo;Time out&rdquo; period.</p>
+</li>
+<li>
+<p>Introduce Retry functionality using Excellent <a href="https://github.com/App-vNext/Polly">Polly</a> library with exponential back-off.</p>
+<p><code>
+<iframe src="//carbon.now.sh/embed/d3888ab4418b937a650e880ec4682653?filename=extensions.cs"
+    style="transform:scale(0.9); width:1024px; height:473px; border:0; overflow:hidden;"
+    sandbox="allow-scripts allow-same-origin">
+</iframe>
+</code></p>
+</li>
+</ul>
+<p>These changes have been deployed to production and so far % of &ldquo;Connection Request Timed out&rdquo; errors have gone down significantly.</p>
+</li>
+</ul>
+<h2 id="wrap-up">Wrap up</h2>
+<p>Some key areas of focus are,</p>
+<ul>
+<li>For a distributed system, Always validate assumptions by dignosing end to end.</li>
+<li>Plan to have test automation readyness to simulate production like load.</li>
+<li>Currently, Pool settings across applications is very High.Be mindful of <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adfns/connection_strategies.html">Connection Storms</a></li>
+</ul>
+<p>Happy Troubleshooting !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Tool to mass DM followers on Twitter in Go</title>
+            <link>https://sachinsu.github.io/posts/massdmgolang/</link>
+            <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
+            <description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
+This is an attempt to write CLI tool in Golang in response to it.
+For detailed requirements, refer here
+Approach In Brief,
+  CLI should,
+ accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>I recently came across bounty by <a href="https://twitter.com/balajis/status/1271945241881268224?s=20">Balaji Srinivasan</a> to send Direct Message to all twitter followers. <em>Currently, i do not intend to participate in bounty and this is mere exercise.</em></p>
+<p>This is an attempt to write CLI tool in <a href="https://golang.org">Golang</a> in response to it.</p>
+<p>For detailed requirements, refer <a href="https://github.com/balajis/twitter-export">here</a></p>
+<h2 id="approach">Approach</h2>
+<p>In Brief,</p>
+<ul>
+<li>
+<p>CLI should,</p>
+<ul>
+<li>accept arguments like Twitter API Key,Auth token, DM Message</li>
+<li>Download all followers (with profile details)</li>
+<li>Rank them by Criteria (e.g. Location)</li>
+<li>Send each follower a DM with provided message (upto daily DM Limit)</li>
+<li>be easy to use and maintain</li>
+</ul>
+</li>
+<li>
+<p>Notes,</p>
+<ul>
+<li>Due to Daily DM Limit, Follower details will have to be persisted alongside flag indicating if DM has been sent. SQLIte is used from simplicity perspective.</li>
+<li>There should be a scheduled job that will send the DM upto daily DM Limit. At the same time, it needs to refetch any new followers and push them in the flow (reconcile).</li>
+<li>Potentially, this could be extended to other social media providers other than twitter.</li>
+<li>Milestones,
+<ul>
+<li>Create code structure
+<ul>
+<li>Plan is to have separation between CLI &amp; have twitter as go package</li>
+</ul>
+</li>
+<li>Accept Arguments and Connect to Twitter</li>
+<li>Study and complete follower retrieval</li>
+<li>Ranking of followers</li>
+<li>Persisting followers</li>
+<li>Sending DM upto Daily limit</li>
+</ul>
+</li>
+<li>Rules,
+<ul>
+<li>Use golang&rsquo;s in-built packages as much as possible</li>
+<li>Every milestone to have associated Unit test cases</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="current-status">Current Status</h2>
+<ul>
+<li>The code is ready and functionality to retrieve followers and saving in local DB is tested. Code to send DM is not yet tested as it will require setting up dummy twitter account.</li>
+</ul>
+<h2 id="roadmap">Roadmap</h2>
+<ul>
+<li>In addition to CLI, Expose the utility as responsive Web Application</li>
+<li>Possibly extend this to social media platforms other than <a href="https://twitter.com">Twitter</a></li>
+</ul>
+<p>Have a look at code on <a href="https://github.com/sachinsu/twitterexport">Github</a> and let me know what you think.</p>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content>
+        </item>
         
         <item>
             <title>Web Security Measures in .NET Applications</title>
@@ -99,7 +280,7 @@ While all our .NET applications adhere to below guidelines,
 <p>WebAssembly (often shortened to Wasm) is an open standard that defines a portable binary-code format for executable programs, and a corresponding textual assembly language, as well as interfaces for facilitating interactions between such programs and their host environment.</p>
 </blockquote>
 <blockquote>
-<p>WebAssembly or wasm is a low-level bytecode format for in-browser client-side scripting, evolved from JavaScript.</p>
+<p>WebAssembly or wasm is a low-level bytecode format for in-browser client-side scripting, evolved from JavaScript. It is <a href="https://evilmartians.com/chronicles/hands-on-webassembly-try-the-basics">intermidiate representation</a>(IR) where IR is transformed into machine instructions for the client architecture by browser.</p>
 </blockquote>
 <p>WebAssembly executables are precompiled, hence it is possible to use a variety of programming languages to make them. This essentially means that one can use same language for Server Side as well as Client side (i.e. in browser) development like (<a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a> or <a href="https://golang.org/">Golang</a>).</p>
 <p>WebAssembly was announced in 2015 and has since being supported by prominent browser(s) like Chrome and Firefox.</p>

@@ -4,8 +4,73 @@
   
   <url>
     <loc>https://sachinsu.github.io/</loc>
-    <lastmod>2020-06-18T12:33:07+05:30</lastmod>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/.net/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/firewall/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/oracle/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/polly/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/tcp/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/connectiontimeouts/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/api/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/go/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/sqlite/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/massdmgolang/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/twitter/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
   </url>
   
   <url>
@@ -24,17 +89,27 @@
   </url>
   
   <url>
-    <loc>https://sachinsu.github.io/posts/</loc>
-    <lastmod>2020-06-04T10:25:04+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sachinsu.github.io/posts/websecurity/</loc>
     <lastmod>2020-06-04T10:25:04+05:30</lastmod>
   </url>
   
   <url>
+    <loc>https://sachinsu.github.io/tags/c#/</loc>
+    <lastmod>2020-06-02T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/golang/</loc>
+    <lastmod>2020-06-02T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sachinsu.github.io/posts/webassembly/</loc>
+    <lastmod>2020-06-02T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/webassembly/</loc>
     <lastmod>2020-06-02T10:25:04+05:30</lastmod>
   </url>
   
@@ -81,6 +156,16 @@
   <url>
     <loc>https://sachinsu.github.io/links/tools/</loc>
     <lastmod>2020-02-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/.net-core/</loc>
+    <lastmod>2020-02-12T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/channels/</loc>
+    <lastmod>2020-02-12T10:25:04+05:30</lastmod>
   </url>
   
   <url>
@@ -164,10 +249,6 @@
   
   <url>
     <loc>https://sachinsu.github.io/series/</loc>
-  </url>
-  
-  <url>
-    <loc>https://sachinsu.github.io/tags/</loc>
   </url>
   
 </urlset>
