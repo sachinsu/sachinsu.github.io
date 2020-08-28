@@ -72,31 +72,19 @@ Simplified deployment Architecture is as below,
 </ul>
 <p>On the basis of above, it was decided to modify the code for below,</p>
 <ul>
-<li>
-<p>Thorough code review to verify that every ODP.NET Project is closed/disposed.</p>
-</li>
-<li>
-<p>Upgrade ODP.NET to latest version (v19.8.0 as of this writing)</p>
-</li>
-<li>
-<p>Turn &ldquo;KeepAlive&rdquo; while connecting to database</p>
-</li>
-<li>
-<p>Leverage ODP.NET tracing in case of exception</p>
-</li>
-<li>
-<p>Modify the connection lifetime to be less than time out at firewall and increase the &ldquo;Time out&rdquo; period.</p>
-</li>
-<li>
-<p>Introduce Retry functionality using Excellent <a href="https://github.com/App-vNext/Polly">Polly</a> library with exponential back-off.</p>
+<li>Thorough code review to verify that every ODP.NET Project is closed/disposed.</li>
+<li>Upgrade ODP.NET to latest version (v19.8.0 as of this writing)</li>
+<li>Turn &ldquo;KeepAlive&rdquo; while connecting to database</li>
+<li>Leverage ODP.NET tracing in case of exception</li>
+<li>Modify the connection lifetime to be less than time out at firewall and increase the &ldquo;Time out&rdquo; period.</li>
+<li>Introduce Retry functionality using Excellent <a href="https://github.com/App-vNext/Polly">Polly</a> library with exponential back-off.</li>
+</ul>
 <p><code>
 <iframe src="//carbon.now.sh/embed/d3888ab4418b937a650e880ec4682653?filename=extensions.cs"
     style="transform:scale(0.9); width:1024px; height:473px; border:0; overflow:hidden;"
     sandbox="allow-scripts allow-same-origin">
 </iframe>
 </code></p>
-</li>
-</ul>
 <p>These changes have been deployed to production and so far % of &ldquo;Connection Request Timed out&rdquo; errors have gone down significantly.</p>
 </li>
 </ul>
@@ -105,7 +93,8 @@ Simplified deployment Architecture is as below,
 <ul>
 <li>For a distributed system, Always validate assumptions by dignosing end to end.</li>
 <li>Plan to have test automation readyness to simulate production like load.</li>
-<li>Currently, Pool settings across applications is very High.Be mindful of <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adfns/connection_strategies.html">Connection Storms</a></li>
+<li>Monitoring the behavior end to end using logs.</li>
+<li>Currently, Pool settings across applications is not optimal going by Oracle Real world Guidelines, also be mindful of <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adfns/connection_strategies.html">Connection Storms</a></li>
 </ul>
 <p>Happy Troubleshooting !!</p>
 <hr>
