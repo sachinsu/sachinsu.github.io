@@ -1,23 +1,6 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on Sachin Sunkle</title>
-        <link>https://sachinsu.github.io/posts/</link>
-        <description>Recent content in Posts on Sachin Sunkle</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate>
-        <atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>Trobleshooting TCP Connection request time outs</title>
-            <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
-            <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
-            <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Trobleshooting TCP Connection request time outs</title><link>https://sachinsu.github.io/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid><description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
 Simplified deployment Architecture is as below,
-  High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+High Level Architecture Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.</p>
 <p>Simplified deployment Architecture is as below,</p>
 <figure>
@@ -100,22 +83,12 @@ Simplified deployment Architecture is as below,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Tool to mass DM followers on Twitter in Go</title>
-            <link>https://sachinsu.github.io/posts/massdmgolang/</link>
-            <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
-            <description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
+]]></content></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
 This is an attempt to write CLI tool in Golang in response to it.
 For detailed requirements, refer here
 Approach In Brief,
-  CLI should,
- accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+CLI should,
+accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>I recently came across bounty by <a href="https://twitter.com/balajis/status/1271945241881268224?s=20">Balaji Srinivasan</a> to send Direct Message to all twitter followers. <em>Currently, i do not intend to participate in bounty and this is mere exercise.</em></p>
 <p>This is an attempt to write CLI tool in <a href="https://golang.org">Golang</a> in response to it.</p>
 <p>For detailed requirements, refer <a href="https://github.com/balajis/twitter-export">here</a></p>
@@ -175,19 +148,9 @@ Approach In Brief,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Web Security Measures in .NET Applications</title>
-            <link>https://sachinsu.github.io/posts/websecurity/</link>
-            <pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/websecurity/</guid>
-            <description>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
+]]></content></item><item><title>Web Security Measures in .NET Applications</title><link>https://sachinsu.github.io/posts/websecurity/</link><pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/websecurity/</guid><description>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
 While all our .NET applications adhere to below guidelines,
- ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP  We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline.</description>
-            <content type="html"><![CDATA[<p>At my current workplace, All Applications are expected to adhere to  <a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS standards</a> meant for Data protection, Access Regulation and so on.  Dedicated <a href="https://en.wikipedia.org/wiki/Information_security_operations_center">SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
+ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline.</description><content type="html"><![CDATA[<p>At my current workplace, All Applications are expected to adhere to  <a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS standards</a> meant for Data protection, Access Regulation and so on.  Dedicated <a href="https://en.wikipedia.org/wiki/Information_security_operations_center">SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
 <p>While all our .NET applications adhere to below guidelines,</p>
 <ul>
 <li><a href="https://support.microsoft.com/en-in/help/891028/asp-net-security-overview">ASP.NET Security Overview</a></li>
@@ -249,17 +212,7 @@ While all our .NET applications adhere to below guidelines,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Is WebAssembly future of Web Development</title>
-            <link>https://sachinsu.github.io/posts/webassembly/</link>
-            <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/webassembly/</guid>
-            <description>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.</description>
-            <content type="html"><![CDATA[<p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like <a href="https://reactjs.org">React</a> and <a href="https://vuejs.org">Vue</a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. <a href="https://getbootstrap.com">Bootstrap</a>. Offline Support soon came in ref: <a href="https://electronjs.org">Electron</a> and <a href="https://web.dev/progressive-web-apps/">Progressive Web Applications</a>.</p>
+]]></content></item><item><title>Is WebAssembly future of Web Development</title><link>https://sachinsu.github.io/posts/webassembly/</link><pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/webassembly/</guid><description>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.</description><content type="html"><![CDATA[<p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like <a href="https://reactjs.org">React</a> and <a href="https://vuejs.org">Vue</a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. <a href="https://getbootstrap.com">Bootstrap</a>. Offline Support soon came in ref: <a href="https://electronjs.org">Electron</a> and <a href="https://web.dev/progressive-web-apps/">Progressive Web Applications</a>.</p>
 <p>As a result, Javascript has become lingua franca of Web Development and is being used on server side development (<a href="https://nodejs.org">Nodejs</a>).</p>
 <p>The reason for this whole rant on history (which you are most likely to be aware of) is that latest kid on the Block could possibly challenge Monopoly of Javascript (and its ilk) at far as browsers are concerned.</p>
 <p><em><strong>Enter WebAssembly (A.K.A. WASM)</strong></em></p>
@@ -307,19 +260,9 @@ While all our .NET applications adhere to below guidelines,
 </li>
 </ol>
 </section>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Using Github Actions for Automated Testing and Deployment</title>
-            <link>https://sachinsu.github.io/posts/usinggithubactions/</link>
-            <pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/usinggithubactions/</guid>
-            <description>Background The source code of tracfee.com is hosted on Github Private.
+]]></content></item><item><title>Using Github Actions for Automated Testing and Deployment</title><link>https://sachinsu.github.io/posts/usinggithubactions/</link><pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/usinggithubactions/</guid><description>Background The source code of tracfee.com is hosted on Github Private.
 At a High level, Tracfee&amp;rsquo;s Architecture involves,
- Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud  So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>The source code of <a href="https://tracfee.com">tracfee.com</a> is hosted on Github Private.</p>
 <p>At a High level, Tracfee&rsquo;s Architecture involves,</p>
 <ul>
@@ -369,18 +312,8 @@ At a High level, Tracfee&amp;rsquo;s Architecture involves,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Windows Service with Cancelable Task</title>
-            <link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link>
-            <pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid>
-            <description>Background Recently, we had requirement wherein a process should,
- Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .</description>
-            <content type="html"><![CDATA[<h3 id="background">Background</h3>
+]]></content></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>Background Recently, we had requirement wherein a process should,
+Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .</description><content type="html"><![CDATA[<h3 id="background">Background</h3>
 <p>Recently, we had requirement wherein a process should,</p>
 <ul>
 <li>Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running.</li>
@@ -420,19 +353,9 @@ At a High level, Tracfee&amp;rsquo;s Architecture involves,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Optimizing  .NET Code using Benchmarks</title>
-            <link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link>
-            <pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid>
-            <description>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
- Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks  What if it is possible to Benchmark code for,
- Set of varying parameter(s) Different runtimes (.NET Framework versions, .</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content></item><item><title>Optimizing .NET Code using Benchmarks</title><link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link><pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid><description>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
+Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks What if it is possible to Benchmark code for,
+Set of varying parameter(s) Different runtimes (.NET Framework versions, .</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,</p>
 <ul>
 <li>Performance Testing - Visual Studio Load Tests or Third party tools like  <a href="https://locust.io/">Locust</a>, <a href="https://github.com/tsenart/vegeta">Vegeta</a>, <a href="https://gatling.io/">Gatling</a> etc.</li>
@@ -506,18 +429,8 @@ At a High level, Tracfee&amp;rsquo;s Architecture involves,
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title>
-            <link>https://sachinsu.github.io/posts/samesitecookies/</link>
-            <pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/samesitecookies/</guid>
-            <description>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
-During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content></item><item><title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title><link>https://sachinsu.github.io/posts/samesitecookies/</link><pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/samesitecookies/</guid><description>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.</p>
 <p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,</p>
 <ul>
@@ -569,18 +482,8 @@ services.AddAntiforgery(options =&gt;
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Using Channels for High performance Producer consumer implementation</title>
-            <link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link>
-            <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid>
-            <description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
-This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content></item><item><title>Using Channels for High performance Producer consumer implementation</title><link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link><pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid><description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>Recently, i got involved in assignment where in  an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.</p>
 <p>This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).</p>
 <h2 id="approach">Approach</h2>
@@ -640,18 +543,8 @@ Service</a></p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Using .NET standard Assembly in .NET core and .NET Framework</title>
-            <link>https://sachinsu.github.io/posts/dotnetstandard/</link>
-            <pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate>
-            
-            <guid>https://sachinsu.github.io/posts/dotnetstandard/</guid>
-            <description>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
- High availability Lightweight, High throughput (Need to support few thousand(s) active users)  Accordingly, we have been exploring developing this Web Application in .</description>
-            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content></item><item><title>Using .NET standard Assembly in .NET core and .NET Framework</title><link>https://sachinsu.github.io/posts/dotnetstandard/</link><pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/dotnetstandard/</guid><description>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+High availability Lightweight, High throughput (Need to support few thousand(s) active users) Accordingly, we have been exploring developing this Web Application in .</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as <a href="https://www.youtube.com/watch?v=5OjqD-ow8GE">Modular Monolith</a>. As part of it&rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the <em>Web</em> channel, there was need to develop a Web application with,</p>
 <ul>
 <li>High availability</li>
@@ -748,8 +641,4 @@ This will generate <code>&lt;name&gt;1.0.0.nupkg</code> package in bin\debug fol
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content>
-        </item>
-        
-    </channel>
-</rss>
+]]></content></item></channel></rss>
