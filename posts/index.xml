@@ -135,9 +135,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 </li>
 </ul>
 <h2 id="current-status">Current Status</h2>
-<ul>
-<li>The code is ready and functionality to retrieve followers and saving in local DB is tested. Code to send DM is not yet tested as it will require setting up dummy twitter account.</li>
-</ul>
+<p>The code is ready and functionality to retrieve followers and saving in local DB is tested. Code to send DM is not yet tested as it will require setting up dummy twitter account.</p>
 <h2 id="roadmap">Roadmap</h2>
 <ul>
 <li>In addition to CLI, Expose the utility as responsive Web Application</li>
