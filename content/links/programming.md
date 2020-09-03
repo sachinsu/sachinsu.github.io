@@ -35,6 +35,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Benefits of Message Queues](https://aws.amazon.com/message-queue/benefits/)
 - [Reasons to use Message Queues](https://stackify.com/message-queues-12-reasons/)
 - [About Structure of Design document](https://www.industrialempathy.com/posts/design-docs-at-google/)
+- [Important Aspects about Circuit breaker from Shopify](https://engineering.shopify.com/blogs/engineering/circuit-breaker-misconfigured)
 
 ## Training
 
@@ -63,6 +64,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Regex Repository](https://ihateregex.io/)
 - [SpiderFoot, the most complete OSINT collection and reconnaissance tool](https://github.com/smicallef/spiderfoot)
 - [Cloud Architecture Diagrams](https://cloudcraft.co)
+- [Free Online Cloud Architecture Diagram Tool](https://www.cloudskew.com/)
 - [Online Flowcharts, UML diagrams](https://www.draw.io/)
 - [Figma - Design and prototype builder](https://www.figma.com/)
 - [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
