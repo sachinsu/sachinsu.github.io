@@ -17,6 +17,8 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Containerizing legacy ASP.NET applications using AWS App2Container (A2C)](https://aws.amazon.com/blogs/modernizing-with-aws/containerizing-legacy-asp-net-applications-using-aws-app2container-a2c/)
 - [Replacing web server functionality with serverless services](https://aws.amazon.com/blogs/compute/replacing-web-server-functionality-with-serverless-services/)
 - [AWS Lambda vs Cloudflare Workers Unbound](https://blog.cloudflare.com/introducing-workers-unbound/)
+- [One line Explaination for each of AWS Services](https://adayinthelifeof.nl/2020/05/20/aws.html)
+
 
 ### Videos, Talks (AWS)
 

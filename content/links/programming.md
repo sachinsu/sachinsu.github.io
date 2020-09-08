@@ -36,6 +36,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Reasons to use Message Queues](https://stackify.com/message-queues-12-reasons/)
 - [About Structure of Design document](https://www.industrialempathy.com/posts/design-docs-at-google/)
 - [Important Aspects about Circuit breaker from Shopify](https://engineering.shopify.com/blogs/engineering/circuit-breaker-misconfigured)
+- [CRDTs for Synchronization](https://github.com/jlongster/crdt-example-app)
 
 ## Training
 
