@@ -57,6 +57,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/)
 - [Four bad ways to use RPA](https://www.thoughtworks.com/insights/articles/four-bad-ways-use-rpa?utm_campaign=ping-jun19&utm_medium=email&utm_source=marketo)
 - [Data Science at the Command line](https://www.datascienceatthecommandline.com)
+- [RobotFramework - Open source Test Automation and RPA](https://robotframework.org/)
 
 ## Tools, Libraries
 

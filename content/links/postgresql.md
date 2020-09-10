@@ -32,6 +32,7 @@ draft: false
 - [PostgreSQL - Optimize Configuration](https://postgresqlco.nf/en/doc/param/)
 /9275132/real-life-example-when-to-use-outer-cross-apply-in-sql/9275865#9275865)
 - [Be careful with CTE in PostgreSQL](https://hakibenita.com/be-careful-with-cte-in-postgre-sql)
+- [PgBadger - A fast PostgreSQL Log Analyzer](https://github.com/darold/pgbadger)
 
 ## Interesting Extensions/Products
 
