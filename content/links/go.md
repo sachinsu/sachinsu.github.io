@@ -46,6 +46,7 @@ My current Favourite Language
 - [Golang style guide by Uber](https://github.com/uber-go/guide/blob/master/style.md)
 - [ORM to Model and Traversal of Data as a Graph structure](https://entgo.io/)
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)
+- [Visualize call graph of a Go program using dot (Graphviz)](https://ofabry.github.io/go-callvis/)
 
 ### Task queues
 
