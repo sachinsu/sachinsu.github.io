@@ -18,6 +18,7 @@ draft: false
 - [Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration](https://www.enterprisedb.com/blog/top-tools-and-recommendations-manage-postgres-enterprise-administration-performance-high)
 - [Using PostgreSQL as Cache and Read Optimization tips](http://renesd.blogspot.com/2019/10/using-postgresql-as-cache.html)
 - [Adyen's Use of PostgreSQL](https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database)
+- [PostgreSQL version Upgrade @ Gitlab](https://about.gitlab.com/blog/2020/09/11/gitlab-pg-upgrade/)
 
 
 ## Performance tuning, configuration etc.

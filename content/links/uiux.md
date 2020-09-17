@@ -16,8 +16,11 @@ draft: false
 -[Comparing Polling vs WebSockets vs SSE](https://codeburst.io/polling-vs-sse-vs-websocket-how-to-choose-the-right-one-1859e4e13bd9)
 - [A simple, choice-driven chatbot framework with Vanilla Javascript](https://github.com/peekobot/peekobot)
 - [Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
+- [Centering in CSS](https://ishadeed.com/article/learn-css-centering/)
 - [Blog on HTML,fonts, Asynchronous JavaScript](https://whistlr.info/)
 - [How to pick beautiful colors](https://blog.datawrapper.de/beautifulcolors/)
+- [You dont need Javascript](https://github.com/you-dont-need/You-Dont-Need-JavaScript)
+
 
 ## Testing
 
@@ -27,3 +30,4 @@ draft: false
 ## Libraries and Tools
 
 - [React based Sci-fi style UI Library with Animation and Sound](https://arwes.dev/)
+- [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)

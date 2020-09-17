@@ -47,6 +47,7 @@ My current Favourite Language
 - [ORM to Model and Traversal of Data as a Graph structure](https://entgo.io/)
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)
 - [Visualize call graph of a Go program using dot (Graphviz)](https://ofabry.github.io/go-callvis/)
+- [Semgrep - Lightweight static code analysis](https://semgrep.dev/)
 
 ### Task queues
 

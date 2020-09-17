@@ -9,6 +9,7 @@ draft: false
 Knowledge base around general database related topics.
 
 ## General Links
+- [Database of databases](https://dbdb.io)
 - [Modern SQL in databases](https://use-the-index-luke.com/blog/2015-02/modern-sql)
 - [Eventual consistency by Werner Vogels](https://use-the-index-luke.com/blog/2015-02/modern-sql)
 - [Amazon Aurora ascendant: How we designed a cloud-native relational database - All Things Distributed](https://www.allthingsdistributed.com/2019/03/Amazon-Aurora-design-cloud-native-relational-database.html)
@@ -50,6 +51,7 @@ Knowledge base around general database related topics.
 - [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
 - [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
+- [Open source OLAP Database](https://clickhouse.tech/)
 
 
 ## ETL, Evolutionary Practices 

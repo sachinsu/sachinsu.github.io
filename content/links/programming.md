@@ -52,7 +52,6 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
 - [Distrivbuted Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
 
-
 ## Automation 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/)
 - [Four bad ways to use RPA](https://www.thoughtworks.com/insights/articles/four-bad-ways-use-rpa?utm_campaign=ping-jun19&utm_medium=email&utm_source=marketo)
@@ -84,6 +83,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Virtual whiteboard for sketching hand-drawn like diagrams with Collaboration](https://excalidraw.com)
 - [NSQ - a realtime distributed messaging platform designed to operate at scale](https://nsq.io)
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)
+- [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
 
 ## Open source Pipelining, workflows 
 - [Pipelines/workflow frameworks](https://github.com/pditommaso/awesome-pipeline)
