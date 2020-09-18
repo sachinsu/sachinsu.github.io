@@ -54,7 +54,7 @@ Platform where i have spent most time till now.
 - [Feature Management library for ASP.NET Core](https://github.com/microsoft/FeatureManagement-Dotnet)
 - [GraphQL Server for .NET & .NET Core](https://hotchocolate.io)
 - [General Checklist for Projects](https://github.com/StephenCleary/Docs/blob/master/libraries/README.md)
-- [Open Source Reporting tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
+- [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
 
 ## .NET Core
