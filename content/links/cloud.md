@@ -6,6 +6,11 @@ draft: false
 
 Useful links for deep diving in various Cloud Ecosystems
 
+### Articles 
+
+- [Zero dollar Infrastructure stack](https://medium.com/better-programming/the-zero-dollar-infrastructure-stack-7c840a8b555b)
+
+
 ### Articles (GCP)
 
 - [13 sample architectures to kickstart your Google Cloud journey](https://cloud.google.com/blog/products/application-development/13-popular-application-architectures-for-google-cloud)
@@ -18,6 +23,7 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Replacing web server functionality with serverless services](https://aws.amazon.com/blogs/compute/replacing-web-server-functionality-with-serverless-services/)
 - [AWS Lambda vs Cloudflare Workers Unbound](https://blog.cloudflare.com/introducing-workers-unbound/)
 - [One line Explaination for each of AWS Services](https://adayinthelifeof.nl/2020/05/20/aws.html)
+- [Building a Multiplayer Game with API Gateway+Websockets, Go and DynamoDB](https://serialized.net/2020/09/multiplayer/)
 
 
 ### Videos, Talks (AWS)

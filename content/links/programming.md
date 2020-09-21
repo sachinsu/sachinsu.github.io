@@ -37,6 +37,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [About Structure of Design document](https://www.industrialempathy.com/posts/design-docs-at-google/)
 - [Important Aspects about Circuit breaker from Shopify](https://engineering.shopify.com/blogs/engineering/circuit-breaker-misconfigured)
 - [CRDTs for Synchronization](https://github.com/jlongster/crdt-example-app)
+- [Asynchronous transaction processing @ Facebook](https://engineering.fb.com/production-engineering/async/)
 
 ## Training
 
@@ -100,6 +101,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
+- [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
 - [How to Create and Manage CRON Jobs](https://davidwalsh.name/cron-job)
 - [lazydocker - Docker mgmt tool for linux](https://danielmiessler.com/projects/webappsec_testing_resources/)
