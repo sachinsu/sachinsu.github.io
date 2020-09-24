@@ -52,6 +52,7 @@ Knowledge base around general database related topics.
 - [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
+- [1mg's Data Stack](https://rudderstack.com/blog/1mgs-data-stack-explained-how-they-harness-and-activate-unlimited-real-time-data/)
 
 
 ## ETL, Evolutionary Practices 

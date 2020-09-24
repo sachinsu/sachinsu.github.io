@@ -32,6 +32,7 @@ Platform where i have spent most time till now.
 - [Work flow of diagnosing memory performance issues](https://devblogs.microsoft.com/dotnet/work-flow-of-diagnosing-memory-performance-issues-part-0/)
 - [***Contention, poor performance, and deadlocks when you make calls to Web services from an ASP.NET application](https://support.microsoft.com/en-us/help/821268/contention-poor-performance-and-deadlocks-when-you-make-calls-to-web-s)
 - [.NET GC - Memory fundamentals](https://github.com/Maoni0/mem-doc/blob/master/doc/.NETMemoryPerformanceAnalysis.md#Memory-Fundamentals)
+- [Debug high CPU usage in .NET Core](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?WT.mc_id=-blog-scottha&tabs=windows)
 
 ## ASP.NET Web forms
 

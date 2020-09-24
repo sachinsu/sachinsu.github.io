@@ -38,3 +38,4 @@ draft: false
 ## Interesting Extensions/Products
 
 - [Incrementally update Materialized Views in real-time using Materialize](https://materialize.io/)
+- [Artificial Intelligence with PostgreSQL](https://momjian.us/main/writings/pgsql/AI.pdf)

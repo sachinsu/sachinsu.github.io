@@ -39,6 +39,7 @@ My current Favourite Language
 - [WebAssembly in Go](https://dstoiko.github.io/posts/go-pong-wasm/)
 - [gRPC in Go](https://talks.golang.org/2015/gotham-grpc.slide)
 - [Go: Discovery of the Trace Package](https://medium.com/a-journey-with-go/go-discovery-of-the-trace-package-e5a821743c3c)
+- [Rust for Go Developers](https://christine.website/blog/TLDR-rust-2020-09-19)
 
 ### Libraries, Tools
 
