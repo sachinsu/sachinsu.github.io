@@ -26,6 +26,7 @@ Platform where i have spent most time till now.
 - [Async/Await - Deep dive for Windows based Async I/O](https://tooslowexception.com/net-asyncawait-in-a-single-picture/)
 
 ## Performance related 
+
 - [List of Awesome Resources](https://github.com/adamsitnik/awesome-dot-net-performance)
 - [C# Job Queues with TPL Dataflow and Failure Handling](https://michaelscodingspot.com/c-job-queues-part-3-with-tpl-dataflow-and-failure-handling/)
 - [Know about Threadpool, types of Threads in CLR and changing them to improve performance](https://gist.github.com/JonCole/e65411214030f0d823cb)
@@ -33,6 +34,8 @@ Platform where i have spent most time till now.
 - [***Contention, poor performance, and deadlocks when you make calls to Web services from an ASP.NET application](https://support.microsoft.com/en-us/help/821268/contention-poor-performance-and-deadlocks-when-you-make-calls-to-web-s)
 - [.NET GC - Memory fundamentals](https://github.com/Maoni0/mem-doc/blob/master/doc/.NETMemoryPerformanceAnalysis.md#Memory-Fundamentals)
 - [Debug high CPU usage in .NET Core](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?WT.mc_id=-blog-scottha&tabs=windows)
+- [Measure performance of High frequency events in .NET Core App](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counter-perf)
+- [.NET Core debug memory leak, High CPU Usage, Deadlock](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs=windows)
 
 ## ASP.NET Web forms
 
