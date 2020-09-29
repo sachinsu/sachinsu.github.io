@@ -1,5 +1,5 @@
 ---
-title: "Web Security Measures in .NET Applications"
+title: "Web Security Measures in ASP.NET Applications"
 date: 2020-06-04T10:25:04+05:30
 draft: false
 ---
