@@ -15,6 +15,7 @@ draft: false
 - [PostgreSQL rocks, except when it blocks: Understanding locks](https://www.citusdata.com/blog/2018/02/15/when-postgresql-blocks/)
 - [Connection handling best practice with PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/connection-handling-best-practice-with-postgresql/ba-p/790883)
 - [10 Things I Hate About PostgreSQL](https://medium.com/@rbranson/10-things-i-hate-about-postgresql-20dbab8c2791)
+- [PostgreSQL - Advanced Administration by Bruce Momjian](https://momjian.us/main/writings/pgsql/administration.pdf)
 - [Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration](https://www.enterprisedb.com/blog/top-tools-and-recommendations-manage-postgres-enterprise-administration-performance-high)
 - [Using PostgreSQL as Cache and Read Optimization tips](http://renesd.blogspot.com/2019/10/using-postgresql-as-cache.html)
 - [Adyen's Use of PostgreSQL](https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database)

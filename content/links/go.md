@@ -49,6 +49,7 @@ My current Favourite Language
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)
 - [Visualize call graph of a Go program using dot (Graphviz)](https://ofabry.github.io/go-callvis/)
 - [Semgrep - Lightweight static code analysis](https://semgrep.dev/)
+- [Draw Application diagrams using Go](https://github.com/blushft/go-diagrams)
 
 ### Task queues
 
