@@ -20,5 +20,6 @@ Section covering Business, project/programming perspectives
 - [Approach to Exception Handling](https://particular.net/blog/but-all-my-errors-are-severe)
 - [PRESALES (SE) LEADER? 10 THINGS YOU MUST BE DOING](https://www.linkedin.com/pulse/presales-se-leader-10-things-you-must-doing-jon-upton?articleId=6685231165948932097#comments-6685231165948932097&trk=public_profile_article_view)
 - [The Tail at Scale](https://cacm.acm.org/magazines/2013/2/160173-the-tail-at-scale/fulltext)
+- [Long tail (99th percentile) latency](https://engineering.linkedin.com/performance/who-moved-my-99th-percentile-latency)
 - [Models for integrating data science teams within organizations](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd)
 - [Techniques and numbers for estimating system's performance from first-principles](https://github.com/sirupsen/napkin-math)

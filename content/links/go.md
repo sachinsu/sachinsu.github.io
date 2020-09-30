@@ -40,6 +40,7 @@ My current Favourite Language
 - [gRPC in Go](https://talks.golang.org/2015/gotham-grpc.slide)
 - [Go: Discovery of the Trace Package](https://medium.com/a-journey-with-go/go-discovery-of-the-trace-package-e5a821743c3c)
 - [Rust for Go Developers](https://christine.website/blog/TLDR-rust-2020-09-19)
+- [Example of how to let only one Goroutine do the task while letting others wait for it useful in case of reading data from DB to be cached](https://lakefs.io/2020/09/23/in-process-caching-in-go-scaling-lakefs-to-100k-requests-second/)
 
 ### Libraries, Tools
 
