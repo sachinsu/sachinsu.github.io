@@ -39,6 +39,7 @@ draft: false
 - [Connection Pooling and SmartDB](https://www.youtube.com/watch?v=eiydITTdDAQ)
 - [Oracle Database for Developers - Training](https://asktom.oracle.com/databases-for-developers.htm)
 - [How to Create an Execution plan?](https://blogs.oracle.com/sql/how-to-create-an-execution-plan)
+- [Machine learning in Autonomous Database](https://www.slideshare.net/SandeshRao4/machine-learning-in-autonomous-data-warehouse)
 
 
 ### Utilities, Tools

@@ -17,6 +17,7 @@ draft: false
 - [A simple, choice-driven chatbot framework with Vanilla Javascript](https://github.com/peekobot/peekobot)
 - [Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
 - [Centering in CSS](https://ishadeed.com/article/learn-css-centering/)
+- [Full-bleed layout using CSS Grid](https://joshwcomeau.com/css/full-bleed/)
 - [Blog on HTML,fonts, Asynchronous JavaScript](https://whistlr.info/)
 - [How to pick beautiful colors](https://blog.datawrapper.de/beautifulcolors/)
 - [You dont need Javascript](https://github.com/you-dont-need/You-Dont-Need-JavaScript)
