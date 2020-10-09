@@ -35,6 +35,8 @@ draft: false
 /9275132/real-life-example-when-to-use-outer-cross-apply-in-sql/9275865#9275865)
 - [Be careful with CTE in PostgreSQL](https://hakibenita.com/be-careful-with-cte-in-postgre-sql)
 - [PgBadger - A fast PostgreSQL Log Analyzer](https://github.com/darold/pgbadger)
+- [Using CTE to perform binary search on table](https://www.endpoint.com/blog/2020/10/02/postgresql-binary-search-correlated-data-cte)
+
 
 ## Interesting Extensions/Products
 
