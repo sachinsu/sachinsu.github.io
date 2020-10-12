@@ -34,3 +34,4 @@ draft: false
 #### Miscellaneous
 
 - [Open Source alternative tools](https://degoogle.jmoore.dev/)
+- [Library of Free music](https://cchound.com/)
