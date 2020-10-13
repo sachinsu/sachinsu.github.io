@@ -23,3 +23,5 @@ Section covering Business, project/programming perspectives
 - [Long tail (99th percentile) latency](https://engineering.linkedin.com/performance/who-moved-my-99th-percentile-latency)
 - [Models for integrating data science teams within organizations](https://medium.com/@djpardis/models-for-integrating-data-science-teams-within-organizations-7c5afa032ebd)
 - [Techniques and numbers for estimating system's performance from first-principles](https://github.com/sirupsen/napkin-math)
+- [The Amazon Builder's library](https://aws.amazon.com/builders-library/?cards-body.sort-by=item.additionalFields.customSort&cards-body.sort-order=asc&awsf.filter-content-type=*all)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
