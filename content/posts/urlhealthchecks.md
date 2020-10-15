@@ -56,7 +56,7 @@ So, It is  possible to quickly come up with this using built-in tools if writing
 
 As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.
 
-Let me know (in comments) if you are aware of any alternate way of achieving this.
+Let me know (in comments) if you are aware of any alternate better way of achieving this.
 
 Happy Coding !!
 
