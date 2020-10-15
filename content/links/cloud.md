@@ -14,6 +14,7 @@ Useful links for deep diving in various Cloud Ecosystems
 ### Articles (GCP)
 
 - [13 sample architectures to kickstart your Google Cloud journey](https://cloud.google.com/blog/products/application-development/13-popular-application-architectures-for-google-cloud)
+- [Using Google Cloud Spanner locally ...using Emulator](https://cloud.google.com/spanner/docs/emulator)
 
 ### Articles (AWS)
 
