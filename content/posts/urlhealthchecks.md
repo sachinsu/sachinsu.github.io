@@ -1,5 +1,5 @@
 ---
-title: "Validating urls from 'Helpful Links' section"
+title: "Validating urls from 'Helpful Links' section using bash / command line tools"
 date: 2020-10-15T10:25:04+05:30
 draft: false
 tags: [bash, grep, sed, curl]
