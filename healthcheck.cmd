@@ -1,1 +1,1 @@
-grep http *.md | sed 's/(http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} ---> %{http_code}'
+grep -E -i -w "http|https" *.md | sed 's/(http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:
