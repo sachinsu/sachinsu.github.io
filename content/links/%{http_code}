@@ -1,0 +1,472 @@
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:18:53 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"028a2d2ec3f457c273b10f8c9ec85bcc"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=1fbbjfTqNKOtvXCGR9tVrs1c0pG6BKTRA8NduAJRi9En2sPN%2B4TXLt3C%2FjltSYwFDlYTHqKHpbv47%2F48YsYBlQGNyTDonwMs%2BfcwWJs6gjOJS4WdorSgChJCy8EM8M92X9osuZGxLjvIlblN7PwCa95zAdn79e%2FJG54KJB8lt8XruOHZ5WL5Te8nOria50yhyTwKxrSPUpOCBUa6aPivecx4X4djcqe%2FR6gLaIfHBCEBLbgPzXcdaQX2KPI4agM6kEVQdCOSRKF%2FCRN%2B4zbMZw%3D%3D--c9Jl1HBROnkyjbwN--FjXkRspHPu6qRFLKv05nhQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.968842647.1602760732; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:18:52 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:18:52 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D4C1:0A12:6567BC:8BC50E:5F88301C
+
+URL:https://github.com/eugeneyan/applied-ml --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:18:54 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d4c58e8ed1f0a5e1c5bb19823fd32cc821602760733; expires=Sat, 14-Nov-20 11:18:53 GMT; path=/; domain=.fast.ai; HttpOnly; SameSite=Lax; Secure
+last-modified: Thu, 15 Oct 2020 00:15:42 GMT
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 07:04:05 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 9BE4:51B0:C69085:D22B25:5F87F20D
+via: 1.1 varnish
+age: 172
+x-served-by: cache-bom4749-BOM
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1602760734.001255,VS0,VE1
+vary: Accept-Encoding
+x-fastly-request-id: f716791cc6e21baea0dbc24851d2e80873b818da
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd950d160000e2fe9eb8c000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=217&lkg-time=1602760734"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e29245b5eb1e2fe-CCU
+
+URL:https://www.fast.ai/ --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:18:56 GMT
+content-type: text/html; charset=UTF-8
+content-length: 61074
+set-cookie: __cfduid=dfb39c3c8ba2438cfd446206ce618c4341602760734; expires=Sat, 14-Nov-20 11:18:54 GMT; path=/; domain=.www.verypossible.com; HttpOnly; SameSite=Lax
+cache-control: s-maxage=180,max-age=5
+etag: "73dd8f18f6288d3afe29b91a7d69d58a"
+last-modified: Mon, 12 Oct 2020 14:04:18 GMT
+link: </hs/hsstatic/keyboard-accessible-menu-flyouts/static-1.17/bundles/project.js>; rel=preload; as=script,</hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js>; rel=preload; as=script,</hs/hsstatic/cos-i18n/static-1.27/bundles/project.js>; rel=preload; as=script,</_hcms/forms/v2.js>; rel=preload; as=script,</hs/hsstatic/HubspotToolsMenu/static-1.79/js/index.js>; rel=preload; as=script
+strict-transport-security: max-age=0
+cf-cache-status: REVALIDATED
+cache-tag: CT-30068970605,CG-3440604,P-3440604,CW-29104268013,CW-29147558156,CW-29149285546,CW-29285314748,CW-29526113581,CW-29574781142,CW-29839520607,CW-29839521536,CW-29839521706,CW-29844350851,CW-29845023237,CW-29846517794,CW-29846518536,CW-29859087099,CW-30844600587,E-29104386762,E-29104468952,E-29123406349,E-29799821202,E-29818166094,E-29844685292,E-29913809292,E-30589321602,MENU-29145630300,MENU-29149285746,MENU-29248672065,PGS-ALL,SW-0,B-29845647532,GC-29144117721,GC-29148169442,GC-29150589893,GC-30103589473,GC-30844989545,TS-29104468895
+content-security-policy: upgrade-insecure-requests
+edge-cache-tag: CT-30068970605,CG-3440604,P-3440604,CW-29104268013,CW-29147558156,CW-29149285546,CW-29285314748,CW-29526113581,CW-29574781142,CW-29839520607,CW-29839521536,CW-29839521706,CW-29844350851,CW-29845023237,CW-29846517794,CW-29846518536,CW-29859087099,CW-30844600587,E-29104386762,E-29104468952,E-29123406349,E-29799821202,E-29818166094,E-29844685292,E-29913809292,E-30589321602,MENU-29145630300,MENU-29149285746,MENU-29248672065,PGS-ALL,SW-0,B-29845647532,GC-29144117721,GC-29148169442,GC-29150589893,GC-30103589473,GC-30844989545,TS-29104468895
+x-hs-cache-config: BrowserCache-5s-EdgeCache-180s
+x-hs-combine-css: Disabled
+x-hs-content-id: 30068970605
+x-hs-hub-id: 3440604
+x-powered-by: HubSpot
+cf-request-id: 05cd950f44000031db1f3ec000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+set-cookie: __cfruid=30d6dde8593396e576a1e92173799e5b7e151243-1602760736; path=/; domain=.www.verypossible.com; HttpOnly; Secure; SameSite=None
+server: cloudflare
+cf-ray: 5e29245edea231db-BOM
+
+URL:https://www.verypossible.com/insights/machine-learning-algorithms-what-is-a-neural-network --- 
+HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2020 11:18:59 GMT
+content-type: text/html; charset=UTF-8
+content-length: 83042
+x-powered-by: WordPress VIP <https://wpvip.com>
+host-header: a9130478a60e5f9135f765b23f26593b
+x-xss-protection: 0
+x-frame-options: ALLOW-FROM https://slack.com/
+link: <https://slack.engineering/wp-json/>; rel="https://api.w.org/"
+link: <https://slack.engineering/wp-json/wp/v2/posts/13184>; rel="alternate"; type="application/json"
+link: <https://slack.engineering/?p=13184>; rel=shortlink
+x-rq: bom2 112 235 3224
+cache-control: max-age=300, must-revalidate
+age: 25
+x-cache: hit
+vary: Accept-Encoding
+accept-ranges: bytes
+strict-transport-security: max-age=31536000
+
+URL:https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/ --- 
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+last-modified: Wed, 16 Sep 2020 15:53:54 GMT
+strict-transport-security: max-age=63072000; includeSubDomains
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:18:59 GMT
+via: 1.1 varnish
+age: 26
+x-served-by: cache-bom4751-BOM
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1602760740.913619,VS0,VE0
+vary: Accept-Encoding
+content-length: 6861
+
+URL:https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:01 GMT
+content-type: text/html; charset=UTF-8
+set-cookie: __cfduid=d92ad387714e3fde960ece963185a4a111602760740; expires=Sat, 14-Nov-20 11:19:00 GMT; path=/; domain=.davidwalsh.name; HttpOnly; SameSite=Lax
+vary: Accept-Encoding
+x-powered-by: PHP/5.3.29
+link: <https://davidwalsh.name/wp-json/>; rel="https://api.w.org/", <https://davidwalsh.name/?p=26323>; rel=shortlink
+cache-control: max-age=1, private, must-revalidate
+expires: Thu, 15 Oct 2020 11:19:01 GMT
+vary: User-Agent
+x-powered-by: PleskLin
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd95277a0000cd9fab8ec000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=19&lkg-time=1602760741"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e2924859fbdcd9f-CDG
+
+URL:https://davidwalsh.name/cron-job --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:02 GMT
+content-type: text/html; charset=UTF-8
+set-cookie: __cfduid=dc03324ee0d8df27e4b0b0fb232b823a91602760741; expires=Sat, 14-Nov-20 11:19:01 GMT; path=/; domain=.danielmiessler.com; HttpOnly; SameSite=Lax; Secure
+vary: Accept-Encoding
+p3p: CP="ALL DSP NID CURa ADMa DEVa HISa OTPa OUR NOR NAV DEM"
+link: <https://danielmiessler.com/wp-json/>; rel="https://api.w.org/"
+link: <https://danielmiessler.com/wp-json/wp/v2/pages/16478>; rel="alternate"; type="application/json"
+link: <https://danielmiessler.com/?p=16478>; rel=shortlink
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-hacker: Be gentle; I run PHP.
+x-career: Hit me up if you're looking for work!
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd952b8e0000e346cfb5a000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=217&lkg-time=1602760742"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: 5e29248c1f52e346-CCU
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://danielmiessler.com/projects/webappsec_testing_resources/ --- 
+HTTP/1.1 200 OK
+Date: Thu, 15 Oct 2020 11:19:08 GMT
+Server: Apache
+Strict-Transport-Security: max-age=31536000; includeSubDomains;
+Last-Modified: Thu, 01 Oct 2020 21:38:55 GMT
+ETag: "1456a-5b0a2d7c8b9c0"
+Accept-Ranges: bytes
+Content-Length: 83306
+Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://b3ceba9babf02086c0dca962bbbd1cda.report-uri.io/r/default/csp/reportOnly
+Content-Type: text/html; charset=UTF-8
+
+URL:https://www.martinfowler.com/articles/evodb.html --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:09 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d92bcee83c51d5b7589085eb00ad27fb61602760748; expires=Sat, 14-Nov-20 11:19:08 GMT; path=/; domain=.owasp.org; HttpOnly; SameSite=Lax; Secure
+cf-ray: 5e2924b83b498a8f-BOM
+access-control-allow-origin: *
+age: 0
+cache-control: max-age=600
+expires: Thu, 15 Oct 2020 10:26:17 GMT
+last-modified: Thu, 01 Oct 2020 02:12:04 GMT
+vary: Accept-Encoding
+via: 1.1 varnish
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd95472600008a8f71356000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+x-cache: HIT
+x-cache-hits: 1
+x-fastly-request-id: 0a3e51f6a6823e676a159ea3999945928b9f7113
+x-github-request-id: D1B0:5196:CF80C1:DB77C3:5F882171
+x-proxy-cache: MISS
+x-served-by: cache-bom4733-BOM
+x-timer: S1602760749.952365,VS0,VE306
+server: cloudflare
+
+URL:https://cheatsheetseries.owasp.org/ --- 
+HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2020 11:19:10 GMT
+content-type: text/html; charset=UTF-8
+vary: Accept-Encoding
+vary: Cookie
+x-hacker: If you're reading this, you should visit automattic.com/jobs and apply to join the fun, mention this header.
+x-pingback: https://deors.wordpress.com/xmlrpc.php
+link: <https://wp.me/p1timC-iK>; rel=shortlink
+x-ac: 1.bom _dca 
+strict-transport-security: max-age=15552000
+
+URL:https://deors.wordpress.com/2019/04/19/whats-in-a-ci-pipeline/ --- 
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:19:11 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"8aeaa4f958fb6119ad3ef18dab181541"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=PVXwmjMLRT73Y02l06WKNUn8lp0Po3H7qWDRxuOuSSJcwlNpzR5Dp3E21XyhGBFkqokpqrxUPRzXXajnWLtUgZbYK8N%2FNXn5aR%2FK1C3fAFlybUx0uNXV0GHXosPRH2WqcJDaUW6mw%2BTRJmRSZwc5i4MvRseXioO1ond%2BkDYXK1uH%2B5TtnlpWCPl9qTGXHMImX5VQTXJ%2BcftjqZUQuawIRs91BsedOSC%2B5swBRZlKKTbBWfnJSf%2B3Iqfx9E9W%2F2Ar%2FA4v2GV58Z%2F%2Bd6JSqPLh5Q%3D%3D--dXhncePiiHKkCNnz--0vf7dw8j0PKBU394C3TUVA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.738072543.1602760750; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:10 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:10 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D4DA:09C9:27F5AE:3787E1:5F88302E
+
+URL:https://github.com/bregman-arie/devops-exercises --- 
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:19:12 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"9f9fad0443defd0e93d2c87938192ae8"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=F2E71VjELah37PHSxc%2BGfLUaEPRlpxKZEFC7Ju%2F12uNB2SXnw2HSwDO1UIgNNDHEN%2FSJ6ztlTXXU2c9I9o3lQaDEi4k6S8IzH5guY1XxWCsMawziQvC6BxE%2BpCVS%2BrAVtfDFH93pC1F0ahddbb8XlnNeKVX9Aao63JxTF2jlzB0eB1dmeBF9lrzbeF%2BkUovGi3uX7ezorIsk9XosJ4STGAC5kjpHkg12ZGzFjuyaP%2BxQ8HughFwWDn5%2FwIJ7dinSWmoUsvCt0xH7WEVKrIoveg%3D%3D--fFZpcr5RhZnTACKE--aAfqJhUMyD0nxQBTZhriqw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.827883420.1602760751; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:11 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:11 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D4DA:09C9:27F5C1:3787FB:5F88302F
+
+URL:https://github.com/microsoft/ApplicationInspector --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:12 GMT
+content-type: text/html
+set-cookie: __cfduid=d0f6979348d4b55eb9bd31b8d548eca2d1602760752; expires=Sat, 14-Nov-20 11:19:12 GMT; path=/; domain=.readthedocs.io; HttpOnly; SameSite=Lax
+last-modified: Thu, 15 Oct 2020 08:48:29 GMT
+vary: Accept-Encoding
+x-ms-request-id: 84e8ec35-201e-0065-2edc-a2ec66000000
+x-ms-version: 2009-09-19
+x-ms-lease-status: unlocked
+x-ms-blob-type: BlockBlob
+access-control-allow-origin: *
+x-served: Nginx-Proxito-Sendfile
+x-backend: web0001v2
+x-rtd-project: grr-doc
+x-rtd-version: latest
+x-rtd-path: /proxito/media/html/grr-doc/latest/what-is-grr.html
+x-rtd-domain: grr-doc.readthedocs.io
+x-rtd-version-method: path
+x-rtd-project-method: subdomain
+referrer-policy: no-referrer-when-downgrade
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+cf-cache-status: HIT
+age: 3767
+expires: Thu, 15 Oct 2020 12:19:12 GMT
+cache-control: public, max-age=3600
+cf-request-id: 05cd9555350000d5bb558bd000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: cloudflare
+cf-ray: 5e2924ceb833d5bb-BOM
+
+URL:https://grr-doc.readthedocs.io/en/latest/what-is-grr.html --- 
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+server: nginx
+date: Thu, 15 Oct 2020 10:19:06 GMT
+x-powered-by: PHP/7.3.14
+x-pingback: https://www.docker.com/blog/xmlrpc.php
+cache-control: max-age=8500
+link: <https://www.docker.com/blog/wp-json/>; rel="https://api.w.org/"
+link: <https://www.docker.com/blog/?p=26049>; rel=shortlink
+strict-transport-security: max-age=31536000
+vary: Accept-Encoding
+x-cache: Hit from cloudfront
+via: 1.1 d976681c313d58667565155a9065eee7.cloudfront.net (CloudFront)
+x-amz-cf-pop: BOM51-C2
+x-amz-cf-id: b5alKQit9G0r8-4BvIeW_qIRbG1w6ynugXlZwOeKZBle_BH2GiW5vQ==
+age: 3606
+
+URL:https://www.docker.com/blog/speed-up-your-development-flow-with-these-dockerfile-best-practices/ --- 
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:19:13 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"008c3b2ed92b26907d64daa3b41cf18a"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=nuTAPTW4DHoLG0BLVPGXNUHOwch0ezzVWcqNoa1XNbYMvpfQ%2B1m8NuTQjOndQb32BlGzCISRNEW1ZLnb6k%2FdpA2UV6w42zTbvOV6lqG0m9UY3O%2F4hB%2BptDQ%2FmcsKURN9Zm0uSej31eEy%2BDarsI5K8OP92PoPgQH9xsnbObVtPXDbJt8CkLXEOOshbXqhMi2MZSOLMPynuGVbBeIwZi2oJi%2B0ygPfm5C7RFPMn2DvFnX0LdvMl7k8ZfU0rarttLm26yeqGbicCqt20SELIazlUQ%3D%3D--CPfy4RJtk%2Ff2AALt--P9xgAj5ZmVE4Db8JoXOgCA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.2000379191.1602760752; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:12 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:19:12 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D4DA:09C9:27F5EC:378818:5F883030
+
+URL:https://github.com/nektos/act --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:14 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=dd8ec2156c0979b0b3523073938646a531602760754; expires=Sat, 14-Nov-20 11:19:14 GMT; path=/; domain=.serhack.me; HttpOnly; SameSite=Lax; Secure
+cache-control: max-age=691200
+last-modified: Thu, 15 Oct 2020 02:13:00 GMT
+strict-transport-security: max-age=5184000; preload
+x-served-by: cache-sin18050-SIN
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602756991.936570,VS0,VE572
+vary: x-fh-requested-host, accept-encoding
+cf-cache-status: REVALIDATED
+cf-request-id: 05cd955b640000de52a7b92000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=215&lkg-time=1602760754"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: 5e2924d8a9a0de52-BOM
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/ --- 
+HTTP/2 200 
+strict-transport-security: max-age=86400; includeSubDomains
+content-type: text/html; charset=UTF-8
+expires: Thu, 15 Oct 2020 11:19:15 GMT
+date: Thu, 15 Oct 2020 11:19:15 GMT
+cache-control: private, max-age=0
+last-modified: Thu, 15 Oct 2020 09:23:35 GMT
+etag: "7f881b63-36b4-49d1-a003-677cfa806bd4"
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-length: 0
+server: GSE
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://testing.googleblog.com/2020/08/code-coverage-best-practices.html --- 
+HTTP/2 200 
+date: Thu, 15 Oct 2020 11:19:17 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d3c9bfa069351e8494d8f40e6abd5d6901602760756; expires=Sat, 14-Nov-20 11:19:16 GMT; path=/; domain=.medium.com; HttpOnly; SameSite=Lax
+sepia-upstream: medium
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+etag: W/"42abe-sCg7FClHS3PFZlJgiigkdwf3wU8"
+medium-fulfilled-by: valencia/main-20201014-201613-f2f872b585, lite/main-20201014-215636-d4c6a635e5, rito/main-20201014-180537-641cceeee1, tutu/medium-42692
+vary: Accept-Encoding
+x-envoy-upstream-service-time: 645
+x-frame-options: allow-from medium.com
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd95661a000031ac9f985000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+x-content-type-options: nosniff
+set-cookie: uid=lo_ad3ebaed5680; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:19:16 GMT; HttpOnly; Secure
+set-cookie: sid=1:P1UqXpyhhELlXaep74bqxkE78duyCzK2Xf+ijZEiDebAQyVrsN0zYXWt70ymCVjm; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:19:16 GMT; HttpOnly; Secure; SameSite=None
+set-cookie: optimizelyEndUserId=lo_ad3ebaed5680; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:19:16 GMT; Secure; SameSite=None
+set-cookie: __cfruid=3d236e21b05c083cb0779f16182e08121896791e-1602760757; path=/; domain=.medium.com; HttpOnly; Secure; SameSite=None
+server: cloudflare
+cf-ray: 5e2924e9c8f031ac-BOM
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03 --- 
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+content-length: 20361
+last-modified: Wed, 14 Oct 2020 12:29:32 GMT
+content-language: en-US
+device_type: Any
+access-control-expose-headers: X-ORACLE-APMCS-REQUEST-ID
+x-oracle-dms-ecid: 005gREH_0MlFw0KimTXvWJ0001Nd000LTI
+custom_cache_rule_location: Default
+x-oracle-apmcs-request-id: 884F9096E6236F95469E2D308D0A4C4BA9135F8D
+x-content-type-options: nosniff
+x-oracle-dms-rid: 0:1
+custom_akamai_autopurge: NO
+host_service: FutureTenseContentServer:12c
+date: Thu, 15 Oct 2020 11:19:19 GMT
+x-akam-sw-version: 0.5.0
+set-cookie: akaas_aud-seg-ocom-prod=2147483647~rv=19~id=2d379c5b3f893fefd58fe0fe778ac570; path=/; Secure; SameSite=None
+x-frame-options: sameorigin
+content-security-policy: frame-ancestors 'self' https://explore.oracle.com https://my.oracle.com https://eeho.fa.us2.oraclecloud.com
+x-xss-protection: 1
+actual-object-ttl: 3660
+
+URL:https://www.oracle.com/database/technologies/advanced-queuing.html --- 
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 15 Oct 2020 11:19:20 GMT
+Server: Apache/2.4.38 (Debian)
+Location: https://www.tbray.org/ongoing/
+Content-Type: text/html; charset=iso-8859-1
+
+URL:https://www.tbray.org/ongoing --- 
+HTTP/2 200 
+content-type: text/html;charset=UTF-8
+content-length: 83937
+server: Server
+date: Thu, 15 Oct 2020 11:19:20 GMT
+x-amz-rid: VS1CTQ3D16ZKH5QJN52E
+set-cookie: aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; Version=1; Comment="Anonymous cookie for privacy regulations"; Domain=.aws.amazon.com; Max-Age=31536000; Expires=Fri, 15-Oct-2021 11:19:20 GMT; Path=/
+set-cookie: aws_lang=en; Domain=.amazon.com; Path=/
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-amz-id-1: VS1CTQ3D16ZKH5QJN52E
+last-modified: Fri, 02 Oct 2020 01:26:06 GMT
+vary: accept-encoding,Content-Type,Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+x-cache: Miss from cloudfront
+via: 1.1 a38ac4fa41f8b065e1ca4f7b42549706.cloudfront.net (CloudFront)
+x-amz-cf-pop: BOM51-C1
+x-amz-cf-id: Iztxs4DWYMiElHS6XdcpuDsv7ovW15qeETRaq20JBoBLvnKqvbIrbA==
+
+URL:https://aws.amazon.com/builders-library/instrumenting-distributed-systems-for-operational-visibility/?did=ba_card&trk=ba_card --- 
+HTTP/2 301 
+date: Thu, 15 Oct 2020 11:19:21 GMT
+content-length: 51
+set-cookie: __cfduid=d2c6590e7044a17a7775cb7049a2d66851602760761; expires=Sat, 14-Nov-20 11:19:21 GMT; path=/; domain=.fasterthanli.me; HttpOnly; SameSite=Lax
+location: /blog/2020/a-half-hour-to-learn-rust
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd9578940000de2195be5000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=215&lkg-time=1602760762"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e2925075998de21-BOM
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/ --- 
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+last-modified: Thu, 08 Oct 2020 15:23:03 GMT
+etag: "5f7f2ed7-81a"
+access-control-allow-origin: *
+expires: Wed, 14 Oct 2020 18:31:04 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 3A80:2457:BC8B3C:C77C92:5F87418F
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:19:23 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4720-BOM
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1602760763.862922,VS0,VE311
+vary: Accept-Encoding
+x-fastly-request-id: 4204e2048fd635052aacc76413bdd7650bc0ec20
+content-length: 2074
+
+URL:https://tourofrust.com/ --- 
