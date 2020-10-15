@@ -49,7 +49,7 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 </ul>
 <p>So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.</p>
 <p>As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.</p>
-<p>Let me know (in comments) if you are aware of any alternate way of achieving this.</p>
+<p>Let me know (in comments) if you are aware of any alternate better way of achieving this.</p>
 <p>Happy Coding !!</p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
