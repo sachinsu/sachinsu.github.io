@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 15 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Validating urls from 'Helpful Links' section using bash / command line tools</title><link>https://sachinsu.github.io/posts/urlhealthchecks/</link><pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid><description>Background I started this blog, https://sachinsu.github.io few months back .
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 15 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Validating urls from 'Useful Links' section using bash / command line tools</title><link>https://sachinsu.github.io/posts/urlhealthchecks/</link><pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid><description>Background I started this blog, https://sachinsu.github.io few months back .
 In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.
 As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.
 So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
@@ -47,6 +47,13 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a> ^URL: - For some reason, CURL outputs content even if <code>-s</code> (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.</p>
 </li>
 </ul>
+<p>The output is as below,</p>
+<figure>
+    <img src="/images/urloutput.png"/> <figcaption>
+            <h4>List of URLs with HTTP Status code</h4>
+        </figcaption>
+</figure>
+
 <p>So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.</p>
 <p>As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.</p>
 <p>Let me know (in comments) if you are aware of any alternate better way of achieving this.</p>
