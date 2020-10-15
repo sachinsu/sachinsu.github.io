@@ -1,5 +1,5 @@
 ---
-title: "Validating urls from 'Helpful Links' section using bash / command line tools"
+title: "Validating urls from 'Useful Links' section using bash / command line tools"
 date: 2020-10-15T10:25:04+05:30
 draft: false
 tags: [bash, grep, sed, curl]
@@ -51,6 +51,11 @@ In above chain,
 - [curl](https://curl.haxx.se/) -s -I  -w 'URL:%{url_effective} ---> %{http_code}'' - previously used `xargs` command feeds each line (url) to this command as last argument. This command sends tcp request to the URL and prints out http status code along with URL. 
 
 - [grep](https://man7.org/linux/man-pages/man1/grep.1.html) ^URL: - For some reason, CURL outputs content even if `-s` (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.
+
+The output is as below, 
+
+{{< figure src="/images/urloutput.png" title="List of URLs with HTTP Status code" >}}
+
 
 So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.
 
