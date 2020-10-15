@@ -1999,4 +1999,825 @@ location: /en/
 cache-control: no-cache
 Strict-Transport-Security: max-age=604800
 
-URL:https://www.fast-report.com/ ---
+URL:https://www.fast-report.com/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:26 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"9faffb8cc698a6f4cd2a688e86d95d04"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=7bo4NKvl6j3hQI78wwCMtUeWCfMHMB4hu8%2Bs165giYWGL1E%2Bo%2FsO0Xi5mxplG0Gqw6yrhRWSlRzLcXzeQGoSvfxki2ANltK%2FPamCJI2GW9I2BsFEdHXr77roF42sDNQe0eZXELzr69PgTSKWck2qF%2B84Ml9EtJkGNvAf%2FgPpWeYwwRRmCP%2BIiu%2Bp2%2BdXpzFMGQOJGG45E8QhmHFVFA7lvyqAmwktocwHIj0RzdS%2F0P%2FfWhoLqMcR2RSvB1Mg98ME2gUHMO2ZKWJTUaGbkOsWkw%3D%3D--hTE0iMC37oyyyYnG--QI%2FPOfsj02LDOjKFDbV5Jw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1038879906.1602760946; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:26 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:26 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D57D:66A7:6BF41:941FA:5F8830F0
+
+URL:https://github.com/eventstore/eventstore ---HTTP/2 200 
+etag: "o7VfSYCAQaUVK8TkyKzYwzaoanYXu6x/pJbsRbXAG0s="
+x-akamai-path-stats: [3:213373:107627]
+content-length: 0
+content-type: text/html
+request-context: appId=cid-v1:cd765a3e-2aba-43aa-b307-6e4b3b4be342
+x-datacenter: eus
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-ua-compatible: IE=edge
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-rendering-stack: Dynamic
+cache-control: public, max-age=590
+expires: Thu, 15 Oct 2020 11:32:17 GMT
+date: Thu, 15 Oct 2020 11:22:27 GMT
+akamai-cache-status: RefreshHit from child, Miss from parent
+report-to: {"group":"network-errors","max_age":604800,"endpoints":[{"url":"https://mdec.nelreports.net/api/report?cat=mdocs"}]}
+nel: {"report_to":"network-errors","max_age":604800,"success_fraction":0.01,"failure_fraction":1.0}
+
+URL:https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?WT.mc_id=ondotnet-channel9-cephilli&view=aspnetcore-2.2 ---HTTP/2 301 
+content-length: 0
+location: customer-notes-diagnosing-issues-under-load-of-web-api-app-migrated-to-aspnet-core-on-linux
+request-context: appId=cid-v1:fe7bd906-2ce7-4c21-a51f-3ba16d8b1222
+strict-transport-security: max-age=2592000
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-frame-options: SameOrigin
+referrer-policy: no-referrer-when-downgrade
+content-security-policy: default-src 'self' https:;script-src 'self' 'unsafe-inline' 'unsafe-eval' www.google.com cse.google.com cdn.syndication.twimg.com platform.twitter.com apis.google.com www.google-analytics.com www.googletagservices.com adservice.google.com securepubads.g.doubleclick.net ajax.aspnetcdn.com ssl.google-analytics.com tpc.googlesyndication.com cdn.ampproject.org cdn1.developermedia.com cdn2.developermedia.com az416426.vo.msecnd.net;style-src 'self' 'unsafe-inline' www.google.com platform.twitter.com cdn.syndication.twimg.com fonts.googleapis.com maxcdn.bootstrapcdn.com
+feature-policy: geolocation 'none';midi 'none';sync-xhr 'none';microphone 'none';camera 'none';magnetometer 'none';gyroscope 'none';fullscreen 'self';payment 'none';
+permissions-policy: geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()
+x-azure-ref: 09DCIXwAAAAAbVcuAaqoVSpnW/XtIpm+VQk9NMDJFREdFMDkxNABkNTMyZjA0Mi04ZmY0LTQ5ODItOTVhNS0wY2MyNGRhZjliMjY=
+date: Thu, 15 Oct 2020 11:22:28 GMT
+
+URL:https://www.hanselman.com/blog/CustomerNotesDiagnosingIssuesUnderLoadOfWebAPIAppMigratedToASPNETCoreOnLinux.aspx ---HTTP/2 200 
+etag: "i/S0EDZdr8i1o8FhmacCudCeLNad4kq7IqfzUJ1JFaA="
+content-type: text/html
+request-context: appId=cid-v1:21aee9e4-1cf5-4750-b2bd-78b2747f4211
+x-datacenter: wus
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-ua-compatible: IE=edge
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-rendering-stack: Dynamic
+x-akamai-path-stats: [1:250:528750]
+cache-control: public, max-age=377
+expires: Thu, 15 Oct 2020 11:28:46 GMT
+date: Thu, 15 Oct 2020 11:22:29 GMT
+akamai-cache-status: RefreshHit from child, Hit from parent
+report-to: {"group":"network-errors","max_age":604800,"endpoints":[{"url":"https://mdec.nelreports.net/api/report?cat=mdocs"}]}
+nel: {"report_to":"network-errors","max_age":604800,"success_fraction":0.01,"failure_fraction":1.0}
+
+URL:https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-3.1 ---HTTP/2 200 
+content-type: text/html; charset=UTF-8
+date: Thu, 15 Oct 2020 11:22:30 GMT
+server: Apache
+x-powered-by: PHP/7.4.10
+x-pingback: https://www.stevejgordon.co.uk/xmlrpc.php
+link: <https://www.stevejgordon.co.uk/wp-json/>; rel="https://api.w.org/", <https://www.stevejgordon.co.uk/wp-json/wp/v2/posts/1946>; rel="alternate"; type="application/json", <https://www.stevejgordon.co.uk/?p=1946>; rel=shortlink
+
+URL:https://www.stevejgordon.co.uk/httpclient-connection-pooling-in-dotnet-core ---HTTP/2 200 
+server: nginx
+content-type: text/html; charset=UTF-8
+link: <https://devblogs.microsoft.com/dotnet/wp-json/>; rel="https://api.w.org/"
+link: <https://devblogs.microsoft.com/dotnet/wp-json/wp/v2/posts/25774>; rel="alternate"; type="application/json"
+link: <https://devblogs.microsoft.com/dotnet/?p=25774>; rel=shortlink
+x-powered-by: WP Engine
+x-cacheable: SHORT
+x-cache-group: iphone
+expires: Thu, 15 Oct 2020 11:22:31 GMT
+cache-control: max-age=0, no-cache, no-store
+pragma: no-cache
+date: Thu, 15 Oct 2020 11:22:31 GMT
+feature-policy: geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; fullscreen 'self'; payment 'none'
+referrer-policy: no-referrer-when-downgrade
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+content-security-policy: script-src 'self' 'unsafe-inline' 'unsafe-eval' https:
+strict-transport-security: max-age=15768000
+
+URL:https://devblogs.microsoft.com/dotnet/an-introduction-to-system-threading-channels/ ---HTTP/2 200 
+cache-control: private
+content-length: 54359
+content-type: text/html; charset=utf-8
+p3p: CP="BUS CUR CONo FIN IVDo ONL OUR PHY SAMo TELo"
+set-cookie: c9id=b8e8850e91db4113a7b6cc3204e4664e; expires=Mon, 15-Nov-2021 11:22:31 GMT; path=/; secure
+set-cookie: mrcid=ondotnet-c9-cephilli; expires=Tue, 15-Oct-2030 11:22:31 GMT; path=/; secure
+set-cookie: __RequestVerificationToken=CfDJ8KvE2QLNLrdNhtO4btSLnDRMHKic7UL7jnQ3kNTqkxMDHcxEKJ08sMrTnnTXeW2-_zczDrn68l34F7sL_49aEA8FiIIGQ3s54O7s9KcVEEGyULz2TeuzgvPm2Yi-kR6EQDYDZMuQnWgvPh527N41D6c1; path=/; secure; HttpOnly
+strict-transport-security: max-age=31536000; includeSubDomains
+x-frame-options: SAMEORIGIN
+request-context: appId=cid-v1:2d309c65-a148-450e-a3a8-acdd5cebd8ef
+access-control-expose-headers: Request-Context
+x-content-type-options: nosniff
+x-azure-ref: 09zCIXwAAAADiikqEIaPZSZ7cZYfhRM8QQk9NMDJFREdFMDkxMAAzMWUyMmEwNC00NmMwLTQ2ZmItYmMzZC0wZWMzODAwOWE5ZDY=
+date: Thu, 15 Oct 2020 11:22:31 GMT
+
+URL:https://channel9.msdn.com/Shows/On-NET/Working-with-Channels-in-NET?WT.mc_id=ondotnet-c9-cephilli ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:32 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d71adfb251bf38665e92810ca4efe02a01602760952; expires=Sat, 14-Nov-20 11:22:32 GMT; path=/; domain=.stephencleary.com; HttpOnly; SameSite=Lax; Secure
+last-modified: Tue, 06 Oct 2020 14:59:28 GMT
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 11:32:32 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 21B6:645C:15D1138:172F968:5F8830F8
+via: 1.1 varnish
+age: 0
+x-served-by: cache-cdg20752-CDG
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760953.807234,VS0,VE104
+vary: Accept-Encoding
+x-fastly-request-id: 80eddae4a7d656ccd1ced9900904df92468831b7
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd9863d8000032aa381ea000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=19&lkg-time=1602760953"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e2929b2fd1e32aa-CDG
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://blog.stephencleary.com/2020/06/backgroundservice-gotcha-application-lifetime.html ---HTTP/2 200 
+content-type: text/html;charset=UTF-8
+content-length: 64286
+server: Server
+date: Thu, 15 Oct 2020 11:22:33 GMT
+x-amz-rid: B5REFYWDNDWGY54TJZ50
+set-cookie: aws-priv=eyJ2IjoxLCJldSI6MCwic3QiOjB9; Version=1; Comment="Anonymous cookie for privacy regulations"; Domain=.aws.amazon.com; Max-Age=31536000; Expires=Fri, 15-Oct-2021 11:22:33 GMT; Path=/
+set-cookie: aws_lang=en; Domain=.amazon.com; Path=/
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-amz-id-1: B5REFYWDNDWGY54TJZ50
+last-modified: Thu, 01 Oct 2020 21:11:43 GMT
+vary: accept-encoding,Content-Type,Accept-Encoding,X-Amzn-CDN-Cache,X-Amzn-AX-Treatment,User-Agent
+x-cache: Miss from cloudfront
+via: 1.1 9f12eb8f15d700585d40df3fc83576f3.cloudfront.net (CloudFront)
+x-amz-cf-pop: BOM51-C1
+x-amz-cf-id: XK_J81JnFq4bipo8S2HOrvTB7x3w6XQKNSTws19MF2uGL7wLu0wznA==
+
+URL:https://aws.amazon.com/blogs/aws/announcing-the-porting-assistant-for-net/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:34 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"55fba8b1ca786f190d316cfb52d0ebdc"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=Jjri6zva7a5Nw4AKTy8gLq5QSLr1Hny4TVUbFpCiypnY44aT8zd%2FXsigRX%2Byf9L0DugONPdtWNJfywgDFbl%2FvE1EIgIO5Va%2BOUtpmygbcNzWMNni2Rk1Q7JMO1uFzbiDsf7AXYet8dbOIn398spoKg5aODSsL5n6kzv8PZEgmbvx03RcbiDjlVhIMNBeOWHlPoqRNI4Ch%2FMKpyBfAl6qTxu7JocHSYCzYbtGZkILTDtLLX2%2FFZ0ErWfrtiDBSpDLOfbOUMxOBqu9rFfvwfZ8Nw%3D%3D--wiygBYvkDFTt%2F8O7--z73AGr%2FK9hNK%2Bs1Q8oZ58w%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1432558415.1602760954; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:34 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:34 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:5FFF3E:84123F:5F8830F9
+
+URL:https://github.com/madslundt/NetCoreMicroservicesSample ---HTTP/2 200 
+cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+content-security-policy: connect-src 'self' blob: https://*.giphy.com https://*.pscp.tv https://*.video.pscp.tv https://*.twimg.com https://api.twitter.com https://api-stream.twitter.com https://ads-api.twitter.com https://caps.twitter.com https://media.riffsy.com https://pay.twitter.com https://sentry.io https://ton.twitter.com https://twitter.com https://upload.twitter.com https://www.google-analytics.com https://app.link https://api2.branch.io https://bnc.lt https://vmap.snappytv.com https://vmapstage.snappytv.com https://vmaprel.snappytv.com https://vmap.grabyo.com https://dhdsnappytv-vh.akamaihd.net https://pdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://dwo3ckksxlb0v.cloudfront.net ; default-src 'self'; form-action 'self' https://twitter.com https://*.twitter.com; font-src 'self' https://*.twimg.com; frame-src 'self' https://twitter.com https://mobile.twitter.com https://pay.twitter.com https://cards-frame.twitter.com ; img-src 'self' blob: data: https://*.cdn.twitter.com https://ton.twitter.com https://*.twimg.com https://analytics.twitter.com https://cm.g.doubleclick.net https://www.google-analytics.com https://www.periscope.tv https://www.pscp.tv https://media.riffsy.com https://*.giphy.com https://*.pscp.tv; manifest-src 'self'; media-src 'self' blob: https://twitter.com https://*.twimg.com https://*.vine.co https://*.pscp.tv https://*.video.pscp.tv https://*.giphy.com https://media.riffsy.com https://dhdsnappytv-vh.akamaihd.net https://pdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://dwo3ckksxlb0v.cloudfront.net; object-src 'none'; script-src 'self' 'unsafe-inline' https://*.twimg.com   https://www.google-analytics.com https://twitter.com https://app.link  'nonce-YjJiYWRkNTEtODgxZi00NWRkLWI0NDItMGFjMTM3N2M0Y2I5'; style-src 'self' 'unsafe-inline' https://*.twimg.com; worker-src 'self' blob:; report-uri https://twitter.com/i/csp_report?a=O5RXE%3D%3D%3D&ro=false
+content-type: text/html; charset=utf-8
+cross-origin-opener-policy: same-origin
+date: Thu, 15 Oct 2020 11:22:35 GMT
+expiry: Tue, 31 Mar 1981 05:00:00 GMT
+last-modified: Thu, 15 Oct 2020 11:22:35 GMT
+pragma: no-cache
+server: tsa_k
+set-cookie: personalization_id="v1_7Q0f8PwxiJbsr/B7JrrjDA=="; Max-Age=63072000; Expires=Sat, 15 Oct 2022 11:22:35 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+set-cookie: guest_id=v1%3A160276095531373595; Max-Age=63072000; Expires=Sat, 15 Oct 2022 11:22:35 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+strict-transport-security: max-age=631138519
+vary: Accept-Encoding
+x-connection-hash: c34898613e45124dbc4c93670dc99451
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-powered-by: Express
+x-response-time: 213
+x-xss-protection: 0
+
+URL:https://twitter.com/shanselman ---HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2020 11:22:36 GMT
+content-type: text/html
+content-length: 618093
+last-modified: Wed, 24 Jul 2019 21:06:48 GMT
+etag: "5d38c868-96e6d"
+accept-ranges: bytes
+
+URL:https://dave.cheney.net/high-performance-go-workshop/gophercon-2019.html ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:36 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"19caae6ed4a3c64e231ae53f2169f95e"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=1VZN9%2FOGiotaaoSLsjLvJMWdvqM73700lQaW4%2BquOnZ5jUY0SndEyP8gxAlGFqM8nHmzXXGUkm3DxqqTiSXHqay8P8et9x2gTGO9XpCRIscrDBHul2ACFNDCBxdPIQRF8g7F%2FsAC824oGsTSgkau%2FyQj%2Bd73sKst4RLC2MWdSPRdNV7aqsmyLwsNXS99a2b3QyXrMbX1whi2a89IdD2cfxnr6Gu%2FjO%2FcE16t9wMLc78Df1NTha%2Br80x%2Fuf7g7Y1oXOWo43V9YGR14FTFdjr%2BPA%3D%3D--SJ5lPRjeU08sW%2FZV--%2FyLso%2FW9NOKxayq%2FUl5pww%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.854639804.1602760956; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:36 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:36 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:5FFFE5:841278:5F8830FA
+
+URL:https://github.com/dgryski/go-perfbook ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:38 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: 1.1 google
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://golang.org/doc/effective_go.html ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:39 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"6fecb9cce523f6d179c0384e09959140"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=z8eAiMsrg7LkqB5TdKmEs%2FvEJ6qGbx8BbJmQJk%2FO83%2Bj%2FZuaGHT%2FKl8ODf50YHdAladPaZflgJEYjxJ2m1mwTTxtnTgam4Lphb57%2F8g%2FzgOFLVG1sXoRa8KJJDG1%2Fe2orNzRg0TfF22ZAeXAzetBBimKjXk5Au75S7yFf7QjEOwO1xzIYJHdQjRBRafV1fDlJQNvTEnmdaUVmAu4DM8rzJyLUzWpmTzapWIvoZpBZxPBe4Z52QjpdD5F4tIqxPRYf0pU5%2FHpbS82h5Q3%2FKiefg%3D%3D--EbD6SxT6519c%2F95F--AUbh9cM0tU%2FhcYoNSQ2LIA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.8765406.1602760958; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:38 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:38 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:6000A4:841357:5F8830FC
+
+URL:https://github.com/eranyanay/1m-go-websockets ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:40 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=de5afef3b1040777e83bd2995bb8b1c961602760959; expires=Sat, 14-Nov-20 11:22:39 GMT; path=/; domain=.shichao.io; HttpOnly; SameSite=Lax
+last-modified: Mon, 19 Aug 2019 15:50:35 GMT
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:44:47 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 90F6:2B71:D050A4:DC5EDF:5F8825C7
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4728-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760960.032774,VS0,VE310
+vary: Accept-Encoding
+x-fastly-request-id: 1abfec5488ae126889d18561c9d400e92c8b29f6
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd987f000000e332b98f2000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=217&lkg-time=1602760960"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e2929de6ed8e332-CCU
+
+URL:https://notes.shichao.io/gopl/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:41 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"e5dc9d2d90f5536721287a39aadb6adc"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=N5O1UqSRkZeDphRA41TnWiHHXRgiBMbfCJGEdn5GPYP1otWZpkK71OdYVX%2Bc3o5%2FuGPM9Rni%2FJ7S1qd%2FKJxtQhOdwaaB9Gaaplqhn6PKHhc4%2BrHOm%2FMUCtH%2BlFwVaGPGKSJxyJuVIc8iPiJsCC0Vy0mO5iaTzSGfhlySq3J2uOX8IljXhpeaI9dOIA3Xi2qNSoYk4yOQ0mJm5RvTpiAgc4xzgd4%2BLgWvNSZqN6ZEJum4zQ3NTyqbt2CKTYi2eGQ7EPFUfvZbPOnGZ274cAUQFg%3D%3D--SjUvAA5EYa0SR4Jl--TarxtDTRBJlay0gnfejA%2FA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.176159906.1602760960; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:40 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:40 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:60015E:841479:5F8830FF
+
+URL:https://github.com/golang-standards/project-layout ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-cloud-trace-context: a27f9e387024507e05d83bd8184cac0f
+date: Thu, 15 Oct 2020 11:22:41 GMT
+server: Google Frontend
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://talks.golang.org/2012/10things.slide ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+strict-transport-security: max-age=31556952
+last-modified: Thu, 02 Jul 2020 09:44:15 GMT
+etag: "5efdac6f-1ac1"
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:44:49 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: CF9A:32C7:D2C030:DEE264:5F8825C9
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:22:43 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4749-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760964.568364,VS0,VE311
+vary: Accept-Encoding
+x-fastly-request-id: 65f4ad504e6cbd8cdd0850797d76a875016615c4
+content-length: 6849
+
+URL:https://blogtitle.github.io/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:44 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"5c427aeb17ff363d05b4d734f2046b1c"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=qxeyDPFeuUbMqoV9iyE3td3cid2QPmvCDU%2FqCZN2V8IKODduw9EPX51QUkgM1%2FY0GaJX821CxVwfFSufjuOvmAoQen66HjkUsj5irmXCmhTZD0l4cOCEK2o%2BNHeP%2BdMKMvXnV4t4yxxa8Q%2BuzN%2B%2FJYzlvKq3SRNDOltmaGKFYS0fvh35n53TKuZmfZ4QTsC4sh70%2FmsgeEsh2mW%2FEQkNTLFfwxEFaV6BNjn1FD%2F5u5kTD57alTpyBawYYeOH%2Bv1HkOBS5ILxq%2FbJItJHk6G5Ow%3D%3D--mdw0lN1WZ51n800u--CJR4XICvyezmBcZqtjNQkg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1501556875.1602760964; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:44 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:44 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:60028C:84156D:5F883101
+
+URL:https://github.com/nomad-software/go-channel-compendium ---HTTP/2 200 
+cache-control: no-cache
+content-type: text/html; charset=utf-8
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+expires: Tue, 27 Apr 1971 19:44:06 GMT
+p3p: CP="This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en-GB for more info."
+date: Thu, 15 Oct 2020 11:22:45 GMT
+server: YouTube Frontend Proxy
+x-xss-protection: 0
+set-cookie: VISITOR_INFO1_LIVE=Y3vKoF9PT8Q; path=/; domain=.youtube.com; secure; expires=Tue, 13-Apr-2021 11:22:45 GMT; httponly; samesite=None
+set-cookie: YSC=R7jygAz7PyM; path=/; domain=.youtube.com; secure; httponly; samesite=None
+set-cookie: GPS=1; path=/; domain=.youtube.com; expires=Thu, 15-Oct-2020 11:52:45 GMT
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+accept-ranges: none
+vary: Accept-Encoding
+
+URL:https://www.youtube.com/watch?v=rWBSMsLG8po&feature=emb_logo ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:46 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"979fa94aa83e4c1ef741ca7e6962c9d8"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=aFV6Uu7bMAftwgoHxhiE%2FuuP1Z8GHBy%2BVQF4hFVihcc627v1pEaBFSALus5W1FUs7ouWhlyfzp0wfTtzztwMjdmMUf1MNiJAWzTLehrpKLKQT0V2OiSHKU0qHVcCHxWyEPRpL81XQLG4cik7yzCJmg%2BpFjNsVgijzYW1vpjcWnBYQLtg2kOOIjHZ4r%2BySlTXi72NC89cwmrqijlMa0deSvjjwaTrv%2FkmHlTJGCdn287LnEp0y9d9dqSzIYfrzI6Wci10Od1%2FXUEUTIM2fTM7nQ%3D%3D--F9k0ZYU79stk8pHW--q0cn%2FQu4x7oSWfOR4zzx5Q%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1525210400.1602760965; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:45 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:45 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:60031E:8416F4:5F883104
+
+URL:https://github.com/rakyll/statik ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+strict-transport-security: max-age=31556952
+last-modified: Thu, 02 Jul 2020 09:44:15 GMT
+etag: "5efdac6f-6334"
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:44:52 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 11D2:5827:CF4AC5:DB49CB:5F8825CB
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:22:46 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4749-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760966.303429,VS0,VE309
+vary: Accept-Encoding
+x-fastly-request-id: ffb70f1f0af38c8b4c3f611e8cc4021757b6c67d
+content-length: 25396
+
+URL:https://blogtitle.github.io/some-useful-patterns/ ---HTTP/1.1 405 Method Not Allowed
+Date: Thu, 15 Oct 2020 11:22:47 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 19
+Connection: keep-alive
+Set-Cookie: __cfduid=d2b55c02b73e22e80f17ca43b8a6612fc1602760966; expires=Sat, 14-Nov-20 11:22:46 GMT; path=/; domain=.doxsey.net; HttpOnly; SameSite=Lax
+x-content-type-options: nosniff
+x-envoy-upstream-service-time: 0
+CF-Cache-Status: DYNAMIC
+cf-request-id: 05cd989af20000d775ce29a000000001
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=49&lkg-time=1602760967"}],"group":"cf-nel","max_age":604800}
+NEL: {"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 5e292a0b1953d775-MRS
+
+URL:http://www.doxsey.net/blog/strategies-for-working-with-message-queues ---HTTP/1.1 200 OK
+Server: GitHub.com
+Date: Thu, 15 Oct 2020 11:22:48 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 11318
+Vary: Accept-Encoding
+Last-Modified: Mon, 26 Oct 2015 16:41:04 GMT
+Vary: Accept-Encoding
+ETag: "562e57a0-2c36"
+Access-Control-Allow-Origin: *
+Expires: Thu, 15 Oct 2020 11:32:48 GMT
+Cache-Control: max-age=600
+Accept-Ranges: bytes
+X-Proxy-Cache: MISS
+X-GitHub-Request-Id: D593:2AFA:4EC2E:82987:5F883108
+
+URL:http://goconvey.co/ ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+last-modified: Wed, 04 Dec 2019 18:31:51 GMT
+etag: "5de7fb97-7eb6"
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:44:54 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 9488:1CEA:3F3C81:447A12:5F8825CE
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:22:49 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4724-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760969.936293,VS0,VE310
+vary: Accept-Encoding
+x-fastly-request-id: e212304af34e5bacfd76c454deb286162e706e8b
+content-length: 32438
+
+URL:https://americanexpress.io/choosing-go/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:36 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"19caae6ed4a3c64e231ae53f2169f95e"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=zimZ%2BD07M03jl9CM9LMNEodgfI%2F5MMTwOzUxIECBaAyusLj2EQVrZxc5Cev4ob5%2FsnjfAN%2FzZfhsm6yEH9uIgRcF8TwrpUd8owEwqSRRkBM3lNZVhFq%2F4b%2BczLoB7H8e416bDDpgx2dWKDb9i4A59VOR3MFHx9bFDyvZOzqTu2tAeOq8VOBlAuYVUWbbA4moKXsScwwx6tv%2BbQ7l4JxdD8b0bY5QLp9dNYJA%2FhmaTo5jo8J2ypDpZ4EHY%2BfYDvW1yBBqpHVPXw1YtPyADQaKQg%3D%3D--%2BNNU4bqdV%2BQNoTGr--iqQ7pj3%2BeFgSrybuzfH7zw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.334748750.1602760969; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:49 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:49 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:60044D:8417C0:5F883106
+
+URL:https://github.com/dgryski/go-perfbook ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:49 GMT
+content-type: text/html; charset=utf-8
+x-robots-tag: noindex
+content-disposition: inline; filename="index.html"
+cache-control: public, max-age=0, must-revalidate
+content-length: 25010
+access-control-allow-origin: *
+accept-ranges: bytes
+etag: W/"27b99dd0df56cef94aa2a2bcdda29076e3b0a1d99f9e5b8dfd43d4e3019408cb"
+x-vercel-cache: HIT
+age: 2871
+server: Vercel
+x-vercel-id: bom1::mq2wk-1602760969771-3c04dcf5a596
+strict-transport-security: max-age=63072000
+
+URL:https://stephen.sh/posts/quick-go-performance-improvements ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-cloud-trace-context: aa26c32702aa1afe117500048baa7130
+date: Thu, 15 Oct 2020 11:22:50 GMT
+server: Google Frontend
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://talks.golang.org/2012/10things.slide ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:22:51 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"3ee87593f59cc49fe5e61a0331f2c775"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=xpJmZihezZhCMXPedHWvG1AJNXE%2FZ2MSLBs9RS8GUog9IvSrG5N%2Bqr2fVzwU2XyujfPnmb4D9GgrR0uFFSk%2B7jWgDdpbxi8P7uiiQI3uRbQSY0jXUh2IIfSyxFPf6WUTevM8z1ewj4mNOLuB6xsQ7iujLissPmCQw%2B5E6zxPX7GENkiKob2dTUcRvZjWHrhAZbi71UhhS%2FnaQsv8nJ7RPowD8dkZ5BNtQ%2FZwUmG%2BChLrzKu5n1lKKMxLXzhlUYinwuHeVaHYZJT7lAKBKrGCfg%3D%3D--x0dTMzKdRNSRu5Te--dCqWUm%2Fm%2Bsn29D7%2F4TXuLA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.2066109541.1602760970; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:50 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:22:50 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D589:0856:6004A9:84190C:5F883109
+
+URL:https://github.com/quii/learn-go-with-tests ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+strict-transport-security: max-age=31536000; preload
+x-cloud-trace-context: 783e067c5f4a359a9a80bd734e46a7bf
+date: Thu, 15 Oct 2020 11:22:52 GMT
+server: Google Frontend
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://blog.golang.org/pipelines ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+last-modified: Fri, 25 Sep 2020 16:59:50 GMT
+etag: "5f6e2206-6f77"
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:45:02 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: 79DE:1CEB:C88BE2:D42E61:5F8825D5
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:22:52 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4731-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760973.580470,VS0,VE197
+vary: Accept-Encoding
+x-fastly-request-id: 6c18843c31da882dd5b31eeea1c565335d23739e
+content-length: 28535
+
+URL:https://jpetazzo.github.io/2016/09/09/go-docker/ ---HTTP/2 200 
+cache-control: max-age=3600
+content-type: text/html; charset=utf-8
+etag: "680d4a46e9a996d56f11281de436783c306b5f823f798e81206beed622a98fd7"
+last-modified: Tue, 13 Oct 2020 06:15:23 GMT
+strict-transport-security: max-age=31556926
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:22:53 GMT
+x-served-by: cache-sin18039-SIN
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1602760974.687689,VS0,VE1
+vary: x-fh-requested-host, accept-encoding
+content-length: 12226
+
+URL:https://rakyll.org/go-cloud/ ---HTTP/2 200 
+accept-ranges: bytes
+cache-control: max-age=600
+content-type: text/html; charset=utf-8
+expires: Thu, 15 Oct 2020 11:32:55 UTC
+last-modified: Thu, 01 Oct 2020 10:29:27 GMT
+vary: Origin
+content-length: 32385
+date: Thu, 15 Oct 2020 11:22:55 GMT
+
+URL:https://alex.dzyoba.com/blog/go-prometheus-service/ ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:57 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d64cbc330532318014d8ac5bf6bb00d771602760976; expires=Sat, 14-Nov-20 11:22:56 GMT; path=/; domain=.medium.com; HttpOnly; SameSite=Lax
+sepia-upstream: medium
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+etag: W/"32616-6RkvqribvIZRxGz1nMvvWc995r0"
+medium-fulfilled-by: valencia/main-20201014-201613-f2f872b585, lite/main-20201014-215636-d4c6a635e5, rito/main-20201014-180537-641cceeee1, tutu/medium-42692
+vary: Accept-Encoding
+x-envoy-upstream-service-time: 630
+x-frame-options: allow-from medium.com
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd98bf4000002e165e27c000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+x-content-type-options: nosniff
+set-cookie: uid=lo_f6238738c40e; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:22:56 GMT; HttpOnly; Secure
+set-cookie: sid=1:aDJwICmyJGchqnAp9L0XkdFOuG+32b0iGz/KER7CZP7TmiThxKwUoGrTo+jfBDba; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:22:56 GMT; HttpOnly; Secure; SameSite=None
+set-cookie: optimizelyEndUserId=lo_f6238738c40e; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:22:56 GMT; Secure; SameSite=None
+set-cookie: __cfruid=f5a059d03df2b47c9b1ac9ee14fec6039587e575-1602760977; path=/; domain=.medium.com; HttpOnly; Secure; SameSite=None
+server: cloudflare
+cf-ray: 5e292a453d7b2e16-BOM
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://medium.com/google-cloud/continuous-profiling-of-go-programs-96d4416af77b ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:58 GMT
+content-type: text/html
+set-cookie: __cfduid=de7223a899c498125531146237fa6973a1602760977; expires=Sat, 14-Nov-20 11:22:57 GMT; path=/; domain=.pace.dev; HttpOnly; SameSite=Lax; Secure
+expires: Thu, 15 Oct 2020 11:32:58 GMT
+cache-control: public, max-age=600
+x-cloud-trace-context: 49ddf3288783d9bb85f61da31996b1bd;o=1
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd98c6440000c03e40065000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=49&lkg-time=1602760978"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e292a506903c03e-MRS
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:22:59 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d058cfc9e6fe55deeab14461fb97ec1b11602760979; expires=Sat, 14-Nov-20 11:22:59 GMT; path=/; domain=.encore.dev; HttpOnly; SameSite=Lax
+content-security-policy: default-src https:; img-src 'self' *.google-analytics.com www.googletagmanager.com https://rs.fullstory.com https://optimize.google.com; script-src 'self' 'unsafe-inline' *.segment.com *.google-analytics.com https://edge.fullstory.com https://www.fullstory.com https://fullstory.com https://optimize.google.com; style-src 'self' 'unsafe-inline' https://*.typekit.net https://optimize.google.com https://fonts.googleapis.com; connect-src 'self' https://api.encore.dev wss://api.encore.dev https://api.segment.io https://rs.fullstory.com https://www.google-analytics.com; font-src https://fonts.gstatic.com https://use.typekit.net; frame-src https://optimize.google.com
+referrer-policy: no-referrer-when-downgrade
+feature-policy: geolocation 'self'; microphone 'self'; camera 'self'
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-frame-options: DENY
+content-disposition: inline; filename="advanced-go-concurrency"
+cache-control: public, max-age=0, must-revalidate
+access-control-allow-origin: *
+accept-ranges: bytes
+x-vercel-cache: HIT
+age: 2868
+x-vercel-id: sin1::mwr72-1602760979394-8613a0bc7bf3
+strict-transport-security: max-age=63072000
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd98cbae00001ac0f1b43000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?lkg-colo=35&lkg-time=1602760979"}],"group":"cf-nel","max_age":604800}
+nel: {"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 5e292a5919231ac0-SIN
+
+URL:https://encore.dev/blog/advanced-go-concurrency ---HTTP/2 200 
+age: 82285
+cache-control: public, max-age=0
+cf-cache-status: DYNAMIC
+cf-ray: 5e292a65ddd503a0-ORD
+cf-request-id: 05cd98d3a8000003a062b28000000001
+content-type: text/html; charset=utf-8
+date: Thu, 15 Oct 2020 11:23:01 GMT
+etag: W/"da77-0XUUwzhnslYXG7pzI0+jsBTTtwI"
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: nginx
+set-cookie: __cfduid=d952635cd1519a4ad3d18a9e34ae37da71602760981; expires=Sat, 14-Nov-20 11:23:01 GMT; path=/; domain=.ghost.io; HttpOnly; SameSite=Lax
+set-cookie: __cflb=02DiuCzDjsTNptQXPzsE4eZ4sKasgpcwNBTvFCQKZAfN4; SameSite=Lax; path=/; expires=Fri, 16-Oct-20 10:23:01 GMT; HttpOnly
+status: 304 Not Modified
+strict-transport-security: max-age=63072000
+vary: Accept-Encoding
+x-cache: HIT
+x-request-id: b4076e1c02d2f82fd427721c09a95354
+x-request-id: 7ba2dfe1817dd34913551605e5d53bf7
+via: 1.1 google
+alt-svc: clear
+
+URL:https://bionic.fullstory.com/why-you-should-be-using-errgroup-withcontext-in-golang-server-handlers/ ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+server: GitHub.com
+last-modified: Mon, 13 Jul 2020 00:09:54 GMT
+etag: "5f0ba652-49dd"
+access-control-allow-origin: *
+expires: Thu, 15 Oct 2020 10:45:13 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: BC22:09D3:73588:8549A:5F8825E1
+accept-ranges: bytes
+date: Thu, 15 Oct 2020 11:23:02 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-bom4749-BOM
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1602760982.338710,VS0,VE198
+vary: Accept-Encoding
+x-fastly-request-id: 3f6d867ba4f83e0201885c84fb94e5005c38d401
+content-length: 18909
+
+URL:https://dstoiko.github.io/posts/go-pong-wasm/ ---HTTP/2 200 
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-cloud-trace-context: e28f8891425f2ad25b2759fe9bacbdca;o=1
+date: Thu, 15 Oct 2020 11:23:03 GMT
+server: Google Frontend
+alt-svc: h3-Q050=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+
+URL:https://talks.golang.org/2015/gotham-grpc.slide ---HTTP/2 200 
+date: Thu, 15 Oct 2020 11:23:04 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d79543bcd6ccc232fd0d0111ca4a26cb21602760983; expires=Sat, 14-Nov-20 11:23:03 GMT; path=/; domain=.medium.com; HttpOnly; SameSite=Lax
+sepia-upstream: medium
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+etag: W/"3850c-RtMaPjt/a3tomLm/HNWMwn7Ea0I"
+medium-fulfilled-by: valencia/main-20201014-201613-f2f872b585, lite/main-20201014-215636-d4c6a635e5, rito/main-20201014-180537-641cceeee1, tutu/medium-42692
+vary: Accept-Encoding
+x-envoy-upstream-service-time: 433
+x-frame-options: allow-from medium.com
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+cf-cache-status: DYNAMIC
+cf-request-id: 05cd98dd68000031fa13bfc000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+x-content-type-options: nosniff
+set-cookie: uid=lo_7d8864d9f713; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:23:04 GMT; HttpOnly; Secure
+set-cookie: sid=1:An6pc/a4CwEEYIw1HdCb/nNE8SnkdOOsDg5/MlUMYumlpMD+29nzhP/kqebGXS79; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:23:04 GMT; HttpOnly; Secure; SameSite=None
+set-cookie: optimizelyEndUserId=lo_7d8864d9f713; Path=/; Domain=medium.com; Expires=Fri, 15 Oct 2021 11:23:04 GMT; Secure; SameSite=None
+set-cookie: __cfruid=3bee97759a9e1d953c95a113d5ccc1aaa525ed05-1602760984; path=/; domain=.medium.com; HttpOnly; Secure; SameSite=None
+server: cloudflare
+cf-ray: 5e292a75784a31fa-BOM
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+
+URL:https://medium.com/a-journey-with-go/go-discovery-of-the-trace-package-e5a821743c3c ---HTTP/2 500 
+server: openresty/1.15.8.1
+date: Thu, 15 Oct 2020 11:23:05 GMT
+content-type: text/html; charset=utf-8
+content-length: 4184
+strict-transport-security: max-age=15724800; includeSubDomains
+
+URL:https://christine.website/blog/TLDR-rust-2020-09-19 ---HTTP/2 200 
+server: nginx
+date: Thu, 15 Oct 2020 11:23:09 GMT
+content-type: text/html; charset=UTF-8
+vary: Accept-Encoding
+x-cache-enabled: True
+x-pingback: https://lakefs.io/xmlrpc.php
+link: <https://lakefs.io/wp-json/>; rel="https://api.w.org/", <https://lakefs.io/wp-json/wp/v2/posts/426>; rel="alternate"; type="application/json", <https://lakefs.io/?p=426>; rel=shortlink
+x-httpd: 1
+host-header: 8441280b0c35cbc1147f8ba998a563a7
+x-proxy-cache-info: DT:1
+
+URL:https://lakefs.io/2020/09/23/in-process-caching-in-go-scaling-lakefs-to-100k-requests-second/ ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:23:10 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"b25b475292d5c48b8843ed8002fa9420"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=blHBPdhcOrVapCd0D2yUk6E9PwvtvclbznNr0Y2E1hQpAxuhHDhPl%2B6HsHl2VwItCWraIIO5wz3LF1fHMPx0p9iJJo9f%2BQRA6lDBcZjAYSABSlSjjOXlObABxLe4SQ7fBqyLPBN1WtOp6D8HA6eDvEjG97DQcmt15vT8nsSqrz6d8hlkTQa53mxNL1B0hkjdz69rQ3ic84KrbsNq3rWQkGnV855sdsWhXp%2FmIXCoem9UtuFRBMtvlhNbV7HZ6DaHaCx5I1Hy%2Bhn4DafwNh3p8w%3D%3D--2EuqzRlp7B%2FBtri0--qh0rD53m%2FyXliv1rXttdAw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1058499278.1602760989; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:23:09 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:23:09 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D5A7:0A20:5F4EC3:8413AE:5F88311D
+
+URL:https://github.com/chubin/wttr.in ---HTTP/1.1 200 OK
+date: Thu, 15 Oct 2020 11:23:11 GMT
+content-type: text/html; charset=utf-8
+server: GitHub.com
+status: 200 OK
+vary: X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding
+etag: W/"2e2ae5c27b1570888ceaaee27bea3ad2"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+expect-ct: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+content-security-policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker.js gist.github.com/socket-worker.js
+Set-Cookie: _gh_sess=jNWo5Tyhw0ECEPujMg1TTriHVhXZoeF2dvVq9B3YpigjqrrwewA2SBVVoGLL04CWmpJHMlibG7u%2FDCu9Qt%2BN663zrp%2FjsPNW5KjfSTzE5pBotWaWkHlZZTt1N5ZMSPnggNOX8pwiV%2FyYVBhyTaqEVA8R3xol9xVT5w5XkR1RD6KcGpuqJwOmTbF7ruvV0RG3HGhbNes3dM%2B4vmleoHFRKWAgT2sDzfQJ7yzqkbgxVGl7a2V%2BgMzyOFSnOfkeDJ1jQCfNrjgs2u6gRZ1PpecVSg%3D%3D--rVAFg8ocyCfnmUHA--rQA%2BDk6YKiUDqnSvJtoeaA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1499798066.1602760990; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:23:10 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 15 Oct 2021 11:23:10 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+X-GitHub-Request-Id: D5A7:0A20:5F4F0F:84140E:5F88311E
+
+URL:https://github.com/uber-go/guide/blob/master/style.md ---HTTP/2 200 
+content-type: text/html
+content-length: 6664
+date: Thu, 15 Oct 2020 10:35:25 GMT
+last-modified: Tue, 13 Oct 2020 12:06:13 GMT
+etag: "de8b881cd64a59b4ee09d6b4ef6ac392"
+x-amz-version-id: azpe5vBw1h5A3K85J_WS3VzCQ.CJ_P2g
+accept-ranges: bytes
+server: AmazonS3
+vary: Accept-Encoding
+x-cache: Hit from cloudfront
+via: 1.1 72d3b0df9c1973d633a4516854305240.cloudfront.net (CloudFront)
+x-amz-cf-pop: MRS52-C1
+x-amz-cf-id: K9AaU_3pw5pytXA-jfGCB7NbXTCqIrqTacNCi0f8oYZIi7MrgagG6w==
+age: 2867
+
+URL:https://entgo.io/ ---
