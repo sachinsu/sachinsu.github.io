@@ -47,7 +47,7 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a> ^URL: - For some reason, CURL outputs content even if <code>-s</code> (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.</p>
 </li>
 </ul>
-<p>So, It is quite possible to quickly turn around approach using built-in tools if writing a program is not an option or cumbersome for task at hand.</p>
+<p>So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.</p>
 <p>As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.</p>
 <p>Let me know (in comments) if you are aware of any alternate way of achieving this.</p>
 <p>Happy Coding !!</p>
