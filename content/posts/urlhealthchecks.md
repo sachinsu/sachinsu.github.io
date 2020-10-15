@@ -52,7 +52,7 @@ In above chain,
 
 - [grep](https://man7.org/linux/man-pages/man1/grep.1.html) ^URL: - For some reason, CURL outputs content even if `-s` (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.
 
-So, It is quite possible to quickly turn around approach using built-in tools if writing a program is not an option or cumbersome for task at hand.
+So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.
 
 As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.
 
