@@ -98,8 +98,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)
 
 ## Devops/Monitoring
-- [Instrumenting Your Node/Express Application: Viewing Your Data](https://www.influxdata.com/blog/instrumenting-your-node-express-application-viewing-your-data/)
-- [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
+- [Hashicorp Waypoint - easy way to build, deploy and release applications](https://www.waypointproject.io/docs/getting-started)- [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
