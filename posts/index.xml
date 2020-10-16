@@ -16,7 +16,7 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <p>It is possible to write a utility/tool (or it might be already available) or can good old command line utlities be used for this task?</p>
 <p>I decided to go for dos / shell script way and surprisingly all the necessary tools are already available.</p>
 <p>Below is single command line that fulfils the requirement,</p>
-<p><code>grep -E -i -w &quot;http|https&quot; *.md | sed 's/(http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:</code></p>
+<p><code>grep -E -i -w &quot;http|https&quot; *.md | sed 's/](http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:</code></p>
 <p>In above chain,</p>
 <ul>
 <li>
@@ -29,7 +29,7 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <p><a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)">Pipe |</a> - Pipe command streams output of command to the next one.</p>
 </li>
 <li>
-<p><a href="https://en.wikipedia.org/wiki/Sed">sed</a> &rsquo;s/(http/\nhttp/g' - this sed (stream editor) command adds line break before <code>http</code> for better extraction.</p>
+<p><a href="https://en.wikipedia.org/wiki/Sed">sed</a> &rsquo;s/](http/\nhttp/g' - this sed (stream editor) command adds line break before <code>http</code> for better extraction.</p>
 </li>
 <li>
 <p><a href="https://en.wikipedia.org/wiki/Sed">sed</a> &rsquo;s/)/\n/g' - this sed (stream editor) command removes trailing <code>)</code> bracket.</p>
