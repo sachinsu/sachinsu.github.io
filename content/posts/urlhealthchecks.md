@@ -30,7 +30,7 @@ I decided to go for dos / shell script way and surprisingly all the necessary to
 
 Below is single command line that fulfils the requirement, 
 
-`grep -E -i -w "http|https" *.md | sed 's/(http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:`
+`grep -E -i -w "http|https" *.md | sed 's/](http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:`
 
 In above chain, 
 
@@ -40,7 +40,7 @@ In above chain,
 
 - [Pipe |](https://en.wikipedia.org/wiki/Pipeline_(Unix)) - Pipe command streams output of command to the next one.
 
-- [sed](https://en.wikipedia.org/wiki/Sed) 's/(http/\nhttp/g' - this sed (stream editor) command adds line break before `http` for better extraction.
+- [sed](https://en.wikipedia.org/wiki/Sed) 's/](http/\nhttp/g' - this sed (stream editor) command adds line break before `http` for better extraction.
 
 - [sed](https://en.wikipedia.org/wiki/Sed) 's/)/\n/g' - this sed (stream editor) command removes trailing `)` bracket.
 

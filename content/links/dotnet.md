@@ -56,7 +56,6 @@ Platform where i have spent most time till now.
 - [Event sourcing using variety of stores like AMQP, database](https://github.com/eventflow/EventFlow)
 - [Web API rate limiting](https://github.com/stefanprodan/WebApiThrottle)
 - [Feature Management library for ASP.NET Core](https://github.com/microsoft/FeatureManagement-Dotnet)
-- [GraphQL Server for .NET & .NET Core](https://hotchocolate.io)
 - [General Checklist for Projects](https://github.com/StephenCleary/Docs/blob/master/libraries/README.md)
 - [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
