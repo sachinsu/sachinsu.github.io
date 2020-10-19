@@ -86,10 +86,12 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [NSQ - a realtime distributed messaging platform designed to operate at scale](https://nsq.io)
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)
 - [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
+- [Open source Project Management Software](https://github.com/opf/openproject)
 
 ## Open source Pipelining, workflows 
+
 - [Pipelines/workflow frameworks](https://github.com/pditommaso/awesome-pipeline)
-- [ETL frameworks](https://github.com/pawl/awesome-etl)
+- [List of ETL frameworks](https://github.com/pawl/awesome-etl)
 - [Streaming frameworks](https://github.com/manuzhang/awesome-streaming)
 - [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 
@@ -121,6 +123,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
 - [Open source infrastructure and application Monitoring](https://netdata.cloud)
 - [Monitoring your own infrastructure using Grafana, InfluxDB, and CollectD](https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/)
+- [Tool to extract whitebox monitoring data from application logs for collection in a timeseries database](https://github.com/google/mtail)
+
 
 ## Distributed messaging, Streams
 
