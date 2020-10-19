@@ -4,9 +4,9 @@ date: 2020-02-07T12:33:07+05:30
 draft: false
 ---
 
-# Programming 
+# System Design, Architecture  
 
-Links covering programming concepts, Architectural Approaches, Cases Studies etc.
+Links covering concepts and approaches around Distributed Systems, DevOps, Observability etc.
 
 ## Architectural Case studies 
 - [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
@@ -38,6 +38,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Important Aspects about Circuit breaker from Shopify](https://engineering.shopify.com/blogs/engineering/circuit-breaker-misconfigured)
 - [CRDTs for Synchronization](https://github.com/jlongster/crdt-example-app)
 - [Asynchronous transaction processing @ Facebook](https://engineering.fb.com/production-engineering/async/)
+- [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html#AllDatabaseArtifactsAreVersionControlledWithApplicationCode)
 
 ## Training
 
@@ -54,6 +55,7 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Distrivbuted Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
 
 ## Automation 
+
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/)
 - [Four bad ways to use RPA](https://www.thoughtworks.com/insights/articles/four-bad-ways-use-rpa?utm_campaign=ping-jun19&utm_medium=email&utm_source=marketo)
 - [Data Science at the Command line](https://www.datascienceatthecommandline.com)
@@ -76,7 +78,6 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Open source Video Conferencing](https://jitsi.org/)
 - [Open network for secure, decentralized communication](https://matrix.org/)
 - [Alternatives for Local Kubernetes development](https://seroter.com/2020/03/10/lets-look-at-your-options-for-local-development-with-kubernetes/)
-- [Open source infrastructure and application Monitoring](https://netdata.cloud)
 - [Jami - tool for Encrypted Audio/Video calls](https://jami.net/#)
 - [Keycloak - Open source Identity and Access Management](https://www.keycloak.org)
 - [Awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
@@ -93,30 +94,36 @@ Links covering programming concepts, Architectural Approaches, Cases Studies etc
 - [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 
 ## Security 
+
 - [Web Application Security Testing](https://danielmiessler.com/projects/webappsec_testing_resources/)
 - [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
+- [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
 
 ## Devops/Monitoring
+
 - [Hashicorp Waypoint - easy way to build, deploy and release applications](https://www.waypointproject.io/docs/getting-started)- [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
+- [How to Create and Manage CRON Jobs](https://davidwalsh.name/cron-job)
+- [lazydocker - Docker mgmt tool for linux](https://danielmiessler.com/projects/webappsec_testing_resources/)
+- [What’s in a CI pipeline](https://deors.wordpress.com/2019/04/19/whats-in-a-ci-pipeline/)
+- [Repository of DevOps Questions n Answers](https://github.com/bregman-arie/devops-exercises#readme)
+- [Google Incident Response Framework](https://grr-doc.readthedocs.io/en/latest/what-is-grr.html)
+- [Dockerfile Best Practices](https://www.docker.com/blog/speed-up-your-development-flow-with-these-dockerfile-best-practices/)
+- [Github Workflow - Test them locally using Act](https://github.com/nektos/act)
+- [Code coverage best practices from Google](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
+
+## Observability
+
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
-- [How to Create and Manage CRON Jobs](https://davidwalsh.name/cron-job)
-- [lazydocker - Docker mgmt tool for linux](https://danielmiessler.com/projects/webappsec_testing_resources/)
-- [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html#AllDatabaseArtifactsAreVersionControlledWithApplicationCode)
-- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
-- [What’s in a CI pipeline](https://deors.wordpress.com/2019/04/19/whats-in-a-ci-pipeline/)
-- [Repository of DevOps Questions n Answers](https://github.com/bregman-arie/devops-exercises#readme)
-- [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
-- [Google Incident Response Framework](https://grr-doc.readthedocs.io/en/latest/what-is-grr.html)
-- [Dockerfile Best Practices](https://www.docker.com/blog/speed-up-your-development-flow-with-these-dockerfile-best-practices/)
-- [Github Workflow - Test them locally using Act](https://github.com/nektos/act)
+- [Open source infrastructure and application Monitoring](https://netdata.cloud)
 - [Monitoring your own infrastructure using Grafana, InfluxDB, and CollectD](https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/)
-- [Code coverage best practices from Google](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
 
 ## Distributed messaging, Streams
+
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
 - [Oracle Advanced Queues](https://www.oracle.com/database/technologies/advanced-queuing.html)
 - [Tim Bray's Blog](https://www.tbray.org/ongoing)

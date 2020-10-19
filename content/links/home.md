@@ -9,7 +9,7 @@ draft: false
 - [Awesome](http://awesome.re/) - de-facto repository covering wide range of technical topics.
 - [Online Learning](/links/onlearn/)
 - [Perspectives](/links/perspectives/)
-- [Programming Concepts, Strategies etc.](/links/programming/)
+- [Distributed Systems Design, Architecture ...](/links/programming/)
 - [Testing](/links/testing/)
 - [UI/UX](/links/uiux)
 - [Languages](/links/planguages/)
