@@ -53,6 +53,7 @@ Knowledge base around general database related topics.
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
 - [1mg's Data Stack](https://rudderstack.com/blog/1mgs-data-stack-explained-how-they-harness-and-activate-unlimited-real-time-data/)
+- [A Unified Data Infrastructure Architecture](https://7a9z42689xx35658r1hutm8n-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Data-Report-Martin-Inline-Graphics-R7.pdf)
 
 
 ## ETL, Evolutionary Practices 

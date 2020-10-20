@@ -102,6 +102,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
+- [Open Policy Agent - General purpose Policy Engine](https://www.openpolicyagent.org)
 
 ## Devops/Monitoring
 
