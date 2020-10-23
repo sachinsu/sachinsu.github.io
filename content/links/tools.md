@@ -11,4 +11,18 @@ Section covering useful tools for every day activities, Online learning etc.
 - [OBS Studio - Free and open source software for video recording and live streaming.](https://obsproject.com/)
 - [Open source  3D parametric modeler](https://github.com/FreeCAD/FreeCAD)
 - [Backstage - an open platform for building developer portals](https://backstage.io)
+
+## Useful Command line tools
+
 - [Zmap - collection of open source tools for performing large-scale studies of the hosts and services that compose the public Internet.](https://github.com/zmap)
+- [ripgrep - Recursively search directories for regex](https://github.com/BurntSushi/ripgrep)
+- [ripgrep-all - rigrep + PDFs, E-books, Office documents](https://github.com/phiresky/ripgrep-all)
+- [gron - Make JSON greppable](https://github.com/tomnomnom/gron)
+- [xsv - fast command line CSV toolkit](https://github.com/BurntSushi/xsv)
+- [App that corrects previous Console command](https://github.com/nvbn/thefuck)
+- [hstr - view bash shell history](https://github.com/dvorka/hstr)
+- [Lightening fast Code searching made easy](https://github.com/hound-search/hound)
+- [Rewritten in Rust: Modern Alternatives of Command-Line Tools](https://zaiste.net/posts/shell-commands-rust/)
+- [Broot - A better way to navigate directories](https://github.com/Canop/broot)
+- [fd - Alternative to Find](https://github.com/sharkdp/fd)
+- [bat - cat clone with wings](https://github.com/sharkdp/bat)
