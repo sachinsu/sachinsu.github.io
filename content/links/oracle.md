@@ -25,6 +25,7 @@ draft: false
 - [How to find Slow SQL](https://livesql.oracle.com/apex/livesql/file/tutorial_JN0XQTKBU5D2JMNDVMTRQCFIE.html)
 - [Using External Tables and Table Clusters in Oracle](https://blogs.oracle.com/sql/how-to-create-alter-and-drop-tables-in-sql#create-external)
 - [Oracle DBA - Application Tuning ](https://videohub.oracle.com/media/1_57pd28lv?elq_mid=174954&sh=082624191813080613161522312216341235&cmid=WWMK200518P00173)
+- [Replacing Kafka use cases with Oracle Advanced queues in modern applications](https://www.youtube.com/watch?v=kFQqS9Ry-jI&list=WL&index=9&ab_channel=OracleMania)
 
 ### Change Data Capture
 
