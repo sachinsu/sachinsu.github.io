@@ -28,7 +28,7 @@ SameSite is a standard designed to provide some protection against cross-site re
    - SameSite=None must be used to allow cross-site cookie use.
    - Cookies that assert SameSite=None must also be marked as Secure.
    - Applications that use ```<iframe>``` may experience issues with sameSite=Lax or sameSite=Strict cookies because ```<iframe>``` is treated as cross-site scenarios.
-   - The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict. See Supporting older browsers in this document.
+   - The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict. 
 
 The SameSite=Lax setting works for most application cookies.
 
