@@ -596,7 +596,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 <li>SameSite=None must be used to allow cross-site cookie use.</li>
 <li>Cookies that assert SameSite=None must also be marked as Secure.</li>
 <li>Applications that use <code>&lt;iframe&gt;</code> may experience issues with sameSite=Lax or sameSite=Strict cookies because <code>&lt;iframe&gt;</code> is treated as cross-site scenarios.</li>
-<li>The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict. See Supporting older browsers in this document.</li>
+<li>The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict.</li>
 </ul>
 <p>The SameSite=Lax setting works for most application cookies.</p>
 <p>Accordingly, below settings were made in startup.cs of the ASP.NET Core Application.</p>
