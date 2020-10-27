@@ -1,4 +1,84 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 15 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Validating urls from 'Useful Links' section using bash / command line tools</title><link>https://sachinsu.github.io/posts/urlhealthchecks/</link><pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid><description>Background I started this blog, https://sachinsu.github.io few months back .
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Ninja - Using lightweight build system for Go projects</title><link>https://sachinsu.github.io/posts/ninjabuildsystem/</link><pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid><description>Background I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.
+Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.</p>
+<p>Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</p>
+<p>Following a wonderful post by Julia Evans (read <a href="https://jvns.ca/blog/2020/10/26/ninja--a-simple-way-to-do-builds/">here</a>) on <a href="https://ninja-build.org">Ninja</a>. I decided to give it a try for a Golang Application.</p>
+<p>Julia, in her post, has covered important aspects of Ninja but to summarize, Ninja is,</p>
+<ul>
+<li>A build automation tool</li>
+<li>Lightweight, with focus on speed</li>
+<li>Easy to configure</li>
+<li>Cross platform (Easy to setup across Windows and Linux)</li>
+</ul>
+<p>With this, lets give it a try,</p>
+<p>To start with, lets create a simple go &lsquo;Hello World&rsquo; project,</p>
+<ul>
+<li>
+<p>Initiate Go Module (in a Empty folder), <code>go mod init github.com/sachinsu/ninjabuild</code></p>
+</li>
+<li>
+<p>Create a &lsquo;main.go&rsquo; that prints &lsquo;Hello World&rsquo;,</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">        <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+        <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+        <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
+        }
+</code></pre></div><ul>
+<li>
+<p>Now setup Ninja, It is as easy as downloading binary for your Platform. It is also possible to build it locally, if you prefer it that way. For details, refer <a href="https://ninja-build.org/">here</a></p>
+</li>
+<li>
+<p>Once ninja is setup, lets create build configuration file (i.e. build.ninja),</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#ae81ff">GOARCH = amd64</span>
+<span style="color:#ae81ff">GOOS = linux</span>
+
+<span style="color:#ae81ff">rule lint</span>
+ <span style="color:#ae81ff">command = go vet -mod=vendor ./...</span>
+
+<span style="color:#f92672">build lintoutput</span>: <span style="color:#ae81ff">lint </span>
+
+<span style="color:#ae81ff">rule unit</span>
+ <span style="color:#ae81ff">command = go test -mod=vendor -cover -v -short ./...</span>
+
+<span style="color:#f92672">build utest</span>: <span style="color:#ae81ff">unit </span>
+
+
+<span style="color:#ae81ff">rule compile</span>
+ <span style="color:#ae81ff">command = cmd /c go mod tidy &amp;&amp; go mod vendor &amp;&amp;  go build -o $out $in  &amp;&amp; echo &#34;build done.&#34;</span>
+ <span style="color:#ae81ff">description = compile $in</span>
+
+<span style="color:#f92672">build ninjabuild.exe</span>: <span style="color:#ae81ff">compile .</span>
+</code></pre></div><p>lets go through the contents of this file,</p>
+<ul>
+<li>
+<p>One can define variables <code>GOARCH = amd64</code> and refer them as <code>$GOARCH</code></p>
+</li>
+<li>
+<p>Ninja configuration is combination of build step and associated rule, for e.g.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#ae81ff">rule compile</span>
+ <span style="color:#ae81ff">command = cmd /c go mod tidy &amp;&amp; go mod vendor &amp;&amp;  go build -o $out $in  &amp;&amp; echo &#34;build done.&#34;</span>
+ <span style="color:#ae81ff">description = compile $in</span>
+
+<span style="color:#f92672">build ninjabuild.exe</span>: <span style="color:#ae81ff">compile .</span>
+</code></pre></div><ul>
+<li>Above snippet, defines rule <code>compile</code> with associated command that builds the code. Being on Windows, i have used <code>cmd /c</code> to start a new shell and concatenate multiple commands as part of <code>compile </code>rule using <code>&amp;&amp;</code> which chains the commands and executes next one only if current one succeeds.</li>
+</ul>
+<p>As demonstrated in above file, Ninja can be used to automate wide variety of tasks like build, tests, deployment and so on.</p>
+<p>Many of you using Make will find the approach similar to it. In contrast to Make, Ninja lacks features such as string manipulation, as Ninja build files are not meant to be written by hand. Instead, a &ldquo;build generator&rdquo; should be used to generate Ninja build files.</p>
+<p>I found simplicity (of installation and configuration) and easy of use to be  key aspects of this tool.</p>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content></item><item><title>Validating urls from 'Useful Links' section using bash / command line tools</title><link>https://sachinsu.github.io/posts/urlhealthchecks/</link><pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid><description>Background I started this blog, https://sachinsu.github.io few months back .
 In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.
 As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.
 So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
