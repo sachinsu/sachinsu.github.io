@@ -20,6 +20,7 @@ draft: false
 - [Using PostgreSQL as Cache and Read Optimization tips](http://renesd.blogspot.com/2019/10/using-postgresql-as-cache.html)
 - [Adyen's Use of PostgreSQL](https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database)
 - [PostgreSQL version Upgrade @ Gitlab](https://about.gitlab.com/blog/2020/09/11/gitlab-pg-upgrade/)
+- [Zombodb - PostgreSQL and ElasticSearch work together](https://www.zombodb.com/)
 
 
 ## Performance tuning, configuration etc.

@@ -41,6 +41,7 @@ My current Favourite Language
 - [Go: Discovery of the Trace Package](https://medium.com/a-journey-with-go/go-discovery-of-the-trace-package-e5a821743c3c)
 - [Rust for Go Developers](https://christine.website/blog/TLDR-rust-2020-09-19)
 - [Example of how to let only one Goroutine do the task while letting others wait for it useful in case of reading data from DB to be cached](https://lakefs.io/2020/09/23/in-process-caching-in-go-scaling-lakefs-to-100k-requests-second/)
+- [How to leverage AWS Lambda timeouts with Go context cancellation](https://medium.com/@filiplubniewski/how-to-leverage-aws-lambda-timeouts-with-go-context-cancellation-7dacde656540)
 
 ### Libraries, Tools
 

@@ -25,6 +25,8 @@ Useful links for deep diving in various Cloud Ecosystems
 - [AWS Lambda vs Cloudflare Workers Unbound](https://blog.cloudflare.com/introducing-workers-unbound/)
 - [One line Explaination for each of AWS Services](https://adayinthelifeof.nl/2020/05/20/aws.html)
 - [Building a Multiplayer Game with API Gateway+Websockets, Go and DynamoDB](https://serialized.net/2020/09/multiplayer/)
+- [Best Practices To Handle Lambda Timeout Errors](https://lumigo.io/learn/aws-lambda-timeout-best-practices/)
+- [Save 99.93% for Lambda with Init time](https://medium.com/@hichaelmart/shave-99-93-off-your-lambda-bill-with-this-one-weird-trick-33c0acebb2ea)
 
 
 ### Videos, Talks (AWS)
