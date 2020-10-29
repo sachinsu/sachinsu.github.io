@@ -26,3 +26,4 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Broot - A better way to navigate directories](https://github.com/Canop/broot)
 - [fd - Alternative to Find](https://github.com/sharkdp/fd)
 - [bat - cat clone with wings](https://github.com/sharkdp/bat)
+- [Handy Linux networking tools](https://docs.google.com/presentation/d/1PZ-bp-a00KKjE9bqKOd17ZoroyXHJkm70aXcFBqwXAQ/edit)
