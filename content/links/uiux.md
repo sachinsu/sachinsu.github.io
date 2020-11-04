@@ -34,3 +34,5 @@ draft: false
 - [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)
 - [One line CSS Layouts by Google](https://1linelayouts.glitch.me/)
 - [Interactive CSS Grid generator](https://grid.layoutit.com/)
+- [Msw - Mock Service Worker for REST & GraphQL API Mocking](https://mswjs.io/)
+- [Playright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)

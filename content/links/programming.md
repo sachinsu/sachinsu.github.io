@@ -53,6 +53,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Containers - Training resources](https://container.training/)
 - [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
 - [Distrivbuted Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
+- [Microservices — architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
 
 ## Automation 
 
@@ -120,11 +121,13 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
+- [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
 - [Open source infrastructure and application Monitoring](https://netdata.cloud)
 - [Monitoring your own infrastructure using Grafana, InfluxDB, and CollectD](https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/)
 - [Tool to extract whitebox monitoring data from application logs for collection in a timeseries database](https://github.com/google/mtail)
+- [Percona Monitoring & Mgmt - Open Source Software for MySQL/MongoDB/PostgreSQL Monitoring](https://www.percona.com/doc/percona-monitoring-and-management/2.x/index.html)
 
 
 ## Distributed messaging, Streams
