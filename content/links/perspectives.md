@@ -26,3 +26,4 @@ Section covering Business, project/programming perspectives
 - [The Amazon Builder's library](https://aws.amazon.com/builders-library/?cards-body.sort-by=item.additionalFields.customSort&cards-body.sort-order=asc&awsf.filter-content-type=*all)
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [Telemetry Collection - Corelation in Latency Analysis](https://rakyll.medium.com/correlation-in-latency-analysis-419357b93287)
+- [Advice to Young kids by Stephen O'Grady](https://thisistheway.us/)
