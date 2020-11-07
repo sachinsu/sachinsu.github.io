@@ -1,6 +1,186 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Trobleshooting TCP Connection request time outs</title><link>https://sachinsu.github.io/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid><description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Sachin Sunkle</title>
+        <link>https://sachinsu.github.io/posts/</link>
+        <description>Recent content in Posts on Sachin Sunkle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate>
+        <atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Ninja - Using lightweight build system for Go projects </title>
+            <link>https://sachinsu.github.io/posts/ninjabuildsystem/</link>
+            <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid>
+            <description>Background I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.
+Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.</p>
+<p>Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</p>
+<p>Following a wonderful post by Julia Evans (read <a href="https://jvns.ca/blog/2020/10/26/ninja--a-simple-way-to-do-builds/">here</a>) on <a href="https://ninja-build.org">Ninja</a>. I decided to give it a try for a Golang Application.</p>
+<p>Julia, in her post, has covered important aspects of Ninja but to summarize, Ninja is,</p>
+<ul>
+<li>A build automation tool</li>
+<li>Lightweight, with focus on speed</li>
+<li>Easy to configure</li>
+<li>Cross platform (Easy to setup across Windows and Linux)</li>
+</ul>
+<p>With this, lets give it a try,</p>
+<p>To start with, lets create a simple go &lsquo;Hello World&rsquo; project,</p>
+<ul>
+<li>
+<p>Initiate Go Module (in a Empty folder), <code>go mod init github.com/sachinsu/ninjabuild</code></p>
+</li>
+<li>
+<p>Create a &lsquo;main.go&rsquo; that prints &lsquo;Hello World&rsquo;,</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">        <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+        <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+        <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
+        }
+</code></pre></div><ul>
+<li>
+<p>Now setup Ninja, It is as easy as downloading binary for your Platform. It is also possible to build it locally, if you prefer it that way. For details, refer <a href="https://ninja-build.org/">here</a></p>
+</li>
+<li>
+<p>Once ninja is setup, lets create build configuration file (i.e. build.ninja),</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">GOARCH = amd64
+GOOS = linux
+
+rule lint
+ command = go vet -mod=vendor ./...
+
+<span style="color:#66d9ef">build lintoutput</span>: lint 
+
+rule unit
+ command = go test -mod=vendor -cover -v -short ./...
+
+<span style="color:#66d9ef">build utest</span>: unit 
+
+
+rule compile
+ command = cmd /c go mod tidy <span style="color:#75715e">&amp;&amp;</span> go mod vendor <span style="color:#75715e">&amp;&amp;</span>  go build -o $out $in  <span style="color:#75715e">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;build done.&#34;</span>
+ description = compile $in
+
+<span style="color:#66d9ef">build ninjabuild.exe</span>: compile .
+</code></pre></div><p>lets go through the contents of this file,</p>
+<ul>
+<li>
+<p>One can define variables <code>GOARCH = amd64</code> and refer them as <code>$GOARCH</code></p>
+</li>
+<li>
+<p>Ninja configuration is combination of build step and associated rule, for e.g.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">rule compile
+ command = cmd /c go mod tidy <span style="color:#75715e">&amp;&amp;</span> go mod vendor <span style="color:#75715e">&amp;&amp;</span>  go build -o $out $in  <span style="color:#75715e">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;build done.&#34;</span>
+ description = compile $in
+
+<span style="color:#66d9ef">build ninjabuild.exe</span>: compile .
+</code></pre></div><ul>
+<li>Above snippet, defines rule <code>compile</code> with associated command that builds the code. Being on Windows, i have used <code>cmd /c</code> to start a new shell and concatenate multiple commands as part of <code>compile </code>rule using <code>&amp;&amp;</code> which chains the commands and executes next one only if current one succeeds.</li>
+</ul>
+<p>As demonstrated in above file, Ninja can be used to automate wide variety of tasks like build, tests, deployment and so on.</p>
+<p>Many of you using Make will find the approach similar to it. In contrast to Make, Ninja lacks features such as string manipulation, as Ninja build files are not meant to be written by hand. Instead, a &ldquo;build generator&rdquo; should be used to generate Ninja build files.</p>
+<p>I found simplicity (of installation and configuration) and easy of use to be  key aspects of this tool.</p>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Validating urls from &#39;Useful Links&#39; section using bash / command line tools</title>
+            <link>https://sachinsu.github.io/posts/urlhealthchecks/</link>
+            <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid>
+            <description>Background I started this blog, https://sachinsu.github.io few months back .
+In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.
+As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.
+So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>I started this blog, <a href="https://sachinsu.github.io">https://sachinsu.github.io</a> few months back .</p>
+<p>In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.</p>
+<p>As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.</p>
+<p>So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.</p>
+<p>The requirement is to,</p>
+<ul>
+<li>Parse all the files to links (being in Markdown links will be enclosed in brackets)</li>
+<li>Send request to each link and verify if its active using HTTP Status (say 200 or 302)</li>
+</ul>
+<h2 id="approach">Approach</h2>
+<p>Enter Automation !!</p>
+<p>It is possible to write a utility/tool (or it might be already available) or can good old command line utlities be used for this task?</p>
+<p>I decided to go for dos / shell script way and surprisingly all the necessary tools are already available.</p>
+<p>Below is single command line that fulfils the requirement,</p>
+<p><code>grep -E -i -w &quot;http|https&quot; *.md | sed 's/](http/\nhttp/g' | sed 's/)/\n/g' | grep ^http | xargs curl -s -I  -w 'URL:%{url_effective} - %{http_code}\n' | grep ^URL:</code></p>
+<p>In above chain,</p>
+<ul>
+<li>
+<p>I am using excellent <a href="https://cmder.net/">Cmder</a> console emulator, which also makes above nice tools (grep, sed etc.) available on Windows.</p>
+</li>
+<li>
+<p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a> -E -i -w &ldquo;http|https&rdquo; *.md  - this command extracts all the lines containing <code>http(s)</code> from all the markdown (.md) files</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)">Pipe |</a> - Pipe command streams output of command to the next one.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Sed">sed</a> &rsquo;s/](http/\nhttp/g&rsquo; - this sed (stream editor) command adds line break before <code>http</code> for better extraction.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Sed">sed</a> &rsquo;s/)/\n/g&rsquo; - this sed (stream editor) command removes trailing <code>)</code> bracket.</p>
+</li>
+<li>
+<p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a> ^http  - this command removes all lines not containing <code>http</code>.</p>
+</li>
+<li>
+<p><a href="https://man7.org/linux/man-pages/man1/xargs.1.html">xargs</a> - xargs is a command on Unix and most Unix-like operating systems used to build and execute commands from standard input.</p>
+</li>
+<li>
+<p><a href="https://curl.haxx.se/">curl</a> -s -I  -w &lsquo;URL:%{url_effective} &mdash;&gt; %{http_code}&rsquo;&rsquo; - previously used <code>xargs</code> command feeds each line (url) to this command as last argument. This command sends tcp request to the URL and prints out http status code along with URL.</p>
+</li>
+<li>
+<p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a> ^URL: - For some reason, CURL outputs content even if <code>-s</code> (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.</p>
+</li>
+</ul>
+<p>The output is as below,</p>
+<figure>
+    <img src="/images/urloutput.png"/> <figcaption>
+            <h4>List of URLs with HTTP Status code</h4>
+        </figcaption>
+</figure>
+
+<p>So, It is  possible to quickly come up with this using built-in tools if writing a program is not an option or cumbersome for task at hand.</p>
+<p>As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.</p>
+<p>Let me know (in comments) if you are aware of any alternate better way of achieving this.</p>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Trobleshooting TCP Connection request time outs</title>
+            <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
+            <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
+            <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
 Simplified deployment Architecture is as below,
-High Level Architecture Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+  High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.</p>
 <p>Simplified deployment Architecture is as below,</p>
 <figure>
@@ -83,12 +263,22 @@ High Level Architecture Technology Stack used is Microsoft .NET Framework 4.8 us
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
+]]></content>
+        </item>
+        
+        <item>
+            <title>Tool to mass DM followers on Twitter in Go</title>
+            <link>https://sachinsu.github.io/posts/massdmgolang/</link>
+            <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
+            <description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
 This is an attempt to write CLI tool in Golang in response to it.
 For detailed requirements, refer here
 Approach In Brief,
-CLI should,
-accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+  CLI should,
+ accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>I recently came across bounty by <a href="https://twitter.com/balajis/status/1271945241881268224?s=20">Balaji Srinivasan</a> to send Direct Message to all twitter followers. <em>Currently, i do not intend to participate in bounty and this is mere exercise.</em></p>
 <p>This is an attempt to write CLI tool in <a href="https://golang.org">Golang</a> in response to it.</p>
 <p>For detailed requirements, refer <a href="https://github.com/balajis/twitter-export">here</a></p>
@@ -135,9 +325,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 </li>
 </ul>
 <h2 id="current-status">Current Status</h2>
-<ul>
-<li>The code is ready and functionality to retrieve followers and saving in local DB is tested. Code to send DM is not yet tested as it will require setting up dummy twitter account.</li>
-</ul>
+<p>The code is ready and functionality to retrieve followers and saving in local DB is tested. Code to send DM is not yet tested as it will require setting up dummy twitter account.</p>
 <h2 id="roadmap">Roadmap</h2>
 <ul>
 <li>In addition to CLI, Expose the utility as responsive Web Application</li>
@@ -148,9 +336,19 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Web Security Measures in .NET Applications</title><link>https://sachinsu.github.io/posts/websecurity/</link><pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/websecurity/</guid><description>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
+]]></content>
+        </item>
+        
+        <item>
+            <title>Web Security Measures in ASP.NET Applications</title>
+            <link>https://sachinsu.github.io/posts/websecurity/</link>
+            <pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/websecurity/</guid>
+            <description>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
 While all our .NET applications adhere to below guidelines,
-ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline.</description><content type="html"><![CDATA[<p>At my current workplace, All Applications are expected to adhere to  <a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS standards</a> meant for Data protection, Access Regulation and so on.  Dedicated <a href="https://en.wikipedia.org/wiki/Information_security_operations_center">SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
+ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP  We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline.</description>
+            <content type="html"><![CDATA[<p>At my current workplace, All Applications are expected to adhere to  <a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">PCI DSS standards</a> meant for Data protection, Access Regulation and so on.  Dedicated <a href="https://en.wikipedia.org/wiki/Information_security_operations_center">SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
 <p>While all our .NET applications adhere to below guidelines,</p>
 <ul>
 <li><a href="https://support.microsoft.com/en-in/help/891028/asp-net-security-overview">ASP.NET Security Overview</a></li>
@@ -212,7 +410,17 @@ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP 
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Is WebAssembly future of Web Development</title><link>https://sachinsu.github.io/posts/webassembly/</link><pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/webassembly/</guid><description>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.</description><content type="html"><![CDATA[<p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like <a href="https://reactjs.org">React</a> and <a href="https://vuejs.org">Vue</a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. <a href="https://getbootstrap.com">Bootstrap</a>. Offline Support soon came in ref: <a href="https://electronjs.org">Electron</a> and <a href="https://web.dev/progressive-web-apps/">Progressive Web Applications</a>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Is WebAssembly future of Web Development</title>
+            <link>https://sachinsu.github.io/posts/webassembly/</link>
+            <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/webassembly/</guid>
+            <description>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.</description>
+            <content type="html"><![CDATA[<p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like <a href="https://reactjs.org">React</a> and <a href="https://vuejs.org">Vue</a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. <a href="https://getbootstrap.com">Bootstrap</a>. Offline Support soon came in ref: <a href="https://electronjs.org">Electron</a> and <a href="https://web.dev/progressive-web-apps/">Progressive Web Applications</a>.</p>
 <p>As a result, Javascript has become lingua franca of Web Development and is being used on server side development (<a href="https://nodejs.org">Nodejs</a>).</p>
 <p>The reason for this whole rant on history (which you are most likely to be aware of) is that latest kid on the Block could possibly challenge Monopoly of Javascript (and its ilk) at far as browsers are concerned.</p>
 <p><em><strong>Enter WebAssembly (A.K.A. WASM)</strong></em></p>
@@ -260,9 +468,19 @@ ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP 
 </li>
 </ol>
 </section>
-]]></content></item><item><title>Using Github Actions for Automated Testing and Deployment</title><link>https://sachinsu.github.io/posts/usinggithubactions/</link><pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/usinggithubactions/</guid><description>Background The source code of tracfee.com is hosted on Github Private.
+]]></content>
+        </item>
+        
+        <item>
+            <title>Using Github Actions for Automated Testing and Deployment</title>
+            <link>https://sachinsu.github.io/posts/usinggithubactions/</link>
+            <pubDate>Thu, 28 May 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/usinggithubactions/</guid>
+            <description>Background The source code of tracfee.com is hosted on Github Private.
 At a High level, Tracfee&amp;rsquo;s Architecture involves,
-Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+ Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud  So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>The source code of <a href="https://tracfee.com">tracfee.com</a> is hosted on Github Private.</p>
 <p>At a High level, Tracfee&rsquo;s Architecture involves,</p>
 <ul>
@@ -312,8 +530,18 @@ Single Page Application using VueJS, deployed on Netlify API in Go, deployed on 
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>Background Recently, we had requirement wherein a process should,
-Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .</description><content type="html"><![CDATA[<h3 id="background">Background</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Windows Service with Cancelable Task</title>
+            <link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link>
+            <pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid>
+            <description>Background Recently, we had requirement wherein a process should,
+ Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .</description>
+            <content type="html"><![CDATA[<h3 id="background">Background</h3>
 <p>Recently, we had requirement wherein a process should,</p>
 <ul>
 <li>Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running.</li>
@@ -353,9 +581,19 @@ Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/mess
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Optimizing .NET Code using Benchmarks</title><link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link><pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid><description>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
-Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks What if it is possible to Benchmark code for,
-Set of varying parameter(s) Different runtimes (.NET Framework versions, .</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Optimizing  .NET Code using Benchmarks</title>
+            <link>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</link>
+            <pubDate>Tue, 05 May 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</guid>
+            <description>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
+ Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks  What if it is possible to Benchmark code for,
+ Set of varying parameter(s) Different runtimes (.NET Framework versions, .</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,</p>
 <ul>
 <li>Performance Testing - Visual Studio Load Tests or Third party tools like  <a href="https://locust.io/">Locust</a>, <a href="https://github.com/tsenart/vegeta">Vegeta</a>, <a href="https://gatling.io/">Gatling</a> etc.</li>
@@ -429,8 +667,18 @@ Set of varying parameter(s) Different runtimes (.NET Framework versions, .</desc
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title><link>https://sachinsu.github.io/posts/samesitecookies/</link><pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/samesitecookies/</guid><description>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
-During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title>
+            <link>https://sachinsu.github.io/posts/samesitecookies/</link>
+            <pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/samesitecookies/</guid>
+            <description>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.</p>
 <p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,</p>
 <ul>
@@ -455,7 +703,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 <li>SameSite=None must be used to allow cross-site cookie use.</li>
 <li>Cookies that assert SameSite=None must also be marked as Secure.</li>
 <li>Applications that use <code>&lt;iframe&gt;</code> may experience issues with sameSite=Lax or sameSite=Strict cookies because <code>&lt;iframe&gt;</code> is treated as cross-site scenarios.</li>
-<li>The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict. See Supporting older browsers in this document.</li>
+<li>The value SameSite=None is not allowed by the 2016 standard and causes some implementations to treat such cookies as SameSite=Strict.</li>
 </ul>
 <p>The SameSite=Lax setting works for most application cookies.</p>
 <p>Accordingly, below settings were made in startup.cs of the ASP.NET Core Application.</p>
@@ -482,8 +730,18 @@ services.AddAntiforgery(options =&gt;
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Using Channels for High performance Producer consumer implementation</title><link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link><pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid><description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
-This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Using Channels for High performance Producer consumer implementation</title>
+            <link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link>
+            <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid>
+            <description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>Recently, i got involved in assignment where in  an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.</p>
 <p>This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).</p>
 <h2 id="approach">Approach</h2>
@@ -543,8 +801,18 @@ Service</a></p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item><item><title>Using .NET standard Assembly in .NET core and .NET Framework</title><link>https://sachinsu.github.io/posts/dotnetstandard/</link><pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/dotnetstandard/</guid><description>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
-High availability Lightweight, High throughput (Need to support few thousand(s) active users) Accordingly, we have been exploring developing this Web Application in .</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Using .NET standard Assembly in .NET core and .NET Framework</title>
+            <link>https://sachinsu.github.io/posts/dotnetstandard/</link>
+            <pubDate>Fri, 07 Feb 2020 10:25:04 +0530</pubDate>
+            
+            <guid>https://sachinsu.github.io/posts/dotnetstandard/</guid>
+            <description>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&amp;rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+ High availability Lightweight, High throughput (Need to support few thousand(s) active users)  Accordingly, we have been exploring developing this Web Application in .</description>
+            <content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as <a href="https://www.youtube.com/watch?v=5OjqD-ow8GE">Modular Monolith</a>. As part of it&rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the <em>Web</em> channel, there was need to develop a Web application with,</p>
 <ul>
 <li>High availability</li>
@@ -641,4 +909,8 @@ This will generate <code>&lt;name&gt;1.0.0.nupkg</code> package in bin\debug fol
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
-]]></content></item></channel></rss>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
