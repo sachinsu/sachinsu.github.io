@@ -36,6 +36,8 @@ Platform where i have spent most time till now.
 - [Debug high CPU usage in .NET Core](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?WT.mc_id=-blog-scottha&tabs=windows)
 - [Measure performance of High frequency events in .NET Core App](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counter-perf)
 - [.NET Core debug memory leak, High CPU Usage, Deadlock](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs=windows)
+- [TCP Connection Pool and how it works in .NET Framework/.NET Core](https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/)
+
 
 ## ASP.NET Web forms
 
@@ -59,6 +61,7 @@ Platform where i have spent most time till now.
 - [General Checklist for Projects](https://github.com/StephenCleary/Docs/blob/master/libraries/README.md)
 - [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
+
 
 ## .NET Core
 - [ASP.NET Core Performance Best Practices](https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?WT.mc_id=ondotnet-channel9-cephilli&view=aspnetcore-2.2)

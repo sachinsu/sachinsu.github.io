@@ -22,7 +22,7 @@ draft: false
 - [PostgreSQL version Upgrade @ Gitlab](https://about.gitlab.com/blog/2020/09/11/gitlab-pg-upgrade/)
 - [Zombodb - PostgreSQL and ElasticSearch work together](https://www.zombodb.com/)
 - [Using pg_cron to schedule background tasks](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/evolving-pg-cron-together-postgres-13-audit-log-background/ba-p/1829588)
-
+- [PG Database Configuration Helper](https://postgresqlco.nf/)
 
 ## Performance tuning, configuration etc.
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)

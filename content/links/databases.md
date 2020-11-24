@@ -41,6 +41,8 @@ Knowledge base around general database related topics.
 - [DBMS Tools](https://dbmstools.com/)
 
 ## Data Analytics 
+- [Why data culture matters](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/why-data-culture-matters#)
+- [Designing a data transformation that delivers value right from the beginning](https://www.mckinsey.com/industries/financial-services/our-insights/designing-a-data-transformation-that-delivers-value-right-from-the-start#)
 - [List of Computational Data Analysis Workflow Systems](https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
 - [Data Visualization framework for Python](https://dash.plotly.com/)
 - [Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it](https://medium.com/@budilov/create-a-serverless-data-lake-on-aws-and-migrate-your-on-prem-data-to-it-80dad09e23cb)

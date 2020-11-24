@@ -17,6 +17,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Strategies/Approaches
 
 - [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
+- [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
 - [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
 - [Distributed architecture concepts I learned while building a large payments system](https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/)
@@ -39,6 +40,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [CRDTs for Synchronization](https://github.com/jlongster/crdt-example-app)
 - [Asynchronous transaction processing @ Facebook](https://engineering.fb.com/production-engineering/async/)
 - [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html#AllDatabaseArtifactsAreVersionControlledWithApplicationCode)
+- [Scaling with Common Sense by Zerodha](https://zerodha.tech/blog/scaling-with-common-sense/)
 
 ## Training
 
@@ -128,7 +130,10 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Monitoring your own infrastructure using Grafana, InfluxDB, and CollectD](https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/)
 - [Tool to extract whitebox monitoring data from application logs for collection in a timeseries database](https://github.com/google/mtail)
 - [Percona Monitoring & Mgmt - Open Source Software for MySQL/MongoDB/PostgreSQL Monitoring](https://www.percona.com/doc/percona-monitoring-and-management/2.x/index.html)
-
+- [Monitoring and Observability With USE and RED](https://orangematter.solarwinds.com/2017/10/05/monitoring-and-observability-with-use-and-red/#:~:text=Taken%20together%2C%20RED%20and%20USE,they%20react%20to%20the%20workload.)
+- [Horizontally scalable storage for Prometheus](https://github.com/cortexproject/cortex)
+- [Thanos - Highly available Prometheus setup with long term storage capabilities.](https://github.com/thanos-io/thanos)
+- [Monitoring with VictoriaMetrics](https://docs.google.com/presentation/d/1g7yUyVEaAp4tPuRy-MZbPXKqJ1z78_5VKuV841aQfsg/edit#slide=id.p)
 
 ## Distributed messaging, Streams
 
