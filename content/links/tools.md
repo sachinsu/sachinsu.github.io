@@ -11,6 +11,8 @@ Section covering useful tools for every day activities, Online learning etc.
 - [OBS Studio - Free and open source software for video recording and live streaming.](https://obsproject.com/)
 - [Open source  3D parametric modeler](https://github.com/FreeCAD/FreeCAD)
 - [Backstage - an open platform for building developer portals](https://backstage.io)
+- [Zoomit - screen zoom and annotation tool for technical presentations that include application demonstrations](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
+- [revealjs - HTML Presentation framework](https://revealjs.com/)
 
 ## Useful Command line tools
 
@@ -27,4 +29,3 @@ Section covering useful tools for every day activities, Online learning etc.
 - [fd - Alternative to Find](https://github.com/sharkdp/fd)
 - [bat - cat clone with wings](https://github.com/sharkdp/bat)
 - [Handy Linux networking tools](https://docs.google.com/presentation/d/1PZ-bp-a00KKjE9bqKOd17ZoroyXHJkm70aXcFBqwXAQ/edit)
-- [Zoomit - screen zoom and annotation tool for technical presentations that include application demonstrations](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)

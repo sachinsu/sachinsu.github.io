@@ -52,6 +52,7 @@ My current Favourite Language
 - [Visualize call graph of a Go program using dot (Graphviz)](https://ofabry.github.io/go-callvis/)
 - [Semgrep - Lightweight static code analysis](https://semgrep.dev/)
 - [Draw Application diagrams using Go](https://github.com/blushft/go-diagrams)
+- [A Go metrics interface with fast buffered metrics and third party reporters](https://github.com/uber-go/tally)
 
 ### Task queues
 
@@ -59,6 +60,7 @@ My current Favourite Language
 - [Bleve - Full text Search Engine](http://blevesearch.com/)
 - [Event Sourcing, pub/sub using AMQP/SQL/Channels](https://github.com/ThreeDotsLabs/watermill)
 - [Hydra - OAuth 2.0 Server](https://ory.sh/hydra)
+- [Temporal - Scalable orchestration platform](https://temporal.io)
 
 ### Web scraping, downloader 
 
