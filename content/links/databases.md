@@ -70,6 +70,10 @@ Knowledge base around general database related topics.
 - [Dolt - Git for Data](https://github.com/liquidata-inc/dolt)
 - [GridDB - next generation database for IoT & big data with both NoSQL interface & SQL Interface.](https://griddb.org)
 
+## Data Discoery
+
+- [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
+
 ## Database Migration Practices
 
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)

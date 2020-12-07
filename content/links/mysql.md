@@ -16,3 +16,4 @@ draft: false
 
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
+- [How Slack uses Vitess](https://slack.engineering/scaling-datastores-at-slack-with-vitess/)
