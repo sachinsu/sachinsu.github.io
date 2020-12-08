@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Background In a typical business Application, there are often requirements for,
+ Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features." />
+<meta name="keywords" content="blog,developer,personal,golang,dotnetcore,databases,architecture,c#,.net core, Vuejs, Quasar, Oracle, python, Go, Golang, MicroServices, MySQL, Cassandra, Uber, Cadence" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://sachinsu.github.io/posts/temporalworkflow/" />
+
+
+    <title>
+        
+            Building Long running Workflow with  Temporal.io :: Sachin Sunkle 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://sachinsu.github.io/main.dede02da9537a98158079c023e83573e18127834838ef08172acce888341a797.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sachinsu.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sachinsu.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sachinsu.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://sachinsu.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://sachinsu.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://sachinsu.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Building Long running Workflow with  Temporal.io">
+<meta itemprop="description" content="Background In a typical business Application, there are often requirements for,
+ Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.">
+<meta itemprop="datePublished" content="2020-12-02T08:25:04&#43;05:30" />
+<meta itemprop="dateModified" content="2020-12-02T08:25:04&#43;05:30" />
+<meta itemprop="wordCount" content="1088">
+
+
+
+<meta itemprop="keywords" content="Go,Golang,MicroServices,MySQL,Cassandra,Uber,Cadence," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building Long running Workflow with  Temporal.io"/>
+<meta name="twitter:description" content="Background In a typical business Application, there are often requirements for,
+ Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features."/>
+
+
+
+    <meta property="og:title" content="Building Long running Workflow with  Temporal.io" />
+<meta property="og:description" content="Background In a typical business Application, there are often requirements for,
+ Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/temporalworkflow/" />
+<meta property="article:published_time" content="2020-12-02T08:25:04+05:30" />
+<meta property="article:modified_time" content="2020-12-02T08:25:04+05:30" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-12-02 08:25:04 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://sachinsu.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://sachinsu.github.io/about/">About</a></li><li><a href="https://sachinsu.github.io/posts/">Blog</a></li><li><a href="https://sachinsu.github.io/projects/">Projects</a></li><li><a href="https://gist.github.com/sachinsu">Gists</a></li><li><a href="https://sachinsu.github.io/links/home">Useful Links</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://sachinsu.github.io/posts/temporalworkflow/">Building Long running Workflow with  Temporal.io</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h2 id="background">Background</h2>
+<p>In a typical business Application, there are often requirements for,</p>
+<ul>
+<li>Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.</li>
+<li>Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.</li>
+</ul>
+<p>Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</p>
+<p>I had been following how Uber fulfils these requirements using their <a href="https://cadenceworkflow.io/">Cadence</a> platform. Cadence (now <a href="https://temporal.io">Temporal</a>)  is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+<p>Temporal defines <a href="https://softwareengineeringdaily.com/wp-content/uploads/2020/04/SED1043-Cadence-Workflow-Orchestration.pdf">workflow</a> as any program which,</p>
+<ul>
+<li>goes beyond single request-reply</li>
+<li>has multiple steps tied together with inherent state</li>
+<li>can be short or long lived.</li>
+<li>performs Event processing</li>
+<li>involves infrastructure automation</li>
+</ul>
+<p>This is interesting perspective that accomodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.</p>
+<p>Below is System architecture of Temporal, more details <a href="https://docs.temporal.io/docs/system-architecture/">here</a>,</p>
+<pre><code><figure>
+    <img src="https://docs.temporal.io/assets/images/system-architecture-d064cede0c97fc4a86defdc1c9fd020c.png"/> <figcaption>
+            <h4>Temporal Architecture</h4>
+        </figcaption>
+</figure>
+
+</code></pre>
+<p>Overall, Temporal offers following features,</p>
+<ul>
+<li>Workflow implemented as Application code - Basically it allows to implement Workflow as code, just like rest of the codebase of the application. Thus allowing one to concentrate on business logic and reduces complexity about authoring workflow as DSL, JSON etc.</li>
+<li>Retries and Timeouts - Nowadays, quite a few steps in workflow involve remote service invocation and whenever one crosses boundary of the application, it is important to have retries and timeouts in place.</li>
+<li>Reliability - Robustness against failure</li>
+<li>Scalability - Horizontally Scalable</li>
+<li>Support for SAGAs - If a Workflow calls multiple external/remote services and if one of them fails then, compensation call to other services will have to be made to complete rollback.</li>
+<li>Distributed Cron - Scheduled processing of workflow or steps in workflow.</li>
+<li>Persistent Storage in MySQL, Cassandra among others</li>
+<li>Frontend for tracking and dignostics</li>
+<li>Monitoring using Prometheus or other backends.</li>
+</ul>
+<p>It is very easy to get basic &ldquo;Helloworld&rdquo; workflow up and running using detailed instructions on setup provided <a href="https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites">here</a> provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.</p>
+<p>To evaluate Temporal further, we will orchestrate below,</p>
+<ul>
+<li>List of users are imported/received (say from a file or provided as input)</li>
+<li>Each of these users are verified/validated by Admin through some Frontend.</li>
+<li>Upon verification, Email  /SMS is sent to user welcoming them</li>
+</ul>
+<p>This may not resemble real world scenario but it will help evaluate features of Temporal like  Signals - Waiting on Events (such as human intervention).</p>
+<ul>
+<li>
+<p>We will have below activities in our workflow,</p>
+<ul>
+<li>Import users - This activity will import list of users from file/stream. For the sake of similicity, we will just pass it as string.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
+
+logger := activity.GetLogger(ctx)
+
+logger.Info(&#34;ImportUsers activity started.&#34;, zap.String(&#34;Dbconn&#34;, DbConnectionString))
+
+// Open connection to database
+db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
+if err != nil {
+    logger.Error(&#34;Cant open connection to database&#34;, zap.Error(err))
+    return 0, err
+}
+
+defer close()
+
+if _, err := db.Exec(DBSchema); err != nil {
+    logger.Error(&#34;Error while executing Schema&#34;, zap.Error(err))
+    return 0, err
+}
+
+logger.Info(&#34;Database connection opened, now parsing user data&#34;)
+
+sqlStmt := &#34;insert into users(name,dob,city) values(?,?,?)&#34;
+
+tx := db.MustBegin()
+
+defer func() {
+    if err != nil {
+        tx.Rollback()
+    }
+    tx.Commit()
+}()
+
+r := csv.NewReader(strings.NewReader(string(userdata)))
+r.Comma = &#39;,&#39;
+r.Comment = &#39;#&#39;
+
+records, err := r.ReadAll()
+if err != nil {
+    logger.Error(&#34;Error while reading&#34;, zap.Error(err))
+    return 0, err
+}
+
+i := 0
+
+for i, record := range records {
+    if i == 0 {
+        continue
+    }
+
+    logger.Info(&#34;Record read is -&gt;&#34;, record[0])
+
+    if _, err := tx.Exec(sqlStmt, record[0], record[1], record[2]); err != nil {
+        logger.Error(&#34;Error while writing user record&#34;, zap.Error(err))
+        return 0, err
+    }
+}
+
+return i, nil
+}
+
+</code></pre></div><ul>
+<li>Approve users - This activity will mark all those users, Approved by Admininstrator via Service, as approved.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
+
+logger := activity.GetLogger(ctx)
+logger.Info(&#34;ApprovedUsers called&#34;, zap.String(&#34;Dbconn&#34;, DbConnectionString), zap.String(&#34;Userlist&#34;, Users))
+
+db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
+if err != nil {
+    logger.Error(&#34;Cant open connection to database&#34;, zap.Error(err))
+    return 0, err
+}
+
+defer close()
+
+if _, err := db.Exec(DBSchema); err != nil {
+    logger.Error(&#34;Error while executing Schema&#34;, zap.Error(err))
+    return 0, err
+}
+
+r := csv.NewReader(strings.NewReader(Users))
+
+tx := db.MustBegin()
+
+defer func() {
+    if err != nil {
+        tx.Rollback()
+    }
+    tx.Commit()
+}()
+
+sqlStmt := &#34;update users set isapproved =1 where id =:1&#34;
+
+i := 0
+
+for {
+    record, err := r.Read()
+    if err == io.EOF {
+        break
+    }
+
+    if err != nil {
+        logger.Error(&#34;Error while reading from file&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    if i == 0 {
+        continue
+    }
+    i++
+
+    if _, err := tx.Exec(sqlStmt, record[0]); err != nil {
+        logger.Error(&#34;Error while writing user record&#34;, zap.Error(err))
+        return 0, err
+
+    }
+}
+return i, nil
+}
+</code></pre></div><ul>
+<li>HTTP Service - This service will receive list of approved users and send it over to workflow via Signal,</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    func (s *server) UpdateUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+
+    creader := csv.NewReader(r.Body)
+    records, err := creader.ReadAll()
+    if err != nil {
+        log.Fatal(err.Error())
+        http.Error(w, err.Error(), http.StatusBadRequest)
+        return
+    }
+
+    // Create the client object just once per process
+    c, err := client.NewClient(client.Options{})
+    if err != nil {
+        log.Fatalln(&#34;unable to create Temporal client&#34;, err)
+        http.Error(w, &#34;Internal Error :Temporal&#34;, http.StatusInternalServerError)
+        return
+    }
+    defer c.Close()
+
+    workflowOptions := client.StartWorkflowOptions{
+        ID:        app.UserApprovalWorkflow,
+        TaskQueue: app.UserApprovalTaskQueue,
+        RetryPolicy: &amp;temporal.RetryPolicy{
+            InitialInterval:    time.Second,
+            BackoffCoefficient: 2.0,
+            MaximumInterval:    time.Minute,
+            MaximumAttempts:    5,
+        },
+    }
+
+    _, err = c.SignalWithStartWorkflow(r.Context(), app.UserApprovalWorkflow, app.ApprovalSignalName,
+        records, workflowOptions, app.OnboardUsers, app.Userdata, s.DBConnection)
+
+    if err != nil {
+        log.Fatal(err.Error())
+        http.Error(w, &#34;Internal Error: Workflow&#34;, http.StatusInternalServerError)
+        return
+    }
+
+    fmt.Fprint(w, &#34;Success&#34;)
+}
+
+</code></pre></div><p>HTTP service uses <code>workflow.SignalWithStartWorkflow</code> function. This function sends the signal to running instance of workflow or starts new if none is in progress.</p>
+<p>Full source code is available <a href="https://github.com/sachinsu/temporalevaluation">here</a></p>
+</li>
+</ul>
+<p>Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.</p>
+<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href="https://uber.com">Uber</a> and host of other companies. Temporal <a href="community.temporal.io">Community</a> is a very active one with founders actively partcipating in discussions.</p>
+<ul>
+<li><a href="https://github.com/firdaus/awesome-cadence-temporal-workflow">Collection of Temporal related stuff</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://sachinsu.github.io/tags/go">Go</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/golang">Golang</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/microservices">MicroServices</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/mysql">MySQL</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/cassandra">Cassandra</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/uber">Uber</a></span><span class="tag"><a href="https://sachinsu.github.io/tags/cadence">Cadence</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1088 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-12-02 08:25 &#43;0530</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://sachinsu.github.io/posts/opentelemetry/">
+                                <span class="button__text">Getting Started with OpenTelemetry</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            
+            <span> <a href="https://sachinsu.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://sachinsu.github.io/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-169012216-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+    </body>
+</html>
