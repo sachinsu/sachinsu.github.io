@@ -6,24 +6,33 @@
     <description>Recent content in Tags on Sachin Sunkle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2020 08:25:04 +0530</lastBuildDate>
     
 	<atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>cmake</title>
-      <link>https://sachinsu.github.io/tags/cmake/</link>
-      <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+      <title>Cadence</title>
+      <link>https://sachinsu.github.io/tags/cadence/</link>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
       
-      <guid>https://sachinsu.github.io/tags/cmake/</guid>
+      <guid>https://sachinsu.github.io/tags/cadence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cassandra</title>
+      <link>https://sachinsu.github.io/tags/cassandra/</link>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/cassandra/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
       <link>https://sachinsu.github.io/tags/go/</link>
-      <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/tags/go/</guid>
       <description></description>
@@ -32,9 +41,81 @@
     <item>
       <title>golang</title>
       <link>https://sachinsu.github.io/tags/golang/</link>
-      <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MicroServices</title>
+      <link>https://sachinsu.github.io/tags/microservices/</link>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://sachinsu.github.io/tags/mysql/</link>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uber</title>
+      <link>https://sachinsu.github.io/tags/uber/</link>
+      <pubDate>Wed, 02 Dec 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/uber/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.net core</title>
+      <link>https://sachinsu.github.io/tags/.net-core/</link>
+      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.net framework</title>
+      <link>https://sachinsu.github.io/tags/.net-framework/</link>
+      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/.net-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Observability</title>
+      <link>https://sachinsu.github.io/tags/observability/</link>
+      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/observability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenTelemetry</title>
+      <link>https://sachinsu.github.io/tags/opentelemetry/</link>
+      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/opentelemetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmake</title>
+      <link>https://sachinsu.github.io/tags/cmake/</link>
+      <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/cmake/</guid>
       <description></description>
     </item>
     
@@ -179,15 +260,6 @@
       <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/tags/webassembly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>.net core</title>
-      <link>https://sachinsu.github.io/tags/.net-core/</link>
-      <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
       <description></description>
     </item>
     
