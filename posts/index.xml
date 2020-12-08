@@ -1,4 +1,236 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 Nov 2020 08:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started with OpenTelemetry</title><link>https://sachinsu.github.io/posts/opentelemetry/</link><pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/opentelemetry/</guid><description>Background How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with trace/logs that are available from O/S, databases etc. and trying to figure out &amp;ldquo;Root cause&amp;rdquo; of the issue.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>Background In a typical business Application, there are often requirements for,
+Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded. Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>In a typical business Application, there are often requirements for,</p>
+<ul>
+<li>Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.</li>
+<li>Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.</li>
+</ul>
+<p>Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</p>
+<p>I had been following how Uber fulfils these requirements using their <a href="https://cadenceworkflow.io/">Cadence</a> platform. Cadence (now <a href="https://temporal.io">Temporal</a>)  is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+<p>Temporal defines <a href="https://softwareengineeringdaily.com/wp-content/uploads/2020/04/SED1043-Cadence-Workflow-Orchestration.pdf">workflow</a> as any program which,</p>
+<ul>
+<li>goes beyond single request-reply</li>
+<li>has multiple steps tied together with inherent state</li>
+<li>can be short or long lived.</li>
+<li>performs Event processing</li>
+<li>involves infrastructure automation</li>
+</ul>
+<p>This is interesting perspective that accomodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.</p>
+<p>Below is System architecture of Temporal, more details <a href="https://docs.temporal.io/docs/system-architecture/">here</a>,</p>
+<pre><code><figure>
+    <img src="https://docs.temporal.io/assets/images/system-architecture-d064cede0c97fc4a86defdc1c9fd020c.png"/> <figcaption>
+            <h4>Temporal Architecture</h4>
+        </figcaption>
+</figure>
+
+</code></pre>
+<p>Overall, Temporal offers following features,</p>
+<ul>
+<li>Workflow implemented as Application code - Basically it allows to implement Workflow as code, just like rest of the codebase of the application. Thus allowing one to concentrate on business logic and reduces complexity about authoring workflow as DSL, JSON etc.</li>
+<li>Retries and Timeouts - Nowadays, quite a few steps in workflow involve remote service invocation and whenever one crosses boundary of the application, it is important to have retries and timeouts in place.</li>
+<li>Reliability - Robustness against failure</li>
+<li>Scalability - Horizontally Scalable</li>
+<li>Support for SAGAs - If a Workflow calls multiple external/remote services and if one of them fails then, compensation call to other services will have to be made to complete rollback.</li>
+<li>Distributed Cron - Scheduled processing of workflow or steps in workflow.</li>
+<li>Persistent Storage in MySQL, Cassandra among others</li>
+<li>Frontend for tracking and dignostics</li>
+<li>Monitoring using Prometheus or other backends.</li>
+</ul>
+<p>It is very easy to get basic &ldquo;Helloworld&rdquo; workflow up and running using detailed instructions on setup provided <a href="https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites">here</a> provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.</p>
+<p>To evaluate Temporal further, we will orchestrate below,</p>
+<ul>
+<li>List of users are imported/received (say from a file or provided as input)</li>
+<li>These users are verified/validated by Admin through some Frontend (to simulate a maker/checker process).</li>
+</ul>
+<p>This may not resemble real world scenario but it will help evaluate features of Temporal like  Signals - Waiting on Events (such as human intervention).</p>
+<ul>
+<li>
+<p>We will have below activities in our workflow,</p>
+<ul>
+<li>Import users - This activity will import list of users from file/stream. For the sake of similicity, we will just pass it as string.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
+
+    logger := activity.GetLogger(ctx)
+
+    logger.Info(&#34;ImportUsers activity started.&#34;, zap.String(&#34;Dbconn&#34;, DbConnectionString))
+
+    // Open connection to database
+    db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
+    if err != nil {
+        logger.Error(&#34;Cant open connection to database&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    defer close()
+
+    if _, err := db.Exec(DBSchema); err != nil {
+        logger.Error(&#34;Error while executing Schema&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    logger.Info(&#34;Database connection opened, now parsing user data&#34;)
+
+    sqlStmt := &#34;insert into users(name,dob,city) values(?,?,?)&#34;
+
+    tx := db.MustBegin()
+
+    defer func() {
+        if err != nil {
+            tx.Rollback()
+        }
+        tx.Commit()
+    }()
+
+    r := csv.NewReader(strings.NewReader(string(userdata)))
+    r.Comma = &#39;,&#39;
+    r.Comment = &#39;#&#39;
+
+    records, err := r.ReadAll()
+    if err != nil {
+        logger.Error(&#34;Error while reading&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    i := 0
+
+    for i, record := range records {
+        if i == 0 {
+            continue
+        }
+
+        logger.Info(&#34;Record read is -&gt;&#34;, record[0])
+
+        if _, err := tx.Exec(sqlStmt, record[0], record[1], record[2]); err != nil {
+            logger.Error(&#34;Error while writing user record&#34;, zap.Error(err))
+            return 0, err
+        }
+    }
+
+    return i, nil
+}
+
+</code></pre></div><ul>
+<li>Approve users - This activity will mark all those users, Approved by Admininstrator via Service, as approved.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
+
+    logger := activity.GetLogger(ctx)
+    logger.Info(&#34;ApprovedUsers called&#34;, zap.String(&#34;Dbconn&#34;, DbConnectionString), zap.String(&#34;Userlist&#34;, Users))
+
+    db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
+    if err != nil {
+        logger.Error(&#34;Cant open connection to database&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    defer close()
+
+    if _, err := db.Exec(DBSchema); err != nil {
+        logger.Error(&#34;Error while executing Schema&#34;, zap.Error(err))
+        return 0, err
+    }
+
+    r := csv.NewReader(strings.NewReader(Users))
+
+    tx := db.MustBegin()
+
+    defer func() {
+        if err != nil {
+            tx.Rollback()
+        }
+        tx.Commit()
+    }()
+
+    sqlStmt := &#34;update users set isapproved =1 where id =:1&#34;
+
+    i := 0
+
+    for {
+        record, err := r.Read()
+        if err == io.EOF {
+            break
+        }
+
+        if err != nil {
+            logger.Error(&#34;Error while reading from file&#34;, zap.Error(err))
+            return 0, err
+        }
+
+        if i == 0 {
+            continue
+        }
+        i++
+
+        if _, err := tx.Exec(sqlStmt, record[0]); err != nil {
+            logger.Error(&#34;Error while writing user record&#34;, zap.Error(err))
+            return 0, err
+
+        }
+    }
+    return i, nil
+}
+</code></pre></div><ul>
+<li>HTTP Service - This service will receive list of approved users and send it over to workflow via Signal,</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    func (s *server) UpdateUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+
+        creader := csv.NewReader(r.Body)
+        records, err := creader.ReadAll()
+        if err != nil {
+            log.Fatal(err.Error())
+            http.Error(w, err.Error(), http.StatusBadRequest)
+            return
+        }
+
+        // Create the client object just once per process
+        c, err := client.NewClient(client.Options{})
+        if err != nil {
+            log.Fatalln(&#34;unable to create Temporal client&#34;, err)
+            http.Error(w, &#34;Internal Error :Temporal&#34;, http.StatusInternalServerError)
+            return
+        }
+        defer c.Close()
+
+        workflowOptions := client.StartWorkflowOptions{
+            ID:        app.UserApprovalWorkflow,
+            TaskQueue: app.UserApprovalTaskQueue,
+            RetryPolicy: &amp;temporal.RetryPolicy{
+                InitialInterval:    time.Second,
+                BackoffCoefficient: 2.0,
+                MaximumInterval:    time.Minute,
+                MaximumAttempts:    5,
+            },
+        }
+
+        _, err = c.SignalWithStartWorkflow(r.Context(), app.UserApprovalWorkflow, app.ApprovalSignalName,
+            records, workflowOptions, app.OnboardUsers, app.Userdata, s.DBConnection)
+
+        if err != nil {
+            log.Fatal(err.Error())
+            http.Error(w, &#34;Internal Error: Workflow&#34;, http.StatusInternalServerError)
+            return
+        }
+
+        fmt.Fprint(w, &#34;Success&#34;)
+}
+
+</code></pre></div><ul>
+<li>HTTP service uses <code>workflow.SignalWithStartWorkflow</code> function. This function sends the signal to running instance of workflow or starts new if none is in progress.</li>
+</ul>
+</li>
+</ul>
+<p>Full source code is available <a href="https://github.com/sachinsu/temporalevaluation">here</a></p>
+<p>Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.</p>
+<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href="https://uber.com">Uber</a> and host of other companies. Temporal <a href="community.temporal.io">Community</a> is a very active one with founders actively partcipating in discussions.</p>
+<ul>
+<li><a href="https://github.com/firdaus/awesome-cadence-temporal-workflow">Collection of Temporal related stuff</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content></item><item><title>Getting Started with OpenTelemetry</title><link>https://sachinsu.github.io/posts/opentelemetry/</link><pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/opentelemetry/</guid><description>Background How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with trace/logs that are available from O/S, databases etc. and trying to figure out &amp;ldquo;Root cause&amp;rdquo; of the issue.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with  trace/logs that are available from O/S, databases etc. and trying to figure out &ldquo;Root cause&rdquo; of the issue.</p>
 <p>Today’s mission critical, distributed applications and systems make it even more important to <strong>observe</strong> them, be it serving web requests, processing stream of data or handling events. The scale at which these applications/systems operate at, often hundreds or thousands of requests, requires <strong>watching</strong> how well system is working, instead of waiting for failure or doing analysis post failure.</p>
 <p>In distributed systems, telemetry can be divided into three overarching flavors:</p>
