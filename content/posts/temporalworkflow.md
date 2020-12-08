@@ -22,7 +22,7 @@ Temporal defines [workflow](https://softwareengineeringdaily.com/wp-content/uplo
 * performs Event processing
 * involves infrastructure automation
 
-This is interesting perspective that accomodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.
+This is interesting perspective that accommodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.
 
 Below is System architecture of Temporal, more details [here](https://docs.temporal.io/docs/system-architecture/), 
 
@@ -36,7 +36,7 @@ Overall, Temporal offers following features,
 * Support for SAGAs - If a Workflow calls multiple external/remote services and if one of them fails then, compensation call to other services will have to be made to complete rollback.
 * Distributed Cron - Scheduled processing of workflow or steps in workflow.
 * Persistent Storage in MySQL, Cassandra among others
-* Frontend for tracking and dignostics
+* Frontend for tracking and diagnostics
 * Monitoring using Prometheus or other backends.
 
 It is very easy to get basic "Helloworld" workflow up and running using detailed instructions on setup provided [here](https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites) provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.
@@ -48,7 +48,7 @@ To evaluate Temporal further, we will orchestrate below,
 This may not resemble real world scenario but it will help evaluate features of Temporal like  Signals - Waiting on Events (such as human intervention). 
 
 * We will have below activities in our workflow, 
-    * Import users - This activity will import list of users from file/stream. For the sake of similicity, we will just pass it as string.
+    * Import users - This activity will import list of users from file/stream. For the sake of simplicity, we will just pass it as string.
 
     ```
     func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
@@ -229,7 +229,7 @@ Full source code is available [here](https://github.com/sachinsu/temporalevaluat
 
 Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.
 
-Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at [Uber](https://uber.com) and host of other companies. Temporal [Community](community.temporal.io) is a very active one with founders actively partcipating in discussions.
+Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at [Uber](https://uber.com) and host of other companies. Temporal [Community](community.temporal.io) is a very active one with founders actively participating in discussions.
 
 
 - [Collection of Temporal related stuff](https://github.com/firdaus/awesome-cadence-temporal-workflow)
