@@ -15,7 +15,7 @@ Batch processing - Often long running Tasks like data import/export, End of day 
 <li>performs Event processing</li>
 <li>involves infrastructure automation</li>
 </ul>
-<p>This is interesting perspective that accomodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.</p>
+<p>This is interesting perspective that accommodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.</p>
 <p>Below is System architecture of Temporal, more details <a href="https://docs.temporal.io/docs/system-architecture/">here</a>,</p>
 <pre><code><figure>
     <img src="https://docs.temporal.io/assets/images/system-architecture-d064cede0c97fc4a86defdc1c9fd020c.png"/> <figcaption>
@@ -33,7 +33,7 @@ Batch processing - Often long running Tasks like data import/export, End of day 
 <li>Support for SAGAs - If a Workflow calls multiple external/remote services and if one of them fails then, compensation call to other services will have to be made to complete rollback.</li>
 <li>Distributed Cron - Scheduled processing of workflow or steps in workflow.</li>
 <li>Persistent Storage in MySQL, Cassandra among others</li>
-<li>Frontend for tracking and dignostics</li>
+<li>Frontend for tracking and diagnostics</li>
 <li>Monitoring using Prometheus or other backends.</li>
 </ul>
 <p>It is very easy to get basic &ldquo;Helloworld&rdquo; workflow up and running using detailed instructions on setup provided <a href="https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites">here</a> provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.</p>
@@ -47,7 +47,7 @@ Batch processing - Often long running Tasks like data import/export, End of day 
 <li>
 <p>We will have below activities in our workflow,</p>
 <ul>
-<li>Import users - This activity will import list of users from file/stream. For the sake of similicity, we will just pass it as string.</li>
+<li>Import users - This activity will import list of users from file/stream. For the sake of simplicity, we will just pass it as string.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
 
@@ -222,7 +222,7 @@ Batch processing - Often long running Tasks like data import/export, End of day 
 </ul>
 <p>Full source code is available <a href="https://github.com/sachinsu/temporalevaluation">here</a></p>
 <p>Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.</p>
-<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href="https://uber.com">Uber</a> and host of other companies. Temporal <a href="community.temporal.io">Community</a> is a very active one with founders actively partcipating in discussions.</p>
+<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href="https://uber.com">Uber</a> and host of other companies. Temporal <a href="community.temporal.io">Community</a> is a very active one with founders actively participating in discussions.</p>
 <ul>
 <li><a href="https://github.com/firdaus/awesome-cadence-temporal-workflow">Collection of Temporal related stuff</a></li>
 </ul>
