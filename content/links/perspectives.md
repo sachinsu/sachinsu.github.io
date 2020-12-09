@@ -27,3 +27,4 @@ Section covering Business, project/programming perspectives
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [Telemetry Collection - Corelation in Latency Analysis](https://rakyll.medium.com/correlation-in-latency-analysis-419357b93287)
 - [Advice to Young kids by Stephen O'Grady](https://thisistheway.us/)
+- [Distributed Systems Reading List](https://dancres.github.io/Pages/)

@@ -13,6 +13,7 @@ draft: false
 - [Schema Change Management for MySQL](https://github.com/skeema/skeema)
 - [Temporal Data tables in MariaDB](https://mariadb.com/kb/en/temporal-data-tables/)
 - [MySQL 8.0 Indexes, Histograms, and Other Ways to Speed Up Your Queries](https://www.slideshare.net/davestokes/mysql-80-indexes-histograms-and-other-ways-to-speed-up-your-queries)
+- [Maxwell - MySQL to Kafka change data capture](https://github.com/zendesk/maxwell)
 
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)

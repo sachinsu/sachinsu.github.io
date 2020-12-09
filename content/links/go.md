@@ -53,6 +53,8 @@ My current Favourite Language
 - [Semgrep - Lightweight static code analysis](https://semgrep.dev/)
 - [Draw Application diagrams using Go](https://github.com/blushft/go-diagrams)
 - [A Go metrics interface with fast buffered metrics and third party reporters](https://github.com/uber-go/tally)
+- [Hey - HTTP load generator, ApacheBench (ab) replacement](https://github.com/rakyll/hey)
+- [Go-metrics - library for exporting performance and runtime metrics to external metrics systems (i.e. statsite, statsd)](https://github.com/armon/go-metrics)
 
 ### Task queues
 

@@ -35,4 +35,5 @@ draft: false
 - [One line CSS Layouts by Google](https://1linelayouts.glitch.me/)
 - [Interactive CSS Grid generator](https://grid.layoutit.com/)
 - [Msw - Mock Service Worker for REST & GraphQL API Mocking](https://mswjs.io/)
-- [Playright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
+- [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
+- [Modern JavaScript Tutorial](https://javascript.info/)
