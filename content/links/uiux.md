@@ -37,3 +37,4 @@ draft: false
 - [Msw - Mock Service Worker for REST & GraphQL API Mocking](https://mswjs.io/)
 - [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
 - [Modern JavaScript Tutorial](https://javascript.info/)
+- [Web Vitals- Essential metrics for a healthy site.](https://web.dev/vitals)

@@ -47,3 +47,4 @@ draft: false
 - [Incrementally update Materialized Views in real-time using Materialize](https://materialize.io/)
 - [Artificial Intelligence with PostgreSQL](https://momjian.us/main/writings/pgsql/AI.pdf)
 - [Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time.](https://materialize.com/)
+- [pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL.](https://github.com/ossc-db/pg_bulkload)
