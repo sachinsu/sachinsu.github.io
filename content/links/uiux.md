@@ -21,6 +21,7 @@ draft: false
 - [Blog on HTML,fonts, Asynchronous JavaScript](https://whistlr.info/)
 - [How to pick beautiful colors](https://blog.datawrapper.de/beautifulcolors/)
 - [You dont need Javascript](https://github.com/you-dont-need/You-Dont-Need-JavaScript)
+- [Sign in form Best practices](https://web.dev/sign-in-form-best-practices/)
 
 
 ## Testing

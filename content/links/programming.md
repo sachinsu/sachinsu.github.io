@@ -101,6 +101,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Security 
 
+- [OWASP ZAP- Free Security Testing for Web Application](https://www.zaproxy.org)
 - [Web Application Security Testing](https://danielmiessler.com/projects/webappsec_testing_resources/)
 - [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)

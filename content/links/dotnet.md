@@ -20,7 +20,6 @@ Platform where i have spent most time till now.
 - [Multiple ways how to limit parallel tasks processing](https://docs.microsoft.com/en-us/archive/blogs/fkaduk/multiple-ways-how-to-limit-parallel-tasks-processing)
 - [Parallel programming in .NET](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/)
 - [Clean Architecture in .NET](https://github.com/ardalis/CleanArchitecture)
-- [Security Code Scan in .NET](https://security-code-scan.github.io/)
 - [You’re (probably still) using HttpClient wrong and it is destabilizing your software](https://josefottosson.se/you-are-probably-still-using-httpclient-wrong-and-it-is-destabilizing-your-software/)
 - [Async/Await - Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming)
 - [Async/Await - Deep dive for Windows based Async I/O](https://tooslowexception.com/net-asyncawait-in-a-single-picture/)
@@ -75,6 +74,11 @@ Platform where i have spent most time till now.
 - [BackgroundService Gotcha: Application Lifetime](https://blog.stephencleary.com/2020/06/backgroundservice-gotcha-application-lifetime.html)
 - [AWS Porting Assistant for .NET](https://aws.amazon.com/blogs/aws/announcing-the-porting-assistant-for-net/)
 - [Sample of Micro services in .NET Core](https://github.com/madslundt/NetCoreMicroservicesSample)
+
+## Security
+
+- [Microsoft RESTler-Security testing using Automated Fuzzing](https://www.microsoft.com/en-us/research/blog/restler-finds-security-and-reliability-bugs-through-automated-fuzzing/)
+- [Security Code Scan in .NET](https://security-code-scan.github.io/)
 
 ## Twitter Handles
 
