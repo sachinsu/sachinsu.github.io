@@ -29,3 +29,8 @@ Section covering useful tools for every day activities, Online learning etc.
 - [fd - Alternative to Find](https://github.com/sharkdp/fd)
 - [bat - cat clone with wings](https://github.com/sharkdp/bat)
 - [Handy Linux networking tools](https://docs.google.com/presentation/d/1PZ-bp-a00KKjE9bqKOd17ZoroyXHJkm70aXcFBqwXAQ/edit)
+
+## Hardware
+
+- [10 Best Lightweight Operating System for old Laptop](https://lotoftech.com/10-best-lightweight-operating-system-for-old-computers/)
+- [How and why I stopped buying new laptops](https://solar.lowtechmagazine.com/2020/12/how-and-why-i-stopped-buying-new-laptops.html)
