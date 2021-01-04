@@ -34,4 +34,5 @@ draft: false
 #### Miscellaneous
 
 - [Open Source alternative tools](https://degoogle.jmoore.dev/)
+- [Useful tools for Windows by Scott Hanselman](https://www.hanselman.com/blog/scott-hanselmans-2021-ultimate-developer-and-power-users-tool-list-for-windows)
 - [Library of Free music](https://cchound.com/)

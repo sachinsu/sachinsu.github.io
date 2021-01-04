@@ -34,7 +34,7 @@ Knowledge base around general database related topics.
 - [Primer on Database Replication](https://www.brianstorti.com/replication/)
 - [Connection pool sizing for databases](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)
 - [Some SQL tricks from Application DBA](https://hakibenita.com/sql-tricks-application-dba)
-- [Using Outer/Cross Apply in SQL](https://stackoverflow.com/questions)
+- [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
 
 ## Tools Collection 
 
