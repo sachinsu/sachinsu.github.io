@@ -40,6 +40,7 @@ draft: false
 - [PgBadger - A fast PostgreSQL Log Analyzer](https://github.com/darold/pgbadger)
 - [Using CTE to perform binary search on table](https://www.endpoint.com/blog/2020/10/02/postgresql-binary-search-correlated-data-cte)
 - [Top tools to manage PostgreSQL](https://www.enterprisedb.com/blog/top-tools-manage-postgres-enterprise-administration-performance-high-availability-and)
+- [Performance Impact of idle Postgresql connections (usage of Pgbench)](https://aws.amazon.com/blogs/database/performance-impact-of-idle-postgresql-connections/)
 
 
 ## Interesting Extensions/Products
