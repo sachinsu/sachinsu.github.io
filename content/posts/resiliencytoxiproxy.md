@@ -1,6 +1,6 @@
 ---
 title: "Resiliency Testing with Toxiproxy"
-date: 2021-01-10T10:25:04+05:30
+date: 2021-01-09T10:25:04+05:30
 draft: false
 tags: [Chaosengineering, golang, postgresql, toxiproxy,shopify]
 ---
