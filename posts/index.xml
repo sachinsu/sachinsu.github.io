@@ -1,4 +1,65 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>Background In a typical business Application, there are often requirements for,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Jan 2021 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Resiliency Testing with Toxiproxy</title><link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link><pubDate>Sun, 10 Jan 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid><description>Background In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays, As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment. Often, such behavior is observed in production itself, unless project team is following practices of Chaos engineering.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
+<p>In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes  the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays,  As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment.  Often, such behavior is observed in production itself, unless project team is following practices of <a href="https://netflixtechblog.com/tagged/chaos-engineering">Chaos engineering</a>.</p>
+<p>Wouldn&rsquo;t it be great if it is possible to start testing the resiliency features as part of development and during CI/CD pipeline execution itself ? Enter <a href="https://toxiproxy.io">Toxiproxy</a></p>
+<p>Toxiproxy is a TCP Proxy to simulate network and system conditions for chaos and resiliency Testing.</p>
+<p>Toxiproxy essentially acts as middleman between your application and remote service/system being tested, allowing injection of delays, simulate Bandwidth restriction or turn interface off (down)
+etc.</p>
+<p>It provides CLI as well as http API for applications to  inject these behaviors or toxics. Refer <a href="https://github.com/shopify/toxiproxy#toxics">here</a> for various toxics supported.</p>
+<h3 id="lets-use-toxiproxy">Lets use Toxiproxy</h3>
+<p>Lets see how one can use it in typical use case where Application uses PostgreSQL database and requirement is to benchmark it against database hosted remotely. Toxiproxy can help simulate production like behavior by means of introducing network delay.</p>
+<p>The full source code of this application is available <a href="https://github.com/sachinsu/toxiproxyPOC">here</a>. One can refer to Numbers (only as reference cause live conditions may widely vary) <a href="https://github.com/sirupsen/napkin-math">here</a> while deciding on how much toxicity to introduce.</p>
+<p>Application itself is a Web server in <a href="https://golang.org">Go</a> using excellent <a href="https://github.com/julienschmidt/httprouter">HTTPRouter</a>, It does,</p>
+<ul>
+<li>
+<p>provision a table in Postgresql and load <a href="https://github.com/sachinsu/toxiproxyPOC/tree/main/assets">dummy data</a> in it.</p>
+</li>
+<li>
+<p>Exposes REST API that reads data from database and returns JSON</p>
+</li>
+<li>
+<p>Setup proxy between application and database either through Toxiproxy CLI (it can also be done programmatically using Toxiproxy-Go client),</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    [
+        {
+            &#34;name&#34;: &#34;pgsql&#34;, 
+            &#34;listen&#34; : &#34;[::]:6000&#34;,
+            &#34;upstream&#34; : &#34;127.0.0.1:5432&#34;,
+            &#34;enabled&#34;: true
+        }
+    ]
+</code></pre></div><p>or through Code like,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    // InjectLatency helper
+    func InjectLatency(name string, delay int) *toxiproxy.Proxy {
+        proxy, err := toxiClient.Proxy(name)
+
+        if err != nil {
+            panic(err)
+        }
+
+        proxy.AddToxic(&#34;&#34;, &#34;latency&#34;, &#34;&#34;, 1, toxiproxy.Attributes{
+            &#34;latency&#34;: delay,
+        })
+        return proxy
+    }
+</code></pre></div></li>
+<li>
+<p>Use <a href="https://github.com/rakyll/hey">hey</a> or any other HTTP Benchmarking tool to test end points with and without toxicity</p>
+</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Go <a href="https://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go">benchmark</a> <a href="https://github.com/sachinsu/toxiproxyPOC/tree/main/api/server">tests</a> tests that are executed against HTTP end points.</li>
+</ul>
+<p>In my opinion, Toxiproxy allows us to embed aspect(s) of resiliency verification in the code itself so developer can test it before committing the code and it can be embedded in DevOps pipeline to get early feedback before facing the music in production environment.</p>
+<p>Like latency, one can easily introduce other Toxics like Bandwidth, Down and Timeout to check Application&rsquo;s behavior when faced with such occurrences.</p>
+<h3 id="useful-references">Useful References,</h3>
+<ul>
+<li><a href="https://toxiproxy.io">ToxiProxy</a> - for all details on the tool like Clients available in various languages, server releases and so on.</li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content></item><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>Background In a typical business Application, there are often requirements for,
 Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded. Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</description><content type="html"><![CDATA[<h2 id="background">Background</h2>
 <p>In a typical business Application, there are often requirements for,</p>
 <ul>
