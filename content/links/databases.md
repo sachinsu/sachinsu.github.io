@@ -35,6 +35,7 @@ Knowledge base around general database related topics.
 - [Connection pool sizing for databases](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)
 - [Some SQL tricks from Application DBA](https://hakibenita.com/sql-tricks-application-dba)
 - [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
+- [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
 
 ## Tools Collection 
 
@@ -70,7 +71,7 @@ Knowledge base around general database related topics.
 - [Dolt - Git for Data](https://github.com/liquidata-inc/dolt)
 - [GridDB - next generation database for IoT & big data with both NoSQL interface & SQL Interface.](https://griddb.org)
 
-## Data Discoery
+## Data Discovery
 
 - [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
 
