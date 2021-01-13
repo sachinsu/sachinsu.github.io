@@ -80,6 +80,11 @@ Platform where i have spent most time till now.
 - [Microsoft RESTler-Security testing using Automated Fuzzing](https://www.microsoft.com/en-us/research/blog/restler-finds-security-and-reliability-bugs-through-automated-fuzzing/)
 - [Security Code Scan in .NET](https://security-code-scan.github.io/)
 
+## Networking 
+
+- [.NET 5 Networking Improvements](https://devblogs.microsoft.com/dotnet/net-5-new-networking-improvements/)
+
+
 ## Twitter Handles
 
 - [Scott Hanselman](https://twitter.com/shanselman)
