@@ -74,9 +74,9 @@ Knowledge base around general database related topics.
 ## Data Discovery
 
 - [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
+- [Data Discovery at Shopify](https://engineering.shopify.com/blogs/engineering/solving-data-discovery-challenges-shopify)
 
 ## Database Migration Practices
 
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
-- [Data Discovery at Shopify](https://engineering.shopify.com/blogs/engineering/solving-data-discovery-challenges-shopify)
