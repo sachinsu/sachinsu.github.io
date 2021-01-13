@@ -486,6 +486,10 @@ Sdk.CreateTracerProviderBuilder()
 <p>In Summary, this default telemetry can obviously be enhanced by adding Tags. When coupled with additional telemetry in the form of metering (to statistically observe behavior of high traffic, large scale system) and telemetry from Infrastructure (i.e. OS) and other Systems (e.g. Databases), it truly provides complete view of proceedings end to end.</p>
 <p>Hope this provides overview of instrumentation as provided by OpenTelemetry. Let me know if you have any questions or suggestions in Comments section below.</p>
 <p>Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder <code>Opentelemetry</code> in repository <a href="https://github.com/sachinsu/opentelemetrydotnet">here</a></p>
+<h3 id="useful-references">Useful References,</h3>
+<ul>
+<li><a href="https://otel.lightstep.com">What is OpenTelemetry?</a></li>
+</ul>
 <p>Happy Coding !!</p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
