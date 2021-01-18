@@ -123,6 +123,9 @@ While reviewing HTTP REST APis, below aspects should be evaluated,
 
 In no way, the above covers all the points covered in the Video series. So if you are interested, check it out [here](https://www.youtube.com/watch?v=9Ng00IlBCtw).
 
+### Useful References
+
+* [Making retries safe with Idempotent APIs](https://d1.awsstatic.com/builderslibrary/pdfs/making-retries-safe-with-idempotent-apis-malcolm-featonby.pdf)
 
 Happy API designing !!
 
