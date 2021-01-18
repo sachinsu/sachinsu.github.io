@@ -9,6 +9,7 @@ Useful links related from AI, ML space
 ## Collections
 
 - [Collection of resources related to Applied ML](https://github.com/eugeneyan/applied-ml)
+- [List of tools for MLOps](https://docs.google.com/spreadsheets/d/1i8BzE4puGQ3dmQueu4LQCcwaqrulgK1Vb-xeFwhy6gY/edit#gid=0)
 
 ## Free courses
 
@@ -21,6 +22,7 @@ Useful links related from AI, ML space
 - [Benford’s Law and Financial Statements](https://blog.auditanalytics.com/benfords-law-and-financial-statements/)
 - [Data Scientists Should Be More End-to-End](https://eugeneyan.com/writing/end-to-end-data-science/)
 - [Team Data science process (Microsoft)](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview)
+
 
 ## Videos
 
