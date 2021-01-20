@@ -155,7 +155,7 @@
 <p>Is the Service/API sustainable over time i.e. API must be able to grow/version over time without breaking customer apps</p>
 </li>
 </ul>
-<p>In no way, the above covers all the points covered in the Video series. So if you are interested, check it out <a href="https://www.youtube.com/watch?v=9Ng00IlBCtw">here</a>.</p>
+<p>In no way, the above covers everything available in the Video series. So do check it out <a href="https://www.youtube.com/watch?v=9Ng00IlBCtw">here</a>.</p>
 <h3 id="useful-references">Useful References</h3>
 <ul>
 <li><a href="https://d1.awsstatic.com/builderslibrary/pdfs/making-retries-safe-with-idempotent-apis-malcolm-featonby.pdf">Making retries safe with Idempotent APIs</a></li>
