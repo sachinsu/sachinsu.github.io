@@ -67,6 +67,18 @@ Videos contain tables explaining HTTP status code to be returned along with body
 * If server is overloaded then return 503
 * If tenant exceeds quota then return 429
 
+### Versioning
+
+* New version must be backward Compatible
+* Examples of versioning in API,
+
+  * ```http://api.contoso.com/v1.0/products```
+  * ```http://api.contoso.com/products?api-version=1.0```
+  * ```http://api.contoso.com/products?api-version=2021-01-01```
+
+* Add new API when changing mandatory parameters, payload formats, error codes  or behavior
+* Approach to API Versioning should not be afterthought
+
 ### Checklist for REST APIs
 
 * Focus on great and consistent naming - This is very important because once in production, this is unlikely to change.
