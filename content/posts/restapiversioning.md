@@ -1,6 +1,6 @@
 ---
-title: "Learnings from Designing and Versioning HTTP REST APIs"
-date: 2021-01-20T08:25:04+05:30
+title: "Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course"
+date: 2021-01-20T00:00:00+05:30
 draft: false
 tags: [HTTP, REST, Jeffrey Richter,Microsoft, Azure, AWS, API]
 ---
