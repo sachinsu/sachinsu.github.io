@@ -57,6 +57,26 @@
 <li>If server is overloaded then return 503</li>
 <li>If tenant exceeds quota then return 429</li>
 </ul>
+<h3 id="versioning">Versioning</h3>
+<ul>
+<li>
+<p>New version must be backward Compatible</p>
+</li>
+<li>
+<p>Examples of versioning in API,</p>
+<ul>
+<li><code>http://api.contoso.com/v1.0/products</code></li>
+<li><code>http://api.contoso.com/products?api-version=1.0</code></li>
+<li><code>http://api.contoso.com/products?api-version=2021-01-01</code></li>
+</ul>
+</li>
+<li>
+<p>Add new API when changing mandatory parameters, payload formats, error codes  or behavior</p>
+</li>
+<li>
+<p>Approach to API Versioning should not be afterthought</p>
+</li>
+</ul>
 <h3 id="checklist-for-rest-apis">Checklist for REST APIs</h3>
 <ul>
 <li>
