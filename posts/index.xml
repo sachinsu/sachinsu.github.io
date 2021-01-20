@@ -21,17 +21,38 @@
 <h4 id="error-handling">Error Handling</h4>
 <p>Videos contain tables explaining HTTP status code to be returned along with body in different conditions. below is quick summary,</p>
 <ul>
-<li>If something unexpected happens return Status 500</li>
-<li>If service is booting, too busy or shutting down then return Status 303</li>
-<li>If HTTP Version not 1.1 then return status 505</li>
-<li>If Authorization fails then return status 401</li>
-<li>If Client makes too many requests/second then return status 429</li>
-<li>If URL too long then return status 414</li>
-<li>If HTTP Method not supported at all then return status 501</li>
-<li>If resource not accessible to client then return status 403</li>
-<li>If No support for HTTP Method not 1.1 then return status 405</li>
-<li>If request not in acceptable format then return status 406</li>
-<li>In case service returns non-success/error response for a request,
+<li>
+<p>If something unexpected happens return Status 500</p>
+</li>
+<li>
+<p>If service is booting, too busy or shutting down then return Status 303</p>
+</li>
+<li>
+<p>If HTTP Version not 1.1 then return status 505</p>
+</li>
+<li>
+<p>If Authorization fails then return status 401</p>
+</li>
+<li>
+<p>If Client makes too many requests/second then return status 429</p>
+</li>
+<li>
+<p>If URL too long then return status 414</p>
+</li>
+<li>
+<p>If HTTP Method not supported at all then return status 501</p>
+</li>
+<li>
+<p>If resource not accessible to client then return status 403</p>
+</li>
+<li>
+<p>If No support for HTTP Method not 1.1 then return status 405</p>
+</li>
+<li>
+<p>If request not in acceptable format then return status 406</p>
+</li>
+<li>
+<p>In case service returns non-success/error response for a request,</p>
 <ul>
 <li>
 <p>It is recommended to add header in response that indicates the same (that way client can inspect it before deserializing/inspecting the response).</p>
@@ -54,8 +75,12 @@
 </code></pre></div></li>
 </ul>
 </li>
-<li>If server is overloaded then return 503</li>
-<li>If tenant exceeds quota then return 429</li>
+<li>
+<p>If server is overloaded then return 503</p>
+</li>
+<li>
+<p>If tenant exceeds quota then return 429</p>
+</li>
 </ul>
 <h3 id="versioning">Versioning</h3>
 <ul>
@@ -76,6 +101,9 @@
 <li>
 <p>Approach to API Versioning should not be afterthought</p>
 </li>
+<li>
+<p>Consider embedding version number in the data structure</p>
+</li>
 </ul>
 <h3 id="checklist-for-rest-apis">Checklist for REST APIs</h3>
 <ul>
@@ -92,7 +120,7 @@
 <p>Use</p>
 <ul>
 <li>
-<p><code>PUT</code> to Create/Replace whole resources. It should return <code>200-Ok</code>, <code>201-Created</code>.</p>
+<p><code>PUT</code> to Create/Replace whole resources. Last write wins. It should return <code>200-Ok</code>, <code>201-Created</code>.</p>
 </li>
 <li>
 <p><code>PATCH</code> to Create/Modify resource with JSON Merge Patch. It should return <code>200-Ok</code>, <code>201-Created</code>.</p>
@@ -102,7 +130,12 @@
 </li>
 <li>
 <p><code>DELETE</code> to remove resource. It should return <code>200-Ok</code>, <code>204-No content</code> but  <code>404-not found</code> should be avoided.</p>
-<p>Jeff recommends avoiding usage of <code>POST</code> unless request is idempotent. The rationale being that <code>POST</code> request creates new resource and response contains new ID, Now client may not get this and resorts to retrying it which will result in resource getting leaked. I am not sure how using <code>PUT</code> will avoid resource leakage, may be will have to gather more details.</p>
+<p>Jeff recommends avoiding usage of <code>POST</code> unless request is idempotent (HTTP does not require it to be idempotent).For API having <code>POST</code> operation, below Idempotency Pattern can be considered,</p>
+<ul>
+<li>Client: Creates ID</li>
+<li>Client: sends request to server with generated ID (this can be retried)</li>
+<li>Server: If ID is not in log then, do operation &amp; log ID (This should be part of transaction); respond with OK (Server periodically deletes old log to avoid unbounded growth)</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -150,6 +183,9 @@
 <li>&lsquo;{userid}&rsquo; is to identify user by ID</li>
 <li>&lsquo;:send-sms&rsquo; indicates action (prefixed with &lsquo;:') to be performed.</li>
 </ul>
+</li>
+<li>
+<p>Use tools like <a href="https://swagger.io">Swagger</a> for API documentation and to create language-specific client libraries</p>
 </li>
 </ul>
 <h4 id="reviewing-rest-apis">Reviewing REST APIs</h4>
