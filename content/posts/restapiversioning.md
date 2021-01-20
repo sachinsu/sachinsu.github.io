@@ -33,7 +33,7 @@ URL of the REST Service is expected to be stable over long period of time. URL (
 
 #### Error Handling
 
-Videos contain tables explaining HTTP status code to be returned along with body in different conditions. below is quick summary, 
+Videos contain tables explaining HTTP status code to be returned along with body in different conditions. below is quick summary,
 
 * If something unexpected happens return Status 500
 * If service is booting, too busy or shutting down then return Status 303
@@ -64,6 +64,7 @@ Videos contain tables explaining HTTP status code to be returned along with body
 	}
 
 	```
+
 * If server is overloaded then return 503
 * If tenant exceeds quota then return 429
 
@@ -78,6 +79,7 @@ Videos contain tables explaining HTTP status code to be returned along with body
 
 * Add new API when changing mandatory parameters, payload formats, error codes  or behavior
 * Approach to API Versioning should not be afterthought
+* Consider embedding version number in the data structure
 
 ### Checklist for REST APIs
 
@@ -86,12 +88,16 @@ Videos contain tables explaining HTTP status code to be returned along with body
 * Always try to simplify call to Service (by having fewer query parameters & JSON fields)
 * Use
 
-  * ```PUT``` to Create/Replace whole resources. It should return ```200-Ok```, ```201-Created```.
+  * ```PUT``` to Create/Replace whole resources. Last write wins. It should return ```200-Ok```, ```201-Created```.
   * ```PATCH``` to Create/Modify resource with JSON Merge Patch. It should return ```200-Ok```, ```201-Created```.
   * ```GET``` to Get the resource.It should return ````200-Ok````.
   * ```DELETE``` to remove resource. It should return ```200-Ok```, ```204-No content``` but  ```404-not found``` should be avoided.
 
-	Jeff recommends avoiding usage of ```POST``` unless request is idempotent. The rationale being that ```POST``` request creates new resource and response contains new ID, Now client may not get this and resorts to retrying it which will result in resource getting leaked. I am not sure how using ```PUT``` will avoid resource leakage, may be will have to gather more details.
+	Jeff recommends avoiding usage of ```POST``` unless request is idempotent (HTTP does not require it to be idempotent).For API having ```POST``` operation, below Idempotency Pattern can be considered,
+
+    * Client: Creates ID
+    * Client: sends request to server with generated ID (this can be retried)
+    * Server: If ID is not in log then, do operation & log ID (This should be part of transaction); respond with OK (Server periodically deletes old log to avoid unbounded growth)
 
 * A URL should be stable/immutable
 * Use proper response codes to enable customers to self-fix
@@ -110,10 +116,11 @@ Videos contain tables explaining HTTP status code to be returned along with body
 * Service must remain fault-tolerant in case of failures.
 * Typically REST is meant for State transfer/CRUD Operations but many times the purpose of end point is to offer action. In such cases specify the action being performed at the end , i.e. after establishing the exact resource, of URL like, ```/user-management/users/{userid}/:send-sms```. In this,
 
-    * 'user-management' indicates host
-    * 'users' indicates users collection 
-    * '{userid}' is to identify user by ID 
-    * ':send-sms' indicates action (prefixed with ':') to be performed.
+  * 'user-management' indicates host
+  * 'users' indicates users collection 
+  * '{userid}' is to identify user by ID 
+  * ':send-sms' indicates action (prefixed with ':') to be performed.
+* Use tools like [Swagger](https://swagger.io) for API documentation and to create language-specific client libraries
 
 #### Reviewing REST APIs
 
