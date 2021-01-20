@@ -121,7 +121,7 @@ While reviewing HTTP REST APis, below aspects should be evaluated,
 * Consistency with other Services
 * Is the Service/API sustainable over time i.e. API must be able to grow/version over time without breaking customer apps
 
-In no way, the above covers all the points covered in the Video series. So if you are interested, check it out [here](https://www.youtube.com/watch?v=9Ng00IlBCtw).
+In no way, the above covers everything available in the Video series. So do check it out [here](https://www.youtube.com/watch?v=9Ng00IlBCtw).
 
 ### Useful References
 
