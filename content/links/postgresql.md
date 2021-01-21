@@ -42,7 +42,7 @@ draft: false
 - [Top tools to manage PostgreSQL](https://www.enterprisedb.com/blog/top-tools-manage-postgres-enterprise-administration-performance-high-availability-and)
 - [Performance Impact of idle Postgresql connections (usage of Pgbench)](https://aws.amazon.com/blogs/database/performance-impact-of-idle-postgresql-connections/)
 - [How to Manage Connections Efficiently in Postgres, or Any Database](https://brandur.org/postgres-connections)
-
+- [How to Audit PostgreSQL Database](https://severalnines.com/database-blog/how-to-audit-postgresql-database)
 
 ## Interesting Extensions/Products
 
@@ -50,3 +50,7 @@ draft: false
 - [Artificial Intelligence with PostgreSQL](https://momjian.us/main/writings/pgsql/AI.pdf)
 - [Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time.](https://materialize.com/)
 - [pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL.](https://github.com/ossc-db/pg_bulkload)
+
+## Migration to PostgreSQL
+
+- [Migration Guide from Oracle to PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/new-oracle-to-postgres-migration-guide-for-azure/ba-p/2055303)
