@@ -43,6 +43,7 @@ draft: false
 - [Performance Impact of idle Postgresql connections (usage of Pgbench)](https://aws.amazon.com/blogs/database/performance-impact-of-idle-postgresql-connections/)
 - [How to Manage Connections Efficiently in Postgres, or Any Database](https://brandur.org/postgres-connections)
 - [How to Audit PostgreSQL Database](https://severalnines.com/database-blog/how-to-audit-postgresql-database)
+- [SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN](https://www.percona.com/blog/2020/04/16/sql-optimizations-in-postgresql-in-vs-exists-vs-any-all-vs-join/)
 
 ## Interesting Extensions/Products
 
