@@ -138,6 +138,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Thanos - Highly available Prometheus setup with long term storage capabilities.](https://github.com/thanos-io/thanos)
 - [Monitoring with VictoriaMetrics](https://docs.google.com/presentation/d/1g7yUyVEaAp4tPuRy-MZbPXKqJ1z78_5VKuV841aQfsg/edit#slide=id.p)
 - [Healthchecks.io -Simple and Effective Cron Job Monitoring](https://healthchecks.io/)
+- [Decks on Prometheus deep dive, OpenMetrics](https://github.com/RichiH/talks/tree/master/2018/12-CloudNativeCon_Seattle)
 
 ## Distributed messaging, Streams
 

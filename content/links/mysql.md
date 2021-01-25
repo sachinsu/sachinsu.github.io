@@ -14,6 +14,8 @@ draft: false
 - [Temporal Data tables in MariaDB](https://mariadb.com/kb/en/temporal-data-tables/)
 - [MySQL 8.0 Indexes, Histograms, and Other Ways to Speed Up Your Queries](https://www.slideshare.net/davestokes/mysql-80-indexes-histograms-and-other-ways-to-speed-up-your-queries)
 - [Maxwell - MySQL to Kafka change data capture](https://github.com/zendesk/maxwell)
+- [LetsEncrypt setup for MariaDB](https://github.com/letsencrypt/openzfs-nvme-databases)
+- [How LetsEncrypt has built Next Gen Database Servers](https://letsencrypt.org/2021/01/21/next-gen-database-servers.html)
 
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
