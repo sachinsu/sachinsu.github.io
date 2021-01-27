@@ -44,6 +44,7 @@ draft: false
 - [How to Manage Connections Efficiently in Postgres, or Any Database](https://brandur.org/postgres-connections)
 - [How to Audit PostgreSQL Database](https://severalnines.com/database-blog/how-to-audit-postgresql-database)
 - [SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN](https://www.percona.com/blog/2020/04/16/sql-optimizations-in-postgresql-in-vs-exists-vs-any-all-vs-join/)
+- [PostgreSQL Scaling advice in 2021](https://www.cybertec-postgresql.com/en/postgres-scaling-advice-for-2021/)
 
 ## Interesting Extensions/Products
 

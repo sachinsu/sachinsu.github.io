@@ -28,3 +28,5 @@ Section covering Business, project/programming perspectives
 - [Telemetry Collection - Corelation in Latency Analysis](https://rakyll.medium.com/correlation-in-latency-analysis-419357b93287)
 - [Advice to Young kids by Stephen O'Grady](https://thisistheway.us/)
 - [Distributed Systems Reading List](https://dancres.github.io/Pages/)
+- [Awesome cold showers](https://github.com/hwayne/awesome-cold-showers)
+- [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
