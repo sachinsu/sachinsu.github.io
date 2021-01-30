@@ -42,6 +42,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html#AllDatabaseArtifactsAreVersionControlledWithApplicationCode)
 - [Scaling with Common Sense by Zerodha](https://zerodha.tech/blog/scaling-with-common-sense/)
 - [Guidelines for Command line interface](https://clig.dev/)
+- [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 
 ## Training
 
