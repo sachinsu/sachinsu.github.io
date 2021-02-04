@@ -30,3 +30,4 @@ Section covering Business, project/programming perspectives
 - [Distributed Systems Reading List](https://dancres.github.io/Pages/)
 - [Awesome cold showers](https://github.com/hwayne/awesome-cold-showers)
 - [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
+- [Behaviors to avoid in Software Architecture Role](https://www.danielwatts.info/post/7-behaviours-to-avoid-software-architect/)

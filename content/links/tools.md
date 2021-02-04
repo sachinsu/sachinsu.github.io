@@ -31,6 +31,11 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Handy Linux networking tools](https://docs.google.com/presentation/d/1PZ-bp-a00KKjE9bqKOd17ZoroyXHJkm70aXcFBqwXAQ/edit)
 - [rclone - manage files on cloud storage, Rsync for Cloud](https://rclone.org)
 
+## Linux related References 
+
+- [Understand grep, awk and sed](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
+- 
+
 ## Hardware
 
 - [10 Best Lightweight Operating System for old Laptop](https://lotoftech.com/10-best-lightweight-operating-system-for-old-computers/)

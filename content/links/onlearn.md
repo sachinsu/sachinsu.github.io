@@ -11,4 +11,4 @@ Section covering resources for  Online learning etc.
 - [Awesome List of Free Learning Resources](https://ebookfoundation.github.io/free-programming-books/)
 - [Collection of online learning resources](https://stackoverflow.blog/2020/04/27/build-your-technical-skills-at-home-with-online-learning/)
 - [Complete intro to Linux and CLI](https://btholt.github.io/complete-intro-to-linux-and-the-cli/)
-- [Linux System Administration - Skill challenge](https://github.com/snori74/linuxupskillchallenge)
+- [Linux System Administration - Skill challenge](https://github.com/snori74/upskillchallenge)

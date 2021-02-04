@@ -112,6 +112,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Devops/Monitoring
 
+- [Microsoft Azure - DevOps Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops)
 - [Hashicorp Waypoint - easy way to build, deploy and release applications](https://www.waypointproject.io/docs/getting-started)- [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
 - [How to Create and Manage CRON Jobs](https://davidwalsh.name/cron-job)
 - [lazydocker - Docker mgmt tool for linux](https://danielmiessler.com/projects/webappsec_testing_resources/)

@@ -24,6 +24,7 @@ draft: false
 - [Using pg_cron to schedule background tasks](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/evolving-pg-cron-together-postgres-13-audit-log-background/ba-p/1829588)
 - [PG Database Configuration Helper](https://postgresqlco.nf/)
 - [Full text search in PostgreSQL](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
+- [PostgreSQL - Best practices(Azure)](https://docs.microsoft.com/en-us/azure/postgresql/application-best-practices)
 
 ## Performance tuning, configuration etc.
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
@@ -37,6 +38,7 @@ draft: false
 - [PostgreSQL - Optimize Configuration](https://postgresqlco.nf/en/doc/param/)
 /9275132/real-life-example-when-to-use-outer-cross-apply-in-sql/9275865#9275865)
 - [Be careful with CTE in PostgreSQL](https://hakibenita.com/be-careful-with-cte-in-postgre-sql)
+- [PostgreSQL - Claim unused Index size](https://hakibenita.com/postgresql-unused-index-size)
 - [PgBadger - A fast PostgreSQL Log Analyzer](https://github.com/darold/pgbadger)
 - [Using CTE to perform binary search on table](https://www.endpoint.com/blog/2020/10/02/postgresql-binary-search-correlated-data-cte)
 - [Top tools to manage PostgreSQL](https://www.enterprisedb.com/blog/top-tools-manage-postgres-enterprise-administration-performance-high-availability-and)
