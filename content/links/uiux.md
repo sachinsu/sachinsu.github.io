@@ -39,3 +39,4 @@ draft: false
 - [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
 - [Modern JavaScript Tutorial](https://javascript.info/)
 - [Web Vitals- Essential metrics for a healthy site.](https://web.dev/vitals)
+- [Clerk - User Management as Service](https://clerk.dev)

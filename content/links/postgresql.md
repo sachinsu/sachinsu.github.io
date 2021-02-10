@@ -25,11 +25,12 @@ draft: false
 - [PG Database Configuration Helper](https://postgresqlco.nf/)
 - [Full text search in PostgreSQL](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
 - [PostgreSQL - Best practices(Azure)](https://docs.microsoft.com/en-us/azure/postgresql/application-best-practices)
+- [Informative blog on PostgreSQL](https://depesz.com)
 
 ## Performance tuning, configuration etc.
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
 - [Database configuration for Web Services](https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/)
-- [Online explain analyzer](https://explain.depesz.com/)
+- [Online explain analyzer & Generally Good Blog on PostgreSQL](https://explain.depesz.com/)
 - [Vertically scaling PostgreSQL](https://pgdash.io/blog/scaling-postgres.html)
 - [A Performance Dashboard](https://github.com/ankane/pghero)
 - [Simple script to analyse your PostgreSQL database configuration, and give tuning advice](https://postgresqltuner.pl)
