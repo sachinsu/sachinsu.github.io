@@ -31,3 +31,4 @@ Section covering Business, project/programming perspectives
 - [Awesome cold showers](https://github.com/hwayne/awesome-cold-showers)
 - [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
 - [Behaviors to avoid in Software Architecture Role](https://www.danielwatts.info/post/7-behaviours-to-avoid-software-architect/)
+- [App Maintenance Cost Can Be Three Times Higher than Development Cost](https://www.econnectivity.se/app-maintenance-cost-can-be-three-times-higher-than-development-cost/)
