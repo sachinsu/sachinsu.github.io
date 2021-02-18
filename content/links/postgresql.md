@@ -28,6 +28,8 @@ draft: false
 - [Informative blog on PostgreSQL](https://depesz.com)
 
 ## Performance tuning, configuration etc.
+- [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)
+- [Diagnose Linux related Disk & RAM issues](https://www.highgo.ca/2021/02/08/troubleshooting-performance-issues-due-to-disk-and-ram/)
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
 - [Database configuration for Web Services](https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/)
 - [Online explain analyzer & Generally Good Blog on PostgreSQL](https://explain.depesz.com/)
@@ -55,6 +57,7 @@ draft: false
 - [Artificial Intelligence with PostgreSQL](https://momjian.us/main/writings/pgsql/AI.pdf)
 - [Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time.](https://materialize.com/)
 - [pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL.](https://github.com/ossc-db/pg_bulkload)
+- [pgcenter - Command-line admin tool for observing and troubleshooting Postgres.](https://github.com/lesovsky/pgcenter)
 
 ## Migration to PostgreSQL
 

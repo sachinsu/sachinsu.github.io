@@ -42,6 +42,8 @@ Knowledge base around general database related topics.
 - [DBMS Tools](https://dbmstools.com/)
 
 ## Data Analytics 
+- [Data Visualization/Exploration platforms Comparion Matrix](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform)
+- [Supercharging Apache Superset](https://medium.com/airbnb-engineering/supercharging-apache-superset-b1a2393278bd)
 - [Why data culture matters](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/why-data-culture-matters#)
 - [Designing a data transformation that delivers value right from the beginning](https://www.mckinsey.com/industries/financial-services/our-insights/designing-a-data-transformation-that-delivers-value-right-from-the-start#)
 - [List of Computational Data Analysis Workflow Systems](https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
@@ -64,6 +66,7 @@ Knowledge base around general database related topics.
 
 
 ## ETL, Evolutionary Practices 
+- [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
 - [Database CI/CD practices using Redshift](https://medium.com/big-data-engineering/redshift-cicd-how-we-did-it-and-why-you-should-do-it-to-e46ecf734eab)
 - [Awesome Apache Airflow](https://github.com/jghoman/awesome-apache-airflow)
 - [A Python library for building data applications: ETL, ML, Data Pipelines, and more. ](https://github.com/dagster-io/dagster)
