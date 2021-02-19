@@ -10,6 +10,7 @@ Python has become pervasive all throught Data Science be it Machine learning, De
 
 - [Python for Beginners from MSDN](https://channel9.msdn.com/Series/Intro-to-Python-Development/Python-for-Beginners-1-of-44-Programming-with-Python#comments)
 - [Nice Collection of trainings per level of complexity](https://forums.fast.ai/t/recommended-python-learning-resources/26888)
+- [Python Programming And Numerical Methods: A Guide For Engineers And Scientists](https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html)
 
 ## Articles
 

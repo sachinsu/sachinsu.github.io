@@ -16,6 +16,7 @@ draft: false
 - [Maxwell - MySQL to Kafka change data capture](https://github.com/zendesk/maxwell)
 - [LetsEncrypt setup for MariaDB](https://github.com/letsencrypt/openzfs-nvme-databases)
 - [How LetsEncrypt has built Next Gen Database Servers](https://letsencrypt.org/2021/01/21/next-gen-database-servers.html)
+- [18 things you can do to remove mysql Bottlenecks due to High traffic](https://www.percona.com/blog/2020/04/03/18-things-you-can-do-to-remove-mysql-bottlenecks-caused-by-high-traffic-part-one/)
 
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
