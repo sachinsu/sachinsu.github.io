@@ -76,6 +76,7 @@ Platform where i have spent most time till now.
 - [BackgroundService Gotcha: Application Lifetime](https://blog.stephencleary.com/2020/06/backgroundservice-gotcha-application-lifetime.html)
 - [AWS Porting Assistant for .NET](https://aws.amazon.com/blogs/aws/announcing-the-porting-assistant-for-net/)
 - [Sample of Micro services in .NET Core](https://github.com/madslundt/NetCoreMicroservicesSample)
+- [WCF on .NET Core](https://corewcf.github.io/blog/2021/02/19/corewcf-ga-release)
 
 ## Security
 

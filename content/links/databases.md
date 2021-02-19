@@ -62,7 +62,9 @@ Knowledge base around general database related topics.
 - [1mg's Data Stack](https://rudderstack.com/blog/1mgs-data-stack-explained-how-they-harness-and-activate-unlimited-real-time-data/)
 - [A Unified Data Infrastructure Architecture](https://7a9z42689xx35658r1hutm8n-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Data-Report-Martin-Inline-Graphics-R7.pdf)
 - [Data and AI Product Landscape](http://mattturck.com/wp-content/uploads/2020/09/2020-Data-and-AI-Landscape-Matt-Turck-at-FirstMark-v1.pdf)
+- [Transformations for DWH using DBT](https://github.com/fishtown-analytics/dbt)
 - [Awesome list of Business Intelligence Tools](https://github.com/thenaturalist/awesome-business-intelligence)
+- [Article Series on Open source Data Analytics Stack (Postgres,Meltano, Airflow, dbt and Superset) ](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-iii-dcfd46da9f9f)
 
 
 ## ETL, Evolutionary Practices 
