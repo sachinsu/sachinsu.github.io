@@ -4,7 +4,7 @@ date: 2020-02-18T12:33:07+05:30
 draft: false
 ---
 
-# General Purpose tools 
+# General Purpose tools
 
 Section covering useful tools for every day activities, Online learning etc.
 
@@ -32,11 +32,11 @@ Section covering useful tools for every day activities, Online learning etc.
 - [rclone - manage files on cloud storage, Rsync for Cloud](https://rclone.org)
 - [CPU-Z is a freeware system profiling and monitoring application for Microsoft Windows and Android](https://www.cpuid.com/softwares/cpu-z.html)
 
-## Linux related References 
+## Linux related References
 
 - [Understand grep, awk and sed](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
 - [Visual guide to SSH Tunnels](https://robotmoon.com/ssh-tunnels/)
- 
+- [Web based interface for Servers](https://cockpit-project.org/)
 
 ## Hardware
 
