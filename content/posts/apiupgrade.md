@@ -2,12 +2,12 @@
 title: "Upgrading API: Learnings"
 date: 2021-02-26T00:00:00+05:30
 draft: false
-tags: [HTTP, SOAP, REST, .NET, WCF]
+tags: [HTTP, SOAP, REST, .NET, WCF, CoreWCF, ASMX]
 ---
 
 ## Introduction
 
-One of the design considerations stressed upon by Jeffrey richter about APIs (Read more [here](/posts/restapiversioning/)) is that "API is expected to be stable over long period of time". Recently,for a .NET based project, we decided to upgrade some of the ASMX  (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users. 
+One of the design considerations stressed upon by Jeffrey richter about APIs (Read more [here](/posts/restapiversioning/)) is that "API is expected to be stable over long period of time". Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users. 
 
 This means that upgrade must be done keeping in mind, 
 
@@ -71,8 +71,6 @@ Where `ToApm` is extension function from Stephen Toub's excellent blog (link in 
 
 ```
 
-  //ref: https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/
-        //ref: https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html
         public static Task<TResult> ToApm<TResult>(this Task<TResult> task, AsyncCallback callback, object state)
         {
             if (task.AsyncState == state)
@@ -165,8 +163,6 @@ This approach is very similar to last one with only change being instead of usin
 ```
 
 <system.web>
-    <!-- ref: https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development -->
-    <!-- ref: https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion -->
     <httpHandlers>
     <remove path=".asmx" verb="*" />
     <add path="*.asmx" verb="*" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" validate="false" />
@@ -205,6 +201,10 @@ Hopefully,this article will be helpful to anyone involved in legacy modernizatio
 ### Useful References
 
 * [Comparing ASMX web services to WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development)
+* [APM Pattern using Tasks](https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/)
+* [Async in WCF](https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html)
+* [Comparing ASMX with WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development)
+* [Discussion on ASMX to WCF](https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion)
 
 Happy Coding !!
 

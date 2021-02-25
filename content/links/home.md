@@ -30,6 +30,7 @@ draft: false
 
 - [Hacker news](https://news.ycombinator.com)
 - [Lobsters](https://lobste.rs)
+- [A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev](https://free-for.dev/)
 
 #### Miscellaneous
 
