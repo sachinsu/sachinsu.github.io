@@ -17,6 +17,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Strategies/Approaches
 
 - [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
+- [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)
 - [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
 - [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
