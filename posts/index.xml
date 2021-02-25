@@ -8,25 +8,25 @@ This means that upgrade must be done keeping in mind,</description><content type
 <li>Testing to ensure no impact</li>
 </ul>
 <p>Initial plan was to move away from SOAP to adopt REST based approach. This thinking was aided by fact that .NET core may not support WCF (framework that supports SOAP apart from ASMX Web Services) in addition to other aspects like simplicity and wide adoption of REST. However, even microsoft has now decided to support WCF in .NET Core via <a href="https://github.com/CoreWCF/CoreWCF">CoreWCF</a>.</p>
-<p>With this constraints, we found below options to upgrade ASMX based services to WCF (the only other framework that supports SOAP based services),</p>
+<p>With this constraints, below alternatives were considered to upgrade ASMX based services to WCF (the only other framework that supports SOAP based services),</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Approach</th>
+<th style="text-align:left">Approach</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Have existing ASMX Service call new WCF Service using Async/Await</td>
+<td style="text-align:left">Have existing ASMX Service call new WCF Service using Async/Await</td>
 <td style="text-align:left">This involves hosting additional WCF Service and making HTTP requests to it. It also means maintaining both ASMX &amp; WCF endpoints. Also to be mindful of latency introduced due to HTTP communication between the two.</td>
 </tr>
 <tr>
-<td style="text-align:center">New WCF Service and URL Rewrite rules to handle requests to ASMX</td>
+<td style="text-align:left">New WCF Service and URL Rewrite rules to handle requests to ASMX</td>
 <td style="text-align:left">This involves developing new WCF Service, compatible to current service contract, and configuration to route/re-write incoming requests to new service. Existing ASMX end point can be sunset</td>
 </tr>
 <tr>
-<td style="text-align:center">New WCF Service and mapping <code>.asmx</code> handler to WCF handler</td>
+<td style="text-align:left">New WCF Service and mapping <code>.asmx</code> handler to WCF handler</td>
 <td style="text-align:left">This involves developing new WCF Service,compatible to current service contract, and configuration so that requests to <code>.asmx</code> url will be served by WCF handler. Existing ASMX end point can be sunset.</td>
 </tr>
 </tbody>
@@ -94,8 +94,7 @@ This means that upgrade must be done keeping in mind,</description><content type
             return tcs.Task;
         }
 
-</code></pre></div><h3 id="summary">Summary</h3>
-<p>This approach involves,</p>
+</code></pre></div><p>This approach involves,</p>
 <ul>
 <li>hosting and maintaining both (current and new) API end-points.</li>
 <li>We also came across issues where async/await was not working properly in case code blocks.</li>
@@ -134,7 +133,6 @@ This means that upgrade must be done keeping in mind,</description><content type
 
 </code></pre></div><p>One may want to test above re-write settings in IIS as older versions of it require installation of URL Rewrite module.</p>
 <p>This is followed by testing new WCF service from existing client(s), be it .NET based clients or other ones with no changes. .NET based clients typically invoke service through generated proxy class. For other clients, we basically simulated it via Postman.</p>
-<h3 id="summary-1">Summary</h3>
 <p>This approach provides cleaner implementation vis-a-vis earlier approach such that it is still new WCF based implementation with no ASMX in use.</p>
 <h2 id="wcf-service-with-asmx-extension-mapped-to-wcf-handler">WCF service with .asmx extension mapped to WCF handler</h2>
 <p>This approach is very similar to last one with only change being instead of using URL re-write module, we will map <code>.asmx</code> extension to WCF Handler. So the changes are only in web.config as below,</p>
@@ -164,7 +162,6 @@ This means that upgrade must be done keeping in mind,</description><content type
 &lt;/system.webServer&gt;
 
 </code></pre></div><p>This was tested in same way as earlier with existing .NET and other clients.</p>
-<h3 id="summary-2">Summary</h3>
 <p>This feels like even more cleaner approach than using URL re-write as it doesn&rsquo;t involve using any additional module/library.</p>
 <p>Finally, we went ahead with this approach.</p>
 <p>Hopefully,this article will be helpful to anyone involved in legacy modernization initiatives.</p>
