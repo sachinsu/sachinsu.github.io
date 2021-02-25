@@ -151,6 +151,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Oracle Advanced Queues](https://www.oracle.com/database/technologies/advanced-queuing.html)
 - [Tim Bray's Blog](https://www.tbray.org/ongoing)
 - [Instrumenting distributed systems for operational visibility](https://aws.amazon.com/builders-library/instrumenting-distributed-systems-for-operational-visibility/?did=ba_card&trk=ba_card)
+- [Microservices Antipattern - Queue Explosion](http://cpitman.github.io/microservices/2018/03/25/microservice-antipattern-queue-explosion.html)
 
 ## Rust
 

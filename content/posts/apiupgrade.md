@@ -17,10 +17,10 @@ This means that upgrade must be done keeping in mind,
 
 Initial plan was to move away from SOAP to adopt REST based approach. This thinking was aided by fact that .NET core may not support WCF (framework that supports SOAP apart from ASMX Web Services) in addition to other aspects like simplicity and wide adoption of REST. However, even microsoft has now decided to support WCF in .NET Core via [CoreWCF](https://github.com/CoreWCF/CoreWCF). 
 
-With this constraints, we found below options to upgrade ASMX based services to WCF (the only other framework that supports SOAP based services), 
+With this constraints, below alternatives were considered to upgrade ASMX based services to WCF (the only other framework that supports SOAP based services), 
 
-| Approach| Description|
-| :------:|:----------|
+| Approach            |    Description             |
+|:--------------------|:---------------------------|
 | Have existing ASMX Service call new WCF Service using Async/Await | This involves hosting additional WCF Service and making HTTP requests to it. It also means maintaining both ASMX & WCF endpoints. Also to be mindful of latency introduced due to HTTP communication between the two.  |
 | New WCF Service and URL Rewrite rules to handle requests to ASMX | This involves developing new WCF Service, compatible to current service contract, and configuration to route/re-write incoming requests to new service. Existing ASMX end point can be sunset      |
 | New WCF Service and mapping `.asmx` handler to WCF handler  | This involves developing new WCF Service,compatible to current service contract, and configuration so that requests to `.asmx` url will be served by WCF handler. Existing ASMX end point can be sunset.       |
@@ -98,8 +98,6 @@ Where `ToApm` is extension function from Stephen Toub's excellent blog (link in 
 
 ```
 
-### Summary
-
 This approach involves,
 
 * hosting and maintaining both (current and new) API end-points.
@@ -152,7 +150,6 @@ One may want to test above re-write settings in IIS as older versions of it requ
 
 This is followed by testing new WCF service from existing client(s), be it .NET based clients or other ones with no changes. .NET based clients typically invoke service through generated proxy class. For other clients, we basically simulated it via Postman.
 
-### Summary
 
 This approach provides cleaner implementation vis-a-vis earlier approach such that it is still new WCF based implementation with no ASMX in use.
 
@@ -190,7 +187,6 @@ This approach is very similar to last one with only change being instead of usin
 
 This was tested in same way as earlier with existing .NET and other clients.
 
-### Summary
 
 This feels like even more cleaner approach than using URL re-write as it doesn't involve using any additional module/library.
 
