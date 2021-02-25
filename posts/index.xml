@@ -61,7 +61,7 @@
 <p>Also if error is recoverable @ runtime then, string is specific else string is list of similar errors. Response body could be in JSON format as,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
 {
-    <span style="color:#f92672">&#34;error&#34;</span>: { 
+	<span style="color:#f92672">&#34;error&#34;</span>: { 
         <span style="color:#f92672">&#34;code&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,
         <span style="color:#f92672">&#34;message&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,
         <span style="color:#f92672">&#34;target&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
@@ -69,7 +69,7 @@
             <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, 
             <span style="color:#f92672">&#34;minLength&#34;</span>: <span style="color:#ae81ff">6</span>
         }
-    }
+	}
 }
 
 </code></pre></div></li>
