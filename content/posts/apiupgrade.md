@@ -113,7 +113,7 @@ We decided to explore alternative approaches instead of this.
 
 This requires hosting WCF Service which is backward compatible with ASMX based SOAP implementation. 
 
-Typically thhis involves,
+Typically this involves,
 
 * supporting `basicHttpBinding` 
 * Adding namespaces and support for XML Serialization to Service contract like, 
