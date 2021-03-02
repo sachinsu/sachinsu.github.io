@@ -2,7 +2,7 @@
 title: "Upgrading API: Learnings"
 date: 2021-02-25T00:00:00+05:30
 draft: false
-tags: [HTTP, SOAP, REST, .NET, WCF, CoreWCF, ASMX]
+tags: [HTTP, SOAP, REST, .NET, WCF, CoreWCF, ASMX, C#]
 ---
 
 ## Introduction
