@@ -97,9 +97,9 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Open source Pipelining, workflows 
 
 - [Pipelines/workflow frameworks](https://github.com/pditommaso/awesome-pipeline)
+- [Workflow Engines](https://github.com/meirwah/awesome-workflow-engines)
 - [List of ETL frameworks](https://github.com/pawl/awesome-etl)
 - [Streaming frameworks](https://github.com/manuzhang/awesome-streaming)
-- [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 
 ## Security 
 
@@ -114,6 +114,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Devops/Monitoring
 
 - [List of how organizations do SRE (Publicly available)](https://github.com/upgundecha/howtheysre)
+- [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 - [Microsoft Azure - DevOps Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops)
 - [Hashicorp Waypoint - easy way to build, deploy and release applications](https://www.waypointproject.io/docs/getting-started)- [Zabbix, Time Series Data and TimescaleDB – Zabbix Blog](https://blog.zabbix.com/zabbix-time-series-data-and-timescaledb/6642/)
 - [How to Create and Manage CRON Jobs](https://davidwalsh.name/cron-job)

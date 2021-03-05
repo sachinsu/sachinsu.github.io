@@ -25,9 +25,11 @@ draft: false
 - [PG Database Configuration Helper](https://postgresqlco.nf/)
 - [Full text search in PostgreSQL](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
 - [PostgreSQL - Best practices(Azure)](https://docs.microsoft.com/en-us/azure/postgresql/application-best-practices)
+- [Designing high performance time series data table in (RDS) postgresql](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/)
 - [Informative blog on PostgreSQL](https://depesz.com)
 
 ## Performance tuning, configuration etc.
+
 - [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)
 - [Diagnose Linux related Disk & RAM issues](https://www.highgo.ca/2021/02/08/troubleshooting-performance-issues-due-to-disk-and-ram/)
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
@@ -58,6 +60,11 @@ draft: false
 - [Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time.](https://materialize.com/)
 - [pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL.](https://github.com/ossc-db/pg_bulkload)
 - [pgcenter - Command-line admin tool for observing and troubleshooting Postgres.](https://github.com/lesovsky/pgcenter)
+- [TOTP implementation in PLPGSQL](https://github.com/pyramation/totp)
+- [Connection pooler - Odyssey](https://github.com/yandex/odyssey)
+- [Connection pooler - PGBouncer](https://www.pgbouncer.org/)
+- [Connection pooler and much more - Pgpool-II](https://www.pgpool.net/)
+- [Change data capture in PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
 
 ## Migration to PostgreSQL
 

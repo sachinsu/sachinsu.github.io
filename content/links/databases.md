@@ -9,6 +9,7 @@ draft: false
 Knowledge base around general database related topics.
 
 ## General Links
+- [Heimdall data -Database scale-out without Application changes](https://www.heimdalldata.com/)
 - [Database of databases](https://dbdb.io)
 - [Modern SQL in databases](https://use-the-index-luke.com/blog/2015-02/modern-sql)
 - [Eventual consistency by Werner Vogels](https://use-the-index-luke.com/blog/2015-02/modern-sql)
