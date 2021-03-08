@@ -65,6 +65,8 @@ draft: false
 - [Connection pooler - PGBouncer](https://www.pgbouncer.org/)
 - [Connection pooler and much more - Pgpool-II](https://www.pgpool.net/)
 - [Change data capture in PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
+- [Swarm64 DA -20x faster PostgreSQL query performance](https://swarm64.com/swarm64-da/)
+- [Greenplum - data warehouse, based on PostgreSQL](https://github.com/greenplum-db/gpdb)
 
 ## Migration to PostgreSQL
 
