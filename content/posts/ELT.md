@@ -179,7 +179,7 @@ set https_proxy=
 
 will run the whole process and generate weekly list in `weeklylist` table in database. This batch file can be scheduled to run on weekly basis using command `at 23:00 /every:F runscript.bat`. 
 
-This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part. Till then...
+This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part (something like [this](https://docs.airbyte.io/tutorials/connecting-el-with-t-using-dbt)). Till then...
 
 ### Useful References
 
