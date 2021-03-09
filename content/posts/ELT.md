@@ -18,7 +18,7 @@ However, there has been shift from above approach due to,
 
 * Need to handle different kinds of data (Structured and Unstructured) 
 * hugh volumes of data (IOT, Customer data management) 
-* Availabilty of cheaper storage and compute along with availability of internet scale cloud based data warehouses
+* Availability of cheaper storage and compute along with availability of internet scale cloud based data warehouses
 
 has recently caused wide adoption of ELT (Extract-transform-load) over ETL.
 
@@ -38,7 +38,7 @@ I think the best way to understand the landscape is to use above tools. So i dec
 2. For each of the company , get Last traded price(`ltp`) and 52 week high price (`yearlyhigh`)
 3. Exclude companies having ltp < 20 or ltp > 50000
 4. Rank companies by closeness of `ltp` to `yearlyhigh`
-5. Prepare `buy` list of upto 20 such companies. Earlier short listed stocks, which are not in top 20 this week or further than 5% from their `yearlyhigh`, should be marked for `sell`.
+5. Prepare `buy` list of up to 20 such companies. Earlier short listed stocks, which are not in top 20 this week or further than 5% from their `yearlyhigh`, should be marked for `sell`.
 
 Above is hypothetical example and using full fledged data stack may be overkill but should suffice the purpose of this article.
 
@@ -55,7 +55,7 @@ Below are some of the options available for this task under `extract` and `load`
 This is implemented using [dbt](https://getdbt.com). dbt (Data Build Tool) is a framework to facilitate transformations using SQL along with version control, automates tests, support for incremental load, snapshots and so on. It has `notion` of **project** or **workspace** that many developers are familiar with. 
 It is offered as Command line interface (CLI)  as well as on cloud which also provides web based UI. I have used CLI for this exercise. For a quick recap of dbt folder structure, refer [here]https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3).
 
-Source code of dbt project [here](https://github.com/sachinsu/momentumflow/tree/main/dbt).  We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a postgresql database), below are Models used,
+Source code of dbt project [here](https://github.com/sachinsu/momentumflow/tree/main/dbt).  We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a PostgreSQL database), below are Models used,
 
  * Since Loading  of company-wise data is already done in earlier step, next step is to rank the companies w.r.t. `closeness` to their yearly high. Below is `dbt` SQL which does it (At run time, dbt converts below SQL to the one understood by the Target database), 
 
@@ -100,7 +100,7 @@ Source code of dbt project [here](https://github.com/sachinsu/momentumflow/tree/
         select * from cnxtopstocks
 
         ```
-   Above model creates corresponding table in database. Note that model is marked `incremental` so that it doesn't overwrite the table on every run but rather incrementally applies changes. 
+   Above model creates corresponding table in database (as such dbt abstracts changes to database from developer and manages it on its own). Note that model is marked `incremental` so that it doesn't overwrite the table on every run but rather incrementally applies changes. 
 
 * Next step is to arrive at Weekly list of stocks to `buy` and even `sell` those which are lacking momentum. 
 
@@ -164,7 +164,7 @@ Source code of dbt project [here](https://github.com/sachinsu/momentumflow/tree/
 
 ### Orchestration 
 
-After completing `ELT` aspects, now it is needed to orchestrate this wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use [at](https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks) on windows (or `cron` if you are using Linux). 
+After completing `ELT` aspects, now it's time to  orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use [at](https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks) on windows (or [cron](https://en.wikipedia.org/wiki/Cron) if you are using Linux). 
 
 so a simplest possible batch file (as below), 
 
@@ -179,7 +179,7 @@ set https_proxy=
 
 will run the whole process and generate weekly list in `weeklylist` table in database. This batch file can be scheduled to run on weekly basis using command `at 23:00 /every:F runscript.bat`. 
 
-This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these shortcomings. Till then...
+This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part. Till then...
 
 ### Useful References
 
