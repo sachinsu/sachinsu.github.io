@@ -106,6 +106,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [OWASP ZAP- Free Security Testing for Web Application](https://www.zaproxy.org)
 - [Web Application Security Testing](https://danielmiessler.com/projects/webappsec_testing_resources/)
 - [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
+- [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
@@ -128,6 +129,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Observability
 
+- [What was observability again?](https://www.cncf.io/blog/2021/03/02/what-was-observability-again/?utm_source=o11y.news&utm_medium=email)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [What is OpenTelemetry?](https://otel.lightstep.com)
@@ -145,6 +147,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Healthchecks.io -Simple and Effective Cron Job Monitoring](https://healthchecks.io/)
 - [Decks on Prometheus deep dive, OpenMetrics](https://github.com/RichiH/talks/tree/master/2018/12-CloudNativeCon_Seattle)
 - [Improving Observability with AWS App Mesh](https://nathanpeck.com/improving-observability-with-aws-app-mesh-amazon-ecs/)
+- [Signoz - Open source alternative to DataDog](signoz.io)
 
 ## Distributed messaging, Streams
 

@@ -78,6 +78,7 @@ Knowledge base around general database related topics.
 - [Databus - Change Data capture System from Linkedin](https://github.com/linkedin/databus)
 - [Dolt - Git for Data](https://github.com/liquidata-inc/dolt)
 - [GridDB - next generation database for IoT & big data with both NoSQL interface & SQL Interface.](https://griddb.org)
+- [Compressing data with Parquet](https://dev.l1x.be/posts/2021/03/08/compressing-data-with-parquet/)
 
 ## Data Discovery
 
@@ -89,3 +90,9 @@ Knowledge base around general database related topics.
 
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
+
+
+## SQLite 
+
+- [Streaming S3 Replication for SQLite](litestream.io)
+- [lightweight, distributed relational database built on SQLite](www.rqlite.com)

@@ -187,7 +187,6 @@ This is very basic approach to scheduling (with no error handling/retries or mon
 * [Data stacks for Fun and Profit](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3)
 * [What warehouse to use](https://dataschool.com/data-governance/what-warehouse-to-use/)
 
-
 Happy Coding !!
 
 ---

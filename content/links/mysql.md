@@ -17,6 +17,7 @@ draft: false
 - [LetsEncrypt setup for MariaDB](https://github.com/letsencrypt/openzfs-nvme-databases)
 - [How LetsEncrypt has built Next Gen Database Servers](https://letsencrypt.org/2021/01/21/next-gen-database-servers.html)
 - [18 things you can do to remove mysql Bottlenecks due to High traffic](https://www.percona.com/blog/2020/04/03/18-things-you-can-do-to-remove-mysql-bottlenecks-caused-by-high-traffic-part-one/)
+- [MySQL from Developer's perspective](https://blog.koehntopp.info/2020/09/07/mysql-from-a-developers-perspective.html)
 
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
