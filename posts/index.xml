@@ -1,4 +1,178 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Upgrading API: Learnings</title><link>https://sachinsu.github.io/posts/apiupgrade/</link><pubDate>Thu, 25 Feb 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/apiupgrade/</guid><description>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sachin Sunkle</title><link>https://sachinsu.github.io/posts/</link><description>Recent content in Posts on Sachin Sunkle</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>ELT approach to Data Pipeline</title><link>https://sachinsu.github.io/posts/elt/</link><pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/elt/</guid><description>Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
+Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on.</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,</p>
+<ul>
+<li><strong>Extract</strong> - typically involves retrieving data from source. This could also be via streaming</li>
+<li><strong>Transform</strong> - Apply transformation to the extracted data.</li>
+<li><strong>Load</strong> -  Loading the data in Operation Data store (ODS) or data warehouse
+Refer <a href="https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close">here</a> for more details on ETL. ETL has been made easy by tools like <a href="https://www.talend.com/products/talend-open-studio/">Talend</a>, <a href="https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services">SSIS</a> and so on.</li>
+</ul>
+<p>However, there has been shift from above approach due to,</p>
+<ul>
+<li>Need to handle different kinds of data (Structured and Unstructured)</li>
+<li>hugh volumes of data (IOT, Customer data management)</li>
+<li>Availability of cheaper storage and compute along with availability of internet scale cloud based data warehouses</li>
+</ul>
+<p>has recently caused wide adoption of ELT (Extract-transform-load) over ETL.</p>
+<p>ELT offers an alternative to ETL in which data is loaded into the warehouse (sometimes in storage area called as data lake) before transforming it. It allows focussing on extraction and loading with heavy transformation offloaded to later stage. Since the transformation happens in the warehouse, it can potentially be defined using SQL (thus using same language across the pipeline). This allows more roles (say Data Analysts) to contribute to (or entirely own) the transformation logic. Data warehouse becomes single source of truth for data. Ref: <a href="https://dataschool.com/data-governance/etl-vs-elt/">ETL vs ELT</a></p>
+<p>Typically, Data flow pipeline consists of below phases (it also lists available tools for each phase),</p>
+<ul>
+<li>Ingestion - <a href="https://airbyte.io">Airbyte</a>, <a href="https://fivetran.com">Fivetran</a>, <a href="https://stitchdata.com">Stitch</a></li>
+<li>Warehousing - <a href="https://snowflake.com">Snowflake</a>, <a href="https://cloud.google.com/bigquery">BigQuery</a>, <a href="https://aws.amazon.com/redshift">Redshift</a>, <a href="https://postgresql.org">PostgreSQL</a></li>
+<li>Transformation - <a href="https://getdbt.com">dbt</a></li>
+<li>Orchestration - <a href="airflow.apache.org">Airflow</a>, <a href="https://prefect.io">Prefect</a>, <a href="https://dagster.io">Dagster</a></li>
+<li>BI - <a href="superset.apache.org">Superset</a>, <a href="https://metabase.com">Metabase</a>, <a href="redash.io">Redash</a>, <a href="looker.com">Looker</a> etc.</li>
+</ul>
+<p>I think the best way to understand the landscape is to use above tools. So i decided to implement below problem statement. The requirement is to run a weekly process that,</p>
+<ol>
+<li>Downloads list of CNX 500 companies from Exchange&rsquo;s web site</li>
+<li>For each of the company , get Last traded price(<code>ltp</code>) and 52 week high price (<code>yearlyhigh</code>)</li>
+<li>Exclude companies having ltp &lt; 20 or ltp &gt; 50000</li>
+<li>Rank companies by closeness of <code>ltp</code> to <code>yearlyhigh</code></li>
+<li>Prepare <code>buy</code> list of up to 20 such companies. Earlier short listed stocks, which are not in top 20 this week or further than 5% from their <code>yearlyhigh</code>, should be marked for <code>sell</code>.</li>
+</ol>
+<p>Above is hypothetical example and using full fledged data stack may be overkill but should suffice the purpose of this article.</p>
+<h3 id="e--l-in-elt----get-the-list-of-cnx-500-companies-and-also-get-stock-price-for-each-of-them"><code>E</code> &amp; <code>L</code> in ELT -  Get the list of CNX 500 Companies and also get stock price for each of them</h3>
+<p>Below are some of the options available for this task under <code>extract</code> and <code>load</code> category,</p>
+<ul>
+<li>Use Python to download list of stocks and then use <a href="https://pypi.org/project/yfinance/">yfinance</a> to get the price and yearly high.</li>
+<li>Use tool like <a href="https://airbyte.io">Airbyte</a> which provides declarative way of importing the data via HTTP. I am planning to explore this option later.</li>
+<li>Use Go to perform the task. I decided to go with this one and code is available at <a href="https://github.com/sachinsu/momentumflow/tree/main/gover">here</a>. It downloads CSV file from Exchange&rsquo;s website (containing list of stocks in Index) and loads them to database. Since Yahoo finance no longer provides Free tier for API, It uses <a href="github.com/antchfx/htmlquery">htmlquery</a> library to parse HTML and retrieve stock price and yearly high value.</li>
+</ul>
+<h3 id="t-in-elt---transform-the-company-wise-data-to-arrive-at-weekly-list-of-momentum-stocks"><code>T</code> in ELT - Transform the company-wise data to arrive at weekly list of momentum stocks</h3>
+<p>This is implemented using <a href="https://getdbt.com">dbt</a>. dbt (Data Build Tool) is a framework to facilitate transformations using SQL along with version control, automates tests, support for incremental load, snapshots and so on. It has <code>notion</code> of <strong>project</strong> or <strong>workspace</strong> that many developers are familiar with.
+It is offered as Command line interface (CLI)  as well as on cloud which also provides web based UI. I have used CLI for this exercise. For a quick recap of dbt folder structure, refer [here]https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3).</p>
+<p>Source code of dbt project <a href="https://github.com/sachinsu/momentumflow/tree/main/dbt">here</a>.  We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a PostgreSQL database), below are Models used,</p>
+<ul>
+<li>
+<p>Since Loading  of company-wise data is already done in earlier step, next step is to rank the companies w.r.t. <code>closeness</code> to their yearly high. Below is <code>dbt</code> SQL which does it (At run time, dbt converts below SQL to the one understood by the Target database),</p>
+<pre><code> ```
+
+ {{
+     config(
+         materialized='incremental',
+     )
+ }}
+
+ with
+     cnxcompanies
+     as
+     (
+
+         select
+             symbol,
+             company,
+             ltp,
+             yearlyhigh,
+             updatedat,
+             rank() over (order by yearlyhigh-ltp) as diff_rank
+         from {{ source('datastore', 'cnx500companies') }}
+     where yearlyhigh::money::numeric::float8 - ltp::money::numeric::float8 &gt; 0 and ltp::money::numeric::float8 &gt; 20 and ltp::money::numeric::float8 &lt; 50000
+
+ ),
+ cnxtopstocks as
+ (
+
+     select
+     symbol,
+     company,
+     ltp,
+     yearlyhigh,
+     updatedat,
+     diff_rank
+     from  cnxcompanies
+     order by updatedat desc,diff_rank 
+ )
+
+ select * from cnxtopstocks
+
+ ```
+</code></pre>
+<p>Above model creates corresponding table in database (as such dbt abstracts changes to database from developer and manages it on its own). Note that model is marked <code>incremental</code> so that it doesn&rsquo;t overwrite the table on every run but rather incrementally applies changes.</p>
+</li>
+<li>
+<p>Next step is to arrive at Weekly list of stocks to <code>buy</code> and even <code>sell</code> those which are lacking momentum.</p>
+<pre><code>  ```
+
+  {{
+  config(
+  materialized='incremental',
+  unique_key='concat(symbol,updatedat)'
+      )
+  }}
+
+  with currentlist as (
+      select distinct symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'buy' as buyorsell
+      from  {{ref('rankstocks')}} 
+      where (yearlyhigh-ltp)/ltp*100 &lt;= 5
+      order by updatedat desc, diff_rank
+      limit 20
+  ),
+  finallist as (
+      {% if is_incremental() %}
+          select symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'sell' as buyorsell from {{this}} as oldlist
+              where not exists (select symbol from currentlist where symbol=oldlist.symbol and (yearlyhigh-ltp)/ltp*100 &lt;= 5 )
+          union 
+          select  symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'buy' as buyorsell  from  currentlist 
+              where not exists (select symbol from {{this}} where symbol=currentlist.symbol and buyorsell='buy')   
+      {% else %}
+          select * from currentlist
+      {% endif %}
+  )
+
+
+  select * from finallist
+
+  ```
+</code></pre>
+<p>This model refers to earlier one using <code>{{..}}</code> jinja directive. It also refers to itself using <code>{{this}}</code> directive.</p>
+<p>Among others, below are key feature of DBT that were observed,</p>
+<ul>
+<li>Concept of Project/Workspace which programmers are typically familiar with</li>
+<li>Using SQL for Data Transformation</li>
+<li>Support for Version control</li>
+<li>Support for testing</li>
+<li>Support for incremental load</li>
+<li>Support for snapshots</li>
+<li>Automatic schema updates</li>
+<li>Out of the box Documentation browser covering traceability across sources and models.</li>
+</ul>
+</li>
+</ul>
+<h3 id="orchestration">Orchestration</h3>
+<p>After completing <code>ELT</code> aspects, now it&rsquo;s time to  orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks">at</a> on windows (or <a href="https://en.wikipedia.org/wiki/Cron">cron</a> if you are using Linux).</p>
+<p>so a simplest possible batch file (as below),</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">set http_proxy=
+set https_proxy=
+
+.\gover\go run .
+
+.\.venv\scripts\activate &amp; .\dbt\dbt run
+</code></pre></div><p>will run the whole process and generate weekly list in <code>weeklylist</code> table in database. This batch file can be scheduled to run on weekly basis using command <code>at 23:00 /every:F runscript.bat</code>.</p>
+<p>This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part (something like <a href="https://docs.airbyte.io/tutorials/connecting-el-with-t-using-dbt">this</a>). Till then&hellip;</p>
+<h3 id="useful-references">Useful References</h3>
+<ul>
+<li><a href="https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb">Reverse ETL</a></li>
+<li><a href="https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3">Data stacks for Fun and Profit</a></li>
+<li><a href="https://dataschool.com/data-governance/what-warehouse-to-use/">What warehouse to use</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+]]></content></item><item><title>Upgrading API: Learnings</title><link>https://sachinsu.github.io/posts/apiupgrade/</link><pubDate>Thu, 25 Feb 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/apiupgrade/</guid><description>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
 This means that upgrade must be done keeping in mind,</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more <a href="/posts/restapiversioning/">here</a>) is that &ldquo;API is expected to be stable over long period of time&rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.</p>
 <p>This means that upgrade must be done keeping in mind,</p>
