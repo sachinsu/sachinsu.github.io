@@ -96,4 +96,4 @@ Knowledge base around general database related topics.
 ## SQLite 
 
 - [Streaming S3 Replication for SQLite](https://litestream.io)
-- [lightweight, distributed relational database built on SQLite](https://www.rqlite.com)
+- [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
