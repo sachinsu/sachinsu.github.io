@@ -66,6 +66,7 @@ Knowledge base around general database related topics.
 - [Transformations for DWH using DBT](https://github.com/fishtown-analytics/dbt)
 - [Awesome list of Business Intelligence Tools](https://github.com/thenaturalist/awesome-business-intelligence)
 - [Article Series on Open source Data Analytics Stack (Postgres,Meltano, Airflow, dbt and Superset) ](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-iii-dcfd46da9f9f)
+- [Posthog - open source product analytics platform](https://posthog.com)
 
 
 ## ETL,ELT, Evolutionary Practices 
@@ -94,5 +95,5 @@ Knowledge base around general database related topics.
 
 ## SQLite 
 
-- [Streaming S3 Replication for SQLite](litestream.io)
-- [lightweight, distributed relational database built on SQLite](www.rqlite.com)
+- [Streaming S3 Replication for SQLite](https://litestream.io)
+- [lightweight, distributed relational database built on SQLite](https://www.rqlite.com)
