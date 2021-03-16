@@ -186,6 +186,7 @@ This is very basic approach to scheduling (with no error handling/retries or mon
 * [Reverse ETL](https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb)
 * [Data stacks for Fun and Profit](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3)
 * [What warehouse to use](https://dataschool.com/data-governance/what-warehouse-to-use/)
+* [Build Data Lake in PostgreSQL using FDW, Singer, Metabase](https://tech.fretlink.com/build-your-own-data-lake-for-reporting-purposes/)
 
 Happy Coding !!
 
