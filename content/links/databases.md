@@ -80,6 +80,7 @@ Knowledge base around general database related topics.
 - [Dolt - Git for Data](https://github.com/liquidata-inc/dolt)
 - [GridDB - next generation database for IoT & big data with both NoSQL interface & SQL Interface.](https://griddb.org)
 - [Compressing data with Parquet](https://dev.l1x.be/posts/2021/03/08/compressing-data-with-parquet/)
+- [Mara pipelines - Opinionated ETL framework](https://github.com/mara/mara-pipelines)
 
 ## Data Discovery
 
