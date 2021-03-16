@@ -167,6 +167,7 @@ set https_proxy=
 <li><a href="https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb">Reverse ETL</a></li>
 <li><a href="https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3">Data stacks for Fun and Profit</a></li>
 <li><a href="https://dataschool.com/data-governance/what-warehouse-to-use/">What warehouse to use</a></li>
+<li><a href="https://tech.fretlink.com/build-your-own-data-lake-for-reporting-purposes/">Build Data Lake in PostgreSQL using FDW, Singer, Metabase</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>
