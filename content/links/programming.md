@@ -111,6 +111,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
 - [Open Policy Agent - General purpose Policy Engine](https://www.openpolicyagent.org)
+- [Teler - Tool for Real time HTTP Intrusion detection](https://github.com/kitabisa/teler)
 
 ## Devops/Monitoring
 
@@ -148,6 +149,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Decks on Prometheus deep dive, OpenMetrics](https://github.com/RichiH/talks/tree/master/2018/12-CloudNativeCon_Seattle)
 - [Improving Observability with AWS App Mesh](https://nathanpeck.com/improving-observability-with-aws-app-mesh-amazon-ecs/)
 - [Signoz - Open source alternative to DataDog](signoz.io)
+- [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
 
 ## Distributed messaging, Streams
 
