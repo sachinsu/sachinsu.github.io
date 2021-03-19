@@ -68,6 +68,7 @@ Knowledge base around general database related topics.
 - [Awesome list of Business Intelligence Tools](https://github.com/thenaturalist/awesome-business-intelligence)
 - [Article Series on Open source Data Analytics Stack (Postgres,Meltano, Airflow, dbt and Superset) ](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-iii-dcfd46da9f9f)
 - [Posthog - open source product analytics platform](https://posthog.com)
+- [What is delta lakehouse](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
 
 
 ## ETL,ELT, Evolutionary Practices 
