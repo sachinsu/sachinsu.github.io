@@ -43,6 +43,7 @@ Knowledge base around general database related topics.
 - [DBMS Tools](https://dbmstools.com/)
 
 ## Data Analytics 
+- [Emerging Architectures for Modern Data Infrastructure](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
 - [Data Visualization/Exploration platforms Comparion Matrix](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform)
 - [Supercharging Apache Superset](https://medium.com/airbnb-engineering/supercharging-apache-superset-b1a2393278bd)
 - [Why data culture matters](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/why-data-culture-matters#)
