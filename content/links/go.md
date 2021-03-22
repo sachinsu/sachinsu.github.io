@@ -48,6 +48,7 @@ My current Favourite Language
 ### Libraries, Tools
 
 - [Right way to check weather](https://github.com/chubin/wttr.in)
+- [Generate Go Code for Database / SQL](https://sqlc.dev)
 - [Golang style guide by Uber](https://github.com/uber-go/guide/blob/master/style.md)
 - [ORM to Model and Traversal of Data as a Graph structure](https://entgo.io/)
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)
@@ -80,6 +81,7 @@ My current Favourite Language
 - [A Channel Compendium](https://www.youtube.com/watch?v=SmoM1InWXr0)
 - [Visualize Concurrency in Go](https://divan.dev/posts/go_concurrency_visualize/)
 - [Real-world systems in Go](https://www.youtube.com/watch?v=_YK0viplIl4)
+- [Host Free Go Web app on Netlify](https://blog.carlmjohnson.net/post/2020/how-to-host-golang-on-netlify-for-free/)
 - [Zen of Go - Ten engineering values for writing simple, readable, maintainable Go code](https://the-zen-of-go.netlify.com/)
 - [Ultimate Go Study Guide](https://github.com/hoanhan101/ultimate-go)
 
