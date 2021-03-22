@@ -161,6 +161,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Rust
 
+- [Getting started with Rust](https://stackoverflow.blog/2021/03/15/getting-started-with-rust/#:~:text=Intro,first%20created%20by%20Graydon%20Hoare.)
 - [A half-hour to learn Rust](https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/)
 - [Tour of Rust](https://tourofrust.com/)
 

@@ -38,3 +38,4 @@ draft: false
 - [Useful tools for Windows by Scott Hanselman](https://www.hanselman.com/blog/scott-hanselmans-2021-ultimate-developer-and-power-users-tool-list-for-windows)
 - [Library of Free music](https://cchound.com/)
 - [Ergonomic Home office setup](https://blog.amirathi.com/2019/08/18/ergonomic-office-setup/)
+- [Consider upgrading a few PC/laptop Components like SSD](https://www.hanselman.com/blog/consider-upgrading-a-few-pc-components-a-good-ssd-is-so-fast-its-not-even-funny)

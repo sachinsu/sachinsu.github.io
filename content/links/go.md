@@ -20,6 +20,7 @@ My current Favourite Language
 - [Interesting ways of using Go channels](https://github.com/nomad-software/go-channel-compendium)
 - [How i writer web services in Go](https://www.youtube.com/watch?v=rWBSMsLG8po&feature=emb_logo)
 - [Embed static file(s) in Go Executable and expose over HTTP](https://github.com/rakyll/statik)
+- [Using go:embed in Go 1.16](https://blog.carlmjohnson.net/post/2021/how-to-use-go-embed/)
 - [Go Useful patterns by Roberto Clapis](https://blogtitle.github.io/some-useful-patterns/)
 - [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
 - [Continuous build & Testing using Go Convey](http://goconvey.co/)
