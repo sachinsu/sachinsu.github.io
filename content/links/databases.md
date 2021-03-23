@@ -68,7 +68,8 @@ Knowledge base around general database related topics.
 - [Awesome list of Business Intelligence Tools](https://github.com/thenaturalist/awesome-business-intelligence)
 - [Article Series on Open source Data Analytics Stack (Postgres,Meltano, Airflow, dbt and Superset) ](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-iii-dcfd46da9f9f)
 - [Posthog - open source product analytics platform](https://posthog.com)
-- [What is delta lakehouse](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
+- [What is delta lakehouse?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
+- [Typical Analytics Stack](https://technically.dev/posts/what-your-data-team-is-using)
 
 
 ## ETL,ELT, Evolutionary Practices 
@@ -94,6 +95,11 @@ Knowledge base around general database related topics.
 
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
+
+
+## Metadata Management
+
+- [Growing importance of Metadata Management Systems](https://gradientflow.com/the-growing-importance-of-metadata-management-systems/)
 
 
 ## SQLite 
