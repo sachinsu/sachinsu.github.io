@@ -1065,6 +1065,7 @@ Sdk.CreateTracerProviderBuilder()
 <h3 id="useful-references">Useful References,</h3>
 <ul>
 <li><a href="https://otel.lightstep.com">What is OpenTelemetry?</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/">OpenTelemetry in .NET</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>
