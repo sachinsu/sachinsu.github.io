@@ -169,6 +169,7 @@ Instrumenting .NET framework based Apps for same scenario is similar to above, r
 
 ### Useful References,
 - [What is OpenTelemetry?](https://otel.lightstep.com)
+- [OpenTelemetry in .NET](https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/)
 
 Happy Coding !!
 

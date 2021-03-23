@@ -138,6 +138,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
 - [Open source infrastructure and application Monitoring](https://netdata.cloud)
+- [Opstrace - OSS alternative to Datadog,SignalFX](https://opstrace.com)
 - [Monitoring your own infrastructure using Grafana, InfluxDB, and CollectD](https://serhack.me/articles/monitoring-infrastructure-grafana-influxdb-connectd/)
 - [Tool to extract whitebox monitoring data from application logs for collection in a timeseries database](https://github.com/google/mtail)
 - [Percona Monitoring & Mgmt - Open Source Software for MySQL/MongoDB/PostgreSQL Monitoring](https://www.percona.com/doc/percona-monitoring-and-management/2.x/index.html)
