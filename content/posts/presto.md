@@ -1,6 +1,6 @@
 ---
 title: "Presto - A distributed SQL Engine for variety of data stores"
-date: 2021-03-02T10:25:04+05:30
+date: 2021-04-02T10:25:04+05:30
 draft: true
 tags: [Presto, SQL, Database, Parquet, Analytics, Trino]
 ---

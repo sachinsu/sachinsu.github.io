@@ -1,0 +1,122 @@
+baseurl = "https://sachinsu.github.io"
+title = "A Simple Technical blog"
+
+theme = "mainroad"
+languageCode = "en-us"
+defaultcontentlanguage = "en"
+
+paginate = 10
+canonifyurls = true
+
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+googleAnalytics = "UA-169012216-1"
+
+[Params.style.vars]
+  highlightColor = "#e22d30" # Override highlight color
+
+  # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
+  # Take care of different quotes OR escaping symbols in these params if necessary
+  fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
+  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+
+
+[params]
+    author = "Sachin Sunkle"
+    description = "A simple technical blog"
+    homeSubtitle = "A simple technical blog"
+    keywords = "blog,developer,personal,golang,dotnetcore,databases,architecture,c#,.net core, Vuejs, Quasar, Oracle, python"
+    info = "Full stack Software Engineer"
+    avatarurl = ""
+    footercontent = ""
+    mainSections = ["post"] # Specify section pages to show on home page and the "Recent articles" widget
+    dateformat = "January 2, 2006"
+    dateformShort   = "Jan 2"
+    dateformNum     = "2006-01-02"
+    dateformNumTime = "2006-01-02 15:04 -0700"
+
+    hideCredits = false
+    hideCopyright = false
+    since = 2019
+
+    rtl = false
+
+    defaultTheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Custom CSS
+    custom_css = []
+    
+    # Custom JS
+    custom_js = []
+
+[params.logo]
+    title = "A Coder"
+    subtitle = "A Simple Technical Blog"
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
+
+[taxonomies]
+  category = "blog"
+  series = "series"
+  tag = "tags"
+
+[params.favicon.color]
+  mask = "#252627"
+  msapplication = "#252627"
+  theme = "#252627"
+
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["social", "recent", "taglist"]
+  # alternatively "ddg-search" can be used, to search via DuckDuckGo
+  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  twitter = "SachinS3012"
+  linkedin = "sachinsunkle"
+  github = "sachinsu"
+
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+            name = "About"
+            weight = 1
+            url = "/about/"
+
+            [[languages.en.menu.main]]
+            name = "Blog"
+            weight = 2
+            url = "/posts/"
+
+            [[languages.en.menu.main]]
+            name = "Projects"
+            weight = 3
+            url = "/projects/"
+
+            [[languages.en.menu.main]]
+            name = "Gists"
+            weight = 4
+            url = "https://gist.github.com/sachinsu"
+
+            [[languages.en.menu.main]]
+            name = "Useful Links"
+            weight = 5
+            url = "/links/home"
+
+

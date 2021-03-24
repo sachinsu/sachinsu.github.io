@@ -1,89 +1,60 @@
 baseurl = "https://sachinsu.github.io"
-title = "Sachin Sunkle"
-
-theme = "hello-friend-ng"
+title = "Learnings in IT"
 languageCode = "en-us"
-defaultcontentlanguage = "en"
-
-paginate = 20
-canonifyurls = true
-
-pygmentsstyle = "monokai"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+paginate = "5" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "UA-169012216-1"
 
+[Author] # Used in authorbox
+  name = "Sachin Sunkle"
+  bio = "A Coder in IT"
 
-[params]
-    author = "Sachin Sunkle"
-    description = "A simple technical blog"
-    homeSubtitle = "A simple technical blog"
-    keywords = "blog,developer,personal,golang,dotnetcore,databases,architecture,c#,.net core, Vuejs, Quasar, Oracle, python"
-    info = "Full stack Software Engineer"
-    avatarurl = ""
-    footercontent = ""
+[Params]
+  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
+  description = "A technical blog " # Site description. Used in meta description
+  copyright = "Sachin Sunkle" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = true # Enable Twitter Cards if true
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+  toc = true # Enable Table of Contents
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["author", "date"] # Order of post meta information
+  mainSections = ["posts"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
 
-    dateformat = "January 2, 2006"
-    dateformShort   = "Jan 2"
-    dateformNum     = "2006-01-02"
-    dateformNumTime = "2006-01-02 15:04 -0700"
+[Params.style.vars]
+  highlightColor = "#3740ff" # Override highlight color
 
-    hideCredits = false
-    hideCopyright = false
-    since = 2019
+  # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
+  # Take care of different quotes OR escaping symbols in these params if necessary
+  fontFamilyPrimary = "segoe-ui, 'Open Sans', Helvetica, Arial, sans-serif"
+  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
-    # Git Commit in Footer, uncomment the line below to enable it.
-    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
+[Params.logo]
+  title = "" # Logo title, otherwise will use site title
+  subtitle = "A Simple Technical Blog" # Logo subtitle
 
-    rtl = false
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["social","recent", "taglist"]
 
-    defaultTheme = "light"
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
 
-    # Series see also post count
-    maxSeeAlsoItems = 5
-
-    # Custom CSS
-    custom_css = []
-    
-    # Custom JS
-    custom_js = []
-
-[params.logo]
-    logoText     = "$ cd /home/"
-    logoHomeLink = "/"
-    
-[taxonomies]
-  category = "blog"
-  series = "series"
-  tag = "tags"
-
-[params.favicon.color]
-  mask = "#252627"
-  msapplication = "#252627"
-  theme = "#252627"
-
-[[params.social]]
-    name = "github"
-    icon = "fab fa-github"
-    weight = 1
-    url = "https://github.com/sachinsu/"
-[[params.social]]
-    name = "twitter"
-    icon = "fab fa-twitter"
-    weight = 3
-    url = "https://twitter.com/SachinS3012"
-[[params.social]]
-    name = "linkedin"
-    icon = "fab fa-linkedin"
-    weight = 4
-    url = "https://in.linkedin.com/in/sachinsunkle"
-[[params.social]]
-    name = "rss"
-    icon = "fas fa-rss"
-    weight = 6
-    url = "https://sachinsu.github.io/index.xml"
-    rel = "alternate"
-    type = "application/rss+xml"
+[Params.widgets.social]
+  # Enable parts of social widget
+  twitter = "SachinS3012"
+  linkedin = "sachinsunkle"
+  github = "sachinsu"
 
 
 [languages]
@@ -95,17 +66,17 @@ googleAnalytics = "UA-169012216-1"
             [[languages.en.menu.main]]
             name = "About"
             weight = 1
-            url = "about/"
+            url = "/about/"
 
             [[languages.en.menu.main]]
             name = "Blog"
             weight = 2
-            url = "posts/"
+            url = "/posts/"
 
             [[languages.en.menu.main]]
             name = "Projects"
             weight = 3
-            url = "projects/"
+            url = "/projects/"
 
             [[languages.en.menu.main]]
             name = "Gists"
@@ -115,6 +86,4 @@ googleAnalytics = "UA-169012216-1"
             [[languages.en.menu.main]]
             name = "Useful Links"
             weight = 5
-            url = "links/home"
-
-
+            url = "/links/home"
