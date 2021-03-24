@@ -10,6 +10,7 @@ My current Favourite Language
 
 ### Articles, E-books
 - [High performance GO Workshop](https://dave.cheney.net/high-performance-go-workshop/gophercon-2019.html#welcome)
+- [Learnings from Production usage of Go](https://rytisbiel.com/2021/03/06/darker-corners-of-go/)
 - [Thoughts on Go performance optimization](https://github.com/dgryski/go-perfbook)
 - [Effective Go](https://golang.org/doc/effective_go.html)
 - [Handling 1M websockets connections in Go ](https://github.com/eranyanay/1m-go-websockets)
