@@ -16,6 +16,7 @@ Python has become pervasive all throught Data Science be it Machine learning, De
 
 - [Getting machine learning to production](http://veekaybee.github.io/2020/06/09/ml-in-prod/)
 - [A quick-and-dirty guide on how to install packages for Python](https://snarky.ca/a-quick-and-dirty-guide-on-how-to-install-packages-for-python/)
+- [What to do when data doesn't fit in memory](https://pythonspeed.com/articles/data-doesnt-fit-in-memory/)
 
 
 ## Packages
