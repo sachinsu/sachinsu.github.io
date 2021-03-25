@@ -23,7 +23,7 @@ googleAnalytics = "UA-169012216-1"
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["author", "date"] # Order of post meta information
   mainSections = ["posts"] # Specify section pages to show on home page and the "Recent articles" widget
-  dateformat = "02 Jan 06" # Change the format of dates
+  dateformat = "Jan 2 2006" # Change the format of dates
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
 
