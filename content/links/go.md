@@ -59,6 +59,7 @@ My current Favourite Language
 - [A Go metrics interface with fast buffered metrics and third party reporters](https://github.com/uber-go/tally)
 - [Hey - HTTP load generator, ApacheBench (ab) replacement](https://github.com/rakyll/hey)
 - [Go-metrics - library for exporting performance and runtime metrics to external metrics systems (i.e. statsite, statsd)](https://github.com/armon/go-metrics)
+- [Progressive Web App (PWA) with WebAssembly in Go](https://go-app.dev/)
 
 ### Task queues
 
