@@ -136,6 +136,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [What is OpenTelemetry?](https://otel.lightstep.com)
 - [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
+- [Distributed tracing covering Client (Mobile App) tracing at slack](https://slack.engineering/client-tracing-understanding-mobile-and-desktop-application-performance-at-scale/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
 - [Open source infrastructure and application Monitoring](https://netdata.cloud)
 - [Opstrace - OSS alternative to Datadog,SignalFX](https://opstrace.com)

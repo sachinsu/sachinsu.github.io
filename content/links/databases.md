@@ -37,6 +37,7 @@ Knowledge base around general database related topics.
 - [Some SQL tricks from Application DBA](https://hakibenita.com/sql-tricks-application-dba)
 - [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
 - [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
+- [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
 
 ## Tools Collection 
 

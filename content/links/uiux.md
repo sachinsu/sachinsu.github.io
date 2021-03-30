@@ -41,3 +41,4 @@ draft: false
 - [Web Vitals- Essential metrics for a healthy site.](https://web.dev/vitals)
 - [Clerk - User Management as Service](https://clerk.dev)
 - [Go based Fast Javascript bundler and minifier](https://esbuild.github.io/)
+- [Finite State Machine in JS/Typescript](https://xstate.js.org/docs)
