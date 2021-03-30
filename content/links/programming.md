@@ -152,6 +152,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Improving Observability with AWS App Mesh](https://nathanpeck.com/improving-observability-with-aws-app-mesh-amazon-ecs/)
 - [Signoz - Open source alternative to DataDog](signoz.io)
 - [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
+- [Details about Cortex vs Thanos, Grafana Loki and Tempo](https://opstrace.com/blog/why-cortex-loki)
 
 ## Distributed messaging, Streams
 

@@ -60,6 +60,7 @@ My current Favourite Language
 - [Hey - HTTP load generator, ApacheBench (ab) replacement](https://github.com/rakyll/hey)
 - [Go-metrics - library for exporting performance and runtime metrics to external metrics systems (i.e. statsite, statsd)](https://github.com/armon/go-metrics)
 - [Progressive Web App (PWA) with WebAssembly in Go](https://go-app.dev/)
+- [GoPlus - The Go+ language for data science](https://goplus.org/)
 
 ### Task queues
 
