@@ -36,6 +36,7 @@ draft: false
 - [Database configuration for Web Services](https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/)
 - [Online explain analyzer & Generally Good Blog on PostgreSQL](https://explain.depesz.com/)
 - [Vertically scaling PostgreSQL](https://pgdash.io/blog/scaling-postgres.html)
+- [How PostgreSQL Query Optimizer works](https://www.cybertec-postgresql.com/en/how-the-postgresql-query-optimizer-works/)
 - [A Performance Dashboard](https://github.com/ankane/pghero)
 - [Simple script to analyse your PostgreSQL database configuration, and give tuning advice](https://postgresqltuner.pl)
 - [Tuning PostgreSQL for High Write Throughput](https://www.slideshare.net/GrantMcAlister/tuning-postgresql-for-high-write-throughput)

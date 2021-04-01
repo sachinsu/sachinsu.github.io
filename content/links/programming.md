@@ -157,6 +157,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Distributed messaging, Streams
 
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
+- [Kafka Without Zookeeper - A Sneak peak](https://www.confluent.io/blog/kafka-without-zookeeper-a-sneak-peek/)
 - [Oracle Advanced Queues](https://www.oracle.com/database/technologies/advanced-queuing.html)
 - [Tim Bray's Blog](https://www.tbray.org/ongoing)
 - [Instrumenting distributed systems for operational visibility](https://aws.amazon.com/builders-library/instrumenting-distributed-systems-for-operational-visibility/?did=ba_card&trk=ba_card)
