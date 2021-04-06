@@ -45,6 +45,7 @@ My current Favourite Language
 - [Rust vs Go - When to use which](https://thenewstack.io/rust-vs-go-why-theyre-better-together/)
 - [Example of how to let only one Goroutine do the task while letting others wait for it useful in case of reading data from DB to be cached](https://lakefs.io/2020/09/23/in-process-caching-in-go-scaling-lakefs-to-100k-requests-second/)
 - [How to leverage AWS Lambda timeouts with Go context cancellation](https://medium.com/@filiplubniewski/how-to-leverage-aws-lambda-timeouts-with-go-context-cancellation-7dacde656540)
+- [Design philosophy](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 
 ### Libraries, Tools
 

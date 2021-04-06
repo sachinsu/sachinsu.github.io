@@ -30,6 +30,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)
 - [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)
 - [Diagnose Linux related Disk & RAM issues](https://www.highgo.ca/2021/02/08/troubleshooting-performance-issues-due-to-disk-and-ram/)
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
