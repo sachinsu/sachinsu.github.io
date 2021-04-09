@@ -153,6 +153,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Signoz - Open source alternative to DataDog](signoz.io)
 - [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
 - [Details about Cortex vs Thanos, Grafana Loki and Tempo](https://opstrace.com/blog/why-cortex-loki)
+- [Get started with Prometheus, Grafana and loki](https://christine.website/blog/prometheus-grafana-loki-nixos-2020-11-20)
 
 ## Distributed messaging, Streams
 

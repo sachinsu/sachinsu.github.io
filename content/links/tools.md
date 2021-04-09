@@ -31,6 +31,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Handy Linux networking tools](https://docs.google.com/presentation/d/1PZ-bp-a00KKjE9bqKOd17ZoroyXHJkm70aXcFBqwXAQ/edit)
 - [rclone - manage files on cloud storage, Rsync for Cloud](https://rclone.org)
 - [CPU-Z is a freeware system profiling and monitoring application for Microsoft Windows and Android](https://www.cpuid.com/softwares/cpu-z.html)
+- [Fselect - Find files with SQL-like queries](https://github.com/jhspetersson/fselect)
 
 ## Linux related References
 

@@ -22,6 +22,7 @@ Python has become pervasive all throught Data Science be it Machine learning, De
 ## Packages
 
 - [EasyOCR - supports 40+ languages](https://github.com/JaidedAI/EasyOCR)
+- [Simplified Static file serving for Python](http://whitenoise.evans.io/en/stable/)
 
 ## Podcasts
 
