@@ -35,6 +35,7 @@ Knowledge base around general database related topics.
 - [Primer on Database Replication](https://www.brianstorti.com/replication/)
 - [Connection pool sizing for databases](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)
 - [Some SQL tricks from Application DBA](https://hakibenita.com/sql-tricks-application-dba)
+- [Best Practices while writing SQL](https://www.metabase.com/learn/building-analytics/sql-templates/sql-best-practices)
 - [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
 - [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
 - [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
