@@ -31,6 +31,7 @@ draft: false
 - [KeyDB is a high performance fork of Redis with a focus on multithreading, memory efficiency, and high throughput. In addition to multithreading](https://keydb.dev/)
 - [RediSQL, fastest, simplest, in-memory SQL](https://redisql.com)
 - [Redisearch - Redis powered Search Engine](https://oss.redislabs.com/redisearch/)
+- [JuiceFS - POSIX File System with Redis or S3 as backend](https://github.com/juicedata/juicefs)
 
 ## Oracle Coherence
 

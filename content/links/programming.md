@@ -19,7 +19,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
 - [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)
 - [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
-- [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
 - [Distributed architecture concepts I learned while building a large payments system](https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/)
 - [Video: Developing Asynchronous Microservices • Chris Richardson](https://www.youtube.com/watch?v=kyNL7yCvQQc)
@@ -34,8 +33,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [How to fix Overloaded Web server](https://web.dev/overloaded-server/)
 - [How gov.uk reliably sends SMS messages using multiple providers](https://gds.blog.gov.uk/2020/04/03/how-gov-uk-notify-reliably-sends-text-messages-to-users/)
 - [Rule of thumbs for Architecture Scalability](https://medium.com/@i.gorton/six-rules-of-thumb-for-scaling-software-architectures-a831960414f9)
-- [Benefits of Message Queues](https://aws.amazon.com/message-queue/benefits/)
-- [Reasons to use Message Queues](https://stackify.com/message-queues-12-reasons/)
 - [About Structure of Design document](https://www.industrialempathy.com/posts/design-docs-at-google/)
 - [Important Aspects about Circuit breaker from Shopify](https://engineering.shopify.com/blogs/engineering/circuit-breaker-misconfigured)
 - [CRDTs for Synchronization](https://github.com/jlongster/crdt-example-app)
@@ -51,13 +48,13 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 
 ## Distributed Systems
+
 - [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
 - [The Service Mesh: What Every Software Engineer Needs to Know about the World's Most Over-Hyped Technology](https://servicemesh.io/)
 - [E-book kubernetes Up & Running](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
 - [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
 - [Containers - Training resources](https://container.training/)
-- [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
-- [Distrivbuted Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
+- [Distributed Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
 - [Microservices — architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
 
 ## Automation 
@@ -78,9 +75,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Online Flowcharts, UML diagrams](https://www.draw.io/)
 - [Embeddable charts using DataWrapper](https://app.datawrapper.de/)
 - [Figma - Design and prototype builder](https://www.figma.com/)
-- [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
-- [A comparison between RabbitMQ and Apache Kafka](https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/)
-- [Comparing RabbitMQ and Kafka](https://www.cloudamqp.com/blog/2019-12-12-when-to-use-rabbitmq-or-apache-kafka.html)
 - [Open source Voice chat](https://www.mumble.info/)
 - [Open source Video Conferencing](https://jitsi.org/)
 - [Open network for secure, decentralized communication](https://matrix.org/)
@@ -90,7 +84,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
 - [Diagram as Code (Python)](https://diagrams.mingrammer.com/)
 - [Virtual whiteboard for sketching hand-drawn like diagrams with Collaboration***](https://excalidraw.com)
-- [NSQ - a realtime distributed messaging platform designed to operate at scale](https://nsq.io)
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)
 - [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
 - [Open source Project Management Software](https://github.com/opf/openproject)
@@ -116,6 +109,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Devops/Monitoring
 
+- [Impact of Architecture on DevOps](https://cloud.google.com/solutions/devops/devops-tech-architecture)
 - [List of how organizations do SRE (Publicly available)](https://github.com/upgundecha/howtheysre)
 - [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 - [Microsoft Azure - DevOps Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops)
@@ -155,15 +149,26 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
 - [Details about Cortex vs Thanos, Grafana Loki and Tempo](https://opstrace.com/blog/why-cortex-loki)
 - [Get started with Prometheus, Grafana and loki](https://christine.website/blog/prometheus-grafana-loki-nixos-2020-11-20)
+- [Introduction to FluentBit - Logs n Metrics Processor](https://www.youtube.com/watch?v=3ELc1helke4)
 
 ## Distributed messaging, Streams
 
+- [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
+- [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
+- [A comparison between RabbitMQ and Apache Kafka](https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/)
+- [Comparing RabbitMQ and Kafka](https://www.cloudamqp.com/blog/2019-12-12-when-to-use-rabbitmq-or-apache-kafka.html)
+- [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
+- [Benefits of Message Queues](https://aws.amazon.com/message-queue/benefits/)
+- [Reasons to use Message Queues](https://stackify.com/message-queues-12-reasons/)
+- [NSQ - a realtime distributed messaging platform designed to operate at scale](https://nsq.io)
 - [Kafka Without Zookeeper - A Sneak peak](https://www.confluent.io/blog/kafka-without-zookeeper-a-sneak-peek/)
 - [Oracle Advanced Queues](https://www.oracle.com/database/technologies/advanced-queuing.html)
-- [Tim Bray's Blog](https://www.tbray.org/ongoing)
 - [Instrumenting distributed systems for operational visibility](https://aws.amazon.com/builders-library/instrumenting-distributed-systems-for-operational-visibility/?did=ba_card&trk=ba_card)
 - [Microservices Antipattern - Queue Explosion](http://cpitman.github.io/microservices/2018/03/25/microservice-antipattern-queue-explosion.html)
+- [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
+
+
 
 ## Rust
 
