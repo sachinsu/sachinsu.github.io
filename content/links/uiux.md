@@ -42,3 +42,4 @@ draft: false
 - [Clerk - User Management as Service](https://clerk.dev)
 - [Go based Fast Javascript bundler and minifier](https://esbuild.github.io/)
 - [Finite State Machine in JS/Typescript](https://xstate.js.org/docs)
+- [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)

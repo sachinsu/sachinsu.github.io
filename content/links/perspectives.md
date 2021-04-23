@@ -30,6 +30,7 @@ Section covering Business, project/programming perspectives
 - [Distributed Systems Reading List](https://dancres.github.io/Pages/)
 - [Awesome cold showers](https://github.com/hwayne/awesome-cold-showers)
 - [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
+- [Disasters from Microservices world](https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51)
 - [Behaviors to avoid in Software Architecture Role](https://www.danielwatts.info/post/7-behaviours-to-avoid-software-architect/)
 - [App Maintenance Cost Can Be Three Times Higher than Development Cost](https://www.econnectivity.se/app-maintenance-cost-can-be-three-times-higher-than-development-cost/)
 - [Foundational papers on distributed systems](http://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html)

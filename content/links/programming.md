@@ -56,6 +56,9 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Containers - Training resources](https://container.training/)
 - [Distributed Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
 - [Microservices — architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
+- [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
+- [Disasters from Microservices world](https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51)
+
 
 ## Automation 
 
@@ -167,6 +170,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Instrumenting distributed systems for operational visibility](https://aws.amazon.com/builders-library/instrumenting-distributed-systems-for-operational-visibility/?did=ba_card&trk=ba_card)
 - [Microservices Antipattern - Queue Explosion](http://cpitman.github.io/microservices/2018/03/25/microservice-antipattern-queue-explosion.html)
 - [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
+- [ZeroMQ - Universal Messaging Library](https://zeromq.org/)
 
 
 

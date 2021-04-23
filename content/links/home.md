@@ -7,6 +7,7 @@ draft: false
 #### Below is list of curated links for various technical topics,
 
 - [Awesome](http://awesome.re/) - de-facto repository covering wide range of technical topics.
+- [Awesome list of self hosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
 - [Online Learning](/links/onlearn/)
 - [Perspectives](/links/perspectives/)
 - [Distributed Systems Design, Architecture ...](/links/programming/)
