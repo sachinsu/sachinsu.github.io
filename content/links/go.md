@@ -71,6 +71,8 @@ My current Favourite Language
 - [Event Sourcing, pub/sub using AMQP/SQL/Channels](https://github.com/ThreeDotsLabs/watermill)
 - [Hydra - OAuth 2.0 Server](https://ory.sh/hydra)
 - [Temporal - Scalable orchestration platform](https://temporal.io)
+- [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
+- [Tunny - Library to manage pool of goroutines to limit incoming work](https://github.com/Jeffail/tunny)
 
 ### Web scraping, downloader 
 

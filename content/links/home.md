@@ -40,3 +40,4 @@ draft: false
 - [Library of Free music](https://cchound.com/)
 - [Ergonomic Home office setup](https://blog.amirathi.com/2019/08/18/ergonomic-office-setup/)
 - [Consider upgrading a few PC/laptop Components like SSD](https://www.hanselman.com/blog/consider-upgrading-a-few-pc-components-a-good-ssd-is-so-fast-its-not-even-funny)
+- [How to use Google like a pro](https://markodenic.com/use-google-like-a-pro/)

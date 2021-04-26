@@ -19,6 +19,13 @@ draft: false
 - [18 things you can do to remove mysql Bottlenecks due to High traffic](https://www.percona.com/blog/2020/04/03/18-things-you-can-do-to-remove-mysql-bottlenecks-caused-by-high-traffic-part-one/)
 - [MySQL from Developer's perspective](https://blog.koehntopp.info/2020/09/07/mysql-from-a-developers-perspective.html)
 
+
+## Interesting libraries, extensions
+
+- [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
+
+
+
 ## Vitess,a Distributed MySQL
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
 - [How Slack uses Vitess](https://slack.engineering/scaling-datastores-at-slack-with-vitess/)

@@ -55,6 +55,7 @@ draft: false
 - [SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN](https://www.percona.com/blog/2020/04/16/sql-optimizations-in-postgresql-in-vs-exists-vs-any-all-vs-join/)
 - [PostgreSQL Scaling advice in 2021](https://www.cybertec-postgresql.com/en/postgres-scaling-advice-for-2021/)
 - [Security Hardening for PostgreSQL](https://goteleport.com/blog/securing-postgres-postgresql/)
+- [Working with Postgres @ Zerodha](https://zerodha.tech/blog/working-with-postgresql/)
 
 ## Interesting Extensions/Products
 
@@ -71,6 +72,7 @@ draft: false
 - [Swarm64 DA -20x faster PostgreSQL query performance](https://swarm64.com/swarm64-da/)
 - [Greenplum - data warehouse, based on PostgreSQL](https://github.com/greenplum-db/gpdb)
 - [Apache Age - graph database functionality for PostgreSQL](https://age.apache.org/)
+- [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
 
 ## Migration to PostgreSQL
 
