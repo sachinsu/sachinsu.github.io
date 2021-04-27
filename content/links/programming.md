@@ -152,6 +152,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
 - [Details about Cortex vs Thanos, Grafana Loki and Tempo](https://opstrace.com/blog/why-cortex-loki)
 - [Get started with Prometheus, Grafana and loki](https://christine.website/blog/prometheus-grafana-loki-nixos-2020-11-20)
+- [How to build a scalable prometheus architecture](https://logz.io/blog/devops/prometheus-architecture-at-scale/?utm_source=o11y.news&utm_medium=email)
 - [Introduction to FluentBit - Logs n Metrics Processor](https://www.youtube.com/watch?v=3ELc1helke4)
 
 ## Distributed messaging, Streams
