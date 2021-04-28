@@ -125,6 +125,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Dockerfile Best Practices](https://www.docker.com/blog/speed-up-your-development-flow-with-these-dockerfile-best-practices/)
 - [Github Workflow - Test them locally using Act](https://github.com/nektos/act)
 - [Code coverage best practices from Google](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
+- [A terminal UI for tshark, inspired by Wireshark](https://termshark.io/)
 
 ## Observability
 
