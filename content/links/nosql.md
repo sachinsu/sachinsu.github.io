@@ -32,6 +32,7 @@ draft: false
 - [RediSQL, fastest, simplest, in-memory SQL](https://redisql.com)
 - [Redisearch - Redis powered Search Engine](https://oss.redislabs.com/redisearch/)
 - [JuiceFS - POSIX File System with Redis or S3 as backend](https://github.com/juicedata/juicefs)
+- [SSDB - A fast NoSQL database, an alternative to Redis](https://ssdb.io)
 
 ## Oracle Coherence
 

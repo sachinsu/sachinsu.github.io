@@ -61,6 +61,13 @@ So, It is  possible to quickly come up with this using built-in tools if writing
 
 As a next step, Plan is to automatically run this script as part of Github Build and notify in case of any URL is failing so that appropriate action can be taken.
 
+### Hat Tip
+Suppose the requirement is to extract a particular text by recursively searching through files(for e.g. extract Target .NET Framework version across each of the project in a folder) then grep can be used as below, 
+
+` grep -r --include "*.csproj"  -oP "<TargetFrameworkVersion(?:\s[^>]*)?>\K.*?(?=</TargetFrameworkVersion>)" . `
+
+This command will recursively search through all folders and print names of all those `.csproj` files containg `<TargetFrameworkVersion>` tag. 
+
 Let me know (in comments) if you are aware of any alternate better way of achieving this.
 
 Happy Coding !!
