@@ -27,6 +27,7 @@ draft: false
 - [PostgreSQL - Best practices(Azure)](https://docs.microsoft.com/en-us/azure/postgresql/application-best-practices)
 - [Designing high performance time series data table in (RDS) postgresql](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/)
 - [Informative blog on PostgreSQL](https://depesz.com)
+- [PostgreSQL - Using SQL for Data Analysis](https://hakibenita.com/sql-for-data-analysis)
 
 ## Performance tuning, configuration etc.
 

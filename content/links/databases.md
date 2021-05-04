@@ -112,3 +112,4 @@ Knowledge base around general database related topics.
 - [Streaming S3 Replication for SQLite](https://litestream.io)
 - [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
 - [Interesting use cases for SQLITE](https://antonz.org/sqlite-is-not-a-toy-database/)
+- [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)
