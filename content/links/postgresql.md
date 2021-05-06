@@ -74,6 +74,7 @@ draft: false
 - [Greenplum - data warehouse, based on PostgreSQL](https://github.com/greenplum-db/gpdb)
 - [Apache Age - graph database functionality for PostgreSQL](https://age.apache.org/)
 - [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
+- [Supabase -Listen to PG changes in real time without using Listen/Notify](https://github.com/supabase/realtime)
 
 ## Migration to PostgreSQL
 

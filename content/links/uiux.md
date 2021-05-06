@@ -43,3 +43,4 @@ draft: false
 - [Go based Fast Javascript bundler and minifier](https://esbuild.github.io/)
 - [Finite State Machine in JS/Typescript](https://xstate.js.org/docs)
 - [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)
+- [Observable Plot - Data Visualization Library](https://github.com/observablehq/plot)
