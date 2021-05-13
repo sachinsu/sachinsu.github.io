@@ -57,6 +57,7 @@ draft: false
 - [PostgreSQL Scaling advice in 2021](https://www.cybertec-postgresql.com/en/postgres-scaling-advice-for-2021/)
 - [Security Hardening for PostgreSQL](https://goteleport.com/blog/securing-postgres-postgresql/)
 - [Working with Postgres @ Zerodha](https://zerodha.tech/blog/working-with-postgresql/)
+- [Using PostgreSQL for Data warehouse](https://www.narrator.ai/blog/using-postgresql-as-a-data-warehouse/)
 
 ## Interesting Extensions/Products
 

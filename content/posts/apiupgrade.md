@@ -1,6 +1,6 @@
 ---
 title: "Upgrading API: Learnings"
-date: 2021-02-25T00:00:00+05:30
+date: 2021-05-15T00:00:00+05:30
 draft: false
 tags: [HTTP, SOAP, REST, .NET, WCF, CoreWCF, ASMX, C#]
 ---
@@ -193,6 +193,48 @@ This feels like even more cleaner approach than using URL re-write as it doesn't
 Finally, we went ahead with this approach.
 
 Hopefully,this article will be helpful to anyone involved in legacy modernization initiatives.
+
+**[Update on 13-May-2021]** 
+* ASMX supports both SOAP as well as Form POST (i.e. content type application/x-www-form-urlencoded). This implies that there would be consumers of this API who are using either of the two formats to interact with API. Hence, it is necessary that new WCF based API supports both the formats. One way (If you are aware of any other approach, do let me know via comments) is to, 
+  * Expose both SOAP and HTTP End-points like below, 
+    ```
+      <service name="wcf.Myservice">
+        <endpoint address="" binding="basicHttpBinding" contract="wcf.IMyserviceSoap" />
+        <endpoint address="http" kind="webHttpEndpoint" endpointConfiguration="webEndpointWithHelp" contract="wcf.IMyservice" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+      </service>
+
+    ```
+    This exposes SOAP end point at root (`/`) and HTTP end-point at (`/http`). 
+    
+  * Since clients are not aware of this new `http` end point, additional steps are needed to handle non soap requests seamlessly. This can be done in `Global.asax` as below, 
+
+    ```
+         protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            const string httpAddress = "http/";
+
+            if (Request.HttpMethod.ToLowerInvariant() == "post")
+            {
+                if (!Request.ContentType.ToLowerInvariant().Contains("xml") && !Request.Url.AbsolutePath.ToLowerInvariant().Contains(httpAddress))
+                {
+                    List<string> segments = Request.Url.Segments.ToList();
+                    segments.Insert(segments.Count() - 1, httpAddress);
+
+                    var redirPath = String.Join("",segments.ToArray());
+
+                    Context.RewritePath(redirPath);
+                }
+            }
+        }
+    ```
+    Above function, injects `http` in path based on `Content-type` of incoming request and then re-writes it. 
+    
+    Ideally, i would have liked to do it via [URL Rewrite](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module) module in web.config. However, i faced issues while setting up the rule that uses `Content-type` header.  
+
+* ASMX and SOAP 1.1 - It was noticed that though ASMX supports SOAP 1.1, it doesn't enforces it when it comes to "SOAPAction" Header. As per the SOAP 1.1 specification, "SOAPAction" Http Header is mandatory and is used to determine`Webmethod` to be invoked. Since WCF is compliant with SOAP 1.1 specification, it required additional step to infer Webmethod by means of parsing the body. Luckily, Microsoft has sample for [Dispatch by Body Element](https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/dispatch-by-body-element) and same can be readily used. 
+
+Overall, [WCF Samples](https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/) is fantastic set of samples that covers wide variety of such scenarios. Do Check it out.
 
 ### Useful References
 

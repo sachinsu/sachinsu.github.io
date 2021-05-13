@@ -63,6 +63,7 @@ My current Favourite Language
 - [Go-metrics - library for exporting performance and runtime metrics to external metrics systems (i.e. statsite, statsd)](https://github.com/armon/go-metrics)
 - [Progressive Web App (PWA) with WebAssembly in Go](https://go-app.dev/)
 - [GoPlus - The Go+ language for data science](https://goplus.org/)
+- [Notes on Profiling in Go](https://github.com/DataDog/go-profiler-notes)
 
 ### Task queues
 
