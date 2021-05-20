@@ -113,3 +113,9 @@ Knowledge base around general database related topics.
 - [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
 - [Interesting use cases for SQLITE](https://antonz.org/sqlite-is-not-a-toy-database/)
 - [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)
+
+
+## Data Security, GDPR 
+
+- [Tool for Sensitive Data Detection from Capitalone](https://capitalone.github.io/DataProfiler/docs/0.4.5/html/index.html)
+- [Data bunker - Secure storage for personal records built to comply with GDPR](https://databunker.org/)
