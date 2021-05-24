@@ -194,7 +194,7 @@ Finally, we went ahead with this approach.
 
 Hopefully,this article will be helpful to anyone involved in legacy modernization initiatives.
 
-**[Update on 13-May-2021]** 
+**[Update on 21-May-2021]** 
 * ASMX supports both SOAP as well as Form POST (i.e. content type application/x-www-form-urlencoded). This implies that there would be consumers of this API who are using either of the two formats to interact with API. Hence, it is necessary that new WCF based API supports both the formats. One way (If you are aware of any other approach, do let me know via comments) is to, 
   * Expose both SOAP and HTTP End-points like below, 
     ```
@@ -231,6 +231,41 @@ Hopefully,this article will be helpful to anyone involved in legacy modernizatio
     Above function, injects `http` in path based on `Content-type` of incoming request and then re-writes it. 
     
     Ideally, i would have liked to do it via [URL Rewrite](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module) module in web.config. However, i faced issues while setting up the rule that uses `Content-type` header.  
+
+However, this approach still had issues wherein WCF run-time raised errors when `?singlewsdl` url was accessed. It seems problem was due to multiple interfaces (one for SOAP and other for REST) and WCF not being able to generate WSDL for it. Additionally, REST handler is also deserves a look as it simply parses payload as Query String and populating properties of request DTO/class has to be done manually, 
+
+  ```
+
+    ResponseDTO IMyservice.Process(Stream input)
+        {
+            string body = new StreamReader(input).ReadToEnd();
+            NameValueCollection nvc = HttpUtility.ParseQueryString(body);
+
+            return new ResponseDTO()
+            {
+                cnField = string.Format("NVCol --> {0}|{1}", nvc["prop1"], nvc["prop2"])
+            };
+        }
+
+  ```
+Overall, WCF does not have great support for handling `FORM POST` requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed [here](https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project), check it out. Additionally, it takes changes to `BeginRequest` in `global.asax` to re-write incoming request so that Web API controller can process it, like below, 
+
+  ```
+   protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+            if (Request.HttpMethod.ToLowerInvariant() == "post")
+            {
+                if (!Request.ContentType.ToLowerInvariant().Contains("xml"))
+                {
+                    List<string> segments = Request.Url.Segments.ToList();
+
+                    Context.RewritePath(string.Format("/controllers/{0}",segments[segments.Count()-1]));
+                }
+            }
+        }
+
+  ```
 
 * ASMX and SOAP 1.1 - It was noticed that though ASMX supports SOAP 1.1, it doesn't enforces it when it comes to "SOAPAction" Header. As per the SOAP 1.1 specification, "SOAPAction" Http Header is mandatory and is used to determine`Webmethod` to be invoked. Since WCF is compliant with SOAP 1.1 specification, it required additional step to infer Webmethod by means of parsing the body. Luckily, Microsoft has sample for [Dispatch by Body Element](https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/dispatch-by-body-element) and same can be readily used. 
 
