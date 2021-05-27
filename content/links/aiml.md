@@ -22,6 +22,7 @@ Useful links related from AI, ML space
 - [Benford’s Law and Financial Statements](https://blog.auditanalytics.com/benfords-law-and-financial-statements/)
 - [Data Scientists Should Be More End-to-End](https://eugeneyan.com/writing/end-to-end-data-science/)
 - [Team Data science process (Microsoft)](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview)
+- [Traits of Good Data Scientist](https://ianwhitestone.work/good-ds-bad-ds/)
 
 
 ## Videos

@@ -28,6 +28,7 @@ draft: false
 - [Designing high performance time series data table in (RDS) postgresql](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/)
 - [Informative blog on PostgreSQL](https://depesz.com)
 - [PostgreSQL - Using SQL for Data Analysis](https://hakibenita.com/sql-for-data-analysis)
+- [Approach to Bulk Import in PostGreSQL](https://www.cybertec-postgresql.com/en/postgresql-bulk-loading-huge-amounts-of-data/)
 
 ## Performance tuning, configuration etc.
 

@@ -23,6 +23,7 @@ draft: false
 - [You dont need Javascript](https://github.com/you-dont-need/You-Dont-Need-JavaScript)
 - [Sign in form Best practices](https://web.dev/sign-in-form-best-practices/)
 - [How HTTP Range Requests work (for large file downloads etc.)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests)
+- [Beginner's guide to Next.js](https://welearncode.com/beginners-guide-nextjs/)
 
 ## Testing
 
