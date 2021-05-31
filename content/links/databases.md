@@ -102,11 +102,9 @@ Knowledge base around general database related topics.
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
 
-
 ## Metadata Management
 
 - [Growing importance of Metadata Management Systems](https://gradientflow.com/the-growing-importance-of-metadata-management-systems/)
-
 
 ## SQLite 
 
@@ -114,7 +112,6 @@ Knowledge base around general database related topics.
 - [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
 - [Interesting use cases for SQLITE](https://antonz.org/sqlite-is-not-a-toy-database/)
 - [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)
-
 
 ## Data Security, GDPR 
 

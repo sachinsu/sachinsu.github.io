@@ -24,6 +24,7 @@ draft: false
 - [Sign in form Best practices](https://web.dev/sign-in-form-best-practices/)
 - [How HTTP Range Requests work (for large file downloads etc.)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests)
 - [Beginner's guide to Next.js](https://welearncode.com/beginners-guide-nextjs/)
+- [Data Model behind Notion's flexibility](https://www.notion.so/blog/data-model-behind-notion)
 
 ## Testing
 
