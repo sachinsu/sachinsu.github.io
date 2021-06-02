@@ -25,6 +25,8 @@ Platform where i have spent most time till now.
 - [Async/Await - Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming)
 - [Async/Await - Deep dive for Windows based Async I/O](https://tooslowexception.com/net-asyncawait-in-a-single-picture/)
 - [One more look at why Async/Await, what happens underneath](https://blog.scooletz.com/2018/05/14/task-async-await-valuetask-ivaluetasksource-and-how-to-keep-your-sanity-in-modern-net-world/)
+- [Implement a producer-consumer dataflow pattern](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern)
+- [Use Arrays of Blocking Collections in a Pipeline](https://docs.microsoft.com/en-us/dotnet/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections)
 
 ## Performance related 
 
