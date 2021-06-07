@@ -76,6 +76,7 @@ Knowledge base around general database related topics.
 - [What is delta lakehouse?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
 - [Typical Analytics Stack](https://technically.dev/posts/what-your-data-team-is-using)
 - [Flat Data - Scheduled Data Download on GitHub Actions in Repository and visualization](https://octo.github.com/projects/flat-data)
+- [Nocodb - Turn MySQL/PostgreSQL data in smart Spreadsheet](https://github.com/nocodb/nocodb)
 
 ## ETL,ELT, Evolutionary Practices 
 - [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
