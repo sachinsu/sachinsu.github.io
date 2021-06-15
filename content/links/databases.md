@@ -118,3 +118,7 @@ Knowledge base around general database related topics.
 
 - [Tool for Sensitive Data Detection from Capitalone](https://capitalone.github.io/DataProfiler/docs/0.4.5/html/index.html)
 - [Data bunker - Secure storage for personal records built to comply with GDPR](https://databunker.org/)
+
+## Search
+
+- [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)

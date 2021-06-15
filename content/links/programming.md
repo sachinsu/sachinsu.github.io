@@ -41,6 +41,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Scaling with Common Sense by Zerodha](https://zerodha.tech/blog/scaling-with-common-sense/)
 - [Guidelines for Command line interface](https://clig.dev/)
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
+- [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
+
 
 ## Training
 
