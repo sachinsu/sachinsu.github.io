@@ -157,6 +157,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Get started with Prometheus, Grafana and loki](https://christine.website/blog/prometheus-grafana-loki-nixos-2020-11-20)
 - [How to build a scalable prometheus architecture](https://logz.io/blog/devops/prometheus-architecture-at-scale/?utm_source=o11y.news&utm_medium=email)
 - [Introduction to FluentBit - Logs n Metrics Processor](https://www.youtube.com/watch?v=3ELc1helke4)
+- [Distributed tracing vs. Logging](https://thenewstack.io/tracing-why-logs-arent-enough-to-debug-your-microservices/)
 
 ## Distributed messaging, Streams
 

@@ -69,6 +69,7 @@ Platform where i have spent most time till now.
 
 ## .NET Core
 
+- [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport/blob/dev/docs/Console/README.md)
 - [ASP.NET Core Architecture Overview](https://speakerdeck.com/davidfowl/asp-dot-net-core-architecture-overview)
 - [ASP.NET Core Performance Best Practices](https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?WT.mc_id=ondotnet-channel9-cephilli&view=aspnetcore-2.2)
 - [Diagnosing Issues Under Load Of WebAPI App Migrated To ASPNETCore On Linux](https://www.hanselman.com/blog/CustomerNotesDiagnosingIssuesUnderLoadOfWebAPIAppMigratedToASPNETCoreOnLinux.aspx)
