@@ -42,7 +42,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Guidelines for Command line interface](https://clig.dev/)
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
-
+- [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
 
 ## Training
 
@@ -162,6 +162,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Distributed messaging, Streams
 
 - [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
+- [Kafka - Capacity Planning](https://www.slideshare.net/slideshow/embed_code/key/EYwSnTsR6GxuyG)
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
 - [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
 - [A comparison between RabbitMQ and Apache Kafka](https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/)

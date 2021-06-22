@@ -52,6 +52,7 @@ Platform where i have spent most time till now.
 - [Task.run vs. BackgroundWorker](https://blog.stephencleary.com/2013/09/taskrun-vs-backgroundworker-conclusion.html)
 
 ## Tools, Libraries
+
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
 - [Flurl](https://flurl.dev/)
 - [Distributed transaction solution in micro-service base on eventually consistency, also an eventbus with Outbox pattern](http://cap.dotnetcore.xyz/)
@@ -91,7 +92,6 @@ Platform where i have spent most time till now.
 ## Networking 
 
 - [.NET 5 Networking Improvements](https://devblogs.microsoft.com/dotnet/net-5-new-networking-improvements/)
-
 
 ## Twitter Handles
 

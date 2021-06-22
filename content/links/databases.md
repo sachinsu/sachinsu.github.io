@@ -77,6 +77,7 @@ Knowledge base around general database related topics.
 - [Typical Analytics Stack](https://technically.dev/posts/what-your-data-team-is-using)
 - [Flat Data - Scheduled Data Download on GitHub Actions in Repository and visualization](https://octo.github.com/projects/flat-data)
 - [Nocodb - Turn MySQL/PostgreSQL data in smart Spreadsheet](https://github.com/nocodb/nocodb)
+- [Real time data analysis with Apache Pinot and kafka](https://www.confluent.io/blog/real-time-analytics-with-kafka-and-pinot/)
 
 ## ETL,ELT, Evolutionary Practices 
 - [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
