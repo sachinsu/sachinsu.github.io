@@ -22,10 +22,9 @@ draft: false
 
 ## Interesting libraries, extensions
 
-- [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
-
-
+- [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres](https://github.com/knadh/sql-jobber)
 
 ## Vitess,a Distributed MySQL
+
 - [Massively scaling MySQL database](https://www.infoq.com/presentations/vitess)
 - [How Slack uses Vitess](https://slack.engineering/scaling-datastores-at-slack-with-vitess/)

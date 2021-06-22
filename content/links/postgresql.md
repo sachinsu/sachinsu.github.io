@@ -29,6 +29,7 @@ draft: false
 - [Informative blog on PostgreSQL](https://depesz.com)
 - [PostgreSQL - Using SQL for Data Analysis](https://hakibenita.com/sql-for-data-analysis)
 - [Approach to Bulk Import in PostGreSQL](https://www.cybertec-postgresql.com/en/postgresql-bulk-loading-huge-amounts-of-data/)
+- [Schema updates with zero downtime in PostgreSQL](https://fabianlindfors.se/blog/schema-migrations-in-postgres/)
 
 ## Performance tuning, configuration etc.
 
@@ -59,6 +60,7 @@ draft: false
 - [Security Hardening for PostgreSQL](https://goteleport.com/blog/securing-postgres-postgresql/)
 - [Working with Postgres @ Zerodha](https://zerodha.tech/blog/working-with-postgresql/)
 - [Using PostgreSQL for Data warehouse](https://www.narrator.ai/blog/using-postgresql-as-a-data-warehouse/)
+- [Testing PG High availability with Patroni](https://www.percona.com/blog/2021/06/11/postgresql-ha-with-patroni-your-turn-to-test-failure-scenarios/)
 
 ## Interesting Extensions/Products
 
