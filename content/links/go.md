@@ -64,6 +64,7 @@ My current Favourite Language
 - [Progressive Web App (PWA) with WebAssembly in Go](https://go-app.dev/)
 - [GoPlus - The Go+ language for data science](https://goplus.org/)
 - [Notes on Profiling in Go](https://github.com/DataDog/go-profiler-notes)
+- [Go-Micro - Web and RPC Framework for Microservices in Go](https://go-micro.dev/)
 - [Approach on project Structure in Go](https://github.com/benbjohnson/wtf)
 
 ### Task queues

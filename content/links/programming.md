@@ -99,6 +99,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Workflow Engines](https://github.com/meirwah/awesome-workflow-engines)
 - [List of ETL frameworks](https://github.com/pawl/awesome-etl)
 - [Streaming frameworks](https://github.com/manuzhang/awesome-streaming)
+- [Extendable Workflow Automation tool in NodeJS](https://n8n.io)
 
 ## Security 
 
