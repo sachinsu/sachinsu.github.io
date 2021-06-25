@@ -66,6 +66,7 @@ My current Favourite Language
 - [Notes on Profiling in Go](https://github.com/DataDog/go-profiler-notes)
 - [Go-Micro - Web and RPC Framework for Microservices in Go](https://go-micro.dev/)
 - [Approach on project Structure in Go](https://github.com/benbjohnson/wtf)
+- [Zero Allocation JSON logger](https://github.com/rs/zerolog)
 
 ### Task queues
 
