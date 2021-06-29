@@ -47,6 +47,7 @@ My current Favourite Language
 - [How to leverage AWS Lambda timeouts with Go context cancellation](https://medium.com/@filiplubniewski/how-to-leverage-aws-lambda-timeouts-with-go-context-cancellation-7dacde656540)
 - [Design philosophy](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - [TLS and Go](https://eli.thegreenplace.net/2021/go-https-servers-with-tls/#id8)
+- [Effectively using Systemd for setting up HTTP Server](https://mgdm.net/weblog/systemd/)
 
 ### Libraries, Tools
 

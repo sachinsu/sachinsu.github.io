@@ -114,6 +114,7 @@ Knowledge base around general database related topics.
 - [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
 - [Interesting use cases for SQLITE](https://antonz.org/sqlite-is-not-a-toy-database/)
 - [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)
+- [Joining CSV and JSON data with an in-memory SQLite database](https://simonwillison.net/2021/Jun/19/sqlite-utils-memory/)
 
 ## Data Security, GDPR 
 
