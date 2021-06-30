@@ -33,3 +33,4 @@ Section covering Business, project/programming perspectives
 - [App Maintenance Cost Can Be Three Times Higher than Development Cost](https://www.econnectivity.se/app-maintenance-cost-can-be-three-times-higher-than-development-cost/)
 - [Foundational papers on distributed systems](http://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html)
 - [Dont end week with nothing](https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing)
+- [Awesome Scalability - Collection of Articles around Performance, Scalability etc.](https://github.com/binhnguyennus/awesome-scalability)

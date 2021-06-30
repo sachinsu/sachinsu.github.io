@@ -13,6 +13,8 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Backstage - an open platform for building developer portals](https://backstage.io)
 - [Zoomit - screen zoom and annotation tool for technical presentations that include application demonstrations](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
 - [revealjs - HTML Presentation framework](https://revealjs.com/)
+- [List of Self hosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
+- [A book of Secret knowledge - Collection of Useful tools](https://github.com/trimstray/the-book-of-secret-knowledge)
 
 ## Useful Command line tools
 
@@ -32,6 +34,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [rclone - manage files on cloud storage, Rsync for Cloud](https://rclone.org)
 - [CPU-Z is a freeware system profiling and monitoring application for Microsoft Windows and Android](https://www.cpuid.com/softwares/cpu-z.html)
 - [Fselect - Find files with SQL-like queries](https://github.com/jhspetersson/fselect)
+- [Nginx - Tips for Sys Admins](https://alex.dzyoba.com/blog/nginx-features-for-operators/)
 
 ## Linux related References
 

@@ -7,18 +7,27 @@ tags: [postgresql, real-time, analytics, sql, timescaledb]
 
 ## Introduction 
 
-In a scenario where Application is based on Micro services/Service Oriented Architecture
+In a scenario where Application is distributed in nature and based on Micro services/Service Oriented Architecture and it is expected to be available 24*7, having proper monitoring of Application health in place is very important. What if Monitoring is after thought and Application is already in production  using relational data store with no apetite for adding specialized storage for logs/metrics/traces? 
 
- mainly of HTTP APIs, i
-todo: Brief Requirement 
+Typical pillars of "Observability" are Application Logs, Metrics and traces. With standards like Opentelemetry, some have [suggested](https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/) that traces (distributed ) will be only thing that matters going forward. 
 
+Anyway, for the sake of this post, let us see how we can add Near real time monitoring of APIs using relational data store (PostgreSQL) and open source Visualization tool, Grafana.
 
 ## Approach 
 
-todo: cover brief approach
+The current high level architecture looks like below, 
+
+todo: add diagram
+
+Given that, Organization is already heavily invested in infrastructure for Compute (API Layer etc.), Data storage for OLTP and has no apetite for additional dedicated hardware for Observability, this approach primarily leverages data store already in use, as below, 
+ 
+* [PostgreSQL](https://www.postgresql.org) - Data store for Analytics and Reporting 
+* [TimescaleDB](https://www.timescale.com) - Timescale plugin for PostgreSQL 
+* [Grafana](https://grafana.com/oss/) - Data Visualization.
+* [FluentBit](https://fluentbit.io/) - Processing of Web Server logs & forwarding to database
 
 ## Setup & Installation
-todo:  PostgreSQL , timescaledb, fluentbit, grafana
+todo:  timescaledb, fluentbit, grafana
 
 
 create table apilog
@@ -45,9 +54,6 @@ select  $__time(time), business,
     from apilog 
     where $__timeFilter(time)
     group by time,business
-
-
-
 
 ## steps to dashboard
 

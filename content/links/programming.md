@@ -137,6 +137,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [What is OpenTelemetry?](https://otel.lightstep.com)
 - [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
+- [OpenTelemetry, Distributed Tracing, W3c Trace Context](https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Distributed tracing covering Client (Mobile App) tracing at slack](https://slack.engineering/client-tracing-understanding-mobile-and-desktop-application-performance-at-scale/)
 - [Metrics, tracing, and logging](https://peter.bourgon.org/blog/2017/02/21/metrics-tracing-and-logging.html)
@@ -160,6 +161,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Introduction to FluentBit - Logs n Metrics Processor](https://www.youtube.com/watch?v=3ELc1helke4)
 - [Distributed tracing vs. Logging](https://thenewstack.io/tracing-why-logs-arent-enough-to-debug-your-microservices/)
 - [Identifying disk i/o bottlenecks in Linux](https://haydenjames.io/linux-server-performance-disk-io-slowing-application/)
+- [Signoz - Opentelemetry based Observability platform](https://signoz.io/)
 
 ## Distributed messaging, Streams
 
