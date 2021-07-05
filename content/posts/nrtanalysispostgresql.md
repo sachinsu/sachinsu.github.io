@@ -7,19 +7,21 @@ tags: [postgresql, real-time, analytics, sql, timescaledb]
 
 ## Introduction 
 
-In a scenario where Application is distributed in nature and based on Micro services/Service Oriented Architecture and it is expected to be available 24*7, having proper monitoring of Application health in place is very important. What if Monitoring is after thought and Application is already in production  using relational data store with no apetite for adding specialized storage for logs/metrics/traces? 
+Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being "always on" (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
 
-Typical pillars of "Observability" are Application Logs, Metrics and traces. With standards like Opentelemetry, some have [suggested](https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/) that traces (distributed ) will be only thing that matters going forward. 
+What if Monitoring is after thought and Application is already in production using relational data store with no apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring? 
 
-Anyway, for the sake of this post, let us see how we can add Near real time monitoring of APIs using relational data store (PostgreSQL) and open source Visualization tool, Grafana.
+Monitoring and more generically,  "Observability" has three pillars. They are  Logs, Metrics and traces. Many of the existing applications are producing either (mostly logs or traces) but seldom all. There are on-going developments With standards like Opentelemetry in this field.  Some have [suggested](https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/) that traces (distributed) will be only thing that matters going forward. 
+
+Anyway, for the sake of this post, let us see (one among many) approach to provide Near real time monitoring of APIs using relational data store (PostgreSQL) and open source Visualization tool, Grafana.
 
 ## Approach 
 
-The current high level architecture looks like below, 
+The high level architecture looks like below, 
 
-todo: add diagram
+{{< figure src="/images/apparch.png" title="High Level Architecture" >}}
 
-Given that, Organization is already heavily invested in infrastructure for Compute (API Layer etc.), Data storage for OLTP and has no apetite for additional dedicated hardware for Observability, this approach primarily leverages data store already in use, as below, 
+Given that, Organization is already heavily invested in infrastructure for Compute (API Layer etc.), Data storage for OLTP and has no apetite for additional dedicated hardware for Observability, this approach primarily leverages  below, 
  
 * [PostgreSQL](https://www.postgresql.org) - Data store for Analytics and Reporting 
 * [TimescaleDB](https://www.timescale.com) - Timescale plugin for PostgreSQL 
