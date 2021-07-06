@@ -117,41 +117,12 @@ Refer to [Compiling from Source](https://docs.fluentbit.io/manual/installation/g
 
 ```
 [SERVICE]
-    # Flush
-    # =====
-    # Set an interval of seconds before to flush records to a destination
     Flush        5
-
-    # Daemon
-    # ======
-    # Instruct Fluent Bit to run in foreground or background mode.
     Daemon       Off
-
-    # Log_Level
-    # =========
-    # Set the verbosity level of the service, values can be:
-    #
-    # - error
-    # - warning
-    # - info
-    # - debug
-    # - trace
-    #
-    # By default 'info' is set, that means it includes 'error' and 'warning'.
     Log_Level    debug
-
     Log_File     d:\monitoring\fluentbit.log
-
-    # Parsers_File
-    # ============
-    # Specify an optional 'Parsers' configuration file
     Parsers_File parsers.conf
     Parsers_File generated/parsers_generated.conf
-#    Plugins_File plugins.conf
-
-    # HTTP Server
-    # ===========
-    # Enable/Disable the built-in HTTP Server for metrics
     HTTP_Server  On
     HTTP_Listen  0.0.0.0
     HTTP_Port    2020
@@ -172,7 +143,7 @@ Refer to [Compiling from Source](https://docs.fluentbit.io/manual/installation/g
     User          fluentbit
     Password      fluentbit
     Database      timescalepoc
-    Table         fluentbit
+    Table         iislogs
     Timestamp_Key time
 
 ```
@@ -191,7 +162,9 @@ Configuration for Parser is as below,
 
 ```
 
-This parser basically uses Regular Expression to parse W3C formatted log into key - value with data points of interest.
+This parser basically uses Regular Expression to parse W3C formatted log into key - value pairs with data points of interest. With this, Table  `iislogs` will now contain 
+
+In terms of output, Fluentbit's Postgresql [plugin](https://docs.fluentbit.io/manual/pipeline/outputs/postgresql) provisions the table itself with a structure that stores entire JSON in field as part of row. Either this table can be used as is or use "Before insert" trigger as suggested by Fluentbit's manual to parse the Json and populate separate table. 
 
 
 With data getting added to timescaledb Hyper table,Lets see how it can be visualized.
