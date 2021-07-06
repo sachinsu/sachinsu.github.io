@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://sachinsu.github.io/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/analytics/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/nrtanalysispostgresql/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/postgresql/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/real-time/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/sql/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/time-series/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/timescaledb/</loc>
+    <lastmod>2021-06-30T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/.net/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/asmx/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/c#/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/corewcf/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/http/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/rest/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/soap/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/apiupgrade/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/wcf/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/database/</loc>
+    <lastmod>2021-03-29T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/parquet/</loc>
+    <lastmod>2021-03-29T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/presto/</loc>
+    <lastmod>2021-03-29T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/presto/</loc>
+    <lastmod>2021-03-29T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/trino/</loc>
+    <lastmod>2021-03-29T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/csv/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/data-pipeline/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/dbt/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/elt/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/elt/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/etl/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/go/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/nsetools/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/python/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/api/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/aws/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/azure/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/jeffrey-richter/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/restapiversioning/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/microsoft/</loc>
+    <lastmod>2021-01-20T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/chaosengineering/</loc>
+    <lastmod>2021-01-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/golang/</loc>
+    <lastmod>2021-01-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/resiliencytoxiproxy/</loc>
+    <lastmod>2021-01-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/shopify/</loc>
+    <lastmod>2021-01-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/toxiproxy/</loc>
+    <lastmod>2021-01-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/cadence/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/cassandra/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/microservices/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/mysql/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/temporal.io/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/uber/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/temporalworkflow/</loc>
+    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/.net-core/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/.net-framework/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/opentelemetry/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/observability/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/opentelemetry/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/cmake/</loc>
+    <lastmod>2020-10-27T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/make/</loc>
+    <lastmod>2020-10-27T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/ninja/</loc>
+    <lastmod>2020-10-27T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/ninjabuildsystem/</loc>
+    <lastmod>2020-10-27T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/bash/</loc>
+    <lastmod>2020-10-15T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/curl/</loc>
+    <lastmod>2020-10-15T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/grep/</loc>
+    <lastmod>2020-10-15T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/sed/</loc>
+    <lastmod>2020-10-15T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/urlhealthchecks/</loc>
+    <lastmod>2020-10-15T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/firewall/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/oracle/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/polly/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/tcp/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/connectiontimeouts/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/sqlite/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/massdmgolang/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/twitter/</loc>
+    <lastmod>2020-07-25T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/</loc>
+    <lastmod>2020-06-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/onlearn/</loc>
+    <lastmod>2020-06-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/python/</loc>
+    <lastmod>2020-06-07T14:13:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/websecurity/</loc>
+    <lastmod>2020-06-04T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/webassembly/</loc>
+    <lastmod>2020-06-02T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/webassembly/</loc>
+    <lastmod>2020-06-02T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/usinggithubactions/</loc>
+    <lastmod>2020-05-28T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/aiml/</loc>
+    <lastmod>2020-05-26T14:13:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/cloud/</loc>
+    <lastmod>2020-05-26T14:13:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/uiux/</loc>
+    <lastmod>2020-05-08T15:07:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/windowsservicecancellabletask/</loc>
+    <lastmod>2020-05-05T12:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/usingbenchmarkdotnet/</loc>
+    <lastmod>2020-05-05T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/samesitecookies/</loc>
+    <lastmod>2020-04-09T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/perspectives/</loc>
+    <lastmod>2020-02-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/tools/</loc>
+    <lastmod>2020-02-18T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/tags/channels/</loc>
+    <lastmod>2020-02-12T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/channelsforproducerconsumer/</loc>
+    <lastmod>2020-02-12T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/oracle/</loc>
+    <lastmod>2020-02-07T15:09:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/postgresql/</loc>
+    <lastmod>2020-02-07T15:08:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/nosql/</loc>
+    <lastmod>2020-02-07T15:08:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/mysql/</loc>
+    <lastmod>2020-02-07T15:07:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/databases/</loc>
+    <lastmod>2020-02-07T15:02:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/projects/</loc>
+    <lastmod>2020-02-07T14:29:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/about/</loc>
+    <lastmod>2020-02-07T14:28:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/dotnet/</loc>
+    <lastmod>2020-02-07T14:14:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/go/</loc>
+    <lastmod>2020-02-07T14:13:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/testing/</loc>
+    <lastmod>2020-02-07T14:05:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/planguages/</loc>
+    <lastmod>2020-02-07T13:38:46+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/programming/</loc>
+    <lastmod>2020-02-07T12:33:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/links/home/</loc>
+    <lastmod>2020-02-07T11:38:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/posts/dotnetstandard/</loc>
+    <lastmod>2020-02-07T10:25:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sachinsu.github.io/categories/</loc>
+  </url>
+  
+</urlset>

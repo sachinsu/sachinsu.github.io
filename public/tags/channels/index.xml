@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>channels on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/channels/</link>
+    <description>Recent content in channels on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Feb 2020 10:25:04 +0530</lastBuildDate>
+    
+	<atom:link href="https://sachinsu.github.io/tags/channels/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Channels for High performance Producer consumer implementation</title>
+      <link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link>
+      <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid>
+      <description>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp;amp; external application(s).</description>
+    </item>
+    
+  </channel>
+</rss>
