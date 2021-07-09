@@ -49,6 +49,7 @@ Platform where i have spent most time till now.
 - [Take Advantage of ASP.NET Built-in Features to Fend Off Web Attacks](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972969(v=msdn.10)?redirectedfrom=MSDN)
 
 ## Windows Forms 
+
 - [Task.run vs. BackgroundWorker](https://blog.stephencleary.com/2013/09/taskrun-vs-backgroundworker-conclusion.html)
 
 ## Tools, Libraries
@@ -56,9 +57,9 @@ Platform where i have spent most time till now.
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
 - [Flurl](https://flurl.dev/)
 - [Distributed transaction solution in micro-service base on eventually consistency, also an eventbus with Outbox pattern](http://cap.dotnetcore.xyz/)
-- [simple Swiss Army knife for http/https troubleshooting and profiling](https://github.com/trimstray/htrace.sh)
-- [vegeta - HTTP load testing tool and library.](https://github.com/tsenart/vegeta)
-- [plow - A high-performance HTTP benchmarking tool with real-time web UI](https://github.com/six-ddc/plow)
+- [Simple Swiss Army knife for http/https troubleshooting and profiling](https://github.com/trimstray/htrace.sh)
+- [Vegeta - HTTP load testing tool and library.](https://github.com/tsenart/vegeta)
+- [Plow - A high-performance HTTP benchmarking tool with real-time web UI](https://github.com/six-ddc/plow)
 - [Hey - HTTP load generator, ApacheBench (ab) replacement](https://github.com/rakyll/hey)
 - [Collection of HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful) ](https://github.com/denji/awesome-http-benchmark)
 - [Light weight cross-platform test automation](https://gauge.org)
@@ -68,7 +69,7 @@ Platform where i have spent most time till now.
 - [General Checklist for Projects](https://github.com/StephenCleary/Docs/blob/master/libraries/README.md)
 - [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
-
+- [bflat - No-frills, standalone compiler for .net](https://github.com/MichalStrehovsky/bflat)
 
 ## .NET Core
 
