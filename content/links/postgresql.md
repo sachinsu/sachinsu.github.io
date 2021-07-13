@@ -60,6 +60,7 @@ draft: false
 - [Working with Postgres @ Zerodha](https://zerodha.tech/blog/working-with-postgresql/)
 - [Using PostgreSQL for Data warehouse](https://www.narrator.ai/blog/using-postgresql-as-a-data-warehouse/)
 - [Testing PG High availability with Patroni](https://www.percona.com/blog/2021/06/11/postgresql-ha-with-patroni-your-turn-to-test-failure-scenarios/)
+- [Comparison of PostgreSQL Monitoring tools](https://sematext.com/blog/postgresql-monitoring/)
 
 ## Interesting Extensions/Products
 
