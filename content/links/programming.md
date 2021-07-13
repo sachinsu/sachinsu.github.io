@@ -140,6 +140,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [What is OpenTelemetry?](https://otel.lightstep.com)
+- [Course on using Opentelemetry](https://www.youtube.com/watch?v=r8UvWSX3KA8)
 - [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
 - [OpenTelemetry, Distributed Tracing, W3c Trace Context](https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
