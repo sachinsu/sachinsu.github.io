@@ -55,6 +55,7 @@ Platform where i have spent most time till now.
 ## Tools, Libraries
 
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
+- [AsyncAwaitBestPractices](https://github.com/brminnick/AsyncAwaitBestPractices)
 - [Flurl](https://flurl.dev/)
 - [Distributed transaction solution in micro-service base on eventually consistency, also an eventbus with Outbox pattern](http://cap.dotnetcore.xyz/)
 - [Simple Swiss Army knife for http/https troubleshooting and profiling](https://github.com/trimstray/htrace.sh)
