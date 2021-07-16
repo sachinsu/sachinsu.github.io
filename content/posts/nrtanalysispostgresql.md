@@ -13,8 +13,6 @@ What if Monitoring is an afterthought (i.e. application is already in production
 
 Is it even possible to have near real time Monitoring of Application's behaviour using already-in-use technologies (like PostgreSQL) ?
 
-In this post, Let us have walk through of (one among many) approach to provide Near real time monitoring of APIs using PostgreSQL and open source Visualization tool, Grafana.
-
 Monitoring and more generically,  "Observability" has three pillars. They are  **Logs**, **Metrics** and **traces**. Many of the existing applications are producing either (mostly logs or traces) but seldom all. Hence, it is necessary to use existing logs/traces as basis for Metrics generation.
 
 There are on-going developments With standards like Opentelemetry in this field.  Some have even suggested ( [here](https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/) & [here](https://go.lightstep.com/register-tracing-will-replace-most-logging-webinar.html)) that traces (distributed) will eventually replace logging. 
