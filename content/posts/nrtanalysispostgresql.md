@@ -24,7 +24,7 @@ There are on-going developments With standards like Opentelemetry in this field.
 
 The high level architecture looks like below, 
 
-{{< figure src="/images/apparch.png" title="High Level Architecture" >}}
+{{< figure src="/images/nrt_architecture.png" title="High Level Architecture" >}}
 
 Considering as-is state of Application Architecture and given the constraints (mentioned earlier), this post covers approach that is based upon, 
  
