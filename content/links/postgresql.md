@@ -30,6 +30,7 @@ draft: false
 - [PostgreSQL - Using SQL for Data Analysis](https://hakibenita.com/sql-for-data-analysis)
 - [Approach to Bulk Import in PostGreSQL](https://www.cybertec-postgresql.com/en/postgresql-bulk-loading-huge-amounts-of-data/)
 - [Schema updates with zero downtime in PostgreSQL](https://fabianlindfors.se/blog/schema-migrations-in-postgres/)
+- [Ways to easily generate JSON in PostgreSQL](https://blog.crunchydata.com/blog/generating-json-directly-from-postgres)
 
 ## Performance tuning, configuration etc.
 

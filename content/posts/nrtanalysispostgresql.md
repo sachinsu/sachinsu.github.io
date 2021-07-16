@@ -1,8 +1,8 @@
 ---
 title: "Near real time Application Monitoring with Grafana and PostgreSQL"
-date: 2021-07-06T10:25:04+05:30
-draft: true
-tags: [postgresql, real-time, analytics, sql,time series, timescaledb]
+date: 2021-07-15T10:25:04+05:30
+draft: false
+tags: [postgresql, real-time, analytics, sql,time series, timescaledb,grafana]
 ---
 
 ## Introduction 
