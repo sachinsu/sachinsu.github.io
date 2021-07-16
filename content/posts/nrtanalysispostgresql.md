@@ -1,5 +1,5 @@
 ---
-title: "Near real time Application Monitoring with Grafana and PostgreSQL"
+title: "Near real time API Monitoring with Grafana and PostgreSQL"
 date: 2021-07-15T10:25:04+05:30
 draft: false
 tags: [postgresql, real-time, analytics, sql,time series, timescaledb,grafana]
@@ -9,13 +9,16 @@ tags: [postgresql, real-time, analytics, sql,time series, timescaledb,grafana]
 
 Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being "always on" (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
 
-What if Monitoring is after thought and Application is already in production using relational data store with no apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring? 
+What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring? 
+
+Is it even possible to have near real time Monitoring of Application's behaviour using already-in-use technologies (like PostgreSQL) ?
+
+In this post, Let us have walk through of (one among many) approach to provide Near real time monitoring of APIs using PostgreSQL and open source Visualization tool, Grafana.
 
 Monitoring and more generically,  "Observability" has three pillars. They are  **Logs**, **Metrics** and **traces**. Many of the existing applications are producing either (mostly logs or traces) but seldom all. Hence, it is necessary to use existing logs/traces as basis for Metrics generation.
 
 There are on-going developments With standards like Opentelemetry in this field.  Some have even suggested ( [here](https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/) & [here](https://go.lightstep.com/register-tracing-will-replace-most-logging-webinar.html)) that traces (distributed) will eventually replace logging. 
 
-Anyway, for the sake of this post, let us see (one among many) approach to provide Near real time monitoring of APIs using relational data store (PostgreSQL) and open source Visualization tool, Grafana.
 
 ## Approach 
 
