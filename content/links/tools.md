@@ -34,6 +34,8 @@ Section covering useful tools for every day activities, Online learning etc.
 - [rclone - manage files on cloud storage, Rsync for Cloud](https://rclone.org)
 - [CPU-Z is a freeware system profiling and monitoring application for Microsoft Windows and Android](https://www.cpuid.com/softwares/cpu-z.html)
 - [Fselect - Find files with SQL-like queries](https://github.com/jhspetersson/fselect)
+- [HTTPie - Command line HTTP Client](https://httpie.io/)
+- [Visidata - A terminal spreadsheet multitool for discovering and arranging data](https://github.com/saulpw/visidata)
 - [Nginx - Tips for Sys Admins](https://alex.dzyoba.com/blog/nginx-features-for-operators/)
 
 ## Linux related References
