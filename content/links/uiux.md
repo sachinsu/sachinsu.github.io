@@ -25,6 +25,7 @@ draft: false
 - [How HTTP Range Requests work (for large file downloads etc.)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests)
 - [Beginner's guide to Next.js](https://welearncode.com/beginners-guide-nextjs/)
 - [Data Model behind Notion's flexibility](https://www.notion.so/blog/data-model-behind-notion)
+- [How TCP Communication works between Client & Server](https://sirupsen.com/napkin/problem-15/)
 
 ## Testing
 
