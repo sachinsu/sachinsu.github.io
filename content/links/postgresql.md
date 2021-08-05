@@ -21,6 +21,7 @@ draft: false
 - [Adyen's Use of PostgreSQL](https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database)
 - [PostgreSQL version Upgrade @ Gitlab](https://about.gitlab.com/blog/2020/09/11/gitlab-pg-upgrade/)
 - [Zombodb - PostgreSQL and ElasticSearch work together](https://www.zombodb.com/)
+- [Using pg_timetable for job scheduling](https://www.cybertec-postgresql.com/en/products/pg_timetable/)
 - [Using pg_cron to schedule background tasks](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/evolving-pg-cron-together-postgres-13-audit-log-background/ba-p/1829588)
 - [Using pg_cron to roll up for Analytics](https://www.citusdata.com/blog/2017/12/27/real-time-analytics-dashboards-with-citus/)
 - [PG Database Configuration Helper](https://postgresqlco.nf/)
