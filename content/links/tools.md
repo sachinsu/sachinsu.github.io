@@ -48,3 +48,8 @@ Section covering useful tools for every day activities, Online learning etc.
 
 - [10 Best Lightweight Operating System for old Laptop](https://lotoftech.com/10-best-lightweight-operating-system-for-old-computers/)
 - [How and why I stopped buying new laptops](https://solar.lowtechmagazine.com/2020/12/how-and-why-i-stopped-buying-new-laptops.html)
+
+
+## Useful spreadhsheet formulas 
+
+- [Formulas for Personal finance](https://bou.ke/blog/formulas/)
