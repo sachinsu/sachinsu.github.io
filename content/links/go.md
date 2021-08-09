@@ -68,6 +68,7 @@ My current Favourite Language
 - [Go-Micro - Web and RPC Framework for Microservices in Go](https://go-micro.dev/)
 - [Approach on project Structure in Go](https://github.com/benbjohnson/wtf)
 - [Zero Allocation JSON logger](https://github.com/rs/zerolog)
+- [Use Makefile with Go](https://earthly.dev/blog/golang-makefile/)
 
 ### Task queues
 

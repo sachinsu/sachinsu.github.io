@@ -38,6 +38,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Visidata - A terminal spreadsheet multitool for discovering and arranging data](https://github.com/saulpw/visidata)
 - [Nginx - Tips for Sys Admins](https://alex.dzyoba.com/blog/nginx-features-for-operators/)
 
+
 ## Linux related References
 
 - [Understand grep, awk and sed](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
