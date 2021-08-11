@@ -47,6 +47,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
 - [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
+- [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
 
 ## Training
 
