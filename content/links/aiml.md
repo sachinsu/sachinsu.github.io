@@ -24,7 +24,6 @@ Useful links related from AI, ML space
 - [Team Data science process (Microsoft)](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview)
 - [Traits of Good Data Scientist](https://ianwhitestone.work/good-ds-bad-ds/)
 
-
 ## Videos
 
 - [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
