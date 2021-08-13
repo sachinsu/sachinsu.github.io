@@ -54,6 +54,7 @@ Platform where i have spent most time till now.
 
 ## Tools, Libraries
 
+- [RestSharp - REST HTTP Client](https://github.com/restsharp/RestSharp)
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
 - [AsyncAwaitBestPractices](https://github.com/brminnick/AsyncAwaitBestPractices)
 - [Flurl](https://flurl.dev/)
@@ -87,6 +88,7 @@ Platform where i have spent most time till now.
 - [Sample of Micro services in .NET Core](https://github.com/madslundt/NetCoreMicroservicesSample)
 - [WCF on .NET Core](https://corewcf.github.io/blog/2021/02/19/corewcf-ga-release)
 - [ASP.NET Web API Versioning](https://github.com/microsoft/aspnet-api-versioning)
+- [Samples of ASP.NET Core you can use](https://github.com/dodyg/practical-aspnetcore)
 
 ## Security
 

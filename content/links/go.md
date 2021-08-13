@@ -101,6 +101,7 @@ My current Favourite Language
 ### Code snippets
 
 - [Remote service with Retries](https://play.golang.org/p/3mNhCTl01bX)
+- [Curated list of design patterns implemented in Go](https://github.com/tmrts/go-patterns)
 
 ### Podcasts
 
