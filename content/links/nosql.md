@@ -43,3 +43,4 @@ draft: false
 - [Deep Dive into Querying Elasticsearch. Filter vs Query. Full-text search](https://towardsdatascience.com/deep-dive-into-querying-elasticsearch-filter-vs-query-full-text-search-b861b06bd4c0)
 - [Engine for Low-latency Computation over large data sets](https://github.com/vespa-engine/vespa)
 - [Open source Full text Search Engine](https://www.meilisearch.com/)
+- [Sonic -  Fast, lightweight & schema-less search backend](https://github.com/valeriansaliou/sonic)
