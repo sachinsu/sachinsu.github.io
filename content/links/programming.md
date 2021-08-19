@@ -170,6 +170,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Distributed tracing vs. Logging](https://thenewstack.io/tracing-why-logs-arent-enough-to-debug-your-microservices/)
 - [Identifying disk i/o bottlenecks in Linux](https://haydenjames.io/linux-server-performance-disk-io-slowing-application/)
 - [Signoz - Opentelemetry based Observability platform](https://signoz.io/)
+- [What is eBPF & its application in Observability](https://speakerdeck.com/rakyll/ebpf-in-microservices-observability-399bb4af-40c0-4609-966e-bc521ed6ee18)
 
 ## Distributed messaging, Streams
 
