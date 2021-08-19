@@ -109,7 +109,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 <p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&mldr;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,</p>
 <ul>
 <li>
-<p>Browser&rsquo;s <a href=https://developers.google.com/web/tools/chrome-devtools>Dev tools</a> showed HTTP 400</p>
+<p>Browser&rsquo;s <a href=https://developers.google.com/web/tools/chrome-devtools target=_blank rel="noopener noreferrer">Dev tools</a> showed HTTP 400</p>
 </li>
 <li>
 <p>There were no entries in Application&rsquo;s Log File which indicates that Request was rejected either by IIS or ASP.NET Core&rsquo;s chain of filters i.e. even before it reaches handler.</p>
@@ -121,7 +121,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 <p>Next up is to carefully look at Request sent by browser in &lsquo;Network&rsquo; tab of Dev tools. It showed that none of the cookies required by Application (i.e. for Session, CSRF token etc.) were present.</p>
 </li>
 </ul>
-<p>Enter <a href="https://docs.microsoft.com/en-us/aspnet/core/security/samesite?view=aspnetcore-3.1">SameSite</a></p>
+<p>Enter <a href="https://docs.microsoft.com/en-us/aspnet/core/security/samesite?view=aspnetcore-3.1" target=_blank rel="noopener noreferrer">SameSite</a></p>
 <h4 id=samesite>SameSite</h4>
 <p>SameSite is a standard designed to provide some protection against cross-site request forgery (CSRF) attacks. Support for Samesite was added from .NET Core 2.2 and onwards. It is expected that developer will control the value of SameSite attribute using <code>HttpCookie.SameSite</code> property.Setting the SameSite property to Strict, Lax, or None results in those values being written on the network with the cookie.</p>
 <ul>
@@ -148,9 +148,9 @@ services.AddAntiforgery(options =&gt;
 });
 </code></pre><h5 id=references>References</h5>
 <ul>
-<li><a href=https://techcommunity.microsoft.com/t5/iis-support-blog/samesite-cookie-updates-in-asp-net-or-how-the-net-framework-from/ba-p/1156246>SameSite cookie updates in ASP.net, or how the .Net Framework from December changed my cookie usage. </a></li>
-<li><a href=https://techcommunity.microsoft.com/t5/iis-support-blog/changes-in-samesite-cookie-in-asp-net-core-and-how-it-impacts/ba-p/1150771>Changes in SameSite Cookie in ASP.NET/Core and How it Impacts the Browser (Specifically Chrome) </a></li>
-<li><a href=https://http203.libsyn.com/fish-scripts-special>HTTP 203 Podcast covering CORS,CORB, Samesite</a></li>
+<li><a href=https://techcommunity.microsoft.com/t5/iis-support-blog/samesite-cookie-updates-in-asp-net-or-how-the-net-framework-from/ba-p/1156246 target=_blank rel="noopener noreferrer">SameSite cookie updates in ASP.net, or how the .Net Framework from December changed my cookie usage. </a></li>
+<li><a href=https://techcommunity.microsoft.com/t5/iis-support-blog/changes-in-samesite-cookie-in-asp-net-core-and-how-it-impacts/ba-p/1150771 target=_blank rel="noopener noreferrer">Changes in SameSite Cookie in ASP.NET/Core and How it Impacts the Browser (Specifically Chrome) </a></li>
+<li><a href=https://http203.libsyn.com/fish-scripts-special target=_blank rel="noopener noreferrer">HTTP 203 Podcast covering CORS,CORB, Samesite</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

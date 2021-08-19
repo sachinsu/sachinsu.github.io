@@ -107,8 +107,8 @@
 <li>Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.</li>
 </ul>
 <p>Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</p>
-<p>I had been following how Uber fulfils these requirements using their <a href=https://cadenceworkflow.io/>Cadence</a> platform. Cadence (now <a href=https://temporal.io>Temporal</a>) is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
-<p>Temporal defines <a href=https://softwareengineeringdaily.com/wp-content/uploads/2020/04/SED1043-Cadence-Workflow-Orchestration.pdf>workflow</a> as any program which,</p>
+<p>I had been following how Uber fulfils these requirements using their <a href=https://cadenceworkflow.io/ target=_blank rel="noopener noreferrer">Cadence</a> platform. Cadence (now <a href=https://temporal.io target=_blank rel="noopener noreferrer">Temporal</a>) is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.</p>
+<p>Temporal defines <a href=https://softwareengineeringdaily.com/wp-content/uploads/2020/04/SED1043-Cadence-Workflow-Orchestration.pdf target=_blank rel="noopener noreferrer">workflow</a> as any program which,</p>
 <ul>
 <li>goes beyond single request-reply</li>
 <li>has multiple steps tied together with inherent state</li>
@@ -117,7 +117,7 @@
 <li>involves infrastructure automation</li>
 </ul>
 <p>This is interesting perspective that accommodates various use cases irrespective of architecture style (i.e. Monolith, Microservices) in use. In Temporal, one has to create workflow which in turn consists of one or more activities. Activities are functions containing actions to be taken on each step of the workflow. Temporal transparently preserves all the state associated with workflow and its activities.</p>
-<p>Below is System architecture of Temporal, more details <a href=https://docs.temporal.io/docs/system-architecture/>here</a>,</p>
+<p>Below is System architecture of Temporal, more details <a href=https://docs.temporal.io/docs/system-architecture/ target=_blank rel="noopener noreferrer">here</a>,</p>
 <pre><code><figure><img src=https://docs.temporal.io/assets/images/system-architecture-d064cede0c97fc4a86defdc1c9fd020c.png><figcaption>
             <h4>Temporal Architecture</h4>
         </figcaption>
@@ -136,7 +136,7 @@
 <li>Frontend for tracking and diagnostics</li>
 <li>Monitoring using Prometheus or other backends.</li>
 </ul>
-<p>It is very easy to get basic &ldquo;Helloworld&rdquo; workflow up and running using detailed instructions on setup provided <a href=https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites>here</a> provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.</p>
+<p>It is very easy to get basic &ldquo;Helloworld&rdquo; workflow up and running using detailed instructions on setup provided <a href=https://docs.temporal.io/docs/go-sdk-tutorial-prerequisites target=_blank rel="noopener noreferrer">here</a> provided docker desktop or such environment is easily available. Temporal documentation does a great job on this.</p>
 <p>To evaluate Temporal further, we will orchestrate below,</p>
 <ul>
 <li>List of users are imported/received (say from a file or provided as input)</li>
@@ -320,11 +320,11 @@
 </ul>
 </li>
 </ul>
-<p>Full source code is available <a href=https://github.com/sachinsu/temporalevaluation>here</a></p>
+<p>Full source code is available <a href=https://github.com/sachinsu/temporalevaluation target=_blank rel="noopener noreferrer">here</a></p>
 <p>Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.</p>
-<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href=https://uber.com>Uber</a> and host of other companies. Temporal <a href=community.temporal.io>Community</a> is a very active one with founders actively participating in discussions.</p>
+<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href=https://uber.com target=_blank rel="noopener noreferrer">Uber</a> and host of other companies. Temporal <a href=community.temporal.io>Community</a> is a very active one with founders actively participating in discussions.</p>
 <ul>
-<li><a href=https://github.com/firdaus/awesome-cadence-temporal-workflow>Collection of Temporal related stuff</a></li>
+<li><a href=https://github.com/firdaus/awesome-cadence-temporal-workflow target=_blank rel="noopener noreferrer">Collection of Temporal related stuff</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

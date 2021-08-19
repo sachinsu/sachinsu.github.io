@@ -103,7 +103,7 @@ Being on Windows, i have been looking for alternative build tool that is easy to
 <h2 id=background>Background</h2>
 <p>I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.</p>
 <p>Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</p>
-<p>Following a wonderful post by Julia Evans (read <a href=https://jvns.ca/blog/2020/10/26/ninja--a-simple-way-to-do-builds/>here</a>) on <a href=https://ninja-build.org>Ninja</a>. I decided to give it a try for a Golang Application.</p>
+<p>Following a wonderful post by Julia Evans (read <a href=https://jvns.ca/blog/2020/10/26/ninja--a-simple-way-to-do-builds/ target=_blank rel="noopener noreferrer">here</a>) on <a href=https://ninja-build.org target=_blank rel="noopener noreferrer">Ninja</a>. I decided to give it a try for a Golang Application.</p>
 <p>Julia, in her post, has covered important aspects of Ninja but to summarize, Ninja is,</p>
 <ul>
 <li>A build automation tool</li>
@@ -130,7 +130,7 @@ Being on Windows, i have been looking for alternative build tool that is easy to
         }
 </code></pre></div><ul>
 <li>
-<p>Now setup Ninja, It is as easy as downloading binary for your Platform. It is also possible to build it locally, if you prefer it that way. For details, refer <a href=https://ninja-build.org/>here</a></p>
+<p>Now setup Ninja, It is as easy as downloading binary for your Platform. It is also possible to build it locally, if you prefer it that way. For details, refer <a href=https://ninja-build.org/ target=_blank rel="noopener noreferrer">here</a></p>
 </li>
 <li>
 <p>Once ninja is setup, lets create build configuration file (i.e. build.ninja),</p>

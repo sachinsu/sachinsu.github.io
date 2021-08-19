@@ -115,7 +115,7 @@ This means that upgrade must be done keeping in mind,">
 <li>No changes to URLs</li>
 <li>Testing to ensure no impact</li>
 </ul>
-<p>Initial plan was to move away from SOAP to adopt REST based approach. This thinking was aided by fact that .NET core may not support WCF (framework that supports SOAP apart from ASMX Web Services) in addition to other aspects like simplicity and wide adoption of REST. However, even microsoft has now decided to support WCF in .NET Core via <a href=https://github.com/CoreWCF/CoreWCF>CoreWCF</a>.</p>
+<p>Initial plan was to move away from SOAP to adopt REST based approach. This thinking was aided by fact that .NET core may not support WCF (framework that supports SOAP apart from ASMX Web Services) in addition to other aspects like simplicity and wide adoption of REST. However, even microsoft has now decided to support WCF in .NET Core via <a href=https://github.com/CoreWCF/CoreWCF target=_blank rel="noopener noreferrer">CoreWCF</a>.</p>
 <p>With this constraints, below alternatives were considered to upgrade ASMX based services to WCF (the only other framework that supports SOAP based services),</p>
 <table>
 <thead>
@@ -307,7 +307,7 @@ This means that upgrade must be done keeping in mind,">
         }
     }
 </code></pre><p>Above function, injects <code>http</code> in path based on <code>Content-type</code> of incoming request and then re-writes it.</p>
-<p>Ideally, i would have liked to do it via <a href=https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module>URL Rewrite</a> module in web.config. However, i faced issues while setting up the rule that uses <code>Content-type</code> header.</p>
+<p>Ideally, i would have liked to do it via <a href=https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module target=_blank rel="noopener noreferrer">URL Rewrite</a> module in web.config. However, i faced issues while setting up the rule that uses <code>Content-type</code> header.</p>
 </li>
 </ul>
 </li>
@@ -325,7 +325,7 @@ This means that upgrade must be done keeping in mind,">
           };
       }
 
-</code></pre><p>Overall, WCF does not have great support for handling <code>FORM POST</code> requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed <a href=https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project>here</a>, check it out. Additionally, it takes changes to <code>BeginRequest</code> in <code>global.asax</code> to re-write incoming request so that Web API controller can process it, like below,</p>
+</code></pre><p>Overall, WCF does not have great support for handling <code>FORM POST</code> requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed <a href=https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project target=_blank rel="noopener noreferrer">here</a>, check it out. Additionally, it takes changes to <code>BeginRequest</code> in <code>global.asax</code> to re-write incoming request so that Web API controller can process it, like below,</p>
 <pre><code> protected void Application_BeginRequest(object sender, EventArgs e)
       {
 
@@ -341,16 +341,16 @@ This means that upgrade must be done keeping in mind,">
       }
 
 </code></pre><ul>
-<li>ASMX and SOAP 1.1 - It was noticed that though ASMX supports SOAP 1.1, it doesn&rsquo;t enforces it when it comes to &ldquo;SOAPAction&rdquo; Header. As per the SOAP 1.1 specification, &ldquo;SOAPAction&rdquo; Http Header is mandatory and is used to determine<code>Webmethod</code> to be invoked. Since WCF is compliant with SOAP 1.1 specification, it required additional step to infer Webmethod by means of parsing the body. Luckily, Microsoft has sample for <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/dispatch-by-body-element>Dispatch by Body Element</a> and same can be readily used.</li>
+<li>ASMX and SOAP 1.1 - It was noticed that though ASMX supports SOAP 1.1, it doesn&rsquo;t enforces it when it comes to &ldquo;SOAPAction&rdquo; Header. As per the SOAP 1.1 specification, &ldquo;SOAPAction&rdquo; Http Header is mandatory and is used to determine<code>Webmethod</code> to be invoked. Since WCF is compliant with SOAP 1.1 specification, it required additional step to infer Webmethod by means of parsing the body. Luckily, Microsoft has sample for <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/dispatch-by-body-element target=_blank rel="noopener noreferrer">Dispatch by Body Element</a> and same can be readily used.</li>
 </ul>
-<p>Overall, <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/>WCF Samples</a> is fantastic set of samples that covers wide variety of such scenarios. Do Check it out.</p>
+<p>Overall, <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/ target=_blank rel="noopener noreferrer">WCF Samples</a> is fantastic set of samples that covers wide variety of such scenarios. Do Check it out.</p>
 <h3 id=useful-references>Useful References</h3>
 <ul>
-<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development>Comparing ASMX web services to WCF</a></li>
-<li><a href=https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/>APM Pattern using Tasks</a></li>
-<li><a href=https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html>Async in WCF</a></li>
-<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development>Comparing ASMX with WCF</a></li>
-<li><a href=https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion>Discussion on ASMX to WCF</a></li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development target=_blank rel="noopener noreferrer">Comparing ASMX web services to WCF</a></li>
+<li><a href=https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/ target=_blank rel="noopener noreferrer">APM Pattern using Tasks</a></li>
+<li><a href=https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html target=_blank rel="noopener noreferrer">Async in WCF</a></li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development target=_blank rel="noopener noreferrer">Comparing ASMX with WCF</a></li>
+<li><a href=https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion target=_blank rel="noopener noreferrer">Discussion on ASMX to WCF</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

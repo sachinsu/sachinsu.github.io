@@ -118,7 +118,7 @@ What if Monitoring is an afterthought (i.e. application is already in production
 <p>What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?</p>
 <p>Is it even possible to have near real time Monitoring of Application&rsquo;s behaviour using already-in-use technologies (like PostgreSQL) ?</p>
 <p>Monitoring and more generically, &ldquo;Observability&rdquo; has three pillars. They are <strong>Logs</strong>, <strong>Metrics</strong> and <strong>traces</strong>. Many of the existing applications are producing either (mostly logs or traces) but seldom all. Hence, it is necessary to use existing logs/traces as basis for Metrics generation.</p>
-<p>There are on-going developments With standards like Opentelemetry in this field. Some have even suggested ( <a href=https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/>here</a> & <a href=https://go.lightstep.com/register-tracing-will-replace-most-logging-webinar.html>here</a>) that traces (distributed) will eventually replace logging.</p>
+<p>There are on-going developments With standards like Opentelemetry in this field. Some have even suggested ( <a href=https://logz.io/blog/opentracing-opencensus-opentelemetry-what-is-distributed-tracing/ target=_blank rel="noopener noreferrer">here</a> & <a href=https://go.lightstep.com/register-tracing-will-replace-most-logging-webinar.html target=_blank rel="noopener noreferrer">here</a>) that traces (distributed) will eventually replace logging.</p>
 <h2 id=approach>Approach</h2>
 <p>The high level architecture looks like below,</p>
 <figure><img src=/images/nrt_architecture.png><figcaption>
@@ -127,22 +127,22 @@ What if Monitoring is an afterthought (i.e. application is already in production
 </figure>
 <p>Considering as-is state of Application Architecture and given the constraints (mentioned earlier), this post covers approach that is based upon,</p>
 <ul>
-<li><a href=https://www.postgresql.org>PostgreSQL</a> - Data store for Analytics and Reporting</li>
-<li><a href=https://www.timescale.com>TimescaleDB</a> - Timescale plugin for PostgreSQL</li>
-<li><a href=https://fluentbit.io/>FluentBit</a> - Processing of Web Server logs & forwarding to database</li>
-<li><a href=https://grafana.com/oss/>Grafana</a> - Data Visualization and Monitoring platform.</li>
+<li><a href=https://www.postgresql.org target=_blank rel="noopener noreferrer">PostgreSQL</a> - Data store for Analytics and Reporting</li>
+<li><a href=https://www.timescale.com target=_blank rel="noopener noreferrer">TimescaleDB</a> - Timescale plugin for PostgreSQL</li>
+<li><a href=https://fluentbit.io/ target=_blank rel="noopener noreferrer">FluentBit</a> - Processing of Web Server logs & forwarding to database</li>
+<li><a href=https://grafana.com/oss/ target=_blank rel="noopener noreferrer">Grafana</a> - Data Visualization and Monitoring platform.</li>
 </ul>
 <p>Lets see how to get this done step by step.</p>
 <h2 id=data-collection-and-storage>Data Collection and Storage</h2>
 <h3 id=timescaledb>TimescaleDB</h3>
-<p><a href=https://www.timescale.com>Timescale</a> is a Postgresql Plugin for time-series data management.</p>
+<p><a href=https://www.timescale.com target=_blank rel="noopener noreferrer">Timescale</a> is a Postgresql Plugin for time-series data management.</p>
 <p><em>Rationale</em></p>
 <ul>
 <li>The reports and dashboards expected for near real time API monitoring are time intensive in nature.</li>
-<li>TimescaleDB is optimized for such <a href=http://softwareengineeringdaily.com/wp-content/uploads/2021/06/SED1289-Mike-Freedman.pdf>time intensive reporting</a> and suits well for this use case as it is a plugin over PostgreSQL, which is already being used for analytics/reporting.</li>
+<li>TimescaleDB is optimized for such <a href=http://softwareengineeringdaily.com/wp-content/uploads/2021/06/SED1289-Mike-Freedman.pdf target=_blank rel="noopener noreferrer">time intensive reporting</a> and suits well for this use case as it is a plugin over PostgreSQL, which is already being used for analytics/reporting.</li>
 </ul>
-<p>Installation of plugin is straightforward. Step by Step <a href=https://docs.timescale.com/timescaledb/latest/how-to-guides/install-timescaledb/self-hosted/rhel-centos/installation-yum/#yum-installation>tutorial</a> is very helpful.</p>
-<p>Next step is to create a database for the data to be used for Monitoring. <a href=https://docs.timescale.com/timescaledb/latest/overview/core-concepts/hypertables-and-chunks/>Hyper table(s)</a> in this database will contain Metrics data, collected from Application and web server (IIS).</p>
+<p>Installation of plugin is straightforward. Step by Step <a href=https://docs.timescale.com/timescaledb/latest/how-to-guides/install-timescaledb/self-hosted/rhel-centos/installation-yum/#yum-installation target=_blank rel="noopener noreferrer">tutorial</a> is very helpful.</p>
+<p>Next step is to create a database for the data to be used for Monitoring. <a href=https://docs.timescale.com/timescaledb/latest/overview/core-concepts/hypertables-and-chunks/ target=_blank rel="noopener noreferrer">Hyper table(s)</a> in this database will contain Metrics data, collected from Application and web server (IIS).</p>
 <p>One of the required dashboard/report was to monitor API request(s) in terms of success & failure (%), Response times (in buckets like 1-5 secs,5-10 secs and so on).</p>
 <p>For each API request, application collects specific details and persists it in database. Currently below attributes are stored in database as part of each log entry,</p>
 <table>
@@ -184,7 +184,7 @@ create table apilog
  outcome  text not null,
  timeout  timestamptz );
 
-</code></pre><p>After creating the table, it will have to be converted into <a href=https://docs.timescale.com/timescaledb/latest/how-to-guides/hypertables/><strong>Hypertable</strong></a> by using command,</p>
+</code></pre><p>After creating the table, it will have to be converted into <a href=https://docs.timescale.com/timescaledb/latest/how-to-guides/hypertables/ target=_blank rel="noopener noreferrer">Hypertable</a> by using command,</p>
 <p><code>SELECT create_hypertable('apilog', 'time');</code></p>
 <p>Note: Timescale transparently manages storage for hyper table and PostgreSQL Developer can continue to use standard SQL/plpgsql with it.</p>
 <p>For the sake of quick testing, One can add dummy data to this table using below SQL,</p>
@@ -193,11 +193,11 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
                                   else 'it' end),(case when x = 1 then 'getPrices' 
                                   else 'getUptime' end),  (case when x &lt; 2 then 'success' else 'failure' end),   (current_timestamp - '0 day'::interval) + trunc(random()  * 20) * '1 second'::interval FROM generate_series(0, 5000, 5) AS t(x);
 
-</code></pre><p>Currently, Application generates log events in OLTP Database and data from this database is replicated to Reporting database. Since we have created new Hyper table to host this data,a simple approach of <a href=https://www.postgresql.org/docs/13/sql-createtrigger.html>Trigger</a> can be used to populate it from current table.</p>
+</code></pre><p>Currently, Application generates log events in OLTP Database and data from this database is replicated to Reporting database. Since we have created new Hyper table to host this data,a simple approach of <a href=https://www.postgresql.org/docs/13/sql-createtrigger.html target=_blank rel="noopener noreferrer">Trigger</a> can be used to populate it from current table.</p>
 <p>In real scenario, you may want to consider replicating the data directly to hyper table.</p>
 <h3 id=fluentbit>FluentBit</h3>
 <p>So far , we have collected Application logs in the database. There is one more source which is of importance in the context of Monitoring and that is infrastructure software. It could be Operating System, Web Servers and so on. They generate lot of logs and metrices that can be ingested and consumed in conjuction with Application log to get better picture. We will look at how Web server logs can be sourced in data source.</p>
-<p>There are many monitoring tools (refer <a href=#usefullinks>Useful links</a> below for comparison) available with focus on IT and Network monitoring. Such tools readily include infrastructure software too. For the sake of this article, We can use Log collector tool for this purpose. As such there are many log collector tools available, we will use <a href=https://fluentbit.io>Fluentbit</a>.At a very High level, It has concepts of,</p>
+<p>There are many monitoring tools (refer <a href=#usefullinks>Useful links</a> below for comparison) available with focus on IT and Network monitoring. Such tools readily include infrastructure software too. For the sake of this article, We can use Log collector tool for this purpose. As such there are many log collector tools available, we will use <a href=https://fluentbit.io target=_blank rel="noopener noreferrer">Fluentbit</a>.At a very High level, It has concepts of,</p>
 <ul>
 <li>Input - Log sources</li>
 <li>Parsers - Plugins to parse & transform the logs</li>
@@ -211,7 +211,7 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
 <li>Simpler configuration format</li>
 </ul>
 <p>Setup FluentBit - Fluentbit provides binaries that are bundled with package managers in case of Linux and as installers for Windows.</p>
-<p>As of writing of this post, Pre-built binaries do not include output plugin for PostgreSQL. So Fluentbit has to be built from source after modifying <a href=https://github.com/fluent/fluent-bit/blob/master/CMakeLists.txt>Cmakelist</a> so,</p>
+<p>As of writing of this post, Pre-built binaries do not include output plugin for PostgreSQL. So Fluentbit has to be built from source after modifying <a href=https://github.com/fluent/fluent-bit/blob/master/CMakeLists.txt target=_blank rel="noopener noreferrer">Cmakelist</a> so,</p>
 <ul>
 <li>
 <p>Clone the github repository</p>
@@ -223,11 +223,11 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
 <p><code>option(FLB_OUT_PGSQL "Enable PostgreSQL output plugin" Yes)</code></p>
 </li>
 <li>
-<p>Refer to <a href=https://docs.fluentbit.io/manual/installation/getting-started-with-fluent-bit#compile-from-source-linux-windows-freebsd-macos>Compiling from Source</a> for further details.</p>
+<p>Refer to <a href=https://docs.fluentbit.io/manual/installation/getting-started-with-fluent-bit#compile-from-source-linux-windows-freebsd-macos target=_blank rel="noopener noreferrer">Compiling from Source</a> for further details.</p>
 </li>
 </ul>
 <p>Configuration - Once fluentbit is installed, It needs to be configured to read Web server logs , parse them and push them to PostgreSQL.</p>
-<p>Below is sample configuration to periodically read Web Server Logs (in <a href=https://www.w3.org/TR/WD-logfile>w3c log format</a>), parse and push them to PostgreSQL,</p>
+<p>Below is sample configuration to periodically read Web Server Logs (in <a href=https://www.w3.org/TR/WD-logfile target=_blank rel="noopener noreferrer">w3c log format</a>), parse and push them to PostgreSQL,</p>
 <pre><code>[SERVICE]
     Flush        5
     Daemon       Off
@@ -269,7 +269,7 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
     types          serverPort:integer httpStatus:integer httpSubStatus:integer win32Status:integer timetaken:integer
 
 </code></pre><p>This parser basically uses Regular Expression to parse each line in log file into key - value pairs with data points of interest.</p>
-<p>In terms of output, Fluentbit&rsquo;s Postgresql <a href=https://docs.fluentbit.io/manual/pipeline/outputs/postgresql>plugin</a> provisions the table itself with a structure that stores entire JSON in field as part of row. Either this table can be used as is or use &ldquo;Before insert&rdquo; trigger as suggested by Fluentbit&rsquo;s manual to parse the Json and populate separate table.</p>
+<p>In terms of output, Fluentbit&rsquo;s Postgresql <a href=https://docs.fluentbit.io/manual/pipeline/outputs/postgresql target=_blank rel="noopener noreferrer">plugin</a> provisions the table itself with a structure that stores entire JSON in field as part of row. Either this table can be used as is or use &ldquo;Before insert&rdquo; trigger as suggested by Fluentbit&rsquo;s manual to parse the Json and populate separate table.</p>
 <p>Fluentbit can be easily configured to run as daemon (on Linux) or Service (on windows).</p>
 <h2 id=visualization>Visualization</h2>
 <p>With data getting added to timescaledb Hyper table,Lets see how it can be visualized.</p>
@@ -295,12 +295,12 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
 </ul>
 <p>There are many paid and open source tools available. Notable OSS options are,</p>
 <ul>
-<li><a href=https://grafana.com/oss/>Grafana</a> - Tailor made for Monitoring and extensive analysis of Time series data.</li>
-<li><a href=https://superset.apache.org/>Apache Superset</a> - open-source application for data exploration and data visualization able to handle data at petabyte scale.</li>
+<li><a href=https://grafana.com/oss/ target=_blank rel="noopener noreferrer">Grafana</a> - Tailor made for Monitoring and extensive analysis of Time series data.</li>
+<li><a href=https://superset.apache.org/ target=_blank rel="noopener noreferrer">Apache Superset</a> - open-source application for data exploration and data visualization able to handle data at petabyte scale.</li>
 </ul>
 <p>Lets see how Grafana can be used for visualization (Probably, i may evaluate superset some time and update this post.)</p>
 <h3 id=grafana>Grafana</h3>
-<p>Grafana has multiple offerings and one of them being Open source, Self-hosted Application. It has <a href=https://golang.org>Go</a> backend and is very easy to install. For Windows, Just follow the steps at <a href=https://grafana.com/docs/grafana/latest/installation/windows/>Installation</a>.</p>
+<p>Grafana has multiple offerings and one of them being Open source, Self-hosted Application. It has <a href=https://golang.org target=_blank rel="noopener noreferrer">Go</a> backend and is very easy to install. For Windows, Just follow the steps at <a href=https://grafana.com/docs/grafana/latest/installation/windows/ target=_blank rel="noopener noreferrer">Installation</a>.</p>
 <p>Once grafana is setup, one can quickly start it by running <code>grafana-server</code>. By default, it starts Web server at port <code>3000</code>. With Grafana Web-based GUI up and running, lets perform below steps to get dashboard in place.</p>
 <ul>
 <li>Connectivity to PostgreSQL - One needs to add Data Source in Grafana which in this case is PostgreSQL Database. It can be added from sidebar on Grafana UI, by hovering over &ldquo;Configuration&rdquo; option. In below screenshot, it shows configuration.</li>
@@ -337,11 +337,11 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
 <li>Greater Flexibility in Visualization over custom built tool containing canned reports/graphs</li>
 <li>Lesser learning curve than inducting new tools.</li>
 </ul>
-<p>This post barely touches surface of what each of the individual tools mentioned have on offer, one would do well to go through their <a href=https://grafana.com/docs/>documentation</a> to derive most value out of it.</p>
+<p>This post barely touches surface of what each of the individual tools mentioned have on offer, one would do well to go through their <a href=https://grafana.com/docs/ target=_blank rel="noopener noreferrer">documentation</a> to derive most value out of it.</p>
 <h3 id=useful-links-usefullinks>Useful links (#usefullinks)</h3>
 <ul>
-<li><a href=https://sematext.com/blog/infrastructure-monitoring-tools/>Comparison of IT Monitoring tools</a></li>
-<li><a href="https://www.youtube.com/watch?v=_OXYCzwFd1Y">Nice Introduction to Modern Observability</a></li>
+<li><a href=https://sematext.com/blog/infrastructure-monitoring-tools/ target=_blank rel="noopener noreferrer">Comparison of IT Monitoring tools</a></li>
+<li><a href="https://www.youtube.com/watch?v=_OXYCzwFd1Y" target=_blank rel="noopener noreferrer">Nice Introduction to Modern Observability</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

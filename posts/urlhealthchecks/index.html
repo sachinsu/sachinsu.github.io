@@ -112,7 +112,7 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 </div>
 </div><div class="content post__content clearfix">
 <h2 id=background>Background</h2>
-<p>I started this blog, <a href=https://sachinsu.github.io>https://sachinsu.github.io</a> few months back .</p>
+<p>I started this blog, <a href=https://sachinsu.github.io target=_blank rel="noopener noreferrer">https://sachinsu.github.io</a> few months back .</p>
 <p>In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.</p>
 <p>As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.</p>
 <p>So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.</p>
@@ -130,31 +130,31 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <p>In above chain,</p>
 <ul>
 <li>
-<p>I am using excellent <a href=https://cmder.net/>Cmder</a> console emulator, which also makes above nice tools (grep, sed etc.) available on Windows.</p>
+<p>I am using excellent <a href=https://cmder.net/ target=_blank rel="noopener noreferrer">Cmder</a> console emulator, which also makes above nice tools (grep, sed etc.) available on Windows.</p>
 </li>
 <li>
-<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html>grep</a> -E -i -w &ldquo;http|https&rdquo; *.md - this command extracts all the lines containing <code>http(s)</code> from all the markdown (.md) files</p>
+<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html target=_blank rel="noopener noreferrer">grep</a> -E -i -w &ldquo;http|https&rdquo; *.md - this command extracts all the lines containing <code>http(s)</code> from all the markdown (.md) files</p>
 </li>
 <li>
-<p><a href=https://en.wikipedia.org/wiki/Pipeline_(Unix)>Pipe |</a> - Pipe command streams output of command to the next one.</p>
+<p><a href=https://en.wikipedia.org/wiki/Pipeline_%28Unix%29 target=_blank rel="noopener noreferrer">Pipe |</a> - Pipe command streams output of command to the next one.</p>
 </li>
 <li>
-<p><a href=https://en.wikipedia.org/wiki/Sed>sed</a> &rsquo;s/](http/\nhttp/g' - this sed (stream editor) command adds line break before <code>http</code> for better extraction.</p>
+<p><a href=https://en.wikipedia.org/wiki/Sed target=_blank rel="noopener noreferrer">sed</a> &rsquo;s/](http/\nhttp/g' - this sed (stream editor) command adds line break before <code>http</code> for better extraction.</p>
 </li>
 <li>
-<p><a href=https://en.wikipedia.org/wiki/Sed>sed</a> &rsquo;s/)/\n/g' - this sed (stream editor) command removes trailing <code>)</code> bracket.</p>
+<p><a href=https://en.wikipedia.org/wiki/Sed target=_blank rel="noopener noreferrer">sed</a> &rsquo;s/)/\n/g' - this sed (stream editor) command removes trailing <code>)</code> bracket.</p>
 </li>
 <li>
-<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html>grep</a> ^http - this command removes all lines not containing <code>http</code>.</p>
+<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html target=_blank rel="noopener noreferrer">grep</a> ^http - this command removes all lines not containing <code>http</code>.</p>
 </li>
 <li>
-<p><a href=https://man7.org/linux/man-pages/man1/xargs.1.html>xargs</a> - xargs is a command on Unix and most Unix-like operating systems used to build and execute commands from standard input.</p>
+<p><a href=https://man7.org/linux/man-pages/man1/xargs.1.html target=_blank rel="noopener noreferrer">xargs</a> - xargs is a command on Unix and most Unix-like operating systems used to build and execute commands from standard input.</p>
 </li>
 <li>
-<p><a href=https://curl.haxx.se/>curl</a> -s -I -w &lsquo;URL:%{url_effective} &mdash;> %{http_code}&rsquo;' - previously used <code>xargs</code> command feeds each line (url) to this command as last argument. This command sends tcp request to the URL and prints out http status code along with URL.</p>
+<p><a href=https://curl.haxx.se/ target=_blank rel="noopener noreferrer">curl</a> -s -I -w &lsquo;URL:%{url_effective} &mdash;> %{http_code}&rsquo;' - previously used <code>xargs</code> command feeds each line (url) to this command as last argument. This command sends tcp request to the URL and prints out http status code along with URL.</p>
 </li>
 <li>
-<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html>grep</a> ^URL: - For some reason, CURL outputs content even if <code>-s</code> (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.</p>
+<p><a href=https://man7.org/linux/man-pages/man1/grep.1.html target=_blank rel="noopener noreferrer">grep</a> ^URL: - For some reason, CURL outputs content even if <code>-s</code> (silent) parameter is passed. Hence, this grep command is used to ignore all lines not containing URL and HTTP Status.</p>
 </li>
 </ul>
 <p>The output is as below,</p>

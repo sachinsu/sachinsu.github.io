@@ -110,45 +110,45 @@ At a High level, Tracfee&rsquo;s Architecture involves,
 </div>
 </div><div class="content post__content clearfix">
 <h2 id=background>Background</h2>
-<p>The source code of <a href=https://tracfee.com>tracfee.com</a> is hosted on Github Private.</p>
+<p>The source code of <a href=https://tracfee.com target=_blank rel="noopener noreferrer">tracfee.com</a> is hosted on Github Private.</p>
 <p>At a High level, Tracfee&rsquo;s Architecture involves,</p>
 <ul>
-<li>Single Page Application using VueJS, deployed on <a href=https://netlify.com>Netlify</a></li>
-<li>API in <a href=https://golang.org>Go</a>, deployed on <a href=https://www.oracle.com/in/cloud/>Oracle Cloud</a></li>
+<li>Single Page Application using VueJS, deployed on <a href=https://netlify.com target=_blank rel="noopener noreferrer">Netlify</a></li>
+<li>API in <a href=https://golang.org target=_blank rel="noopener noreferrer">Go</a>, deployed on <a href=https://www.oracle.com/in/cloud/ target=_blank rel="noopener noreferrer">Oracle Cloud</a></li>
 </ul>
 <p>So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM. However, in case of Netlify, it is required to build and then upload the output folder on Netlify.</p>
 <p>Accordingly, it was decided to explore Github actions to automate deployment.</p>
 <h2 id=using-github-actions>Using Github actions</h2>
-<p>As per <a href=https://github.com/features/actions>Github</a>,</p>
+<p>As per <a href=https://github.com/features/actions target=_blank rel="noopener noreferrer">Github</a>,</p>
 <pre><code>GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.
-</code></pre><p>GitHub actions work by provisioning Virtual machine to run an Event based workflow. It provides option to provision Linux/MacOS/Windows based Virtual machines. Steps in Workflow will have to be configured in <a href=https://yaml.org>YAML</a> file. Trigger for Workflow can be (but not limited to) wide variety of events like on Push or commit on branch and so on.</p>
+</code></pre><p>GitHub actions work by provisioning Virtual machine to run an Event based workflow. It provides option to provision Linux/MacOS/Windows based Virtual machines. Steps in Workflow will have to be configured in <a href=https://yaml.org target=_blank rel="noopener noreferrer">YAML</a> file. Trigger for Workflow can be (but not limited to) wide variety of events like on Push or commit on branch and so on.</p>
 <p>Post trigger, set of action(s) can be configured like,</p>
 <ul>
 <li>Checkout the branch</li>
-<li>Setup environment (Install <a href=https://github.com/actions/setup-node>Node.JS</a>)</li>
+<li>Setup environment (Install <a href=https://github.com/actions/setup-node target=_blank rel="noopener noreferrer">Node.JS</a>)</li>
 <li>Perform build</li>
 <li>Deployment</li>
 </ul>
 <p>Github has Marketplace which has many pre-built actions available. My requirement was to,</p>
 <ul>
 <li>Provision Linux (i.e. ubuntu-latest) Virtual Machine</li>
-<li>Checkout the code (using <a href=https://github.com/actions/checkout>actions/checkout@v2</a>)</li>
-<li>Setup Node.js (using <a href=https://github.com/actions/setup-node>actions/setup-node</a>)</li>
-<li>perform Build and test using <a href=https://www.npmjs.com/>NPM</a></li>
-<li>Deploy to Netlify using <a href=https://github.com/netlify/actions>netlify/actions/cli@master</a></li>
-<li>Any secrets required as part of Workflow can be maintained using <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets>Github secrets</a></li>
+<li>Checkout the code (using <a href=https://github.com/actions/checkout target=_blank rel="noopener noreferrer">actions/checkout@v2</a>)</li>
+<li>Setup Node.js (using <a href=https://github.com/actions/setup-node target=_blank rel="noopener noreferrer">actions/setup-node</a>)</li>
+<li>perform Build and test using <a href=https://www.npmjs.com/ target=_blank rel="noopener noreferrer">NPM</a></li>
+<li>Deploy to Netlify using <a href=https://github.com/netlify/actions target=_blank rel="noopener noreferrer">netlify/actions/cli@master</a></li>
+<li>Any secrets required as part of Workflow can be maintained using <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets target=_blank rel="noopener noreferrer">Github secrets</a></li>
 </ul>
 <p>Above workflow needs to be maintained in <code>.github\workflows</code> folder in the repository.</p>
-<p>build.yml for <a href=https://tracfee.com>tracfee.com</a> looks like,</p>
+<p>build.yml for <a href=https://tracfee.com target=_blank rel="noopener noreferrer">tracfee.com</a> looks like,</p>
 <iframe src=//carbon.now.sh/embed/f98fbca1049e15f0360c140610fa4cc4 style=transform:scale(.9);width:1024px;height:473px;border:0;overflow:hidden sandbox="allow-scripts allow-same-origin"></iframe>
-<p>Refer Gist <a href=https://gist.github.com/sachinsu/f98fbca1049e15f0360c140610fa4cc4>here</a>.</p>
+<p>Refer Gist <a href=https://gist.github.com/sachinsu/f98fbca1049e15f0360c140610fa4cc4 target=_blank rel="noopener noreferrer">here</a>.</p>
 <h2 id=testing-the-build-workflow>Testing the Build Workflow</h2>
-<p>After configuring the workflow steps, next question is to check whether it is possible to test it locally? Luckily, there is tool available to do this. Enter <a href=https://github.com/nektos/act>Act</a> , which is a tool to <code>Run your GitHub Actions locally </code>. Local testing is useful for Faster feedback. In Nutshell, Act uses local docker setup to provision container and then runs workflow steps in it. Give it a try !!</p>
+<p>After configuring the workflow steps, next question is to check whether it is possible to test it locally? Luckily, there is tool available to do this. Enter <a href=https://github.com/nektos/act target=_blank rel="noopener noreferrer">Act</a> , which is a tool to <code>Run your GitHub Actions locally </code>. Local testing is useful for Faster feedback. In Nutshell, Act uses local docker setup to provision container and then runs workflow steps in it. Give it a try !!</p>
 <p>As a next step, Plan is to automate deployment of API on Oracle Cloud using OCI CLI interface.</p>
 <h3 id=useful-references>Useful References,</h3>
 <ul>
-<li><a href=https://medium.com/@MarekPukaj/build-with-github-actions-host-on-netlify-ebf5fa505616>Build with GitHub Actions, host on Netlify</a></li>
-<li><a href=https://blogs.oracle.com/developers/adventures-in-cicd-4-deploying-a-microservice-to-the-oracle-cloud-with-github-actions-oci-cli-edition>Adventures in CI/CD [#4]: Deploying A Microservice To The Oracle Cloud With GitHub Actions [OCI CLI Edition]</a></li>
+<li><a href=https://medium.com/@MarekPukaj/build-with-github-actions-host-on-netlify-ebf5fa505616 target=_blank rel="noopener noreferrer">Build with GitHub Actions, host on Netlify</a></li>
+<li><a href=https://blogs.oracle.com/developers/adventures-in-cicd-4-deploying-a-microservice-to-the-oracle-cloud-with-github-actions-oci-cli-edition target=_blank rel="noopener noreferrer">Adventures in CI/CD [#4]: Deploying A Microservice To The Oracle Cloud With GitHub Actions [OCI CLI Edition]</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

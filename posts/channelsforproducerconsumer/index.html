@@ -17,7 +17,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
 <meta itemprop=description content="Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
 This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal & external application(s)."><meta itemprop=datePublished content="2020-02-12T10:25:04+05:30">
 <meta itemprop=dateModified content="2020-02-12T10:25:04+05:30">
-<meta itemprop=wordCount content="476">
+<meta itemprop=wordCount content="475">
 <meta itemprop=keywords content=".net core,channels,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Using Channels for High performance Producer consumer implementation">
@@ -123,7 +123,7 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
 <p>Next task was to arrive at approach on how to perform them effectively outside of hot code path without incurring need of any additional resources (hardware or software)as far as possible. Accordingly, we had two options,</p>
 <ul>
 <li><em>Polling</em> - Periodically polling database to check for occurance of event and then performing the action.</li>
-<li><em>Event Driven</em> - Using Event notification feature of database (e.g. <a href=https://www.postgresql.org/docs/current/sql-notify.html>Listen/Notify</a> in PostgreSQL or <a href=https://docs.oracle.com/cd/B28359_01/appdev.111/b28424/adfns_cqn.htm>Change Notification</a>/<a href=https://www.oracle.com/database/technologies/advanced-queuing.html>Advanced Queuing</a> in Oracle).</li>
+<li><em>Event Driven</em> - Using Event notification feature of database (e.g. <a href=https://www.postgresql.org/docs/current/sql-notify.html target=_blank rel="noopener noreferrer">Listen/Notify</a> in PostgreSQL or <a href=https://docs.oracle.com/cd/B28359_01/appdev.111/b28424/adfns_cqn.htm target=_blank rel="noopener noreferrer">Change Notification</a>/<a href=https://www.oracle.com/database/technologies/advanced-queuing.html target=_blank rel="noopener noreferrer">Advanced Queuing</a> in Oracle).</li>
 </ul>
 <p>We decided to go with <em>Event driven</em> as,</p>
 <ul>
@@ -133,12 +133,11 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
 <p>Post finalizing on event driven approach for gathering events, next task was to determine how to effectively send email/sms or any other HTTP requests considering that rate of arrival of events will not be matching rate of processing them. Also these</p>
 <p>So what are the options available in .NET Ecosystem, Below are the ones i am aware of,</p>
 <ul>
-<li><a href=https://devblogs.microsoft.com/dotnet/an-introduction-to-system-threading-channels/>Channels</a> - High performance implementation of In-memory producer/consumer pattern.</li>
-<li><a href=https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library>TPL Dataflow</a> - Super set of Channels Library. Aimed at use cases where blocks of logic are to be linked together to same or different consumers and so on. Also all these features come with additional overheads.</li>
+<li><a href=https://devblogs.microsoft.com/dotnet/an-introduction-to-system-threading-channels/ target=_blank rel="noopener noreferrer">Channels</a> - High performance implementation of In-memory producer/consumer pattern.</li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library target=_blank rel="noopener noreferrer">TPL Dataflow</a> - Super set of Channels Library. Aimed at use cases where blocks of logic are to be linked together to same or different consumers and so on. Also all these features come with additional overheads.</li>
 </ul>
 <p>For the task at hand, functionality offered by Channels is sufficient to implement in-memory producer consumer pattern.</p>
-<p>So we wrapped above event processing in a Windows service implemented as <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio">.NET Core Worker
-Service</a></p>
+<p>So we wrapped above event processing in a Windows service implemented as <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio" target=_blank rel="noopener noreferrer">.NET Core WorkerService</a></p>
 <p>Generic Implementation is as follows,</p>
 <ul>
 <li>
@@ -149,13 +148,13 @@ Service</a></p>
 </li>
 </ul>
 <iframe src=//carbon.now.sh/embed/6fcbc36e6e5cc58c7b5ba9007e276afc style=transform:scale(.9);width:1024px;height:473px;border:0;overflow:hidden sandbox="allow-scripts allow-same-origin"></iframe>
-<p>Refer Gist <a href=https://gist.github.com/sachinsu/6fcbc36e6e5cc58c7b5ba9007e276afc>here</a></p>
+<p>Refer Gist <a href=https://gist.github.com/sachinsu/6fcbc36e6e5cc58c7b5ba9007e276afc target=_blank rel="noopener noreferrer">here</a></p>
 <h2 id=summary>Summary</h2>
-<p>Other languages (notably <a href=https://tour.golang.org/concurrency/2>Channels in Go</a>) have been providing out of the box implementation for in-memory producer with concurrent, parallel consumers. With Channels, .NET Ecosystem finally has construct that can be effectively put to use for high performance, concurrent use cases.</p>
+<p>Other languages (notably <a href=https://tour.golang.org/concurrency/2 target=_blank rel="noopener noreferrer">Channels in Go</a>) have been providing out of the box implementation for in-memory producer with concurrent, parallel consumers. With Channels, .NET Ecosystem finally has construct that can be effectively put to use for high performance, concurrent use cases.</p>
 <h3 id=useful-references>Useful References,</h3>
 <ul>
-<li><a href=https://docs.microsoft.com/en-us/dotnet/csharp/event-pattern#defining-and-raising-field-like-events>Event Pattern in C#</a></li>
-<li><a href=https://gist.github.com/AlgorithmsAreCool/b0960ce8a3400305e43fe8ffdf89b32c>Gist on using Channels</a></li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/csharp/event-pattern#defining-and-raising-field-like-events target=_blank rel="noopener noreferrer">Event Pattern in C#</a></li>
+<li><a href=https://gist.github.com/AlgorithmsAreCool/b0960ce8a3400305e43fe8ffdf89b32c target=_blank rel="noopener noreferrer">Gist on using Channels</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

@@ -113,19 +113,19 @@
 <p><strong>Lakehouse</strong> - Many companies have two different types of storate: Data Lake and Data warehouse. The data warehouse handles <code>offline</code> analytics, such as BI dashboards and reports, that describe what has or is happening in a business. The data lake is store for raw data (including unstructured). Instead of ETL (Extract - Transform - Load), ELT (Extract - Load - Transform) approach is followed where data from transactional system is loaded into Data Lake. Later, it is transformed/processed for analytics purposes and loaded in data warehouse. Alternatively, there is a trend where data lake itself is used for trend and/or predictive analytics. Data lake is usually based on cheaper, object storage with data stored using open formats (like Parquet , ORC etc.) favouring columnar approach. Columnar store is typically favoured for analytics over relational one.</p>
 </li>
 </ul>
-<p>As explained in <a href=https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/>Emerging Architecture for Data Infrastructure</a>,</p>
+<p>As explained in <a href=https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/ target=_blank rel="noopener noreferrer">Emerging Architecture for Data Infrastructure</a>,</p>
 <ul>
 <li>Data warehouse is used for analytics use cases i.e. help business make better decisions.</li>
 <li>Data lake is used for operational use cases.</li>
 </ul>
 <p>All the above approaches typically assume rather large volume of data being handled. Then what can be approach for companies who are having moderate amount of data (few terabytes) and still want to derive actionable insights from it. Such companies are unlikely to have big data systems like HDFC in place.</p>
-<p>For these cases, One may consider <a href=https://prestodb.io/><strong>Presto</strong></a> a.k.a. <a href=https://trino.io><strong>Trino</strong></a>. At it&rsquo;s core, Presto translates SQL queries (it supports <strong>ANSI SQL</strong>) into whatever query language is necessary to access the underlying storage medium. Storage medium could be a Elasticsearch cluster, or a set of Parquet files on HDFS, or a relational database.</p>
+<p>For these cases, One may consider <a href=https://prestodb.io/ target=_blank rel="noopener noreferrer">Presto</a> a.k.a. <a href=https://trino.io target=_blank rel="noopener noreferrer">Trino</a>. At it&rsquo;s core, Presto translates SQL queries (it supports <strong>ANSI SQL</strong>) into whatever query language is necessary to access the underlying storage medium. Storage medium could be a Elasticsearch cluster, or a set of Parquet files on HDFS, or a relational database.</p>
 <p>Presto uses <em>MPP</em> (Massively parallel processing) architecture in which it has,</p>
 <ul>
 <li><code>Coordinator</code> node - responsible for creating query plan and distributing the work among workers.</li>
 <li><code>Worker</code> node(s) - they push down predicates to those data sources. Only the data necessary to compute join is retrieved. All workers operate in parallel mode.</li>
 </ul>
-<p>Presto provides many <a href=https://trino.io/docs/current/connector.html>connectors</a> like below (but not limited to),</p>
+<p>Presto provides many <a href=https://trino.io/docs/current/connector.html target=_blank rel="noopener noreferrer">connectors</a> like below (but not limited to),</p>
 <ul>
 <li><em>Relational Databases</em>
 <ul>
@@ -152,7 +152,7 @@
 </li>
 </ul>
 <p>It&rsquo;s important to note that Presto does not write intermidiate results to disk, Hence worker nodes are expected to be optimized for processing and memory over storage. A Single Presto query can combine data from multiple sources. Most importantly, Presto can work without Hadoop. Presto has cost-based optimizer which means query plan takes into account the time cost associated with executing that plan and can therefore do various types of optimizations around join ordering and the sequence with which you execute that query plan to deliver the fastest level of performance.</p>
-<p>Below is apt representation of how Presto works (Ref: <a href=https://prestodb.io>prestodb.io</a>)</p>
+<p>Below is apt representation of how Presto works (Ref: <a href=https://prestodb.io target=_blank rel="noopener noreferrer">prestodb.io</a>)</p>
 <figure><img src=https://prestodb.io/img/presto-overview-2.png><figcaption>
 <h4>Where Presto fits</h4>
 </figcaption>
@@ -167,7 +167,7 @@
 <li>Batch ETL processing.</li>
 <li>Centralized Data Access with Query Federation</li>
 </ul>
-<p>From the consumption perspective, Presto Offers CLI as well as JDBC Driver. However, there are many <a href=https://trino.io/resources.html>language specific clients</a> available from Community.</p>
+<p>From the consumption perspective, Presto Offers CLI as well as JDBC Driver. However, there are many <a href=https://trino.io/resources.html target=_blank rel="noopener noreferrer">language specific clients</a> available from Community.</p>
 <p>Key points to note while considering Presto,</p>
 <ul>
 <li>No need for complex ETL/ELT processes and related Monitoring.</li>
@@ -186,8 +186,8 @@
 </ul>
 <h3 id=useful-referencesinteresting-links>Useful References/Interesting Links,</h3>
 <ul>
-<li><a href=https://trino.io>Trino</a></li>
-<li><a href=https://github.com/treasure-data/prestogres/>PostgreSQL protocol gateway for Presto distributed SQL query engine</a></li>
+<li><a href=https://trino.io target=_blank rel="noopener noreferrer">Trino</a></li>
+<li><a href=https://github.com/treasure-data/prestogres/ target=_blank rel="noopener noreferrer">PostgreSQL protocol gateway for Presto distributed SQL query engine</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

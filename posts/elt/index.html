@@ -113,7 +113,7 @@
 <li><strong>Extract</strong> - typically involves retrieving data from source. This could also be via streaming</li>
 <li><strong>Transform</strong> - Apply transformation to the extracted data.</li>
 <li><strong>Load</strong> - Loading the data in Operation Data store (ODS) or data warehouse
-Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close>here</a> for more details on ETL. ETL has been made easy by tools like <a href=https://www.talend.com/products/talend-open-studio/>Talend</a>, <a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services>SSIS</a> and so on.</li>
+Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close target=_blank rel="noopener noreferrer">here</a> for more details on ETL. ETL has been made easy by tools like <a href=https://www.talend.com/products/talend-open-studio/ target=_blank rel="noopener noreferrer">Talend</a>, <a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services target=_blank rel="noopener noreferrer">SSIS</a> and so on.</li>
 </ul>
 <p>However, there has been shift from above approach due to,</p>
 <ul>
@@ -122,14 +122,14 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 <li>Availability of cheaper storage and compute along with availability of internet scale cloud based data warehouses</li>
 </ul>
 <p>has recently caused wide adoption of ELT (Extract-transform-load) over ETL.</p>
-<p>ELT offers an alternative to ETL in which data is loaded into the warehouse (sometimes in storage area called as data lake) before transforming it. It allows focussing on extraction and loading with heavy transformation offloaded to later stage. Since the transformation happens in the warehouse, it can potentially be defined using SQL (thus using same language across the pipeline). This allows more roles (say Data Analysts) to contribute to (or entirely own) the transformation logic. Data warehouse becomes single source of truth for data. Ref: <a href=https://dataschool.com/data-governance/etl-vs-elt/>ETL vs ELT</a></p>
+<p>ELT offers an alternative to ETL in which data is loaded into the warehouse (sometimes in storage area called as data lake) before transforming it. It allows focussing on extraction and loading with heavy transformation offloaded to later stage. Since the transformation happens in the warehouse, it can potentially be defined using SQL (thus using same language across the pipeline). This allows more roles (say Data Analysts) to contribute to (or entirely own) the transformation logic. Data warehouse becomes single source of truth for data. Ref: <a href=https://dataschool.com/data-governance/etl-vs-elt/ target=_blank rel="noopener noreferrer">ETL vs ELT</a></p>
 <p>Typically, Data flow pipeline consists of below phases (it also lists available tools for each phase),</p>
 <ul>
-<li>Ingestion - <a href=https://airbyte.io>Airbyte</a>, <a href=https://fivetran.com>Fivetran</a>, <a href=https://stitchdata.com>Stitch</a></li>
-<li>Warehousing - <a href=https://snowflake.com>Snowflake</a>, <a href=https://cloud.google.com/bigquery>BigQuery</a>, <a href=https://aws.amazon.com/redshift>Redshift</a>, <a href=https://postgresql.org>PostgreSQL</a></li>
-<li>Transformation - <a href=https://getdbt.com>dbt</a></li>
-<li>Orchestration - <a href=airflow.apache.org>Airflow</a>, <a href=https://prefect.io>Prefect</a>, <a href=https://dagster.io>Dagster</a></li>
-<li>BI - <a href=superset.apache.org>Superset</a>, <a href=https://metabase.com>Metabase</a>, <a href=redash.io>Redash</a>, <a href=looker.com>Looker</a> etc.</li>
+<li>Ingestion - <a href=https://airbyte.io target=_blank rel="noopener noreferrer">Airbyte</a>, <a href=https://fivetran.com target=_blank rel="noopener noreferrer">Fivetran</a>, <a href=https://stitchdata.com target=_blank rel="noopener noreferrer">Stitch</a></li>
+<li>Warehousing - <a href=https://snowflake.com target=_blank rel="noopener noreferrer">Snowflake</a>, <a href=https://cloud.google.com/bigquery target=_blank rel="noopener noreferrer">BigQuery</a>, <a href=https://aws.amazon.com/redshift target=_blank rel="noopener noreferrer">Redshift</a>, <a href=https://postgresql.org target=_blank rel="noopener noreferrer">PostgreSQL</a></li>
+<li>Transformation - <a href=https://getdbt.com target=_blank rel="noopener noreferrer">dbt</a></li>
+<li>Orchestration - <a href=airflow.apache.org>Airflow</a>, <a href=https://prefect.io target=_blank rel="noopener noreferrer">Prefect</a>, <a href=https://dagster.io target=_blank rel="noopener noreferrer">Dagster</a></li>
+<li>BI - <a href=superset.apache.org>Superset</a>, <a href=https://metabase.com target=_blank rel="noopener noreferrer">Metabase</a>, <a href=redash.io>Redash</a>, <a href=looker.com>Looker</a> etc.</li>
 </ul>
 <p>I think the best way to understand the landscape is to use above tools. So i decided to implement below problem statement. The requirement is to run a weekly process that,</p>
 <ol>
@@ -143,14 +143,14 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 <h3 id=e--l-in-elt----get-the-list-of-cnx-500-companies-and-also-get-stock-price-for-each-of-them><code>E</code> & <code>L</code> in ELT - Get the list of CNX 500 Companies and also get stock price for each of them</h3>
 <p>Below are some of the options available for this task under <code>extract</code> and <code>load</code> category,</p>
 <ul>
-<li>Use Python to download list of stocks and then use <a href=https://pypi.org/project/yfinance/>yfinance</a> to get the price and yearly high.</li>
-<li>Use tool like <a href=https://airbyte.io>Airbyte</a> which provides declarative way of importing the data via HTTP. I am planning to explore this option later.</li>
-<li>Use Go to perform the task. I decided to go with this one and code is available at <a href=https://github.com/sachinsu/momentumflow/tree/main/gover>here</a>. It downloads CSV file from Exchange&rsquo;s website (containing list of stocks in Index) and loads them to database. Since Yahoo finance no longer provides Free tier for API, It uses <a href=github.com/antchfx/htmlquery>htmlquery</a> library to parse HTML and retrieve stock price and yearly high value.</li>
+<li>Use Python to download list of stocks and then use <a href=https://pypi.org/project/yfinance/ target=_blank rel="noopener noreferrer">yfinance</a> to get the price and yearly high.</li>
+<li>Use tool like <a href=https://airbyte.io target=_blank rel="noopener noreferrer">Airbyte</a> which provides declarative way of importing the data via HTTP. I am planning to explore this option later.</li>
+<li>Use Go to perform the task. I decided to go with this one and code is available at <a href=https://github.com/sachinsu/momentumflow/tree/main/gover target=_blank rel="noopener noreferrer">here</a>. It downloads CSV file from Exchange&rsquo;s website (containing list of stocks in Index) and loads them to database. Since Yahoo finance no longer provides Free tier for API, It uses <a href=github.com/antchfx/htmlquery>htmlquery</a> library to parse HTML and retrieve stock price and yearly high value.</li>
 </ul>
 <h3 id=t-in-elt---transform-the-company-wise-data-to-arrive-at-weekly-list-of-momentum-stocks><code>T</code> in ELT - Transform the company-wise data to arrive at weekly list of momentum stocks</h3>
-<p>This is implemented using <a href=https://getdbt.com>dbt</a>. dbt (Data Build Tool) is a framework to facilitate transformations using SQL along with version control, automates tests, support for incremental load, snapshots and so on. It has <code>notion</code> of <strong>project</strong> or <strong>workspace</strong> that many developers are familiar with.
+<p>This is implemented using <a href=https://getdbt.com target=_blank rel="noopener noreferrer">dbt</a>. dbt (Data Build Tool) is a framework to facilitate transformations using SQL along with version control, automates tests, support for incremental load, snapshots and so on. It has <code>notion</code> of <strong>project</strong> or <strong>workspace</strong> that many developers are familiar with.
 It is offered as Command line interface (CLI) as well as on cloud which also provides web based UI. I have used CLI for this exercise. For a quick recap of dbt folder structure, refer [here]https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3).</p>
-<p>Source code of dbt project <a href=https://github.com/sachinsu/momentumflow/tree/main/dbt>here</a>. We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a PostgreSQL database), below are Models used,</p>
+<p>Source code of dbt project <a href=https://github.com/sachinsu/momentumflow/tree/main/dbt target=_blank rel="noopener noreferrer">here</a>. We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a PostgreSQL database), below are Models used,</p>
 <ul>
 <li>
 <p>Since Loading of company-wise data is already done in earlier step, next step is to rank the companies w.r.t. <code>closeness</code> to their yearly high. Below is <code>dbt</code> SQL which does it (At run time, dbt converts below SQL to the one understood by the Target database),</p>
@@ -260,7 +260,7 @@ It is offered as Command line interface (CLI) as well as on cloud which also pro
 </li>
 </ul>
 <h3 id=orchestration>Orchestration</h3>
-<p>After completing <code>ELT</code> aspects, now it&rsquo;s time to orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use <a href=https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks>at</a> on windows (or <a href=https://en.wikipedia.org/wiki/Cron>cron</a> if you are using Linux).</p>
+<p>After completing <code>ELT</code> aspects, now it&rsquo;s time to orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use <a href=https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks target=_blank rel="noopener noreferrer">at</a> on windows (or <a href=https://en.wikipedia.org/wiki/Cron target=_blank rel="noopener noreferrer">cron</a> if you are using Linux).</p>
 <p>so a simplest possible batch file (as below),</p>
 <pre><code>set http_proxy=
 set https_proxy=
@@ -269,13 +269,13 @@ set https_proxy=
 
 .\.venv\scripts\activate &amp; .\dbt\dbt run
 </code></pre><p>will run the whole process and generate weekly list in <code>weeklylist</code> table in database. This batch file can be scheduled to run on weekly basis using command <code>at 23:00 /every:F runscript.bat</code>.</p>
-<p>This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part (something like <a href=https://docs.airbyte.io/tutorials/connecting-el-with-t-using-dbt>this</a>). Till then&mldr;</p>
+<p>This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part (something like <a href=https://docs.airbyte.io/tutorials/connecting-el-with-t-using-dbt target=_blank rel="noopener noreferrer">this</a>). Till then&mldr;</p>
 <h3 id=useful-references>Useful References</h3>
 <ul>
-<li><a href=https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb>Reverse ETL</a></li>
-<li><a href=https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3>Data stacks for Fun and Profit</a></li>
-<li><a href=https://dataschool.com/data-governance/what-warehouse-to-use/>What warehouse to use</a></li>
-<li><a href=https://tech.fretlink.com/build-your-own-data-lake-for-reporting-purposes/>Build Data Lake in PostgreSQL using FDW, Singer, Metabase</a></li>
+<li><a href=https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb target=_blank rel="noopener noreferrer">Reverse ETL</a></li>
+<li><a href=https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3 target=_blank rel="noopener noreferrer">Data stacks for Fun and Profit</a></li>
+<li><a href=https://dataschool.com/data-governance/what-warehouse-to-use/ target=_blank rel="noopener noreferrer">What warehouse to use</a></li>
+<li><a href=https://tech.fretlink.com/build-your-own-data-lake-for-reporting-purposes/ target=_blank rel="noopener noreferrer">Build Data Lake in PostgreSQL using FDW, Singer, Metabase</a></li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>

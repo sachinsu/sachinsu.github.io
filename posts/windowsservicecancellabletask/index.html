@@ -109,14 +109,14 @@
 <p>Recently, we had requirement wherein a process should,</p>
 <ul>
 <li>Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running.</li>
-<li>Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble <a href=https://golang.org/pkg/context/>Context</a> in Go</li>
+<li>Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble <a href=https://golang.org/pkg/context/ target=_blank rel="noopener noreferrer">Context</a> in Go</li>
 </ul>
-<p>The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .NET Core) offers <a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netcore-3.1">CancellationToken</a>. It is maint for co-operative cancellation between threads and Task Objects. So Armed with this, is it possible to come up with a template that allows cancellation of long running task while also being deployed as Windows Service (or using systemd in Linux) ?</p>
+<p>The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .NET Core) offers <a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netcore-3.1" target=_blank rel="noopener noreferrer">CancellationToken</a>. It is maint for co-operative cancellation between threads and Task Objects. So Armed with this, is it possible to come up with a template that allows cancellation of long running task while also being deployed as Windows Service (or using systemd in Linux) ?</p>
 <p>Lets get Started,</p>
 <h3 id=approach>Approach</h3>
 <p>We can use below to construct service,</p>
 <ul>
-<li><a href=http://topshelf-project.com/>Topshelf</a> - Allows Hosting services in-process as console apps or Windows services.</li>
+<li><a href=http://topshelf-project.com/ target=_blank rel="noopener noreferrer">Topshelf</a> - Allows Hosting services in-process as console apps or Windows services.</li>
 <li><a href=htps://nlog-project.org>NLog</a> - For Logging</li>
 </ul>
 <p>Accordingly, we will have below Components,</p>
@@ -124,12 +124,12 @@
 <li>Listener.cs - It wraps the long running process in a C# Task. It exposes Start and Stop functions which are essentially event handlers awaiting for Signal from the service.</li>
 </ul>
 <iframe src="//carbon.now.sh/embed/b2869d4f44fe14f439c6f0e60ea2b5d5?filename=Queuelistener.cs" style=transform:scale(.9);width:1024px;height:473px;border:0;overflow:hidden sandbox="allow-scripts allow-same-origin"></iframe>
-<p>Refer Gist <a href=https://gist.github.com/sachinsu/b2869d4f44fe14f439c6f0e60ea2b5d5#file-queuelistener-cs>here</a></p>
+<p>Refer Gist <a href=https://gist.github.com/sachinsu/b2869d4f44fe14f439c6f0e60ea2b5d5#file-queuelistener-cs target=_blank rel="noopener noreferrer">here</a></p>
 <ul>
 <li>Program.cs - It configures the startup parameters for the service and initializes it. Using Topshelf, one can easily debug it as Console Application before deploying it as Service.</li>
 </ul>
 <iframe src="//carbon.now.sh/embed/b2869d4f44fe14f439c6f0e60ea2b5d5?filename=Program.cs" style=transform:scale(.9);width:1024px;height:473px;border:0;overflow:hidden sandbox="allow-scripts allow-same-origin"></iframe>
-<p>Refer Gist <a href=https://gist.github.com/sachinsu/b2869d4f44fe14f439c6f0e60ea2b5d5#file-program-cs>here</a></p>
+<p>Refer Gist <a href=https://gist.github.com/sachinsu/b2869d4f44fe14f439c6f0e60ea2b5d5#file-program-cs target=_blank rel="noopener noreferrer">here</a></p>
 <p>Above Code was targetted at .NET Framework but the same can potentially be used on .NET Core thus targetting both Windows and Linux.</p>
 <p>Happy Coding !!</p>
 <hr>

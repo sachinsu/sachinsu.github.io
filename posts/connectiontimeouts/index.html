@@ -116,7 +116,7 @@ Simplified deployment Architecture is as below,
 <p>Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.</p>
 <p>Team is experienced in developing and running .NET Apps, but they needed help to diagnose and fix &ldquo;Connection request timed out&rdquo; exceptions being thrown while connecting to backend database.</p>
 <h2 id=problem-statement>Problem Statement</h2>
-<p>Host of .NET Applications (Web Applications, Web APIs) connect to Oracle Database. Each of them use <a href=https://www.oracle.com/database/technologies/appdev/dotnet/odp.html>ODP.NET</a>. ODP.NET maintains connection pool per Application domain (Database resident Connection pool is not used). Some of these applications receive high number of requests per second compared to others.</p>
+<p>Host of .NET Applications (Web Applications, Web APIs) connect to Oracle Database. Each of them use <a href=https://www.oracle.com/database/technologies/appdev/dotnet/odp.html target=_blank rel="noopener noreferrer">ODP.NET</a>. ODP.NET maintains connection pool per Application domain (Database resident Connection pool is not used). Some of these applications receive high number of requests per second compared to others.</p>
 <p><code>Oracle.ManagedDataAccess.Client.OracleException (0x80004005): Connection request timed out....</code> has been reported randomly which results in failure of business transactions. ODP.NET provides extensive trace and along with above trace also contains <code>OracleInternal.Network.NetworkException (0x80004005): Network Transport: TCP transport address connect failure ---> System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</code></p>
 <p>Specifically, Applications, receiving less traffic, were reporting it often compared to those with high traffic.</p>
 <h2 id=approach>Approach</h2>
@@ -129,7 +129,7 @@ Simplified deployment Architecture is as below,
 <p>Check online documentation regarding this exception,</p>
 <ul>
 <li>
-<p>&ldquo;Pooled&rdquo; or &ldquo;Non-pooled&rdquo; Connection - Whenever, ODP.NET raises &ldquo;..timed out&rdquo; error, it diffrentiates the same to indicate whether error is due to delay in retrieving connection from pool or if it is due to delay from the database server (Ref: <a href=https://docs.oracle.com/en/database/oracle/oracle-data-access-components/19.3/odpnt/featConnecting.html#GUID-1152D13D-464C-4FE7-9949-32FCA9572B59>Here</a>). From this, it was clear that issue is clearly due to delay in obtaining response from database server.While this was happening , Database server (8 CPU Core box) was reporting less than 50% CPU Usage but it still had large number of inactive sessions originated from IIS Servers.</p>
+<p>&ldquo;Pooled&rdquo; or &ldquo;Non-pooled&rdquo; Connection - Whenever, ODP.NET raises &ldquo;..timed out&rdquo; error, it diffrentiates the same to indicate whether error is due to delay in retrieving connection from pool or if it is due to delay from the database server (Ref: <a href=https://docs.oracle.com/en/database/oracle/oracle-data-access-components/19.3/odpnt/featConnecting.html#GUID-1152D13D-464C-4FE7-9949-32FCA9572B59 target=_blank rel="noopener noreferrer">Here</a>). From this, it was clear that issue is clearly due to delay in obtaining response from database server.While this was happening , Database server (8 CPU Core box) was reporting less than 50% CPU Usage but it still had large number of inactive sessions originated from IIS Servers.</p>
 </li>
 <li>
 <p>Since the exception was reported frequently in low traffic applications, it was decided to track and verify the same on firewall and database server,</p>
@@ -164,7 +164,7 @@ Simplified deployment Architecture is as below,
 <li>Turn &ldquo;KeepAlive&rdquo; while connecting to database</li>
 <li>Leverage ODP.NET tracing in case of exception</li>
 <li>Modify the connection lifetime to be less than time out at firewall and increase the &ldquo;Time out&rdquo; period.</li>
-<li>Introduce Retry functionality using Excellent <a href=https://github.com/App-vNext/Polly>Polly</a> library with exponential back-off.</li>
+<li>Introduce Retry functionality using Excellent <a href=https://github.com/App-vNext/Polly target=_blank rel="noopener noreferrer">Polly</a> library with exponential back-off.</li>
 </ul>
 <p><code>
 <iframe src="//carbon.now.sh/embed/d3888ab4418b937a650e880ec4682653?filename=extensions.cs" style=transform:scale(.9);width:1024px;height:473px;border:0;overflow:hidden sandbox="allow-scripts allow-same-origin"></iframe>
@@ -178,7 +178,7 @@ Simplified deployment Architecture is as below,
 <li>For a distributed system, Always validate assumptions by dignosing end to end.</li>
 <li>Plan to have test automation readyness to simulate production like load.</li>
 <li>Monitoring the behavior end to end using logs.</li>
-<li>Currently, Pool settings across applications is not optimal going by Oracle Real world Guidelines, also be mindful of <a href=https://docs.oracle.com/en/database/oracle/oracle-database/18/adfns/connection_strategies.html>Connection Storms</a></li>
+<li>Currently, Pool settings across applications is not optimal going by Oracle Real world Guidelines, also be mindful of <a href=https://docs.oracle.com/en/database/oracle/oracle-database/18/adfns/connection_strategies.html target=_blank rel="noopener noreferrer">Connection Storms</a></li>
 </ul>
 <p>Happy Troubleshooting !!</p>
 <hr>

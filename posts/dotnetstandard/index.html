@@ -101,14 +101,14 @@
 </div>
 </div><div class="content post__content clearfix">
 <h2 id=background>Background</h2>
-<p>One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as <a href="https://www.youtube.com/watch?v=5OjqD-ow8GE">Modular Monolith</a>. As part of it&rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the <em>Web</em> channel, there was need to develop a Web application with,</p>
+<p>One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as <a href="https://www.youtube.com/watch?v=5OjqD-ow8GE" target=_blank rel="noopener noreferrer">Modular Monolith</a>. As part of it&rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the <em>Web</em> channel, there was need to develop a Web application with,</p>
 <ul>
 <li>High availability</li>
 <li>Lightweight, High throughput (Need to support few thousand(s) active users)</li>
 </ul>
 <p>Accordingly, we have been exploring developing this Web Application in .NET core 3.1. However, it also means that we will have to use class libraries, targeted at .NET framework 4.6.1, in .NET core and vice-versa. How can this be done?</p>
 <p><strong>.NET Standard to the rescue !!</strong></p>
-<p><a href=https://docs.microsoft.com/en-us/dotnet/standard/net-standard>.Net Standard</a> is a standard that enabled development of portable libraries usable across .NET versions.</p>
+<p><a href=https://docs.microsoft.com/en-us/dotnet/standard/net-standard target=_blank rel="noopener noreferrer">.Net Standard</a> is a standard that enabled development of portable libraries usable across .NET versions.</p>
 <p>Below is approach adopted to create usable libraries across .NET framework & .NET Core.</p>
 <ul>
 <li>
@@ -126,7 +126,7 @@
 <li>Create a library that targets .NET Standard.
 <ul>
 <li>
-<p>Refer to Table on <a href=https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support>Implementation Support</a> to decide on version that can be targetted at. In my case, it was 2.0 (Remember that higher the version, more APIs will be available to use). Do check <a href=https://docs.microsoft.com/en-us/dotnet/api/>.NET API browser</a>, which lists API available with each version.</p>
+<p>Refer to Table on <a href=https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support target=_blank rel="noopener noreferrer">Implementation Support</a> to decide on version that can be targetted at. In my case, it was 2.0 (Remember that higher the version, more APIs will be available to use). Do check <a href=https://docs.microsoft.com/en-us/dotnet/api/ target=_blank rel="noopener noreferrer">.NET API browser</a>, which lists API available with each version.</p>
 </li>
 <li>
 <p>Using .NET core, use below command,
@@ -162,8 +162,8 @@ This will generate <code>&lt;name>1.0.0.nupkg</code> package in bin\debug folder
 <li>
 <p>Before consuming .NET standard library, few steps are needed since VS 2015 only has legacy support for consuming .NET core artifacts also it does not have latest version of Nuget, so lets do below,</p>
 <ul>
-<li>Install NuGet 3.6.0 or higher for VS 2015 from <a href=https://www.nuget.org/downloads>NuGet&rsquo;s download site</a></li>
-<li>Install the &ldquo;.NET Standard Support for Visual Studio 2015&rdquo; from <a href=https://www.microsoft.com/net/download/core>here</a></li>
+<li>Install NuGet 3.6.0 or higher for VS 2015 from <a href=https://www.nuget.org/downloads target=_blank rel="noopener noreferrer">NuGet&amp;amp;rsquo;s download site</a></li>
+<li>Install the &ldquo;.NET Standard Support for Visual Studio 2015&rdquo; from <a href=https://www.microsoft.com/net/download/core target=_blank rel="noopener noreferrer">here</a></li>
 <li>Open the csproj file in Text Editor and add <code>&lt;ImplicitlyExpandDesignTimeFacades></code> tag as shown in below example,</li>
 </ul>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
@@ -189,7 +189,7 @@ This will generate <code>&lt;name>1.0.0.nupkg</code> package in bin\debug folder
 <li>
 <p>Step 3 -</p>
 <ul>
-<li>Within VS 2015, Goto Nuget Console and install the package created earlier. This <a href=https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio>link</a> has steps to consume local nuget package(s).</li>
+<li>Within VS 2015, Goto Nuget Console and install the package created earlier. This <a href=https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio target=_blank rel="noopener noreferrer">link</a> has steps to consume local nuget package(s).</li>
 </ul>
 </li>
 </ul>

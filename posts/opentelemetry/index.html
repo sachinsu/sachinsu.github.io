@@ -112,14 +112,14 @@
 <li><strong>Metrics</strong>: aggregate statistics (mostly counters and gauges) about processes and infrastructure, typically with key:value tags attached to disaggregate patterns</li>
 <li><strong>Logs</strong>: timestamped messages – sometimes structured – emitted by services or other components (though, unlike traces, not necessarily associated with any particular user request or transaction)</li>
 </ul>
-<p>To this effect, Cloud Native Computing Foundation (<a href=https://cncf.io>CNCF</a>) has been working on Opentelemetry.</p>
+<p>To this effect, Cloud Native Computing Foundation (<a href=https://cncf.io target=_blank rel="noopener noreferrer">CNCF</a>) has been working on Opentelemetry.</p>
 <h2 id=what-is-opentelemetry>What is OpenTelemetry?</h2>
 <blockquote>
 <p>OpenTelemetry is a vendor-neutral standard for collecting telemetry data for applications, their supporting infrastructures, and services.</p>
 </blockquote>
-<p>For deep dive, history etc., refer to Overview <a href=https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md>here</a>.</p>
+<p>For deep dive, history etc., refer to Overview <a href=https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md target=_blank rel="noopener noreferrer">here</a>.</p>
 <p>So is this standard already available? As of this writing, it is about to go <strong>GA</strong> soon. This makes it more important to be aware of its scope (subjected to change). Let&rsquo;s see how it is proposing to address/implement Observability.</p>
-<p>Below diagram depicts what OpenTelemetry does in Nutshell (Source: <a href=https://opentelmetry.io>Opentelemetry.io</a>),</p>
+<p>Below diagram depicts what OpenTelemetry does in Nutshell (Source: <a href=https://opentelmetry.io target=_blank rel="noopener noreferrer">Opentelemetry.io</a>),</p>
 <figure><img src=https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Reference_Architecture.svg><figcaption>
 <h4>OpenTelemetry in Nutshell</h4>
 </figcaption>
@@ -133,8 +133,8 @@
 <p>While vendors, having back-end systems, are providing or working on integrations with OpenTelemetry. The OpenTelemetry team has provided client libraries for Instrumentation in Go, .NET, Java,JavaScript, Python (and more coming). So lets us see what these libraries offer as of today by implementing .NET library.</p>
 <p>In this post, We will look at how Opentelemetry helps us with &ldquo;Distributed tracing&rdquo;.</p>
 <h3 id=opentelemetry-for-net>OpenTelemetry for .NET</h3>
-<p><a href=https://dot.net>.NET</a> client of OpenTelemetry supports both <a href=https://dotnet.microsoft.com/download/dotnet-framework>.NET Framework</a> as well as <a href=https://dotnet.microsoft.com/download/dotnet-core>.NET Core</a>.</p>
-<p>For list of available instrumentation libraries and exporters, refer <a href=https://github.com/open-telemetry/opentelemetry-dotnet>here</a></p>
+<p><a href=https://dot.net target=_blank rel="noopener noreferrer">.NET</a> client of OpenTelemetry supports both <a href=https://dotnet.microsoft.com/download/dotnet-framework target=_blank rel="noopener noreferrer">.NET Framework</a> as well as <a href=https://dotnet.microsoft.com/download/dotnet-core target=_blank rel="noopener noreferrer">.NET Core</a>.</p>
+<p>For list of available instrumentation libraries and exporters, refer <a href=https://github.com/open-telemetry/opentelemetry-dotnet target=_blank rel="noopener noreferrer">here</a></p>
 <p>In the below sections, We will try to simulate a scenario, which is typical in Microservices style of Architecture, where service invokes another service using HTTP. Now, aim is to verify how using OpenTelemetry will help in watching traffic between these two services.</p>
 <figure><img src=/images/ot_scenario.svg><figcaption>
 <h4>Sample Scenario</h4>
@@ -264,7 +264,7 @@ Sdk.CreateTracerProviderBuilder()
 </figcaption>
 </figure>
 <ul>
-<li>Activity Id (GUID) is generated for a Span (Refer <a href=https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/overview.md#trace>here</a> for details on what span means)</li>
+<li>Activity Id (GUID) is generated for a Span (Refer <a href=https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/overview.md#trace target=_blank rel="noopener noreferrer">here</a> for details on what span means)</li>
 <li>It also records start and end time</li>
 </ul>
 </li>
@@ -290,12 +290,12 @@ Sdk.CreateTracerProviderBuilder()
 </ul>
 <p>In Summary, this default telemetry can obviously be enhanced by adding Tags. When coupled with additional telemetry in the form of metering (to statistically observe behavior of high traffic, large scale system) and telemetry from Infrastructure (i.e. OS) and other Systems (e.g. Databases), it truly provides complete view of proceedings end to end.</p>
 <p>Hope this provides overview of instrumentation as provided by OpenTelemetry. Let me know if you have any questions or suggestions in Comments section below.</p>
-<p>Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder <code>Opentelemetry</code> in repository <a href=https://github.com/sachinsu/opentelemetrydotnet>here</a></p>
+<p>Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder <code>Opentelemetry</code> in repository <a href=https://github.com/sachinsu/opentelemetrydotnet target=_blank rel="noopener noreferrer">here</a></p>
 <h3 id=useful-references>Useful References,</h3>
 <ul>
-<li><a href=https://otel.lightstep.com>What is OpenTelemetry?</a></li>
-<li><a href=https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/>OpenTelemetry in .NET</a></li>
-<li><a href="https://www.youtube.com/watch?v=r8UvWSX3KA8">Short course on OpenTelemetry</a>)</li>
+<li><a href=https://otel.lightstep.com target=_blank rel="noopener noreferrer">What is OpenTelemetry?</a></li>
+<li><a href=https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/ target=_blank rel="noopener noreferrer">OpenTelemetry in .NET</a></li>
+<li><a href="https://www.youtube.com/watch?v=r8UvWSX3KA8" target=_blank rel="noopener noreferrer">Short course on OpenTelemetry</a>)</li>
 </ul>
 <p>Happy Coding !!</p>
 <hr>
