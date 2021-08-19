@@ -27,9 +27,9 @@ For deep dive, history etc., refer to Overview [here](https://github.com/open-te
 
 So is this standard already available? As of this writing, it is about to go **GA** soon. This makes it more important to be aware of its scope (subjected to change). Let's see how it is proposing to address/implement Observability.
 
-Below diagram depicts what OpenTelemetry does in Nutshell (Source: [AppDynamics](www.appdynamics.com)),
+Below diagram depicts what OpenTelemetry does in Nutshell (Source: [Opentelemetry.io](https://opentelmetry.io)),
 
-{{< figure src="https://www.appdynamics.com/wp-content/uploads/2020/10/17869_AWS_announce_OT_img2_C2-1.jpg" title="OpenTelemetry in Nutshell" >}}
+{{< figure src="https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Reference_Architecture.svg" title="OpenTelemetry in Nutshell" >}}
 
 The general process of using OpenTelemetry is,
 
