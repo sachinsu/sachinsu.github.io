@@ -171,6 +171,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Identifying disk i/o bottlenecks in Linux](https://haydenjames.io/linux-server-performance-disk-io-slowing-application/)
 - [Signoz - Opentelemetry based Observability platform](https://signoz.io/)
 - [What is eBPF & its application in Observability](https://speakerdeck.com/rakyll/ebpf-in-microservices-observability-399bb4af-40c0-4609-966e-bc521ed6ee18)
+- [Database Reliability Engineering(ebook)](https://g.co/kgs/c9aMXr)
 
 ## Distributed messaging, Streams
 
