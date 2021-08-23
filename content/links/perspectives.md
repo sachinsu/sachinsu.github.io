@@ -34,3 +34,4 @@ Section covering Business, project/programming perspectives
 - [Foundational papers on distributed systems](http://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html)
 - [Dont end week with nothing](https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing)
 - [Awesome Scalability - Collection of Articles around Performance, Scalability etc.](https://github.com/binhnguyennus/awesome-scalability)
+- [Ego is the Enemy](https://fs.blog/2016/06/ego-is-the-enemy-genghis-khan/)
