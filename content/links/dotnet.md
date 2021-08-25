@@ -31,6 +31,7 @@ Platform where i have spent most time till now.
 ## Performance related 
 
 - [List of Awesome Resources](https://github.com/adamsitnik/awesome-dot-net-performance)
+- [Using System.Diagnostics.StopWatch.GetTimeStamp for accurate duration](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.gettimestamp?view=net-5.0)
 - [C# Job Queues with TPL Dataflow and Failure Handling](https://michaelscodingspot.com/c-job-queues-part-3-with-tpl-dataflow-and-failure-handling/)
 - [Know about Threadpool, types of Threads in CLR and changing them to improve performance](https://gist.github.com/JonCole/e65411214030f0d823cb)
 - [Work flow of diagnosing memory performance issues](https://devblogs.microsoft.com/dotnet/work-flow-of-diagnosing-memory-performance-issues-part-0/)
