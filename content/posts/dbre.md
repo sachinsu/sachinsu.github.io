@@ -161,17 +161,54 @@ expensive operation and should be utilized only when SLOs are in imminent danger
 
         * Storage Area Networks (SAN) - data snapshots and movement are some of the nicest features in modern infrastructures, where SSDs provide better IO than traditional SANs.
 
+        * In relational databases, data is stored in containers called blocks or pages that correspond to a specific number of bytes on disk. Different databases will use blocks or pages in their terminology. In this book, we use blocks to refer to both. Blocks are the finest level of granularity for storing records. Oracle Database stores data in data blocks. A page is a fixed size called a block, just like blocks on disks. Blocks are the smallest size that can be read or written to access data. This means that if a row is 1 K and the block size is 16 K, you will still incur a 16 K read operation. If a database block size is smaller than the filesystem block size, you will be wasting I/O for operations that require multiple pages. A block require some metadata to be stored, as well, usually in the form of a header and trailer or footer. This will include disk address information, information about the object the block belongs to, and information about the rows and activity that have
+        occurred within that block. 
+
+        * Most databases structure their data in a binary tree format, also known as B-tree. A Btree is a data structure that self-balances while keeping data sorted. The B-tree is optimized for the reading and writing of blocks of data, which is why B-trees are commonly found in databases and filesystems
+
+        * A crucial variable in configuring your databases for underlying storage is the database block size. We’ve discussed the importance of aligning database block sizes with the underlying disk block sizes, but that is not enough. If you are using Solid-State Drives (SSDs), for instance, you might find smaller block sizes provide much better performance while traversing B-trees. An SSD can experience a 30% to 40% latency penalty on larger blocks versus performance on Hard Disk
+        Drives (HDDs). Because reads and writes are required in B-tree structures, this must be taken into account.
+
+        * Summary of the attributes and benefits of B-trees:
+            * Excellent performance for range-based queries.
+            * Not the most ideal model for single-row lookups
+            * Keys exist in sorted order for efficient key lookups and range scans.
+            * Structure minimizes page reads for large datasets.
+            * By not packing keys into each page, deletes and inserts are efficient, with only occasional splits and merges being needed.
+            * Perform much better if the entire structure can fit within memory.
+
+        * In an sorted-string tables (SST) storage engine, there are a number of files, each with a set of sorted key–value pairs inside. Unlike in the block storage discussed earlier, there is no need for the metadata overhead at the block or row level. Keys and their values are opaque to the DBMS and stored as arbitrary binary large objects (BLOBs). Because they are stored in a sorted fashion, they can be read sequentially and treated as an index onthe key by which they are sorted.
+
+        * There is an algorithm that combines in-memory tables, batch flushing, and periodic compaction in SST storage engines. This algorithm is referred to a log-structured merge (LSM) tree architecture
+
+        * A bloom filter is a data structure that you can use to evaluate whether a record key is present in a given set, which, in this case, is an SSTable
+
+        * Indexing 
+            * Hash indexes - A hash map is a collection of buckets that contain the results of a hash function applied to a key. That hash points to the location where the records can be found. A hash map is only viable for single-key lookups because a range scan would be prohibitively expensive. 
+            * Bitmap Indexes - A bitmap index stores its data as bit arrays (bitmaps). When you traverse the index, it is done by performing bitwise logical operations on the bitmaps. In B-trees, the index performs the best on values that are not repeated often. This is also known as high cardinality. The bitmap index functions much better when there are a small number of values being indexed
+
+        * Replication
+            * Types  
+                * Synchronous - A transaction that is written to a log on the leader is shipped immediately over the network to the followers. The leader will not commit the transaction until the followers have confirmed that they have recorded the write. This ensures that every node in the cluster is at the same commit point. This means that reads will be consistent regardless of what node they come from, and any node can take over as a leader without risk of data loss if the current leader fails. On the other hand, network latency or degraded nodes can all cause write latency for the transaction on the leader.
+                * Asynchronous - A transaction is written to a log on the leader and then committed and flushed to disk. A separate process is responsible for shipping those logs to the followers, where they are applied as soon as possible. In asynchronous replication models, there is always some lag between what is committed on the leader and what is committed on the followers. Additionally, there is no guarantee that the commit point on one follower is the same as the others. In practice, the time gap between commit points might be too small to notice.
+                * Semi-synchronous -  In this algorithm, only one node is required to confirm to the leader that they have recorded the write. This reduces the risk of latency impacts when one or more nodes are functioning in degraded states while guaranteeing that at least two nodes on the cluster are at the same commit point. In this mode, there is no longer a guarantee that all nodes in the cluster will return the same data if a read is issued on any reader.
+            * Formats
+                * Statement based logs - the actual SQL or data write statement used to execute the write is recorded and shipped from the leader to followers. e.g. MySQL 
+                * Write-ahead logs -  A write-ahead log (WAL), also known as a redo log, contains a series of events, each event mapped to a transaction or write. In the log are all of the bytes required to apply a transaction to disk. In systems, such as PostgreSQL, that use this method, the same log is shipped directly to the followers for application to disk.
+
+            * Approach 
+                * Row based Replication - In row-based replication (also called logical), writes are written to replication logs on the leader as events indicating how individual table rows are changed. Columns with new data are indicated, columns with updated information show before/after images, and deletes of rows are indicated as well. Replicas use this data to directly modify the row rather than needing to execute the original statement.
+                * Block level Replication - Block-level replication is synchronous and eliminates significant overhead in the replicated write. However, you cannot have a running database instance on the secon‐dary node. So, when a failover occurs, a database instance must be started. If the for‐mer master failed without a clean database shutdown, this instance will need to perform recovery just as if the instance had been restarted on the same node.
+
     * Virtualization 
         * Hypervisor - A hypervisor or virtual machine monitor (VMM) can be software, firmware, or hardware. The hypervisor creates and runs VMs. A computer on which a
             hypervisor runs one or more VMs is called a host machine, and each VM is called a guest machine. The hypervisor presents the guest operating systems with
             a virtual operating platform and manages the execution of the guest operating systems.  Databases running within hypervisors show lower boundaries for concurrency than the same software on bare metal. When designing for these virtualized environments, the focus should be on a horizontally scaled approach, minimizing concurrency within nodes.
 
-        * Storage - Storage durability and performance are not what you would expect in the virtualized world. Between the page cache of your VM and the physical
-            controller lies a virtual controller, the hypervisor, and the host’s page cache. This means increased latency for I/O. For writes, hypervisors do not honor
-            calls in order to manage performance. This means that you cannot guarantee that your writes are flushed to disk when there is a crash.
+        * Storage - Storage durability and performance are not what you would expect in the virtualized world. Between the page cache  of your VM and the physical controller lies a virtual controller, the hypervisor, and the host’s page cache. This means increased latency for I/O. For writes, hypervisors do not honor calls in order to manage performance. This means that you cannot guarantee that your writes are flushed to disk when there is a crash.
     
         * Important aspects, 
-            *  Relaxed durability means data loss must be considered an inevitability.
+            * Relaxed durability means data loss must be considered an inevitability.
             * Instance instability means automation, failover, and recovery must be very reliable.
             * Horizontal scale requires automation to manage significant numbers of servers.
             * Applications must be able to tolerate latency instability.
@@ -179,6 +216,17 @@ expensive operation and should be utilized only when SLOs are in imminent danger
     * Infrastructure Management
         * Packer is a tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon
             EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.
-            * An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done     to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead
+            * An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done     to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.
 
         * Service Discovery & Service catalog - Service discovery is an abstraction that maps specific designations and port numbers of your services and load balancers to semantic names. A service catalog can be very simple, storing service data to integrates services, or it can include numerous additional facilities, including health checks to ensure that data in the catalog provides working resources.
+
+        * Isolation of Network Traffic - Network traffic can be broken up in, 
+            * Internode communications
+            * Application traffic
+            * Administrative traffic
+            * Backup and recovery traffic 
+
+            Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC
+
+    * Data Security
+        * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator

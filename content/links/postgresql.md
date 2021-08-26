@@ -6,7 +6,7 @@ draft: false
 
 # PostgreSQL 
 
-## Links
+## General Articles
 - [Using generate_series feature for reporting](https://rob.conery.io/2018/08/01/simple-monthly-reports-in-postgresql-using-generate_series/)
 - [When Postgres blocks: 7 tips for dealing with locks](https://www.citusdata.com/blog/2018/02/22/seven-tips-for-dealing-with-postgres-locks/)
 - [PostgreSQL - Don't do this](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Database_Encoding)
@@ -67,6 +67,8 @@ draft: false
 - [Testing PG High availability with Patroni](https://www.percona.com/blog/2021/06/11/postgresql-ha-with-patroni-your-turn-to-test-failure-scenarios/)
 - [Comparison of PostgreSQL Monitoring tools](https://sematext.com/blog/postgresql-monitoring/)
 - [Using Timeout feature of PostgreSQL](https://blog.crunchydata.com/blog/control-runaway-postgres-queries-with-statement-timeout)
+- [Benchmarking bulk data ingestion in PostgreSQL](https://aws.amazon.com/blogs/database/speed-up-time-series-data-ingestion-by-partitioning-tables-on-amazon-rds-for-postgresql/)
+- [All about indexes in PostgreSQL](https://pganalyze.com/blog/postgres-create-index)
 
 ## Interesting Extensions/Products
 
