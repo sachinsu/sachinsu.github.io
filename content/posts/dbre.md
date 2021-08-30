@@ -200,6 +200,32 @@ expensive operation and should be utilized only when SLOs are in imminent danger
                 * Row based Replication - In row-based replication (also called logical), writes are written to replication logs on the leader as events indicating how individual table rows are changed. Columns with new data are indicated, columns with updated information show before/after images, and deletes of rows are indicated as well. Replicas use this data to directly modify the row rather than needing to execute the original statement.
                 * Block level Replication - Block-level replication is synchronous and eliminates significant overhead in the replicated write. However, you cannot have a running database instance on the secon‐dary node. So, when a failover occurs, a database instance must be started. If the for‐mer master failed without a clean database shutdown, this instance will need to perform recovery just as if the instance had been restarted on the same node.
 
+            *  Methods
+                * Single Leader -  (Simplest of replicated environments) All writes go to single leader and are replicated to other nodes. Advantages are that there will be no consistency conflicts. There are some variations like data getting replicated to only few followers which further replicate to remaining ones. By far the most common implementation of replication due to simplicity.
+
+                * Multiple Leaders - There are 2 approaches, 
+                    * There are typically 2 leaders responsible for receiving writes and propagating them to replicas. each leader is located in different data centers/availability zones. 
+                    * Any node can take reads or writes at any time. 
+                    More complex than Single Leader approach due to need for conflict resolution.
+
+                    Use cases, 
+                    * Availability - In case of failover with Single Leader approach, impact may last from 30 seconds to minutes depending on how the system is designed. This is due to replication consistency checks, crash recovery and more such steps. This impact could be unacceptable.
+                    * Locality - Application is requirement is such that it needs to cater to users in different regions with separate datacenters. This could be to for data protection purposes or to ensure low latency.
+                    * Disaster Recovery -  Highly critical application with need to have multiple data centers to ensure availability.
+
+                   Conflict resolution appraoches, 
+                   * Sharding - distribute range of primary keys across leaders 
+                   * Affinity - Specific users (by region, unique ID) are always redirected to specific leader
+                   * Shard by Application layer ie. Application instance is deployed in each datacenter avoid need for active/active cross region replication 
+                
+                * Write anywhere- Any node can take read or write requests. Attributes typically associated with such systems are, 
+                    * Eventual consistency -  there is no guarantee that data is consistent across all nodes at any time, that data will eventually converge.
+                    * Read & Write Quorum - It indicates minimum number of readers or writers necessary to guarantee consistency of data. Quorum of 2 in 3 node cluster means one node's failure is tolerated. Formula: N is the number of nodes in a cluster.R is the number of read nodes available, and W is the number of write nodes. If R + W is greater than N, you have an effective quorum to guarantee at least one good read after a write.
+                    * Sloppy quorums - Indicates situation when nodes are available but unable to meet quorum due to lack of data.
+                    * Anti Entropy - Mechanism to keep data synchronized across nodes even in case of inactivity (i.e. no reads). Anti-entropy is critical for datastores that store a lot of cold, or infrequently accessed,data.
+
+    * Data governance is the management of the availability, integrity, and security of the data that an organization saves and uses. Intro‐duction of new data attributes is something that should be considered carefully and documented. The use of JSON for data storage allows new data attributes to be introduced too easily and even accidentally.
+
     * Virtualization 
         * Hypervisor - A hypervisor or virtual machine monitor (VMM) can be software, firmware, or hardware. The hypervisor creates and runs VMs. A computer on which a
             hypervisor runs one or more VMs is called a host machine, and each VM is called a guest machine. The hypervisor presents the guest operating systems with
@@ -230,3 +256,42 @@ expensive operation and should be utilized only when SLOs are in imminent danger
 
     * Data Security
         * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
+
+    * Data Architecture
+        * Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
+            * Low-latency writes and queries
+            * High availability
+            * Low Mean Time to Recover (MTTR)
+            * Ability to scale with application traffic
+            * Easy integration with application and operational services
+
+        * Database proxies  - Sits between application and frontline datastores. It could be,
+            * Layer 4 (Networking transport layer) - Uses the information available at networking layer like destination IP Addresses to distribute the traffic. This type can not work with factors like load or replication lag while distributing traffic
+            * Layer 7  - Operates at higher level of networking transport layer. At this layer, proxy can include functionality like, 
+                * Health checking and redirection to healthy servers
+                * Splitting of reads and writes to send reads to replicas
+                * Query rewriting to optimize queries that cannot be tuned in code
+                * Caching query results and returning them
+                * Redirecting traffic to replicas that are not lagged
+                * Generate metrics on queries
+                * Perform firewall filtering on query types or hosts 
+
+        * Event and Message systems - Used for actions to be triggered after a transaction like, 
+            * Data must be put into downstream analytics and warehouses
+            * Orders must be fulfilled
+            * Fraud detection must review a transaction
+            * Data must be uploaded to caches or Content Delivery Networks (CDNs)
+            * Personalization options must be recalibrated and published
+
+        * Caches and Memory Store - Used to overcome slowness in Disk I/o. Approaches to putting data are, 
+            * Putting data in cache after its been written to persistent data store 
+            * Writing to cache and datastore at the same time (Fragile due to possibility of one of the store failing)
+            * Writing to cache first and then to datstore asynchronously (Write-through approach)
+
+        * Lambda Architecture - The Lambda architecture is designed to handle a significant volume of data that is processed rapidly to serve near-real-time requests, while also supporting longrunning computation. Lambda consists of three layers: batch processing, real-time processing, and a query layer.If data is written to a frontend datastore, you can use a distributed log such as Kafka to create a distributed and immutable log for the Lambda processing layers. Some data is written directly to log services rather than going through a datastore. The pro‐cessing layers ingest this data.
+
+            * Low latency results in real time 
+        
+        * Kappa Architecture - Append only immutable log is used in this Architecture. Kappa architecture eliminates the batch processing system, with the expectation that the streaming system can handle all transformations and computations. One of the biggest values to Kappa is the reduction in complexity and operational expense of Lambda by eliminating the batch processing layer. It also aims to reduce the pain of migrations and reorganizations. When you want to reprocess data, you can start a reprocessing, test it, and switch over to it.
+
+        * Event sourcing pattern - Changes to entities are saved as sequence of state changes. When state changes, a new event is appended to the log. The datastore is called as event store. 

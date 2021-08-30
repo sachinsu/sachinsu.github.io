@@ -40,6 +40,7 @@ Knowledge base around general database related topics.
 - [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
 - [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
 - [How databases optimize Subqueries](https://scattered-thoughts.net/writing/materialize-decorrelation)
+- [Approaches to database migration](https://www.wix.engineering/post/wix-inbox-journey-3-approaches-for-zero-downtime-database-migration)
 
 ## Tools Collection 
 
@@ -92,6 +93,8 @@ Knowledge base around general database related topics.
 - [Compressing data with Parquet](https://dev.l1x.be/posts/2021/03/08/compressing-data-with-parquet/)
 - [Mara pipelines - Opinionated ETL framework](https://github.com/mara/mara-pipelines)
 - [Enso - Interactive Data Workflow builder with no coding](https://github.com/enso-org/enso)
+- [Database for Event Sourcing](https://www.eventstore.com/)
+
 
 ## Data Discovery
 

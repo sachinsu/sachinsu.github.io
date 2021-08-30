@@ -191,7 +191,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Microservices Antipattern - Queue Explosion](http://cpitman.github.io/microservices/2018/03/25/microservice-antipattern-queue-explosion.html)
 - [Trying out durable, replicated quorum queues in RabbitMQ](https://seroter.com/2020/01/28/lets-try-out-the-new-durable-replicated-quorum-queues-in-rabbitmq/)
 - [ZeroMQ - Universal Messaging Library](https://zeromq.org/)
-
+- [Comparing Techniques for Communicating Between HTTP Services](https://ardalis.com/comparing-techniques-communicating-between-services/)
 
 
 ## Rust

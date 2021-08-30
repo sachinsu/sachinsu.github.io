@@ -1,4 +1,4 @@
----
+    ---
 title: "Perspectives"
 date: 2020-02-18T12:33:07+05:30
 draft: false
@@ -35,3 +35,4 @@ Section covering Business, project/programming perspectives
 - [Dont end week with nothing](https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing)
 - [Awesome Scalability - Collection of Articles around Performance, Scalability etc.](https://github.com/binhnguyennus/awesome-scalability)
 - [Ego is the Enemy](https://fs.blog/2016/06/ego-is-the-enemy-genghis-khan/)
+- [How to remember what you read?](https://fs.blog/2021/08/remember-books/)
