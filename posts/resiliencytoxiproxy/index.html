@@ -122,7 +122,7 @@ etc.</p>
 </li>
 <li>
 <p>Setup proxy between application and database either through Toxiproxy CLI (it can also be done programmatically using Toxiproxy-Go client),</p>
-<pre><code>    [
+<pre tabindex=0><code>    [
         {
             &quot;name&quot;: &quot;pgsql&quot;, 
             &quot;listen&quot; : &quot;[::]:6000&quot;,
@@ -131,7 +131,7 @@ etc.</p>
         }
     ]
 </code></pre><p>or through Code like,</p>
-<pre><code>    // InjectLatency helper
+<pre tabindex=0><code>    // InjectLatency helper
     func InjectLatency(name string, delay int) *toxiproxy.Proxy {
         proxy, err := toxiClient.Proxy(name)
 

@@ -149,7 +149,7 @@
 <ul>
 <li>Import users - This activity will import list of users from file/stream. For the sake of simplicity, we will just pass it as string.</li>
 </ul>
-<pre><code>func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
+<pre tabindex=0><code>func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
 
     logger := activity.GetLogger(ctx)
 
@@ -213,7 +213,7 @@
 </code></pre><ul>
 <li>Approve users - This activity will mark all those users, Approved by Admininstrator via Service, as approved.</li>
 </ul>
-<pre><code>func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
+<pre tabindex=0><code>func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
 
     logger := activity.GetLogger(ctx)
     logger.Info(&quot;ApprovedUsers called&quot;, zap.String(&quot;Dbconn&quot;, DbConnectionString), zap.String(&quot;Userlist&quot;, Users))
@@ -273,7 +273,7 @@
 </code></pre><ul>
 <li>HTTP Service - This service will receive list of approved users and send it over to workflow via Signal,</li>
 </ul>
-<pre><code>    func (s *server) UpdateUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+<pre tabindex=0><code>    func (s *server) UpdateUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
         creader := csv.NewReader(r.Body)
         records, err := creader.ReadAll()

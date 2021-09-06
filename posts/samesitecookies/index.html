@@ -133,7 +133,7 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 </ul>
 <p>The SameSite=Lax setting works for most application cookies.</p>
 <p>Accordingly, below settings were made in startup.cs of the ASP.NET Core Application.</p>
-<pre><code>services.AddSession(options =&gt;
+<pre tabindex=0><code>services.AddSession(options =&gt;
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;

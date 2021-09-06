@@ -132,7 +132,7 @@
 <p>Using .NET core, use below command,
 <code>dotnet new classlib &lt;name></code></p>
 <p>Note that, by default csproj file generated targets .NET Standard, but do confirm by checking in <code>&lt;name>.csproj</code> file, It should have entry like,</p>
-<pre><code>&lt;PropertyGroup&gt;
+<pre tabindex=0><code>&lt;PropertyGroup&gt;
     &lt;TargetFramework&gt;netstandard2.0&lt;/TargetFramework&gt;
 &lt;/PropertyGroup&gt;
 </code></pre><p>Change the version of .NET Standard if required.</p>
@@ -166,7 +166,7 @@ This will generate <code>&lt;name>1.0.0.nupkg</code> package in bin\debug folder
 <li>Install the &ldquo;.NET Standard Support for Visual Studio 2015&rdquo; from <a href=https://www.microsoft.com/net/download/core target=_blank rel="noopener noreferrer">here</a></li>
 <li>Open the csproj file in Text Editor and add <code>&lt;ImplicitlyExpandDesignTimeFacades></code> tag as shown in below example,</li>
 </ul>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre tabindex=0><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;Project ToolsVersion=&quot;12.0&quot; DefaultTargets=&quot;Build&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
 &lt;PropertyGroup&gt;
     &lt;Configuration Condition=&quot; '$(Configuration)' == '' &quot;&gt;Debug&lt;/Configuration&gt;

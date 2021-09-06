@@ -176,7 +176,7 @@ What if Monitoring is an afterthought (i.e. application is already in production
 </tbody>
 </table>
 <p>The DDL command will look like,</p>
-<pre><code>
+<pre tabindex=0><code>
 create table apilog
 (time    timestamptz  not null,
  service  text not null,
@@ -188,7 +188,7 @@ create table apilog
 <p><code>SELECT create_hypertable('apilog', 'time');</code></p>
 <p>Note: Timescale transparently manages storage for hyper table and PostgreSQL Developer can continue to use standard SQL/plpgsql with it.</p>
 <p>For the sake of quick testing, One can add dummy data to this table using below SQL,</p>
-<pre><code>insert into apilog
+<pre tabindex=0><code>insert into apilog
 SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance' 
                                   else 'it' end),(case when x = 1 then 'getPrices' 
                                   else 'getUptime' end),  (case when x &lt; 2 then 'success' else 'failure' end),   (current_timestamp - '0 day'::interval) + trunc(random()  * 20) * '1 second'::interval FROM generate_series(0, 5000, 5) AS t(x);
@@ -228,7 +228,7 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
 </ul>
 <p>Configuration - Once fluentbit is installed, It needs to be configured to read Web server logs , parse them and push them to PostgreSQL.</p>
 <p>Below is sample configuration to periodically read Web Server Logs (in <a href=https://www.w3.org/TR/WD-logfile target=_blank rel="noopener noreferrer">w3c log format</a>), parse and push them to PostgreSQL,</p>
-<pre><code>[SERVICE]
+<pre tabindex=0><code>[SERVICE]
     Flush        5
     Daemon       Off
     Log_Level    debug
@@ -259,7 +259,7 @@ SELECT (current_timestamp - '0 day'::interval), (case when x = 1 then 'finance'
     Timestamp_Key time
 
 </code></pre><p>Configuration for Parser is as below,</p>
-<pre><code>[PARSER]
+<pre tabindex=0><code>[PARSER]
     Name           dips-w3c
     Format         regex
     Regex         ^(?&lt;time&gt;\d{4}-\d{2}-\d{2} \d{2}[\:\.]\d{2}[\:\.]\d{2}) (?&lt;serverip&gt;\S+) (?&lt;method&gt;\S+) (?&lt;uristem&gt;\S+) (?&lt;uriquery&gt;\S+) (?&lt;serverport&gt;\S+) (?&lt;username&gt;\S+) (?&lt;clientip&gt;\S+) (?&lt;userAgent&gt;\S+) (?&lt;referrer&gt;\S+) (?&lt;status&gt;\S+) (?&lt;substatus&gt;\S+) (?&lt;win32status&gt;\S+) (?&lt;timetaken&gt;\S+) (?&lt;useragent1&gt;\S+) (?&lt;auth&gt;\S+) (?&lt;contenttype&gt;\S+)

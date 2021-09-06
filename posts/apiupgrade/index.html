@@ -142,7 +142,7 @@ This means that upgrade must be done keeping in mind,">
 <p>Lets go through above approaches in detail.</p>
 <h2 id=wcf-service-invoked-from-asmx-asynchronously>WCF service invoked from ASMX asynchronously</h2>
 <p>This involves developing new WCF Service. Existing ASMX based web service will be modified to invoke new WCF Service. Asynchronously invocation should help in this case since whole operation is I/O bound (<code>Asynchrony is a way to get concurrency without multithreading. E.g., freeing up the calling thread instead of blocking it while an I/O operation is in progress</code> Stephen Cleary). Since ASMX is legacy framework and only support Event-based asynchronous pattern (EAP), it is necessary to combine EAP with Task based asynchronous pattern (TAP) which is what async/await uses. Below is sample snippet,</p>
-<pre><code> private async Task&lt;string&gt; FooAsync(int arg)
+<pre tabindex=0><code> private async Task&lt;string&gt; FooAsync(int arg)
         {
             using (var resp = await client.GetAsync(string.Format(&quot;https://jsonplaceholder.typicode.com/todos/{0}&quot;, arg)).ConfigureAwait(false)) {
                 resp.EnsureSuccessStatusCode();
@@ -176,7 +176,7 @@ This means that upgrade must be done keeping in mind,">
         }
 
 </code></pre><p>Where <code>ToApm</code> is extension function from Stephen Toub&rsquo;s excellent blog (link in code as comment),</p>
-<pre><code>
+<pre tabindex=0><code>
         public static Task&lt;TResult&gt; ToApm&lt;TResult&gt;(this Task&lt;TResult&gt; task, AsyncCallback callback, object state)
         {
             if (task.AsyncState == state)
@@ -217,16 +217,16 @@ This means that upgrade must be done keeping in mind,">
 <li>supporting <code>basicHttpBinding</code></li>
 <li>Adding namespaces and support for XML Serialization to Service contract like,</li>
 </ul>
-<pre><code>
+<pre tabindex=0><code>
   [ServiceContract(Name = &quot;RequestReplyService&quot;, Namespace = &quot;http://tempuri.org/&quot;),XmlSerializerFormat]
 
 </code></pre><ul>
 <li>Adding Action to OperationContract attribute like,</li>
 </ul>
-<pre><code>[OperationContract(IsOneWay = false, Action = &quot;http://tempuri.org/DoWork&quot;)]
+<pre tabindex=0><code>[OperationContract(IsOneWay = false, Action = &quot;http://tempuri.org/DoWork&quot;)]
 
 </code></pre><p>Additional configuration to re-write incoming requests to <code>.asmx</code> to new service in <code>web.config</code> as below,</p>
-<pre><code>
+<pre tabindex=0><code>
  &lt;system.webServer&gt;
     &lt;validation validateIntegratedModeConfiguration=&quot;false&quot; /&gt;    
     &lt;rewrite&gt;
@@ -244,7 +244,7 @@ This means that upgrade must be done keeping in mind,">
 <p>This approach provides cleaner implementation vis-a-vis earlier approach such that it is still new WCF based implementation with no ASMX in use.</p>
 <h2 id=wcf-service-with-asmx-extension-mapped-to-wcf-handler>WCF service with .asmx extension mapped to WCF handler</h2>
 <p>This approach is very similar to last one with only change being instead of using URL re-write module, we will map <code>.asmx</code> extension to WCF Handler. So the changes are only in web.config as below,</p>
-<pre><code>
+<pre tabindex=0><code>
 &lt;system.web&gt;
     &lt;httpHandlers&gt;
     &lt;remove path=&quot;.asmx&quot; verb=&quot;*&quot; /&gt;
@@ -279,7 +279,7 @@ This means that upgrade must be done keeping in mind,">
 <ul>
 <li>
 <p>Expose both SOAP and HTTP End-points like below,</p>
-<pre><code>  &lt;service name=&quot;wcf.Myservice&quot;&gt;
+<pre tabindex=0><code>  &lt;service name=&quot;wcf.Myservice&quot;&gt;
     &lt;endpoint address=&quot;&quot; binding=&quot;basicHttpBinding&quot; contract=&quot;wcf.IMyserviceSoap&quot; /&gt;
     &lt;endpoint address=&quot;http&quot; kind=&quot;webHttpEndpoint&quot; endpointConfiguration=&quot;webEndpointWithHelp&quot; contract=&quot;wcf.IMyservice&quot; /&gt;
     &lt;endpoint address=&quot;mex&quot; binding=&quot;mexHttpBinding&quot; contract=&quot;IMetadataExchange&quot; /&gt;
@@ -289,7 +289,7 @@ This means that upgrade must be done keeping in mind,">
 </li>
 <li>
 <p>Since clients are not aware of this new <code>http</code> end point, additional steps are needed to handle non soap requests seamlessly. This can be done in <code>Global.asax</code> as below,</p>
-<pre><code>     protected void Application_BeginRequest(object sender, EventArgs e)
+<pre tabindex=0><code>     protected void Application_BeginRequest(object sender, EventArgs e)
     {
         const string httpAddress = &quot;http/&quot;;
 
@@ -313,7 +313,7 @@ This means that upgrade must be done keeping in mind,">
 </li>
 </ul>
 <p>However, this approach still had issues wherein WCF run-time raised errors when <code>?singlewsdl</code> url was accessed. It seems problem was due to multiple interfaces (one for SOAP and other for REST) and WCF not being able to generate WSDL for it. Additionally, REST handler is also deserves a look as it simply parses payload as Query String and populating properties of request DTO/class has to be done manually,</p>
-<pre><code>
+<pre tabindex=0><code>
   ResponseDTO IMyservice.Process(Stream input)
       {
           string body = new StreamReader(input).ReadToEnd();
@@ -326,7 +326,7 @@ This means that upgrade must be done keeping in mind,">
       }
 
 </code></pre><p>Overall, WCF does not have great support for handling <code>FORM POST</code> requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed <a href=https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project target=_blank rel="noopener noreferrer">here</a>, check it out. Additionally, it takes changes to <code>BeginRequest</code> in <code>global.asax</code> to re-write incoming request so that Web API controller can process it, like below,</p>
-<pre><code> protected void Application_BeginRequest(object sender, EventArgs e)
+<pre tabindex=0><code> protected void Application_BeginRequest(object sender, EventArgs e)
       {
 
           if (Request.HttpMethod.ToLowerInvariant() == &quot;post&quot;)

@@ -262,7 +262,7 @@ It is offered as Command line interface (CLI) as well as on cloud which also pro
 <h3 id=orchestration>Orchestration</h3>
 <p>After completing <code>ELT</code> aspects, now it&rsquo;s time to orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use <a href=https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks target=_blank rel="noopener noreferrer">at</a> on windows (or <a href=https://en.wikipedia.org/wiki/Cron target=_blank rel="noopener noreferrer">cron</a> if you are using Linux).</p>
 <p>so a simplest possible batch file (as below),</p>
-<pre><code>set http_proxy=
+<pre tabindex=0><code>set http_proxy=
 set https_proxy=
 
 .\gover\go run .

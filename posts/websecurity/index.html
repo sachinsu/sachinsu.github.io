@@ -135,10 +135,10 @@ While all our .NET applications adhere to below guidelines,
 <ul>
 <li>Step 1, try using <a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.configuration.httpcookiessection?view=netframework-4.8" target=_blank rel="noopener noreferrer">httpcookies</a> section in web.config like,</li>
 </ul>
-<pre><code>    &lt;httpCookies requireSSL=&quot;false&quot; httpOnlyCookies=&quot;true&quot;  domain=&quot;site.com/myapp&quot;/&gt;
+<pre tabindex=0><code>    &lt;httpCookies requireSSL=&quot;false&quot; httpOnlyCookies=&quot;true&quot;  domain=&quot;site.com/myapp&quot;/&gt;
 </code></pre><p>First of all, this configuration element does not allow setting <strong>Path</strong> property and even during runtime, only the <strong>Domain</strong> property is populated while issuing the cookie. So this definitely does not help address the issue.</p>
 <p>So other way is to programmatically set the path for Session Cookie. This can be done by providing custom implementation of SessionIDManager class like below,</p>
-<pre><code>  public class MySessionIDManager : SessionIDManager, ISessionIDManager
+<pre tabindex=0><code>  public class MySessionIDManager : SessionIDManager, ISessionIDManager
     {
         void ISessionIDManager.SaveSessionID(HttpContext context, string id, out bool redirected, out bool cookieAdded)
         {
