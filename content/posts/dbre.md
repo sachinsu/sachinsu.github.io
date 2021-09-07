@@ -23,31 +23,31 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
 ### Infrastructure engineering 
 
-    * _Virtualization_ 
-        * Hypervisor - A hypervisor or virtual machine monitor (VMM) can be software, firmware, or hardware. The hypervisor creates and runs VMs. A computer on which             hypervisor runs one or more VMs is called a host machine, and each VM is called a guest machine. The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.  Databases running within hypervisors show lower boundaries for concurrency than the same software on bare metal. When designing for these virtualized environments, the focus should be on a horizontally scaled approach, minimizing concurrency within nodes.
+  *  _Virtualization_ 
+    * Hypervisor - A hypervisor or virtual machine monitor (VMM) can be software, firmware, or hardware. The hypervisor creates and runs VMs. A computer on which             hypervisor runs one or more VMs is called a host machine, and each VM is called a guest machine. The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.  Databases running within hypervisors show lower boundaries for concurrency than the same software on bare metal. When designing for these virtualized environments, the focus should be on a horizontally scaled approach, minimizing concurrency within nodes.
 
-        * Storage - Storage durability and performance are not what you would expect in the virtualized world. Between the page cache  of your VM and the physical controller lies a virtual controller, the hypervisor, and the host’s page cache. This means increased latency for I/O. For writes, hypervisors do not honor calls in order to manage performance. This means that you cannot guarantee that your writes are flushed to disk when there is a crash.
+  * Storage - Storage durability and performance are not what you would expect in the virtualized world. Between the page cache  of your VM and the physical controller lies a virtual controller, the hypervisor, and the host’s page cache. This means increased latency for I/O. For writes, hypervisors do not honor calls in order to manage performance. This means that you cannot guarantee that your writes are flushed to disk when there is a crash.
 
 
-    * _Database Servers_ 
-        * Physical servers - Recommended to have dedicated ones for database (and not shared)
-            * Why ? 
-                * Much control with OS and more visibility
-                * May find redundant capacity on a dedicated hardware.            
-        * Linux 
-            - is not particularly optimized for database loads requiring low latency and high concurrency. The kernel is not predictable when it goes into reclaim mode,
-            - one of the best recommendations we can give is to simply ensure that you never fully use your physical memory by reserving it to avoid stalls and significant latency impacts. You can reserve this memory by not allocating it in configuration
+  * _Database Servers_ 
+    * Physical servers - Recommended to have dedicated ones for database (and not shared)
+        * Why ? 
+            * Much control with OS and more visibility
+            * May find redundant capacity on a dedicated hardware.            
+    * Linux 
+        - is not particularly optimized for database loads requiring low latency and high concurrency. The kernel is not predictable when it goes into reclaim mode,
+        - one of the best recommendations we can give is to simply ensure that you never fully use your physical memory by reserving it to avoid stalls and significant latency impacts. You can reserve this memory by not allocating it in configuration
 
-    * _Storage_ 
-        * Capacity - Single large disks are single points of failure, unless mirrored (RAID 1). RAID 0 will have its MTBF reduced by a factor of N, where N is the number of disks striped together.
-        * Throughput - When considering the needs, you must consider IOPS for the peak of a database’s workload rather than the average.
-        * Latency - Latency is the end-to-end client time of an I/O operation; in other words, the time elapsed between sending an I/O to storage and receiving an acknowledgement that the I/O read or write is complete.
-            * _Transactional applications_ are sensitive to increased I/O latency and are good candidates for SSDs. You can maintain high IOPS while keeping latency down by maintaining a low queue length and a high number of IOPS available to the volume. Consistently driving more IOPS to a volume than it has available can cause increased I/O latency.
-            * _Throughput-intensive applications_ like large MapReduce queries are less sensitive to increased I/O latency and are well-suited for HDD volumes. You can maintain high throughput to HDD-backed volumes by maintaining a high queue length when performing large, sequential I/O
-        * Availability - Plan for disk failures.
-        * Durability - When your database goes to commit data to physical disk with guarantees of durability, it issues an operating system call known as rather than relying on page cache flushing. An example of this is when a redo log or write-ahead log is being generated and must be truly written to disk to ensure recoverability of the database. Filesystem operations can also cause corruption and inconsistency during failure events, such as crashes. Journaling filesystems like XFS and EXT4 significantly reduce the possibility of such events, however.
+  * _Storage_ 
+    * Capacity - Single large disks are single points of failure, unless mirrored (RAID 1). RAID 0 will have its MTBF reduced by a factor of N, where N is the number of disks striped together.
+    * Throughput - When considering the needs, you must consider IOPS for the peak of a database’s workload rather than the average.
+    * Latency - Latency is the end-to-end client time of an I/O operation; in other words, the time elapsed between sending an I/O to storage and receiving an acknowledgement that the I/O read or write is complete.
+        * _Transactional applications_ are sensitive to increased I/O latency and are good candidates for SSDs. You can maintain high IOPS while keeping latency down by maintaining a low queue length and a high number of IOPS available to the volume. Consistently driving more IOPS to a volume than it has available can cause increased I/O latency.
+        * _Throughput-intensive applications_ like large MapReduce queries are less sensitive to increased I/O latency and are well-suited for HDD volumes. You can maintain high throughput to HDD-backed volumes by maintaining a high queue length when performing large, sequential I/O
+    * Availability - Plan for disk failures.
+    * Durability - When your database goes to commit data to physical disk with guarantees of durability, it issues an operating system call known as rather than relying on page cache flushing. An example of this is when a redo log or write-ahead log is being generated and must be truly written to disk to ensure recoverability of the database. Filesystem operations can also cause corruption and inconsistency during failure events, such as crashes. Journaling filesystems like XFS and EXT4 significantly reduce the possibility of such events, however.
 
-        * Storage Area Networks (SAN) vs. SSDs - Data snapshots and movement are some of the nicest features in modern infrastructures, where SSDs provide better IO than traditional SANs.
+    * Storage Area Networks (SAN) vs. SSDs - Data snapshots and movement are some of the nicest features in modern infrastructures, where SSDs provide better IO than traditional SANs.
 
     * _Relational Database Internals_ 
 
