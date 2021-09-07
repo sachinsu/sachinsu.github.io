@@ -79,6 +79,22 @@
 </header><article class="list__item post">
 <header class=list__header>
 <h2 class="list__title post__title">
+<a href=/posts/restapiversioning/ rel=bookmark>
+Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course
+</a>
+</h2>
+<div class="list__meta meta"><div class="meta__item-author meta__item">
+<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2021-01-20T00:00:00+05:30>Jan 20 2021</time></div></div>
+</header>
+<div class="content list__excerpt post__content clearfix">
+Background Recently, i went through excellent video series on Designing & Versioning HTTP_REST APIs presented by Jeffrey Richter. It is available here. In the past, i had read Jeff&rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.
+</div>
+</article><article class="list__item post">
+<header class=list__header>
+<h2 class="list__title post__title">
 <a href=/posts/resiliencytoxiproxy/ rel=bookmark>
 Resiliency Testing with Toxiproxy
 </a>
@@ -142,30 +158,11 @@ Ninja - Using lightweight build system for Go projects
 Background I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.
 Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).
 </div>
-</article><article class="list__item post">
-<header class=list__header>
-<h2 class="list__title post__title">
-<a href=/posts/urlhealthchecks/ rel=bookmark>
-Validating urls from 'Useful Links' section using bash / command line tools
-</a>
-</h2>
-<div class="list__meta meta"><div class="meta__item-author meta__item">
-<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2020-10-15T10:25:04+05:30>Oct 15 2020</time></div></div>
-</header>
-<div class="content list__excerpt post__content clearfix">
-Background I started this blog, https://sachinsu.github.io few months back .
-In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.
-As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.
-So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available.
-</div>
 </article>
 </main>
 <div class=pagination>
 <a class="pagination__item pagination__item--prev btn" href=/posts/>«</a>
-<span class="pagination__item pagination__item--current">2/4</span>
+<span class="pagination__item pagination__item--current">2/5</span>
 <a class="pagination__item pagination__item--next btn" href=/posts/page/3/>»</a>
 </div>
 </div>
@@ -194,11 +191,11 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <h4 class=widget__title>Recent Posts</h4>
 <div class=widget__content>
 <ul class=widget__list>
+<li class=widget__item><a class=widget__link href=/posts/dbre/>Database Reliability Engineering - My Notes</a></li>
 <li class=widget__item><a class=widget__link href=/posts/nrtanalysispostgresql/>Near real time API Monitoring with Grafana and PostgreSQL</a></li>
 <li class=widget__item><a class=widget__link href=/posts/apiupgrade/>Upgrading API: Learnings</a></li>
 <li class=widget__item><a class=widget__link href=/posts/presto/>Presto - A distributed SQL Engine for variety of data stores</a></li>
 <li class=widget__item><a class=widget__link href=/posts/elt/>ELT approach for Data Pipelines</a></li>
-<li class=widget__item><a class=widget__link href=/posts/restapiversioning/>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</a></li>
 </ul>
 </div>
 </div>
@@ -233,11 +230,13 @@ So how can it be done ? obviously one way is to do it manually by visiting each 
 <a class="widget-taglist__link widget__link btn" href=/tags/golang/ title=golang>golang</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/grafana/ title=grafana>grafana</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/grep/ title=grep>grep</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/honeycomb/ title=Honeycomb>Honeycomb</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/http/ title=HTTP>HTTP</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/jeffrey-richter/ title="Jeffrey Richter">Jeffrey Richter</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/make/ title=make>make</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/microservices/ title=MicroServices>MicroServices</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/microsoft/ title=Microsoft>Microsoft</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/monitoring/ title=Monitoring>Monitoring</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/mysql/ title=MySQL>MySQL</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/ninja/ title=ninja>ninja</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/nsetools/ title=nsetools>nsetools</a>
