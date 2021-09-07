@@ -12,7 +12,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 * Key Incentive(s) for Automation 
     * Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.
 
-* System Characteristics 
+*  Important System Characteristics 
 
     * _Latency_, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system
 
@@ -21,7 +21,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
     * _High availability_ - For any mission-critical data that you truly care about, you should avoid running with less than three live copies. That’s one primary and two-plus secondaries for leader-follower data stores like MySQL or MongoDB or a replication factor of three for distributed data stores like Cassandra or Hadoop. Because you never, ever want to find yourself in a situation in which you have a single copy of any  data you care about, ever. This means that you need to be able to lose one instance while still maintaining redundancy, which is why three is a minimum number of copies, not two.
 
 
-* Infrastructure engineering 
+### Infrastructure engineering 
 
     * _Virtualization_ 
         * Hypervisor - A hypervisor or virtual machine monitor (VMM) can be software, firmware, or hardware. The hypervisor creates and runs VMs. A computer on which             hypervisor runs one or more VMs is called a host machine, and each VM is called a guest machine. The hypervisor presents the guest operating systems with a virtual operating platform and manages the execution of the guest operating systems.  Databases running within hypervisors show lower boundaries for concurrency than the same software on bare metal. When designing for these virtualized environments, the focus should be on a horizontally scaled approach, minimizing concurrency within nodes.
@@ -129,7 +129,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
         * Horizontal scale requires automation to manage significant numbers of servers.
         * Applications must be able to tolerate latency instability.
 
-* Infrastructure Management
+### Infrastructure Management
     * An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.
         * [Packer](https://www.packer.io) is one such tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.
 
@@ -186,7 +186,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
             * _CQRS_ - The driver for this is the idea that same data can be represented for consumption using multiple models or views. like Append only log for writes and read optimized data stores for queries.
 
-* Monitoring and Observability
+### Monitoring and Observability
 
     * _Synthetic Monitoring_ - The case for synthetic monitoring is to provide coverage that is consistent and thorough. Users might come from different regions and be active at different times. This can cause blind spots if we are not monitoring all possible regions and code paths into our service. With synthetic monitoring, we are able to  identify areas where availability or latency is proving to be unstable or degraded, and prepare or mitigate appropriately. Examples of such preparation/mitigation include adding extra capacity, performance tuning queries, or even moving traffic away from unstable region
 
@@ -223,7 +223,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
     * _Visualization_ - GUI tool for visualizing outcome of monitoring. 
 
-* _Minimum Viable monitoring set_ 
+### _Minimum Viable monitoring set_ 
     * _Databases_ 
         * Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks). 
         * Instrument th application layer to measure latency/errors for every database call (push checks).
