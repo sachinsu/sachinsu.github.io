@@ -1,6 +1,6 @@
 ---
 title: "Database Reliability Engineering - My Notes"
-date: 2021-09-15T01:00:00+05:30
+date: 2021-09-05T01:00:00+05:30
 draft: true
 tags: [Observability, Database, MySQL, Monitoring, Honeycomb]
 ---
@@ -304,3 +304,11 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
     * _Server_ (Logs) - should be sent to processors (e.g. Logstash, Loki)
         * kernel, cron, authentication, mail, and general messages logs as well as process- or application-specific log to ingest, such as MySQL, or nginx
+
+Overall, this book is highly recommended for understanding the Observability landscape. Though focussed on databases, it covers lot of ground on other aspects involved in infrastructure. 
+
+Happy Coding !!
+
+---
+
+{{< comments >}}
