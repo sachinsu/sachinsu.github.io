@@ -1,7 +1,7 @@
 ---
 title: "Database Reliability Engineering - My Notes"
 date: 2021-09-05T01:00:00+05:30
-draft: true
+draft: false
 tags: [Observability, Database, MySQL, Monitoring, Honeycomb]
 ---
 
