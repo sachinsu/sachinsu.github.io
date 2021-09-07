@@ -49,19 +49,19 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
     * Storage Area Networks (SAN) vs. SSDs - Data snapshots and movement are some of the nicest features in modern infrastructures, where SSDs provide better IO than traditional SANs.
 
-    * _Relational Database Internals_ 
+* _Relational Database Internals_ 
 
-        * In Relational databases, data is stored in containers called blocks or pages that correspond to a specific number of bytes on disk. Different databases will use blocks or pages in their terminology. In this book, we use blocks to refer to both. Blocks are the finest level of granularity for storing records. Oracle Database stores data in data blocks. A page is a fixed size called a block, just like blocks on disks. Blocks are the smallest size that can be read or written to access data. This means that if a row is 1 K and the block size is 16 K, you will still incur a 16 K read operation. If a database block size is smaller than the filesystem block size, you will be wasting I/O for operations that require multiple pages. A block require some metadata to be stored, as well, usually in the form of a header and trailer or footer. This will include disk address information, information about the object the block belongs to, and information about the rows and activity that have occurred within that block. 
+    * In Relational databases, data is stored in containers called blocks or pages that correspond to a specific number of bytes on disk. Different databases will use blocks or pages in their terminology. In this book, we use blocks to refer to both. Blocks are the finest level of granularity for storing records. Oracle Database stores data in data blocks. A page is a fixed size called a block, just like blocks on disks. Blocks are the smallest size that can be read or written to access data. This means that if a row is 1 K and the block size is 16 K, you will still incur a 16 K read operation. If a database block size is smaller than the filesystem block size, you will be wasting I/O for operations that require multiple pages. A block require some metadata to be stored, as well, usually in the form of a header and trailer or footer. This will include disk address information, information about the object the block belongs to, and information about the rows and activity that have occurred within that block. 
 
-            * Most databases structure their data in a binary tree format, also known as B-tree. A Btree is a data structure that self-balances while keeping data sorted. The B-tree is optimized for the reading and writing of blocks of data, which is why B-trees are commonly found in databases and filesystems
+    * Most databases structure their data in a binary tree format, also known as B-tree. A Btree is a data structure that self-balances while keeping data sorted. The B-tree is optimized for the reading and writing of blocks of data, which is why B-trees are commonly found in databases and filesystems
 
-                * Summary of the attributes and benefits of B-trees:
-                    * Excellent performance for range-based queries.
-                    * Not the most ideal model for single-row lookups
-                    * Keys exist in sorted order for efficient key lookups and range scans.
-                    * Structure minimizes page reads for large datasets.
-                    * By not packing keys into each page, deletes and inserts are efficient, with only occasional splits and merges being needed.
-                    * Perform much better if the entire structure can fit within memory.
+        * Summary of the attributes and benefits of B-trees:
+            * Excellent performance for range-based queries.
+            * Not the most ideal model for single-row lookups
+            * Keys exist in sorted order for efficient key lookups and range scans.
+            * Structure minimizes page reads for large datasets.
+            * By not packing keys into each page, deletes and inserts are efficient, with only occasional splits and merges being needed.
+            * Perform much better if the entire structure can fit within memory.
 
             * A crucial variable in configuring your databases for underlying storage is the database block size. We’ve discussed the importance of aligning database block sizes with the underlying disk block sizes, but that is not enough. If you are using Solid-State Drives (SSDs), for instance, you might find smaller block sizes provide much better performance while traversing B-trees. An SSD can experience a 30% to 40% latency penalty on larger blocks versus performance on Hard Disk Drives (HDDs). Because reads and writes are required in B-tree structures, this must be taken into account.
 
