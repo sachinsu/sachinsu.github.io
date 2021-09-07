@@ -80,7 +80,6 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
     * Replication
         * Types  
             * Synchronous - A transaction that is written to a log on the leader is shipped immediately over the network to the followers. The leader will not commit the transaction until the followers have confirmed that they have recorded the write. This ensures that every node in the cluster is at the same commit point. This means that reads will be consistent regardless of what node they come from, and any node can take over as a leader without risk of data loss if the current leader fails. On the other hand, network latency or degraded nodes can all cause write latency for the transaction on the leader.
-    
             * Asynchronous - A transaction is written to a log on the leader and then committed and flushed to disk. A separate process is responsible for shipping those logs to the followers, where they are applied as soon as possible. In asynchronous replication models, there is always some lag between what is committed on the leader and what is committed on the followers. Additionally, there is no guarantee that the commit point on one follower is the same as the others. In practice, the time gap between commit points might be too small to notice.
             
             * Semi-synchronous -  In this algorithm, only one node is required to confirm to the leader that they have recorded the write. This reduces the risk of latency impacts when one or more nodes are functioning in degraded states while guaranteeing that at least two nodes on the cluster are at the same commit point. In this mode, there is no longer a guarantee that all nodes in the cluster will return the same data if a read is issued on any reader.
@@ -130,30 +129,29 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
         * Applications must be able to tolerate latency instability.
 
 ### Infrastructure Management
-    * An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.
-        * [Packer](https://www.packer.io) is one such tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.
 
-    * Service Discovery & Service catalog - Service discovery is an abstraction that maps specific designations and port numbers of your services and load balancers to semantic names. A service catalog can be very simple, storing service data to integrates services, or it can include numerous additional facilities, including health checks to ensure that data in the catalog provides working resources.
+* An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.
+    * [Packer](https://www.packer.io) is one such tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.
 
-    * Isolation of Network Traffic - Network traffic can be broken up in, 
-        * Internode communications
-        * Application traffic
-        * Administrative traffic
-        * Backup and recovery traffic 
+* Service Discovery & Service catalog - Service discovery is an abstraction that maps specific designations and port numbers of your services and load balancers to semantic names. A service catalog can be very simple, storing service data to integrates services, or it can include numerous additional facilities, including health checks to ensure that data in the catalog provides working resources.
 
-        Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC
+* Isolation of Network Traffic - Network traffic can be broken up in, 
+    * Internode communications
+    * Application traffic
+    * Administrative traffic
+    * Backup and recovery traffic 
+    Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC
 
-    * Data Security
-        * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
+* Data Security
+    * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
 
-    * Data Architecture
-        * Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
-            * Low-latency writes and queries
-            * High availability
-            * Low Mean Time to Recover (MTTR)
-            * Ability to scale with application traffic
-            * Easy integration with application and operational services
-
+* Data Architecture
+    * Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
+        * Low-latency writes and queries
+        * High availability
+        * Low Mean Time to Recover (MTTR)
+        * Ability to scale with application traffic
+        * Easy integration with application and operational services
         * _Database proxies_  - Sits between application and frontline datastores. It could be,
             * _Layer 4 (Networking transport layer)_ - Uses the information available at networking layer like destination IP Addresses to distribute the traffic. This type can not work with factors like load or replication lag while distributing traffic
             * _Layer 7_ - Operates at higher level of networking transport layer. At this layer, proxy can include functionality like, 
@@ -188,14 +186,14 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
 ### Monitoring and Observability
 
-    * _Synthetic Monitoring_ - The case for synthetic monitoring is to provide coverage that is consistent and thorough. Users might come from different regions and be active at different times. This can cause blind spots if we are not monitoring all possible regions and code paths into our service. With synthetic monitoring, we are able to  identify areas where availability or latency is proving to be unstable or degraded, and prepare or mitigate appropriately. Examples of such preparation/mitigation include adding extra capacity, performance tuning queries, or even moving traffic away from unstable region
+* _Synthetic Monitoring_ - The case for synthetic monitoring is to provide coverage that is consistent and thorough. Users might come from different regions and be active at different times. This can cause blind spots if we are not monitoring all possible regions and code paths into our service. With synthetic monitoring, we are able to  identify areas where availability or latency is proving to be unstable or degraded, and prepare or mitigate appropriately. Examples of such preparation/mitigation include adding extra capacity, performance tuning queries, or even moving traffic away from unstable region
 
-    * _Latency SLO_ - Service Level Objective could be "Ninety-nine percent request latency over one minute must be between 25 and 100 ms".
+* _Latency SLO_ - Service Level Objective could be "Ninety-nine percent request latency over one minute must be between 25 and 100 ms".
 
-    * WHY _MTTR_ (Mean time to recover) Over _MTBF_ (Mean time between failure)?
+* WHY _MTTR_ (Mean time to recover) Over _MTBF_ (Mean time between failure)?
     When you create a system that rarely breaks, you create a system that is inherently fragile. Will your team be ready to do repairs when the system does fail? Will it even know what to do? Systems that have frequent failures that are controlled and mitigated such that their impact is negligible have teams that know what to do when things go sideways. Processes are well documented and honed, and automated remediation becomes actually useful rather than hiding in the dark corners of your system
 
-    * Some of the Important statistics (Metrics, Events, Logs....) to be observed from observability perspective are,
+* Some of the Important statistics (Metrics, Events, Logs....) to be observed from observability perspective are,
     * Metrics
         * _Latency_ - How long are client calls to your service ?
         * _Availability_ - How many calls result in errors?
@@ -224,62 +222,63 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
     * _Visualization_ - GUI tool for visualizing outcome of monitoring. 
 
 ### _Minimum Viable monitoring set_ 
-    * _Databases_ 
-        * Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks). 
-        * Instrument th application layer to measure latency/errors for every database call (push checks).
-        * Gather as many metrics as possible about the system, storage, database, and app layers, regardless of whether you think they will be useful. Most operating systems, services, and databases will have plug-ins that are fairly comprehensive.
-        * Create specific checks for known problems. For example, checks based on losing x percent of database nodes or a global lock percent that is too high
-        * Health check at the application level that queries all frontend datastores
-        * Query run against each partition in each datastore member, for each datastore
-        * Imminent capacity issues
-            * Disk capacity
-            * Database connections
-        * Error log scraping
-            * DB restarts 
-            * Corruption
-        * Database connection layer - A tracing system should be in place be able to break out time talking to a proxy and time from the proxy to the backend as well. You can capture this via tcpdump and Tshark/Wireshark for ad hoc sampling. This can be automated for occasional sampling.
-            * Utilization
-                * Connection upper bound and connection count (Tip: PostgreSQL uses one Unix process per connection. MySQL, Cassandra, and MongoDB use a thread per connection)
-                * Connection states (working, sleeping, aborted, and others)
-                * Kernel-level Open file utilization
-                * Kernel-level max processes utilization
-                * Memory utilization
-                * Thread pool metrics such as MySQL table cache or MongoDB thread
-                * pool utilization
-                * Network throughput utilization
-            * Measure Saturation using, 
-                * TCP connection backlog
-                * Database-specific connection queuing, such as MySQL back_log
-                * Connection timeout errors
-                * Waiting on threads in the connection pools
-                * Memory swapping
-                * Database processes that are locked
-                With utilization and saturation, you can determine whether capacity constraints and bottlenecks are affecting the latency of your database connection layer.
-            * Monitor Errors, 
-                * Database logs will provide error codes when database-level failures occur. Sometimes you have configurations with various degrees of verbosity. Make sure you have logging verbose enough to identify connection errors, but do be careful about overhead, particularly if your logs are sharing storage and IO resources with your database.
-                * Application and proxy logs will also provide rich sources of errors.
-                * Host errors discussed in the previous section should also be utilized
-        * Internal Database Activity
-            * Throughput and latency metrics 
-                * Reads
-                * Writes
-                    * Inserts
-                    * Updates
-                    * Deletes
-                * Other Operations
-                    * Commits
-                    * Rollbacks
-                    * DDL Statements
-                    * Other admin. tasks
-                * Commits, redo, journaling 
-                    * Dirty buffers (MySQL)
-                    * Checkpoint age (MySQL)
-                    * Pending and completed compaction tasks (Cassandra)
-                    * Tracked dirty bytes (MongoDB)
-                    * (Un)Modified pages evicted (MongoDB)
-                * Memory structures
-                    * A mutex (Mutually Exclusive Lock) is a locking mechanism used to synchronize access to a resource such as a cache entry. Only one task can acquire the mutex. This means that there is ownership associated with mutexes, and only the owner can release the lock (mutex). This protects from corruption.
-                    * A semaphore restricts the number of simultaneous users of a shared resource up to a maximum number. Threads can request access to the resource (decrementing the semaphore) and can signal that they have finished using the resource (incrementing the semaphore).
+
+* _Databases_ 
+    * Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks). 
+    * Instrument th application layer to measure latency/errors for every database call (push checks).
+    * Gather as many metrics as possible about the system, storage, database, and app layers, regardless of whether you think they will be useful. Most operating systems, services, and databases will have plug-ins that are fairly comprehensive.
+    * Create specific checks for known problems. For example, checks based on losing x percent of database nodes or a global lock percent that is too high
+    * Health check at the application level that queries all frontend datastores
+    * Query run against each partition in each datastore member, for each datastore
+    * Imminent capacity issues
+        * Disk capacity
+        * Database connections
+    * Error log scraping
+        * DB restarts 
+        * Corruption
+    * Database connection layer - A tracing system should be in place be able to break out time talking to a proxy and time from the proxy to the backend as well. You can capture this via tcpdump and Tshark/Wireshark for ad hoc sampling. This can be automated for occasional sampling.
+        * Utilization
+            * Connection upper bound and connection count (Tip: PostgreSQL uses one Unix process per connection. MySQL, Cassandra, and MongoDB use a thread per connection)
+            * Connection states (working, sleeping, aborted, and others)
+            * Kernel-level Open file utilization
+            * Kernel-level max processes utilization
+            * Memory utilization
+            * Thread pool metrics such as MySQL table cache or MongoDB thread
+            * pool utilization
+            * Network throughput utilization
+        * Measure Saturation using, 
+            * TCP connection backlog
+            * Database-specific connection queuing, such as MySQL back_log
+            * Connection timeout errors
+            * Waiting on threads in the connection pools
+            * Memory swapping
+            * Database processes that are locked
+            With utilization and saturation, you can determine whether capacity constraints and bottlenecks are affecting the latency of your database connection layer.
+        * Monitor Errors, 
+            * Database logs will provide error codes when database-level failures occur. Sometimes you have configurations with various degrees of verbosity. Make sure you have logging verbose enough to identify connection errors, but do be careful about overhead, particularly if your logs are sharing storage and IO resources with your database.
+            * Application and proxy logs will also provide rich sources of errors.
+            * Host errors discussed in the previous section should also be utilized
+    * Internal Database Activity
+        * Throughput and latency metrics 
+            * Reads
+            * Writes
+                * Inserts
+                * Updates
+                * Deletes
+            * Other Operations
+                * Commits
+                * Rollbacks
+                * DDL Statements
+                * Other admin. tasks
+            * Commits, redo, journaling 
+                * Dirty buffers (MySQL)
+                * Checkpoint age (MySQL)
+                * Pending and completed compaction tasks (Cassandra)
+                * Tracked dirty bytes (MongoDB)
+                * (Un)Modified pages evicted (MongoDB)
+            * Memory structures
+                * A mutex (Mutually Exclusive Lock) is a locking mechanism used to synchronize access to a resource such as a cache entry. Only one task can acquire the mutex. This means that there is ownership associated with mutexes, and only the owner can release the lock (mutex). This protects from corruption.
+                * A semaphore restricts the number of simultaneous users of a shared resource up to a maximum number. Threads can request access to the resource (decrementing the semaphore) and can signal that they have finished using the resource (incrementing the semaphore).
             
     * _Application_
         * Measuring and logging all requests and responses to pages or API endpoints. also  external services, which includes databases, search indexes, 3rd party APIs and caches.
