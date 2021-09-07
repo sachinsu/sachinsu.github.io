@@ -21,7 +21,7 @@
  Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.    Important System Characteristics
   Latency, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request."><meta itemprop=datePublished content="2021-09-05T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-09-05T01:00:00+05:30">
-<meta itemprop=wordCount content="4975">
+<meta itemprop=wordCount content="4836">
 <meta itemprop=keywords content="Observability,Database,MySQL,Monitoring,Honeycomb,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Database Reliability Engineering - My Notes">
@@ -330,180 +330,317 @@ More complex than Single Leader approach due to need for conflict resolution.</l
 </li>
 </ul>
 <h3 id=infrastructure-management>Infrastructure Management</h3>
-<pre><code>* An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done to the  version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.
-    * [Packer](https://www.packer.io) is one such tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.
-
-* Service Discovery &amp; Service catalog - Service discovery is an abstraction that maps specific designations and port numbers of your services and load balancers to semantic names. A service catalog can be very simple, storing service data to integrates services, or it can include numerous additional facilities, including health checks to ensure that data in the catalog provides working resources.
-
-* Isolation of Network Traffic - Network traffic can be broken up in, 
-    * Internode communications
-    * Application traffic
-    * Administrative traffic
-    * Backup and recovery traffic 
-
-    Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC
-
-* Data Security
-    * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
-
-* Data Architecture
-    * Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
-        * Low-latency writes and queries
-        * High availability
-        * Low Mean Time to Recover (MTTR)
-        * Ability to scale with application traffic
-        * Easy integration with application and operational services
-
-    * _Database proxies_  - Sits between application and frontline datastores. It could be,
-        * _Layer 4 (Networking transport layer)_ - Uses the information available at networking layer like destination IP Addresses to distribute the traffic. This type can not work with factors like load or replication lag while distributing traffic
-        * _Layer 7_ - Operates at higher level of networking transport layer. At this layer, proxy can include functionality like, 
-            * Health checking and redirection to healthy servers
-            * Splitting of reads and writes to send reads to replicas
-            * Query rewriting to optimize queries that cannot be tuned in code
-            * Caching query results and returning them
-            * Redirecting traffic to replicas that are not lagged
-            * Generate metrics on queries
-            * Perform firewall filtering on query types or hosts 
-
-    * _Event and Messaging systems_ - Used for actions to be triggered after a transaction like, 
-        * Data must be put into downstream analytics and warehouses
-        * Orders must be fulfilled
-        * Fraud detection must review a transaction
-        * Data must be uploaded to caches or Content Delivery Networks (CDNs)
-        * Personalization options must be recalibrated and published
-
-    * _Caches and Memory Store_ - Used to overcome slowness in Disk I/o. Approaches to putting data are, 
-        * Putting data in cache after its been written to persistent data store 
-        * Writing to cache and datastore at the same time (Fragile due to possibility of one of the store failing)
-        * Writing to cache first and then to datstore asynchronously (Write-through approach)
-
-    * _Lambda Architecture_ - The Lambda architecture is designed to handle a significant volume of data that is processed rapidly to serve near-real-time requests, while also supporting longrunning computation. Lambda consists of three layers: batch processing, real-time processing, and a query layer.If data is written to a frontend datastore, you can use a distributed log such as Kafka to create a distributed and immutable log for the Lambda processing layers. Some data is written directly to log services rather than going through a datastore. The pro‐cessing layers ingest this data.
-    
-    * _Kappa Architecture_ - Append only immutable log is used in this Architecture. Kappa architecture eliminates the batch processing system, with the expectation that the streaming system can handle all transformations and computations. One of the biggest values to Kappa is the reduction in complexity and operational expense of Lambda by eliminating the batch processing layer. It also aims to reduce the pain of migrations and reorganizations. When you want to reprocess data, you can start a reprocessing, test it, and switch over to it.
-
-    * _Application Architecture Patterns_
-        * _Event sourcing pattern_ - Changes to entities are saved as sequence of state changes. When state changes, a new event is appended to the log. The datastore is called as event store. it maintains audit of life cycle of entity which helps in recreation or populating the tables in case of data loss. However, evolution of entity over period of time needs to be managed as it may invalidate previous events. It allows giving full historical access via API for auditing, reconstruction, and different transformations can provide significant benefits. 
-
-        * _CQRS_ - The driver for this is the idea that same data can be represented for consumption using multiple models or views. like Append only log for writes and read optimized data stores for queries.
-</code></pre>
+<ul>
+<li>
+<p>An immutable infrastructure is one that is not allowed to mutate, or change, after it has been deployed. If there are changes that must happen, they are done to the version controlled configuration definition, and the service is redeployed.In the interest of moderation and middle ground, there can be some mutations that are frequent, automated and predictable, and can be allowed in the environment. Manual changes are still prohibited, keeping a significant amount of the value of predictability and recoverability while minimizing operational overhead. , Packer allows you to create multiple images from the same configuration. This includes images for virtual machines on your workstation. Using a tool like Vagrant on your workstation allows you to download the latest images, build the VMs, and even run through a standard test suite to verify that everything works as expected.</p>
+<ul>
+<li><a href=https://www.packer.io target=_blank rel="noopener noreferrer">Packer</a> is one such tool from Hashicorp that creates images. The interesting thing about Packer is that it can create images for different environments (such as Amazon EC2 or VMWare images) from the same configuration. Most configuration management utilities can create baked images as well.</li>
+</ul>
+</li>
+<li>
+<p>Service Discovery & Service catalog - Service discovery is an abstraction that maps specific designations and port numbers of your services and load balancers to semantic names. A service catalog can be very simple, storing service data to integrates services, or it can include numerous additional facilities, including health checks to ensure that data in the catalog provides working resources.</p>
+</li>
+<li>
+<p>Isolation of Network Traffic - Network traffic can be broken up in,</p>
+<ul>
+<li>Internode communications</li>
+<li>Application traffic</li>
+<li>Administrative traffic</li>
+<li>Backup and recovery traffic
+Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC</li>
+</ul>
+</li>
+<li>
+<p>Data Security</p>
+<ul>
+<li>Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator</li>
+</ul>
+</li>
+<li>
+<p>Data Architecture</p>
+<ul>
+<li>Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
+<ul>
+<li>
+<p>Low-latency writes and queries</p>
+</li>
+<li>
+<p>High availability</p>
+</li>
+<li>
+<p>Low Mean Time to Recover (MTTR)</p>
+</li>
+<li>
+<p>Ability to scale with application traffic</p>
+</li>
+<li>
+<p>Easy integration with application and operational services</p>
+</li>
+<li>
+<p><em>Database proxies</em> - Sits between application and frontline datastores. It could be,</p>
+<ul>
+<li><em>Layer 4 (Networking transport layer)</em> - Uses the information available at networking layer like destination IP Addresses to distribute the traffic. This type can not work with factors like load or replication lag while distributing traffic</li>
+<li><em>Layer 7</em> - Operates at higher level of networking transport layer. At this layer, proxy can include functionality like,
+<ul>
+<li>Health checking and redirection to healthy servers</li>
+<li>Splitting of reads and writes to send reads to replicas</li>
+<li>Query rewriting to optimize queries that cannot be tuned in code</li>
+<li>Caching query results and returning them</li>
+<li>Redirecting traffic to replicas that are not lagged</li>
+<li>Generate metrics on queries</li>
+<li>Perform firewall filtering on query types or hosts</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Event and Messaging systems</em> - Used for actions to be triggered after a transaction like,</p>
+<ul>
+<li>Data must be put into downstream analytics and warehouses</li>
+<li>Orders must be fulfilled</li>
+<li>Fraud detection must review a transaction</li>
+<li>Data must be uploaded to caches or Content Delivery Networks (CDNs)</li>
+<li>Personalization options must be recalibrated and published</li>
+</ul>
+</li>
+<li>
+<p><em>Caches and Memory Store</em> - Used to overcome slowness in Disk I/o. Approaches to putting data are,</p>
+<ul>
+<li>Putting data in cache after its been written to persistent data store</li>
+<li>Writing to cache and datastore at the same time (Fragile due to possibility of one of the store failing)</li>
+<li>Writing to cache first and then to datstore asynchronously (Write-through approach)</li>
+</ul>
+</li>
+<li>
+<p><em>Lambda Architecture</em> - The Lambda architecture is designed to handle a significant volume of data that is processed rapidly to serve near-real-time requests, while also supporting longrunning computation. Lambda consists of three layers: batch processing, real-time processing, and a query layer.If data is written to a frontend datastore, you can use a distributed log such as Kafka to create a distributed and immutable log for the Lambda processing layers. Some data is written directly to log services rather than going through a datastore. The pro‐cessing layers ingest this data.</p>
+</li>
+<li>
+<p><em>Kappa Architecture</em> - Append only immutable log is used in this Architecture. Kappa architecture eliminates the batch processing system, with the expectation that the streaming system can handle all transformations and computations. One of the biggest values to Kappa is the reduction in complexity and operational expense of Lambda by eliminating the batch processing layer. It also aims to reduce the pain of migrations and reorganizations. When you want to reprocess data, you can start a reprocessing, test it, and switch over to it.</p>
+</li>
+<li>
+<p><em>Application Architecture Patterns</em></p>
+<ul>
+<li>
+<p><em>Event sourcing pattern</em> - Changes to entities are saved as sequence of state changes. When state changes, a new event is appended to the log. The datastore is called as event store. it maintains audit of life cycle of entity which helps in recreation or populating the tables in case of data loss. However, evolution of entity over period of time needs to be managed as it may invalidate previous events. It allows giving full historical access via API for auditing, reconstruction, and different transformations can provide significant benefits.</p>
+</li>
+<li>
+<p><em>CQRS</em> - The driver for this is the idea that same data can be represented for consumption using multiple models or views. like Append only log for writes and read optimized data stores for queries.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id=monitoring-and-observability>Monitoring and Observability</h3>
-<pre><code>* _Synthetic Monitoring_ - The case for synthetic monitoring is to provide coverage that is consistent and thorough. Users might come from different regions and be active at different times. This can cause blind spots if we are not monitoring all possible regions and code paths into our service. With synthetic monitoring, we are able to  identify areas where availability or latency is proving to be unstable or degraded, and prepare or mitigate appropriately. Examples of such preparation/mitigation include adding extra capacity, performance tuning queries, or even moving traffic away from unstable region
-
-* _Latency SLO_ - Service Level Objective could be &quot;Ninety-nine percent request latency over one minute must be between 25 and 100 ms&quot;.
-
-* WHY _MTTR_ (Mean time to recover) Over _MTBF_ (Mean time between failure)?
-When you create a system that rarely breaks, you create a system that is inherently fragile. Will your team be ready to do repairs when the system does fail? Will it even know what to do? Systems that have frequent failures that are controlled and mitigated such that their impact is negligible have teams that know what to do when things go sideways. Processes are well documented and honed, and automated remediation becomes actually useful rather than hiding in the dark corners of your system
-
-* Some of the Important statistics (Metrics, Events, Logs....) to be observed from observability perspective are,
-* Metrics
-    * _Latency_ - How long are client calls to your service ?
-    * _Availability_ - How many calls result in errors?
-    * _Call Rates_ - How oftern are calls sent to service?
-    * _Utilization_ - How critical resources are being utilized to ensure quality of service and capacity.
-
-    - Types of Metrics, 
-        * _Counters_ - These are cumulative metrics that represent how many times a specific occurrence of something has occurred.
-        * _Gauges_ - These are metrics that change in any direction, and indicate a current value, such as temperature, jobs in queue, or active locks.
-        * _Histograms_ - A number of events broken up into configured buckets to show distribution.
-        * _Summaries_ - This is similar to histogram but focused on proving counts over sliding windows of time
-
-* _Events_ - An event is a discrete action that has occurred in the environment. A change to a config is an event. A code deployment is an event. A database master failover is an event. Each of these can be signals that are used to correlate symptoms to causes.
-
-* _Alerts &amp; Notifications_
-
-    * _Alerts_ - An alert is an interrupt to a human that instructs him to drop what he’s doing and investigate a rules violation that caused the alert to be sent. This is an
-    expensive operation and should be utilized only when SLOs are in imminent danger of violation.
-
-    * _Tickets/tasks_ - For work that must be done but there is o imminent disaster. The output of monitoring should be tickets/tasks for developers
-
-    * _Notifications_ - Events like Code Deployment completed. 
-
-* _Automation_ - One example is Autoscaling basis outcome of monitoring. 
-
-* _Visualization_ - GUI tool for visualizing outcome of monitoring. 
-</code></pre>
+<ul>
+<li>
+<p><em>Synthetic Monitoring</em> - The case for synthetic monitoring is to provide coverage that is consistent and thorough. Users might come from different regions and be active at different times. This can cause blind spots if we are not monitoring all possible regions and code paths into our service. With synthetic monitoring, we are able to identify areas where availability or latency is proving to be unstable or degraded, and prepare or mitigate appropriately. Examples of such preparation/mitigation include adding extra capacity, performance tuning queries, or even moving traffic away from unstable region</p>
+</li>
+<li>
+<p><em>Latency SLO</em> - Service Level Objective could be &ldquo;Ninety-nine percent request latency over one minute must be between 25 and 100 ms&rdquo;.</p>
+</li>
+<li>
+<p>WHY <em>MTTR</em> (Mean time to recover) Over <em>MTBF</em> (Mean time between failure)?
+When you create a system that rarely breaks, you create a system that is inherently fragile. Will your team be ready to do repairs when the system does fail? Will it even know what to do? Systems that have frequent failures that are controlled and mitigated such that their impact is negligible have teams that know what to do when things go sideways. Processes are well documented and honed, and automated remediation becomes actually useful rather than hiding in the dark corners of your system</p>
+</li>
+<li>
+<p>Some of the Important statistics (Metrics, Events, Logs&mldr;.) to be observed from observability perspective are,</p>
+<ul>
+<li>
+<p>Metrics</p>
+<ul>
+<li><em>Latency</em> - How long are client calls to your service ?</li>
+<li><em>Availability</em> - How many calls result in errors?</li>
+<li><em>Call Rates</em> - How oftern are calls sent to service?</li>
+<li><em>Utilization</em> - How critical resources are being utilized to ensure quality of service and capacity.</li>
+</ul>
+<ul>
+<li>Types of Metrics,
+<ul>
+<li><em>Counters</em> - These are cumulative metrics that represent how many times a specific occurrence of something has occurred.</li>
+<li><em>Gauges</em> - These are metrics that change in any direction, and indicate a current value, such as temperature, jobs in queue, or active locks.</li>
+<li><em>Histograms</em> - A number of events broken up into configured buckets to show distribution.</li>
+<li><em>Summaries</em> - This is similar to histogram but focused on proving counts over sliding windows of time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Events</em> - An event is a discrete action that has occurred in the environment. A change to a config is an event. A code deployment is an event. A database master failover is an event. Each of these can be signals that are used to correlate symptoms to causes.</p>
+</li>
+<li>
+<p><em>Alerts & Notifications</em></p>
+<ul>
+<li>
+<p><em>Alerts</em> - An alert is an interrupt to a human that instructs him to drop what he’s doing and investigate a rules violation that caused the alert to be sent. This is an
+expensive operation and should be utilized only when SLOs are in imminent danger of violation.</p>
+</li>
+<li>
+<p><em>Tickets/tasks</em> - For work that must be done but there is o imminent disaster. The output of monitoring should be tickets/tasks for developers</p>
+</li>
+<li>
+<p><em>Notifications</em> - Events like Code Deployment completed.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Automation</em> - One example is Autoscaling basis outcome of monitoring.</p>
+</li>
+<li>
+<p><em>Visualization</em> - GUI tool for visualizing outcome of monitoring.</p>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id=_minimum-viable-monitoring-set_><em>Minimum Viable monitoring set</em></h3>
-<pre><code>* _Databases_ 
-    * Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks). 
-    * Instrument th application layer to measure latency/errors for every database call (push checks).
-    * Gather as many metrics as possible about the system, storage, database, and app layers, regardless of whether you think they will be useful. Most operating systems, services, and databases will have plug-ins that are fairly comprehensive.
-    * Create specific checks for known problems. For example, checks based on losing x percent of database nodes or a global lock percent that is too high
-    * Health check at the application level that queries all frontend datastores
-    * Query run against each partition in each datastore member, for each datastore
-    * Imminent capacity issues
-        * Disk capacity
-        * Database connections
-    * Error log scraping
-        * DB restarts 
-        * Corruption
-    * Database connection layer - A tracing system should be in place be able to break out time talking to a proxy and time from the proxy to the backend as well. You can capture this via tcpdump and Tshark/Wireshark for ad hoc sampling. This can be automated for occasional sampling.
-        * Utilization
-            * Connection upper bound and connection count (Tip: PostgreSQL uses one Unix process per connection. MySQL, Cassandra, and MongoDB use a thread per connection)
-            * Connection states (working, sleeping, aborted, and others)
-            * Kernel-level Open file utilization
-            * Kernel-level max processes utilization
-            * Memory utilization
-            * Thread pool metrics such as MySQL table cache or MongoDB thread
-            * pool utilization
-            * Network throughput utilization
-        * Measure Saturation using, 
-            * TCP connection backlog
-            * Database-specific connection queuing, such as MySQL back_log
-            * Connection timeout errors
-            * Waiting on threads in the connection pools
-            * Memory swapping
-            * Database processes that are locked
-            With utilization and saturation, you can determine whether capacity constraints and bottlenecks are affecting the latency of your database connection layer.
-        * Monitor Errors, 
-            * Database logs will provide error codes when database-level failures occur. Sometimes you have configurations with various degrees of verbosity. Make sure you have logging verbose enough to identify connection errors, but do be careful about overhead, particularly if your logs are sharing storage and IO resources with your database.
-            * Application and proxy logs will also provide rich sources of errors.
-            * Host errors discussed in the previous section should also be utilized
-    * Internal Database Activity
-        * Throughput and latency metrics 
-            * Reads
-            * Writes
-                * Inserts
-                * Updates
-                * Deletes
-            * Other Operations
-                * Commits
-                * Rollbacks
-                * DDL Statements
-                * Other admin. tasks
-            * Commits, redo, journaling 
-                * Dirty buffers (MySQL)
-                * Checkpoint age (MySQL)
-                * Pending and completed compaction tasks (Cassandra)
-                * Tracked dirty bytes (MongoDB)
-                * (Un)Modified pages evicted (MongoDB)
-            * Memory structures
-                * A mutex (Mutually Exclusive Lock) is a locking mechanism used to synchronize access to a resource such as a cache entry. Only one task can acquire the mutex. This means that there is ownership associated with mutexes, and only the owner can release the lock (mutex). This protects from corruption.
-                * A semaphore restricts the number of simultaneous users of a shared resource up to a maximum number. Threads can request access to the resource (decrementing the semaphore) and can signal that they have finished using the resource (incrementing the semaphore).
-        
-* _Application_
-    * Measuring and logging all requests and responses to pages or API endpoints. also  external services, which includes databases, search indexes, 3rd party APIs and caches.
-    * Any jobs or independent workflows that should be monitored.
-    * Any independent, reusable code like a method or function that interacts with databases, caches, and other datastores should be instrumented.
-    * Monitor how many database calls are executed by each endpoint, page, or function/method
-    * When doing SQL tuning, a big challenge is mapping SQL running in the database to the specific place in the codebase from which it is being called. In many database engines, you can add comments for information. These comments will show up in the database query logs. This is a great place to insert the codebase location
-    * Logging - Logs should include stack traces
-    * Setting up an external check for each major product or service, as well as a health check on the monitoring service itself, is a good best practice
-
-* _Server_ (Metrics)
-    * CPU
-    * Memory
-    * Network interfaces
-    * Storage I/O
-    * Storage capacity
-    * Storage controllers
-    * Network controllers
-    * CPU interconnect
-    * Memory interconnect
-    * Storage interconnect
-
-* _Server_ (Logs) - should be sent to processors (e.g. Logstash, Loki)
-    * kernel, cron, authentication, mail, and general messages logs as well as process- or application-specific log to ingest, such as MySQL, or nginx
-</code></pre>
+<ul>
+<li><em>Databases</em>
+<ul>
+<li>
+<p>Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks).</p>
+</li>
+<li>
+<p>Instrument th application layer to measure latency/errors for every database call (push checks).</p>
+</li>
+<li>
+<p>Gather as many metrics as possible about the system, storage, database, and app layers, regardless of whether you think they will be useful. Most operating systems, services, and databases will have plug-ins that are fairly comprehensive.</p>
+</li>
+<li>
+<p>Create specific checks for known problems. For example, checks based on losing x percent of database nodes or a global lock percent that is too high</p>
+</li>
+<li>
+<p>Health check at the application level that queries all frontend datastores</p>
+</li>
+<li>
+<p>Query run against each partition in each datastore member, for each datastore</p>
+</li>
+<li>
+<p>Imminent capacity issues</p>
+<ul>
+<li>Disk capacity</li>
+<li>Database connections</li>
+</ul>
+</li>
+<li>
+<p>Error log scraping</p>
+<ul>
+<li>DB restarts</li>
+<li>Corruption</li>
+</ul>
+</li>
+<li>
+<p>Database connection layer - A tracing system should be in place be able to break out time talking to a proxy and time from the proxy to the backend as well. You can capture this via tcpdump and Tshark/Wireshark for ad hoc sampling. This can be automated for occasional sampling.</p>
+<ul>
+<li>Utilization
+<ul>
+<li>Connection upper bound and connection count (Tip: PostgreSQL uses one Unix process per connection. MySQL, Cassandra, and MongoDB use a thread per connection)</li>
+<li>Connection states (working, sleeping, aborted, and others)</li>
+<li>Kernel-level Open file utilization</li>
+<li>Kernel-level max processes utilization</li>
+<li>Memory utilization</li>
+<li>Thread pool metrics such as MySQL table cache or MongoDB thread</li>
+<li>pool utilization</li>
+<li>Network throughput utilization</li>
+</ul>
+</li>
+<li>Measure Saturation using,
+<ul>
+<li>TCP connection backlog</li>
+<li>Database-specific connection queuing, such as MySQL back_log</li>
+<li>Connection timeout errors</li>
+<li>Waiting on threads in the connection pools</li>
+<li>Memory swapping</li>
+<li>Database processes that are locked
+With utilization and saturation, you can determine whether capacity constraints and bottlenecks are affecting the latency of your database connection layer.</li>
+</ul>
+</li>
+<li>Monitor Errors,
+<ul>
+<li>Database logs will provide error codes when database-level failures occur. Sometimes you have configurations with various degrees of verbosity. Make sure you have logging verbose enough to identify connection errors, but do be careful about overhead, particularly if your logs are sharing storage and IO resources with your database.</li>
+<li>Application and proxy logs will also provide rich sources of errors.</li>
+<li>Host errors discussed in the previous section should also be utilized</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Internal Database Activity</p>
+<ul>
+<li>Throughput and latency metrics
+<ul>
+<li>Reads</li>
+<li>Writes
+<ul>
+<li>Inserts</li>
+<li>Updates</li>
+<li>Deletes</li>
+</ul>
+</li>
+<li>Other Operations
+<ul>
+<li>Commits</li>
+<li>Rollbacks</li>
+<li>DDL Statements</li>
+<li>Other admin. tasks</li>
+</ul>
+</li>
+<li>Commits, redo, journaling
+<ul>
+<li>Dirty buffers (MySQL)</li>
+<li>Checkpoint age (MySQL)</li>
+<li>Pending and completed compaction tasks (Cassandra)</li>
+<li>Tracked dirty bytes (MongoDB)</li>
+<li>(Un)Modified pages evicted (MongoDB)</li>
+</ul>
+</li>
+<li>Memory structures
+<ul>
+<li>A mutex (Mutually Exclusive Lock) is a locking mechanism used to synchronize access to a resource such as a cache entry. Only one task can acquire the mutex. This means that there is ownership associated with mutexes, and only the owner can release the lock (mutex). This protects from corruption.</li>
+<li>A semaphore restricts the number of simultaneous users of a shared resource up to a maximum number. Threads can request access to the resource (decrementing the semaphore) and can signal that they have finished using the resource (incrementing the semaphore).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Application</em></p>
+<ul>
+<li>Measuring and logging all requests and responses to pages or API endpoints. also external services, which includes databases, search indexes, 3rd party APIs and caches.</li>
+<li>Any jobs or independent workflows that should be monitored.</li>
+<li>Any independent, reusable code like a method or function that interacts with databases, caches, and other datastores should be instrumented.</li>
+<li>Monitor how many database calls are executed by each endpoint, page, or function/method</li>
+<li>When doing SQL tuning, a big challenge is mapping SQL running in the database to the specific place in the codebase from which it is being called. In many database engines, you can add comments for information. These comments will show up in the database query logs. This is a great place to insert the codebase location</li>
+<li>Logging - Logs should include stack traces</li>
+<li>Setting up an external check for each major product or service, as well as a health check on the monitoring service itself, is a good best practice</li>
+</ul>
+</li>
+<li>
+<p><em>Server</em> (Metrics)</p>
+<ul>
+<li>CPU</li>
+<li>Memory</li>
+<li>Network interfaces</li>
+<li>Storage I/O</li>
+<li>Storage capacity</li>
+<li>Storage controllers</li>
+<li>Network controllers</li>
+<li>CPU interconnect</li>
+<li>Memory interconnect</li>
+<li>Storage interconnect</li>
+</ul>
+</li>
+<li>
+<p><em>Server</em> (Logs) - should be sent to processors (e.g. Logstash, Loki)</p>
+<ul>
+<li>kernel, cron, authentication, mail, and general messages logs as well as process- or application-specific log to ingest, such as MySQL, or nginx</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>Overall, this book is highly recommended for understanding the Observability landscape. Though focussed on databases, it covers lot of ground on other aspects involved in infrastructure.</p>
 <p>Happy Coding !!</p>
 <hr>
