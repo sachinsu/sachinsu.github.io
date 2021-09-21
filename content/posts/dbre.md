@@ -142,8 +142,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
     * Backup and recovery traffic 
     Isolation of traffic is one of the first steps to proper networking for your databases. You can do this via physical network interface cards (NICs), or by partitioning one NIC
 
-* Data Security
-    * Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
+* Data Security - Tracking every failed and successful SQL statement sent to database is critical for identifying SQL injection attacks. SQL syntax errors can be a leading indicator
 
 * Data Architecture
     * Frontline Datastores - Historically, these systems have been referred to as OnLine Transactional Processing (OLTP) systems. They were characterized by a lot of quick transactions, and thus they were designed for very fast queries, data integrity in high concurrency, and scale based on the number of transactions they can handle concurrently. All data is expected to be real time with all of the necessary details to support the services using them. Each user or transaction is seeking a small subset of the data. This means query patterns tend to focus on finding and accessing a small, specific dataset within a large set. Effective indexing, isolation, and concurrency are critical for this, which is why it tends to be fulfilled by relational systems. Typical characteristics are,
@@ -221,7 +220,7 @@ I have been reading excellent [Database Reliability Engineering](https://www.ore
 
     * _Visualization_ - GUI tool for visualizing outcome of monitoring. 
 
-### _Minimum Viable monitoring set_ 
+### Minimum Viable monitoring set 
 
 * _Databases_ 
     * Monitor if your databases are up or down (pull checks). Monitor overall latency/error metrics and end-to-end health checks (push checks). 

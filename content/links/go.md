@@ -53,7 +53,8 @@ My current Favourite Language
 ### Libraries, Tools
 
 - [Right way to check weather](https://github.com/chubin/wttr.in)
-- [Generate Go Code for Database / SQL](https://sqlc.dev)
+- [Generate Go Code for Database / SQL for Mysql and PostgreSQL](https://sqlc.dev)
+- [Why SQLc is better approach than ORM](https://brandur.org/sqlc)
 - [Golang style guide by Uber](https://github.com/uber-go/guide/blob/master/style.md)
 - [ORM to Model and Traversal of Data as a Graph structure](https://entgo.io/)
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)

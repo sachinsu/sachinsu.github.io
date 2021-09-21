@@ -52,6 +52,7 @@ draft: false
 - [Postgres is a great pub/sub & job server](https://layerci.com/blog/postgres-is-the-answer/)
 - [PostgreSQL - Optimize Configuration](https://postgresqlco.nf/en/doc/param/9275132/real-life-example-when-to-use-outer-cross-apply-in-sql/9275865#9275865)
 - [Be careful with CTE in PostgreSQL](https://hakibenita.com/be-careful-with-cte-in-postgre-sql)
+- [Per core Connection limit guidance for EDB](https://richyen.com/postgres/2021/09/03/less-is-more-max-connections.html)
 - [PostgreSQL - Claim unused Index size](https://hakibenita.com/postgresql-unused-index-size)
 - [PgBadger - A fast PostgreSQL Log Analyzer](https://github.com/darold/pgbadger)
 - [Using CTE to perform binary search on table](https://www.endpoint.com/blog/2020/10/02/postgresql-binary-search-correlated-data-cte)
@@ -69,6 +70,7 @@ draft: false
 - [Using Timeout feature of PostgreSQL](https://blog.crunchydata.com/blog/control-runaway-postgres-queries-with-statement-timeout)
 - [Benchmarking bulk data ingestion in PostgreSQL](https://aws.amazon.com/blogs/database/speed-up-time-series-data-ingestion-by-partitioning-tables-on-amazon-rds-for-postgresql/)
 - [All about indexes in PostgreSQL](https://pganalyze.com/blog/postgres-create-index)
+- [Use cases for Partitioning](https://blog.anayrat.info/en/2021/09/01/partitioning-use-cases-with-postgresql/#storage-tiering)
 
 ## Interesting Extensions/Products
 
