@@ -43,7 +43,7 @@
     - Good read at https://carnegieendowment.org/chinafinancialmarkets/85391
 
 - Momentum, value and everything else 
-    - 
+    - Be aware of limits of Momentum stategy as it can underperform. Accordingly do asset allocation.
 
 ## 2021-sep-22 Thu
 
@@ -72,3 +72,29 @@
 
 - Faster housing financing
     - Securing a loan from Bank for Homes often takes time because of the processes they follow like due diligence, underwriting and so on. Nowadays, all-cash bidders are preferred over others by sellers. Instead of months it takes to secure loan from bank for a house,  There are companies (flyhomes.com) who buy the property on behalf of buyer in all-cash deals. They later sell it to buyer after few weeks when their loan is approved by bank. They are called cash offer companies. They make money through commisions and/or fees like between 1% to 3% of purchase price.This is example of financial engineering filling in gaps in market.     
+
+## 2021-sep-23 Fri
+
+- NFT is unique (non-fungible) digital item that can be traded online using blockchain technology. It is used for Digital Art, Collectibles, Sports. 
+- Why NFT? 
+    - Pride of Ownership
+    - Psychological effect - once basic needs are fulfilled, we seek more. Entire art industry is about the idea of people assigining monetory value to a canvas
+    - Speculative nature
+- [How Blockchain works](https://graphics.reuters.com/TECHNOLOGY-BLOCKCHAIN/010070MF1E7/index.html)
+    - Consists of database that has record bundled together into blocks and added to chain one after another. It has, 
+        - The record  - can be any information (e.g. deal)
+        - The block - block of records
+        - Chain - link between blocks
+- ElasticSearch shortcomings documented by Yelp w.r.t. Scale, 
+    - Document is indexed individually on every replica 
+    - Uneven load distribution across cluster 
+    - Difficult to autoscale 
+- Yelp is using Lucene based alternate search solution call nrtsearch, at https://github.com/Yelp/nrtsearch 
+    It Provides, 
+    - Near real time segment replication 
+    - Concurrent query execution
+- https://github.com/grpc-ecosystem/grpc-gateway - gRPC Gateway provides HTTP+JSON interface for gRPC Service. It is a plugin that is used to generate reverse-proxy server which translates a RESTful HTTP API into gRPC. This helps to test/access gRPC based API via REST. 
+
+- https://github.com/mikemccand/luceneserver - HTTP REST API over Apache lucene.
+
+- Openlineage - Standard API specification that functions as glue between data sources (schedulers, processing engines (Spark), ETL tools....) and DataOps tools (Margquez, Amundsen ....)
