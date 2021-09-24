@@ -22,7 +22,7 @@ Platform where i have spent most time till now.
 - [Parallel programming in .NET](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/)
 - [Clean Architecture in .NET](https://github.com/ardalis/CleanArchitecture)
 - [You’re (probably still) using HttpClient wrong and it is destabilizing your software](https://josefottosson.se/you-are-probably-still-using-httpclient-wrong-and-it-is-destabilizing-your-software/)
-- [Async/Await - Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming)
+- [Async/Await - Guidance & Best Practices in Asynchronous Programming](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md#asynchronous-programming)
 - [Async/Await - Deep dive for Windows based Async I/O](https://tooslowexception.com/net-asyncawait-in-a-single-picture/)
 - [One more look at why Async/Await, what happens underneath](https://blog.scooletz.com/2018/05/14/task-async-await-valuetask-ivaluetasksource-and-how-to-keep-your-sanity-in-modern-net-world/)
 - [Implement a producer-consumer dataflow pattern](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern)
