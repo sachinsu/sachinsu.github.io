@@ -81,6 +81,7 @@ My current Favourite Language
 - [Temporal - Scalable orchestration platform](https://temporal.io)
 - [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
 - [Tunny - Library to manage pool of goroutines to limit incoming work](https://github.com/Jeffail/tunny)
+- [Scheduler library for Go](https://github.com/reugn/go-quartz)
 
 ### Web scraping, downloader 
 

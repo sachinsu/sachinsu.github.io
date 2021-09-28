@@ -98,3 +98,64 @@
 - https://github.com/mikemccand/luceneserver - HTTP REST API over Apache lucene.
 
 - Openlineage - Standard API specification that functions as glue between data sources (schedulers, processing engines (Spark), ETL tools....) and DataOps tools (Margquez, Amundsen ....)
+
+## 2021-sep-26 Sun
+
+-   Sync and Async ( Everything can't be async ) 
+    - Javascript solves this by making everything non-blocking because blocking would destroy browser's UI Thread which is it's primary use case.
+    - golang does this via go routines
+    - .NET is one of the platforms that has excellent support for interop with the underlying OS (pinvokes) aka FFI (foreign function interfaces). It has one of the best FFI systems on the market
+    - The moment you need to call into the underlying platform, you need to context switch from your current “green” thread, to one compatible to what the underlying platform supports. This is one of the big costs and why golang had to rewrite things in go and goasm.
+    - The other difficulty .NET has is that it allows pinning memory. Maybe you pinned some object to get the address or pass it to another function. This is problematic, when you want you want to grow the stack dynamically in your user mode thread implementation.
+    - The inability to copy the stack means you need to do a linked list instead. This is a complex and inefficient implementation. Java and go can both copy because there’s no way to get the underlying address of anything (without really unsafe code).
+    - Async state machines in .NET form linked list. 
+
+- Rationality
+    - “scout mindset,” which can help you “to recognize when you are wrong, to seek out your blind spots, to test your assumptions and change course.”  
+    - The “soldier mindset,” by contrast, encourages you to defend your positions at any cost.
+
+    - Introspection is key to rationality. 
+    - A rational person must practice what is called “metacognition,” or “the ability to think about our own thinking”—“a fragile, beautiful, and frankly bizarre feature of the human mind.”
+    -  successful student uses metacognition to know when he needs to study more and when he’s studied enough: essentially, parts of his brain are monitoring other parts.
+    - The trick is to break the illusion of fluency, and to encourage an “awareness of ignorance.”
+    - Knowing about what you know is Rationality 101.
+
+    - Bayesian reasoning 
+    - When new information comes in, you don’t want it to replace old information wholesale. Instead, you want it to modify what you already know to an appropriate degree. 
+    - The degree of modification depends both on your confidence in your preëxisting knowledge and on the value of the new data. Bayesian reasoners begin with what they call the “prior” probability of something being true, and then find out if they need to adjust it.
+    - Best practices
+        - Start with the big picture, fixing it firmly in your mind. Be cautious as you integrate new information, and don’t jump to conclusions. Notice when new data points do and do not alter your baseline assumptions (most of the time, they won’t alter them), but keep track of how often those assumptions seem contradicted by what’s new. Beware the power of alarming news, and proceed by putting it in a broader, real-world context.
+        - Real power of bayesian thinking is that it replaces the facts in our mind with probabilities
+        - a rationalist must also be “metarational,” willing to hand over the thinking keys when someone else is better informed or better trained
+
+## 2021-sep-27 Mon
+
+-  Machine Learning 
+    - It is tricky to apply it effectively 
+    - Requires data and labels
+    - First iteration should preferably be without machine learning
+    - How to start?
+        - Try to understand data 
+            - Try to find correlations between feature and target variable
+            - Scatter plots are a favorite for visualizing numerical values. Have the feature on the x-axis and the target variable on the y-axis and let the relationship reveal itself.
+            - try box plot
+        - Apply simple Heuristics
+            - Recommendations: Recommend top-performing items from the previous period;
+            - Product classification: Regex-based rules on product titles. Here’s an example from Walmart’s product classifier (Section 4.5): If product title contains “ring”, “wedding band”, “diamond. *bridal”, etc., classify it in the ring category.
+            - Review spam identification: Rules based on the count of reviews from the same IP, time the review was made (e.g., odd timing like 3 am), similarity (e.g., edit distance) between the current review and other reviews made on the same day.
+
+- Business#Telecom 
+    - Tower companies are those who come up with infrastructure for hosting antennas from telecom provider 
+    - They generate revenues when telecom companies put up their antennas on their towers
+    - Telecom companies refrain from building their own towers because of high capital expenditure 
+    - Only reliance jio started with building its own towers and then hived it off (to brookfield)
+    - With 5G, more investment is needed in fibre infrastructure than towers.
+    - In telecommunications, a base station is a fixed trasceiver, the main communication point for one or more wireless mobile client devices. A base station serves as central connection point for a wireless device to communicate.
+
+- Defence#Submarines
+
+    - Underwater gradient in Arabian sea is too low (e.g. water is only 50 meters deep till about 50 Km from karachi harbor) while it is deep in Bay of Bengal 
+    - Hence two pronged strategy of 
+        - Conventional (diesel-electric with Air independent propulsion) submarines for Western fleet 
+        - Nuclean SSN & SSBN for Eastern fleet.
+        - Nuclear submarines can use either Low enriched uranium (LEU --> France) or Highly enriched euranium (HEU --> US & UK). Us technology doesnt need to refuel nuclear submarine for its life span (35 years) where Russian one requires cutting open hull, refuel it and welding it back. French model has hatches for refuelling which does not require lengthy refits.

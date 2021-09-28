@@ -74,6 +74,12 @@ Platform where i have spent most time till now.
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
 - [bflat - No-frills, standalone compiler for .net](https://github.com/MichalStrehovsky/bflat)
 
+## Task Queue/Scheduling tools
+
+- [Hangfire](https://www.hangfire.io)
+- [Tempus](https://github.com/Workshell/tempus)
+- [Background tasks with hosted services in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-5.0&tabs=visual-studio)
+
 ## .NET Core
 
 - [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport/blob/dev/docs/Console/README.md)

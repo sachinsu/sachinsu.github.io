@@ -23,6 +23,7 @@ Useful links related from AI, ML space
 - [Data Scientists Should Be More End-to-End](https://eugeneyan.com/writing/end-to-end-data-science/)
 - [Team Data science process (Microsoft)](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/overview)
 - [Traits of Good Data Scientist](https://ianwhitestone.work/good-ds-bad-ds/)
+- [The First Rule of Machine Learning: Start without Machine Learning](https://eugeneyan.com/writing/first-rule-of-ml/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav)
 
 ## Videos
 
