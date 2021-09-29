@@ -24,6 +24,7 @@ Python has become pervasive all throught Data Science be it Machine learning, De
 - [EasyOCR - supports 40+ languages](https://github.com/JaidedAI/EasyOCR)
 - [Simplified Static file serving for Python](http://whitenoise.evans.io/en/stable/)
 - [Static Site generator (with Markdown support)](https://github.com/getpelican/pelican)
+- [JupyterLab Desktop App](https://github.com/jupyterlab/jupyterlab_app#download)
 
 ## Podcasts
 

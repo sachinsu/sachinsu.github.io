@@ -27,6 +27,7 @@ draft: false
 - [Beginner's guide to Next.js](https://welearncode.com/beginners-guide-nextjs/)
 - [Data Model behind Notion's flexibility](https://www.notion.so/blog/data-model-behind-notion)
 - [How TCP Communication works between Client & Server](https://sirupsen.com/napkin/problem-15/)
+- [Practical Frontend Architecture using React,GraphQL, Next.JS and Typescript](https://jaredgorski.org/writing/14-practical-frontend-architecture/)
 
 ## Testing
 

@@ -18,6 +18,7 @@ Section covering useful tools for every day activities, Online learning etc.
 
 ## Useful Command line tools
 
+- [Useful online playgrounds by Julia Evans](https://jvns.ca/blog/2021/09/24/new-tool--an-nginx-playground/)
 - [Zmap - collection of open source tools for performing large-scale studies of the hosts and services that compose the public Internet.](https://github.com/zmap)
 - [ripgrep - Recursively search directories for regex](https://github.com/BurntSushi/ripgrep)
 - [ripgrep-all - rigrep + PDFs, E-books, Office documents](https://github.com/phiresky/ripgrep-all)
@@ -37,7 +38,9 @@ Section covering useful tools for every day activities, Online learning etc.
 - [HTTPie - Command line HTTP Client](https://httpie.io/)
 - [Visidata - A terminal spreadsheet multitool for discovering and arranging data](https://github.com/saulpw/visidata)
 - [Nginx - Tips for Sys Admins](https://alex.dzyoba.com/blog/nginx-features-for-operators/)
-
+- [Listmonk - Open source newsletter and mailing list manager](https://listmonk.app)
+- [ATOP - Performance monitor for Linux (Better than htop)](https://www.atoptool.nl/)
+- [Below - Analyze Historical performance data for Linux](https://github.com/facebookincubator/below)
 
 ## Linux related References
 

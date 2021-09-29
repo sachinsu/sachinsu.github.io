@@ -19,17 +19,6 @@
 
 
 ## 2021-sep-22 Wed
-- Work updates
-    Issuance, 
-    - IDBI Bank audit - Participation 
-    - Issue with Bank of India for which they had raised penalty and they wanted to 
-    understand data flow within systems. Shared updated issuance
-    architecture diagram to be used to explain data flow. 
-
-    BFL, 
-    - Production issue, HTTP to Microsoft Kaizala , its only on production servers and 
-    not on dev/SIT servers. Confguration changes needed 
-
 - Evergrande 
     - Real estate sector is overreliant on debt
     - Most indebted RE player in world
@@ -159,3 +148,59 @@
         - Conventional (diesel-electric with Air independent propulsion) submarines for Western fleet 
         - Nuclean SSN & SSBN for Eastern fleet.
         - Nuclear submarines can use either Low enriched uranium (LEU --> France) or Highly enriched euranium (HEU --> US & UK). Us technology doesnt need to refuel nuclear submarine for its life span (35 years) where Russian one requires cutting open hull, refuel it and welding it back. French model has hatches for refuelling which does not require lengthy refits.
+    
+## 2021-sep-28 Tue
+
+- Investing#Traits to avoid while investing (Anand Sridharan)
+    - Bad Promotors 
+    - Government Owned
+    - True owner is at a different level (Cummins inc and Cummins india)
+    - No Owner (Credit ratings, Stock exchanges etc)
+    - Private Equity owned
+
+- UITECH#RANT Framework for front-end
+    - React: easy componentization, commonly used, flexible
+    - Apollo GraphQL: commonly used (good docs), simple, automatic type generation
+    - Next.js: SSR by default, capable filesystem server, built-in SPA router, helpful docs
+    - Typescript: catch runtime errors at build, easy debugging
+- UITECH# SSR and CSR
+    - Server-side rendering does basically the same job as client-side rendering: generating HTML. 
+    - The only real difference is that server-side rendering provides pre-rendered HTML to clients while client-side rendering requires the client to run JS files to render the HTML. 
+    - server-side rendering is ideal for websites that need strong search engine presence, since search engine bots can just read the static content immediately instead of possibly running into issues with JS content. 
+    - Server-side rendering is also necessary if clients have technical limitations, such as being unable to run JavaScript. Otherwise, server-side rendering is practically equal to client-side rendering.
+
+- Investing#Margin of safety - Practice of buying shares of a company only when they trade at a large discount to true value. Difference between estimated value of share and purchase price is margin of safety.
+
+- Investing#Earnings yield - earnings per share / share price
+    - higher earnings yield is better than lower (obviously)
+    - business that earn high return on capital are better
+    - high return on capital companies availble at bargain prices i.e. companies with high earning yield and high return on capital.
+    - buy shares in companies with high returns on equity only when they are available at bargain prices (i.e. giving high earning yield)
+
+- Investing#Options trading 
+    - Trading with self (Its risky since someone else might put counter order just in time) across multiple exchanges is called "Wash trading" and its illegal.
+
+## 2021-sep-29 Wed
+
+- Sociology - Urban centers tend to homogenize the culture of the population.
+
+- Semiconductors 
+    - Semiconductors are the world’s 4th most traded good after crude oil, refined oil and cars. Strong demand existed before COVID and reflected the chip-intensity of 5G, AI, electric vehicles ( 3-5x the chip content of ICE cars) and the internet of things. Current chip shortages are mostly related to older and simpler 200-mm silicon wafers used in cars, computers, monitors, laptops, TVs, refrigerators and washing machines. 
+    - There’s limited economic incentive to build new 200-mm chip plants given wafer-thin margins;
+    - Malaysia is major center for chip testing and packaging 
+
+- China and world's shipping
+    - Chinese companies affiliated with its government make 95% of the world’s containers
+    - China has 37% of the shipbuilding market in 2019 by deadweight, and 45% of all new shipbuilding orders
+
+- Work updates
+    Issuance, 
+    - IDBI Bank audit - Participation 
+    - Issue with Bank of India for which they had raised penalty and they wanted to 
+    understand data flow within systems. Shared updated issuance
+    architecture diagram to be used to explain data flow. 
+
+    BFL, 
+    - Production issue, HTTP to Microsoft Kaizala , its only on production servers and 
+    not on dev/SIT servers. Confguration changes needed 
+
