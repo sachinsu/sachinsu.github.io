@@ -187,7 +187,8 @@
 - Semiconductors 
     - Semiconductors are the world’s 4th most traded good after crude oil, refined oil and cars. Strong demand existed before COVID and reflected the chip-intensity of 5G, AI, electric vehicles ( 3-5x the chip content of ICE cars) and the internet of things. Current chip shortages are mostly related to older and simpler 200-mm silicon wafers used in cars, computers, monitors, laptops, TVs, refrigerators and washing machines. 
     - There’s limited economic incentive to build new 200-mm chip plants given wafer-thin margins;
-    - Malaysia is major center for chip testing and packaging 
+    - Malaysia is major center for chip testing and packaging
+    - Semiconductor fabrication typically requires lot of water
 
 - China and world's shipping
     - Chinese companies affiliated with its government make 95% of the world’s containers
@@ -203,4 +204,12 @@
     BFL, 
     - Production issue, HTTP to Microsoft Kaizala , its only on production servers and 
     not on dev/SIT servers. Confguration changes needed 
+
+- Investing
+    - Owning a business that has the opportunity to invest some or all of its profits at a very high level of return can contribute to a very high rate of earnings growth.
+
+- Forex# Range of the day pricing 
+    - Fx Specialist @ Bank would select the best rate for the back and worst rate for the customer from the FX price fluctuations from the beginning of the trading day until the time of transaction.
+
+## 2021-sep-30 Thu
 

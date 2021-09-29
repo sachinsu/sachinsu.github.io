@@ -50,3 +50,4 @@ draft: false
 - [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)
 - [Observable Plot - Data Visualization Library](https://github.com/observablehq/plot)
 - [Shared data types for building collaborative software](https://github.com/yjs/yjs)
+- [NoSQL-database for JavaScript Applications like Websites, hybrid Apps, Electron-Apps, Progressive Web Apps and NodeJs](https://rxdb.info)
