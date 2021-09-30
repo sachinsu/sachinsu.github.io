@@ -213,3 +213,65 @@
 
 ## 2021-sep-30 Thu
 
+- Technology# Memory Management
+   - OS has Virtual memory manager (VMM) that allocates VM to processes
+    - VM enables both isolation and sharing
+    - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
+        - Provided by the MMU (Memory Management Unit)
+        - Memory divided in pages (usually 4k)
+        - Virtual to physical page mapping in page tables (that the MMU walks)
+        - When a virtual page doesn’t have a valid corresponding physical page, a page fault occurs
+        - Control is transferred to the OS to provide a physical page (or an AV) Demand paging
+
+    - How does Garbage collector (GC) decides if it should collect out object?
+        - GC.Collect() collects the whole heap
+            - This means GC does NOT decide the objects’ lifetime
+            - GC only gets told by others if an object is live
+            - In this case JIT tells the GC that object is still live 
+            - JIT is free to lengthen the object lifetime till the end of method and has always been
+ 
+  - Psychology of human misjudgement
+    - jacobi's principle of inversion
+        - Study instances of bad judgement to recognize good judgement
+    - if you would persuade, appeal to interest and not to reason.
+        - Especially fear professional advice when it is especially good for the advisor
+        - learn and use the basic elements of your advisor's trade as you deal with your advisor
+        - double check, disbelieve or replace much of what you are told, to the degree that seems appropriate after objective thought
+        - bad behavior is intensely habit forming when it is rewarded - B.F. Skinner
+        - Whose bread i eat, his songs i sing. 
+    - Granny's rule - Children eat their carrots before they get dessert (business executives force themselves daily to first do their unpleasant and necessary tasks before rewarding themseleves by proceeding to their pleasant tasks)
+
+    - Liking/loving tendency
+        - Consequences
+            - Ignore faults of, and compley with wishes of, the object of his affection
+            - to favor people, products and actions merely associated with the object of his affection. 
+            - to distort the facts to facilitate love 
+    
+    - Disliking/hating tendency 
+        - dislikings and hatred never go away completely. 
+        - Politics is art of marshaling hatreds
+        - consequences 
+            - ignore virtues in the object of dislike
+            - dislike people, products and actions merely associate with object of his dislike
+            - distort facts to facilitate hatred
+    
+    - Doubt avoidance tendency
+        - puzzlement and stress triggers doubt avoidance. 
+    
+    - Inconsistency avoidance tendency 
+        - an ounce of prevention is worth a pound of cure 
+    
+    - Curiosity Tendency 
+        - helps man to prevent or reduce bad consequences arising from other psychological tendencies.
+
+    - Kantian fairness Tendency
+        - "fair sharing" conduct, strangers often voluntarily share equally in unexpected, unearned good and bad fortune. 
+
+    - Envy/Jealousy tendency 
+        - It is not envy that drives the world but envy
+        - sibling jealousy is very strong and kantian fairness tendency probably contributes to it. 
+    
+    - Reciprocation tendency 
+        - Humans have automatic tendency to reciprocate both favors and disfavors. 
+        - Wise employers  try to oppose reciprocate-favor tendencies of employees engaged in purchasing. Simple antidote is don't let them accept any favors from vendors. 
+        - feeling of guilt is outcome of reciprocate tendency gone wrong.
