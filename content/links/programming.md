@@ -93,7 +93,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Alternatives for Local Kubernetes development](https://seroter.com/2020/03/10/lets-look-at-your-options-for-local-development-with-kubernetes/)
 - [Jami - tool for Encrypted Audio/Video calls](https://jami.net/#)
 - [Keycloak - Open source Identity and Access Management](https://www.keycloak.org)
-- [Awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
 - [Diagram as Code (Python)](https://diagrams.mingrammer.com/)
 - [Virtual whiteboard for sketching hand-drawn like diagrams with Collaboration***](https://excalidraw.com)
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)

@@ -275,3 +275,67 @@
         - Humans have automatic tendency to reciprocate both favors and disfavors. 
         - Wise employers  try to oppose reciprocate-favor tendencies of employees engaged in purchasing. Simple antidote is don't let them accept any favors from vendors. 
         - feeling of guilt is outcome of reciprocate tendency gone wrong.
+
+    -  Influence-from-Mere-Association Tendency
+        - Advertisers know about the power of mere association other example is military playing impressive music
+        - The proper antidotes to being made such a patsy by past success are 
+            -  to carefully examine each past success, looking for accidental, non- causative factors associated with such success that will tend to mislead as one appraises odds implicit in a proposed new undertaking 
+            -  to look for dangerous aspects of the new undertaking that were not present when past success occurred.  
+        - underappraising both the comptetency and morals of competitor you dislike causes miscalculation 
+
+## 2021-oct-4 Mon
+
+- R2 will run across Cloudflare’s global network, which is most known for providing anti-DDoS services to its customers by absorbing and dispersing the massive amounts of traffic that accompany denial-of-service attacks on websites. It will be compatible with S3’s API, which makes it much easier to move applications already written with S3 in mind, and Cloudflare said that beyond the elimination of egress fees, the new service will be 10% cheaper to operate than S3.
+
+- Cloudflare is aiming at lower end of market (with low margins). The big incumbants have innovator's dilemma trying to come down and deal with companies (Cloudflare) serving lower end of market. 
+
+- Because new-market disruptions compete against nonconsumption, the incumbent leaders feel no pain and little threat until the disruption is in its final stages.
+
+- In a vacuum, most businesses would prefer making a fixed cost investment instead of paying on a marginal use basis. Consider Spotify’s music-streaming business: one of the company’s core challenges is that the more customers Spotify has the more it has to pay music labels — streaming rights are a marginal cost. A streaming service like Netflix, on the other hand, that spends up front for its own content, gets to keep whatever increased revenue that content drives for itself. This same logic applies to computing capacity: buying your own servers is, in theory, cheaper than renting compute from a service like AWS. 
+
+For Compute, 
+- First, usage may be uneven, whether that be because a business is seasonal, hit-driven, or anything in-between. That means that compute capacity has to be built out for the worst case scenario, even though that means most resources are sitting idle most of the time.
+- Second, compute capacity is likely growing — hopefully rapidly, in the case of a new business. Building out infrastructure, though, is not a linear process: new capacity comes online all at once, which means a business has to overbuild for their current needs so that they can accommodate future growth, which again means that most resources are sitting idle most of the time.
+- Third, compute capacity is complex and expensive. That means there are both huge fixed costs that have to be invested before the compute can be used, and also significant ongoing marginal costs to manage the compute already online.
+
+-   This is why AWS was so transformative: Amazon would spend all of the up-front money to build out compute capacity for all of its customers, and then rent it on-demand, solving all of the problems I just listed:
+
+    - Customers could scale their compute up-or-down instantly in response to their needs.
+    - Customers could rent exactly how much compute they needed at any moment in time, even as they were able to seamlessly handle growth.
+    - AWS would be responsible for all of the up-front investment and ongoing maintenance, and because they would operate at such scale, they would get much better prices from suppliers than any individual company could on its own.
+
+    - Amazon has a lot less cash and, more importantly, a lot less profit than Google or Microsoft. 
+    - Amazon already has significantly more scale, which means their costs on a per-customer basis are lower than Microsoft or Google.
+    - AWS charges for data transferred out of their network but not for data transferred into their network
+
+-R2 is a compelling choice for a certain class of applications that could be built to s erve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.
+
+- Moreover, like any true disruption, it will be very difficult for Amazon to respond: sure, R2 may lead Amazon to reduce its egress fees, but given the importance of those fees to both AWS’s margins and its lock-in, it’s hard to see them going away completely. More importantly, AWS itself is locked-in to its integrated approach: the entire service is architected both technically and economically to be an all-encompassing offering; to modularize itself in response to Cloudflare would be suicidal.
+
+- Technology#Web3
+    - Theme is about decentralization 
+        - In a decentralised web, each participant holds a secret key. They can then use it to identify each other.
+        - In a Web3 setting where web participants own their data, they can selectively share these data with applications they interact with. Participants can also leverage this system to prove interactions they had with one another. For example, if a college issues you a Decentralized Identifier (DID), you can later prove you have been registered at this college without reaching out to the college again. Decentralized Identities can also serve as a placeholder for a public profile, where participants agree to use a blockchain as a source of trust
+    - Primer on CryptoCurrency, 
+        - A peer-to-peer network is a network architecture. It consists of a set of computers, called nodes, that store and relay information. Each node is equally privileged, preventing one node from becoming a single point of failure. In the Bitcoin case, nodes can send, receive, and process Bitcoin transactions.
+        - A ledger is a collection of accounts in which transactions are recorded. For Bitcoin, the ledger records Bitcoin transactions.
+        - A distributed ledger is a ledger that is shared and synchronized among multiple computers. This happens through a consensus, so each computer holds a similar replica of the ledger. With Bitcoin, the consensus process is performed over a P2P network, the Bitcoin network.
+        - A blockchain is a type of distributed ledger that stores data in “blocks” that are cryptographically linked together into an immutable chain that preserves their chronological order. Bitcoin leverages blockchain technology to establish a shared, single source of truth of transactions and the sequence in which they occurred, thereby mitigating the double-spending problem.
+
+- Psychology of human misjudgement
+  - The best antidote to folly from an excess of sel-regard is to force yourself to be more objective when you are thinking about yourself, your family and friends, property and value of your past and future activity. 
+  - The trustworthy an , even after allowing for the inconviniences of his chosen course,ordinarily has a life that averages out better than he would have if he provided less reliability.
+
+  - Deprival Superreaction Tendency - Man  ordinarily reacts with irrational intensity to even a small loss, or threatened loss of property, friendship etc. As a natural result, bureaucratic infighting over the threatened loss of dominated territory often causes immense damage to an institution as a whole. 
+
+  - extremes of ideology causs extremes of cognitive dysfunction 
+    - One antidote is extreme culture of courtesy kept in place despite ideological differences. 
+
+- Learn how to ignore the examples from others when they are wrong.
+
+- skills of very high order can be maintained only with daily practice
+
+- be careful whom you appoint to power because a dominant authority figure will often be hard to remove, aided as he will be by authority-misinfluence tendency.
+
+- Ideas got through best when reasons for the ideas were meticulously laid out
+

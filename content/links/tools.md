@@ -45,6 +45,8 @@ Section covering useful tools for every day activities, Online learning etc.
 ## Linux related References
 
 - [Understand grep, awk and sed](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
+- [Awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
+- [Understandin Awk](https://earthly.dev/blog/awk-examples/)
 - [Visual guide to SSH Tunnels](https://robotmoon.com/ssh-tunnels/)
 - [Web based interface for Servers](https://cockpit-project.org/)
 
