@@ -12,3 +12,4 @@ draft: false
 - [HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)](https://github.com/denji/awesome-http-benchmark)
 - [Toxiproxy - A TCP proxy to simulate network and system conditions for chaos and resiliency testing](https://toxiproxy.io)
 - [Papercut SMTP - Test Email delivery during development](https://github.com/ChangemakerStudios/Papercut-SMTP)
+- [Malabi -Trace based testing in JavaScript](https://github.com/aspecto-io/malabi)

@@ -339,3 +339,51 @@ For Compute,
 
 - Ideas got through best when reasons for the ideas were meticulously laid out
 
+## 2021-oct-5 Tue 
+
+- Confidence is comfort due to repetition
+
+- Investing#Equity Risk Premium - The compounded return differential between investment in equity vs. debt (Liquid fund). 
+    - one approach could be that keep a higher allocation to equity, in general, when the equity risk premium is lower than 10%. Above that, no further investments in equity.
+
+- Tech#Cybersecurity for AI/ML Systems
+    - In AL/ML based systems, system behaviour cannot be assumed to be "locked down" as it is for non AI/ML Systems.
+    - The threats where the attacker adjusts the input to the model to make it do something that is to the attacker's advantage  are called evasive threats
+        - They work in following ways, 
+            - By reducing confidence in the result of the model
+            - by misclassifying an input
+            - by misclassifying input into a class that the attacker wants the input to be classified into
+    - backdooring the model - here the input is not being changes, its model itself has been.
+    - poisoning the model - input of the model is altered but the purpose is not to make the model do something it should not , but for it to learn something it should not. 
+    
+    - the key intent here is to make AI/ML system do it was not supposed to.
+
+    - Model theft consists of reverse-engineerin a trained model in totality or extracting information enough to reconstruct the model not to the fidelity of the original but acceptable enought for the purpose of the attacker.
+
+    - What are protection measures for AI/ML based systems
+        - Guard the Model 
+            - Infrastructure hardening
+            - Access via APIs (thru authentication), with limits on API Access
+            - Requests monitoring for identifying pattern of leaching
+            - Encryption (with keys stored in secure enclaves)
+            - multiple levels of flash protection (disc, file system and application level)
+        - Guard the training process
+            - offline - training during system development
+                - Training is continous process i.e. even after deployment, model continues to learn in iterative way 
+                - Access to training environment should be protected by least privilege
+                - New model behavior should be tested for adverse results including behavioral fuzzing 
+            - online - System learns "on the job". Changing its behavior dynamically. Difficult to secure than "offline".
+        - Guard the source of data 
+            - always cryptographically authenticate source of data
+        - Put AI/ML systems in safety cages
+            -Controls imposed outside of model to ensure that any "bad behavior" that is learned does not lead to harm 
+                - Human oversight 
+                - allowing intelligent action only in certain benign zones of operation 
+        - Use resilient AI/ML Algorithms
+            - "adversarial ML" - developing robust learning methods that have multiple mathematical protections against evasion attacks. 
+
+- Tech#Facebook Outage 
+    - BGP stands for Border Gateway Protocol. It's a mechanism to exchange routing information between autonomous systems (AS) on the Internet. The big routers that make the Internet work have huge, constantly updated lists of the possible routes that can be used to deliver every network packet to their final destinations. Without BGP, the Internet routers wouldn't know what to do, and the Internet wouldn't work.
+    - The Internet is literally a network of networks, and it’s bound together by BGP. BGP allows one network (say Facebook) to advertise its presence to other networks that form the Internet. As we write Facebook is not advertising its presence, ISPs and other networks can’t find Facebook’s network and so it is unavailable.
+    - When someone types the https://facebook.com URL in the browser, the DNS resolver, responsible for translating domain names into actual IP addresses to connect to, first checks if it has something in its cache and uses it. If not, it tries to grab the answer from the domain nameservers, typically hosted by the entity that owns it.If the nameservers are unreachable or fail to respond because of some other reason, then a SERVFAIL is returned, and the browser issues an error to the user.
+    - Border Gateway Protocol (BGP) is the postal service of the Internet. When someone drops a letter into a mailbox, the postal service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data across the Internet, BGP is responsible for looking at all of the available paths that data could travel and picking the best route, which usually means hopping between autonomous systems.BGP is the protocol that makes the Internet work. It does this by enabling data routing on the Internet. When a user in Singapore loads a website with origin servers in Argentina, BGP is the protocol that enables that communication to happen quickly and efficiently.
