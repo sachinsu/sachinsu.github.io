@@ -444,3 +444,8 @@ For Compute,
         - The status monitor URL responds with information about the operation including its current status, which should be represented as one of a fixed set of string values in a field named status. If the operation is still being processed, the status field will contain a "non-terminal" value, like Processing.
 
         - After the operation processing completes, a GET request to status monitor URL returns a response with a status field containing a terminal value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation. If the status is Failed, the status monitor resource must contain an error field with a code and message that describes the failure. If the status is Succeeded, the response may contain additional fields as appropriate, such as results of the operation processing.
+
+- Tech#Logging rules (https://tuhrig.de/my-logging-best-practices/)
+    - INFO Level is for business while DEBUG is for developers
+    - Log INFO after the operation is over and not before 
+    - Distinguish between WARNING (Typically can be retried) and error

@@ -71,6 +71,7 @@ My current Favourite Language
 - [Approach on project Structure in Go](https://github.com/benbjohnson/wtf)
 - [Zero Allocation JSON logger](https://github.com/rs/zerolog)
 - [Use Makefile with Go](https://earthly.dev/blog/golang-makefile/)
+- [Review of HTTP Routers](https://www.alexedwards.net/blog/which-go-router-should-i-use)
 
 ### Task queues
 
