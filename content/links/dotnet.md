@@ -55,6 +55,7 @@ Platform where i have spent most time till now.
 
 ## Tools, Libraries
 
+- [.NET Playground](https://sharplab.io/)
 - [RestSharp - REST HTTP Client](https://github.com/restsharp/RestSharp)
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
 - [AsyncAwaitBestPractices](https://github.com/brminnick/AsyncAwaitBestPractices)

@@ -387,3 +387,60 @@ For Compute,
     - The Internet is literally a network of networks, and it’s bound together by BGP. BGP allows one network (say Facebook) to advertise its presence to other networks that form the Internet. As we write Facebook is not advertising its presence, ISPs and other networks can’t find Facebook’s network and so it is unavailable.
     - When someone types the https://facebook.com URL in the browser, the DNS resolver, responsible for translating domain names into actual IP addresses to connect to, first checks if it has something in its cache and uses it. If not, it tries to grab the answer from the domain nameservers, typically hosted by the entity that owns it.If the nameservers are unreachable or fail to respond because of some other reason, then a SERVFAIL is returned, and the browser issues an error to the user.
     - Border Gateway Protocol (BGP) is the postal service of the Internet. When someone drops a letter into a mailbox, the postal service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data across the Internet, BGP is responsible for looking at all of the available paths that data could travel and picking the best route, which usually means hopping between autonomous systems.BGP is the protocol that makes the Internet work. It does this by enabling data routing on the Internet. When a user in Singapore loads a website with origin servers in Argentina, BGP is the protocol that enables that communication to happen quickly and efficiently.
+
+    - Investing#Call options 
+        - Buying a call option at strike price (typically greater than CMP) is 
+            - bet on the price of the stock at expiry
+            - rewarded if underlying stock price goes up a lot
+            - not penalized if it goes down ( just lose the amount paid for the option)
+            - "delta" effect is when chances of stock prices going up at expiry is high because of jump in stock price 
+            - "theta" effect is if stock prices remain same over period of time in direction of expiry
+            - "vega" effect is if stock is volatile due to which Market thinks there will be hugh action at expiry. 
+
+## 2021-oct-6 Wed
+
+- Tech#BGP
+    - BGP is a protocol that companies use to advertise BGP Routes. 
+    - If Company makes announcement for withdrawal of BGP Routes then all routers would delete those routes and site becomes inaccessible.
+
+- Tech#Micosoft .NET 
+    - at scale could means 
+        - no. of users 
+        - size of data
+        - processing large number of requests 
+    
+    - Use Streams/pipelines for large data sets 
+    - Pool and re-use buffers when you need to operate on in-memory data.
+    - RegEx compilation is like 5000 lines of code 
+    - ConcurrentDictionary 
+        - conceptually similar to Dictionary where 
+            - Reads are lock free but writes are not
+        - The default number of concurrent writes is equal to the number of processors on the machine.
+        - always enumerate over entries and not over keys
+        -Dictionary with lock - "Poor read speed, lightweight to create and medium update speed."
+        - Dictionary as immutable object - "best read speed and lightweight to create but  heavy update. Copy and modify on mutation e.g. new Dictionary(old).Add(key, value)"
+        - Hashtable - "Good read speed (no lock required), same-ish weight as dictionary but more expensive to mutate and no generics!"
+        - ImmutableDictionary - "Poorish read speed, no locking required but more allocations require to update than a dictionary."
+    - in C#, avoid hashtable and use Dictionary<> instead
+        - Hashtable is weakly typed and while it allows you to have keys that map to different kinds of objects which may seem attractive at first, you'll need to "box" the objects up and boxing and unboxing is expensive. You'll almost always want to use Dictionary instead.
+    - Handling long-running operations in REST API (Azure Way),
+        - The client sends the initial request to the resource to initiate the long-running operation. This initial request could be a PUT, PATCH, POST, or DELETE method.
+
+        - The resource validates the request and initiates the operation processing. It sends a response to client with a 200-OK HTTP status code (or 201-Created if the operation is a create operation) and a representation of the resource where the status field is set to a value indicating that the operation processing has been started.
+
+        - The client then issues a GET request to the resource to determine if the operation processing has completed.
+
+        - The resource responds with a representation of the resource. While the operation is still being processed, the status field will contain a "non-terminal" value, like Processing.
+
+        - After the operation processing has completed, a GET request from the client will receive a response where the status field contains a "terminal" value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation
+    
+    - Long running operations with status monitor 
+        - The client sends the request to initiate the long-running operation. As in the RELO pattern, the initial request could be a PUT, PATCH, POST, or DELETE method.
+
+        - The resource validates the request and initiates the operation processing. It sends a response to the client with a 202-Accepted HTTP status code. Included in this response is an Operation-location response header with the absolute URL of status monitor for this specific operation. The response also includes a Retry-after header telling the client a minimum time to wait (in seconds) before sending a request to the status monitor URL.
+
+        - After waiting at least the amount of time specified by the previous response's Retry-after header, the client issues a GET request to the status monitor URL.
+
+        - The status monitor URL responds with information about the operation including its current status, which should be represented as one of a fixed set of string values in a field named status. If the operation is still being processed, the status field will contain a "non-terminal" value, like Processing.
+
+        - After the operation processing completes, a GET request to status monitor URL returns a response with a status field containing a terminal value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation. If the status is Failed, the status monitor resource must contain an error field with a code and message that describes the failure. If the status is Succeeded, the response may contain additional fields as appropriate, such as results of the operation processing.

@@ -59,3 +59,7 @@ Section covering useful tools for every day activities, Online learning etc.
 ## Useful spreadhsheet formulas 
 
 - [Formulas for Personal finance](https://bou.ke/blog/formulas/)
+
+## Search tools 
+
+- [Grep app- Search across Git Repos](https://grep.app/)
