@@ -42,6 +42,7 @@ Platform where i have spent most time till now.
 - [.NET Core debug memory leak, High CPU Usage, Deadlock](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs=windows)
 - [TCP Connection Pool and how it works in .NET Framework/.NET Core](https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/)
 - [Using max number of worker threads using Semaphore](https://www.codeproject.com/Articles/859108/Writing-a-Web-Server-from-Scratch)
+- [Performance tuning for .NET Core](https://reubenbond.github.io/posts/dotnet-perf-tuning)
 
 ## ASP.NET Web forms
 

@@ -449,3 +449,47 @@ For Compute,
     - INFO Level is for business while DEBUG is for developers
     - Log INFO after the operation is over and not before 
     - Distinguish between WARNING (Typically can be retried) and error
+
+## 2021-oct-7 Thu
+
+- Worldly Wisdom
+    - Well known companies have advantage of scale or informational advantage
+    - Well known companies also have social proof. 
+    - The greatest defect of scale is that as you get big, you get the bureaucracy and with bureaucracy comes the territoriality.
+        - they also tend to be corrupt. they are too slow to make any decisions.
+        - folks typically respond to these issues by 
+            - creating little decentralized units, fancy motivation and training programs.
+    - life is everlasting battle between two forces - to get advantages of scale on one side and tendency to get lethargic bureaucracy
+    - The concept of chain store is fascinating as it gices huge purchasing power, thus lowering merchandise costs. It allows experimentation and as a result specialization.
+    - Capitalism is a pretty brutal place.
+    - The great lesson in microeconomics is to discriminate between when technology is going to help you and when its going to kill you.
+    - Productivity gains in commodity business typically benefit buyers than owners
+    - when technology moves too fast it causes competitive destruction
+    - every person has circle of competence and its hard to advance that circle
+    - if you play games where other peopl ehave the aptitudes and you don't then you are going to lose.
+    - people can rise quite high in life by slowly developing circle of competence.
+    - Its not given to human beings to have such talent that they can just know everything about everything all the time.
+    - The wise ones bet heavily when the world offers them that opportunity. 
+    - the way to win is to work,work,work....and hope to have few insights
+    - Winner has to bet selectively.
+    - getting the incentives right is a very, very important lesson
+    - Classic ben graham concept got the world wised up and those real obvious bargains disappeared. 
+    - Most investment managers are in a game where the clients expects them to know a lot about lot of things.
+    - it makes sense to load up on the very few good insights you have instead of pretending to know everyting about everything all the time
+    - over the long term, its hard for a stock to earn a much better return than the business which underlies it earns
+    - anytime anybody offers you anything with a big commission and 200 page prospeturs, dont buy it
+    - nothing is automatic and easy
+    - Important to remain on the edge of improvements.
+
+- Tech#Large file I/o
+    - C# has a class MemoryMappedFile. A memory-mapped file contains the contents of a file in virtual memory. This mapping between a file and memory space enables an application, including multiple processes, to modify the file by reading and writing directly to the memory.  This could be useful when dealing with large files. Often preferred over buffers as buffering is difficult to get right.
+
+- Tech#Garbage collection 
+    - The rule-of-thumb for allocations is that they should either die in the first generation (Gen0) or live forever in the last (Gen2).
+
+- Tech#Peformance rules 
+    - Avoid LINQ. LINQ is great in application code, but rarely belongs on a hot path in library/framework code. LINQ is difficult for the JIT to optimize (IEnumerable<T>...) and tends to be allocation-happy.
+    - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most common being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> for foreach.
+    - Mark classes as sealed by default. When a class/method is marked as sealed, RyuJIT can take that into account and is likely able to inline a method call.
+    - Mark override methods as sealed if possible.
+    - Pass Struct by ref to minimize on-stack copies
