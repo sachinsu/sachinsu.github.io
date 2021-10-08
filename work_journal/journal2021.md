@@ -409,7 +409,8 @@ For Compute,
         - size of data
         - processing large number of requests 
     
-    - Use Streams/pipelines for large data sets 
+    - Use Streams/pipelines for large data sets
+        - If streams are using Buffers then always FlushAsync.  
     - Pool and re-use buffers when you need to operate on in-memory data.
     - RegEx compilation is like 5000 lines of code 
     - ConcurrentDictionary 
@@ -489,7 +490,107 @@ For Compute,
 
 - Tech#Peformance rules 
     - Avoid LINQ. LINQ is great in application code, but rarely belongs on a hot path in library/framework code. LINQ is difficult for the JIT to optimize (IEnumerable<T>...) and tends to be allocation-happy.
-    - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most common being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> for foreach.
+    - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most common being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> fo+r foreach.
     - Mark classes as sealed by default. When a class/method is marked as sealed, RyuJIT can take that into account and is likely able to inline a method call.
     - Mark override methods as sealed if possible.
     - Pass Struct by ref to minimize on-stack copies
+
+## 2021-oct-8 Fri
+
+- Tech#API 
+    - [OpenAPI](https://openapitools.org) & ASyncAPI - refers to API Specification 
+    - OpenAPI is specification while swagger is tooling that uses OpenAPI Specification
+    - API Definition - JSON/YAML documents that capture unique API's business intent aimed at meeting specification requirements.
+    - OpenAPI Generator allowes generation of API Client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec.
+    - Postman can be used to generate test cases basis OpenAPI Document
+    - [OpenAPI tools](https://openapi.tools) - We  site that has many online tools like OpenAPI Specification generators, converters and so on.
+    - API platforms are systems with integrated tools and processes that allow producers and consumers to effectively build, manage , publish and consume APIs.
+        - Tools 
+            - API Client - to send PAI Calls
+            - API Designing and mocking 
+            - API testing and automation 
+            - API Documentation 
+            - API Monitoring
+        - Collaboration capabilities
+            - API Workspaces (Collaboration on API Related workflows) 
+            - API Catalog
+        - Governance Capabilities
+            - API Security - Checks during development, testing and production 
+            - API Observability - Measuring API Traffic 
+        - Integration with SDLC 
+- Finance/Defi
+    - Stablecoin lines on a blockchain , is easily exchangeable for Bitcoin (or other crypto assets) using the tools and exchanges and brokerages andprocesses of crypto world, but is always worth a dollar. 
+    - Libor is in theory the rate at which big banks can borrow unsecured for some some specified period of time. 
+    - SOFT, the secured overnight financing rate, which is the rate that big institutions pay to borow overnight secured by Treasury securities. 
+
+- Confidential Computing
+    - Confidential computing is a breakthrough approach to data protection: sensitive workloads are run inside hardware-isolated and runtime-encrypted environments called enclaves. Enclaves can protect against threats like malware or rootkits and even rogue administrators and physical intruders. 
+
+- Tech#.NET
+    - What affects scale 
+        - GC (Too many GC Pauses)
+        - Threadpool starvation
+        - Too many timers
+        - Exceptions 
+        - Synchronous IO
+        - Highly contended locks
+    - For scale
+        - for fixed RPS, monitor CPU Usage and memory usage 
+        - Understand how much scale unit, your deployment can handle (e.g. each VM can handle 1000 RPS)
+    - Checklist
+        - CPU 
+            - CPU Usage
+            - Threadpool (work items and worker threads)
+            - GC (Gen0,Gen1 & Gen2) collections
+            - Locks
+            - Application logic 
+                - chatty IO
+                - Serialization 
+        - Memory
+            - Usage
+            - Number of threads
+            - Application Logic 
+                - Strings
+                - Reading everything in memory instead of using streaming 
+                    - Disk IO
+                    - Network IO
+                - Disposable objects not being disposed
+                - AsyncLocal leaks
+        - Threadpool 
+            - Sync over async 
+                - APIs that masquarade as synchronous but are actually blocking async methods 
+                - Uses 2 threads to complete single operation 
+            - Blocking APIs are bad 
+                - Avoid blocking APIs e.g. Task.Wait, Task.Result, Thread.Sleep, 
+                    GetAwaiter.GetResult()
+            - Excessive blocking causes thread starvation 
+            - Thread injection rate beyond configured max is slow
+        - Web Applications 
+            - Always prefer Concurrent implementations (ConcurrentDictionary) over other alternatives.
+        - GC
+            - Allocating object is cheap, collecting it isn't
+            - Allocating lots of objects can lead to GC pauses
+            - Allocating objects over 85Kb in size ends up on large object heap
+                - LOH is collected in gen 02 
+        - JSON Parsing in APIs
+            - As much as possible , use parser provided by framework.
+        - CancelAfter implementation 
+            public static async Task<T> TimeoutAfter<T>(this Task<T> task, TimeSpan timeout) 
+            {
+                using (var cts = new CancellationTokenSource())
+                {
+                    var delayTask = Task.Delay(timeout, cts.Token);
+
+                    var resultTask = await Task.WhenAny(task, delayTask);
+
+                    if (resultTask == delayTask) {
+                        throw new OperationCancelledException();
+                    } else {
+                        cts.Cancel();
+                    }
+
+                    return await Task;
+                }
+            }
+    - Async programming - don't block
+    - 
