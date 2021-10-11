@@ -593,4 +593,41 @@ For Compute,
                 }
             }
     - Async programming - don't block
-    - 
+
+## 2021-oct-10 Sun
+
+
+- Tech# Application of AI and ML in Investing 
+    - Machine learning approaches are typically structured to predict something from a fixed number of inputs. However, in the investment world, the input data typically come in sequences (for example, how a company’s operating results evolve over time), and the distribution of investment outcomes are conditioned by the evolution of those sequences. Recurrent neural networks, which have claimed many successes in recent years, are designed precisely for this type of sequenced data.
+
+    - In quantitative investment research, a great deal of effort is put into “factor engineering” – the process of determining which features of a company are most valuable to forecasting the future. Deep learning provides the potential opportunity to let the algorithms discover the features based on raw financial data. That is, the “deep” in deep learning means that successive layers of a model are able to untangle important relationships in a hierarchical way from data as found “in the wild,” and these relationships may be stronger than the ones found via traditional approaches to factor engineering.
+
+- Investing#Position Sizing 
+    - First, clean up: Download current list of holdings, add a column “Percentage of Portfolio”, filter for holdings under 1%. Exit them. It doesn’t matter whether the next Amazon or the next Suzlon is in t here because they won’t move the needle, but they clutter up the screen and mind with their greens and reds.
+    - Assign Conviction levels: Look through the remainder, assign Low-Medium-High conviction levels to each holding. This is not about a DCF valuation exercise but putting down your level of confidence that made you buy the stock in the first place. Note, “holding” here can mean individual stock, mutual fund, or even a set of stocks you transact as a portfolio e.g. if you allocate to a momentum portfolio, you wouldn’t assess each individual stock but the portfolio itself
+    - Take Action - 
+         - if < 4% allocation, 
+            and convictionis low - Exit
+            and conviction is  high - increase significantly
+         - if  4% to 8% allocation, 
+            and convictionis low - Reduce
+            and conviction is  high - maintain
+         - if  > 8% allocation, 
+            and convictionis low - Reduce
+            and conviction is  high - maintain/Trim
+       - Criteria, 
+            - Low Conviction Stocks: Why not exit all of them? That’d be rational. But to account for the resistance that comes from making big changes at once
+            - Medium Conviction Stocks: Probably where we’d end up spending the most time. At the first pass of assigning conviction, we’ll have a bunch of these, like when guests are coming over and we stuff the living room mess out of sight into the closest drawers. Either bump medium-conviction stocks to “High” or downgrade them to “Low”. Tough as it will be to move things out of this noncommital bucket, that’s the work we’d need to do as active investors. And if you hate doing this, then ask yourself whether you really enjoy active decisions. And if not, buy the index.
+            - High Conviction Stocks: Making sure to not be below a minimum alloction in these, and where a stock or two might have become an outsized part of the whole, revisit and either continue holding or reduce
+
+- Investing 
+    - alpha low vol strategy is combination of momentum and low volatility scores and arrive at list 
+
+    - IEX commands more than 90% market share in the power exchange volumes and single digit share in overall power volumes. The 2nd exchange - PXIL is a marginal player. The 3rd exchange is currently under works and would be operational sometime in 2022.
+
+    - IEX charges 2 paise each from buyer & seller for facilitating trading of each unit (unit=Kilo Watt Hour) of electricity. This amount is regulated by CERC (Central Electricity Regulatory Commission).
+
+## 2021-oct-11 Mon
+
+
+ 
