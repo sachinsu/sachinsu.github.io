@@ -41,4 +41,6 @@ draft: false
 - [Ergonomic Home office setup](https://blog.amirathi.com/2019/08/18/ergonomic-office-setup/)
 - [Consider upgrading a few PC/laptop Components like SSD](https://www.hanselman.com/blog/consider-upgrading-a-few-pc-components-a-good-ssd-is-so-fast-its-not-even-funny)
 - [How to use Google like a pro](https://markodenic.com/use-google-like-a-pro/)
--[Pick Parts.Build Your PC.Compare And Share](https://pcpartpicker.com/)
+- [Pick Parts.Build Your PC.Compare And Share](https://pcpartpicker.com/)
+- [Privacy - Nice Overview and content](https://www.eff.org/pages/tools)
+- [Privacy tools for everyday user](https://www.privacytools.io/)

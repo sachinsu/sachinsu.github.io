@@ -51,6 +51,7 @@ Knowledge base around general database related topics.
 - [Emerging Architectures for Modern Data Infrastructure](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
 - [Data Visualization/Exploration platforms Comparion Matrix](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform)
 - [Supercharging Apache Superset](https://medium.com/airbnb-engineering/supercharging-apache-superset-b1a2393278bd)
+- [Snowplow - Cloud Native Behavioral data engine (e.g. User Analytics)](https://github.com/snowplow/snowplow)
 - [Redash - Collaboration, dashboards](https://redash.io/help/open-source/setup#other)
 - [Why data culture matters](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/why-data-culture-matters#)
 - [Designing a data transformation that delivers value right from the beginning](https://www.mckinsey.com/industries/financial-services/our-insights/designing-a-data-transformation-that-delivers-value-right-from-the-start#)

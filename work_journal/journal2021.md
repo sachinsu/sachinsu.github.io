@@ -194,17 +194,6 @@
     - Chinese companies affiliated with its government make 95% of the world’s containers
     - China has 37% of the shipbuilding market in 2019 by deadweight, and 45% of all new shipbuilding orders
 
-- Work updates
-    Issuance, 
-    - IDBI Bank audit - Participation 
-    - Issue with Bank of India for which they had raised penalty and they wanted to 
-    understand data flow within systems. Shared updated issuance
-    architecture diagram to be used to explain data flow. 
-
-    BFL, 
-    - Production issue, HTTP to Microsoft Kaizala , its only on production servers and 
-    not on dev/SIT servers. Confguration changes needed 
-
 - Investing
     - Owning a business that has the opportunity to invest some or all of its profits at a very high level of return can contribute to a very high rate of earnings growth.
 
@@ -629,5 +618,53 @@ For Compute,
 
 ## 2021-oct-11 Mon
 
+- Food
+    - Fermentation is the process by which microorganisms—bacteria, molds, yeasts—break down food and drink and by doing so preserve them and make them more delicious and nutritious. Some food and drink ferments beloved worldwide include cheese, leavened breads, cured meats, wine, soy sauce, miso, sauerkraut, and sour pickles.
 
- 
+- History of AI
+    - Companies such as Nvidia had developed chips called graphics processing units (GPUs) for the heavy processing required to render images in video games. Game developers used GPUs to do sophisticated kinds of shading and geometric transformation
+
+    - NVIDIA  CUDA, a platform that enabled researchers to use GPUs for general-purpose processing.
+
+    -the amount of computational power required to train the biggest AI systems doubled every two years until 2012—and after that it doubled every 3.4 months. 
+
+- Crypto
+
+    - Tether is what’s come to be known in financial circles as a stablecoin—stable because one Tether is supposed to be backed by one dollar. But it’s actually more like a bank. The company that issues the currency, Tether Holdings Ltd., takes in dollars from people who want to trade crypto and credits their digital wallets with an equal amount of Tethers in return. Once they have Tethers, people can send them to cryptocurrency exchanges and use them to bet on the price of Bitcoin, Ether, or any of the thousands of other coins.
+
+    - There are now 69 billion Tethers in circulation, 48 billion of them issued this year. That means the company supposedly holds a corresponding $69 billion in real money to back the coins—an amount that would make it one of the 50 largest banks in the U.S., if it were a U.S. bank and not an unregulated offshore company
+
+    -One of Tether’s former bankers told me that its top executive had been putting its reserves at risk by investing them to earn potentially hundreds of millions of dollars of profit for himself. “It’s not a stablecoin, it’s a high-risk offshore hedge fund,” said John Betts, who ran a bank in Puerto Rico Tether used. “Even their own banking partners don’t know the extent of their holdings, or if they exist.”
+
+- Economics#
+
+    - Poorer regions are usually poorer because their social, economic, legal, and cultural institutions prevent businesses and workers from being able to absorb high levels of capital productively.
+
+- Tech
+    - I/o Ring or io-uring (linux) - A way to synchronously queue multiple I/O operations. 
+    - Networking
+        - TCP is Connection-oriented protocol; UDP is a connectionless protocol
+
+## 2021-oct-12 Tue
+
+- How Bank Works? 
+    - A bank makes a bunch of loans in exchange for senior claims on businesses, houses, etc. Then it pools those loans together on its balance sheet and issues a bunch of different claims on that balance sheet. The most senior claims, classically, are “bank deposits”; the most junior claims are “equity” or “capital.” Some people want to own a bank; they think that First Bank of X is good at running its business and will grow its assets and improve its margins and its stock will be worth more in the future, so they buy equity (shares of stock) of the bank. Other people, though, just want to keep their money somewhere safe; they put their deposits in the First Bank of X because they are confident that a dollar deposited in an account there will always be worth a dollar. The fundamental reason for this confidence is that bank deposits are senior claims (deposits) on a pool of senior claims (loans) on a diversified set of good assets (businesses, houses). (In modern banking there are other reasons — deposit insurance, etc. — but this is the fundamental reason.) But notice that this is magic: At one end of the process you have risky businesses, at the other end of the process you have perfectly safe dollars. Again, this is due in part to deposit insurance and regulation and lenders of last resort, but it is due mainly to the magic of composing senior claims on senior claims. You use seniority to turn risky things into safe things.
+    - When you open a bank account, the bank doesn’t tell you “well we have a 9% capital ratio, so if our loans lose 9% of their value or less your account will be money-good, and our loans are made at an average loan-to-value ratio of 68%, so if the underlying assets lose 32% of their value or less our loans will be good, and if you multiply that it means that your cash won’t be touched unless the underlying assets lose more than 38% of their value in a correlated way, which we have calculated has a less than 1-in-1,000,000 chance of happening.” If your bank told you that you would never give them your money. What your bank tells you is “if you put a dollar in this account it’s a dollar.” There are enough layers of opacity between your deposit and the underlying risky assets that you don’t think of them as being at all connected.
+
+    - Strategy
+        - Strategic decisions are those whose results depend on the actions and reactions of other economic entities.
+        - Tactical decisions are ones that can be made in isolnation and hinge largely on effective implementation. 
+
+
+## 2021-oct-13 Wed
+
+- Work updates
+    Issuance, 
+    - IDBI Bank audit - Participation 
+    - Issue with Bank of India for which they had raised penalty and they wanted to 
+    understand data flow within systems. Shared updated issuance
+    architecture diagram to be used to explain data flow. 
+    - Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    BFL, 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+

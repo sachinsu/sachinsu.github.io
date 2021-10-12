@@ -9,7 +9,7 @@ Useful links related from AI, ML space
 ## Collections
 
 - [Collection of resources related to Applied ML](https://github.com/eugeneyan/applied-ml)
-- [List of tools for MLOps](https://docs.google.com/spreadsheets/d/1i8BzE4puGQ3dmQueu4LQCcwaqrulgK1Vb-xeFwhy6gY/edit#gid=0)
+- [List of  for MLOps](https://docs.google.com/spreadsheets/d/1i8BzE4puGQ3dmQueu4LQCcwaqrulgK1Vb-xeFwhy6gY/edit#gid=0)
 
 ## Free courses
 
@@ -17,6 +17,7 @@ Useful links related from AI, ML space
 
 ## Articles
 
+- [History of AI](https://spectrum.ieee.org/history-of-ai)
 - [Machine Learning Algorithms: What is a Neural Network?](https://www.verypossible.com/insights/machine-learning-algorithms-what-is-a-neural-network)
 - [What is Benford’s Law and why is it important for data science?](https://towardsdatascience.com/what-is-benfords-law-and-why-is-it-important-for-data-science-312cb8b61048)
 - [Benford’s Law and Financial Statements](https://blog.auditanalytics.com/benfords-law-and-financial-statements/)
