@@ -136,6 +136,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Code coverage best practices from Google](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
 - [A terminal UI for tshark, inspired by Wireshark](https://termshark.io/)
 - [Developer playbook approach by Hackney council](https://playbook.hackney.gov.uk/API-Playbook/)
+- [Nice content on Ansible](https://github.com/geerlingguy)
 
 ## Observability
 

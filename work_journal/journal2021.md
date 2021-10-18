@@ -651,12 +651,34 @@ For Compute,
     - A bank makes a bunch of loans in exchange for senior claims on businesses, houses, etc. Then it pools those loans together on its balance sheet and issues a bunch of different claims on that balance sheet. The most senior claims, classically, are “bank deposits”; the most junior claims are “equity” or “capital.” Some people want to own a bank; they think that First Bank of X is good at running its business and will grow its assets and improve its margins and its stock will be worth more in the future, so they buy equity (shares of stock) of the bank. Other people, though, just want to keep their money somewhere safe; they put their deposits in the First Bank of X because they are confident that a dollar deposited in an account there will always be worth a dollar. The fundamental reason for this confidence is that bank deposits are senior claims (deposits) on a pool of senior claims (loans) on a diversified set of good assets (businesses, houses). (In modern banking there are other reasons — deposit insurance, etc. — but this is the fundamental reason.) But notice that this is magic: At one end of the process you have risky businesses, at the other end of the process you have perfectly safe dollars. Again, this is due in part to deposit insurance and regulation and lenders of last resort, but it is due mainly to the magic of composing senior claims on senior claims. You use seniority to turn risky things into safe things.
     - When you open a bank account, the bank doesn’t tell you “well we have a 9% capital ratio, so if our loans lose 9% of their value or less your account will be money-good, and our loans are made at an average loan-to-value ratio of 68%, so if the underlying assets lose 32% of their value or less our loans will be good, and if you multiply that it means that your cash won’t be touched unless the underlying assets lose more than 38% of their value in a correlated way, which we have calculated has a less than 1-in-1,000,000 chance of happening.” If your bank told you that you would never give them your money. What your bank tells you is “if you put a dollar in this account it’s a dollar.” There are enough layers of opacity between your deposit and the underlying risky assets that you don’t think of them as being at all connected.
 
+    - Tech#Networking 
+        - Hashing is process of forming simple numbers out of the bytes of data.
+
     - Strategy
         - Strategic decisions are those whose results depend on the actions and reactions of other economic entities.
         - Tactical decisions are ones that can be made in isolnation and hinge largely on effective implementation. 
 
-
 ## 2021-oct-13 Wed
+
+- Competition Demystified 
+    - devising strategy without taking that response into account can be
+    a glaring mistake.
+
+    - five forces that can affect competitive environment are Substitutes, Suppliers, Potential Entrants, Buyers, and Competitors within the Industry
+
+    - Genuine competitive advantages from supply side are, 
+        - Supply
+        - Demand - dvantages arise because of customer captivity that is based on habit, on the costs of switching, or on the difficulties and expenses of
+        searching for a substitute provider. Economies of scale. 
+        - Economies of scale
+
+    - Groucho Marx’s rule not to join any club that would have him as a member
+    - To develop an effective strategy, a company not only needs to know what its competitors are doing, but to also be able to anticipate these competitors’ reactions to any move the company makes. This is the true essence of strategic planning
+
+    -  It embraces all of the things a company does in which a competitor’s direct reactions are critical to its performance—pricing policies, new product lines, geographical expansions, capacity additions.
+
+    - Classical game theory is primarily useful because it imposes a systematic approach to collecting and organizing the mass of information about how competitors may behave.
+
 
 - Work updates
     Issuance, 
@@ -664,7 +686,83 @@ For Compute,
     - Issue with Bank of India for which they had raised penalty and they wanted to 
     understand data flow within systems. Shared updated issuance
     architecture diagram to be used to explain data flow. 
-    - Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
     BFL, 
     - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
 
+- Investing 
+    - Dont bet what you can't afford to lose
+    - Don't bet when your instincts say the game's rigged
+    - Regulators may be biased
+    - The game isn't fair 
+    
+## 2021-oct-14 Thu
+
+- Competition
+    - It is barrier to entry, not differentiation by itself, that creates strategic opportunities
+    - Market price of commodity is determined in the long run by the cost levels of the most efficient producers, competitors who can not match this level of efficiency will not survive.
+
+- Module Organization and Microservices (src: https://outline.com/DjELNf) 
+    - A business that is separated into independent operations can be described as having a modular organizational structure.
+    - Micro services help in 
+        - Reducing internal coordination 
+        - The real power of microservices is in reducing coordination and communication costs throughout the organization.
+
+- Websockets
+    -  web socket server starts off by being an HTTP server, accepting TCP conections and handling the HTTP requests on the TCP connection. When a request comes in that switches that connection to a being a web socket connection, the protocol handler is changed from an HTTP handler to a WebSocket handler. So it is only that TCP connection that gets its role changed: the server continues to be an HTTP server for other requests, while the TCP socket underlying that one connection is used as a web socket.
+
+## 2021-oct-18 Mon
+
+- To criticise the other person is protection against being hurt. 
+
+- Investing 
+
+    - There’s a long history of this verified by looking at tree rings, which incribe both heavy rainfall and subsequent fire scars. The two go hand in hand. “A wet year reduces fires while increasing vegetation growth, but then the increased vegetation dries out in subsequent dry years, thereby increasing the fire fuel,” 
+    - In Japanese markets,  Returns were so extreme from 1950 to 1990 that there was nothing left over for subsequent decades.
+    - Howard Marks once talked about an investor whose annual results were never ranked in the top quartile, but over a 14-year period he was in the top 4% of all investors. If he keeps those mediocre returns up for another 10 years he may be in the top 1% of his peers – one of the greatest of his generation despite being unmentionable in any given year.
+
+- EBPF
+    - small snippets of code that run in linux kernel
+    - It can hook into events
+    - Can be attached to network socket 
+    - It an listen to events and make changes to albeit with restrictions
+    - Written in stripped down 'C' language
+    - Available in all linux distributions and has some support on window but not MacOS yet
+    - Allows to run code in kernel space 
+    -Typically the way it works is user space program loads eBPF in kernel
+    - LLVM dictates specification ofor EBPF
+    - Use cases are, 
+        - Security - Analyzing trace events to correlate & Detect intrusion 
+        - Observability /SRE
+
+- Investing#Arbritage,
+
+    - The act of buying something and selling it almost immediately at a higher price is arbitrage.
+    - Buying a future is like buying a stock, except that it is settled at a later date.On the expiry date of the future, the future is “settled” at the closing price in the cash market — which means the prices in the two markets converge.
+
+- Indian Economy,
+
+    -	As of October – 2021,
+        -	India’s GDP is around 2 lakh crores
+        - 	Savings are around 30% which is ~ 60 thousand crores
+            -	Of this , household saving is around 65-70%
+                -	Of this, Physical savings is around 50% which is  mainly Real Estate
+                -	Rest is financial savings which constitutes bank deposits, insurance and Equity
+                    -	Of  this,
+                        -	55% is in Banks
+                        -	2-3% in direct equity
+                        -	3-4% in equity & debt via MF
+        -	In India, Stock markets are weekly efficient
+        -	In India,
+            -  	50% of GDP is constituted by MSME, informal sector
+            -	10% is by big corporates
+            -	20% is by agriculture
+            -	Sensex/Nifty constitute around 5% of GDP
+    -	In US, corporate sector constitutes around 70% of GDP
+
+- Investing#Momentum rules
+    - not to buy a stock which is up 3 days in a row.
+    - stock needs to have orderly move (not zigzag)
+    - stock should also have orderly consolidation 
+    - do not buy on extended breakout 

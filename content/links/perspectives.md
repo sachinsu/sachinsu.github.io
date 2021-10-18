@@ -36,3 +36,8 @@ Section covering Business, project/programming perspectives
 - [Awesome Scalability - Collection of Articles around Performance, Scalability etc.](https://github.com/binhnguyennus/awesome-scalability)
 - [Ego is the Enemy](https://fs.blog/2016/06/ego-is-the-enemy-genghis-khan/)
 - [How to remember what you read?](https://fs.blog/2021/08/remember-books/)
+
+## Fintech 
+
+- [Mifos X - Open source Financial Inclusion platform](https://mifos.org/mifos-x/)
+- [Moov.io - Tools/Libraries to integrate bank processing into their own software products like ISO8583](https://github.com/moov-io)
