@@ -72,6 +72,7 @@ My current Favourite Language
 - [Zero Allocation JSON logger](https://github.com/rs/zerolog)
 - [Use Makefile with Go](https://earthly.dev/blog/golang-makefile/)
 - [Review of HTTP Routers](https://www.alexedwards.net/blog/which-go-router-should-i-use)
+- [Library over Financial Markets i.e. Yahoo Finance etc.](https://github.com/piquette/finance-go)
 
 ### Task queues
 

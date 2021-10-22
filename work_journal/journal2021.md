@@ -680,17 +680,6 @@ For Compute,
     - Classical game theory is primarily useful because it imposes a systematic approach to collecting and organizing the mass of information about how competitors may behave.
 
 
-- Work updates
-    Issuance, 
-    - IDBI Bank audit - Participation 
-    - Issue with Bank of India for which they had raised penalty and they wanted to 
-    understand data flow within systems. Shared updated issuance
-    architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    BFL, 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-
 - Investing 
     - Dont bet what you can't afford to lose
     - Don't bet when your instincts say the game's rigged
@@ -766,3 +755,86 @@ For Compute,
     - stock needs to have orderly move (not zigzag)
     - stock should also have orderly consolidation 
     - do not buy on extended breakout 
+
+## 2021-oct-19 Tue
+
+- Investing#Thoughts from Samit Vartak
+
+    - Valuation is secondary and business analysis is primary concern 
+    - ROE - 25%
+    - Predictable businesses like FMCG is not high growth ones
+    - Typically, 20 stock portfolio is needed to have 3-4 stocks which become 10x in 10 years 
+    - nothing is stable, one has evolve with change. One has to survive and remain ahead of competition (market share)
+    - Hawkins produces best quality products but they are not aggresive in marketing products. 
+    - PLI Scheme - Focus on Export oriented business
+    - Real estate looks like new thing, 
+    - Building Material - Steel pipes, Electrical cables, tiles
+    - In china, in case of layoff, company needs to compensate for n+1 months where n is no. of years completed.
+    - China going more socialist from extreme capitalism
+    - India has strong banking, corporate and govt. balance sheet.
+    - Top 5% contribute to incremental growth of GDP; discretionary spending 
+    - not very positive on financials namely corporate lending (many r generating enough cash), unsecured lending is risky. Alpha not present.
+    - Auto sector - cost of manufacturing is up, cost of running has gone up. Disruption is Ahead (EV) 
+    - In india , Execution is the most important aspect which may not be true for US
+    - We are spending way more time in reading but less time in thinking over those readings. 
+
+## 2021-oct-20 Wed
+
+- Work updates
+    Issuance, 
+    - IDBI Bank audit - Participation 
+    - Issue with Bank of India for which they had raised penalty and they wanted to 
+    understand data flow within systems. Shared updated issuance
+    architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review 
+
+- Oil & Gas Industry in India, 
+
+    - The oil and gas industry can be broken down into three main segments: upstream, midstream, and downstream.
+
+    - Upstream businesses consist of companies searching for, recovering, and producing crude oil and natural gas. These companies are often known as “E&P” for “exploration and production.” (Oil india, GAIL)
+
+    - Midstream businesses are those that are focused on moving the commodities via pipelines and various other modes. (GAIL, GSPC, PETRONET)
+
+    - Lastly, downstream businesses are involved in refining and marketing various types of fuels. (BPCL, HPCL, MGL etc.)
+
+
+- Investing#Stock Trading 
+
+    - One of the main drivers of a gamma squeeze is an influx of call option purchases, which causes market makers to hedge their writing of the call options by purchasing the underlying stock, driving up the stock price in the process. 
+
+    - The way stock trading works is that a buyer and seller agree to a trade on the stock exchange and then, two days later, the buyer delivers the money and the seller delivers the shares. That creates two days of credit risk: If the buyer vanishes, the seller doesn’t get paid. To solve this, there are clearinghouses that essentially guarantee every trade; if you sell stock, you can be confident that you’ll get your money in two days, because the clearinghouse will pay you. The main stock clearinghouse is the National Securities Clearing Corp. (NSCC); the main options one is the Options Clearing Corp. (OCC). Brokers are required to keep cash at the clearinghouses to guarantee their obligations to settle trades. The more trades a broker does, and the riskier those obligations are, the more cash the broker needs. When there’s a ton of trading in very volatile stocks, the clearinghouses will call brokers for more money.
+
+## 2021-oct-22 Fri
+
+- Intersection politics - Muslims are useful for this. Hindus have tendency to blend in so they just get absorbed. 
+- To Indians and Chinese, talk harshly. sweet talking indicates weakness. 
+
+
+- What is Convertible Debt?
+    -  The way this works is typically that the lender gives the company $1,000 and the company pays back, say, $20 per year and then $1,000 at the end of five years. But at any time during those five years, the lender can, at its option, trade in the debt for shares of stock in the company. When it converts, it no longer gets any interest, and it doesn’t get its $1,000 back at the end. Instead it just gets stock.
+
+    - In regular public-company convertible bonds, the lender gets a fixed amount of stock. If a public company issues a convertible bond when its stock is at $20, it might do it at a conversion price of, say, $25, a 25% premium to the current stock price. So a $1,000 bond will convert into 40 shares of stock. This ratio will be fixed at the time the bond is issued and stays the same no matter what the stock does. If the stock stays at $20, the bondholders won’t convert; they’d rather get their $1,000 back than convert into $800 worth of stock. If the stock goes up to $50, the bondholders will (eventually) convert; they’d rather get $2,000 worth of stock than just get their $1,000 back.
+
+- What is Negative Working Capital?
+    - Company gets paid in advance from distributors and shop keepers but tey pay their vendors after n days
+
+
+- Pre-historic roving bandits realized that instead of raiding groups of humans and moving on, they could earn more by staying put and stealing from their victims all the time.
+
+- In Moneyland, citizens are able to keep their assets outside the communities they steal them from, they don’t care what happens in the long term. The more they steal now, the more they and their children get to keep. In fact, they make money from instability: the more disputes there are, the more money there is for them to cream off
+
+- Post world war II @ Bretton Woods, It was decided that all currencies would be pegged to the dollar, which would in turn be pegged to gold. An ounce of gold would cost $35.The US Treasury pledged that, if a foreign government turned up with $35, it could always buy an ounce of gold.
+
+-  If other countries wished to change the value of their currency by a significant amount, they promised that they would only do so with the approval of a new body called the International Monetary Fund.
+
+- Money flows ceaselessly between countries, nosing out investment opportunities in China, or Brazil, or Russia, or wherever. If a currency is overvalued, investors sense the weakness and gang up on it like sharks around a sickly whale. In times of global crisis, the money retreats into the safety of gold or US government bonds. In boom times, it pumps up share prices elsewhere, in its restless quest for a good return. These waves of liquid capital have such power that they can wash away all but the strongest governments. The prolonged speculative attacks on the euro, or on the rouble, or the pound, which have been such a feature of the last few decades, would have been impossible under the Bretton Woods system, which was specifically designed to stop them happening.
+

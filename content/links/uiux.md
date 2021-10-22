@@ -48,6 +48,8 @@ draft: false
 - [Go based Fast Javascript bundler and minifier](https://esbuild.github.io/)
 - [Finite State Machine in JS/Typescript](https://xstate.js.org/docs)
 - [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)
+- [Step by Step using PWABuilder](https://devblogs.microsoft.com/ifdef-windows/get-started-building-a-progressive-web-app/)
 - [Observable Plot - Data Visualization Library](https://github.com/observablehq/plot)
 - [Shared data types for building collaborative software](https://github.com/yjs/yjs)
 - [NoSQL-database for JavaScript Applications like Websites, hybrid Apps, Electron-Apps, Progressive Web Apps and NodeJs](https://rxdb.info)
+- [RemixIcon - Open Source Icons Repository](https://remixicon.com/)

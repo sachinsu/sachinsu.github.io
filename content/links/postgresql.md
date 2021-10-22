@@ -94,3 +94,8 @@ draft: false
 
 - [Migration Guide from Oracle to PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/new-oracle-to-postgres-migration-guide-for-azure/ba-p/2055303)
 - [Lessons while migrating from Oracle to PostgreSQL](https://www.cybertec-postgresql.com/en/building-an-oracle-to-postgresql-migrator-lessons-learned/)
+
+
+## High Availability 
+
+- [Tools for Multi-Master Replication](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
