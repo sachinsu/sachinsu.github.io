@@ -926,3 +926,20 @@ For Compute,
     - wokeism is alliance between losers and failures 
 
     - Humanities are monopolized by leftists
+
+- Retry guidelines 
+    - As a general guideline, use an exponential back-off strategy for background operations, and immediate or regular interval retry strategies for interactive operations. In both cases, you should choose the delay and the retry count so that the maximum latency for all retry attempts is within the required end-to-end latency requirement.
+
+    - Anti-patterns
+    
+     - avoid implementations that include duplicated layers of retry code. Avoid designs that include cascading retry mechanisms, or that implement retry at every stage of an operation that involves a hierarchy of requests, unless you have specific requirements that demand this.
+
+     - Never implement an endless retry mechanism
+
+     - Never perform an immediate retry more than once.
+
+     - Avoid using a regular retry interval, especially when you have a large number of retry attempts.
+
+     - Prevent multiple instances of the same client, or multiple instances of different clients, from sending retries at the same times.
+
+     [Reference](https://docs.microsoft.com/en-us/azure/architecture/best-practices/transient-faults)
