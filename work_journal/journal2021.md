@@ -780,21 +780,6 @@ For Compute,
 
 ## 2021-oct-20 Wed
 
-- Work updates
-    Issuance, 
-    - IDBI Bank audit - Participation 
-    - Issue with Bank of India for which they had raised penalty and they wanted to 
-    understand data flow within systems. Shared updated issuance
-    architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
-    DH, 
-    - Ongoing App Review 
 
 - Oil & Gas Industry in India, 
 
@@ -838,3 +823,106 @@ For Compute,
 
 - Money flows ceaselessly between countries, nosing out investment opportunities in China, or Brazil, or Russia, or wherever. If a currency is overvalued, investors sense the weakness and gang up on it like sharks around a sickly whale. In times of global crisis, the money retreats into the safety of gold or US government bonds. In boom times, it pumps up share prices elsewhere, in its restless quest for a good return. These waves of liquid capital have such power that they can wash away all but the strongest governments. The prolonged speculative attacks on the euro, or on the rouble, or the pound, which have been such a feature of the last few decades, would have been impossible under the Bretton Woods system, which was specifically designed to stop them happening.
 
+## 2021-oct-26 Tue
+
+- How International transactions work, 
+
+    - Remittances work the same way but due of the size of these transactions there are some differences in both operations and also in settlement. We will take the most popular settlement – USD. Most oil gets sold in USD, which means both buyer and seller will have to necessarily settle through a bank in US of A, irrespective of where they are. Lets take an example. BPCL buys from Saudi Aramco. BPCL Banks with SBI, Mumbai and Aramco with Al Rajhi bank in Riyadh.
+    - LC Process: To place an oder with Aramco, BPCL will have to “Open” an LC favouring Aramco. Aramco will furnish it to its bank Al Rajhi and ask if the LC is trustworthy. If Al Rajhi is not comfortable with SBI’s trustworthiness or if their limits are exhausted, Al Rajhi can ask another bank to “confirm” SBI’s trustworthiness. By Confirming, this intermediate bank (say Citibank Riyadh) acts as a guarantor. All the banks in the chain make money with LC fees. Remember, without lending a $, by lending their trust (of course managing the risk)  banks make money. So this LC business, which you can see as “fee based” income in bank’s annual reports is something banks fight for.
+    - In case of Iran – India payments, since it was a govt backed deal, no LCs were required to be opened. And for the purists who are reading this, there would be some open account (non LC Based) transactions between two trusted trade partners and LCs will come in only when the amounts are beyond a limit.
+    - Settlement(s):
+        - Goods settlement: When the ship calls on the port and unloads to the customs’ warehouse / oil farm, BPCL, by sending an “acceptance” through SBI, gets the title for goods in the port / and lifts the goods.
+        The payment terms can be on “Sighting” the goods – i.e pay the money and take the goods, or agree to pay x days after “accepting” to pay. This payment period is truly between the trade partners BPCL & Aramco.
+        Money settlement : Since the transaction is in USD and as both SBI and Al Rajhi, aren’t present in USD settlement zones (for now think US of A), both of them need correspondent banks in the US of A. So lets say SBI Mumbai’s correspondent bank is SBI New York and Al Rajhi’s is Citibank NY. BPCL asks SBI Mum to pay, say 500 Mn to Aramco’s a/c held with Al Rajhi, Riyad. SBI Mum will “inform” SBI NY (through SWIFT) to pay Al Rajhi’s a/c with Citi NY, SBI Mum will also send a message to Al Rajhi saying this payment is against invoice numbers 1,2,3 with a value date, say 27th Oct. Note this is 2 days from the date of initiating the message (today 25th Oct).
+        This value date is important as that is the date SBI BY settles USD to CITI NY. SBI Mum’s a/c with SBI NY and AL Rajhi’s a/c with Citi NY will get debited & credited on this date. The banks dont lose money as the date is the same. But for BPCL and Aramco, it may not be the same. Due to time zone & banking system differences, the dates can be one or two days apart. Since the amounts are huge and even a single day’s float (interest) can also be huge, these payments are orchestrated days in advance. The FX rates are also negotiated based on relationship value. In reality Aramco, BPCL and every oil marketing company will have their treasurers poring through Reuters terminals to get the best rates and also enter into FX forward contracts many days in advance (typically on the day they make the order for oil itself). Several hedging tools (Forwards, futures, Swaps)  are deployed depending on frequency, value and open positions. This is risk management practiced as high art and precise science.
+
+## 2021-oct-27 Wed
+
+- Investing rules, 
+
+    - Cut your losses -  put a stop point to how much money you can lose in a stock. And when you reach that point, get the hell out. How much? Well, for some people it’s 2% per trade. For others it’s 30% absolute on each investment. That’s for you to figure out.
+
+    - Don’t buy when there’s nothing to buy - If you go to a market for tomatoes and you find only rotten bananas, will you buy them? Some people feel that when they have decided that money must go in equities they have to buy some shares right now. That is stupid. Find opportunities. It may take some time, and they may not be visible (who has the time to track everything) – but only invest when it’s a no-brainer.
+
+    - Ride your profits -When something’s going well, stick with it. It’s always tempting to take your profits when they’re on the table. But the best profits are on a long term trend.
+
+    - Don’t act on what you hear - Too many people feel the need to talk. They come on TV and the internet and spit out random theories on where you should invest and what you should do. Don’t just listen to them ; do your own research. I am one of these characters – so don’t listen to me, do your own research.But why do such people, including me, feel the need to educate you, or to tell you what to do? Because it satisfies their need to feel like a hero. And some of them earn their living that way – when you think they are a hero you will buy their random recommendations. For others it is a way to reinforce their own trading decisions – i.e. when they want to sell, they need to have people to buy, so they “recommend” the stock. Whichever way you look at it, it does not serve YOUR needs. In all probability you don’t know what your needs are, but you might be right for thinking it’s to profit on your investment.
+
+    - Set a goal, and get bored - investing without a goal is like driving without a destination. It’s thrilling to know that you can drive. And you feel like you’re exploring something, learning something new. But once you realize that you have to drive everyday, it gets more and more boring until all you do when you drive is curse the traffic and long for the destination.
+
+    - Lastly, my free advice. Don’t take free advice. It’s never worth the money you don’t pay.
+
+- Work updates
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review 
+
+    Sahil, 
+    - Unified non-card transactions from different channels
+
+- History of Data Architectures 
+    
+    -  It all started with need for business leaders to understand how business was doing. so process was to get data out of operational data systems , transform it into a central place (Data warehouse) and perform analytics on it.
+    - This enabled business analysts to understand how was business was performing 
+    - However, this approach started to have challenges when,
+        - need arised for handling more data types , typically unstructured data like videos, audio and images. 
+        - also on-prem infra was difficult and expensive to scale with evergrowing data. This is because at on-prem compute and storage were typically coupled.
+        - There was apetite to perform forward looking analytics which gave indication on how business would perform in future based on available data. This required adding ML & AI on data sets.
+        
+    - This is where Concept of "Data lake" started getting adopted, 
+        - Basically, its cheap storage area where data is just dumped from sources like OLTP systems, Other Applications, logs etc. 
+        - From here, Subset of the data is moved to classical data warehouse (typically on cloud) for analytics or gaining insights  
+        - Reasons are, 
+            - In the Sources to DWH approach, one has to have schema up-front which is hard to get right at the beginning. Data lake to DWH provides flexibility in this. 
+        - A structural transaction layer is built on top of it 
+        - with lakehouse pattern, BI tool can query data lake directly without the need to have DWH or transactional layer in between.
+        
+    - When it comes to AI and machine learning, a lot of the secret sauce to getting really great results or predictions comes from augmenting your data with additional metadata that you have.
+
+    - Streaming
+        - All the ETL use cases are potentially candidates for streaming
+
+## 2021-oct-28 Thu
+
+   - API Gateway or not 
+       - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
+       - Coupling - Without API Gateway, Client apps are coupled to the internal services. Any changes in internal services directly impact clients. 
+       - Security - Api Gateway can handle security aspects required for endpoints exposed to outside world 
+       - Cross cutting concerns - Authorisation , TLS/SSL can be handled at API Gateway layer. 
+
+    - Features of API Gateway, 
+        - Reverse proxy or gateway routing. The API Gateway offers a reverse proxy to redirect or route requests (layer 7 routing, usually HTTP requests) to the endpoints of the internal microservices. 
+        - Requests aggregation. As part of the gateway pattern you can aggregate multiple client requests (usually HTTP requests) targeting multiple internal microservices into a single client request.
+        - Cross-cutting concerns or gateway offloading. like 
+        - Authentication and authorization
+        - Service discovery integration
+        - Response caching
+        - Retry policies, circuit breaker, and QoS
+        - Rate limiting and throttling
+        - Load balancing
+        - Logging, tracing, correlation
+        - RT or NRT Monitoring of API Traffic
+        - Headers, query strings, and claims transformation
+        - IP allowlisting
+
+        - reference: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern
+
+- onthropology 
+    - Anthropologically, only 2-7% of population can do white collar jobs
+    - rest are bread for blue collar jobs (meant to be beasts of burden)
+    - Industrialization disturbed it. 
+    - Manufacturing to services migration further disturbed it
+    - with services, top end is white collar but remaining is blue collar but they form quasi-white collar category
+    - quasi-white collar category got voice via internet and social media.
+    - people want to blame everybody else for their failures...social media amplifies it 
+    - wokeism is alliance between losers and failures 
+
+    - Humanities are monopolized by leftists

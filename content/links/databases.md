@@ -68,7 +68,7 @@ Knowledge base around general database related topics.
 - [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
-- [1mg's Data Stack](https://rudderstack.com/blog/1mgs-data-stack-explained-how-they-harness-and-activate-unlimited-real-time-data/)
+- [Data Stack of 1mg](https://rudderstack.com/blog/1mgs-data-stack-explained-how-they-harness-and-activate-unlimited-real-time-data/)
 - [A Unified Data Infrastructure Architecture](https://7a9z42689xx35658r1hutm8n-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Data-Report-Martin-Inline-Graphics-R7.pdf)
 - [Data and AI Product Landscape](http://mattturck.com/wp-content/uploads/2020/09/2020-Data-and-AI-Landscape-Matt-Turck-at-FirstMark-v1.pdf)
 - [Transformations for DWH using DBT](https://github.com/fishtown-analytics/dbt)
