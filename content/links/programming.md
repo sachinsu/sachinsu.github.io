@@ -16,6 +16,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Books on Architecture,Desigm 
 
+- [Software Architecture Patterns by Mark Richards](https://www.oreilly.com/content/software-architecture-patterns/)
 - [A comprehensive list of books on Software Architecture.](https://github.com/mhadidg/software-architecture-books)
 
 ## Strategies/Approaches
@@ -142,6 +143,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Observability
 
+- [Observability trends 2021](https://www.civo.com/blog/observability-trends-2021)
 - [What was observability again?](https://www.cncf.io/blog/2021/03/02/what-was-observability-again/?utm_source=o11y.news&utm_medium=email)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)

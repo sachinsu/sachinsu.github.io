@@ -896,22 +896,22 @@ For Compute,
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
        - Coupling - Without API Gateway, Client apps are coupled to the internal services. Any changes in internal services directly impact clients. 
        - Security - Api Gateway can handle security aspects required for endpoints exposed to outside world 
-       - Cross cutting concerns - Authorisation , TLS/SSL can be handled at API Gateway layer. 
+       - Cross cutting concerns - Authorisation, TLS/SSL can be handled at API Gateway layer. 
 
     - Features of API Gateway, 
         - Reverse proxy or gateway routing. The API Gateway offers a reverse proxy to redirect or route requests (layer 7 routing, usually HTTP requests) to the endpoints of the internal microservices. 
         - Requests aggregation. As part of the gateway pattern you can aggregate multiple client requests (usually HTTP requests) targeting multiple internal microservices into a single client request.
         - Cross-cutting concerns or gateway offloading. like 
-        - Authentication and authorization
-        - Service discovery integration
-        - Response caching
-        - Retry policies, circuit breaker, and QoS
-        - Rate limiting and throttling
-        - Load balancing
-        - Logging, tracing, correlation
-        - RT or NRT Monitoring of API Traffic
-        - Headers, query strings, and claims transformation
-        - IP allowlisting
+            - Authentication and authorization
+            - Service discovery integration
+            - Response caching
+            - Retry policies, circuit breaker, and QoS
+            - Rate limiting and throttling
+            - Load balancing
+            - Logging, tracing, correlation
+            - RT or NRT Monitoring of API Traffic
+            - Headers, query strings, and claims transformation
+            - IP allowlisting
 
         - reference: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern
 
