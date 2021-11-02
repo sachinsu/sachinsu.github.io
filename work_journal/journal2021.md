@@ -943,3 +943,69 @@ For Compute,
      - Prevent multiple instances of the same client, or multiple instances of different clients, from sending retries at the same times.
 
      [Reference](https://docs.microsoft.com/en-us/azure/architecture/best-practices/transient-faults)
+
+
+## 2021-nov-01 Mon
+
+- India Economy, 
+    - South preferred over North; Central govt. discriminated against North
+    - Freight equalisation policy was adopted by the government of India to facilitate the equal growth of industry all over the country. This meant a factory could be set up anywhere in India and the transportation of minerals would be subsidised by the central government. As a result of the policy, businesses preferred setting up industrial locations closer to the coastal trade hubs and markets in other parts of the country.
+    - In other countries - Industries sprout around areas having abundant raw material. 
+    - State governments have become retail redistribution company 
+    - 80% of state revenue goes on paying pension, salaries etc.
+
+- SoftPOS Host sends requests to WL IPG for SMSPay transactions. 
+- For AmazonPay, TTMS processes the transaction.
+
+## 2021-nov-02 Tue
+
+- Logistics
+    
+    - Hauling cargo via Containers was invented by Malcolm mclean in 1956.  It provided perfect platform to drive global connectivity as they connected all dots through transportation, infrastructure, supply chain and logistics (ship,rails & trucks)
+    - The International Maritime Organization (IMO) published a set of shipping container standards in the 1970s. 
+
+- On Software Architecture
+
+    - Every thing in Software Architecture is a trade off
+
+    - The top 3 soft skills for any software architect are negotiation, facilitation, and leadership. Negotiation is a required skill as an architect because almost every decision you make as an architect will be challenged. Your decisions will be challenged by other architects who think they have a better approach than you do; your decisions will be challenged by business stakeholders because they think your decision takes too long to implement or is too expensive or is not aligned with the business goals; and finally, your decisions will be challenged by development teams who believe they have a better solution. All of this requires an architect to understand the political climate of the enterprise and how to navigate the politics to get your decisions approved and accepted.
+
+    - Facilitation is another necessary soft skill as a software architect. Architects not only collaborate with development teams, but also collaborate closely with various business stakeholders to understand business drivers, explain important architecture characteristics, describe architectural solutions, and so on. All of these gatherings and meetings require a keen sense of facilitation and leadership within these meetings to keep things on track.
+
+    - Finally, leadership is another important soft skill because an architect is responsible for leading and guiding a development team through the implementation of an architecture. They are there as a guide, mentor, coach, and facilitator to make sure the team is on track and is running as smooth as a well-oiled machine, and to be there when the team needs clarification or has questions and concerns about the architecture.
+
+    - Trends of 2021, 
+        - Exploration of low-code/no-code environments. 
+        - Focus on Architecture as part of daily activities of development process. Realization of importance of evolutionary and incremental architectures
+        - Move to hybrid from pure microservices based architecture. 
+
+    - Three basic Architecture Styles
+        - Monolith (Single Deployment)
+        - Service based 
+        - Microservices (independant deployability)
+            - Common topologies 
+                - API REST-based topology
+                - application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
+                - centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
+                - typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
+
+
+    - An architecture style describes the way your overall system is structured (such as microservices, layered monolith, and so on), whereas architecture patterns are ways of describing certain and specific architectural aspects of that overall structure. 
+
+    - Deriving the required architecture characteristics from business needs is the key. Identify "ilities" that are important for org like Scalability, Performance, data integrity, system availability, fault tolerance, Security.
+
+    - Lessons learned, 
+        - Soft skills (people skills) matter in software architecture – they constitute 50% of being an effective software architect.
+        -  Always keep the project and business constraints in mind when creating and analyzing software architecture (cost, time, budget, skill levels, etc.)       
+        - Don’t get caught up in the hype as a software architect – stop, analyze tradeoffs, study trends, and approach new technology with caution.
+        -  Focus more on the “why” rather than the “how” – this is what is truly important is software architecture
+        -  Spreading knowledge is more valuable than being an individual contributor.
+
+    - Reference: https://apiumhub.com/tech-blog-barcelona/software-architecture-recommendations-mark-richards/
+
+- How to get useful answers to your questions
+    - ask yes/no questions
+    - state your current understanding
+    - be willing to interrupt
+    - don’t accept responses that don’t answer your question
+    - being good at extracting information is a superpower

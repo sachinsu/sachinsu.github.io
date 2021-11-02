@@ -56,6 +56,7 @@ Platform where i have spent most time till now.
 
 ## Tools, Libraries
 
+- [Generate PDF using Scriban and Playwright](https://www.meziantou.net/generate-pdf-files-using-an-html-template-and-playwright.htm)
 - [.NET Playground](https://sharplab.io/)
 - [RestSharp - REST HTTP Client](https://github.com/restsharp/RestSharp)
 - [Ocelot - API Gateway](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
