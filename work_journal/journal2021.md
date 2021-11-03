@@ -1017,3 +1017,13 @@ For Compute,
     - people are less happy with materialistic acquisitions 
     - homes are depreciating assets.
     - You are paying rent whether you own a house or not
+
+- Money fundas
+    - have money but dont get tempted.
+    - let money be facilitator
+    - FD Rate + 5-7% is equity returns...anything promised over it is scam
+    - if u dont understand financial  product, walk away 
+    - Less risky way in Equity markets is to invest in Index fund 
+    - financial product are their to solve your money problems and it should not be other way round.
+    - buy because you need it
+    - Upto 10 years -> Allocate to Debt; More than 10 years -> Allocate to Equity
