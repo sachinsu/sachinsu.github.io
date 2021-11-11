@@ -995,22 +995,6 @@ For Compute,
 
 ## 2021-nov-03 Wed
 
-- Work updates
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
-    DH, 
-    - Ongoing App Review 
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
 - Behavioral
     - Extrinsically Motivated Goals (EM)- Owning a home,Money,fame,image   
     - Intrinsically Motivated Goals (IM)- Personal growth, intimacy, community
@@ -1027,3 +1011,205 @@ For Compute,
     - financial product are their to solve your money problems and it should not be other way round.
     - buy because you need it
     - Upto 10 years -> Allocate to Debt; More than 10 years -> Allocate to Equity
+
+## 2021-nov-08 Mon
+
+- On ETFs 
+    -  market maker is someone who buys and sells an asset in order to profit from the spread, not someone who accurately forecasts the price of an asset six months from now. End users want to buy or sell stocks or bonds or houses, they want to do it quickly at a predictable price, so they go to a market maker who will provide that service. The market maker buys from sellers and sells from buyers and does its best to match them up; ideally it buys an asset from a seller and resells it to a buyer within a fairly short time. It collects a “spread” from the buyer and seller: It buys from the buyer at a bit less than the fair market price, and sells to the seller at a bit more than the fair market price, because it is providing them a valuable service, the service of “immediacy” or “liquidity,” the service of always being available to buy or sell. 
+    - Substantial differences from NAV rarely happen because traders all over the world actively trade ETF’s. They will sell ETF’s when they drift above their NAV and buy when they are below it. These actions keep the ETF’s share price close to the NAV.
+    Another tool that ETF’s have to keep the price around the NAV is called creation/redemption. The ETF has agreements in place with entities known as authorized participants to exchange baskets of the ETF’s assets in exchange for shares. Authorized participants can also sell the ETF baskets of assets. The ETF can create new shares when the price is above NAV and destroy shares when the price is too low below NAV. Creation/redemption helps keep share prices in line with NAV.
+
+- On Cement
+
+    - Portland cement is made by first heating limestone and clay in a kiln to around 1,500ºC. The resulting mixture—known as clinker—is then mixed with gypsum and pulverised into fine powder, which can then be mixed with water and aggregates (such as sand and gravel) to make concrete. Significant amounts of carbon dioxide come from the limestone as it breaks down in the kiln. 
+
+
+- Architecture 
+
+    - The rapid development of powerful consumer-focused computing tools like smartphones has shifted the distribution of technology from central computing to the edge: the consumers themselves. 
+    - consumerization of technology is driving capital disbursement in computing and storage capacity on the edge, outside of cloud and data center boundaries.
+
+    - Modern enterprise applications have,
+        - Secure - use latest encryption and protocols
+        - Service oriented APIs with focus on communication.
+        - Modular & Composable
+        - Easily maintainable
+
+- Delivery Performance 
+
+    - LEAD TIME - There are two parts to lead time: the time it takes to validate a feature and the time it takes to deliver it to customers. Measuring the design part of lead time can be difficult as acceptance criteria may vary. However, the delivery part of the lead time - the time it takes for work to be implemented, tested, and delivered - is easier to measure and has lower variability.
+
+    Shorter API lead times are better for many reasons. Like we know from API description creation and mocking, faster feedback provides quicker validation and course correction. Reduced lead times also mean defects or outages are more quickly corrected. Short lead times fulfill the portion of the Agile Manifesto that seeks to "satisfy the customer early".
+
+    - DEPLOYMENT FREQUENCY - If not handled appropriately, deploying more often may be a risky proposition. In these situations, deployments are treated as delicate, precarious events that attract oversight and numerous controls. Similarly, conventional wisdom states that consumers want to build on a stable, consistent foundation, not integrate with the API-equivalent of a construction site. With that apparent paradox, how do we create environments capable of change?
+    
+    The key is satisfying both of these concerns while enabling more rapid releases is to lower batch sizes for additive changes. Reducing the amount delivered (or batch size) reduces variability in estimates, accelerates feedback, reduces risk and overhead while increasing urgency. Further, we can achieve both speed and stability if those smaller batches adhere to API Evolution principles or avoid breaking changes.
+
+    Feature toggles are also a method to enable the benefits of continuous development while synchronizing with timed marketing or product releases. A response from the State of API Survey had this to say:
+
+    "We deploy APIs to production multiple times a week. We deploy changes as soon as they’re completed and tested, and we keep them feature-flagged off until the whole feature is ready to go live." — Sindhu N., Technical Architect
+
+    - MEAN TIME TO RESTORE - Creating more APIs and API changes quicker should not come at the expense of API reliability. Usually, reliability is thought of as the time between failures. However, modern API experiences are rapidly changing complex systems. In these situations, it is not a question of if an implementation will fail, but when. In this light, the critical metric becomes how quickly teams can restore service.
+
+    High-performing API organizations recover more quickly when outages do occur. The difference is minutes rather than in hours (or even days) of their contemporaries.
+
+    - CHANGE FAIL PERCENTAGE - A key metric when making changes to a system is what percentage of changes to production fail. Failure may include degraded service or accidental introduction of a breaking change requiring a hotfix, a rollback, or a patch. A metric like ‘change fail percentage’ helps ensure that while we encourage greater delivery tempo, we do not do so by making the system less stable.
+
+    High-performing teams’ changes to production APIs require a lower percentage of hotfixes, rollbacks, and patches than their fellows.
+
+- DevOps for Database
+
+    - CELT Metrics 
+        - Concurrency is the number of simultaneous requests NN
+        - Error Rate is what it sounds like
+        - Latency is response time, as previously defined RR
+        - Throughput is requests per second XX
+
+    These can all be calculated as average (or p99) during intervals or as they apply to individual requests (except for Throughput).
+
+        - How to get CELT Metrics
+            - Query logs. Built-in, but high-overhead to enable on busy systems; accessible only to privileged users; expensive to analyze; and most of the tooling is opsand DBA-focused, not developer-friendly.
+            -  TCP traffic. Golden, if you can get it: low overhead, high fidelity, and great developer-friendly tools exist. The main downside is reverse engineering a database’s network protocol is a hard, technical problem. (Database Performance Monitor shines here.)
+            - Built-in instrumentation. For example, in MySQL, it’s the performance schema
+            statement digest tables; in PostgreSQL it’s the pg_stat_statements extension;
+            MongoDB doesn’t have a great solution for this internally, but you can get
+            most of the way there with the top() command; or if you can accept higher
+            performance impact, the MongoDB profiler. These have to be enabled, and
+            often aren’t enabled by default, especially on systems like Amazon RDS, but
+            this instrumentation is valuable and worth enabling, even if it requires a server restart. Oracle and SQL Server have lots of robust instrumentation. Most monitoring tools can use this data.
+
+    - Use Method
+        - Utilization
+        - Saturation 
+        - Errors
+
+    - Every database technology has its Kryptonite.
+
+        - MySQL: the query cache, replication, the buffer pool.MySQL lacks transactional schema changes and has brittle replication.
+        - PostgreSQL: VACUUM, connection overhead, shared buffers. PostgreSQL is susceptible to vacuum and bloat problems during long-running transactions.
+        - MongoDB: missing indexes, lock contention
+
+- Citus for PostgreSQL
+
+    - Sharding. Citus handles all of the sharding, so applications do not need to be shard-aware.
+    - Multi-tenancy. Applications built to colocate multiple customers’ databases on a shared cluster—like most SaaS applications—are called multi-tenant. Sharding, scaling, resharding, rebalancing, and so on are common pain points in modern SaaS platforms, all of which Citus solves.
+    - Analytics. Citus is not exclusively an analytical database, but it certainly is deployed for distributed, massively parallel analytics workloads a lot. Part of this is because Citus supports complex queries, building upon Postgres’s own very robust SQL support. Citus can shard queries that do combinations of things like distributed GROUP BY and JOIN together.
+
+    - A Citus cluster is composed of PostgreSQL nodes with one of two roles: coordinator or worker. A coordinator receives queries, then decomposes them into smaller queries that execute on shards of data in the worker nodes. The coordinator then reassembles the results and returns them to the client.
+
+    - Citus is not middleware: it’s an extension to Postgres that turns a collection of nodes into a clustered database. This means that all of the query rewriting, scatter-gather MPP processing, etc happens within the PostgreSQL server process, so it can take advantage of lots of PostgreSQL’s existing codebase and functionality.
+
+- Vitess for MySQL
+    -  Sharding. Sharding is essential for scaling traditional relational databases that weren’t built natively to operate as a distributed cluster of many nodes forming a single database. Every large-scale MySQL deployment—and there are thousands—uses sharding, bar none.
+    - Kubernetes deployment. You can’t just run a database like MySQL on Kubernetes without a robust suite of operational tooling for high availability. MySQL just wasn’t built to run on ephemeral machines. Vitess makes it possible to treat a MySQL node as disposable.
+    - Guardrails. MySQL, like most databases, is pretty easy for a badly behaved application or user to take down completely. A single runaway query or resource hog can create priority inversions and starve all the useful work. Vitess prevents this
+
+    - Vitess can be described as “sharding and HA middleware,” but really it’s a new distributed database that is built on the shoulders of giants. Individual nodes run MySQL and leverage its capabilities as a leaf storage node. The resulting database automatically shards a single application’s data across many nodes, and automatically distributes a single query to run in a scatter-gather pattern in parallel across those nodes too. It is more designed for transactional workloads, than analytics workloads.
+
+- Kubernetes    
+    - A Pod is an environment for multiple containers to run inside. The pod is the smallest deployable unit you can ask Kubernetes to run and all containers in it will be launched on the same node. A pod has its own IP address, can mount in storage, and its namespaces surround the containers created by the container runtime such as containerd or CRI-O.
+    - pod is a single instance of your application, and to scale to demand, many identical
+    pods are used to replicate the application by a workload resource (such as a Deployment, DaemonSet, or StatefulSet).
+    Your pods may include sidecar containers supporting monitoring, network, and security,
+    and “init” containers for pod bootstrap, enabling you to deploy different application
+    styles. These sidecars are likely to have elevated privileges and be of interest to an
+    adversary.
+    - The lifecycle of a pod is controlled by the kubelet, the Kubernetes API server’s
+    deputy, deployed on each node in the cluster to manage and run containers. If the
+    kubelet loses contact with the API server, it will continue to manage its workloads,
+    restarting them if necessary. If the kubelet crashes, the container manager will also
+    keep containers running in case they crash. The kubelet and container manager
+    oversee your workloads.
+
+## 2021-nov-11 tue
+
+  - Data Discovery - inner workings 
+    - Unified Metadata store for relational/Data warehouse, ETL tools and BI tools each 
+    - Query Parsing (with support for different SQL Dialect) to analyze how tables,columns are being used to arrive at popularity model like say Top n usage  
+    - Data lineage is the common thread that ties together all of your data pipelines, workflows, and systems.  
+
+  - Disk Access
+    - Disk accesses are slow because they involve mechanical operations. To read a
+block of data from a disk requires the read arm to move to the right track; the platter
+must then spin until the desired block is under the read head. This process typically
+takes 10 ms. Compare this to reading the same amount of information from RAM,
+which takes 0.002 ms, which is 5,000 times faster. The arm and platters (known as
+a spindle) can process only one request at a time. However, once the head is on
+the right track, it can read many sequential blocks. Therefore reading two blocks
+is often nearly as fast as reading one block if the two blocks are adjacent. Solidstate
+drives (SSDs) do not have mechanical spinning platters and are much faster,
+though more expensive.
+
+## 2021-nov-12 wed
+
+- Work updates
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review 
+
+    Sahil, 
+    - Unified non-card transactions from different channels
+
+    Shortlisting for Mobile Architect role
+
+- Apache Airflow for ETL 
+    - Primarily a workflow Management tool
+    - Using Airflow to schedule and monitor ELT pipelines, but use other open-source projects that are better suited for the extract, load and transform steps. Notably, using Airbyte for the extract and load steps and dbt for the transformation step.
+    -   With Airflow you can use operators to transform data locally (PythonOperator, BashOperator...), remotely (SparkSubmitOperator, KubernetesPodOperator…) or in a data store (PostgresOperator, BigQueryInsertJobOperator...).
+    -  One of the main issues of ETL pipelines is that they transform data in transit, so they break easier. Hence move to ELT.
+    - Airflow transfer operators together with database operators can be used to build ELT pipelines
+
+- Container Strategy
+    - Containers are an application packaging format that help developers and organizations to develop, ship, and run applications
+    - Why?
+        - they effectively bundle applications, related libraries, dependencies, and configurations in a package that can be deployed across multiple environments
+        - ease reproducibility and reliability of build-time and run-time software environments
+        - consistently build and run containers on a variety of host environments (e.g., different OSes / different Linux distributions).
+        - lighter than virtual machines, allowing efficient use of hardware and creating higher utilization of existing hardware.
+        - provide a system for isolating processes and data without the full virtualization of the whole operating system.
+
+    - Why not?
+        - not optimized for monolithic applications, which can be expensive to rewrite or convert into microservices.
+
+    - Plan for Operationalization process
+        - Education, training and planning can significantly reduce development time and transition risk. Container-focused deployments can be subtly different from bare-metal or virtual machine focused deployments.
+        - Pursue best practices such as good base image selection, container hierarchies, dependency version management, package selection minimalism, layer management practices, cache cleaning, reproducibility, and documentation. 
+        -  Images should be rebuilt cleanly on a periodic basis incorporating vetted versions, patches and updates. Teams should frequently remove unnecessary or disused packages and assets as part of their maintenance process, test changes, and redeploy. 
+        - Containers are not inherently secure; Container hardening should be integrated into the build process well before deployment. Thinking about security considerations proactively and early can help reduce risk. Scanning individual images for potential vulnerabilities is and should be a standard practice in any new environment.
+        - having a strong organizational capability to plan, organize, and deploy incremental system changes is critical to any change while maintaining continuity of operations
+        - Orchestrating containers is the best way to accomplish complex tasks.Kubernetes, a popular orchestrator, can be provided by many cloud vendors as well as on-premise infrastructure software vendors such as VMWare or Red Hat. The cost and maintenance of these infrastructures should be heavily weighed.
+        - Individuals’ behaviors are guided (implicitly or explicitly) by underlying structures. Adoption must start with a purpose, whether that is a service or part of a larger project. Investment is needed during spin up to ensure proper experience is gained by project members. The chosen project must also have a clearly defined success metric.
+        - Some Questions to consider, 
+            - What paradigms will we follow when building and deploying containers?
+            - How will we provide guidance on container creation?
+            - How will we keep each container as optimized as possible?
+            - What strategies will support long-term storage needs?
+            - How might we build from small and functional base images?
+            - What guidelines are needed to ensure that projects are easily rebuilt?
+            - What processes are needed to keep images up to date?
+            - What are you going to do to scan your images before build and deployment?
+
+## 2021-nov-11 thu
+
+- humanities control masses ( and human mind)
+- Science has always been slave to humanities
+
+- Corruption in ex-colonies, 
+    - The political theorist Francis Fukuyama – who has given up on the idea that history has come to an end – argues in his 2011 book The Origins of Political Order that this is a damagingly wrong way of looking at the world. The liberal capitalism of Western Europe, the United States and the other Western countries is not only extremely unusual, but also just one of multiple kinds of government. Corruption, he writes, often emerges where a Western-style state and economic structure has been imposed through ignorance or arrogance on to a society with totally different traditions.In essence what this meant was that the ex-colonies gained a dual form of government: kinship-based structures on the one hand, and a European-style state structure on the other. The post-independence rulers were able to use whichever form of government benefited them at any particular time, whether to enrich themselves or to punish their enemies, and to switch back and forth between them as often as they wanted.
+
+- Isolation of china - Why not possible?
+    - Artificial supply constraints 
+        - Semiconductors - China is artificially constraining the supply of semiconductors and can ramp up production overnight which is barrier for other countries to build their own production lines 
+        - Rare Earths - China can flood the market at favourable price points
+    - Compromised leadership
+
+- Technology Arch - How much spare capacity
+    - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000  100 = 1:7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
