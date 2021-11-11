@@ -17,7 +17,7 @@
 <meta itemprop=description content="Background In a typical business Application, there are often requirements for,
  Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features."><meta itemprop=datePublished content="2020-12-07T08:25:04+05:30">
 <meta itemprop=dateModified content="2020-12-07T08:25:04+05:30">
-<meta itemprop=wordCount content="778">
+<meta itemprop=wordCount content="1081">
 <meta itemprop=keywords content="Go,Golang,MicroServices,MySQL,Cassandra,Uber,Cadence,temporal.io,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Using Temporal.io to build Long running Workflows">
@@ -151,10 +151,72 @@
 </ul>
 <pre tabindex=0><code>func ImportUsers(ctx context.Context, userdata string, DbConnectionString string) (int, error) {
 
+    logger := activity.GetLogger(ctx)
 
+    logger.Info(&quot;ImportUsers activity started.&quot;, zap.String(&quot;Dbconn&quot;, DbConnectionString))
 
+    // Open connection to database
+    db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
+    if err != nil {
+        logger.Error(&quot;Cant open connection to database&quot;, zap.Error(err))
+        return 0, err
+    }
 
+    defer close()
 
+    if _, err := db.Exec(DBSchema); err != nil {
+        logger.Error(&quot;Error while executing Schema&quot;, zap.Error(err))
+        return 0, err
+    }
+
+    logger.Info(&quot;Database connection opened, now parsing user data&quot;)
+
+    sqlStmt := &quot;insert into users(name,dob,city) values(?,?,?)&quot;
+
+    tx := db.MustBegin()
+
+    defer func() {
+        if err != nil {
+            tx.Rollback()
+        }
+        tx.Commit()
+    }()
+
+    r := csv.NewReader(strings.NewReader(string(userdata)))
+    r.Comma = ','
+    r.Comment = '#'
+
+    records, err := r.ReadAll()
+    if err != nil {
+        logger.Error(&quot;Error while reading&quot;, zap.Error(err))
+        return 0, err
+    }
+
+    i := 0
+
+    for i, record := range records {
+        if i == 0 {
+            continue
+        }
+
+        logger.Info(&quot;Record read is -&gt;&quot;, record[0])
+
+        if _, err := tx.Exec(sqlStmt, record[0], record[1], record[2]); err != nil {
+            logger.Error(&quot;Error while writing user record&quot;, zap.Error(err))
+            return 0, err
+        }
+    }
+
+    return i, nil
+}
+
+</code></pre><ul>
+<li>Approve users - This activity will mark all those users, Approved by Admininstrator via Service, as approved.</li>
+</ul>
+<pre tabindex=0><code>func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
+
+    logger := activity.GetLogger(ctx)
+    logger.Info(&quot;ApprovedUsers called&quot;, zap.String(&quot;Dbconn&quot;, DbConnectionString), zap.String(&quot;Userlist&quot;, Users))
 
     db, close, err := GetSQLXConnection(context.Background(), DbConnectionString)
     if err != nil {
@@ -162,113 +224,49 @@
         return 0, err
     }
 
+    defer close()
 
-
-
+    if _, err := db.Exec(DBSchema); err != nil {
         logger.Error(&quot;Error while executing Schema&quot;, zap.Error(err))
         return 0, err
     }
 
+    r := csv.NewReader(strings.NewReader(Users))
 
+    tx := db.MustBegin()
 
-
-
-
-
-
+    defer func() {
         if err != nil {
             tx.Rollback()
         }
         tx.Commit()
     }()
 
+    sqlStmt := &quot;update users set isapproved =1 where id =:1&quot;
 
-    r.Comma = ','
-    r.Comment = '#'
+    i := 0
 
-
-    if err != nil {
-        logger.Error(&quot;Error while reading&quot;, zap.Error(err))
-        return 0, err
-    }
-
-
-
-
-        if i == 0 {
-            continue
-        }
-
-
-
-
-            logger.Error(&quot;Error while writing user record&quot;, zap.Error(err))
-            return 0, err
-        }
-    }
-
-
-}
-
-
-
-
-
-
-func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) (int, error) {
-
-
-    logger.Info(&quot;ApprovedUsers called&quot;, zap.String(&quot;Dbconn&quot;, DbConnectionString), zap.String(&quot;Userlist&quot;, Users))
-
-
-    if err != nil {
-        logger.Error(&quot;Cant open connection to database&quot;, zap.Error(err))
-        return 0, err
-    }
-
-
-
-
-        logger.Error(&quot;Error while executing Schema&quot;, zap.Error(err))
-        return 0, err
-    }
-
-
-
-
-
-
-        if err != nil {
-            tx.Rollback()
-        }
-        tx.Commit()
-    }()
-
-
-
-
-
-
+    for {
         record, err := r.Read()
         if err == io.EOF {
             break
         }
 
-
+        if err != nil {
             logger.Error(&quot;Error while reading from file&quot;, zap.Error(err))
             return 0, err
         }
 
-
+        if i == 0 {
             continue
         }
         i++
 
-
+        if _, err := tx.Exec(sqlStmt, record[0]); err != nil {
             logger.Error(&quot;Error while writing user record&quot;, zap.Error(err))
             return 0, err
 
-
+        }
     }
     return i, nil
 }
@@ -277,7 +275,7 @@ func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) 
 </ul>
 <pre tabindex=0><code>    func (s *server) UpdateUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
-
+        creader := csv.NewReader(r.Body)
         records, err := creader.ReadAll()
         if err != nil {
             log.Fatal(err.Error())
@@ -285,7 +283,7 @@ func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) 
             return
         }
 
-
+        // Create the client object just once per process
         c, err := client.NewClient(client.Options{})
         if err != nil {
             log.Fatalln(&quot;unable to create Temporal client&quot;, err)
@@ -294,7 +292,7 @@ func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) 
         }
         defer c.Close()
 
-
+        workflowOptions := client.StartWorkflowOptions{
             ID:        app.UserApprovalWorkflow,
             TaskQueue: app.UserApprovalTaskQueue,
             RetryPolicy: &amp;temporal.RetryPolicy{
@@ -305,31 +303,26 @@ func ApproveUsers(ctx context.Context, DbConnectionString string, Users string) 
             },
         }
 
-
+        _, err = c.SignalWithStartWorkflow(r.Context(), app.UserApprovalWorkflow, app.ApprovalSignalName,
             records, workflowOptions, app.OnboardUsers, app.Userdata, s.DBConnection)
 
-
+        if err != nil {
             log.Fatal(err.Error())
             http.Error(w, &quot;Internal Error: Workflow&quot;, http.StatusInternalServerError)
             return
         }
 
-
+        fmt.Fprint(w, &quot;Success&quot;)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-</code></pre></li>
+</code></pre><ul>
+<li>HTTP service uses <code>workflow.SignalWithStartWorkflow</code> function. This function sends the signal to running instance of workflow or starts new if none is in progress.</li>
 </ul>
+</li>
+</ul>
+<p>Full source code is available <a href=https://github.com/sachinsu/temporalevaluation target=_blank rel="noopener noreferrer">here</a></p>
+<p>Temporal documentation has reference to Helm charts for deploying temporal in clustered configuration, for organization who is managing own data center it would be interesting to know if it also supports bare metal based deployment in addition to Kubernetes. Will update this post as and when details are available on this.</p>
+<p>Overall, Temporal provides a different approach to workflow orchestration. Its been battle tested at <a href=https://uber.com target=_blank rel="noopener noreferrer">Uber</a> and host of other companies. Temporal <a href=community.temporal.io>Community</a> is a very active one with founders actively participating in discussions.</p>
 <ul>
 <li><a href=https://github.com/firdaus/awesome-cadence-temporal-workflow target=_blank rel="noopener noreferrer">Collection of Temporal related stuff</a></li>
 </ul>

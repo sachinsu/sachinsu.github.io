@@ -17,7 +17,7 @@ This means that upgrade must be done keeping in mind,">
 <meta itemprop=description content="Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that &ldquo;API is expected to be stable over long period of time&rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
 This means that upgrade must be done keeping in mind,"><meta itemprop=datePublished content="2021-05-15T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-05-15T01:00:00+05:30">
-<meta itemprop=wordCount content="1337">
+<meta itemprop=wordCount content="1453">
 <meta itemprop=keywords content="HTTP,SOAP,REST,.NET,WCF,CoreWCF,ASMX,C#,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Upgrading API: Learnings">
@@ -98,7 +98,11 @@ This means that upgrade must be done keeping in mind,">
 <li><a href=#introduction>Introduction</a></li>
 <li><a href=#wcf-service-invoked-from-asmx-asynchronously>WCF service invoked from ASMX asynchronously</a></li>
 <li><a href=#wcf-service-with-url-re-write>WCF service with URL re-write</a></li>
-<li><a href=#wcf-service-with-asmx-extension-mapped-to-wcf-handler>WCF service with .asmx extension mapped to WCF handler</a></li>
+<li><a href=#wcf-service-with-asmx-extension-mapped-to-wcf-handler>WCF service with .asmx extension mapped to WCF handler</a>
+<ul>
+<li><a href=#useful-references>Useful References</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </div>
@@ -310,55 +314,47 @@ This means that upgrade must be done keeping in mind,">
 </ul>
 <p>However, this approach still had issues wherein WCF run-time raised errors when <code>?singlewsdl</code> url was accessed. It seems problem was due to multiple interfaces (one for SOAP and other for REST) and WCF not being able to generate WSDL for it. Additionally, REST handler is also deserves a look as it simply parses payload as Query String and populating properties of request DTO/class has to be done manually,</p>
 <pre tabindex=0><code>
-
+  ResponseDTO IMyservice.Process(Stream input)
       {
           string body = new StreamReader(input).ReadToEnd();
           NameValueCollection nvc = HttpUtility.ParseQueryString(body);
 
-
+          return new ResponseDTO()
           {
               cnField = string.Format(&quot;NVCol --&gt; {0}|{1}&quot;, nvc[&quot;prop1&quot;], nvc[&quot;prop2&quot;])
           };
       }
 
-
-Overall, WCF does not have great support for handling `FORM POST` requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed [here](https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project), check it out. Additionally, it takes changes to `BeginRequest` in `global.asax` to re-write incoming request so that Web API controller can process it, like below, 
-
-
- protected void Application_BeginRequest(object sender, EventArgs e)
+</code></pre><p>Overall, WCF does not have great support for handling <code>FORM POST</code> requests. Hence, other alternative is to have ASP.NET MVC Web API handle the post requests. This approach is detailed <a href=https://stackoverflow.com/questions/18204365/setting-up-web-api-within-wcf-project target=_blank rel="noopener noreferrer">here</a>, check it out. Additionally, it takes changes to <code>BeginRequest</code> in <code>global.asax</code> to re-write incoming request so that Web API controller can process it, like below,</p>
+<pre tabindex=0><code> protected void Application_BeginRequest(object sender, EventArgs e)
       {
 
-
+          if (Request.HttpMethod.ToLowerInvariant() == &quot;post&quot;)
           {
               if (!Request.ContentType.ToLowerInvariant().Contains(&quot;xml&quot;))
               {
                   List&lt;string&gt; segments = Request.Url.Segments.ToList();
 
-
+                  Context.RewritePath(string.Format(&quot;/controllers/{0}&quot;,segments[segments.Count()-1]));
               }
           }
       }
 
-
-
-
-
-
-
-
-
-
-* [APM Pattern using Tasks](https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/)
-* [Async in WCF](https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html)
-* [Comparing ASMX with WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development)
-* [Discussion on ASMX to WCF](https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion)
-
-
-
-
-
-
-</code></pre>
+</code></pre><ul>
+<li>ASMX and SOAP 1.1 - It was noticed that though ASMX supports SOAP 1.1, it doesn&rsquo;t enforces it when it comes to &ldquo;SOAPAction&rdquo; Header. As per the SOAP 1.1 specification, &ldquo;SOAPAction&rdquo; Http Header is mandatory and is used to determine<code>Webmethod</code> to be invoked. Since WCF is compliant with SOAP 1.1 specification, it required additional step to infer Webmethod by means of parsing the body. Luckily, Microsoft has sample for <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/dispatch-by-body-element target=_blank rel="noopener noreferrer">Dispatch by Body Element</a> and same can be readily used.</li>
+</ul>
+<p>Overall, <a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/ target=_blank rel="noopener noreferrer">WCF Samples</a> is fantastic set of samples that covers wide variety of such scenarios. Do Check it out.</p>
+<h3 id=useful-references>Useful References</h3>
+<ul>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development target=_blank rel="noopener noreferrer">Comparing ASMX web services to WCF</a></li>
+<li><a href=https://devblogs.microsoft.com/pfxteam/using-tasks-to-implement-the-apm-pattern/ target=_blank rel="noopener noreferrer">APM Pattern using Tasks</a></li>
+<li><a href=https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html target=_blank rel="noopener noreferrer">Async in WCF</a></li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development target=_blank rel="noopener noreferrer">Comparing ASMX with WCF</a></li>
+<li><a href=https://stackoverflow.com/questions/5686320/asmx-to-wcf-conversion target=_blank rel="noopener noreferrer">Discussion on ASMX to WCF</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src=https://utteranc.es/client.js repo=sachinsu/sachinsu.github.io issue-term=title label=blogcomment theme=github-light crossorigin=anonymous async></script>
 </div>
 <footer class=post__footer>
 <div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg>

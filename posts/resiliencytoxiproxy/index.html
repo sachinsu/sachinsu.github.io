@@ -15,7 +15,7 @@
 <meta itemprop=name content="Resiliency Testing with Toxiproxy">
 <meta itemprop=description content="Background In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays, As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment. Often, such behavior is observed in production itself, unless project team is following practices of Chaos engineering."><meta itemprop=datePublished content="2021-01-09T10:25:04+05:30">
 <meta itemprop=dateModified content="2021-01-09T10:25:04+05:30">
-<meta itemprop=wordCount content="463">
+<meta itemprop=wordCount content="473">
 <meta itemprop=keywords content="Chaosengineering,golang,postgresql,toxiproxy,shopify,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Resiliency Testing with Toxiproxy">
@@ -135,11 +135,11 @@ etc.</p>
     func InjectLatency(name string, delay int) *toxiproxy.Proxy {
         proxy, err := toxiClient.Proxy(name)
 
-
+        if err != nil {
             panic(err)
         }
 
-
+        proxy.AddToxic(&quot;&quot;, &quot;latency&quot;, &quot;&quot;, 1, toxiproxy.Attributes{
             &quot;latency&quot;: delay,
         })
         return proxy
