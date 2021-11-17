@@ -1142,24 +1142,6 @@ though more expensive.
 
 ## 2021-nov-12 wed
 
-- Work updates
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
-    DH, 
-    - Ongoing App Review 
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
-    Shortlisting for Mobile Architect role
-
 - Apache Airflow for ETL 
     - Primarily a workflow Management tool
     - Using Airflow to schedule and monitor ELT pipelines, but use other open-source projects that are better suited for the extract, load and transform steps. Notably, using Airbyte for the extract and load steps and dbt for the transformation step.
@@ -1212,4 +1194,161 @@ though more expensive.
     - Compromised leadership
 
 - Technology Arch - How much spare capacity
-    - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000  100 = 1:7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
+    - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000 * 100 = 1.7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
+
+## 2021-nov-12 fri
+
+- Economy
+    - Baltic dry index has fallen significantly this week. This means demand for bulk shipping is crashing.
+
+- Tech#Backpressure
+    - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens.  Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
+
+- Tech#Scale versus Resiliency
+    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.
+    - If we are load balancing over two machines, each at 80 percent utilization, then there is no spare capacity available if one goes down. If one machine died, the remaining replica would receive all the traffic, which is 160 percent of what the machine can handle. The machine will be overloaded and may cease to function. Two machines each at 80 percent utilization represents an N+0 configuration. In this situation, the load balancer is used for scale, not resiliency.
+
+- Tech#RAM Chip Manufacturing 
+    - you must understand that the difference between high-quality RAM chips and normal-quality chips is how much testing they pass. RAM chips are manufactured and then tested. The ones that pass the most QA testing are sold as “high quality” at a high price. The ones that pass the standard QA tests are sold as normal for the regular price. All others are thrown away.
+
+## 2021-nov-15 Mon
+
+- Tech#Governance and Security related aspects of API
+    - Naming convention or case configuration
+    - Default response handling based on status code
+    - Security headers or authentication required on APIs
+
+- Tech#Scaling, Sharding etc.
+    - Drawbacks of Scale Up
+        - there are limits to system size. The fastest, largest, most powerful computer available may not be sufficient for the task at hand. No one computer can store the entire corpus of a web search engine or has the CPU power to process petabyte-scale datasets or respond to millions of HTTP queries per second. There are limits as to what is available on the market today.
+        - this approach is not economical. A machine that is twice as fast costs more than twice as much. Such machines are not sold very often and, therefore, are not mass produced. You pay a premium when buying the latest CPU, disk drives, and other components.
+        - scaling up simply won’t work in all situations.
+            - Buying a faster, more powerful machine without changing the design of the software being used usually won’t result in proportionally faster throughput.
+            - Software that is single-threaded will not run faster on a machine with multiple processors.
+            - Software that is written to spread across all processors may not see much performance improvement beyond a certain number of CPUs due to bottlenecks such as lock contention.
+    - Some Scaling techniques, 
+        - Segment plus Replicas: Segments that are being accessed more frequently can be replicated at a greater depth. This enables scaling to larger datasets (moresegments) and better performance (more replicas of a segment). 
+        - Dynamic Replicas: Replicas are added and removed dynamically to achieve required performance. If latency is too high, add replicas. If utilization is too low, remove replicas.
+        -  Architectural Change: Replicas are moved to faster or slower technology based on need. Infrequently accessed shards are moved to slower, less expensive technology such as disk. Shards in higher demand are moved to faster technology such as solid-state drives (SSD). Extremely old segments might be archived to tape or optical disk.
+    - Cache 
+        - The Least Recently Used (LRU) algorithm tracks when each cache entry was used and discards the least recently accessed entry    
+        - The Least Frequently Used (LFU) algorithm counts the number of times a cache entry is accessed and discards the least active entries
+
+    - Data Sharding  - is a way to segment the database that is flexible, scalable and resilient. A hash function is algorithm that maps data of varying length to a fixed length value. 
+        - Distributed hash table pattern involves generating hash of the key and allocating data as per hash value like, 
+            - Odd or even or power of 2 (i.e. 2(n) where n is last n bits of hash) -- For 2 shards
+            - reminder of hash divided by 4 - for 4 shards
+
+    - Threads vs Processes
+        - Processes have their own address space, memory and open file tables
+        - Processes are self isolating i.e. corrupt process cannot hurt other processes 
+        - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
+
+
+## 2021-nov-16 Tue
+
+- History
+
+Caution! External email. Do not open attachments or click links, unless this email comes from a known sender and you know the content is safe.
+    - The original Islamic rulers weren’t particularly interested in converting Christians as these provided them with tax revenues –the proselytism of Islam did not address those called “people of the book”, i.e. individuals of Abrahamic faith. In fact, my ancestors who survived thirteen centuries under Muslim rule saw advantages in not being Muslim: mostly in the avoidance of military conscription.
+
+    - Gnostic religions are those with mysteries and knowledge that is typically accessible to only a minority of elders, with the rest of the members in the dark about the details of the faith
+
+- Economy
+    - When fewer people move to a town/city, demand for housing falls, and when the demand for housing falls, so does the cost of living.
+
+- Architecture Decision Records (ADR) (https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+    
+    - Format of ADR 
+        - Title - For Example: "ADR 1: Deployment on Ruby on rails 3.0.10" 
+        - Context - Describes forces at play including technological, political, social and project local. The language in this section should be describing facts and nothing else
+        - Decision - Describes response to forces mentioned in "Context".  It is stated in full sentences, with active voice. "We will …"
+        - Status - A decision may be "proposed" if the project stakeholders haven't agreed with it yet, or "accepted" once it is agreed. If a later ADR changes or reverses a decision, it may be marked as "deprecated" or "superseded" with a reference to its replacement.
+        - Consequences - This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
+
+- AKF Scaling Cube
+    - x-axis (horizontal scaling) - cloning systems or increasing their capacities to achieve greater performance.
+    - y-axis (vertical scaling) - scales by isolating transactions by their type or scope, such as using read-only database replicas for read queries and sequestering writes to the master database only.
+    - z-axis (lookup based scaling) - is about splitting data across servers so that the workload is distributed according to data usage or physical geography
+
+- Software Resiliency
+    - Spare capacity is like an insurance policy: it is an expense you pay now to prepare for future trouble that you hope does not happen. It is better to have insurance and not need it than to need insurance and not have it.
+    - in a 1+1 redundant system, 50 percent of the capacity is spare. In a 20+1 redundant system, less than
+    5 percent of the capacity is spare. The latter is more cost-efficient.
+    - Mean time between failures (MTBF) - The MTBF of the system is only as high as that of its lowest-MTBF part.
+    - The time it takes to repair or replace the down capacity is called the mean time to repair (MTTR).
+    - The probability of second failure happening during repair window is MTTR/MTBF * 100
+    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.A load balancer provides scale when we use it to keep up with capacity, and resiliency when we use it to exceed capacity.
+
+- DOS Attacks
+    - A denial-of-service (DoS) attack is an attempt to bring down a service by sending a large volume of queries. A distributed denial-of-service (DDoS) attack occurs when many computers around the Internet are used in a coordinated fashion to create an extremely large DoS attack. DDoS attacks are commonly initiated from botnets, which are large collections of computers around the world that have been successfully infiltrated and are now controlled centrally, without the knowledge of their owners.
+    - This kind of Attack must be blocked from outside your network, usually by the ISPs or CDNs you connect to.
+
+- Scraping Attacks
+    - involves extracting useful information from site. often fast scraper is equivalent of DOS Attack. 
+    - Usually mitigated by having all frontends report information about queries to central scraping detector service.
+
+- Crash Data Collection & Analysis 
+    - Every crash should be logged. Crashes usually leave behind a lot of information in a crash report. The crash report includes statistics such as amount of RAM and CPU usage at the time of the process’s death, as well as detailed information such as a traceback of which function call and line of code was executing when the problem occurred
+    - A coredump—a file containing the contents of the process’s memory—is often written out during a crash
+
+- Disadvantages of Database Triggers (MySQL Specific but most likely applicable to others too)
+    - Triggers are stored routine. They are interpreted and not compiled
+    - Triggers are in same transactions as incoming queries and are executed concurrently. This means additional locks for resources 
+    - 
+
+- Work updates
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review 
+
+    Sahil, 
+    - Unified non-card transactions from different channels
+
+    Shortlisting & interview for Mobile & C Architect role
+
+- Format for "Design Document" 
+    - Title : Title of the document 
+    - Date: Date of last revision
+    - Author(s)/Reviewer(s)/Approver(s)
+    - Revision Number 
+    - Status - In draft/in review/approved/in progress.
+    - Executive Summary - brief summary of the project that contains the major goal of the project and how it is achieved.
+    - Goals ("In Scope") - What is to be achieved by the project, typically represented as a bullet list. Include non-tangible, process goals such as standardization or metrics requirements.  
+    - Non-goals ("Out of scope") - A list of non-goals should explicitly identify what is not included in the scope for this project.
+    - Background - brief history. Identify any acronyms or unusual terminology used. Document any previous decisions made that resulted in limitations or constraints. 
+    - High-level Design - How design works at a high level. 
+    - Detailed Design - The full design, including diagrams, sample configuration files, algorithms, and so on. This will be your full and detailed description of what you plan to accomplish on this project
+    - Alternatives Considered - A list of alternatives that were rejected, along with why they were rejected.
+    - Special Constraints - A list of special constraints regarding things like security, auditing controls, privacy, and so on.
+
+Below are not mandatory but could be useful, 
+
+ - Cost Projections: The cost of the project—both initial capital and operational costs, plus a forecast of the costs to keep the systems running.
+ - Support Requirements: Operational maintenance requirements. This ties into Cost Projections, as support staff have salary and benefit costs, hardware and licensing have costs, and so on.
+ - Schedule: Timeline of which project events happen when, in relation to each other.
+ - Security Concerns: Special mention of issues regarding security related to the project, such as protection of data.
+ - Privacy and PII Concerns: Special mention of issues regarding user privacy or anonymity, including plans for handling personally identifiable information (PII) in accordance with applicable rules and regulations.
+ - Compliance Details: Compliance and audit plans for meeting regulatory obligations under SOX, HIPPA, PCI, FISMA, or similar laws.
+ - Launch Details: Roll-out or launch operational details and requirements.
+
+- Data Lake pattern 
+    - Response to complexity, expense and failures of datawarehouse pattern.
+    - Inverse of Data warehouse Pattern 
+    - Centralized data collection 
+    - "Load and transform" rather than "transform and load" 
+    - Data extracted from many sources and often stored as-is or in "raw" format
+
+- Data Mesh
+    - Domain ownership - Data is owned by domains that are intimately familiar with it. 
+    - Data as a Product - encourage domains to share the data. 
+    - Self serve Data platform - 
+    - Computational federated governance - 
