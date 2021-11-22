@@ -1244,7 +1244,6 @@ though more expensive.
         - Processes are self isolating i.e. corrupt process cannot hurt other processes 
         - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
 
-
 ## 2021-nov-16 Tue
 
 - History
@@ -1295,8 +1294,7 @@ Caution! External email. Do not open attachments or click links, unless this ema
 - Disadvantages of Database Triggers (MySQL Specific but most likely applicable to others too)
     - Triggers are stored routine. They are interpreted and not compiled
     - Triggers are in same transactions as incoming queries and are executed concurrently. This means additional locks for resources 
-    - 
-
+    
 - Work updates
     Issuance, 
     - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
@@ -1346,9 +1344,72 @@ Below are not mandatory but could be useful,
     - Centralized data collection 
     - "Load and transform" rather than "transform and load" 
     - Data extracted from many sources and often stored as-is or in "raw" format
+    - disadvantages, 
+        - diffcult to understand relationships due to raw format
+        - Ad-hoc transformations
+        - lack of ownership from original owners
 
 - Data Mesh
+    - a data mesh allows data sources to remain distributed and controlled by different organizations, but accessible to a centralized application. With a data mesh architecture, data is guaranteed to be highly available, easily discoverable, secure and interoperable with the applications that depend on accessing it.
     - Domain ownership - Data is owned by domains that are intimately familiar with it. 
     - Data as a Product - encourage domains to share the data. 
     - Self serve Data platform - 
-    - Computational federated governance - 
+    - Computational federated governance - Data mesh introduces a federated decisionmaking model composed of domain data product owners. The policies they formulate are automated and embedded as code in each and every data product.
+    - Data Product Quantum - overlays microservices architecture. 
+        - Source-aligned (native) DPQ - Provides analytical data on behalf of the collaborating architecture quantum, typically a microservice, acting as a cooperative quantum.
+        - Aggregate DQP - Aggregates data from multiple inputs, either synchronously or asynchronously. For example, for some aggregations, an asynchronous request may be sufficient; for others, the aggregator DPQ may need to perform synchronous queries for a source-aligned DPQ.
+        - Fit-for-purpose DPQ - A custom-made DPQ to serve a particular requirement, which may encompass analytical reporting, business intelligence, machine learning, or other supporting capability.
+    - Highly suitable for Microservices based architecture 
+    - Requires asynchronous communication and eventual consistency
+    - It is more difficult in architectures where analytical and operational data must stay in sync at all times, which presents a daunting challenge in distributed architectures.
+
+## 2021-nov-19 Fri
+
+- The Overton window is the range of policies politically acceptable to the mainstream population at a given time. It is also known as the window of discourse.
+
+- Throwing the stone in water and watching ripples
+
+- Carefully crafted PR Strategy
+
+- diversity not in terms of Opinion
+
+## 2021-nov-22 Mon
+
+- Financial Markets & Human Psychology
+    - Currency Market, 
+        - At $6.6 trillion in daily volume, the foreign exchange market is the largest financial market in the world.
+        - Currency returns are driven by two variables: changes in the spot rate (i.e., how many rupees you can buy with a dollar) and changes in the spread between countries’ interest rates (i.e., how much interest rupees earn versus how much interest dollars earn in interest-bearing accounts).
+        - Falling interest rate differentials and declining volatility have made currency markets a difficult place to make money.
+
+    - ETF,
+        - An ETF is simply a basket of securities that are publicly traded in the marketplace.
+        - Throughout the day, there is an “INAV,” or intra-day net-asset-value, which tracks the value of an ETF on a 15-second basis. The INAV will be based on the prices associated with underlying stocks.Unfortunately, INAVs are not always 100% accurate, and by design, they can be up to 15-seconds delayed. 
+
+        - One way the market maker makes money is by creating a bid/ask spread around the ETFs true tick-by-tick value. For example, let’s say the value of the underlying basket of stocks in an ETF is worth $25. A market maker might post a bid at 24.95 and post an ask of 25.05. So if someone wants to sell the ETF, they will get 24.95, not $25. The 5 cent difference goes to the market maker. Similarly, on the buy transaction, an ETF buyer will pay $25.05 for the ETF. The buyer will get an asset worth $25, and the 5 cent premium will go to the market maker for making a market in the ETF.
+
+
+        - Secondary Market Purchase - Now let’s say someone comes along in the secondary market, sees the posted Ask, and wants to purchase the ETF at $83.91. When this happens, what does the market maker do?
+        The authorized participant (AP) does not own any ETF shares to sell. However, as a market maker, he can effectively create new shares by  “selling short” a TECH share to this secondary market participant for $83.91. The AP is “short,” in the sense that he will at some point in the future (within 6 days) need to deliver these ETF shares to the buyer. As he sells the ETF “short” in the secondary market, he will simultaneously go into the market and go long the basket for $83.86, as a hedge. The AP wants to be fully hedged: he is long the basket of names, and short the ETF (but has to deliver it in the future). He has made the market, is fully hedged, and has made a small spread in the transaction.
+
+        - Secondary Market Sale -Now let’s say someone comes along in the secondary market, sees the posted Bid, and wants to sell the ETF at $83.75. So the market maker buys the ETF from this secondary market participant at $83.75, and in order to hedge, he shorts the basket of names at $83.80.
+
+        - Points to remember, 
+            - Pay attention to the liquidity on the holdings of your ETF–this will explain the spreads in the secondary market.
+            - Trade ETFs when the underlyings are liquid–avoid trading ETFs at the open or when overall market volume is lackluster.
+            - Avoid huge market orders, and stick to limit orders. Moreover, for huge trades, communicate directly with the market maker or your ETF trading desk. 
+
+- Psychology
+    - That human beings have an inbuilt tendency to look for and favour evidence that confirms their pre-existing beliefs – about investment, politics, or any other subject – is not a particularly new or radical idea.
+    - It seems we’ve long been naturally inclined to take mental short-cuts. In other words, we make up our minds about something and then surround ourselves with messages that support our position on that subject. We’re philosophically and emotionally dug in.
+    - In recent years, with the decline of traditional media and the rise of social and niche media, it’s become ever easier to wrap oneself in the blanket of news and information that reinforces one’s preconceptions.
+    - In politics, that can lead to people latching on to crazy conspiracy theories. In investment, it can lead to missed opportunities or highly concentrated portfolios or botched attempts at market timing.
+    - One solution suggested by psychologists is to encourage the client to imagine they are on the other side of the argument and, without changing their fundamental position, put together a case for the opposition.
+
+
+- Tech#When to disintegrate operational data 
+    - Change control - How many services are impacted by database changes?
+    - Connection Management - Can the database handle the connections needed?
+    - Scalability - Can the database scale to meet demands of services?
+    - Fault Tolerance - How many services are impacted by database crash / downtime?
+    - Architectural Quanta - Is single shared database forcing to undesirable quantum ?
+    
