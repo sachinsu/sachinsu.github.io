@@ -1405,11 +1405,32 @@ Below are not mandatory but could be useful,
     - In politics, that can lead to people latching on to crazy conspiracy theories. In investment, it can lead to missed opportunities or highly concentrated portfolios or botched attempts at market timing.
     - One solution suggested by psychologists is to encourage the client to imagine they are on the other side of the argument and, without changing their fundamental position, put together a case for the opposition.
 
-
 - Tech#When to disintegrate operational data 
     - Change control - How many services are impacted by database changes?
     - Connection Management - Can the database handle the connections needed?
     - Scalability - Can the database scale to meet demands of services?
     - Fault Tolerance - How many services are impacted by database crash / downtime?
     - Architectural Quanta - Is single shared database forcing to undesirable quantum ?
-    
+    - Can i optimize my data using different database types?
+
+## 2021-nov-23 Tue
+
+- An architectural quantum is defined as an independently deployable artifact with high functional cohesion, high static coupling, and synchronous dynamic coupling.
+    - Coupling - Two parts of a software system are coupled if a change in one might cause a change in the other.
+    - Static coupling  - Represents how static dependencies resolve within the architecture via contracts.
+These dependencies include operating system, frameworks, and/or libraries delivered via transitive dependency management, and any other operational requirement to allow the quantum to operate.
+   - High static coupling implies that the elements inside the architecture quantum are tightly wired together, which is really an aspect of contracts.
+   - Dynamic coupling -Represents how quanta communicate at runtime, either synchronously or asynchronously.
+Thus, fitness functions for these characteristics must be continuous, typically utilizing monitors
+
+- A data domain is a collection of coupled database artifacts—tables, views, foreign keys, and triggers—that are all related to a particular domain and frequently used together within a limited functional scope
+    - A data domain is an architectural concept, whereas a schema is a database construct that holds the database objects belonging to a particular data domain. While the relationship between a data domain and a schema is usually one to one, data domains can be mapped to one or more schemas, particularly when combining data domains because of tightly coupled data relationships
+
+- Aspects for Data integration and disintegration 
+    - Data relationships
+        - Is Change control more important than preserving foreign key relationships
+        - Is fault tolerance more important than preserving materialized views between tables 
+    - Database transactions
+        - Is transactional unit of work required or will eventual consistency be acceptable
+
+- Column family databases, also known as wide column databases or big table databases, have rows with varying numbers of columns, where each column is a name-value pair. With columnar databases, the name is known as a column-key, the value is known as a column-value, and the primary key of a row is known as a row key.
