@@ -1,3 +1,22 @@
+- Work updates
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review and New architecture
+
+    Sahil, 
+    - Unified non-card transactions from different channels
+
+    Shortlisting & interview for Mobile & C Architect role
+
 ## 2021-sep-21 Tue
 
 - [Morgan housel explains how things work in world, Excellent at](http://collaborativefund.com/blog/100-little-ideas/)
@@ -1462,28 +1481,18 @@ Thus, fitness functions for these characteristics must be continuous, typically 
             - Get out in 2 months no matter what 
  
     - On Market Falls 
-        - global flows of portfolio money in to our markets are not threatened, panics will be short lived. 
+        - As long as global flows of portfolio money in to our markets are not threatened, panics will be short lived. 
         - avoid 
             - simply stop SIPs or new investments
             - Sell in the hope of being able to buy lower or simply sell and cut perceived losses
             - Sell only those shares which show a ‘profit’ and hang on to those under water
 
-   
-- Work updates
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
-    DH, 
-    - Ongoing App Review and New architecture
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
-    Shortlisting & interview for Mobile & C Architect role
+- Architect Role
+    - Avoiding Snake Oil and Evangelism
+        - One unfortunate side effect of enthusiasm for technology is evangelism, which should be a luxury reserved for tech leads and developers but tends to get architects in trouble.
+        - Trouble comes because, when someone evangelizes a tool, technique, approach, or anything else people build enthusiasm for, they start enhancing the good parts and diminishing the bad parts. Unfortunately, in software architecture, the trade-offs always eventually return to complicate thin
+        - An architect should also be wary of any tool or technique that promises any shocking new capabilities, which come and go on a regular basis.
+        - Always force evangelists for the tool or technique to provide an honest assessment of the good and bad—nothing in software architecture is all good—which allows a more balanced decision
+        - solutions in architecture rarely scale outside narrow confines of a particular problem space
+        - Don’t allow others to force you into evangelizing something; bring it back to trade-offs.
+        - We advise architects to avoid evangelizing and to try to become the objective arbiter of trade-offs. An architect adds real value to an organization not by chasing silver bullet after silver bullet but rather by honing their skills at analyzing the trade-offs as they appear.
