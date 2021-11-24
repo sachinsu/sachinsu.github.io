@@ -1294,24 +1294,6 @@ Caution! External email. Do not open attachments or click links, unless this ema
 - Disadvantages of Database Triggers (MySQL Specific but most likely applicable to others too)
     - Triggers are stored routine. They are interpreted and not compiled
     - Triggers are in same transactions as incoming queries and are executed concurrently. This means additional locks for resources 
-    
-- Work updates
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
-    DH, 
-    - Ongoing App Review 
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
-    Shortlisting & interview for Mobile & C Architect role
 
 - Format for "Design Document" 
     - Title : Title of the document 
@@ -1434,3 +1416,74 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - Is transactional unit of work required or will eventual consistency be acceptable
 
 - Column family databases, also known as wide column databases or big table databases, have rows with varying numbers of columns, where each column is a name-value pair. With columnar databases, the name is known as a column-key, the value is known as a column-value, and the primary key of a row is known as a row key.
+
+## 2021-nov-23 Wed
+    
+- R. Bala's Wisdom on finance and investing
+    - On Financial Freedom 
+        - Maximum possible contribution to PPF and Continue till 25 years
+        - Manual Monthly SIP in Index ETF. SIP amount to be increased with rise in income
+        - 10% in Gold ETF or paper (SGB) on regular basis 
+        - One year's expenses in Savings account or Fixed Deposit
+        - Insurance 
+        - Health - Start with Modest policy of 5-10 lakh and top-up later in life
+        - Life - Term Policy only. Even for it, stop paying once you are financially secure and provided for your family. Look out for "Negotiable" Term policy.
+        - Borrowings - The ONLY borrowing one shoul ever do in life is to take a housing loan. Any other borrowing is a path todebt, personal loans, loans against shares, properties etc will land you in a soup.to our ruin.
+        - Lending - do not lend to any one if answer is yes for "Will it hurt me or bother me if the money does not come back?"
+    - On PSU stocks, 
+        - They are not investing but trading/speculative opportunities
+        - Smokestack PSUs [BHEL etc.] - Price to Book (PB) would be far lower than private sector couterpart. buy if the market conditions are normal (not in these pandemic times) and the prices are close to historic lows based on P/BV.
+        - New Age (Post 1991) PSUs [Concor, IRCTC, RITES etc.] - Earnings are valuation anchor. buying trigger here has to be something like an earnings surprise on the downside or news flow that brings the price crashing.
+        - Window-dressing PSUs  (PFC] - Mainly financiers. Avoid these companies.
+        - PSU Banks - Privatisation could be opportunity but luck would play a very big role in this.
+    - On Banking and finance stocks, 
+        - CAMEL Approach - "Capital adequacy, Asset quality, Management, Earnings, Liquidity, and Sensitivity."
+        -  In early companies or new entities, the “M” becomes a key determinant. If the “M” is high quality, the rest of the CAMEL should logically follow.
+        -  Bajaj Finance has a dominant market share in financing consumer appliances. Their speed, their technology and their size give them an advantage that is not easy to conquer. The management quality is also very favourable in terms of trust. They enjoy a great ROE. Similarly, Sundaram Finance has built its core competencies in the vehicle financing segment. Their management of risk across businesses is outstanding. Cholamandalam has demonstrated its strength in vehicle finance and is now making headway in Home Loans and MSME lending. Muthoot/ Manappuram have their dominant market positions in gold loans. Similarly, there are micro finance companies that have done well in their chosen niche. 
+        - Checklist to choose lending stock (in below order), 
+            - Who owns and manages the company 
+            - Their customer segment and growth potential
+            - Check the ROE
+            - Check if there are subsidiaries (e.g. , a Kotak Bank or a HDFC Ltd own other businesses which are worth more than the original cost of business attached to them. )
+            - refer to buy when the Price to Book Value is closer to the lower end of historical highs/lows
+    - On Trading
+        - Divide portfolio in 2 categories
+            - Long-term (based on "Earnings") - Typically from services, information technology, BFSI, FMCG. 
+            - Trading ("Balance sheet") 
+        - buy them when the Price to Book Value number is close to the historical lows
+        - The P/BV is typically low when the commodity price cycle is in the doldrums, earnings tend to be in the brackets and the PE multiples are either absent due to losses or very high
+        - dedicated corpus for speculative trading 
+        - to Sell, 
+            - See the historical high and low P/E and also look at the ROE trend of a stock
+            - Prepare list of top stocks which are closer to high end of historical P/E
+        - Rules
+            - Stop loss of 10 %
+            - Stop profit at 30%
+            - Get out in 2 months no matter what 
+ 
+    - On Market Falls 
+        - global flows of portfolio money in to our markets are not threatened, panics will be short lived. 
+        - avoid 
+            - simply stop SIPs or new investments
+            - Sell in the hope of being able to buy lower or simply sell and cut perceived losses
+            - Sell only those shares which show a ‘profit’ and hang on to those under water
+
+   
+- Work updates
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
+    
+    BFL, 
+    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
+    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
+    - Change in business requirements to maintain product line with limits for one card per customer 
+    
+    DH, 
+    - Ongoing App Review and New architecture
+
+    Sahil, 
+    - Unified non-card transactions from different channels
+
+    Shortlisting & interview for Mobile & C Architect role
