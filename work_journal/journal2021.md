@@ -1496,3 +1496,10 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - solutions in architecture rarely scale outside narrow confines of a particular problem space
         - Don’t allow others to force you into evangelizing something; bring it back to trade-offs.
         - We advise architects to avoid evangelizing and to try to become the objective arbiter of trade-offs. An architect adds real value to an organization not by chasing silver bullet after silver bullet but rather by honing their skills at analyzing the trade-offs as they appear.
+
+- Travel#East Asia
+---- If you are in Taiwan or china or japan, ask for buddhist amitabha restaurant who serve vegetarian food.
+
+- Finance#How options work
+- The basic deal with options is that when you buy an option from a dealer, the dealer will hedge the option by buying or selling the underlying stock; in particular the dealer will adjust its hedge by buying the stock when it goes up and selling it when it goes down. This makes the stock more volatile: When it goes up, options dealers are buying and pushing it up more; when it goes down, they’re selling and pushing it down more. Dealers who sell options are said to be “selling volatility.” They produce volatility with their trading and sell it to customers. Customers want a lot of Tesla volatility. So a lot of Tesla volatility is produced and delivered to them
+
