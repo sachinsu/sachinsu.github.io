@@ -1501,5 +1501,31 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 ---- If you are in Taiwan or china or japan, ask for buddhist amitabha restaurant who serve vegetarian food.
 
 - Finance#How options work
-- The basic deal with options is that when you buy an option from a dealer, the dealer will hedge the option by buying or selling the underlying stock; in particular the dealer will adjust its hedge by buying the stock when it goes up and selling it when it goes down. This makes the stock more volatile: When it goes up, options dealers are buying and pushing it up more; when it goes down, they’re selling and pushing it down more. Dealers who sell options are said to be “selling volatility.” They produce volatility with their trading and sell it to customers. Customers want a lot of Tesla volatility. So a lot of Tesla volatility is produced and delivered to them
+    - The basic deal with options is that when you buy an option from a dealer, the dealer will hedge the option by buying or selling the underlying stock; in particular the dealer will adjust its hedge by buying the stock when it goes up and selling it when it goes down. This makes the stock more volatile: When it goes up, options dealers are buying and pushing it up more; when it goes down, they’re selling and pushing it down more. Dealers who sell options are said to be “selling volatility.” They produce volatility with their trading and sell it to customers. Customers want a lot of Tesla volatility. So a lot of Tesla volatility is produced and delivered to them
+
+## 2021-nov-26 Fri
+
+- Renko charts 
+    - plots price movement as renga (which is bricks in Japanese) 
+    - Brick size indicates % change in price movement in underlying instrument basis which brick would be plotted
+    - Easier to represents trend than with other chart types like line, bar , candlestick etc. 
+        - Methods to plot Renko charts, 
+            - Absolute - Absolute brick size. Closing price is used. Preferred for short term trading.
+            - ATR based - Brick size determined by Volatility indicator (like ATR).
+            - High/low method - New bricks on high/low value. 
+            - Fixed percentage - Brick size based on percentage. Preferred for long term trend identification.
+    - Renko Reversal - brick color change 
+
+
+- Cash flow statement (https://online.hbs.edu/blog/post/how-to-read-a-cash-flow-statement) 
+    - typically broken into three sections:
+        - Operating activities - cash flow that’s generated once the company delivers its regular goods or services, and includes both revenue and expenses.
+        - Investing activities -  include cash flow from purchasing or selling assets—think physical property, such as real estate or vehicles, and non-physical property, like patents—using free cash, not debt.
+        - Financing activities - detail cash flow from both debt and equity financing.
+
+    - Ideally, a company’s cash from operating income should routinely exceed its net income, because a positive cash flow speaks to a company’s ability to remain solvent and grow its operations.
+    - Direct Method - To calculate the operation section using the direct method, take all cash collections from operating activities, and subtract all of the cash disbursements from the operating activities.
+    - Indirect Method - convert net income to actual cash flow by de-accruing it through a process of identifying any non-cash expenses for the period from the income statement. The most common and consistent of these are depreciation, the reduction in the value of an asset over time, and amortization, the spreading of payments over multiple periods.
+
+
 
