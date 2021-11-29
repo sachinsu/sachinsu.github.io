@@ -1527,5 +1527,25 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - Direct Method - To calculate the operation section using the direct method, take all cash collections from operating activities, and subtract all of the cash disbursements from the operating activities.
     - Indirect Method - convert net income to actual cash flow by de-accruing it through a process of identifying any non-cash expenses for the period from the income statement. The most common and consistent of these are depreciation, the reduction in the value of an asset over time, and amortization, the spreading of payments over multiple periods.
 
+    
+## 2021-nov-29 Mon
 
+- Payments in Some countries 
+    - Japan - furikomi (Zengin) is a clearing house; it operates as an interbank intermidiary which both routes information about individual payments and also acts as a counterparty for settlements. A user’s bank credits them with funds instantly if received during business hours; the funds are actually received after business hours, when Zengin totals up funds flows for the day and sends instructions to the Bank of Japan for net settlement between participating financial institutions. Typically used for B2B or large ticket purchases by consumers.
+
+    - US - Automated clearing house (ACH) - ACH transfers support both push and pull transaction. ACH based payment confirmation are delayed and it accordingly affects release of goods. They are generally free to end users.
+
+    - Europe - Single European payment area (SEPA) offers free and instance transactions between european banks. they are pull based. Fraud rates are highest than Furikomi, ACH or UPI. 
+
+
+- Investing
+    - BIN - Bias, information and noise. Noise is twice as important as bias 
+    - Investors are buying partial stakes in companies. They need to ground their thinking in cash flow models. Speculators, in contrast, are trying to find stocks that go up. While there are pockets of speculation.
+
+    - Present Value is today’s value of tomorrow's cash flow. A dollar in the present is worth more than a dollar in the future because you can invest a dollar today and earn a positive rate of return. This process is called compounding. The reverse of compounding is discounting, which converts a future cash flow into a present value.
+
+    - Sales growth is often the value trigger that has the greatest impact on shareholder value
+
+- Demand and Supply
+    - If prices and quantities are moving in the same direction, it is a change in demand that is driving the price change. If prices and quantities are moving in opposite directions, it is a change in supply that is driving the price change
 
