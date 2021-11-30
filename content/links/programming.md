@@ -140,6 +140,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [A terminal UI for tshark, inspired by Wireshark](https://termshark.io/)
 - [Developer playbook approach by Hackney council](https://playbook.hackney.gov.uk/API-Playbook/)
 - [Nice content on Ansible](https://github.com/geerlingguy)
+- [Performance profiling using Open source Pyroscope Server](https://pyroscope.io/)
 
 ## Observability
 

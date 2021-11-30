@@ -1549,3 +1549,4 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 - Demand and Supply
     - If prices and quantities are moving in the same direction, it is a change in demand that is driving the price change. If prices and quantities are moving in opposite directions, it is a change in supply that is driving the price change
 
+## 2021-nov-30 Tue

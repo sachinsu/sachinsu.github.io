@@ -13,6 +13,7 @@ Platform where i have spent most time till now.
 - [What is .NET? by Scott Hanselman](https://www.youtube.com/watch?time_continue=1&v=bEfBfBQq7EE&feature=emb_logo)
 - [Async in Depth](https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth)
 - [Using Async/Await in WCF or ASMX with AsyncEx](https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html)
+- [Comparing Async/Await with GoRoutines](https://alexyakunin.medium.com/go-vs-c-part-1-goroutines-vs-async-await-ac909c651c11)
 - [.NET Presentations - Events in a Box](https://presentations.dotnetfoundation.org/)
 - [Building Microservices in .NET](https://altkomsoftware.pl/en/blog/building-microservices-on-net-core-1/)
 - [Materialized View Pattern for Cross Service Queries](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view)
