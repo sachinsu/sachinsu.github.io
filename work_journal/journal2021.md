@@ -1,14 +1,4 @@
 - Work updates
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?   
-    
-    BFL, 
-    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
-    - Integration with BFL Services - Issues in Dashboard updates and long queue lengths for unprocessed messages. Approach is to combine tables and use partitions and also use separate Queue for BFL Updates.
-    - Change in business requirements to maintain product line with limits for one card per customer 
-    
     DH, 
     - Ongoing App Review and New architecture
 
@@ -16,6 +6,14 @@
     - Unified non-card transactions from different channels
 
     Shortlisting & interview for Mobile & C Architect role
+
+    BFL, 
+    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
+
+    Issuance, 
+    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?           
 
 ## 2021-sep-21 Tue
 
@@ -1549,4 +1547,33 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 - Demand and Supply
     - If prices and quantities are moving in the same direction, it is a change in demand that is driving the price change. If prices and quantities are moving in opposite directions, it is a change in supply that is driving the price change
 
-## 2021-nov-30 Tue
+## 2021-dec-01 Wed
+
+- Quote - "It is difficult to get a man to understand something, when his salary depends on his not understanding it" - Upton Sinclair
+
+- Architecture 
+    -  Don't adopt a new system unless you can make the first-principle argument for why your current stack fundamentally can't handle it.
+    - Whenever you find yourself arguing for improving infrastructure by yanking up complexity, you need to be very careful. 
+    - Typical issues while adopting new technologies are, 
+        - Slower performance (hard to debug)
+        - Scalability issues (because you don't know the system well)
+        - Complexity may lead to more downtime
+    - Stop thinking about technologies, and start thinking in first-principle requirements (the idea is to break down complicated problems into basic elements and then reassemble them from the ground up), 
+        - In case of databases, it could be, 
+            - You need faster inserts/updates (i.e. Not Synching every write to disk immediately which can be done in Mysql using [flush log settings](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) and in postgresql using [Asynchronous commits](https://www.postgresql.org/docs/9.4/wal-async-commit.html))
+            - You need terabytes of storage to have runway for the next ~5 years
+            - You need more read capacity (i.e. use Read Replicas)
+
+- Approaches to First Principles thinking, 
+  - Socratic questioning generally follows this process:
+    - Clarifying your thinking and explaining the origins of your ideas (Why do I think this? What exactly do I think?)
+    - Challenging assumptions (How do I know this is true? What if I thought the opposite?)
+    - Looking for evidence (How can I back this up? What are the sources?)
+    - Considering alternative perspectives (What might others think? How do I know I am correct?)
+    - Examining consequences and implications (What if I am wrong? What are the consequences if I am?)
+    - Questioning the original questions (Why did I think that? Was I correct? What conclusions can I draw from the reasoning process?)
+
+- Reasoning by first principles is useful when you are 
+  - (1) doing something for the first time, 
+  - (2) dealing with complexity, and 
+  - (3) trying to understand a situation that you’re having problems with.
