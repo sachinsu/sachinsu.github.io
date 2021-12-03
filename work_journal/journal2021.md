@@ -1644,3 +1644,35 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - Hypermedia style
         - Query style
         - Event driven style
+
+- How loan against securities (LAS) work, 
+    - Max LAS against equity is 10 lakh according to some RBI/SEBI rule - does matter what the value of your collateral security is. So banks can't lend beyond this in a single loan. I think NBFCs are more lenient with respect to this.
+    - You need 20 lakh worth of equities to get a 10 lakh loan (50% margin is typical, some relaxations can be obtained apparently)
+    - You can get upto 85% of collateral value using debt funds. Do not know what is the max they will lend
+    - You cannot use this money for equity trading. It can only be used for personal purposes. I do not know how they track end use but at least on paper speculative use is banned.
+    - In case of banks, they open current account for loan disbursal and interest is charged on withdrawals.
+
+- Stocks#Philip Fisher's approach 
+    - shouldn’t be over-wedded to valuation, providing we own great businesses (Valuation is a secondary concern). Great businesses grow faster than investors expect, and sustain growth for longer. While they often seem expensive based on current profits, their extraordinary growth potential means their valuation is often more than justified.
+    - every company has a personality. More successful the corporation is more likely it is to be unique in it's policies. 
+    - Important aspects of a company are Sales and R&D.
+    - he placed great emphasis on the management and culture of an organisation.
+    - Fisher was also very aware of the dangers of complacency setting in to an organisation. Many companies, having achieved success, stop doing the things that made them successful. A culture of entrepreneurialism combined with a willingness to experiment and push boundaries, is replaced with bureaucracy, politics and a desire to preserve the status quo.
+    -  Only by getting better can a company be sure of not growing worse
+    - Rigid companies that do not constantly challenge themselves will fail.
+    - High quality management possess two things 1) They handle day-to-day business tasks with above-average efficiency 2) They are able to look ahead and make long-range plans that will produce significant future growth for the business without compromising existing operations
+    - Good investing is like being a detective or investigative journalist. You look for clues and try to build a picture that gets you closer to true understanding.
+
+- On Equity portfolio construction
+    - Great businesses are rare. Great businesses that are also well managed are rarer still. I don’t want to ‘diworsify’ my portfolio by adding sub-par companies because I believe this increases rather than reduces risk. I agree with Phil Fisher – it’s better to own a few great businesses than a great many mediocre ones.
+    - Good ideas are rare (at least for me!). When I have one it needs to make a difference.I like to understand the businesses I own (especially important in a concentrated portfolio). There are only so many companies I can track and develop enough knowledge on.
+    - Most of the best investors I know have or had concentrated portfolios, although there are exceptions (such as Peter Lynch).
+    - When you own fewer positions, it forces you to make tough decisions. Do I really understand this business well enough? Would I be better off holding this company instead? To me this is a better approach than adding more and more names, akin to a stamp collector – there are no prizes for collecting large albums of stocks.
+    - Many studies show that beyond about 30 holdings, the benefits of adding more positions for diversifying risk are minimal.
+
+- Socialogy
+    - Parents in extreme poverty need many children… [Not just] for child labour but also to have extra children in case some children die… Once parents see children survive [and] once the children are no longer needed for child labour… both the men and the women instead start dreaming of having fewer, well-educated children.
+    - In theory, if on an average 100 women have 210 children during their childbearing years and this trend continues over the decades, the population will eventually stabilize and continue to remain stable.
+- 
+
+
