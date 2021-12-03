@@ -115,3 +115,7 @@ Platform where i have spent most time till now.
 ## Twitter Handles
 
 - [Scott Hanselman](https://twitter.com/shanselman)
+
+## General
+
+- [.NET Conf 2021 Videos, Slides etc.](https://github.com/dotnet-presentations/dotNETConf/tree/master/2021/MainEvent/Technical)

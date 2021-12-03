@@ -1577,3 +1577,70 @@ Thus, fitness functions for these characteristics must be continuous, typically 
   - (1) doing something for the first time, 
   - (2) dealing with complexity, and 
   - (3) trying to understand a situation that you’re having problems with.
+
+## 2021-dec-02 Thu
+
+- IT 
+
+    - CPaaS stands for Communications Platform as a Service. It is one of the coolest ways of enriching your customer communication channels. It acts as a platform for businesses to combine the reliability and backend of proven communication services with their custom applications through the use of APIs (application programming interface). It is programmable, customizable, and very versatile. 
+
+- Finance
+
+    - Hedge funds usually employ short-selling and leverage to generate alpha.
+
+    - Stocks and Inflation 
+        - Periods of very high inflation hurt your overall returns in terms of constant purchasing power
+        - If we are going to a period of much lower inflation, we should start getting “real returns”.
+        - Therefore it’s better to invest during a period of low inflation, but of course, stock prices have be justifiable.
+
+- BlockChain/Crypto
+
+    - A DAO is a company that has no leadership structure. Everything is done by vote using tokens (of course, this time called a governance token). DAOs are themselves super interesting. Just last night, a recently formed DAO called ConstitutionDAO tried and failed to buy one of the 13 physical copies of the U.S. Constitution, largely just because. The idea was to pool a LOT of money together to go buy a big thing, and then everyone who contributed the money would somehow get to vote on what to do with it.
+
+- Behavioral/psychology
+    - Paradoxes of life, 
+        - Have you noticed that the most argumentative people rarely persuade anyone of…well…anything? The most persuasive people don’t argue—they observe, listen, and ask questions.
+        - You have to put in more effort to make something appear effortless.
+        - The more you learn, the more you are exposed to the immense unknown.
+        - To do truly great, creative work, you have to be a lion. Sprint when inspired. Rest. Repeat.
+        - Every successful investor & builder has stories of the invaluable lessons learned from a terrible loss in their career. Sometimes you have to pay to learn.
+        - Our greatest moments of growth often stem directly from our greatest failures. Don’t fear failure, just learn to fail smart and fast.
+        - Say yes to what matters, say no to what doesn’t. Protect your time as a gift to be cherished.
+        - Make a habit of getting closer to your fears.
+        - Taleb calls it the noise bottleneck: As you consume more data, the noise to signal ratio increases, so you end up knowing less about what is actually going on.
+        - Growth is never linear. Shedding deadweight may feel like a step back, but it is a necessity for long-term growth.
+
+- Sociology
+
+    - Why are cows revered ? - Typically in de-urbanized, feudal society and pastoral society, cattle are much more valuable. 
+    - There is a strong evidence that hadappa civilization consumed beef 
+    - India is too economically left leaning, likes living on hangouts, dont want to do hard work.
+    - Right wings politics is for people with self respect and want to do hard work.
+    - In ancient islamic and christian world, charging interest was considered crime and banking was left to jews. When you can't pay your debt, you try to demonize/kill bank/bankers. This could be one of the reasons for anti-semitism. 
+    - Wokism is powerful tool for internal control and external suppression.
+    - The basis of religion and passion is wealth
+    - Money is the base of all the assignments
+
+## 2021-dec-03 Fri
+
+- Approach to API Design
+    - Set the Right Design goals (e.g. incrased conversion rate, access to data and services)
+    - Sketch and prototype iteratively 
+    - API Design Reviews. It can cover, 
+        - Visibility of System Status
+        - Match between system and real world
+        - Consistency and Standards
+            - Are interface and data models internally  consistent?
+            - Does the API adhere to specifications and organizational standards?
+        - Error Prevention 
+        - Flexibility and efficiency of Use
+        - Help Users recognize, Diagnose and recover from errors 
+        - Help & Documentation 
+    - Use Participatory Design 
+    - 
+- API Styles 
+        - Tunnel-RPC style
+        - CRUD Style
+        - Hypermedia style
+        - Query style
+        - Event driven style
