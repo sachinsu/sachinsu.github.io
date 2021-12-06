@@ -1670,9 +1670,11 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - When you own fewer positions, it forces you to make tough decisions. Do I really understand this business well enough? Would I be better off holding this company instead? To me this is a better approach than adding more and more names, akin to a stamp collector – there are no prizes for collecting large albums of stocks.
     - Many studies show that beyond about 30 holdings, the benefits of adding more positions for diversifying risk are minimal.
 
-- Socialogy
-    - Parents in extreme poverty need many children… [Not just] for child labour but also to have extra children in case some children die… Once parents see children survive [and] once the children are no longer needed for child labour… both the men and the women instead start dreaming of having fewer, well-educated children.
+- Sociology
+    - Parents in extreme poverty need many children… [Not just] for child labour but also to have extra children in case some children die… Once parents see children survive and once the children are no longer needed for child labour… both the men and the women instead start dreaming of having fewer, well-educated children.
     - In theory, if on an average 100 women have 210 children during their childbearing years and this trend continues over the decades, the population will eventually stabilize and continue to remain stable.
-- 
+
+## 2021-dec-06 Mon
+
 
 
