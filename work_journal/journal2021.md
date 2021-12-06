@@ -1470,7 +1470,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - buy them when the Price to Book Value number is close to the historical lows
         - The P/BV is typically low when the commodity price cycle is in the doldrums, earnings tend to be in the brackets and the PE multiples are either absent due to losses or very high
         - dedicated corpus for speculative trading 
-        - to Sell, 
+        - To Sell, 
             - See the historical high and low P/E and also look at the ROE trend of a stock
             - Prepare list of top stocks which are closer to high end of historical P/E
         - Rules
@@ -1675,6 +1675,52 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - In theory, if on an average 100 women have 210 children during their childbearing years and this trend continues over the decades, the population will eventually stabilize and continue to remain stable.
 
 ## 2021-dec-06 Mon
+
+- Stoicism - knowledge can be obtained through reason and truth can be separated from falsity.The method for applying reason to determine truth is a Zen-style unattachment in accepting the world as it is and to not have one’s mind hijacked by greed, envy, fear and other action-distorting emotions.
+    - Contemplate the worst 
+    - acknowledge what you can't control - There’s no point worrying about what you can’t control; focus on what you can.
+    - allocate time to worry 
+    - Cut out the noise - Exercise, read, take a walk or plant some seeds instead.
+    -  Live in the uncertainty and work at it - Being humble, managing your anxiety and working at becoming a better investor is how you become a better investor.
+
+- Crypto#
+    - Crypto’s Commingling Scandal - What crypto exchanges do, 
+        - They have a single (or a few) wallet address that holds a consolidated amount of coin
+        - When you’re on the exchange and you buy/sell, it’s with another party on the same exchange, so to the external world, nothing changes. The exchange is still the owner.
+        - Within the exchange, who determines who’s the owner? The exchange itself. It maintains a database.
+        - But wait, we are trusting an exchange now? Wasn’t bitcoin supposed to be trustless – so that your bitcoin is your bitcoin?
+        - Well, no. Not in such exchanges.
+        - The best way to handle this is to move your coin outside the exchange, into your personal wallet. When you need to trade, move it back in. Centralized Exchanges (CExes in short) have massive commingling issues. 
+
+- Notes from talk by Sankaran Naren,
+    -  Global central banks are responsible for equity bull markets
+    -  In US, pure value approach (low P/E ) does not work anymore only Moat approach in value investory works 
+    - Be conservative when markets are high and aggressive when markets are low
+    - In india, corporate governance is cyclical (improves with bull market vice versa)
+    - Temparament is most important thing in investment
+    -  Any asset class falls 40%, add money to it. 
+    -  if any asset class has done badly then put money vice-versa withdraw money
+    - James montier's tenets of investing, 
+        -  Always insist on a margin of safety
+            - Screener for Value opportunities -  stocks are required to have an earnings yield of twice the AAA bond yield, a dividend yield of at least two-thirds of the AAA bond yield, and total debt less then two-thirds of the tangible book value. The stocks passing must have a Graham and Dodd P/E  of less than 16.5x.
+        - This time is never different
+        - Be patient and wait for the fat pitch
+        - Be contrarian
+        - Risk is the permanent loss of capital, never a number
+        - Be leery of leverage
+        - Never invest in something you don’t understand
+            - Investing is always about making decisions under a cloud of uncertainty. It is how one deals with the uncertainty that distinguishes the long-term value-based investor from the rest. Rather than acting as if the uncertainty doesn’t exist (the current fad), the value investor embraces it and demands a margin of safety to reflect the unknown
+
+- Critical thinking Approach 
+    - Who does this benefit?
+    - What's the context?
+    - When or where would this work?
+    - Whys is this a problem?
+
+- Tech#Datawarehouses
+    - Snowflake Warehouse is a single integrated system with fully independent scaling for compute, storage and services. Unlike shared-storage architectures that tie storage and compute together, Snowflake enables automatic scaling of storage, analytics, or workgroup resources for any job, instantly and easily.
+
+
 
 
 
