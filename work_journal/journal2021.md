@@ -1720,6 +1720,22 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 - Tech#Datawarehouses
     - Snowflake Warehouse is a single integrated system with fully independent scaling for compute, storage and services. Unlike shared-storage architectures that tie storage and compute together, Snowflake enables automatic scaling of storage, analytics, or workgroup resources for any job, instantly and easily.
 
+## 2021-dec-07 Tue
+
+- Supply chain# Shipping and Containers 
+-  A freight-forwarder is basically a middleman in the supply chain which buys a guaranteed amount of space on ships, often via multi-year contracts at guaranteed rates with guaranteed space, and then re-sells that space to people who need it.
+
+- Tech#How DNS Works,
+    - When you make a DNS request (for example when you type google.com in your browser), you make a request to a DNS resolver, like 8.8.8.8.
+    - When you create a DNS record for a domain, you set the DNS record on an authoritative nameserver.The authoritative nameserver never pushes updates, it just replies with the current record when it receives a query.
+    - While the DNS record creation is instateneous (i.e. available instantly). Updates to DNS records are not as they are cached by resolvers. Resolver server will query it again once it's cache is expired.
+
+- Tech#Data Mesh - Centralized approach doesnt work. Decentralized approach where domain that creates the data is responsible for publishing feed of analytical data. They think this data feed as product. Platform to publish and consume data feeds and decentralized governance approach. New requirement for analytics will require approaching data product teams to understand and gather data. One has to goto business units and get details on data product. 
+    - Data Products are data-centric, digital artifacts that are produced and consumed in a multi-party exchange for the purposes of meeting the needs of a job that the consumer is trying to get done. Further, the lifecycle controls of data products closely mirror those of physical products in the commercial realm.
+    - Issues with centralization - from where the data has come from? How is it organized?
+
+
+
 
 
 

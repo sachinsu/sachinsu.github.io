@@ -45,6 +45,7 @@ Platform where i have spent most time till now.
 - [Using max number of worker threads using Semaphore](https://www.codeproject.com/Articles/859108/Writing-a-Web-Server-from-Scratch)
 - [Performance tuning for .NET Core](https://reubenbond.github.io/posts/dotnet-perf-tuning)
 
+
 ## ASP.NET Web forms
 
 - [What not to do in ASP.NET, and what to do instead](https://docs.microsoft.com/en-us/aspnet/aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead#standards)
@@ -79,6 +80,7 @@ Platform where i have spent most time till now.
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
 - [bflat - No-frills, standalone compiler for .net](https://github.com/MichalStrehovsky/bflat)
 
+
 ## Task Queue/Scheduling tools
 
 - [Hangfire](https://www.hangfire.io)
@@ -101,6 +103,7 @@ Platform where i have spent most time till now.
 - [WCF on .NET Core](https://corewcf.github.io/blog/2021/02/19/corewcf-ga-release)
 - [ASP.NET Web API Versioning](https://github.com/microsoft/aspnet-api-versioning)
 - [Samples of ASP.NET Core you can use](https://github.com/dodyg/practical-aspnetcore)
+- [Step by Step OpenTelemetry in .NET Core](https://logz.io/blog/csharp-dotnet-opentelemetry-instrumentation/#conc)
 
 ## Security
 
