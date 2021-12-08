@@ -5,15 +5,16 @@
     Sahil, 
     - Unified non-card transactions from different channels
 
-    Shortlisting & interview for Mobile & C Architect role
-
     BFL, 
     - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
 
-    Issuance, 
-    - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
     Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accomodate additional compute?           
+
+    Issuance, 
+        - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+Shortlisting & interview for Mobile & C Architect role
+
 
 ## 2021-sep-21 Tue
 
@@ -1734,9 +1735,8 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - Data Products are data-centric, digital artifacts that are produced and consumed in a multi-party exchange for the purposes of meeting the needs of a job that the consumer is trying to get done. Further, the lifecycle controls of data products closely mirror those of physical products in the commercial realm.
     - Issues with centralization - from where the data has come from? How is it organized?
 
+## 2021-dec-08 Wed
 
-
-
-
-
+- Stocks
+  - To earn the gigantic returns such stocks can provide, you need enormous skill, phenomenal luck and the nerves and reserves to withstand bloodcurdling losses.
 
