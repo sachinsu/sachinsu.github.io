@@ -64,7 +64,7 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 
         {{< figure src="/images/profiling2.png" title="Table and flamegraph for API" >}}
 
-Overall, pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box. 
+Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box. 
 
 ## Benchmarking 
 Crank is tool used by Microsoft internally to benchmark applications. It is released as Nuget package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
@@ -94,7 +94,7 @@ Crank is tool used by Microsoft internally to benchmark applications. It is rele
 
     {{< figure src="/images/crank-prof2.png" title="Observations during executing load testing" >}}
 
-Overall,  i found Crank  helpful for following,
+Overall,  i found Crank helpful for following,
 
    - it helps quickly test effect of any code changes by means of quickly benchmarking the application. The overall benchmarking might not be similar to end state ie. when the application will be deployed on target infrastructure. However, it still gives insights to developer about impact of code changes 
    - Crank can be easily used for local applications as well as for docker containers. 
