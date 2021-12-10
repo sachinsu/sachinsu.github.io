@@ -15,7 +15,7 @@ We develop a piece of software with aim to fulfil specific business requirements
 We will look at couple of tools in this space. 
 
 ## Profiling 
-todo: pyroscope
+
 [Pyroscope](https://pyroscope.io) is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in, 
     - Client - pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server. 
     - Server - Runs as a separate process (on Linux [Works in WSL if using Windows] or Mac), collects the data from client processes and renders them as table and/or flame graph via Web UI.A flamegraph is a way to visualize resources used by a program, like CPU usage or memory allocations, and see which parts of your code were responsible. 
@@ -25,7 +25,7 @@ Lets see how a function in C# can be instrumented using PyroScope.
 1. Develop function to be profiled
 Lets have ASP.NET Core 5.0 based Web API as below,
 
-{{< figure src="/images/profiling3.png" title="Simple Web API handle in C#" >}}
+{{< figure src="/images/profiling3.png" title="Simple Web API handler in C#" >}}
 
 1. Set up Pyroscope
 
@@ -51,7 +51,7 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 
 1. Run Pyroscope Server 
 
-- Start pyroscope server from WSL Linux prompt using, `sudo pyroscope server`. The output of this command should show Port on which server is running. 
+- Start Pyroscope server from WSL Linux prompt using, `sudo pyroscope server`. The output of this command should show Port on which server is running. 
 
     - Either use [curl](https://curl.se/) or [hey](https://github.com/rakyll/hey) tool to invoke the API. Below command shows how to generate load using hey,
         - run `.\hey.exe -m GET -c 10 -q 2 http://localhost:5000/weatherforecast` (Note: Modify the URL As appropriate)
@@ -66,29 +66,47 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 
 Overall, pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box. 
 
-
 ## Benchmarking 
-todo: crank 
-Crank is tool used by Microsoft internally to benchmark application. It is released as Nuget package and currently  .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
+Crank is tool used by Microsoft internally to benchmark applications. It is released as Nuget package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
 
-1. Develop code, intended to be benchmarked 
+1. Write code, intended to be benchmarked 
+
+        {{< figure src="/images/crank-prof4.png" title="C# Code to be benchmarked" >}}
 
 2. Setup Crank 
 
-3. Run Crank Agent 
+    Follow the instructions provided [here](https://github.com/dotnet/crank/blob/main/docs/getting_started.md) to setup crank. As part of application,we will also need to create a Yaml configuration file which contains details like *Job* to be used. Crank has built-in jobs which are essentially wrappers around CLI load testing tools like [bombardier](https://github.com/codesenberg/bombardier) and [wrk](https://github.com/wg/wrk). Since i am using Windows to run crank, we will go with Bombardier which is cross platform. Below is how a very simple configuration looks like, 
 
+    {{< figure src="/images/crank-prof3.png" title="Crank YAML Configuration" >}}
+
+    It allows for extensibility in terms of overriding the job configuration in terms of how load should be generated etc.
+
+3. Run Crank Agent - Next step is to run  crank agent in a command prompt or powershell by simply running `crank-agent`
+ 
 4. Record data for benchmarking using Crank CLI. 
 
+    Now run Crank from the application folder as `crank --config crank.benchmarks.yml --scenario hello --profile local --application.options.displayOutput true`
 
-## Summary
+    This command builds the code and launches job while recording the Utilization and other parameters and shows output like, 
+
+    {{< figure src="/images/crank-prof1.png" title="Application's CPU Utilization" >}}
+
+
+    {{< figure src="/images/crank-prof2.png" title="Observations during executing load testing" >}}
+
+Overall,  i found Crank  helpful for following,
+
+   - it helps quickly test effect of any code changes by means of quickly benchmarking the application. The overall benchmarking might not be similar to end state ie. when the application will be deployed on target infrastructure. However, it still gives insights to developer about impact of code changes 
+   - Crank can be easily used for local applications as well as for docker containers. 
+   - It can either be used locally or in distributed manner.
 
 ### Useful References
 
 * [Pyroscope](https://pyroscope.io)
 * [Crank](https://github.com/dotnet/crank)
 
-Happy Coding !!
+Happy Profilig and Benchmarking !!
 
 ---
 
-{{< comments >}
+{{< comments >}}

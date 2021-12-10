@@ -49,6 +49,7 @@ My current Favourite Language
 - [Design philosophy](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md)
 - [TLS and Go](https://eli.thegreenplace.net/2021/go-https-servers-with-tls/#id8)
 - [Effectively using Systemd for setting up HTTP Server](https://mgdm.net/weblog/systemd/)
+- [Useful Code patterns](https://betterprogramming.pub/7-code-patterns-in-go-i-cant-live-without-f46f72f58c4b)
 
 ### Libraries, Tools
 
