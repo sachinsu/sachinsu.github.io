@@ -19,7 +19,7 @@ Lets look at what they mean,
 Lets look at what they mean,
  Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-12-12T01:00:00+05:30">
-<meta itemprop=wordCount content="926">
+<meta itemprop=wordCount content="928">
 <meta itemprop=keywords content="pyroscope,crank,flame graph,CPU,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Profiling and benchmarking tools for Applications">
@@ -131,12 +131,12 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 <h4>Simple Web API handler in C#</h4>
 </figcaption>
 </figure>
-<ol>
+<ol start=2>
 <li>Set up Pyroscope</li>
 </ol>
 <p>Install Pyroscope Application by following instructions <a href=https://pyroscope.io/docs/agent-install-windows target=_blank rel="noopener noreferrer">here</a> for Windows. Note that, Pyroscope server component won&rsquo;t run on Windows in which case either <a href=https://docs.microsoft.com/en-us/windows/wsl/install target=_blank rel="noopener noreferrer">Windows Subsystem for Linux (WSL)</a> or <a href=https://pyroscope.io/docs/docker-guide target=_blank rel="noopener noreferrer">Docker</a> can be used. In case of Linux, instructions provided <a href=https://pyroscope.io/docs/server-install-linux target=_blank rel="noopener noreferrer">here</a> are sufficient for both client and server components.</p>
 <p>I have setup the application on Windows 10 while using WSL for Pyroscope Server.</p>
-<ol>
+<ol start=3>
 <li>
 <p>Configure Pyroscope client and run the Application</p>
 <ul>
@@ -145,25 +145,26 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </li>
 <li>
 <p>Configure below environment variables (below is powershell format or you can use <code>SET ...</code> commands on command prompt),</p>
-<pre tabindex=0><code>
-    $env:PYROSCOPE_SPY_NAME=&quot;dotnetspy&quot;;
-    $env:PYROSCOPE_APPLICATION_NAME=&quot;my.dotnet.app&quot;;
-    $env:PYROSCOPE_SERVER_ADDRESS=&quot;http://localhost:4040&quot;;
+<pre><code>  ```
 
-</code></pre></li>
-</ul>
+      $env:PYROSCOPE_SPY_NAME=&quot;dotnetspy&quot;;
+      $env:PYROSCOPE_APPLICATION_NAME=&quot;my.dotnet.app&quot;;
+      $env:PYROSCOPE_SERVER_ADDRESS=&quot;http://localhost:4040&quot;;
+
+  ```
+</code></pre>
 </li>
-</ol>
-<ul>
 <li>
 <p>Update path to include pyroscope installation folder using <code>$env:Path += ";C:\Program Files\Pyroscope\Pyroscope Agent\"</code></p>
-<ul>
-<li>Run the Application using <code>pyroscope exec dotnet .\bin\Debug\net5.0\webapi.dll</code>.</li>
-</ul>
+</li>
+<li>
+<p>Run the Application using <code>pyroscope exec dotnet .\bin\Debug\net5.0\webapi.dll</code>.</p>
 </li>
 </ul>
-<ol>
-<li>Run Pyroscope Server</li>
+</li>
+<li>
+<p>Run Pyroscope Server</p>
+</li>
 </ol>
 <ul>
 <li>
@@ -177,7 +178,7 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </ul>
 </li>
 </ul>
-<ol>
+<ol start=5>
 <li>
 <p>Observe the flame graph in Pyroscope Web UI.</p>
 <ul>
