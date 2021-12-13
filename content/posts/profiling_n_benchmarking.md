@@ -31,11 +31,11 @@ Lets have ASP.NET Core 5.0 based Web API as below,
 
 {{< figure src="/images/profiling3.png" title="Simple Web API handler in C#" >}}
 
-2. Set up Pyroscope
+2. Setup Pyroscope
 
-Install Pyroscope Application by following instructions [here](https://pyroscope.io/docs/agent-install-windows) for Windows. Note that, Pyroscope server component won't run on Windows in which case either [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install) or [Docker](https://pyroscope.io/docs/docker-guide) can be used. In case of Linux, instructions provided [here](https://pyroscope.io/docs/server-install-linux) are sufficient for both client and server components. 
+    Install Pyroscope Application by following instructions [here](https://pyroscope.io/docs/agent-install-windows) for Windows. Note that, Pyroscope server component won't run on Windows in which case either [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install) or [Docker](https://pyroscope.io/docs/docker-guide) can be used. In case of Linux, instructions provided [here](https://pyroscope.io/docs/server-install-linux) are sufficient for both client and server components. 
 
-I have setup the application on Windows 10 while using WSL for Pyroscope Server.
+    I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 
 3. Configure Pyroscope client and run the Application
 
@@ -43,7 +43,6 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
     - Configure below environment variables (below is powershell format or you can use `SET ...` commands on command prompt),  
 
             ```
-        
                 $env:PYROSCOPE_SPY_NAME="dotnetspy";
                 $env:PYROSCOPE_APPLICATION_NAME="my.dotnet.app";
                 $env:PYROSCOPE_SERVER_ADDRESS="http://localhost:4040";
@@ -51,19 +50,19 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
             ```
    
     - Update path to include pyroscope installation folder using `$env:Path += ";C:\Program Files\Pyroscope\Pyroscope Agent\"`
-    
+
     - Run the Application using `pyroscope exec dotnet .\bin\Debug\net5.0\webapi.dll`. 
 
 4. Run Pyroscope Server 
 
-- Start Pyroscope server from WSL Linux prompt using, `sudo pyroscope server`. The output of this command should show Port on which server is running. 
+    - Start Pyroscope server from WSL Linux prompt using, `sudo pyroscope server`. The output of this command should show Port on which server is running. 
 
-    - Either use [curl](https://curl.se/) or [hey](https://github.com/rakyll/hey) tool to invoke the API. Below command shows how to generate load using hey,
-        - run `.\hey.exe -m GET -c 10 -q 2 http://localhost:5000/weatherforecast` (Note: Modify the URL As appropriate)
+        - Either use [curl](https://curl.se/) or [hey](https://github.com/rakyll/hey) tool to invoke the API. Below command shows how to generate load using hey,
+            - run `.\hey.exe -m GET -c 10 -q 2 http://localhost:5000/weatherforecast` (Note: Modify the URL As appropriate)
 
 5. Observe the flame graph in Pyroscope Web UI.
 
-    - Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. This [article](https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/) has great content about flame graphs.
+    - Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. Refer [here](https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html) and [here](https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/) for everything about flame graphs.
 
         {{< figure src="/images/profiling1.png" title="Table and flamegraph for API" >}}
 
