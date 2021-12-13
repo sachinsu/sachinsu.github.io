@@ -7,22 +7,25 @@
 <script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script>
 <meta name=description content>
 <meta property="og:title" content="Profiling and benchmarking tools for Applications">
-<meta property="og:description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. Profiling and benchmarking are approaches that developer has to evaluate the same.
- Profiling is defined as aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
+<meta property="og:description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://sachinsu.github.io/posts/profiling_n_benchmarking/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-12-12T01:00:00+05:30">
 <meta property="article:modified_time" content="2021-12-12T01:00:00+05:30">
 <meta itemprop=name content="Profiling and benchmarking tools for Applications">
-<meta itemprop=description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. Profiling and benchmarking are approaches that developer has to evaluate the same.
- Profiling is defined as aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
+<meta itemprop=description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-12-12T01:00:00+05:30">
-<meta itemprop=wordCount content="846">
+<meta itemprop=wordCount content="912">
 <meta itemprop=keywords content="pyroscope,crank,flame graph,CPU,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Profiling and benchmarking tools for Applications">
-<meta name=twitter:description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. Profiling and benchmarking are approaches that developer has to evaluate the same.
- Profiling is defined as aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
+<meta name=twitter:description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link rel=dns-prefetch href=//fonts.googleapis.com>
 <link rel=dns-prefetch href=//fonts.gstatic.com>
@@ -107,12 +110,14 @@
 </div>
 </div><div class="content post__content clearfix">
 <h2 id=introduction>Introduction</h2>
-<p>We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. Profiling and benchmarking are approaches that developer has to evaluate the same.</p>
+<p>We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.</p>
+<p>Lets look at what they mean,</p>
 <ul>
-<li>Profiling is defined as <code>aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling target=_blank rel="noopener noreferrer">this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29 target=_blank rel="noopener noreferrer">this</a>)</li>
+<li>Profiling is defined as process <code>aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling target=_blank rel="noopener noreferrer">this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29 target=_blank rel="noopener noreferrer">this</a>)</li>
 <li>Benchmarking <code>measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.</code>. Refer <a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29 target=_blank rel="noopener noreferrer">this</a> for more information. Also do check <a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/ target=_blank rel="noopener noreferrer">Benchmarking correctly is hard by Julia Evans</a>.</li>
 </ul>
-<p>We will look at couple of tools in this space.</p>
+<p>Typically, Profiling is supported by most of the environments (either IDEs like <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022" target=_blank rel="noopener noreferrer">Visual Studio</a> or language itself [Like <a href=https://go.dev/blog/pprof target=_blank rel="noopener noreferrer">Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
+<p>In this article, We will look at couple of tools in this space that can be easily integrated in developer&rsquo;s workflow so as to get early feedback. Lets' go.</p>
 <h2 id=profiling>Profiling</h2>
 <p><a href=https://pyroscope.io target=_blank rel="noopener noreferrer">Pyroscope</a> is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in,
 - Client - pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server.
