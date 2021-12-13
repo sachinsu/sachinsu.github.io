@@ -132,11 +132,11 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </figcaption>
 </figure>
 <ol start=2>
-<li>Set up Pyroscope</li>
-</ol>
+<li>
+<p>Setup Pyroscope</p>
 <p>Install Pyroscope Application by following instructions <a href=https://pyroscope.io/docs/agent-install-windows target=_blank rel="noopener noreferrer">here</a> for Windows. Note that, Pyroscope server component won&rsquo;t run on Windows in which case either <a href=https://docs.microsoft.com/en-us/windows/wsl/install target=_blank rel="noopener noreferrer">Windows Subsystem for Linux (WSL)</a> or <a href=https://pyroscope.io/docs/docker-guide target=_blank rel="noopener noreferrer">Docker</a> can be used. In case of Linux, instructions provided <a href=https://pyroscope.io/docs/server-install-linux target=_blank rel="noopener noreferrer">here</a> are sufficient for both client and server components.</p>
 <p>I have setup the application on Windows 10 while using WSL for Pyroscope Server.</p>
-<ol start=3>
+</li>
 <li>
 <p>Configure Pyroscope client and run the Application</p>
 <ul>
@@ -146,7 +146,6 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 <li>
 <p>Configure below environment variables (below is powershell format or you can use <code>SET ...</code> commands on command prompt),</p>
 <pre><code>  ```
-
       $env:PYROSCOPE_SPY_NAME=&quot;dotnetspy&quot;;
       $env:PYROSCOPE_APPLICATION_NAME=&quot;my.dotnet.app&quot;;
       $env:PYROSCOPE_SERVER_ADDRESS=&quot;http://localhost:4040&quot;;
@@ -164,8 +163,6 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </li>
 <li>
 <p>Run Pyroscope Server</p>
-</li>
-</ol>
 <ul>
 <li>
 <p>Start Pyroscope server from WSL Linux prompt using, <code>sudo pyroscope server</code>. The output of this command should show Port on which server is running.</p>
@@ -178,12 +175,12 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </ul>
 </li>
 </ul>
-<ol start=5>
+</li>
 <li>
 <p>Observe the flame graph in Pyroscope Web UI.</p>
 <ul>
 <li>
-<p>Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. This <a href=https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/ target=_blank rel="noopener noreferrer">article</a> has great content about flame graphs.</p>
+<p>Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. Refer <a href=https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html target=_blank rel="noopener noreferrer">here</a> and <a href=https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/ target=_blank rel="noopener noreferrer">here</a> for everything about flame graphs.</p>
 <figure><img src=/images/profiling1.png><figcaption>
 <h4>Table and flamegraph for API</h4>
 </figcaption>
