@@ -19,7 +19,7 @@ Lets look at what they mean,
 Lets look at what they mean,
  Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-12-12T01:00:00+05:30">
-<meta itemprop=wordCount content="912">
+<meta itemprop=wordCount content="914">
 <meta itemprop=keywords content="pyroscope,crank,flame graph,CPU,">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Profiling and benchmarking tools for Applications">
@@ -116,7 +116,7 @@ Lets look at what they mean,
 <li>Profiling is defined as process <code>aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling target=_blank rel="noopener noreferrer">this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29 target=_blank rel="noopener noreferrer">this</a>)</li>
 <li>Benchmarking <code>measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.</code>. Refer <a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29 target=_blank rel="noopener noreferrer">this</a> for more information. Also do check <a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/ target=_blank rel="noopener noreferrer">Benchmarking correctly is hard by Julia Evans</a>.</li>
 </ul>
-<p>Typically, Profiling is supported by most of the environments (either IDEs like <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022" target=_blank rel="noopener noreferrer">Visual Studio</a> or language itself [Like <a href=https://go.dev/blog/pprof target=_blank rel="noopener noreferrer">Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
+<p>Typically, Profiling is supported by most of the environments (either via IDEs like <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022" target=_blank rel="noopener noreferrer">Visual Studio</a> or through language itself [Like <a href=https://go.dev/blog/pprof target=_blank rel="noopener noreferrer">Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
 <p>In this article, We will look at couple of tools in this space that can be easily integrated in developer&rsquo;s workflow so as to get early feedback. Lets' go.</p>
 <h2 id=profiling>Profiling</h2>
 <p><a href=https://pyroscope.io target=_blank rel="noopener noreferrer">Pyroscope</a> is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in,
