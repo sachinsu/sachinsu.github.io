@@ -1,7 +1,7 @@
 ---
 title: "Profiling and benchmarking tools for Applications"
-date: 2021-12-10T01:00:00+05:30
-draft: true
+date: 2021-12-12T01:00:00+05:30
+draft: false
 tags: [pyroscope,crank,flame graph, CPU]
 ---
 

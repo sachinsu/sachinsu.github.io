@@ -1740,3 +1740,90 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 - Stocks
   - To earn the gigantic returns such stocks can provide, you need enormous skill, phenomenal luck and the nerves and reserves to withstand bloodcurdling losses.
 
+## 2021-dec-13 Thu
+
+- Investing#trading 
+
+    - Stop while you’re on top on your trading profits. Here’s the thing, those multi-thousand percent returns aren’t sustainable. Whether or not you know it, you took on substantial risk to make that home run. 
+    - Trading is addicting, especially if you have experienced big wins
+    - Outsized returns aren’t sustainable
+    - The time commitment needed to consistently outperform isn’t for most people
+    - The best decision you can make if you do hit is big is cashing out at the top
+    - That $$ target won’t stop moving unless you make it
+    - My life has been 10x better since I hopped out of the market.
+
+- India Discourse
+    - India's public discourse is full of  wishful thinking and masturbatory dreams which masquarading around serious analysis.
+    - Western's progress - Regulatory stability; Science above all else. 
+    - Iran - Denominational politics.  
+    - Philosophers raise questions that can not be answered, theologians who gives answers that can not be questioned.
+    - Most of the pakistan operates in informal economy.
+    - Political stability depends on economic stability
+    - Replication of industrial product requires both how (takes u to ~70%) and why (remaining 30%)
+    - Tesla's biggest source of income is from Govt. subsidies (carbon credits)
+
+- Tech#Mulesoft's API based iintegration approach, 
+    - System APIs – these usually access the core systems of record and provide a means of insulating the user from the complexity or any changes to the underlying systems. Once built, many users, can access data without any need to learn the underlying systems and can reuse these APIs in multiple projects.
+
+    - Process APIs – These APIs interact with and shape data within a single system or across systems (breaking down data silos) and are created here without a dependence on the source systems from which that data originates, as well as the target channels through which that data is delivered.
+
+    - Experience APIs – Experience APIs are the means by which data can be reconfigured so that it is most easily consumed by its intended audience, all from a common data source, rather than setting up separate point-to-point integrations for each channel. An Experience API is usually created with API-first design principles where the API is designed for the specific user experience in mind.
+
+- Investing
+    - Holding a bond to maturity reduces that risk as you get closer and closer to the maturity date
+    - HALT - H-Hungry, A-Angry,L-Lonely,T-Tired - Dont make investment decisions when in any of these states.
+    - Smart investing is essentially about managing risk 
+    - Ego,
+        - We look for supporting evidence 
+        - We congratulate ourselves for believing as we do
+        - We react violently against attacks on our world view -Dont become more rigid if someone attacks.
+        - Overconfidence 
+    - Always invert 
+    - Desire to avoid regret is loss aversion.
+    - Doing nothing is willful act of omission
+    - Most of us in day make about 35000 decisions
+    - Feynman technique - figure out what you dont know, educate yourself and teach it to a beginner
+    - Think in terms of long term rewards 
+    - Procrastinate - Speed tends to be enemy of good decision making 
+    - For a time horizon over 10 years, pick the fund with lowest fees
+
+- Food
+  
+    - Salt 
+        - All salt comes from the ocean, be it the Atlantic or a long-forgotten sea like the giant prehistoric Lake Minchin of Bolivia, home of the earth’s largest salt flat. Salt that is left behind when seawater evaporates is sea salt , whereas rock salt is mined from ancient lakes and seas, some of which now lie far underground. 
+        - Iodised salt adds metalic flavor to food. Iodine not needed if consuming dairy and seafood. 
+        - Table salt also contains anti-caking agent or dextrose to stabilize iodine which is not needed in the food.
+        - Keep two kinds of salt on hand: an inexpensive one such as bulk-bin sea salt or kosher salt for everyday cooking, and a special salt with a pleasant texture for garnishing food at the last moment. 
+        -salt affects both taste and flavor.
+        - professional cooks like to season sliced tomatoes a few minutes before serving them—so that, as salt helps the flavor molecules that are bound up within the tomato proteins, each bite will taste more intensely oftomato.
+        - primary effect salt has on food is to enhance flavor.Salt enhances sweetness while reducing bitterness in foods that are both bitter and sweet, such as bittersweet chocolate, coffee ice cream, or burnt caramels. 
+        -Though we typically turn to sugar to balance out bitter flavors in a sauce or soup, it turns out that salt masks bitterness much more effectively than sugar.
+        - Our taste buds can perceive five tastes : saltiness, sourness, bitterness, sweetness, and umami, or savoriness.
+        - Salting vegetables 15 minutes before cooking is sufficient. In case of mushrooms, it should be just before cooking 
+        - Add some salt to legumes whenever soaking them or cooking them.Legumes and grains are dried seeds—the parts of a plant that ensure survival from one season to the next. They’ve evolved tough exterior shells for protection, and require longgentle cooking in water to absorb enough water to become tender. Since a long cooking time gives salt a chance to diffuse evenly throughout, the water for boiling grains such as rice, farro, or quinoa can be salted less aggressively than the water for blanching vegetables. In preparations where all of the cooking water will be absorbed, and hence all of the salt, be particularly careful not to overseason. 
+        - Add salt later to batters and doughs for cakes, pancakes, and delicate pastries to keep them tender, but make sure to whisk these mixes thoroughly so that the salt is evenly distributed before cooking. 
+        - Properly seasoned cooking water encourages food to retain its nutrients. Imagine that you’re cooking green beans in a pot of water. If the water is unseasoned or only lightly seasoned, then its concentration of salt—a mineral—will be lower than the innate mineral concentration in the green beans. In an attempt to establish equilibrium between the internal environment of the green beans and the external environment of the cooking water, the beans will relinquish some of their minerals and natural sugars during the cooking process. This leads to bland, gray, less-nutritious green beans. 
+        - Just make sure to give the salt a chance to dissolve, and taste the water to make sure it’s highly seasoned before you add any food. 
+        - Salt pasta water, potato cooking water, and pots of grains and legumes as early as possible to allow salt to dissolve and diffuse evenly into the food.
+        -  Salads made with boiled vegetables—be it potatoes, asparagus, cauliflower, green beans, or anything else—are most delicious when the vegetables are seasoned properly while they’re cooking.
+        - General ratios -  1 percent salt by weight for meats, vegetables, and grains, and 2 percent salinity for water for blanching vegetables and pasta.
+        - Spices, like coffee, always taste better when ground just before use. Flavor is locked within them in the form of aromatic oils, which are released upon grinding, and again upon heating.
+        -  Usually just a pinch or two of salt whisked into a dough, batter, or base is enough to elevate flavors in pie and cookie doughs, cake batters, tart fillings, and custards alike.
+
+    - Oversalting 
+        - Dilute - Add water or stock
+        - Halve 
+        - Balance -  Doctor up a spoonful of the dish with a few drops of lemon juice or vinegar, a little olive oil, or some of  If it works, apply to whole dish 
+        - Most important element of good cooking is salt. Fat is second element of good cooking 
+    -  Fat
+        - a few drops of toasted sesame oil will deepen the flavors in a bowl of rice, a dollop of sour cream will offer silky richness to a cup of soup,
+        - It enhances flavor -  When baking, add vanilla extract and other flavorings directly into the butter or egg yolks for better results.
+        - Olive oil is produced seasonally. Look for a production date, typically in November, on the label when you purchase a bottle to ensure you are buying a current pressing. It will go rancid about twelve to fourteen months after it’s been pressed.
+        - olive oils marked agrumato are made using a traditional technique of milling whole citrus fruit with the olives at the time of the first press.
+        - Except for butter and garlic (to be heated gently), In all other cooking, preheat the pan and then add the fat, letting it too heat up before adding any other ingredients. The pan should be hot enough so that oil immediately ripples and shimmers when added.
+        - Cooking in fat that’s insufficiently hot will cause food to absorb the oil, resulting, for example, in unappetizingly beige, greasy which is cooked through but not golden.
+
+    - Gluten and dough
+        - Two proteins in wheat—glutenin and gliadin—comprise gluten . When you combine wheat flour and liquid to make dough or batter, these proteins link up with one another into long chains. As dough is kneaded or batter is mixed, the chains develop into strong, extensive webs or the gluten network. As gluten develops, dough becomes chewier. This is why bread bakers use flours with relatively high protein content. Salt also preserves the strength of the gluten
+        network.
+        - pastry chefs generally seek tender, flaky, and moist textures, so they do everything they can to limit or control gluten development.Sugar and acids such as buttermilk or yogurt also discourage gluten from developing, so adding them early on will tenderize pastries.
