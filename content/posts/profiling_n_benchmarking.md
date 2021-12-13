@@ -14,7 +14,7 @@ Lets look at what they mean,
  - Profiling is defined as process `aimed at  understanding the behaviour of a program. A profile result might be a table of time taken per function,` as per [this](https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling) and [this](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))
  - Benchmarking  `measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.`. Refer [this](https://en.wikipedia.org/wiki/Benchmark_(computing)) for more information. Also do check [Benchmarking correctly is hard by Julia Evans](https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/).
 
-Typically, Profiling is supported by most of the environments (either IDEs like [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022) or language itself [Like [Go](https://go.dev/blog/pprof)] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure. 
+Typically, Profiling is supported by most of the environments (either via IDEs like [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022) or through language itself [Like [Go](https://go.dev/blog/pprof)] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure. 
 
 In this article, We will look at couple of tools in this space that can be easily integrated in developer's workflow so as to get early feedback. Lets' go. 
 
