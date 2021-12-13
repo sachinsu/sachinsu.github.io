@@ -62,7 +62,7 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 
 1. Observe the flame graph in Pyroscope Web UI.
 
-    - Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code.
+    - Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. This [article](https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/) has great content about flame graphs.
 
         {{< figure src="/images/profiling1.png" title="Table and flamegraph for API" >}}
 
@@ -71,15 +71,16 @@ I have setup the application on Windows 10 while using WSL for Pyroscope Server.
 Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box. 
 
 ## Benchmarking 
+
 Crank is tool used by Microsoft internally to benchmark applications. It is released as Nuget package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
 
-1. Write code, intended to be benchmarked 
+1. Write code, intended to be benchmarked. In this case, its very simple one as below, 
 
         {{< figure src="/images/crank-prof4.png" title="C# Code to be benchmarked" >}}
 
 2. Setup Crank 
 
-    Follow the instructions provided [here](https://github.com/dotnet/crank/blob/main/docs/getting_started.md) to setup crank. As part of application,we will also need to create a Yaml configuration file which contains details like *Job* to be used. Crank has built-in jobs which are essentially wrappers around CLI load testing tools like [bombardier](https://github.com/codesenberg/bombardier) and [wrk](https://github.com/wg/wrk). Since i am using Windows to run crank, we will go with Bombardier which is cross platform. Below is how a very simple configuration looks like, 
+    Follow the instructions provided [here](https://github.com/dotnet/crank/blob/main/docs/getting_started.md) to setup crank. Crank expects Configuration in YAML format which contains details like *Job* to be used. Crank has built-in jobs which are essentially wrappers around CLI load testing tools like [bombardier](https://github.com/codesenberg/bombardier) and [wrk](https://github.com/wg/wrk) and so on. Since i am using Windows to run crank, we will go with Bombardier which is cross platform. Below is how a basic configuration looks like, 
 
     {{< figure src="/images/crank-prof3.png" title="Crank YAML Configuration" >}}
 
