@@ -33,6 +33,7 @@ draft: false
 
 - [OSS Load and Functional testing tool](https://artillery.io/)
 - [Puppeteer - Testing using Headless Chrome Nodejs API](https://pptr.dev)
+- [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
 
 ## Libraries and Tools
 
@@ -41,7 +42,6 @@ draft: false
 - [One line CSS Layouts by Google](https://1linelayouts.glitch.me/)
 - [Interactive CSS Grid generator](https://grid.layoutit.com/)
 - [Msw - Mock Service Worker for REST & GraphQL API Mocking](https://mswjs.io/)
-- [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
 - [Modern JavaScript Tutorial](https://javascript.info/)
 - [Web Vitals- Essential metrics for a healthy site.](https://web.dev/vitals)
 - [Clerk - User Management as Service](https://clerk.dev)

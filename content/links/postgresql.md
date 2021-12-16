@@ -91,6 +91,7 @@ draft: false
 - [Apache Age - graph database functionality for PostgreSQL](https://age.apache.org/)
 - [Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.](https://github.com/knadh/sql-jobber)
 - [Supabase -Listen to PG changes in real time without using Listen/Notify](https://github.com/supabase/realtime)
+- [Use cases for scaling out PostgreSQL - Citus](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/when-to-use-hyperscale-citus-to-scale-out-postgres/ba-p/1958269)
 
 ## Migration to PostgreSQL
 
