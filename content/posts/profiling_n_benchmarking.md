@@ -11,7 +11,7 @@ We develop a piece of software with aim to fulfil specific business requirements
 
 Lets look at what they mean, 
 
- - Profiling is defined as process `aimed at  understanding the behaviour of a program. A profile result might be a table of time taken per function,` as per [this](https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling) and [this](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))
+ - Profiling is defined as process `aimed at  understanding the behavior of a program. A profile result might be a table of time taken per function,` as per [this](https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling) and [this](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))
  - Benchmarking  `measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.`. Refer [this](https://en.wikipedia.org/wiki/Benchmark_(computing)) for more information. Also do check [Benchmarking correctly is hard by Julia Evans](https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/).
 
 Typically, Profiling is supported by most of the environments (either via IDEs like [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022) or through language itself [Like [Go](https://go.dev/blog/pprof)] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure. 
@@ -21,7 +21,7 @@ In this article, We will look at couple of tools in this space that can be easil
 ## Profiling 
 
 [Pyroscope](https://pyroscope.io) is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in, 
-    - Client - pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server. 
+    - Client - Pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server. 
     - Server - Runs as a separate process (on Linux [Works in WSL if using Windows] or Mac), collects the data from client processes and renders them as table and/or flame graph via Web UI.A flamegraph is a way to visualize resources used by a program, like CPU usage or memory allocations, and see which parts of your code were responsible. 
 
 Lets see how a function in C# can be instrumented using PyroScope.
@@ -68,11 +68,11 @@ Lets have ASP.NET Core 5.0 based Web API as below,
 
         {{< figure src="/images/profiling2.png" title="Table and flamegraph for API" >}}
 
-Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box. 
+Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development environments which do not provide profiling out of the box. 
 
 ## Benchmarking 
 
-Crank is tool used by Microsoft internally to benchmark applications. It is released as Nuget package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
+Crank is tool used by Microsoft internally to benchmark applications. It is released as [Nuget](https://nuget.org) package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.
 
 1. Write code, intended to be benchmarked. In this case, its very simple one as below, 
 
@@ -110,7 +110,7 @@ Overall,  i found Crank helpful for following,
 * [Pyroscope](https://pyroscope.io)
 * [Crank](https://github.com/dotnet/crank)
 
-Happy Profilig and Benchmarking !!
+Happy Profiling and Benchmarking !!
 
 ---
 

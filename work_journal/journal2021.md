@@ -1878,3 +1878,12 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - There were 3 muslim gun powder empires ottomans, safavids and mughals. all of them were turkic
     - Turan is modern day central asia and has very heavy iranic influence
     - Manufacturing requires to know how and why? 
+
+
+- Tech#Generics 
+    - What is monomorphizing w.r.t. Generics?  is a compile-time process where polymorphic functions are replaced by many monomorphic functions for each unique instantiation rather than using dynamic dispatch.
+
+## 2021-dec-17 Fri
+
+- [What is Web3?](https://www.usenix.org/publications/loginonline/web3-fraud)
+

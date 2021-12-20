@@ -47,6 +47,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Guidelines for Command line interface](https://clig.dev/)
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
+- [Google's API Design Guidelines](https://google.aip.dev/100)
 - [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
 
