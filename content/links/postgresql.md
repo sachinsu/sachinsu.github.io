@@ -50,7 +50,7 @@ draft: false
 - [A Performance Dashboard](https://github.com/ankane/pghero)
 - [Simple script to analyse your PostgreSQL database configuration, and give tuning advice](https://postgresqltuner.pl)
 - [Tuning PostgreSQL for High Write Throughput](https://www.slideshare.net/GrantMcAlister/tuning-postgresql-for-high-write-throughput)
-- [Postgres is a great pub/sub & job server](https://layerci.com/blog/postgres-is-the-answer/)
+- [Postgres is a great pub/sub & job server](https://webapp.io/blog/postgres-is-the-answer/)
 - [PostgreSQL - Optimize Configuration](https://postgresqlco.nf/en/doc/param/9275132/real-life-example-when-to-use-outer-cross-apply-in-sql/9275865#9275865)
 - [Be careful with CTE in PostgreSQL](https://hakibenita.com/be-careful-with-cte-in-postgre-sql)
 - [Per core Connection limit guidance for EDB](https://richyen.com/postgres/2021/09/03/less-is-more-max-connections.html)

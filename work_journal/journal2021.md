@@ -1887,3 +1887,83 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
 - [What is Web3?](https://www.usenix.org/publications/loginonline/web3-fraud)
 
+## 2021-dec-20 Mon
+
+- proverbs
+     - “A lie travels around the globe while the truth is putting on its shoes."
+    - "Group never admits failure rather it pretends that "it was oppressed" and if does admit it then most likely it falls apart"
+
+- 11 Rules to Critical thinking, 
+    - All beliefs in whatever realm are theories at some level. (Stephen Schneider)
+    - Do not condemn the judgment of another because it differs from your own. You may both be wrong. (Dandemis)
+    - Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider. (Francis Bacon)
+    - Never fall in love with your hypothesis. (Peter Medawar)
+    - It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories instead of theories to suit facts. (Arthur Conan Doyle)
+    - A theory should not attempt to explain all the facts, because some of the facts are wrong. (Francis Crick)
+    - The thing that doesn’t fit is the thing that is most interesting. (Richard Feynman)
+    - To kill an error is as good a service as, and sometimes even better than, the establishing of a new truth or fact. (Charles Darwin)
+    - It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so. (Mark Twain)
+    - Ignorance is preferable to error; and he is less remote from the truth who believes nothing, than he who believes what is wrong. (Thomas Jefferson)
+    - All truth passes through three stages. First, it is ridiculed, second, it is violently opposed, and third, it is accepted as self-evident. (Arthur Schopenhauer)
+    - more self-employed people would make the economy more resilient to future shocks.
+    - it is a mortal sin to confuse the concept of consensus with science, for consensus is statement of politics, and speaks nothing of truth
+
+- SQLite 
+    - Good for small to moderate workloads, like use cases involving 100s of transactions/sec if not 1000s
+    - SQLite has single writer but can handle multiple read requests 
+    - Scales vertically with CPU & RAM
+    - Journal mode configures how SQLITE writes transactions. Always recommended to set it to "Write ahead log" (WAL) using `PRAGMA journal_mode=WAL`
+    - Busy timeouts - sets how long write transactions will wait to start (Rule of thumb is to set it to 5 seconds lile `PRAGMA busy_timeout=5000`)
+    - Foreign keys are not enforced by default...so set it on using `PRAGMA foreign_keys=ON`
+    - supports only 5 data types, 
+        - INTEGER - integral
+        - REAL - Floating point
+        - TEXT - readable text
+        - BLOG - Binary 
+        - NULL
+        - It does not have Timestamp data type and typically, its stored in `ISO 8601` format which is `2000-01-01T00:00:00Z` but sqlite has built-in functions to convert between formats. Decimals also not available.
+    - Testing is easier because of support for in-memory database
+    - Taiscale is implementing SQLite library for GO which scales well with CPU Cores (github.com/tailscale/sqlite)
+    - Litestream - Data durability for SQLIte, it provides,
+        - runs as a separate process
+        - small data loss window, cheap (it reads from WAL and snapshots data, compresses it and pushes to S3)
+        - complex than regular backup
+        - streams backup to S3
+        - automatically recovers in event of failure 
+    - Clustered SQLite - complex to setup. 
+        - rqlite, dqlite
+        - Primary/Replica - litereplica (GPL License)
+        - blockchain based - Bedrock by expensify
+    - When to avoid SQlite,
+        - long-running write transactions 
+        - running ephemeral/serverless environment
+
+- Fintech#Air miles
+    - Carriers periodically sell large bundles of airline miles to credit card issuers for millions, or even billions, of dollars. In many circumstances, this can be the entire difference between earning a handy profit or just breaking even with their credit card efforts.Banks can then use the miles they purchase to attract new credit card applicants with sign-up bonuses. They also benefit every time every time cardholders make purchases (transactions on which banks can charge processing fees). The relationship is symbiotic and beneficial to both airlines and banks. In some cases, airlines real-world airline operation is worth less than it's loyalty program
+
+- Psychology#What do you really want to do? (https://psyche.co/guides/how-to-know-what-you-really-want-and-be-free-from-mimetic-desire_
+    - Desires are fundamentally different from needs. Unlike physiological needs, such as hunger and thirst, a desire is an intellectual appetite for things that you perceive to be good.
+        2. Desire is a social process – it’s mimetic. As the social theorist René Girard observed, our desires don’t come from within; rather, we mimic what other people want.
+        3. Identify the people or ‘models’ influencing what you want. To better control your
+        desires, the first step is to identify the people influencing you.
+        4. Categorise these models. Working out who is influencing you from within your
+        world, and who is influencing you from the outside, will help you gain greater agency
+        over your desires.
+        5. Beware of becoming obsessively focused on what your neighbours have or want.
+        Mimetic desire often leads people into unnecessary competition and rivalry with one
+        another.
+        6. Map out the systems of desire in your life. It’s not just individuals who influence
+        us, but entire social systems – by identifying them, you can escape their pull.
+        7. Take ownership of your desires. Just because you are not the sole author of your
+        desires, that doesn’t mean you can’t begin to take ownership of them.
+        8. Live an anti-mimetic life. Free yourself from the herd mentality by grounding your
+        life in something deeper.
+
+    - Social Media - Many people you encounter there are external models of desire in the sense that you’ll probably never meet them and they might not even ‘follow’ you back. At the same time, everyone at least feels accessible to everyone else. You never know when something you Tweet or post is going to get noticed by someone. This is part of what makes social media so seductive: it straddles the worlds of internal and external mediation of desire. (When you’re on social media, ask yourself: Are these people even real? Do they really want the things they model a desire for, or are we all engaged in a game of signalling?)
+
+
+- Three Cs,
+    - Calm 
+    - Context - Whats the context?
+    - Curiosity - Always treating each  new piece of new information  as opportunity to ask question to find out about the world rather than weaponrt for defending our views 
+
