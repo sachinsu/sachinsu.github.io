@@ -9,7 +9,7 @@
 <meta property="og:title" content="Profiling and benchmarking tools for Applications">
 <meta property="og:description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
 Lets look at what they mean,
- Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
+ Profiling is defined as process aimed at understanding the behavior of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://sachinsu.github.io/posts/profiling_n_benchmarking/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-12-12T01:00:00+05:30">
@@ -17,7 +17,7 @@ Lets look at what they mean,
 <meta itemprop=name content="Profiling and benchmarking tools for Applications">
 <meta itemprop=description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
 Lets look at what they mean,
- Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
+ Profiling is defined as process aimed at understanding the behavior of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation."><meta itemprop=datePublished content="2021-12-12T01:00:00+05:30">
 <meta itemprop=dateModified content="2021-12-12T01:00:00+05:30">
 <meta itemprop=wordCount content="928">
 <meta itemprop=keywords content="pyroscope,crank,flame graph,CPU,">
@@ -25,7 +25,7 @@ Lets look at what they mean,
 <meta name=twitter:title content="Profiling and benchmarking tools for Applications">
 <meta name=twitter:description content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.
 Lets look at what they mean,
- Profiling is defined as process aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
+ Profiling is defined as process aimed at understanding the behavior of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation.">
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link rel=dns-prefetch href=//fonts.googleapis.com>
 <link rel=dns-prefetch href=//fonts.gstatic.com>
@@ -113,14 +113,14 @@ Lets look at what they mean,
 <p>We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard.</p>
 <p>Lets look at what they mean,</p>
 <ul>
-<li>Profiling is defined as process <code>aimed at understanding the behaviour of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling target=_blank rel="noopener noreferrer">this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29 target=_blank rel="noopener noreferrer">this</a>)</li>
+<li>Profiling is defined as process <code>aimed at understanding the behavior of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling target=_blank rel="noopener noreferrer">this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29 target=_blank rel="noopener noreferrer">this</a>)</li>
 <li>Benchmarking <code>measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.</code>. Refer <a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29 target=_blank rel="noopener noreferrer">this</a> for more information. Also do check <a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/ target=_blank rel="noopener noreferrer">Benchmarking correctly is hard by Julia Evans</a>.</li>
 </ul>
 <p>Typically, Profiling is supported by most of the environments (either via IDEs like <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022" target=_blank rel="noopener noreferrer">Visual Studio</a> or through language itself [Like <a href=https://go.dev/blog/pprof target=_blank rel="noopener noreferrer">Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
 <p>In this article, We will look at couple of tools in this space that can be easily integrated in developer&rsquo;s workflow so as to get early feedback. Lets' go.</p>
 <h2 id=profiling>Profiling</h2>
 <p><a href=https://pyroscope.io target=_blank rel="noopener noreferrer">Pyroscope</a> is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in,
-- Client - pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server.
+- Client - Pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server.
 - Server - Runs as a separate process (on Linux [Works in WSL if using Windows] or Mac), collects the data from client processes and renders them as table and/or flame graph via Web UI.A flamegraph is a way to visualize resources used by a program, like CPU usage or memory allocations, and see which parts of your code were responsible.</p>
 <p>Lets see how a function in C# can be instrumented using PyroScope.</p>
 <ol>
@@ -193,9 +193,9 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 </ul>
 </li>
 </ol>
-<p>Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development enviroments which do not provide profiling out of the box.</p>
+<p>Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development environments which do not provide profiling out of the box.</p>
 <h2 id=benchmarking>Benchmarking</h2>
-<p>Crank is tool used by Microsoft internally to benchmark applications. It is released as Nuget package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.</p>
+<p>Crank is tool used by Microsoft internally to benchmark applications. It is released as <a href=https://nuget.org target=_blank rel="noopener noreferrer">Nuget</a> package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.</p>
 <ol>
 <li>
 <p>Write code, intended to be benchmarked. In this case, its very simple one as below,</p>
@@ -243,7 +243,7 @@ Lets have ASP.NET Core 5.0 based Web API as below,</li>
 <li><a href=https://pyroscope.io target=_blank rel="noopener noreferrer">Pyroscope</a></li>
 <li><a href=https://github.com/dotnet/crank target=_blank rel="noopener noreferrer">Crank</a></li>
 </ul>
-<p>Happy Profilig and Benchmarking !!</p>
+<p>Happy Profiling and Benchmarking !!</p>
 <hr>
 <script src=https://utteranc.es/client.js repo=sachinsu/sachinsu.github.io issue-term=title label=blogcomment theme=github-light crossorigin=anonymous async></script>
 </div>
