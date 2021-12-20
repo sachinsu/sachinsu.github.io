@@ -7,7 +7,7 @@ tags: [pyroscope,crank,flame graph, CPU]
 
 ## Introduction
 
-We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput etc. In addition to testing, Profiling and benchmarking are approaches that developer has in his/her arsenal in this regard. 
+We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it's objectives. 
 
 Lets look at what they mean, 
 
