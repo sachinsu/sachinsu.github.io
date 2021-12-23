@@ -37,6 +37,7 @@ Section covering Business, project/programming perspectives
 - [Ego is the Enemy](https://fs.blog/2016/06/ego-is-the-enemy-genghis-khan/)
 - [How to remember what you read?](https://fs.blog/2021/08/remember-books/)
 - [First Principles](https://fs.blog/first-principles/)
+- [You are not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
 - [42 Lessons Learned in building production database](https://maheshba.bitbucket.io/blog/2021/10/19/42Things.html)
 
 ## Fintech 

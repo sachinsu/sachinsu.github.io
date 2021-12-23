@@ -80,6 +80,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Tools, Libraries
 
+- [Digital services offerings from within European union](https://european-alternatives.eu/)
 - [Six things I wish we had known about scaling](https://martin.kleppmann.com/2014/03/26/six-things-about-scaling.html)
 - [Awesome Design tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
 - [Regex Repository](https://ihateregex.io/)
@@ -181,6 +182,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Database Reliability Engineering(ebook)](https://g.co/kgs/c9aMXr)
 - [Distributed tracing using Tempo, OpenTelemetry and Grafana Cloud](https://grafana.com/blog/2021/09/23/intro-to-distributed-tracing-with-tempo-opentelemetry-and-grafana-cloud/)
 - [Skywalking - Open source Application Performance Monitoring tool](https://github.com/apache/skywalking)
+- [HTTP Toolkit - Freemium HTTP Interceptor toolkit](https://httptoolkit.tech/)
 
 ## Distributed messaging, Streams
 
