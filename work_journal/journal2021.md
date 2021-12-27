@@ -1994,3 +1994,59 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
     - In short, for a currency to function well, you need it to be not too scarce, not too abundant; be widely accepted; and to have predictable exchange value. This facilitates commerce. The ideal situation is fairly close to what central banks in developed markets have achieved in recent decades - largely stable prices with a very modest pace of deprecation of perhaps 1-2% a year. This depreciation discourages people from hording cash, and yet the pace of depreciation is very modest such that it does not impair the predictability of cash's exchange value. It is ideal/optimal for encouraging commerce and exchange.
 
+## 2021-dec-27 Mon
+
+- Tech
+    - Learnings from running business 
+        - Build time assets - tools and processes that will save your time. 
+        - Code is about 10% of the business. - 90% of the results of your business, and somewhere around 90% of the effort, are caused by non-coding activities: dealing with pre-sales inquiries, marketing, SEO, marketing, customer support, marketing, website copywriting, marketing, etc.
+        - Relentlessly cut scope - Every line of code written is a time debt.
+        - "Cutting the feature set to the bones" is a way to go
+        - "Software" being complete is a 100% marketing decision. 
+        - Talking to people to understand their problem areas (professional) is great way to gather ideas 
+            - Assess if the problem can be amenably resolved by software 
+                - Check how much the people are paying currently.
+            - People don’t buy software because of what it does, they buy it for the positive change it will make in the life.
+        - Prior to committing to building anything, check for marketing needs and if it is something that you can get done. 
+        - Talk to your customers before building anything (People love talking about their problems to anyone who will listen to them).
+        - Cultivate relations with effective freelancers.
+        - Plan for processes
+        - Document everything
+    - On software as career
+        - Economics 101: the price for anything (including you) is a function of the supply of it and demand for it. So 90% of programming jobs are in creating line of business software. 
+        - Engineers are hired to create business value, not to program things. 
+        - You really want to be attached to profit center (part of the organization that bring in revenue) (Nobody outsources profit center)
+        - Describe yourself by what you have accomplished for previously employers vis-a-vis increasing revenues or reducing costs
+        - You are not defined by your chose tech stack - Talented engineers are rare
+        - Co-workers and bosses are not usually friends 
+        - You radically overestimate the average skill of the competition because of the crowd you hand around with. 
+        - Most jobs are never available publically. 
+        - Networking just means meeting people who at some point can do things for you (vice versa) and by making favourable impression on them.
+        - People who are skilled in negotiation make more than those who are not.
+            - Only get into this after clearing all of the initiate steps and you get in principle agreement. 
+            - Remember that you are selling solution to business need and not programming skills
+            - Negotiate aggressively with appropriate confidence. 
+            - Always have a counter offer
+        - Modesty is not a career enhancing trait 
+        - You can't improve what you can't measure 
+        - Productivity techniques 
+            - Outsource - Anything where your personal presence does not add value to.
+            - Automate your processes 
+            - Eliminate unproductive use of time 
+    - On building highly reliable websites 
+        - Anticipate failures ahead of time 
+        - Minimize the incidence of failure
+            - Focus on moving parts..Hard drives, 
+            - System is most vulnerable where is sees dynamism, complexity and change 
+                - Databases - most databases are made/configured around the assumption that it is better to fail loudly and completely rather than fudge the ACID guarantees silently.  
+            - Decoupling - e.g. never call external http API  as part of your own HTTP Request/response. instead, do it asynchronously i.e. via queues etc.
+            - Automated recovery - Automated failure detection and recovery
+            - Minimize operator errors 
+                - Strive for automation for things like server setup, server upgrades, upgrading code on servers, any maintenance tasks         
+        - Be notified of failures ahead of time 
+            - Use monitoring services (either external or internal) - Creating an internal status page which automatically checks all the things you think are crucial, risky, and tractable to resolution if you were to know about them. 
+        - Quickly recover from failure
+            - Timely notification provides ways to recover
+        - Learn from failures to prevent recurrence
+            -  Five Whys says that no failure ever has one cause. There might be a single surface-level immediate cause, but the failure is also a symptom of multiple process failures because you had things in place to prevent that failure from happening and they did not trigger or were not effective. 
+            - 
