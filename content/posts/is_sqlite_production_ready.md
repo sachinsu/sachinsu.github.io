@@ -9,6 +9,8 @@ tags: [sqlite, go, litestream, rqlite, bombardier]
 
 https://www.youtube.com/watch?v=XcAYkriuQ1o
 
+
+https://www.sqlite.org/limits.html
 Lets look at what they mean, 
 
  - Profiling is defined as process `aimed at  understanding the behavior of a program. A profile result might be a table of time taken per function,` as per [this](https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling) and [this](https://en.wikipedia.org/wiki/Profiling_(computer_programming)))

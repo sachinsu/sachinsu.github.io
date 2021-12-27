@@ -80,6 +80,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Tools, Libraries
 
+- [Miller - awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON](https://github.com/johnkerl/miller/)
 - [Digital services offerings from within European union](https://european-alternatives.eu/)
 - [Six things I wish we had known about scaling](https://martin.kleppmann.com/2014/03/26/six-things-about-scaling.html)
 - [Awesome Design tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
@@ -101,6 +102,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)
 - [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
 - [Open source Project Management Software](https://github.com/opf/openproject)
+
 
 ## Open source Pipelining, workflows 
 

@@ -8,6 +8,8 @@ draft: false
 
 Section covering Business, project/programming perspectives
 
+- [Don't call yourself a programmer](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
+- [Programmers: Before you turn 40, get a plan B](https://improvingsoftware.com/2009/05/19/programmers-before-you-turn-40-get-a-plan-b/)
 - [The New Business of AI (and How It’s Different From Traditional Software)](https://a16z.com/2020/02/16/the-new-business-of-ai-and-how-its-different-from-traditional-software/)
 - [Momentum vs Urgency in Software Project Management](http://testobsessed.com/2020/02/momentum-urgency/)
 - [Data Science: Reality Doesn't Meet Expectations](https://dfrieds.com/articles/data-science-reality-vs-expectations.html)
