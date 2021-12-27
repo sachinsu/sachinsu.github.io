@@ -2022,6 +2022,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - You radically overestimate the average skill of the competition because of the crowd you hand around with. 
         - Most jobs are never available publically. 
         - Networking just means meeting people who at some point can do things for you (vice versa) and by making favourable impression on them.
+        - People routinely favor people who they think are like them over people they think are not like them.
         - People who are skilled in negotiation make more than those who are not.
             - Only get into this after clearing all of the initiate steps and you get in principle agreement. 
             - Remember that you are selling solution to business need and not programming skills
@@ -2049,4 +2050,27 @@ Thus, fitness functions for these characteristics must be continuous, typically 
             - Timely notification provides ways to recover
         - Learn from failures to prevent recurrence
             -  Five Whys says that no failure ever has one cause. There might be a single surface-level immediate cause, but the failure is also a symptom of multiple process failures because you had things in place to prevent that failure from happening and they did not trigger or were not effective. 
-            - 
+
+    - Finance#ETFs, 
+        - AMCs can not be buyer or seller
+        - Market maker buys units in bulk ("Creation units") and sells to buyers in  market. They typically make money in spread.
+
+    - How does the 10-minute delivery work? - All the e-grocery start-ups have picked up a business model called Dark fulfillment centers or Dark Stores. The dark stores are just like a retail warehouse, where you store your products & process the orders. Think of it like cloud kitchens. They are not open to the public. The dark store location largely depends on buying frequency and traffic.
+
+
+- Society#Government and underground
+    - There is an ideal level of crime in a society and it is not zero. Competent governance requires making room for a criminal underground. The competent ruler can leverage it to cement his hold on power or to take power against a flailing state Additionally, the underground is a great place for rising political elites to learn the more fundamental realities of power. 
+
+    - State uses underground or rogue elements to advance its goals and score tactical points when the official organs are paralyzed.
+    - The official French state apparatus was threatened by adversaries abroad, hostile elements at home, and rogue actors within. Yet, it managed to use the underworld and men from the “lower” sections of society to achieve goals it could not accomplish by its official “upper” organs.
+
+- Economics
+    - Demand curve - Its plot as Price (Y-axis) againt Quantity (X-axis). Typically, there is greater demand at low price and vice-versa. Along with supply curve, market forces towards equilibrium (where demand and supply curve) intersect.
+    - Consumer Surplus - difference between max. price a consumer is willing to pay for a given quantity and market price.
+    - Supply side - Increase in cost, reduces the supply (and vice-versa).
+
+- Datawarehouse#Data Modelling Approaches, 
+    - 3NF: 3NF, which stands for “third normal form,”  is an architectural standard designed to reduce the duplication of data and ensure referential integrity of the database.
+    - Star schema: The simplest and most widely used architecture to develop data warehouses and dimensional data marts, the star schema consists of one or more fact tables referencing any number of dimension tables.
+    - Data Vault (DV): Developed specifically to address agility, flexibility, and scalability issues found in other approaches, DV modeling was created as a granular, non-volatile, auditable, easily extensible, historical repository of enterprise data. It is highly normalized and combines elements of 3NF and star models.
+
