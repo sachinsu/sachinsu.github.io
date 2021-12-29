@@ -37,6 +37,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [htmx-access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
 - [React based Sci-fi style UI Library with Animation and Sound](https://arwes.dev/)
 - [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)
 - [One line CSS Layouts by Google](https://1linelayouts.glitch.me/)

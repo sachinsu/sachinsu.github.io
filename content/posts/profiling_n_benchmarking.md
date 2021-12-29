@@ -109,6 +109,7 @@ Overall,  i found Crank helpful for following,
 
 * [Pyroscope](https://pyroscope.io)
 * [Crank](https://github.com/dotnet/crank)
+* [Performance Anti-patterns](https://queue.acm.org/detail.cfm?id=1117403)
 
 Happy Profiling and Benchmarking !!
 

@@ -213,6 +213,11 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [A half-hour to learn Rust](https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/)
 - [Tour of Rust](https://tourofrust.com/)
 
+
+## Email Server
+
+- [Setup Email server using Docker mailserver](https://andycallaghan.com/posts/deploy-a-gmail-like-email-server-in-30-minutes/)
+
 ## Nerdy Videos
 
 - [Contalks](https://www.reddit.com/r/ConTalks/)

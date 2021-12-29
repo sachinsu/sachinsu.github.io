@@ -2074,3 +2074,67 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - Star schema: The simplest and most widely used architecture to develop data warehouses and dimensional data marts, the star schema consists of one or more fact tables referencing any number of dimension tables.
     - Data Vault (DV): Developed specifically to address agility, flexibility, and scalability issues found in other approaches, DV modeling was created as a granular, non-volatile, auditable, easily extensible, historical repository of enterprise data. It is highly normalized and combines elements of 3NF and star models.
 
+## 2021-dec-29 Wed
+
+- Tech
+    - Important aspects for fault tolerant HTTP Clients 
+        - Retries -  retries only some kinds of failures, like connection errors and HTTP 500s, and doesn’t retry on errors that are likely non-transient like HTTP 400s.
+        - Timeouts  - Adjust the timeouts as per Application's Latency, throughput requirements
+        - Backoffs - Go for exponential back offs. 
+
+    - Cloud migration tips
+        - Decouple Application from knowledge of deployment environment. Consider using Service discovery tools like Consul.
+        - For asynchronous communication between services, consider messaging services. Think [NSQ](https://nsq.io) or Kafka. 
+            - How NSQ Works - https://segment.com/blog/scaling-nsq/
+            - Typically, NSQ is good fit for distributed messaging requirement if Order is not important.
+        - Automate provisioning and deployment 
+        - For capacity planning, start with some defensible comprmises like, 
+        - 100 requests per second per CPU (Run Microbenchmark if you will)
+        - Do Load testing
+        - As a rule of thumb, if adding capacity is a week-long project for you, you probably want to buy 6~12 months down your forecast growth curve. If it is a day-long project, shorten to a month out. If you can do it in minutes, then you can probably purchase a week at a time. It doesn’t make much sense to do changes more frequently than weekly on a manual basis.
+
+    - CENTS is an acronym for the five aspects on which any idea can be vetted for viability as a business.
+        - Control - Do you control as many elements of the business as possible, or would something like a price or policy change with a vendor mess with your business?
+        - Entry - How hard is entering this market? Can anyone do it in 10 minutes, or would they need a lot of time, money, and other resources?
+        - Need - Does anyone actually need this thing you are thinking about?
+        - Time - Will you be converting time into money, or can you decouple the two and also earn while you’re asleep?
+        - Scale - Can you see this scale, are there pivots that would work, …
+
+    - Mobile - Native or non-native tech stack
+        - Non-native if framework, tailor made for your use case, is available. (e.g. Unity for AR App)
+            - Apps built using non-native frameworks are generally slower or glitchier, and tend to have other tells like awkward navigation and not supporting OS gestures.
+        - If you plan to access OS-level features like the camera, OS widgets, or Apple or Google Pay—you’re likely better off building native apps.
+        - Github forum for native development, https://github.com/MobileNativeFoundation/discussions/discussions
+
+    - Mobile testing 
+        - Unit testing 
+            - UI Tests - In a UI test, the app is spun up on a simulator or a device, which can then be tested and validated via UI automation. 
+                - Android - Espresso , UI Automator
+                - IOS - Capital one robot pattern, Page object pattern 
+            - Mocking 
+                - Android - OkHTTP's MockWebServer
+                - IOS - Mocker
+            - Snapshot testing - Snapshot tests compare a screen’s layout or a UI element with a reference image of the expected result
+                - IOS - SwiftSnapshotTesting, iOSSnapshotTestCase
+                - Android - Screenshot Tests for Android, Shot, KotlinSnapshot, or Testify 
+- Finance 
+    - In general the way corporate bankruptcy works in the U.S. is not that the company liquidates, sells all its stuff, and splits the cash among the creditors. In general the way it works is that the company continues as a going concern to maximize its value, but now the creditors own it.
+
+- History 
+    - Europeans, in order to circumvent ottomons and mamluks (who were controlling the trade via silver route with Asia),set about expeditions
+    - Discovery of Silver in America by Europeans made them lucrative buyers for Asians.
+    - Europeans had advantage in naval battles owing to bigger ships with guns.
+    - For Europeans, there were incentives to move towards centralized administration owing to expensive way for local wardlords to maintain their dominance (due to invent of artillery etc. and hence greater efforts & costs to secure fortresses)
+    - This centralized administration paved way for institutionalization and knowledge harvestation. 
+    - Vijaynagar empire helped portuguese acquire Goa ...as a counter to Bijapur sultanate. Founders of Vijaynar empire had converted to islam when captured by allaudin khilji post which they travelled back to deccan and recoverted.
+    - Zodiac signs were introduced to india by Greeks
+    - Indian astrology was developed based on greek astrology
+    - Overall europeans prevailed over india because,
+        - Disciplined Military 
+        - Institutionalized knowledge 
+        - Successful exploitation of rivalry / conflicts between local warlords
+        - Industrial base (started from 1700s)
+
+    - Tom holland on Islam, 
+        - There is very little contemporary historical evidence about the life of Muhammad, with no mention of him at all in historical texts until decades after his death, and no mention of Mecca in any datable text relating to him until over a century after he died. He concluded that it is much more likely that Islamic theology developed gradually over several centuries as the Arab Empire expanded, and that descriptions of Muhammad's home more closely resemble what is now southern Israel than Mecca.
+
