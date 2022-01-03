@@ -41,6 +41,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Listmonk - Open source newsletter and mailing list manager](https://listmonk.app)
 - [ATOP - Performance monitor for Linux (Better than htop)](https://www.atoptool.nl/)
 - [Below - Analyze Historical performance data for Linux](https://github.com/facebookincubator/below)
+- [Hyperfine - Generic Benchmarking tool](https://github.com/sharkdp/hyperfine)
 
 ## Linux related References
 
