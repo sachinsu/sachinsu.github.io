@@ -1,5 +1,5 @@
 ---
-title: "Can SQLite be used in Server Applications?"
+title: "Can SQLite be considered for Server Applications?"
 date: 2021-12-30T01:00:00+05:30
 draft: false
 tags: [SQLite, go, litestream, rqlite, bombardier]
