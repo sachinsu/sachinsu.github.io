@@ -79,6 +79,22 @@
 </header><article class="list__item post">
 <header class=list__header>
 <h2 class="list__title post__title">
+<a href=/posts/is_sqlite_production_ready/ rel=bookmark>
+Can SQLite be used in Server Applications?
+</a>
+</h2>
+<div class="list__meta meta"><div class="meta__item-author meta__item">
+<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2021-12-30T01:00:00+05:30>Dec 30 2021</time></div></div>
+</header>
+<div class="content list__excerpt post__content clearfix">
+Introduction While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&rsquo;s familiarity, Costs, Tech. support availability and so on. In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server.
+</div>
+</article><article class="list__item post">
+<header class=list__header>
+<h2 class="list__title post__title">
 <a href=/posts/elt/ rel=bookmark>
 ELT approach for Data Pipelines
 </a>
@@ -143,29 +159,12 @@ Ninja - Using lightweight build system for Go projects
 Background I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.
 Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).
 </div>
-</article><article class="list__item post">
-<header class=list__header>
-<h2 class="list__title post__title">
-<a href=/posts/massdmgolang/ rel=bookmark>
-Tool to mass DM followers on Twitter in Go
-</a>
-</h2>
-<div class="list__meta meta"><div class="meta__item-author meta__item">
-<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2020-07-25T10:25:04+05:30>Jul 25 2020</time></div></div>
-</header>
-<div class="content list__excerpt post__content clearfix">
-Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
-This is an attempt to write CLI tool in Golang in response to it.
-For detailed requirements, refer here
-Approach In Brief,
-CLI should,
-accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.
-</div>
 </article>
 </main>
+<div class=pagination>
+<span class="pagination__item pagination__item--current">1/2</span>
+<a class="pagination__item pagination__item--next btn" href=/tags/go/page/2/>»</a>
+</div>
 </div>
 <aside class="sidebar sidebar--left">
 <div class="widget-social widget">
@@ -192,11 +191,11 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <h4 class=widget__title>Recent Posts</h4>
 <div class=widget__content>
 <ul class=widget__list>
+<li class=widget__item><a class=widget__link href=/posts/is_sqlite_production_ready/>Can SQLite be used in Server Applications?</a></li>
 <li class=widget__item><a class=widget__link href=/posts/profiling_n_benchmarking/>Profiling and benchmarking tools for Applications</a></li>
 <li class=widget__item><a class=widget__link href=/posts/dbre/>Database Reliability Engineering - My Notes</a></li>
 <li class=widget__item><a class=widget__link href=/posts/nrtanalysispostgresql/>Near real time API Monitoring with Grafana and PostgreSQL</a></li>
 <li class=widget__item><a class=widget__link href=/posts/apiupgrade/>Upgrading API: Learnings</a></li>
-<li class=widget__item><a class=widget__link href=/posts/presto/>Presto - A distributed SQL Engine for variety of data stores</a></li>
 </ul>
 </div>
 </div>
@@ -212,6 +211,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <a class="widget-taglist__link widget__link btn" href=/tags/aws/ title=AWS>AWS</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/azure/ title=Azure>Azure</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/bash/ title=bash>bash</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/bombardier/ title=bombardier>bombardier</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/c#/ title=C#>C#</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/cadence/ title=Cadence>Cadence</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/cassandra/ title=Cassandra>Cassandra</a>
@@ -237,6 +237,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <a class="widget-taglist__link widget__link btn" href=/tags/honeycomb/ title=Honeycomb>Honeycomb</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/http/ title=HTTP>HTTP</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/jeffrey-richter/ title="Jeffrey Richter">Jeffrey Richter</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/litestream/ title=litestream>litestream</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/make/ title=make>make</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/microservices/ title=MicroServices>MicroServices</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/microsoft/ title=Microsoft>Microsoft</a>
@@ -255,6 +256,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <a class="widget-taglist__link widget__link btn" href=/tags/python/ title=Python>Python</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/real-time/ title=real-time>real-time</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/rest/ title=REST>REST</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/rqlite/ title=rqlite>rqlite</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/sed/ title=sed>sed</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/shopify/ title=shopify>shopify</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/soap/ title=SOAP>SOAP</a>
@@ -277,7 +279,7 @@ accept arguments like Twitter API Key,Auth token, DM Message Download all follow
 <footer class=footer>
 <div class="container footer__container flex">
 <div class=footer__copyright>
-&copy; 2021 Sachin Sunkle.
+&copy; 2022 Sachin Sunkle.
 <span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span>
 </div>
 </div>
