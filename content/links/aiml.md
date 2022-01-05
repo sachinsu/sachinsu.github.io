@@ -17,6 +17,7 @@ Useful links related from AI, ML space
 
 ## Articles
 
+- [Neural Networks from Scratch](https://sirupsen.com/napkin/neural-net)
 - [History of AI](https://spectrum.ieee.org/history-of-ai)
 - [Machine Learning Algorithms: What is a Neural Network?](https://www.verypossible.com/insights/machine-learning-algorithms-what-is-a-neural-network)
 - [What is Benford’s Law and why is it important for data science?](https://towardsdatascience.com/what-is-benfords-law-and-why-is-it-important-for-data-science-312cb8b61048)
