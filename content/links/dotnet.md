@@ -31,6 +31,7 @@ Platform where i have spent most time till now.
 
 ## Performance related 
 
+- [Web forms, Asynchronous operations and its performance impact](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45)
 - [List of Awesome Resources](https://github.com/adamsitnik/awesome-dot-net-performance)
 - [Using System.Diagnostics.StopWatch.GetTimeStamp for accurate duration](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.gettimestamp?view=net-5.0)
 - [C# Job Queues with TPL Dataflow and Failure Handling](https://michaelscodingspot.com/c-job-queues-part-3-with-tpl-dataflow-and-failure-handling/)

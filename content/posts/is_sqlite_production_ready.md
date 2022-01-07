@@ -258,7 +258,7 @@ Hopefully, above provides good starting point in deciding database for your next
 * [Consider SQLite](https://blog.wesleyac.com/posts/consider-SQLite)
 * SQLite has good support for JSON, read about it [here](https://christine.website/blog/sqlite-json-munge-2022-01-04)
 * SQLite as a document database, read about it [here](https://dgl.cx/2020/06/sqlite-json-support)
-
+* [Interesting lists of extensions](https://github.com/nalgeon/sqlean)
 
 Happy Coding !!
 

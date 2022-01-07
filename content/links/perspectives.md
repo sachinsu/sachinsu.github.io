@@ -41,6 +41,10 @@ Section covering Business, project/programming perspectives
 - [First Principles](https://fs.blog/first-principles/)
 - [You are not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
 - [42 Lessons Learned in building production database](https://maheshba.bitbucket.io/blog/2021/10/19/42Things.html)
+- [Data structures implemented in JavaScript - I](https://github.com/trekhleb/javascript-algorithms)
+- [Data structures implemented in JavaScript - II](https://github.com/mgechev/javascript-algorithms)
+- [Data structures implemented in JavaScript - III](https://github.com/humanwhocodes/computer-science-in-javascript)
+
 
 ## Fintech 
 
