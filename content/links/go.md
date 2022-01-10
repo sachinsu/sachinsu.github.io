@@ -74,6 +74,7 @@ My current Favourite Language
 - [Use Makefile with Go](https://earthly.dev/blog/golang-makefile/)
 - [Review of HTTP Routers](https://www.alexedwards.net/blog/which-go-router-should-i-use)
 - [Library over Financial Markets i.e. Yahoo Finance etc.](https://github.com/piquette/finance-go)
+- [Excelsize - pure Go library providing a set of functions that allow you to write to and read from XLSX / XLSM / XLTM / XLTX files](https://github.com/qax-os/excelize)
 
 ### Task queues
 

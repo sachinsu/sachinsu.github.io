@@ -19,6 +19,8 @@ Section covering useful tools for every day activities, Online learning etc.
 ## Useful Command line tools
 
 - [Useful online playgrounds by Julia Evans](https://jvns.ca/blog/2021/09/24/new-tool--an-nginx-playground/)
+- [exa - colorful alternative to ls](https://github.com/ogham/exa)
+- [duf - better disk usage/free utility](https://github.com/muesli/duf)
 - [Zmap - collection of open source tools for performing large-scale studies of the hosts and services that compose the public Internet.](https://github.com/zmap)
 - [ripgrep - Recursively search directories for regex](https://github.com/BurntSushi/ripgrep)
 - [ripgrep-all - rigrep + PDFs, E-books, Office documents](https://github.com/phiresky/ripgrep-all)
