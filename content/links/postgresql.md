@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL"
-date: 2020-02-07T15:08:50+05:30
+date: 2022-01-10T15:08:50+05:30
 draft: false
 ---
 
@@ -103,3 +103,11 @@ draft: false
 ## High Availability 
 
 - [Tools for Multi-Master Replication](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
+
+## Change Data Capture, Asynchronous change processing etc. 
+
+- [PGQ - Queueing Solution](https://wiki.postgresql.org/wiki/PGQ_Tutorial)
+- [PGQ - as used by Skype](https://www.pgcon.org/2009/schedule/attachments/91_pgq.pdf)
+- [Bucardo - Asynchronous replication for PostgreSQL using Triggers](https://bucardo.org/Bucardo/)
+- [Using Logical Decoding, Wal2json for CDC](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
+- [Webedia's approach of using Customer processor (walparser) to read from Wal2JSON and  CDC between PG and Elasticsearch](https://www.postgresql.eu/events/pgconfeu2019/sessions/session/2651/slides/237/Deploy%20your%20own%20replication%20system%20with%20Wal2json.pdf)

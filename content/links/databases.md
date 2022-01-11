@@ -80,6 +80,7 @@ Knowledge base around general database related topics.
 - [Flat Data - Scheduled Data Download on GitHub Actions in Repository and visualization](https://octo.github.com/projects/flat-data)
 - [Nocodb - Turn MySQL/PostgreSQL data in smart Spreadsheet](https://github.com/nocodb/nocodb)
 - [Real time data analysis with Apache Pinot and kafka](https://www.confluent.io/blog/real-time-analytics-with-kafka-and-pinot/)
+- [UUIds are bad for performance](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)
 
 ## ETL,ELT, Evolutionary Practices 
 - [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
