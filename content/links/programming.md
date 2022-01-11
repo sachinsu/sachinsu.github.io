@@ -150,6 +150,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Observability trends 2021](https://www.civo.com/blog/observability-trends-2021)
 - [What was observability again?](https://www.cncf.io/blog/2021/03/02/what-was-observability-again/?utm_source=o11y.news&utm_medium=email)
+- [Dashboard design best practices](https://www.influxdata.com/blog/5-dashboard-design-best-practices/)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
 - [What is OpenTelemetry?](https://otel.lightstep.com)

@@ -111,3 +111,4 @@ draft: false
 - [Bucardo - Asynchronous replication for PostgreSQL using Triggers](https://bucardo.org/Bucardo/)
 - [Using Logical Decoding, Wal2json for CDC](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
 - [Webedia's approach of using Customer processor (walparser) to read from Wal2JSON and  CDC between PG and Elasticsearch](https://www.postgresql.eu/events/pgconfeu2019/sessions/session/2651/slides/237/Deploy%20your%20own%20replication%20system%20with%20Wal2json.pdf)
+- [Message queuing using native postgresql](https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql)
