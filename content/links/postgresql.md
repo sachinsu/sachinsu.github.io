@@ -40,6 +40,7 @@ draft: false
 ## Performance tuning, configuration etc.
 
 - [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)
+- [Few gotchas for Application Developers](https://www.hagander.net/talks/PostgreSQL%20Gotchas%20for%20App%20Developers.pdf )
 - [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)
 - [Diagnose Linux related Disk & RAM issues](https://www.highgo.ca/2021/02/08/troubleshooting-performance-issues-due-to-disk-and-ram/)
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)
@@ -112,3 +113,5 @@ draft: false
 - [Using Logical Decoding, Wal2json for CDC](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
 - [Webedia's approach of using Customer processor (walparser) to read from Wal2JSON and  CDC between PG and Elasticsearch](https://www.postgresql.eu/events/pgconfeu2019/sessions/session/2651/slides/237/Deploy%20your%20own%20replication%20system%20with%20Wal2json.pdf)
 - [Message queuing using native postgresql](https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql)
+- [Queues in PostgreSQL](https://www.pgcon.org/2016/schedule/attachments/414_queues-pgcon-2016.pdf)
+- [Using PGQ to invalidate caches](https://www.hagander.net/talks/cache_invalidation_2014.pdf)

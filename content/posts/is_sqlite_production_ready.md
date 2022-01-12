@@ -248,7 +248,7 @@ Back to evaluating  databases for a given use case and SQLite fits in ,
 | Availability  | Is database highly available?         | SQLite being file based, availability is confined to the Node/VM on which it is running. It can be further enhanced using tools like, [Litestream](https://litestream.io) (which implements change data capture and syncs it with remote storage like AWS S3 or SFTP among others). [rqlite](https://github.com/rqlite/rqlite) is clustered database based on SQLite. 
 | network partition support | Does database support partitioning of data? | No. Being a file based data storage system, it is constrained on single node i.e. it can be scaled vertically. However, it can be setup in active + Stand-by backup mode using specific tools. Additionally, other databases (files on same node) can be attached to and accessed by application as one database.
 | Tech. Support   | In case of [FOSS](https://g.co/kgs/P4FWMh) software, is Community active in terms of releases/bug fixes as well as on discussion forums? <br> Are their any providers who provide paid support? | SQLite is mature database. Though, it is open source, it does not accept pull requests from anyone out side of core committers. Having said that, one has to check for availability of  support in case things go north (corrupted database and so on.) |
-| Database features | Support for Typical RDBMS features like Data types, User Management & Security, Stored procedures & trigger etc. | Refer [here](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems) for detailed comparison of features across SQLite and populate RDBMSs.  
+| Database features | Support for Typical RDBMS features like Data types, User Management & Security, Stored procedures (but not triggers) etc. | Refer [here](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems) for detailed comparison of features across SQLite and populate RDBMSs.  
 
 Hopefully, above provides good starting point in deciding database for your next application. As always, comments/suggestions are welcome. 
 
@@ -259,6 +259,7 @@ Hopefully, above provides good starting point in deciding database for your next
 * SQLite has good support for JSON, read about it [here](https://christine.website/blog/sqlite-json-munge-2022-01-04)
 * SQLite as a document database, read about it [here](https://dgl.cx/2020/06/sqlite-json-support)
 * [Interesting lists of extensions](https://github.com/nalgeon/sqlean)
+* [sqlite-utils - Collection of utilities including migration from MySQL/PostgreSQL](https://github.com/simonw/sqlite-utils)
 
 Happy Coding !!
 

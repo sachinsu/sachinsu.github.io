@@ -124,7 +124,7 @@ Knowledge base around general database related topics.
 
 ## Data Security, GDPR 
 
-- [Tool for Sensitive Data Detection from Capitalone](https://capitalone.github.io/DataProfiler/docs/0.4.5/html/index.html)
+- [Tool for Sensitive Data Detection from Capital one](https://capitalone.github.io/DataProfiler/docs/0.4.5/html/index.html)
 - [Data bunker - Secure storage for personal records built to comply with GDPR](https://databunker.org/)
 
 ## Search

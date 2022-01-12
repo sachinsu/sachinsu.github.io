@@ -173,8 +173,6 @@ Shortlisting & interview for Mobile & C Architect role
     
     - Reasoning from first principles allows us to step outside of history and conventional wisdom and see what is possible. When you really understand the principles at work, you can decide if the existing methods make sense. Often they don’t.  Many people mistakenly believe that creativity is something that only some of us are born with, and either we have it or we don’t. Fortunately, there seems to be ample evidence that this isn’t true. We’re all born rather creative, but during our formative years, it can be beaten out of us by busy parents and teachers. As adults, we rely on convention and what we’re told because that’s easier than breaking things down into first principles and thinking for yourself. Thinking through first principles is a way of taking off the blinders. Most things suddenly seem more possible. 
 
-
-
 - Blockchain
     - Dapps are a growing movement of applications that use Ethereum to disrupt business models or invent new ones. 
     - Almost all dApps use either Infura or Alchemy in order to interact with the blockchain. 
@@ -188,4 +186,27 @@ Shortlisting & interview for Mobile & C Architect role
     -  BNPLs don't want to acquire one transaction; they want to acquire a continuing stream of transactions from a customer, ideally changing their purchasing behavior for certain sectors and charging their partners for the change.
 
 
+## 2022-jan-12 Wed
 
+- Markets
+    - While rising yields are generally a bullish sign for the economy, they also make riskier assets—like expensive tech stocks—less attractive compared to other names that may get a boost from higher interest rates. 
+
+- Database schema migrations - general flow of online schema migration, 
+    - Create a new, empty table, in the likeness of the original table. We title this the ghost table.
+    - ALTER the ghost table. Since the table is empty, there is no overhead to this operation.
+    - Validate the structural change is compatible with tooling requirements.
+    - Analyze the diff.
+    - Begin a long running process of copying existing rows from the original tables to the ghost table. Rows are copied in small batches.
+    - Capture or react to ongoing changes to the original table, and continuously apply them onto the ghost table.
+    - Monitor general database and replication metric, and throttle so as to prioritize production traffic as needed.
+    - When the existing data copy is complete, the migration is generally considered as ready to cut-over, give or take some small backlog or state of the replication topology.
+    - Final step is the cut-over: renaming away of the original table, and renaming the ghost table in its place. Up to some locking or small table outage time, the users and apps are largely ignorant that the table has been swapped under their feet.
+
+- Never believe in individual rather believe in institutions. Hero worship should be abandoned.
+
+- Corelation - two things happening at the same time
+- causation - mistakenly conclude that one causes the other.
+
+-There are two approaches to applying inversion in your life. 
+    - Start by assuming that what you’re trying to prove is either true or false, then show what else would have to be true. 
+    - Instead of aiming directly for your goal, think deeply about what you want to avoid and then see what options are left over. 
