@@ -40,7 +40,8 @@ draft: false
 ## Performance tuning, configuration etc.
 
 - [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)
-- [Few gotchas for Application Developers](https://www.hagander.net/talks/PostgreSQL%20Gotchas%20for%20App%20Developers.pdf )
+- [Few gotchas for Application Developers](https://www.hagander.net/talks/PostgreSQL%20Gotchas%20for%20App%20Developers.pdf)
+- [Five tips for healthy PostgreSQL database](https://blog.crunchydata.com/blog/five-tips-for-a-healthier-postgres-database-in-the-new-year)
 - [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)
 - [Diagnose Linux related Disk & RAM issues](https://www.highgo.ca/2021/02/08/troubleshooting-performance-issues-due-to-disk-and-ram/)
 - [PostgreSQL database configuration tuning advicer](https://postgresqltuner.pl)

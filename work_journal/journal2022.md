@@ -185,7 +185,6 @@ Shortlisting & interview for Mobile & C Architect role
     - “Rails” are payment jargon for the technological and financial links between various entities which allow money movement. Visa provides rails, debit card networks provide rails, etc etc.
     -  BNPLs don't want to acquire one transaction; they want to acquire a continuing stream of transactions from a customer, ideally changing their purchasing behavior for certain sectors and charging their partners for the change.
 
-
 ## 2022-jan-12 Wed
 
 - Markets
@@ -210,3 +209,15 @@ Shortlisting & interview for Mobile & C Architect role
 -There are two approaches to applying inversion in your life. 
     - Start by assuming that what you’re trying to prove is either true or false, then show what else would have to be true. 
     - Instead of aiming directly for your goal, think deeply about what you want to avoid and then see what options are left over. 
+
+## 2022-jan-13 Thu
+
+- Kurt lewin's force field analysis, 
+    1. Identify the problem 
+    2. Define your objective 
+    3. Identify the forces that support change towards your objective 
+    4. Identify the forces that impede change towards the objective 
+    6. Strategize a solution! This may involve both augmenting or adding to the forces in step 3, and reducing or eliminating the forces in step 4. 
+
+- Occam’s Razor, a classic principle of logic and problem-solving, indicates that Simpler explanations are more likely to be true than complicated ones.
+- Hanlon's Razor demonstrates that there are fewer true villains than you might suppose—what people are is human, and like you, all humans make mistakes and fall into traps of laziness, bad thinking, and bad incentives. Our lives are easier, better, and more effective when we recognize this truth and act accordingly.
