@@ -87,6 +87,8 @@ Platform where i have spent most time till now.
 - [Hangfire](https://www.hangfire.io)
 - [Tempus](https://github.com/Workshell/tempus)
 - [Background tasks with hosted services in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-5.0&tabs=visual-studio)
+- [Rebus - Smart end-points, dumb pipes service bus for .net](https://github.com/rebus-org/Rebus/wiki)
+
 
 ## .NET Core
 

@@ -75,6 +75,8 @@ My current Favourite Language
 - [Review of HTTP Routers](https://www.alexedwards.net/blog/which-go-router-should-i-use)
 - [Library over Financial Markets i.e. Yahoo Finance etc.](https://github.com/piquette/finance-go)
 - [Excelsize - pure Go library providing a set of functions that allow you to write to and read from XLSX / XLSM / XLTM / XLTX files](https://github.com/qax-os/excelize)
+- [Benthos - Simplified stream processing with built-in connectors](https://github.com/Jeffail/benthos)
+
 
 ### Task queues
 

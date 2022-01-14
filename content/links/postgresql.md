@@ -116,3 +116,6 @@ draft: false
 - [Message queuing using native postgresql](https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql)
 - [Queues in PostgreSQL](https://www.pgcon.org/2016/schedule/attachments/414_queues-pgcon-2016.pdf)
 - [Using PGQ to invalidate caches](https://www.hagander.net/talks/cache_invalidation_2014.pdf)
+- [pgstream- turns your  database into an event stream](https://github.com/tmc/pqstream)
+- [Wal-listener CLI](https://github.com/ihippik/wal-listener)
+

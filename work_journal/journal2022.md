@@ -1,19 +1,23 @@
 - Work updates
     DH, 
-    - Ongoing App Review and New architecture
+    - Ongoing Application design Review and New architecture
+
+    BFL, 
+    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS. Bulk SMS functionality  
+
+    Issuance,
+        - Issue in CwM App for one of the report only on single server. Currently, deployed on separate server for that client. 
+        - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
+
+Interviews,
+        Shortlisting & interview for Mobile & C Architect role
+
+    Axis bank - migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accommodate additional compute?           
 
     Sahil, 
     - Unified non-card transactions from different channels
 
-    BFL, 
-    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accommodate additional compute?           
-
-    Issuance, 
-        - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-Shortlisting & interview for Mobile & C Architect role
+    
 
 ## 2022-jan-03 Mon
 
