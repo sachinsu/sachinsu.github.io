@@ -225,3 +225,39 @@ Interviews,
 
 - Occam’s Razor, a classic principle of logic and problem-solving, indicates that Simpler explanations are more likely to be true than complicated ones.
 - Hanlon's Razor demonstrates that there are fewer true villains than you might suppose—what people are is human, and like you, all humans make mistakes and fall into traps of laziness, bad thinking, and bad incentives. Our lives are easier, better, and more effective when we recognize this truth and act accordingly.
+
+## 2022-jan-17 Mon
+
+- Tech#about headless browser libraries, 
+    - Puppeteer - Puppeteer is the most popular browser automation library, that just like the name implies, allows you to manipulate a web page like a puppet and scrape the data you need using a Chrome browser.
+    - Playwright - Released by Microsoft in 2020, Playwright.js is the new kid on the block and it very similar to Puppeteer in many ways (many of the Puppeteer team left Google, and created Playwright at Microsoft). However, it has been gaining a lot of traction because of its cross-browser support (can drive Chromium, WebKit, and Firefox browsers, whilst Puppeteer only drives Chromium) and some developer experience improvements that would have been breaking changes with Puppeteer.
+
+- Finance#covered calls are a yield-enhancement play that involve selling call options against stocks that you own. The call option gives you extra income, but—during the life of the option—your gains are capped at the call option’s strike price. if the stock goes nowhere—or even if it rises slightly—you get the call premium while still hanging on to the stock.
+
+- Zwicky's model for problem solving (https://nesslabs.com/zwicky-box), 
+    - Figure out your categories and list them each in a column
+    - brainstorm each category and add values to it 
+    - Create unique combinations from each category. Continue to create these combinations until something valuable is found.
+    - It can be used for following, 
+    - Creativity. From story planning to content creation, creatives can utilise the Zwicky box to generate original ideas.
+    - Innovation. You can use a Zwicky box for market innovation, business model creation, product development, and prototyping.
+    - Decision making. A Zwicky box can help you with strategizing, financial modelling, and daily decision making.
+    - Brainstorming in a team. It can be helpful to brainstorm ideas with your team with a Zwicky box where everyone can contribute to creating and filling the Zwicky box.
+
+- Difference between ETF and MF
+    - Because ETFs are cheaper, they can get big too fast and they almost never limit their growth in terms of AUM. Unlike mutual fund where AMC can stop inflows, ETF inflows can not be stopped. At the most, creation of new units will be halted but it means that existing units will be available at premium. This is not a problem for index tracking ETFs but it is for other (thematic or otherwise).
+    - You can only buy future performance.
+
+- The difference between genius and stupidity is that genius has its limits.
+
+- Latest from Howard marks (the decision to trim positions or to sell out entirely comes down to judgment . . . like everything else that matters in investing) , 
+    - we should base our investment decisions on our estimates of each asset’s potential,
+    - we shouldn’t sell just because the price has risen and the position has swelled,
+    - there can be legitimate reasons to limit the size of the positions we hold,
+    - but there’s no way to scientifically calculate what those limits should be. 
+    - simply being invested is by far “the most important thing.”.
+    - someone entering adulthood today is practically guaranteed to be well fixed by the time they retire if they merely start investing promptly and avoid tampering with the process by trading
+
+- Economy#The way to get out of the middle-income trap is to compete on brand and technology rather than price, and that generally means making a job that doesn’t exist yet. There wasn’t a market for Walkmen before Sony made them; they had to build the product and then sell it.
+
+
