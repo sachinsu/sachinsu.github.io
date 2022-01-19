@@ -11,6 +11,7 @@ draft: false
 - [How Stripe Designs Beautiful Websites](https://leerob.io/blog/how-stripe-designs-beautiful-websites)
 - [Tools for non artistic developers](https://nodesign.dev/)
 - [Principles of Design](https://principles.design/)
+- [Micro frontends - Techniques, strategies and recipes for building a modern web app with multiple teams that can ship features independently.](https://micro-frontends.org/)
 
 ## Articles
 
@@ -37,6 +38,9 @@ draft: false
 
 ## Libraries and Tools
 
+- [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
+- [Qiankun - Complete solution for Micro front-ends](https://github.com/umijs/qiankun)
+- [Single SPA - Router for Micro front-ends](https://single-spa.js.org/)
 - [htmx-access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
 - [React based Sci-fi style UI Library with Animation and Sound](https://arwes.dev/)
 - [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)
