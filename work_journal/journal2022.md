@@ -9,7 +9,7 @@
         - Issue in CwM App for one of the report only on single server. Currently, deployed on separate server for that client. 
         - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
 
-Interviews,
+    Interviews,
         Shortlisting & interview for Mobile & C Architect role
 
     Axis bank - migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accommodate additional compute?           
@@ -258,7 +258,7 @@ Interviews,
     - simply being invested is by far “the most important thing.”.
     - someone entering adulthood today is practically guaranteed to be well fixed by the time they retire if they merely start investing promptly and avoid tampering with the process by trading
 
-- Economy#The way to get out of the middle-income trap is to compete on brand and technology rather than price, and that generally means making a job that doesn’t exist yet. There wasn’t a market for Walkmen before Sony made them; they had to build the product and then sell it.
+- Economy#The way to get out of the middle-income trap is to compete on brand and technology rather than price, and that generally means making a job that doesn’t exist yet. There wasn’t a market for Walkman before Sony made them; they had to build the product and then sell it.
 
 ## 2022-jan-19 Wed
 
@@ -289,4 +289,21 @@ Interviews,
             -Each row is indexed by its row key. Related columns are grouped together in column families.
             - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
             - Column families store multiple versions of data by timestamp.
-    
+
+- Eurodollar - Offshore (outside US) currency systems, denominated in US Dollars. Outside the scope of US Regulation. Has nothing to do with Euro. Timed deposits, dollar denominated deposits kept in UK Banks outside of US Jurisdiction. Instead of immediately remitting the foreign currency to the central bank or depositing it in their accounts in the U.S., banks used their dollar deposits for loans to third parties either in the U.K. or abroad. This system was supposedly very big till 2007. Global financial crisis was Eurodollar system breaking down. All the global banks are heavily involved in it. It essentially means Global money. It is US dollar denominated but a ledger, ghost money. Without the Eurodollar, Globalization might not have taken place. The US dollar denominated resources were created without actual currency involved. Fed reserve, treasury dep. or authorities in countries have no influence on eurodollar capacity. They don't have capacity, wisdom. 
+
+## 2022-jan-20 Thu
+
+- David sinclair takeaways for healthy life 
+    - Eat less often (Skip a meal), don't snack
+    - avoid sugary drinks and food
+    - reduce meat intake and opt for more plant based diet
+    - choose the veggies that are stressed out 
+    - Put the sugar at the end of the meal
+
+- Education has general benefits in improving quality of thinking and receptiveness to information.
+- When you have to make decision, break it into sub-decisions/sub-aspects  that you are going to look at and score them individually. Do not form intermediate impression.do not form intuition until more information is available which is going to improve quality of sub-decisions. 
+
+- liberalism - thrives on perpetual victimhood narrative.
+- Malthusianism is the idea that population growth is potentially exponential while the growth of the food supply or other resources is linear, which eventually reduces living standards to the point of triggering a population die off.
+
