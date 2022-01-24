@@ -7,6 +7,8 @@ draft: false
 # PostgreSQL 
 
 ## General Articles
+
+- [Free Postgres database (or SQLite) from fly.io](https://fly.io/blog/free-postgres/?utm_source=hackernewsletter&utm_medium=email&utm_term=code)
 - [Using generate_series feature for reporting](https://rob.conery.io/2018/08/01/simple-monthly-reports-in-postgresql-using-generate_series/)
 - [When Postgres blocks: 7 tips for dealing with locks](https://www.citusdata.com/blog/2018/02/22/seven-tips-for-dealing-with-postgres-locks/)
 - [PostgreSQL - Don't do this](https://wiki.postgresql.org/wiki/Don%27t_Do_This#Database_Encoding)
@@ -40,6 +42,7 @@ draft: false
 ## Performance tuning, configuration etc.
 
 - [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)
+- [Various index types and their usage](https://blog.crunchydata.com/blog/postgres-indexes-for-newbies?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
 - [Few gotchas for Application Developers](https://www.hagander.net/talks/PostgreSQL%20Gotchas%20for%20App%20Developers.pdf)
 - [Five tips for healthy PostgreSQL database](https://blog.crunchydata.com/blog/five-tips-for-a-healthier-postgres-database-in-the-new-year)
 - [Make PostgreSQL healthy and speedy](https://info.crunchydata.com/blog/cleaning-up-your-postgres-database)

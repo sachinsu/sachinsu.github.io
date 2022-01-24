@@ -3,7 +3,7 @@
     - Ongoing Application design Review and New architecture
 
     BFL, 
-    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS. Bulk SMS functionality  
+    - Rule engine in Oneview.  
 
     Issuance,
         - Issue in CwM App for one of the report only on single server. Currently, deployed on separate server for that client. 
@@ -17,7 +17,6 @@
     Sahil, 
     - Unified non-card transactions from different channels
 
-    
 
 ## 2022-jan-03 Mon
 
@@ -307,3 +306,35 @@
 - liberalism - thrives on perpetual victimhood narrative.
 - Malthusianism is the idea that population growth is potentially exponential while the growth of the food supply or other resources is linear, which eventually reduces living standards to the point of triggering a population die off.
 
+
+## 2022-jan-24 Mon
+
+- Economy#Inflation, Interest Rates etc.
+    - The (US) Fed increases rates, this increases borrowing costs for banks and pretty much everyone else. Interest rates increase drive mortgage and credit card rates up, disposable income goes down. the consumer, are spending less money. When you spend less, firms sell less stuff. This in turn affects company earnings, and by extension their stock prices.
+    - Stocks always compete with the safest options in the market – bank fixed deposits or government securities.This makes for an inverse relationship between interest rates and equity valuations. 
+    - the excess money and easy credit light the fuse that sparks inflation. This is because the supply side does not have the confidence to grow even as easy money with the spenders drives up demand. 
+    - Worry is that high interest rates would slow down economic activity, slow down demand and eat into profits
+    - The US dollar is the world's reserve currency or the medium of exchange in which international trade is largely carried out and the currency in which other countries hold a good portion of their foreign exchange reserves. So, whatever the Federal Reserve does to control inflation through interest rates, impacts countries across the world, including India.
+    - Treasury bonds are financial securities issued by the US government to borrow money to finance its fiscal deficit or the difference between what it earns and what it spends.
+    - The American government was spending much more than it was earning. To finance the spending, it sold treasury bonds. Large financial investors such as banks, insurance companies, pension funds and mutual funds, bought these bonds. At the same time, the Fed was buying treasury bonds from the same large financial investors and thus financing the government indirectly.
+
+
+- Tech#Postgres indexes, 
+    - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query. 
+    - BRIN indexes are block range indexes, specially targeted at very large datasets where the data you’re searching is in blocks, like timestamps and date ranges. They are known to be very performant and space efficient.
+    - GIST indexes build a search tree inside your database and are most often used for spatial databases and full-text search use cases. 
+    - GIN indexes are useful when you have multiple values in a single column which is very common when you’re storing array or json data. 
+
+- Psychology
+    - Wisdom is coexistence of contradictory truths, and money is the clearest example of this. We must internalize its importance while also recognizing its pointlessness.
+
+- Country
+    - In India, State governments are merely intermediaries but with no value addition.
+    - POTA - pulled out of thin air
+
+- Techniques#Spacing effect 
+    - A typical spaced repetition system includes these key components:
+        - A schedule for review of information. Typical systems involve going over information after an hour, then a day, then every other day, then weekly, then fortnightly, then monthly, then every six months, then yearly. Guess correctly and the information moves to the next level and is reviewed less often. Guess incorrectly and it moves down a level and is reviewed more often.
+        - A means of storing and organizing information. Flashcards or spaced repetition software (such as Anki and SuperMemo) are the most common options. Software has the obvious advantage of requiring little effort to maintain, and of having an inbuilt repetition schedule. Anecdotal evidence suggests that writing information out on flashcards contributes to the learning process.
+        - A metric for tracking progress. Spaced repetition systems work best if they include built-in positive reinforcement. This is why learning programs like Duolingo and Memrise incorporate a points system, daily goals, leaderboards and so on. Tracking progress gives us a sense of progression and improvement.
+        - A set duration for review sessions. If we practice for too long, our attention wanes and we retain decreasing amounts of information. Likewise, a session needs to be long enough to ensure focused immersion. A typical recommendation is no more than 30 minutes, with a break before any other review sessions.

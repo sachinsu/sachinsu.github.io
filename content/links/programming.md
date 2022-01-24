@@ -18,6 +18,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Software Architecture Patterns by Mark Richards](https://www.oreilly.com/content/software-architecture-patterns/)
 - [A comprehensive list of books on Software Architecture.](https://github.com/mhadidg/software-architecture-books)
+- [Introduction to architecting systems for scale.](https://lethain.com/introduction-to-architecting-systems-for-scale/#platform_layer)
 
 ## Strategies/Approaches
 
@@ -47,6 +48,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Guidelines for Command line interface](https://clig.dev/)
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
+- [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
 - [Google's API Design Guidelines](https://google.aip.dev/100)
 - [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
