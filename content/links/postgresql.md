@@ -98,12 +98,14 @@ draft: false
 - [Supabase -Listen to PG changes in real time without using Listen/Notify](https://github.com/supabase/realtime)
 - [Job queues, Single reader and pub/sub](https://spin.atomicobject.com/2021/02/04/redis-postgresql/)
 - [Use cases for scaling out PostgreSQL - Citus](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/when-to-use-hyperscale-citus-to-scale-out-postgres/ba-p/1958269)
+- [Database lab Engine - Fast cloning of Database for dev/QA/staging](https://postgres.ai/products/how-it-works)
+
 
 ## Migration to PostgreSQL
 
 - [Migration Guide from Oracle to PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/new-oracle-to-postgres-migration-guide-for-azure/ba-p/2055303)
 - [Lessons while migrating from Oracle to PostgreSQL](https://www.cybertec-postgresql.com/en/building-an-oracle-to-postgresql-migrator-lessons-learned/)
-
+- [Reshape - easy-to-use, zero-downtime schema migration tool](https://github.com/fabianlindfors/reshape)
 
 ## High Availability 
 

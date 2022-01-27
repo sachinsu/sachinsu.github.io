@@ -39,9 +39,11 @@ draft: false
 ## Libraries and Tools
 
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
+- [Polaris design system by shopify](https://polaris.shopify.com/)
 - [Qiankun - Complete solution for Micro front-ends](https://github.com/umijs/qiankun)
 - [Single SPA - Router for Micro front-ends](https://single-spa.js.org/)
 - [htmx-access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
+- [Javascript based Query/filter creator](https://querybuilder.js.org/)
 - [React based Sci-fi style UI Library with Animation and Sound](https://arwes.dev/)
 - [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)
 - [One line CSS Layouts by Google](https://1linelayouts.glitch.me/)
