@@ -346,3 +346,26 @@
 
 - Observability#Sampling in Tracing
     - In distributed tracing, sampling is frequently used to reduce the number of traces that are collected and stored in the backend. This is often desirable because it is easy to produce more data than can be efficiently stored and queried. Sampling allows us to store only a subset of the total traces produced.
+
+- Tech#PostgreSQL
+
+    - Triggers for scaleout 
+
+        - is limited to single server 
+        - working set does not fit in memory
+        - reaching limit of network attached storage, CPU
+        - Analytical queries take too long
+        - Autovacuum can not keep up with transaction load
+
+- Tech#Raft consensus protocol
+
+     - raft log - sequence of events persisted to disk representing a series of changes to state machine.
+     - leader - the single node in a cluster responsible for coordinating replication of raft log
+     - Follower - one or more nodes in a cluster that maintain copies of the Raft log. Any follower can be elected Leader if the current leader fails. 
+
+- Tech#RQLite
+
+    - Use cases 
+        - storage of few megabytes of critical data.
+        - if out of the box HTTP API is needed
+        - easy to use as alternative to hosted options  
