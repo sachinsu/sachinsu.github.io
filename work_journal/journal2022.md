@@ -3,7 +3,7 @@
     - Ongoing Application design Review and New architecture
 
     BFL, 
-    - Rule engine in Oneview.  
+    - Dynamic Rules in Oneview.  
 
     Issuance,
         - Issue in CwM App for one of the report only on single server. Currently, deployed on separate server for that client. 
@@ -369,3 +369,31 @@
         - storage of few megabytes of critical data.
         - if out of the box HTTP API is needed
         - easy to use as alternative to hosted options  
+
+- Society etc.
+    - Power is the ability to exert coercive force over others against their will. Rights stand in contradistinction to power. They are protections against/limitation of power
+
+
+    -Govt. Budget - So govt had plans of spending x trillion this year, of this y (often less than spending) came through savings schemes, taxes. It also earned dividends and profits shared by companies it owns and from RBI. Total earnings minus spending gives fiscal deficit. To address deficit, govt. borrows from market. 
+
+    - All institutions exhibit reflection of society.
+
+    - It started in 1969... the great fillip came after the split and in an effort to have a populist image, Mrs. Gandhi, as advised by P.N. Haksar, went on the (concept of a) committed bureaucracy, committed judiciary" (Sunday Mail, April 5, 1992).
+
+    - DNA Dataset of Maharashtra Brahmins have Ancient iranians and steppe pastoralist contribution and same is with CKP population.
+
+    - Humanities rule the world, scientists are at their mercy.
+
+    - Baumol's cost disease - If workers in other industries get more productive, it gives lesser ones bargaining power. Lesser paying industry would constantly lose talent.
+
+    - CM Chase rules for Options,
+    - We only write/sell options in this approach.
+    - If the futures signal says go long at 17500, assuming the spot is around the same value, you will sell 100 points ITM current week put. ie 17600 PE. 
+    - As and when that becomes ATM you move 100 points ITM again.
+    - For SL, calculate the difference between your current SL and LTP on futures multiply it by 0.8 and add that value to the options premium. For example, If your entry on futures is at 17500 and SL is 17400. You will take 80+(Options Premium) as SL.
+    - You will continue this till Thursday/expiry day, and rollover to next week on the expiry day, assuming the futures trade continues till then. 
+
+    - Recency bias - Put simply, recency bias is the practice of giving disproportionate weight to the events of the recent past when formulating expectations and plans.
+
+    - India as Market - India isn’t really one big market. There are multiple markets and markets within markets. India is not a single language market when it comes to the entertainment business. Also, not many Indians speak English.Just because India has 1.4 billion people doesn’t mean that the market for any product is as big or even a small portion of it.India and Indians seek value for money every time they spend money on something, and Netflix simply doesn’t provide that for most of us. Any form of mass communication needs to be simple enough for the average individual to understand, irrespective of whether it is writing that wants to entertain or propaganda that intends to influence.
+
