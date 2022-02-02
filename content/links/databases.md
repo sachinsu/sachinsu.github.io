@@ -46,6 +46,7 @@ Knowledge base around general database related topics.
 
 - [DBMS Tools](https://dbmstools.com/)
 - [TSBS - tool to benchmark bulk load performance and query execution performance.](https://github.com/timescale/tsbs)
+- [Goose - Database schema migrations](https://pressly.github.io/goose/)
 
 ## Data Analytics 
 - [Emerging Architectures for Modern Data Infrastructure](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)

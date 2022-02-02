@@ -397,3 +397,43 @@
 
     - India as Market - India isn’t really one big market. There are multiple markets and markets within markets. India is not a single language market when it comes to the entertainment business. Also, not many Indians speak English.Just because India has 1.4 billion people doesn’t mean that the market for any product is as big or even a small portion of it.India and Indians seek value for money every time they spend money on something, and Netflix simply doesn’t provide that for most of us. Any form of mass communication needs to be simple enough for the average individual to understand, irrespective of whether it is writing that wants to entertain or propaganda that intends to influence.
 
+## 2022-feb-02 Wed
+
+- Tech
+    - SoftPOS - Mastercard's multi-factor white-label solution for banks and payments facilitators that enables a smartphone to function as merchant acceptance device.
+    - Superset is built as a Python Flask web application and leverages SQLAlchemy, a Python SQL toolkit, to provide a consistent abstraction layer to relational data sources
+    - Baseline for Web Development for 2022,
+        - Safari is the baseline in terms of web standards: The sites we develop must work in Safari versions at least 2 years old.
+        - Low-tier Android devices are the baseline in terms of performance: Low-tier Android devices have advanced little in the past few years so we must make sure our sites are super performant.
+        - 4G is the baseline in terms of networks: Mobile networks have become a lot faster and stabler worldwide in recent years.
+
+- Economics, Society etc.
+    - Pax Americana is a term applied to the concept of relative peace in the Western Hemisphere and later the world after the end of World War II in 1945, when the United States became the world's dominant economic and military power. 
+    - One of the best predictors of insurgency is having the kinds of terrain that governments cannot reach, like swamps, forests and mountains.
+    - Once you’re the kind of people who can’t inconvenience yourselves enough to have kids, you are not going to risk your lives for a political ideal. 
+    - side that wants to fight a guerrilla war has to be the one that is willing to take a much larger number of casualties
+
+    - Second order thinking and Chesterton's fence
+        - Chesterton describes the classic case of the reformer who notices something, such as a fence, and fails to see the reason for its existence. However, before they decide to remove it, they must figure out why it exists in the first place. It means "Do not remove a fence until you know why it was put up in the first place." or " If a fence exists, there is likely a reason for it. "
+
+        -The test of a first-rate intelligence is the ability to hold two opposing ideas in mind at the same time and still retain the ability to function. One should, for example, be able to see that things are hopeless yet be determined to make them otherwise.
+
+    - Markets & Investing
+        - A wash trade is a form of market manipulation in which an investor simultaneously sells and buys the same financial instruments to create misleading, artificial activity in the marketplace. First, an investor will place a sell order, then place a buy order to buy from themself, or vice
+        versa.Wash trading works best when the market is thin. If your above-fair-price wash trades run into real orders from other traders, you’ll lose money! You want to maximize the likelihood that you actually sell to yourself.
+
+        - One reason stocks tend to have high returns over the long run is to compensate investors for the ever-present risk of losing at least half their money in the short run.
+
+        - virtue of great investors: skepticism. If I've learned anything in decades of reporting on investing, it's that the main product of the financial industry isn't portfolios; it's propaganda. And propaganda with numbers, cloaked in jargon, can hit investors like general anesthesia: You just drift off to sleep while financial professionals surgically remove your money.
+            - When someone says, "Studies have shown that...," ask the names of the studies, where they were published and whether this person has read them in full.
+            - When someone describes a "strategy," ask how that differs from a tactic.
+            - When asset managers talk about "sell discipline," ask if they measure how the stocks they sell do after being sold. If the firm doesn't know that, how does it know its sell discipline works?
+            - Are these past results based on a backtest? Then read this. 
+            - What do the results look like after trading costs, fees and taxes?
+            - Do these numbers account for survivorship bias?
+            - Who's on the other side of this trade, and why would they let you make so much money?
+            - Is there data on the average performance of people who have tried this in the past? How did they do, and what makes me or you so special that we should believe we can do better?
+            - Always read the footnotes. Read financial disclosures from back to front, as if they were written in Hebrew or Arabic. The stuff you really need to know is almost always near the back.
+
+    - A great company is a great investment only when you pay the right price for it.
+

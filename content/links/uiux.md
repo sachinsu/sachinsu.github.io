@@ -29,6 +29,8 @@ draft: false
 - [Data Model behind Notion's flexibility](https://www.notion.so/blog/data-model-behind-notion)
 - [How TCP Communication works between Client & Server](https://sirupsen.com/napkin/problem-15/)
 - [Practical Frontend Architecture using React,GraphQL, Next.JS and Typescript](https://jaredgorski.org/writing/14-practical-frontend-architecture/)
+- [The baseline for Web development in 2022](https://engineering.linecorp.com/en/blog/the-baseline-for-web-development-in-2022/)
+
 
 ## Testing
 
