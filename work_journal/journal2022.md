@@ -428,7 +428,7 @@
             - When someone says, "Studies have shown that...," ask the names of the studies, where they were published and whether this person has read them in full.
             - When someone describes a "strategy," ask how that differs from a tactic.
             - When asset managers talk about "sell discipline," ask if they measure how the stocks they sell do after being sold. If the firm doesn't know that, how does it know its sell discipline works?
-            - Are these past results based on a backtest? Then read this. 
+            - Are these past results based on a backtest? 
             - What do the results look like after trading costs, fees and taxes?
             - Do these numbers account for survivorship bias?
             - Who's on the other side of this trade, and why would they let you make so much money?
@@ -436,4 +436,21 @@
             - Always read the footnotes. Read financial disclosures from back to front, as if they were written in Hebrew or Arabic. The stuff you really need to know is almost always near the back.
 
     - A great company is a great investment only when you pay the right price for it.
+
+## 2022-feb-03 Thu
+
+- Network Terminology
+    - muxing is the process of combining multiple inputs into a single singal, de-muxing naturally is the opposite process. De-muxing, aka 
+    Demultiplexing, is the process of separating a single output into its inputs
+
+- Software Architecture is about, 
+    - Shared/Common understanding in stake holders about technically important aspects
+    - Is not about craftmanship vs. economics. Economics always wins.
+    - Architecture is about internal quality which is not directly visible. Quality is directly proportional to Customer satisfaction.
+    - is about ensuring code is in healthy state like regularly refactored, cleaner code base while being adaptability to change
+
+- Economics
+    - What is Infrastructure? Long lived capital assets.
+    - due to covid, production has shifted from unorganized to organized.
+
 

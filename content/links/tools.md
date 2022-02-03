@@ -16,6 +16,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [revealjs - HTML Presentation framework](https://revealjs.com/)
 - [List of Self hosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
 - [A book of Secret knowledge - Collection of Useful tools](https://github.com/trimstray/the-book-of-secret-knowledge)
+- [Parsr - Transform PDF,Image into Structured data](https://github.com/axa-group/parsr)
 
 ## Useful Command line tools
 
