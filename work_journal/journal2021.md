@@ -1261,6 +1261,9 @@ though more expensive.
         - Processes have their own address space, memory and open file tables
         - Processes are self isolating i.e. corrupt process cannot hurt other processes 
         - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
+        - So how do we decide between multiprocessing and multithreading?
+            - Multithreading for I/O intensive tasks
+            - Multiprocessing for CPU intensive tasks (if you have multiple cores available)
 
 ## 2021-nov-16 Tue
 

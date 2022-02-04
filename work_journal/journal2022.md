@@ -451,6 +451,4 @@
 
 - Economics
     - What is Infrastructure? Long lived capital assets.
-    - due to covid, production has shifted from unorganized to organized.
-
-
+    - due to Covid, production has shifted from unorganized to organized.
