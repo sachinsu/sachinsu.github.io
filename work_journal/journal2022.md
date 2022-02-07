@@ -452,3 +452,74 @@
 - Economics
     - What is Infrastructure? Long lived capital assets.
     - due to Covid, production has shifted from unorganized to organized.
+
+## 2022-feb-07 Mon
+
+- Default size of the stack,
+    - 1 MB
+
+- Open source data stack 
+    - Airflow - Workflow
+    - Airbyte - ELT
+    - dbt - ELT
+    - Metabase - Dashboards and reporting 
+    - superset - Dashboards and reporting 
+    - PostgreSQL - RDBMS
+    - Great_Expectations - Data pipeline testing
+    - datahub - Data catalog/lineage
+
+- Bikeshedding is a metaphor to illustrate the strange tendency we have to spend excessive time on trivial matters, often glossing over important ones.
+    - The Law of Triviality states that the amount of time spent discussing an issue in an organization is inversely correlated to its actual importance in the scheme of things.Major, complex issues get the least discussion while simple, minor ones get the most discussion.
+    - Bike-shedding happens because the simpler a topic is, the more people will have an opinion on it and thus more to say about it. When something is outside of our circle of competence,we dont even try to articulate an opinion
+    - With any issue, we shouldn’t be according equal importance to every opinion anyone adds. We should emphasize the inputs from those who have done the work to have an opinion.
+    - The most informed opinions are most relevant. 
+
+- Insecure, ossified societies always look backwards (Wahabism, Ram rajya etc.), while societies feeling secure look forward.
+
+- Europe was ahead of India (as well as turks) when it comes to mideval military architecture be it canons, fortification and so on.
+    - from 1400-1500, europe started forward march w.r.t. rest of the world 
+    - Europe (below are visible in india only under british rule), 
+    - Long distance trade
+    - Centralization 
+    - Urbanization 
+    - Growth in private wealth
+    - Trading cities directly under rule of King and not local lords
+
+- Plague pandemic caused loss of faith in Church in Europe.
+
+- Quantum computing and 3d printing. 
+    - Quantum computing  has the potential to break the encryption used to protect sensitive data in the digital world of today and tomorrow.Powerful countries, companies, and universities are pouring money into the task of building a quantum computer powerful enough to perform exponentially faster than the computers of today.Google and IBM use the same basic building block in their machines to create quantum behavior, known as transmon qubits which were invented by NSA.
+    - Monitoring 5G successfully requires a deep understanding of what makes it fundamentally different from its predecessors: higher speed, lower range, more distribution nodes, different data protocols.
+    - NSA says "In the future, superpowers will be made or broken based on the strength of their cryptanalytic programs"
+
+
+- Constantly claiming to be a victim is not a sign of virtue. It's a strategy for narcissists and psychopaths to get ahead. Data: people who regularly signal victimhood are more willing to lie, cheat, and steal. Beware those who air personal grievances like every day is Festivus.
+
+- Crypto, 
+    - Smart intermediary are the only ones who are earning money. 
+    - Markets are lightly regulated 
+
+- Financial Industry
+    - Reversion to mean -  yesterday’s best performing funds are tomorrow's worst performing funds.
+    - selecting your fund for tomorrow by picking a winner from yesterday is an exercise fraught with peril.
+    - Best-performing funds become worst and vice versa. But index funds continue to earn market returns. They are neither the best-performing nor the worst performing, they are squarely in the middle.
+    - Nifty 50 Index fund charges 0.07%-0.20%, and active large-cap funds charge about 1-1.5%. So they have to generate 1-1.5% outperformance, just to cover the costs and then beat the index.
+
+- Criteria for Assets for Asset allocation plan, 
+    - Fundamentally different - asset classes must be fundamentally different and have unique risk. Stocks and bonds are different; one is ownership and the other is loan. U.S. stocks are different from international stocks in base currency and government policy. Real estate and commodities differ from common stocks in collateral structure. In contrast, U.S. mid-cap stocks are not fundamentally different than large cap and there is very little unique risk.  
+    - Real return – an asset class must generate a real return in the long-term (after-inflation). U.S. stocks have outperformed inflation by about six percent historically and real estate has earned about the same. Government bonds have outperformed by about two percent.  In contrast, commodities have no expected return over the inflation rate and do not pass this gate.
+
+    - High liquidity – an asset class must have daily liquidity. Stocks that trade on an organized exchange, and bonds that trade over-the-counter on a regular basis, pass this gate. Real estate ownership − outright or in a partnership − would not pass this gate, although real estate investment trusts (REITs) are exchange traded and do pass. Coins, artwork and other collectables tend to be illiquid and do not qualify.
+
+    - Diversified, low-cost funds – the asset class must be packaged in a liquid, low-cost and broadly diversified product such as a mutual fund or exchange-traded fund (ETF). Since all the analysis on has been based on an index, I prefer to replicate that index in portfolios with index funds and ETFs. An actively-managed product can be used (absent of a good index product), as long as it is broadly diversified and low cost. 
+
+- Philosophy
+    - Consistency is the playground of dull minds.
+    -  a human being who belongs to any particular culture must hold contradictory beliefs and be riven by incompatible values. 
+
+- The McNamara Fallacy is to presume that
+    -  quantitative models of reality are always more accurate than other models;
+    - the quantitative measurements that can be made most easily must be the most relevant; 
+    -  factors other than those currently being used in quantitative metrics must either not exist or not have a significant influence on success
+
+
