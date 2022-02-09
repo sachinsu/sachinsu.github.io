@@ -522,4 +522,61 @@
     - the quantitative measurements that can be made most easily must be the most relevant; 
     -  factors other than those currently being used in quantitative metrics must either not exist or not have a significant influence on success
 
+## 2022-feb-08 Tue
+
+- PostgreSQL Explain Analyzer 
+    - Lateral Joins -  run the inner query for every row produced by the outer query.  Useful when one knows approximately how many rows the outer query will return.
+    - Consider below output,
+        Limit  (cost=0.44..289.59 rows=1 width=52) (actual time=189.343..189.344 rows=1 loops=1)                                                       
+        Buffers: shared hit=23168                                                 
+        ->  Index Scan using ix_ts on truck_reading  (cost=0.44..627742.58 rows=2171 width=52) (actual time=189.341..189.341 rows=1 loops=1)|
+                Filter: (truck_id = 1234)                                           
+                Rows Removed by Filter: 1532532                                     
+                Buffers: shared hit=23168  
+
+        - This indicates, 
+            - PostgreSQL had to scan the entire index and FILTER out more than 1.53 million rows
+            - the amount of data PostgreSQL had to process to correctly retrieve the one row of data we were asking for - ~184MB of data! (23168 buffers x 8kb per buffer)
+
+- Reference Data Architecture, 
+    
+    - An API management platform (often called an API gateway) is necessary to create and publish data-centric APIs, implement usage policies, control access, and measure usage and performance. This  platform also allows developers and users to search for existing data interfaces and reuse them rather than build new ones. An API gateway is often embedded as a separate zone within a data hub but can also be developed as a standalone capability outside of the hub.
+
+
+- History 
+    - Christianity began as an esoteric Jewish sect that sought to convince Jews that Jesus of Nazareth was their long-awaited messiah.
+    - Christian success served as a model for another monotheist religion that appeared in the Arabian peninsula in the seventh century – Islam
+    - Buddhism - suffering arises from craving; the only way to be fully liberated from suffering is to be fully liberated from craving; and the only way to be liberated from craving is to train the mind to experience reality as it is.
+
+    - Middle east
+        - Iran - Was pamperred child of US before religious revolution.
+        - One of the main reasons for revolution was 1973 huge drop in oil prices (due to israel war) 
+        - reza pahlavi was already fled Iran.
+        - Khomaini was installed by religious body
+        - Saudi 
+        - Has 2 key regions, 
+        - Hejaz (Mecca) - South western part consisting of Medina, Jeddah
+        - Nejd - Central/eastern part which was poorer than Hejaz
+        - Al Saud's come from Nejd and they hold onto power by cajoling salafist nejdi ulama.   
+        - Qatar funds brookings think tank in DC.
+
+    - Why study history?
+        - Unlike physics or economics, history is not a means for making accurate predictions. We study history not to know the future but to widen our horizons, to understand that our present situation is neither natural nor inevitable, and that we consequently have many more possibilities before us than we imagine.
+
+
+- Foundation of a economy is always manufacturing
+
+- On Markets - Being really right is a double-edged sword, because it makes you even more confident in your abilities. And you are inclined to lean even harder into your current beliefs. But markets are dynamic, and strategies that outperform today will likely underperform at some point down the road. At the end of the day, Valuation Matters.
+
+- The harder we try with the conscious will to do something, the less we shall succeed. Proficiency and results come only to those who have learned the paradoxical art of doing and not doing, or combining relaxation with activity
+
+- Nietzsche
+    - In any population, you are going to have a group of people who are more talented/gifted/intelligent than average. Let’s call them The Strong. You are also going to have a group of people who are less talented/gifted/intelligent than average. Let’s call them The Weak
+    - The Strong will naturally accrue the power in society for no other reason than they are more capable and talented than the others.
+    - Because The Strong won their greater power and influence through outsmarting or outperforming others, they will come to adopt ethical beliefs that justify their position: that might makes right, that they are entitled to their privileged position, that they earned what is theirs. Nietzsche calls this “Master Morality.”
+    - Because The Weak lost their power and influence by being outsmarted and outperformed, they will come to adopt ethical beliefs that justify their position: that people deserve aid and charity, that one should give away one’s possessions to the less fortunate, that you should live for others and not yourself. Nietzsche calls this “Slave Morality.”
+    - Master/Slave Moralities have been in a kind of tension in every society for all of recorded history. Many political/social conflicts are side effects of the struggle between Master and Slave Moralities.
+    - Nietzsche believed that the ideas of guilt, punishment and a “bad conscience” are all culturally constructed and used by The Weak to chip away at the dominance and power of The Strong. He also believed that Slave Morality is just as capable of corrupting and oppressing a society as Master Morality. He used Christianity as his primary example of this.
+    - Nietzsche believed that Slave Morality stifled man’s greatest characteristics: creativity, innovation, ambition, and even happiness itself.
+    -  Claiming that the weak people had to invent God so that they could believe their suffering actually meant something. 
 

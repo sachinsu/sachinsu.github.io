@@ -113,6 +113,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [List of ETL frameworks](https://github.com/pawl/awesome-etl)
 - [Streaming frameworks](https://github.com/manuzhang/awesome-streaming)
 - [Extendable Workflow Automation tool in NodeJS](https://n8n.io)
+- [Nodered - Low code event driven pipelines](https://nodered.org/)
+
 
 ## Security 
 
