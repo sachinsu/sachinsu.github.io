@@ -120,6 +120,7 @@ draft: false
 - [Webedia's approach of using Customer processor (walparser) to read from Wal2JSON and  CDC between PG and Elasticsearch](https://www.postgresql.eu/events/pgconfeu2019/sessions/session/2651/slides/237/Deploy%20your%20own%20replication%20system%20with%20Wal2json.pdf)
 - [Message queuing using native postgresql](https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql)
 - [Queues in PostgreSQL](https://www.pgcon.org/2016/schedule/attachments/414_queues-pgcon-2016.pdf)
+- [Message queueing with native postgresql](https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql)
 - [Using PGQ to invalidate caches](https://www.hagander.net/talks/cache_invalidation_2014.pdf)
 - [pgstream- turns your  database into an event stream](https://github.com/tmc/pqstream)
 - [Wal-listener CLI](https://github.com/ihippik/wal-listener)

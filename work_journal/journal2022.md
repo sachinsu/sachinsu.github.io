@@ -578,5 +578,59 @@
     - Master/Slave Moralities have been in a kind of tension in every society for all of recorded history. Many political/social conflicts are side effects of the struggle between Master and Slave Moralities.
     - Nietzsche believed that the ideas of guilt, punishment and a “bad conscience” are all culturally constructed and used by The Weak to chip away at the dominance and power of The Strong. He also believed that Slave Morality is just as capable of corrupting and oppressing a society as Master Morality. He used Christianity as his primary example of this.
     - Nietzsche believed that Slave Morality stifled man’s greatest characteristics: creativity, innovation, ambition, and even happiness itself.
-    -  Claiming that the weak people had to invent God so that they could believe their suffering actually meant something. 
+    -  Claiming that the weak people had to invent God so that they could believe their suffering actually meant something.
+
+
+## 2022-feb-11 Fri
+
+- Postgres High availability with Patroni, 
+    - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts. 
+    - Basic components, 
+        - PostgreSQL cluster: the database cluster, usually consisting of a primary and two or more replicas
+        - Patroni: used as the failover management utility
+        - etcd: used as a distributed configuration store (DCS), containing cluster information such as configuration, health, and current status.
+    - How HA Works, 
+        - Each PostgreSQL instance within the cluster has one application database. These instances are kept in sync through streaming replication.
+        -  Each database host has its own Patroni instance which monitors the health of its PostgreSQL database and stores this information in etcd. 
+        - The Patroni instances use this data to:
+            - keep track of which database instance is primary
+            - maintain quorum among available replicas and keep track of which replica is the most "current"
+            - determine what to do in order to keep the cluster healthy as a whole
+            - Patroni manages the instances by periodically sending out a heartbeat request to etcd which communicates the health and status of the PostgreSQL instance. etcd records this information and sends a response back to Patroni. 
+        - Streaming replication
+            - Keeps replica more up to date compared to file based log shipping. 
+            - The standby connects to the primary, which streams WAL records to the standby as they're generated, without waiting for the WAL file to be filled.
+            - is asynchronous by default.
+
+- History
+    - history’s choices are not made for the benefit of humans. This is difficult to evaluate due to lack of scale.
+    - There is no proof that cultures that are beneficial to humans must inexorably succeed and spread, while less beneficial cultures disappear. 
+    - How modern science differs, 
+        -  The willingness to admit ignorance. Modern science is based on the Latin injunction ignoramus – ‘we do not know’. It assumes that we don’t know everything. Even more critically, it accepts that the things that we think we know could be proven wrong as we gain more  knowledge. No concept, idea or theory is sacred and beyond challenge. 
+        -  The centrality of observation and mathematics. Having admitted ignorance, modern science aims to obtain new knowledge. It does so by gathering observations and then using mathematical tools to connect these observations into comprehensive theories.
+        - The acquisition of new powers. Modern science is not content with creating theories. It uses these theories in order to acquire new powers, and in particular to develop new technologies.
+        - The willingness to admit ignorance has made modern science more dynamic, supple and inquisitive than any previous tradition of knowledge.
+        - The willingness to admit ignorance has made modern science more dynamic, supple and inquisitive than any previous tradition of knowledge. This has hugely expanded our capacity to understand how the world works and our ability to invent new technologies. But it presents us with a serious problem that most of our ancestors did not have to cope with. Our current assumption that we do not know everything, and that even the knowledge we possess is tentative, extends to the shared myths that enable millions of strangers to cooperate effectively. If the evidence shows that many of those myths are doubtful, how can we hold society together? How can our communities, countries and international system function? All modern attempts to stabilise the sociopolitical order have had no choice but to rely on either of two unscientific methods: 
+        - Take a scientific theory, and in opposition to common scientific practices, declare that it is a final and absolute truth. This was the method used by Nazis (who claimed that their racial policies were the corollaries of biological facts) and Communists (who claimed that Marx and Lenin had divined absolute economic truths that could never be refuted). 
+        - Leave science out of it and live in accordance with a non-scientific absolute truth. This has been the strategy of liberal humanism, which is built on a dogmatic belief in the unique worth and rights of human beings – a doctrine which has embarrassingly little in common with the scientific study of Homo sapiens. 
+        - Science, industry and military technology intertwined only with the advent of the capitalist system and the Industrial Revolution.
+            -  social poverty, which withholds from some people the opportunities available to others;
+            - biological poverty, which puts the very lives of individuals at risk due to lack of food and shelter.
+            - Most scientific studies are funded because somebody believes they can help attain some political, economic or religious goal.
+        - What did Asian cultures lacked when compared to European/British from 15th century onwards, 
+            - They lacked the values, myths, judicial apparatus and sociopolitical structures that took centuries to form and mature in the West and which could not be copied and internalised rapidly. Asians organized their society differently.
+        - France and the United States quickly followed in Britain’s footsteps because the French and Americans already shared the most important British myths and social structures. 
+        - Europeans were used to thinking and behaving in a scientific and capitalist way even before they enjoyed any significant technological advantages
+        -  European imperialists set out to distant shores in the hope of obtaining new knowledge along with new territories.
+        -  Europeans favour present observations over past traditions
+        - Banks are allowed to loan $10 for every dollar they actually possess, which means that 90 per cent of all the money in our bank accounts is not covered by actual coins and notes.
+
+
+- decentralized finance?
+    - Traditional finance involves many financial intermediaries like stock markets, hedge funds and banks. Banks, for example, stand in between savers and borrowers and, as we explain in Modern Principles, they perform useful services like evaluating borrowers and creating easy means of payments like credit cards and checks. Naturally, financial intermediaries also take a cut of the proceeds, about 8% of GDP!.
+    - Decentralized finance replaces some of these intermediaries with code, smart contracts, that allows buyers and sellers, borrowers and lenders and others to interact more directly and we hope at lower cost and with greater innovation.
+
+- Consumer lending 
+    - Consumer lending seems easy, but it's not. There are three categories of people. Those that don't need credit. Those that need credit but manage money responsibly & will pay you back. And those that will take whatever credit they are offered, manage money poorly, and will default
+    - Success in consumer lending is about finding a way to successfully differentiate between category 2 and 3. And it's not that easy - particularly because you can remain current on your loans for quite a while if you have access to more credit borrow more from A to repay B.
 
