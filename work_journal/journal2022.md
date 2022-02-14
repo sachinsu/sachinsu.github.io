@@ -634,3 +634,29 @@
     - Consumer lending seems easy, but it's not. There are three categories of people. Those that don't need credit. Those that need credit but manage money responsibly & will pay you back. And those that will take whatever credit they are offered, manage money poorly, and will default
     - Success in consumer lending is about finding a way to successfully differentiate between category 2 and 3. And it's not that easy - particularly because you can remain current on your loans for quite a while if you have access to more credit borrow more from A to repay B.
 
+## 2022-feb-14 Mon
+
+- Jack Bogle's investment advice 
+    - Regular rebalancing is not necessary 
+    - 60-40 is probably good allocation 
+    - key things to think about how much risk one can take 
+    -pay attention to GDP
+
+- Adam Smith in "The wealth of nations", 
+    - an increase in the profits of private entrepreneurs is the basis for the increase in collective wealth and prosperity.
+    - Egoism is altruism.
+    -  Capital consists of money, goods and resources that are invested in production.
+
+- Mideval Europe
+    - In Europe, kings and generals gradually adopted the mercantile way of thinking, until merchants and bankers became the ruling elite
+    - The European conquest of the world was increasingly financed through credit rather than taxes, and was increasingly directed by capitalists whose main ambition was to receive maximum returns on their investments. 
+    - The mercantile empires were simply much shrewder in financing their conquests.
+    -  credit financed new discoveries; discoveries led to colonies; colonies provided profits; profits built trust; and trust translated into more credit. For Asian empires, Credit was secondary and during campaigns they ran out of fuel after a few thousand kilometres. Capitalist entrepreneurs only increased their financial momentum from conquest to conquest.
+    - Due to uncertain nature of campaigns and risks involved, europeans adopted approach of limited liability joint stock companies where multiple investors bet money on campaign with less risk for individual. 
+    - Decade by decade, western Europe witnessed the development of a sophisticated financial system that could raise large amounts of credit on short notice and put it at the disposal of private entrepreneurs and governments. This system could finance explorations and conquests far more efficiently than any kingdom or empire.
+    - Capital trickles away from dictatorial states that fail to defend private individuals and their property. Instead, it flows into states upholding the rule of law and private property.
+    - the British Empire was established and run largely by private joint-stock companies based in the London stock exchange
+    
+
+
+

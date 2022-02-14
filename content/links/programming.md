@@ -218,6 +218,10 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [A half-hour to learn Rust](https://fasterthanli.me/blog/2020/a-half-hour-to-learn-rust/)
 - [Tour of Rust](https://tourofrust.com/)
 
+## PHP
+
+- [PHP: The Right way](https://phptherightway.com/)
+
 
 ## Email Server
 
