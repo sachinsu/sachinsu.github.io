@@ -17,7 +17,6 @@
     Sahil, 
     - Unified non-card transactions from different channels
 
-
 ## 2022-jan-03 Mon
 
 - Tech
@@ -656,7 +655,79 @@
     - Decade by decade, western Europe witnessed the development of a sophisticated financial system that could raise large amounts of credit on short notice and put it at the disposal of private entrepreneurs and governments. This system could finance explorations and conquests far more efficiently than any kingdom or empire.
     - Capital trickles away from dictatorial states that fail to defend private individuals and their property. Instead, it flows into states upholding the rule of law and private property.
     - the British Empire was established and run largely by private joint-stock companies based in the London stock exchange
-    
+
+## 2022-feb-17 Thu
+
+- Public discourse etc.
+    -Religion is a culture of faith; science is a culture of doubt 
+    -Institutions are hard to institute & maintain, because human beings are self-righteous, hubristic, and power-hungry (a la Trudeau "I will get my way no matter what"). We are always tempted to discard institutions when they become a short term nuisance/obstruction to expediency
+
+- Portfolio Construction , John Bogle ***
+    - Benjamin Graham believed that investors should never be entirely out of the stock market (or entirely in it, either).
+    - Graham advised that when enthusiasm is high, you should trim back your stocks, but never to zero -- and when pessimism prevails, you should raise your allocation to stocks, but never to 100%.
+    - Graham suggested keeping a minimum of 25% and a maximum of 75% in stocks, with the rest in bonds.
+
+    - On virtues of Investors, 
+        - Investors can cultivate their independence by working at it, by always asking whether what other people are saying or doing makes sense, by never pursuing a course of action just because other people are.
+    - Norway Model vs Yale Model 
+        - Norway has Social security program worth 1.3T for 5 million population 
+        - It began after it discovered an abundance of oil back in 1969, and the country designed an investment strategy to grow their newfound wealth.
+        - More than half of assets are in growth stocks alone. The Norway Pension Fund Global is the single  largest owner of global stocks in the entire world.
+        - The Norway Model is characterized by minimal use of expensive products, like private equity and hedge funds, and focuses instead on keeping fees low, and diversifying across publicly traded stocks and bonds. It uses passive management – meaning the investment decision-makers don't purport to have the expertise to pick which stocks will outperform which other stocks. They just buy a little bit of every stock.
+        -  Norway's pension fund currently has money in over 9,100 stocks, across 69 countries!
+        - The other model is  Yale Model is characterized by usage of expensive alternative assets like hedge funds and private equity.
+        -It is access to certain people, deals, and funds that make investing in expensive, private products potentially worth it. An institution like Yale has this access, and these connections, in spades. It is the institutions who don't have elite access, most of whom have, like lemmings, followed Yale into this investment approach, whose communities and alumni bases are being poorly served. Not everyone is Yale.
+
+- International payments,
+    -  cross-border transfers: “Correspondent banking is an arrangement, where one bank (the correspondent) holds deposits
+    owned by other banks (the respondents) and provides payments and other services to them.
+    - “Closed loop” (or in-house) payment systems, where one organization (exclusively) provides the services to both originator and beneficiary.
+    - Fintechs have developed very cost efficient cross-border payment services for often used currency pairs. They use local accounts in both currencies. As soon as the originator pays an amount to the account of the fintech in his country of residence, the fintech account in the country of residence of the beneficiary credits an equivalent amount. A real currency conversion is not necessary.
+    - SWIFT's main function is to communicate payment instructions across borders, but without the actual clearing and settlement.
+    - Ripple has tried to establish a faster wholesale alternative to correspondence banking with SWIFT, based on distributed ledger technology,
+    - More than 90% of the $140 trillion of cross-border transmissions in 2020 – equivalent to 152 percent of global GDP – were signaled via SWIFT (The Economist 2021).
+    - SWIFT operated a data center in the US where all messages were stored for 124 days. Since last few years, SWIFT has segregated message storage between Europe (for intra-europe transactions) and rest in US.
+    - SPFS (System for Transfer of Financial Messages) is a Russian alternative to SWIFT.Mainly used within Russia. 
+    - China operates the “Cross-Border Interbank Payment System” (CIPS). not only a financial messaging system such as SWIFT, but a complete payment system, also incorporating clearing and settlement.
+
+## 2022-feb-18 Fri
+
+- Obfuscation for Android 
+    - R8 - standard optimizer and obfuscator. All classes, functions and variables are renamed to short, unreadable names. Proguard is alternative free Code obfuscation tool. 
+
+- Database Query performance analysis (MySQL) 
+    -  lock time greater than 50% of query time is a problem because MySQL should spend the vast majority of its time doing work, not waiting.
+    - Locks are primarily used for writes (INSERT, UPDATE, DELETE, REPLACE) because rows must be locked before they can be written. Response time for writes depends, in part, on lock time
+    - For reads (SELECT), there are nonlocking and locking reads. The distinction is easy because there are only two locking reads: SELECT…FOR UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is nonlocking, which is the normal case.
+    - Locking reads should be avoided, especially SELECT…FOR UPDATE, because they don’t scale, they tend to cause problems, and there is usually a nonlocking solution to achieve the same result
+    - Rows examined is the number of rows that MySQL accessed to find matching rows. It indicates the selectivity of the query and the indexes. The more selective both are, the less time MySQL wastes examining nonmatching rows.
+
+## 2022-feb-21 Mon
+
+- basic lesson of evolutionary psychology: a need shaped in the wild continues to be felt subjectively even if it is no longer really necessary for survival and reproduction. 
+
+- Cosmic rays altering the state of bit in a computer. Higher you go from earth's surface cosmic radiation increases. Blue screen appearing randomly could be due to cosmic particles 
+
+- Tech#How postgre stores rows
+    - PostgreSQL stores the actual data into segment files (more generally called heap files). Typically its fixed to 1GB size but you can configure that at compile time using --with-segsize. When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments. This arrangement avoids problems on platforms that have file size limitations but 1GB is very conservative choice for any modern platform. These segment files contain data in fixed size pages which is usually 8Kb, although a different page size can be selected when compiling the server with --with-blocksize option but this size usually falls in ideal size when considering performance and reliability tradeoffs. If the page size is too small, rows won’t fit inside the page and if it’s too large there is risk of write failure because hardware generally can only guarantee atomicity for a fixed size blocks which can vary disk to disk (usually ranges from 512 bytes to 4096 bytes).
+    - Internally PostgreSQL maintains a unique row id for our data which is usually opaque to users. We can query it explicitly to see its value.in ctid First digit stand for the page number and the second digit stands for the tuple number. PostgreSQL moves around these tuples when VACUUM is run to defragment the page. 
+
+- Stock Markets
+    - Terminologies used by Short sellers
+    -  “spoofing,” -  involves flooding the market with fake orders in an effort to push a stock price up or down,
+    - "Scalping" - short-sellers cash out their positions without disclosing it
+
+- Code Obfuscation types
+    - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
+    - Flow obfuscation - h modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
+
+- Deng Xiaoping is going to go down as one of the greatest leaders that any nation ever had. Because he had to give up his own ideology to do something else that worked better.
+
+- Each newspaper—all those local monopolies—was an independent bastion of power. The economic position was so impregnable, they were all monopolies. The ethos of the journalists was trying to tell it like it is. They were really a branch of the government. They call them the Fourth Estate, meaning the fourth branch of the government. 
+
+- cognitive dissonance, the tension that arises when beliefs and reality collide.
 
 
-
+- .NET Async streams
+- Can be used with "Async/await" and then using "yield return" within the function 
+- Cancellationtoken can be passed for cancelling the stream

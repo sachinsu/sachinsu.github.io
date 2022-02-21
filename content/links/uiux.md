@@ -62,3 +62,4 @@ draft: false
 - [Shared data types for building collaborative software](https://github.com/yjs/yjs)
 - [NoSQL-database for JavaScript Applications like Websites, hybrid Apps, Electron-Apps, Progressive Web Apps and NodeJs](https://rxdb.info)
 - [RemixIcon - Open Source Icons Repository](https://remixicon.com/)
+- [Mermaid - Generate Diagrams from Markdown](https://github.com/mermaid-js/mermaid)

@@ -190,6 +190,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Distributed tracing using Tempo, OpenTelemetry and Grafana Cloud](https://grafana.com/blog/2021/09/23/intro-to-distributed-tracing-with-tempo-opentelemetry-and-grafana-cloud/)
 - [Skywalking - Open source Application Performance Monitoring tool](https://github.com/apache/skywalking)
 - [HTTP Toolkit - Freemium HTTP Interceptor toolkit](https://httptoolkit.tech/)
+- [Comparing Open source log collectors Fluentd, Logstash, Fluentbit](https://www.cncf.io/blog/2022/02/10/logstash-fluentd-fluent-bit-or-vector-how-to-choose-the-right-open-source-log-collector/)
 
 ## Distributed messaging, Streams
 
