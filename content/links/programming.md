@@ -52,6 +52,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Google's API Design Guidelines](https://google.aip.dev/100)
 - [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
+- [Why refactoring?](https://xp123.com/articles/refactoring-whole-team-guide/)
 
 ## Training
 
@@ -149,6 +150,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Developer playbook approach by Hackney council](https://playbook.hackney.gov.uk/API-Playbook/)
 - [Nice content on Ansible](https://github.com/geerlingguy)
 - [Performance profiling using Open source Pyroscope Server](https://pyroscope.io/)
+- [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
+
 
 ## Observability
 
@@ -235,3 +238,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Interview Questions
 
 - [10 API Product Manager Interview Questions](https://dzone.com/articles/10-api-product-manager-interview-questions)
+
+## Interesting free services 
+
+- [Grist spreadsheets - alternative to Airtable](https://github.com/gristlabs/grist-core)
+- [Penpot - prototyping tool](https://github.com/penpot/penpot)

@@ -727,7 +727,47 @@
 
 - cognitive dissonance, the tension that arises when beliefs and reality collide.
 
-
 - .NET Async streams
-- Can be used with "Async/await" and then using "yield return" within the function 
-- Cancellationtoken can be passed for cancelling the stream
+    - Can be used with "Async/await" and then using "yield return" within the function 
+    - Cancellationtoken can be passed for cancelling the stream
+
+## 2022-feb-22 Tue
+
+- Tech
+    - Easier ways of doing things
+        - SSL certificates, with Let’s Encrypt
+        - Concurrency, with async/await (in several languages)
+        - Centering in CSS, with flexbox/grid
+        - Building fast programs, with Go
+        - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
+        - Building cross-platform GUIs, with Electron
+        - VPNs, with Wireguard
+        - Running your own code inside the Linux kernel, with eBPF
+        - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
+        - Configuring cloud infrastructure, with Terraform
+        - Setting up a dev environment, with Docker
+        - Sharing memory safely with threads, with Rust
+    - Easier using hosted services
+        - CI/CD, with GitHub Actions/CircleCI/GitLab etc
+        - Making useful websites by only writing frontend code, with a variety of “serverless” backend services
+        - Training neural networks, with Colab
+        - Deploying a website to a server, with Netlify/Heroku etc
+        - Running a database, with hosted services like RDS
+        - Realtime web applications, with Firebase
+        - Image recognition, with hosted ML services like Teachable Machine
+        - Cryptography, with opinionated crypto primitives like libsodium
+        - Live updates to web pages pushed by the web server, with LiveView/Hotwire
+        - Embedded programming, with MicroPython
+        - Building videogames, with Roblox / Unity
+        - Writing code that runs on GPU in the browser (maybe with Unity?)
+        - Building IDE tooling with LSP (the language server protocol)
+        - Interactive theorem provers (not sure with what)
+        - NLP, with HuggingFace
+        - Parsing, with PEG or parser combinator libraries
+        - ESP microcontrollers
+        - Batch data processing, with Spark
+
+- MySQL 
+    - frequently dredging up old data is problematic for performance.
+    - determine the ideal data model for the access, then use a data store built for that data model
+
