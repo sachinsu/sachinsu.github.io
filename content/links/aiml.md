@@ -17,6 +17,7 @@ Useful links related from AI, ML space
 
 ## Articles
 
+- [Machine learning is still too hard - Year 2022](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/)
 - [Neural Networks from Scratch](https://sirupsen.com/napkin/neural-net)
 - [History of AI](https://spectrum.ieee.org/history-of-ai)
 - [Machine Learning Algorithms: What is a Neural Network?](https://www.verypossible.com/insights/machine-learning-algorithms-what-is-a-neural-network)

@@ -770,4 +770,52 @@
 - MySQL 
     - frequently dredging up old data is problematic for performance.
     - determine the ideal data model for the access, then use a data store built for that data model
+    - Enqueue writes - Use a queue to stabilize write throughput. It allow the application to respond gracefully and predictably to flood of requests that overwhelms the application, or the database, or both.For write-heavy applications, enqueueing writes is the best practice and practically a requirement. Invest the time to learn and implement a queue.
+    - Data Partitioning - separating hot and cold data: frequently and infrequently accessed data, respectively. It partitions by Access and it archives by moving the infrequently accessed (cold) data out of the access path of the frequently accessed (hot) data
+    - Reference data size limit of a single MySQL instance to 2 or 4 TB (on SSD):
+        - 2 TB - For average queries and access patterns, commodity hardware is sufficient for acceptable performance, and operations complete in reasonable time.
+        - 4 TB - For exceptionally optimized queries and access patterns, mid- to highend hardware is sufficient for acceptable performance, but operations might take slightly longer than acceptable.
+    - Sharding 
+        - High cardinality - An ideal shard key has high cardinality (see “Extreme Selectivity”) so that data is evenly distributed across shards. A great example is a website that lets you watch videos: it could assign each video a unique identifier like dQw4w9WgXcQ. The column that stores that identifier is an ideal shard key because every value is unique, therefore cardinality is maximal.
+        - Reference application entities - An ideal shard key references application entities so that access patterns do not cross shards. A great example is an application that stores payments: although each payment is unique (maximal cardinality), the customer is the application entity. Therefore, the primary access pattern for the application is by customer, not by payment. Sharding by customer is ideal because all payments for a single customer should be located on the same shard.
+        - When opting for sharding, plan to accomodate at least four years of data growth.
+        - ProxySQL and Vitess are middlewares (between app and MySQL) that support sharding by several mechanisms.
+    - A common misconception is that the application needs thousands of connections to MySQL for performance or to support thousands of users. This is patently not true. The limiting factor is threads, not connections—more on Threads_running in a moment. A single MySQL instance can easily handle thousands of connections. I’ve seen 4,000 connections in production and more in benchmarks. But for most applications, several hundred connections (total) is more than sufficient. If your application demonstrably requires several thousand connections, then you need to shard.
+    - MySQL runs one thread per client connection 
+    - One CPU Core runs one thread.When the number of threads running is greater than the number of CPU cores, it means that some threads are stalled - waiting for CPU Time.
+    - Four metrics count the occurrence of SELECT statements that are usually bad for performance:
+        - Select_scan
+        - Select_full_join
+        - Select_full_range_join
+    - Database Capacity planning
+        - the four-year fit is an estimate of data size or access in four years applied to the capacity of your hardware today
+        - It’s better to be more precise and collect table sizes every 15 minutes.Near-term data growt trending is used to estimate when the disk will run out of space. Long term trend is used to estimate when sharding is necessary.
+    - A deadlock occurs when two (or more) transactions hold row locks that the other transaction needs
+
+- Stock Market#Indices
+    - Index providers like MSCI make money in three ways. They charge index funds and managers of exchange-traded funds a few basis points on the assets that track their benchmarks; they charge exchanges like CME a commission on each traded option or futures contract linked to their indices; and they charge subscription fees to a range of third-party users.
+
+- Quotable "Quotes"
+    - “A single arrow is easily broken, but not ten in a bundle” 
+    - When one buys international stocks there are actually two trades here - one to buy the local currency and the other to buy the stock
+    - Peter bernstein 
+        - Survival is the only road to riches
+        - The riskiest moment is when you’re right.That’s when you’re in the most trouble, because you tend to overstay the good decisions. 
+        - When you invest, it’s not your wealth today, but it’s your future that you’re really managing.
+        - Pascal’s Law: the consequences of decisions and choices should dominate the probabilities of outcomes
+        - Risk-taking is an inevitable ingredient in investing, and in life, but never take a risk you do not have to take
+        - Experience shapes memory; memory shapes our view of the future. 
+        - there is a tendency for people to expect the status quo either to last indefinitely or to provide advance signals for shifting strategies.  The world does not work like that.  Surprise and shock are endemic to the system, and people should always arrange their affairs to that they will survive such events.
+
+- Minto Pyramid principle
+    - Applying the top-down structure of a pyramid in communication methods means that a direct answer is given to the question that has been asked. These could also be recommendations, the results from a study, thesis statement or other key points.
+    - Minto Pyramid Principle inverts the traditional method that’s used to arrive at a conclusion. Usually, the conclusion in a text or presentation is given after the facts have been presented, and all analyses and supporting ideas have been discussed.
+    - The reason to first make the recommendation and then offer the motivation is that the supervisors often already see the conclusion or recommendation coming when a flood of arguments and reasons is provided. This because they think in such a top-down way, focusing on the bigger picture.
+    - Moreover, a direct communication method is more convincing than a conversation that beats about the bush. A direct communication style is a display of assertiveness and self-confidence.
+
+- History
+    - Each society has two groups 
+        - commercial elites and military elites - and con icts occur based on the incentives of these groups. 
+        - There are two types of institutions, inclusive institutions w and extractive institution. Roughly speaking with inclusive institutions the commercial elites have the upper hand, while with extractive institutions the military elites have the upper hand.
+        - In a head to head contest between an extractive and inclusive society the extractive society is assumed to be more likely to prevail.
 

@@ -43,6 +43,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [HTTPie - Command line HTTP Client](https://httpie.io/)
 - [Visidata - A terminal spreadsheet multitool for discovering and arranging data](https://github.com/saulpw/visidata)
 - [Nginx - Tips for Sys Admins](https://alex.dzyoba.com/blog/nginx-features-for-operators/)
+- [Avoiding the Top 10 NGINX Configuration Mistakes](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes)
 - [Listmonk - Open source newsletter and mailing list manager](https://listmonk.app)
 - [ATOP - Performance monitor for Linux (Better than htop)](https://www.atoptool.nl/)
 - [Below - Analyze Historical performance data for Linux](https://github.com/facebookincubator/below)
