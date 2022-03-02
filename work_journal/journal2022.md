@@ -819,3 +819,43 @@
         - There are two types of institutions, inclusive institutions w and extractive institution. Roughly speaking with inclusive institutions the commercial elites have the upper hand, while with extractive institutions the military elites have the upper hand.
         - In a head to head contest between an extractive and inclusive society the extractive society is assumed to be more likely to prevail.
 
+- Quantum Computing (2022)
+    - Quantum computing is about doing things much more efficiently than what is currently possible.
+    - For now, there is no realistic time scale on when powerful quantum computers would be available that fulfil perceived use cases efficiently.
+    - It is far harder to make reliable,scalable quantum processor.
+    - Noise - Quantum device leaking the information. 
+
+## 2022-Mar-01 Tue
+
+- Optimistic concurrency 
+    - When OTP is generated, it must be getting saved in DB against Card Number. 
+    - In that table, add version column (i.e. 'timestamp with time zone')
+    - While beginning transaction, read this version and proceed with steps
+    - Before commit, check the version as part of 'update ...where ' statement. If rows affected are 0, roll back the transaction.
+    - prefer not using triggers 
+    - Pessimistic locking (Select ....for update nowait) can not be used here since it requires stateful connection to database and locks can not be held across connections.
+    - Alternative to version column is Hash/checksum but its computationally expensive and has some issues with column types like BLOB, LONG, LONG RAW etc. 
+    - There is possibility of having Blocking inserts when having table with Unique constraint when two or more transactions are trying to enter same record.  
+
+- Investment Portfolio
+- One is that it’s a bad idea to overhaul your portfolio when you’re afraid. The time to become more conservative is when things are going well, not when the world seems to be coming apart.
+- consider embracing surprise instead of fleeing from it.
+
+- Air force 
+- Mirage 2000 aircraft is very robust,over-built aircraft in the sense it can take upto 11g of Gravitational load (on its airframe) when pitched in. This means that it can carry on offering service well after its official service time. Same is with Rafale.
+- In Defence,  localize special/deniable items and import or buy Off the shelf commodities technologies
+
+- International Trade 
+    - National economies no long matter rather what matters is multinational corporations coordinating far flung “value chains.”
+
+- Sleep
+    - Caffeine, nicotine and alchohol impacts negatively.
+    - Identify your sleep pattern - like 11-7am or 10-5am and act accordingly, There are five types , extreme morning, morning, neutral, evening and extreme evening type.
+    - As far as possible do not nap during day - even if you have to take it before 1pm and that too it shud be brief like less than 10 minutes.
+    - If you are looking for sympathy, it is between shit and psyphelis (i.e. its very bad)
+    - Dont spend too much time in bed as it affects next day's sleep
+    - Dont go to bed earlier
+    - Dont put clocks in bedroom and dont look at time (on smartphone) while sleeping
+
+- How Petrodollars work
+    - The crucial point that this highlights is that Russia’s reserve accumulation, like reserve accumulation by other oil and gas producers such as Norway or Saudi Arabia, is a source of funding in Western markets. The reserves do not simply sit idly in central banks accounts, they are lent out. With sanctions, the funding provided by Russia’s petro- and gas-dollars is in jeopardy. And that impacts not only the Russians.The Russian funds in European central banks are not simply pools of money sitting idly. They are part of complex chains of transactions that may now be put in jeopardy by the sanctions.This is true more generally for global financial markets at a time of huge uncertainty
