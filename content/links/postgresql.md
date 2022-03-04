@@ -106,6 +106,7 @@ draft: false
 - [Migration Guide from Oracle to PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/new-oracle-to-postgres-migration-guide-for-azure/ba-p/2055303)
 - [Lessons while migrating from Oracle to PostgreSQL](https://www.cybertec-postgresql.com/en/building-an-oracle-to-postgresql-migrator-lessons-learned/)
 - [Reshape - easy-to-use, zero-downtime schema migration tool](https://github.com/fabianlindfors/reshape)
+- [Migra - diff tool for PostgreSQL Schema](https://github.com/djrobstep/migra)
 
 ## High Availability 
 

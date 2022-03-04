@@ -49,6 +49,7 @@ Knowledge base around general database related topics.
 - [Goose - Database schema migrations](https://pressly.github.io/goose/)
 
 ## Data Analytics 
+
 - [Emerging Architectures for Modern Data Infrastructure](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
 - [Data Visualization/Exploration platforms Comparion Matrix](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform)
 - [Supercharging Apache Superset](https://medium.com/airbnb-engineering/supercharging-apache-superset-b1a2393278bd)
@@ -82,8 +83,11 @@ Knowledge base around general database related topics.
 - [Nocodb - Turn MySQL/PostgreSQL data in smart Spreadsheet](https://github.com/nocodb/nocodb)
 - [Real time data analysis with Apache Pinot and kafka](https://www.confluent.io/blog/real-time-analytics-with-kafka-and-pinot/)
 - [UUIds are bad for performance](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)
+- [Noria - Caching and updating Relational query results](https://github.com/mit-pdos/noria)
+- [Differential Datalog - Language for incremental computation](https://github.com/vmware/differential-datalog)
 
 ## ETL,ELT, Evolutionary Practices 
+
 - [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
 - [Airbyte-Open source ELT](https://github.com/airbytehq/airbyte)
 - [Database CI/CD practices using Redshift](https://medium.com/big-data-engineering/redshift-cicd-how-we-did-it-and-why-you-should-do-it-to-e46ecf734eab)

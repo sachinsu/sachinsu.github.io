@@ -838,12 +838,12 @@
     - There is possibility of having Blocking inserts when having table with Unique constraint when two or more transactions are trying to enter same record.  
 
 - Investment Portfolio
-- One is that it’s a bad idea to overhaul your portfolio when you’re afraid. The time to become more conservative is when things are going well, not when the world seems to be coming apart.
-- consider embracing surprise instead of fleeing from it.
+    - One is that it’s a bad idea to overhaul your portfolio when you’re afraid. The time to become more conservative is when things are going well, not when the world seems to be coming apart.
+    - consider embracing surprise instead of fleeing from it.
 
 - Air force 
-- Mirage 2000 aircraft is very robust,over-built aircraft in the sense it can take upto 11g of Gravitational load (on its airframe) when pitched in. This means that it can carry on offering service well after its official service time. Same is with Rafale.
-- In Defence,  localize special/deniable items and import or buy Off the shelf commodities technologies
+    - Mirage 2000 aircraft is very robust,over-built aircraft in the sense it can take upto 11g of Gravitational load (on its airframe) when pitched in. This means that it can carry on offering service well after its official service time. Same is with Rafale.
+    - In Defence,  localize special/deniable items and import or buy Off the shelf commodities technologies
 
 - International Trade 
     - National economies no long matter rather what matters is multinational corporations coordinating far flung “value chains.”
@@ -858,4 +858,32 @@
     - Dont put clocks in bedroom and dont look at time (on smartphone) while sleeping
 
 - How Petrodollars work
-    - The crucial point that this highlights is that Russia’s reserve accumulation, like reserve accumulation by other oil and gas producers such as Norway or Saudi Arabia, is a source of funding in Western markets. The reserves do not simply sit idly in central banks accounts, they are lent out. With sanctions, the funding provided by Russia’s petro- and gas-dollars is in jeopardy. And that impacts not only the Russians.The Russian funds in European central banks are not simply pools of money sitting idly. They are part of complex chains of transactions that may now be put in jeopardy by the sanctions.This is true more generally for global financial markets at a time of huge uncertainty
+    - The crucial point that this highlights is that Russia’s reserve accumulation, like reserve accumulation by other oil and gas producers such as Norway or Saudi Arabia, is a source of funding in Western markets. The reserves do not simply sit idly in central banks accounts, they are lent out. With sanctions, the funding provided by Russia’s petro- and gas-dollars is in jeopardy. And that impacts not only the Russians.The Russian funds in European central banks are not simply pools of money sitting idly. They are part of complex chains of transactions that may now be put in jeopardy by the sanctions.This is true more generally for global financial markets at a time of huge uncertainty.
+
+## 2022-Mar-03 Thu
+
+- Quantum Computing's impact
+    -  the most important security and privacy properties to protect in the face of a quantum computer are confidentiality and authentication.
+        - quantum computers will not only be able to decrypt on-going traffic, but also any traffic that was recorded and stored prior to their arrival.
+        - The threat model for authentication is a little more complex: a quantum computer could be used to impersonate a party in a connection or conversation. 
+
+## 2022-Mar-04 Fri
+
+- China and Russia Trade
+    - By 2020, only 46% of the trade between two countries was conducted in dollars.
+    - Removing russia from SWIFT may accelerate the process of de-dollarization
+    - In response to covid-19, the Federal Reserve increased its total assets from $4.1 trillion in January 2020 to $8.3 trillion as of August 2021. This historic level of money printing has led to US inflation reaching its highest level in 40-years.
+    - Russia is one of the world's largest exporters of oil with the United States importing more than 600,000 barrels per day. Russian oil represents more than a third of Europe's total imports.
+
+- International Payments
+    - Banks largely cannot hold money extraterritorially directly, for most useful values of “directly.” Instead, they rely on a correspondent banking relationship.
+    - Banks can have accounts at other banks, and extremely frequently do. A major reason to do this internationally is to facilitate payments in other currencies and other jurisdictions.
+    - SWIFT: The world’s most expensive encrypted messaging service
+    - SWIFT is almost synonymous with international wires because it is the primary way that banks and their correspondents choose to interoperate with respect to wires
+    -  Specifically, they send a MT 103 message, which is a bit longer than a tweet, and then each bank operates their internal books and other banking systems to make the request encoded in the message a reality (or fail gracefully) 
+ 
+
+- Gold only has value, if “gold whales” (=central banks) aren’t selling it.
+
+- Inflation is not result of Central bank printing money but rather due to Government's borrowings and how much credit is created in economy.  India has around 200 lakh crore money in circulation. out of this, 10% of money is in circulation.
+
