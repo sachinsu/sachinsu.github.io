@@ -887,3 +887,28 @@
 
 - Inflation is not result of Central bank printing money but rather due to Government's borrowings and how much credit is created in economy.  India has around 200 lakh crore money in circulation. out of this, 10% of money is in circulation.
 
+## 2022-Mar-07 Mon
+
+- Analysing Balance Sheet 
+    - Check "Profit before Tax" against "Net Fixed assets". See if company is generating healthy profit compared to other safe investment options like Govt. Bonds etc.
+
+- Psychology of Money 
+    - what people really want in life is independence and autonomy. Money is a conduit to gain it.
+
+- Internation investment through NSE IFSC 
+    - When a company listed on exchanges in one country wants to attract investors and trading in another country, it is done through Depository Receipts (DRs). If the company offers the DR, it is called sponsored DR and if the company isn’t involved, it is called unsponsored DR.
+    - Charges
+    - the exchange itself will charge 12 cents for every $100 or 0.12% compared to 0.00345% charged within India for equity trades. ( the transaction charges would go down with an increase in trading volumes.)
+    - A T+3 day settlement, which means stocks or DRs once bought will get credited after 3 days (it is 2 days in India) to the demat account. similarly, funds from stocks sold will get credited after 3 days.
+
+- Saudi History 
+    - Ibn ʻAbd al-Wahhabʼs students were the only people who knew how to read and write and history was written from their perspective. Ibn 'Abd al-Wahhabʼs writing has been used by many extremists for their own agendas.
+    - Saudi Arabia is a monarchy,  beneath the monarchy there is a complex structure of tribal and urban monarchical system like tribal chiefs and urban leaders.
+
+- Strategy
+    - The importance of randomized strategies was one of the early insights of game theory.
+    - Rules, 
+        - 1: Look ahead and reason back. Anticipate where your initial decisions will ultimately lead, and use this information to calculate your best choice.
+
+
+
