@@ -908,7 +908,40 @@
 - Strategy
     - The importance of randomized strategies was one of the early insights of game theory.
     - Rules, 
-        - 1: Look ahead and reason back. Anticipate where your initial decisions will ultimately lead, and use this information to calculate your best choice.
+        - 1: Look ahead and reason back. Anticipate where your inxittial decisions will ultimately lead, and use this information to calculate your best choice.
 
+## 2022-Mar-09 Wed
+
+- Linux Diagnostic tools
+    - ‘vmstat’ - reports information about processes, memory, paging, block IO, traps, and CPU activity.
+    - ‘iostat’ - reports CPU and input/output statistics of the system.
+    - ‘netstat’ - displays statistical data related to IP, TCP, UDP, and ICMP protocols.
+    - ‘lsof’ - lists open files of the current system.
+    - ‘pidstat’ - monitors the utilization of system resources by all or specified processes, including CPU, memory, device IO, task switching, threads, etc.
+
+- Financial Instruments
+    - credit default swap is an insurance policy on the bonds of a country or company. If you buy a $100 bond and a $100 CDS, you should always get back $100.
+
+- Investing 
+    - Warning signs
+        - No response to queries even after followups
+    - Criteria
+        - Sales & Profit growth 
+        - No Cyclic profits but should be consistent
+        - Enough Cash flows (Profits converted into cash) 
+        - Low in debt
+        - Management Quality
+
+- Futures
+    - Futures are mark-to-market financial products, and when the futures price goes up, the short side of the futures contract has to put up money today.
+
+- Tech#Database Record Access
+    - Why indexes, 
+        - When data is stored on disk-based storage devices, it is stored as blocks of data. These blocks are accessed in their entirety, making them the atomic disk access operation. Disk blocks are structured in much the same way as linked lists; both contain a section for data, a pointer to the location of the next node (or block), and both need not be stored contiguously. Due to the fact that a number of records can only be sorted on one field, we can state that searching on a field that isn’t sorted requires a Linear Search which requires (N+1)/2 block accesses (on average), where N is the number of blocks that the table spans. If that field is a non-key field (i.e. doesn’t contain unique entries) then the entire tablespace must be searched at N block accesses. Whereas with a sorted field, a Binary Search may be used, which has log2 N block accesses. Also since the data is sorted given a non-key field, the rest of the table doesn’t need to be searched for duplicate values, once a higher value is found. Thus the performance increase is substantial.
+
+    - What is indexing?
+        - Indexing is a way of sorting a number of records on multiple fields. Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it. The downside to indexing is that these indices require additional space on the disk since the indices are stored together in a table using the MyISAM engine, this file can quickly reach the size limits of the underlying file system if many fields within the same table are indexed. 
+    - When should it be used?
+        - Given that creating an index requires additional disk space (277,778 blocks extra from the above example, a ~28% increase), and that too many indices can cause issues arising from the file systems size limits, careful thought must be used to select the correct fields to index.
 
 
