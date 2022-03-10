@@ -945,3 +945,12 @@
         - Given that creating an index requires additional disk space (277,778 blocks extra from the above example, a ~28% increase), and that too many indices can cause issues arising from the file systems size limits, careful thought must be used to select the correct fields to index.
 
 
+## 2022-Mar-10 Thu
+
+- PostgreSQL Learnings, 
+    - LEFT JOIN in place of an INNER JOIN helps the planner make more accurate row count predictions. Adding redundant ONclauses improves Hash Joins.
+    -  ANY(VALUES ...) instead of IN can enforce a Hash Aggregate with many elements.
+    - It’s a bad idea to make the table primary key a varchar.
+    - CLUSTER rocks when the query returns many related rows.
+    - pg_hint_plan offers powerful hints, including the estimated row count correction Rows, JOIN sequence enforcer Leading, and the index override IndexScan. Though the latter may strike back.
+    - https://explain.tensor.ru to visualize EXPLAIN-s.

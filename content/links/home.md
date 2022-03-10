@@ -45,3 +45,4 @@ draft: false
 - [Pick Parts.Build Your PC.Compare And Share](https://pcpartpicker.com/)
 - [Privacy - Nice Overview and content](https://www.eff.org/pages/tools)
 - [Privacy tools for everyday user](https://www.privacytools.io/)
+- [Hacker's Diet](https://www.fourmilab.ch/hackdiet/www/tableofcontents1_6.html)
