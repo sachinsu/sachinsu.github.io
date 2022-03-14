@@ -944,13 +944,55 @@
     - When should it be used?
         - Given that creating an index requires additional disk space (277,778 blocks extra from the above example, a ~28% increase), and that too many indices can cause issues arising from the file systems size limits, careful thought must be used to select the correct fields to index.
 
-
 ## 2022-Mar-10 Thu
 
 - PostgreSQL Learnings, 
-    - LEFT JOIN in place of an INNER JOIN helps the planner make more accurate row count predictions. Adding redundant ONclauses improves Hash Joins.
+    - LEFT JOIN in place of an INNER JOIN helps the planner make more accurate row count predictions. Adding redundant ON clauses improves Hash Joins.
     -  ANY(VALUES ...) instead of IN can enforce a Hash Aggregate with many elements.
     - It’s a bad idea to make the table primary key a varchar.
     - CLUSTER rocks when the query returns many related rows.
     - pg_hint_plan offers powerful hints, including the estimated row count correction Rows, JOIN sequence enforcer Leading, and the index override IndexScan. Though the latter may strike back.
     - https://explain.tensor.ru to visualize EXPLAIN-s.
+
+## 2022-Mar-11 Fri
+
+- Purposely low expectations is the only way to survive in a world that's not kind enough to reward every ambitious person with success.
+- In a index of 500 stocks, fewer than 20 companies make up most of returns. sometimes its fewer than 5 companies. The rest range from ok to disastorous returns. 
+- Things are unlikely to change because for most people the way things are right now is indistringuishable from magic relative to how things used to be.Hence any little improvements that happen to come along feel incredible.
+
+## 2022-Mar-14 Mon
+
+- "No man ever steps in the same river twice, for it is not the same river and he is not the same man."--Heraclitus
+
+- Crude oil 
+    -  Depending on its chemical composition, crude oil can be either “sweet” or “sour” depending on its sulfur content; or “heavy” or “light” depending on its gravity (i.e. whether it is heavier or lighter than water). These distinctions matter because re neries can only process one type of crude oil at a time. The process of converting them to handle another can take between months and years. Even if another re nery was available that could process the oil, it might not have sufficient capacity to handle the additional throughput.
+
+    - Natural gas -  cheapest way to transport natural gas is by pipeline. Overseas transport is an expensive and technologically challenging process due to the need to liquefy and then re-gasify the natural gas. Oil, by contrast, can be shipped on land or sea in whatever form is required without the need for pressurized containers. For that reason, most producers and consumers of natural gas depend on long-term contracts that lock in prices for the latter (usually linked to oil but o en at a discount) and amortize the cost of constructing and maintaining pipelines for the former. 
+
+- Innovation at Companies 
+    - Slow down to innovate
+    - "Good ideas can get trapped inside big companies because they're not staffed to succeed. The challenge at any established company is that the demands of your core business will always soak up all of the bandwidth of your leaders."
+    - Your process for finding new product ideas should come down to this: What helps you make the right decision to take
+    the next step and figure out if A) this is the customer problem you want to solve, and B) this is the customer experience that solves that problem?
+    - If you can't describe something that sounds compelling and that people really want and need in a one-page press release, then there's no point in building it.
+    - Good intentions don't work, mechanisms do.
+    -You can't get to a place where you don't know if your business was better this week than it was last week or this quarter over last quarter — otherwise, it will continue to get worse, undetected.
+
+-- Genghis khan - a persistent cycle of pragmatic learning, experimental adaptation, and constant revision driven by his uniquely disciplined and focused will. He took chinese noodles to west. 
+
+- Prof. Richard Thaler's advice on investing 
+    - Put away money to take care of emergency (typically government bonds)
+    - Use low-cost index funds as core holdings. Plan on investing for decades.
+    - Decide on Asset allocation
+
+- Investing#Index fund
+    - TRI - Total returns index - Nifty index values are ignoring dividends but TRI shows figure dividends/bonuses re-invested back. 
+    - It is necessary to compare index fund returns with TRI and not index itself.
+
+- Russian History   
+    - Post Soviet breakup, two harward economists (Shliefer and sacks) were enlisted as advisors by Russian Govt. (Chuikov) as advisors for privatization
+    - One of these advisors faced lawsuit for conflict of interest and had to settle it out of court. 
+    - This privatization gave rise to Oligarch. Majority of these oligarchs are jewish 
+    
+
+
