@@ -99,6 +99,7 @@ draft: false
 - [Job queues, Single reader and pub/sub](https://spin.atomicobject.com/2021/02/04/redis-postgresql/)
 - [Use cases for scaling out PostgreSQL - Citus](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/when-to-use-hyperscale-citus-to-scale-out-postgres/ba-p/1958269)
 - [Database lab Engine - Fast cloning of Database for dev/QA/staging](https://postgres.ai/products/how-it-works)
+- [PGSync - Sync data from one Postgres database to another](https://github.com/ankane/pgsync)
 
 
 ## Migration to PostgreSQL

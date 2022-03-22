@@ -43,7 +43,7 @@ Section covering Business, project/programming perspectives
 - [42 Lessons Learned in building production database](https://maheshba.bitbucket.io/blog/2021/10/19/42Things.html)
 - [Data structures implemented in JavaScript - I](https://github.com/trekhleb/javascript-algorithms)
 - [Data driven enterprises of 2025](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/the-data-driven-enterprise-of-2025)
-
+- [Some Benefits of Simple Software Architecture](https://www.wave.com/en/blog/simple-architecture/)
 
 ## Fintech 
 

@@ -39,7 +39,7 @@ Knowledge base around general database related topics.
 - [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
 - [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
 - [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
-- [How databases optimize Subqueries](https://scattered-thoughts.net/writing/materialize-decorrelation)
+- [How databases optimize Sub-queries](https://scattered-thoughts.net/writing/materialize-decorrelation)
 - [Approaches to database migration](https://www.wix.engineering/post/wix-inbox-journey-3-approaches-for-zero-downtime-database-migration)
 
 ## Tools Collection 
@@ -47,6 +47,7 @@ Knowledge base around general database related topics.
 - [DBMS Tools](https://dbmstools.com/)
 - [TSBS - tool to benchmark bulk load performance and query execution performance.](https://github.com/timescale/tsbs)
 - [Goose - Database schema migrations](https://pressly.github.io/goose/)
+- [HammerDB - Benchmarking Suite for databases](https://www.hammerdb.com/)
 
 ## Data Analytics 
 

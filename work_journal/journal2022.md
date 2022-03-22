@@ -993,6 +993,166 @@
     - Post Soviet breakup, two harward economists (Shliefer and sacks) were enlisted as advisors by Russian Govt. (Chuikov) as advisors for privatization
     - One of these advisors faced lawsuit for conflict of interest and had to settle it out of court. 
     - This privatization gave rise to Oligarch. Majority of these oligarchs are jewish 
-    
 
+- Self descipline can be taught.
+- Assessing Judgement of somebody else - Accept that they r making it under certain context. Stand in their shoes before passing it on. 
+- Next war may be won or loss even before people realize it happened.
+
+- Tech#HAProxy - HAProxy is a high-availability server used for load balancing and as a proxy for TCP and HTTP applications. It can do TLS offloading, header-based and route-based routing, and health checks for backends. It supports protocols like WebSocket, gRPC, HTTP and more.
+
+- GeoPolitics
+    - Post Soviet breakup, Russia started privatization with 2 russian-american jewish harvard professors (Shleifer and sacks) as advisors
+    - Shleifer's involvement with both Harvard and the Russian government culminated many years later in a conflict of interest scandal involving personal gains from investments in Russian securities. After an investigation, both Harvard and Shleifer were forced to pay fines in 2005 to bring the matter to an end.
+    - This privatization gave rise to russian oligarchs
+    - Majority of these oligarch's are jewish, hence israel's outrich w.r.t. Russia-Ukraine crisis.
+
+
+- Markets# Options
+    - A put option allows you to sell a security at an agreed price any time before it expires. It is a way to bet that the thing will go down. 
+
+- When you make a decision , you shouldn't be thinking about its impact tomorrow but its impact 10 years down the line - Margaret Thatcher
+
+- Certainty is impossible goal. Some people keep asking for more and more information aiming to drive uncertainty to zero 
+
+- Psychology
+    - You can’t be an important and life-changing presence for some people without also being a joke and an embarrassment to others.
+    - when a person has no problems, the mind automatically finds a way to invent some.
+    - finding something important and meaningful in your life is perhaps the most productive use of your time and energy
+    - Maturity is what happens when one learns to only give a bother about what’s truly bother worthy.
+    - The life itself is a form of suffering
+    - Two ways people think about their problems, 
+        - Denial. Some people deny that their problems exist in the first place. And because they deny reality, they must constantly delude or distract themselves from reality. This may make them feel good in the short term, but it leads to a life of insecurity, neuroticism, and emotional repression.
+        - Victim Mentality. Some choose to believe that there is nothing they can do to solve their problems, even when they in fact could. Victims seek to blame others for their problems or
+        blame outside circumstances. This may make them feel better in the short term, but it leads to a life of anger, helplessness, and despair.
+    - Highs - Whether it’s a substance like alcohol, the moral righteousness that comes from blaming
+    others, or the thrill of some new risky adventure, highs are shallow and unproductive ways to go about one’ life.Highs also generate addiction. The more you rely on them to feel better about your underlying problems, the more you will seek them out.
+    - Everything comes with inherent sacrifice
+    - Make a habit of questioning emotions
+    - What creates our positive experiences will define our negative experiences
+    - The path to happiness is a path full of shitheaps and shame. 
+    - Entitled people exude a delusional degree of self-confidence
+    - problem with entitlement is that it makes people need to feel good about themselves all the time, even at the expense of those around them
+    - Research shows that once one is able to provide for basic physical needs (food, shelter, and so on), the correlation between happiness and worldly success quickly approaches zero.
+    - people who base their self-worth on being right about everything prevent themselves from learning from their mistakes 
+    - Good values are 1) reality-based, 2) socially constructive, and 3) immediate and controllable
+
+- Tech#Encryption 
+    - Symmetric-key algorithm - the same key is used to encrypt and decrypt.
+
+## 2022-Mar-17 Thu
+
+- Database Workloads 
+    - OLTP
+        - Characterstics, 
+            - Inserts, updates, and deletes only affect a single row. An example: Adding an item to a user’s shopping cart.
+            - Read operations only read a handful of items from the database. An example: listing the items in a shopping cart for a user.
+            - Aggregations are used rarely, and when they are used they are only used on small sets of data. Example: getting the total price of all items in a user their shopping cart.
+        - Relevant benchmarks
+            - Throughput in TPS (transactions per second)
+            - Query latency, usually at different percentiles (p95, etc.)
+    - OLAP 
+        - Characteristics, 
+            - Periodic batch inserts of data. 
+            - Read operations often read large parts of the database.
+            - Aggregations are used in almost every query.
+            - Queries are large and complex. 
+            - Not a lot of concurrent users 
+        - Relevant benchmarks
+            - How long it took to run all of the queries that are part of the benchmark
+            - How long it took to run each of the queries, measured separately per query 
+    - HTAP (Hybrid transactional/analytical processing)
+        - Combines characteristics from OLTP and OLAP
+    - Important questions while benchmarking 
+        - Is it running on production infrastructure? A lot more performance can usually be achieved when critical production features have been disabled. Things like backups, High Availability (HA) or security features (like TLS) can all impact performance.
+        - How big is the dataset that was used? Does it fit in RAM or not? Reading from disk is much slower than reading from RAM. So, it matters a lot for the results of a benchmark if all the data fits in RAM.
+        - Is the hardware excessively expensive? Obviously a database that costs $500 per month is expected to perform worse than one that costs $50,000 per month.
+        - What benchmark implementation was used? Many vendors publish results of a TPC benchmark specification, where the benchmark was run using a custom implementation of the spec. These implementations have often not been validated and thus might not implement the specification correctly.
+
+- Tech#DNS Servers
+    - Two types
+        - Resolvers - handle DNS Queries
+        - Authoritative Nameservers - Has database of DNS Entries.
+- Psychology 
+    - Everything comes with an inherent sacrifice
+    - What creates our positive experiences will define our negative experiences
+
+## 2022-Mar-21 Mon
+
+- Recommended Online security measures 
+    - Use 2FA - Avoid SMS for second authentication as it is vulnerable to SIM jacking (i.e. SIM Swapping attack where In these attacks, a hacker convinces your mobile provider to reroute your phone number to their device. They can then access information and accounts linked to that phone.)
+    - Use password Manager
+    - Patch O/s for latest updates
+    - Review cloud, social, and financial security/privacy settings
+    - Only download software from official sites 
+    - change passwords and close unused accounts
+    - setup email aliases for online accounts
+    - Use VPN not public networks or computers
+
+- Web Appliation Monitoring 
+    - Metrics to observe for Web Applications
+        - Response Time p50, p90, p99, sum, avg 
+        - Throughput by HTTP status 
+        - Worker Utilization 
+        - Request Queuing Time 
+        - Service calls 
+        - Database(s), caches, internal services, third-party APIs, ..
+        - Enqueued jobs are important!
+        - Circuit Breaker tripping  
+        - Errors, throughput, latency p50, p90, p99
+        - Throttling 
+        - Cache hits and misses % 
+        - CPU and Memory Utilization
+        - Exception counts 
+
+    - Metrics to observe for Web Applications
+        - Job Backend (e.g. Sidekiq, Celery, Bull, ..)
+        - Job Execution Time p50, p90, p99, sum, avg 
+        - Throughput by Job Status {error, success, retry} 
+        - Worker Utilization 
+        - Time in Queue  
+        - Queue Sizes  
+        - Don’t forget scheduled jobs and retries!
+        - Service calls p50, p90, p99, count, by type 
+        - Throttling 
+        - CPU and Memory Utilization
+        - Exception counts  
+    - Relevant Metrics should be available to slice by endpoint or job, tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
+    - In absense of observability setup, start with logs. For Format, consider using https://stripe.com/blog/canonical-log-lines
+
+    - Key Non-functional aspects of a Payments System
+        - Reliability and fauly tolerance 
+        - Reconciliation 
+
+    - Non relational databases are good for below requirements, 
+        - Application requires super-low latency
+        - Data is unstructured or no relational data
+        - Only need to serialize/de-serialize data 
+        - Store massive amount of data
+
+    - Message queues provide Decoupling, async processing which is good for scalability of applications
+    - Idempotency in API, 
+        - idempotency key is usually a unique value that is generated by the client and expires after a certain period of time. A UUID is commonly used as an idempotency key and it is recommended 
+        - To perform an idempotent payment request, an idempotency key is added to the HTTP header <idempotency-key: key_value>
+        - an idempotency key is sent to the payment system as part of the HTTP request
+        - For the second request, it’s treated as a retry because the payment system has already seen the idempotency key. When we include a previously specified idempotency key in the request header, the payment system returns the latest status of the previous request. 
+        - If multiple concurrent requests are detected with the same idempotency key, only one request is processed and the others receive the “429 Too Many Requests” status code. 
+        - To support idempotency, we can use the database's unique key constraint.
+
+- India
+    - TN
+        -  is probably top urbanized state in India (more than 60%)
+        - % share of Agriculture could be 8%
+
+- Investing
+    - John Bogle's recommendation for portfolio, 
+    - 95% - Core allocation - Equity, Debt ...
+    - 5% - Funny money, trading 
+    - Howard marks on Investing 
+        - Market has become Efficient compared to 60 years back
+        - Access to data, live feeds have enabled many people to become smart at investing
+        - Emotion is the greatest enemy of superior investing. 
+        - In 2022, readily available quantitative information about the present cannot be the road to superior performance, most people, they should invest through others. Whether it’s an index fund, an ETF, or an actively managed account. We don’t do our own legal work, dental work, medical work, we don’t fix our own cars. Why should we manage our own money? Why should we believe that we have the ability as part-timers to do that? So the amateur should basically pick funds and managers, in my opinions.you want to go into a global fund that includes China under their charter. 
+
+- Payments industry 
+    - The process by which a business discerns that some money has the colour of revenue is called revenue recognition.
 

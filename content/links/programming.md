@@ -47,12 +47,20 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Scaling with Common Sense by Zerodha](https://zerodha.tech/blog/scaling-with-common-sense/)
 - [Guidelines for Command line interface](https://clig.dev/)
 - [Azure Well-Architected Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
-- [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
-- [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
-- [Google's API Design Guidelines](https://google.aip.dev/100)
 - [Change Data Capture, Strangler fig and Saga Patterns](https://www.slideshare.net/slideshow/embed_code/key/d5w2hZIBJeFfu0)
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
 - [Why refactoring?](https://xp123.com/articles/refactoring-whole-team-guide/)
+
+## API Development, Security
+
+- [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
+- [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis?utm_source=hackernewsletter&utm_medium=email&utm_term=code)
+- [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+- [Google's API Design Guidelines](https://google.aip.dev/100)
+- [API Design for Serverless Apps](https://www.readysetcloud.io/blog/allen.helton/the-importance-of-proper-serverless-api-design/)
+- [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
+- [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
+
 
 ## Training
 
@@ -80,6 +88,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Data Science at the Command line](https://www.datascienceatthecommandline.com)
 - [RobotFramework - Open source Test Automation and RPA](https://robotframework.org/)
 - [WASP - Windows Automation Snapin for PowerShell](https://github.com/mavaddat/wasp)
+- [Web API rate limiting](https://github.com/stefanprodan/WebApiThrottle)
 
 ## Tools, Libraries
 
@@ -121,8 +130,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [OWASP ZAP- Free Security Testing for Web Application](https://www.zaproxy.org)
 - [Web Application Security Testing](https://danielmiessler.com/projects/webappsec_testing_resources/)
-- [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
-- [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
 - [Understanding OAuth and OpenID Connect](https://www.youtube.com/watch?v=996OiexHze0)
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
@@ -156,6 +163,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Observability
 
 - [Observability trends 2021](https://www.civo.com/blog/observability-trends-2021)
+- [What to Monitor and Metrics to collect for Web App with Background Jobs](https://sirupsen.com/metrics)
 - [What was observability again?](https://www.cncf.io/blog/2021/03/02/what-was-observability-again/?utm_source=o11y.news&utm_medium=email)
 - [Dashboard design best practices](https://www.influxdata.com/blog/5-dashboard-design-best-practices/)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)

@@ -74,7 +74,6 @@ Platform where i have spent most time till now.
 - [Collection of HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful) ](https://github.com/denji/awesome-http-benchmark)
 - [Light weight cross-platform test automation](https://gauge.org)
 - [Event sourcing using variety of stores like AMQP, database](https://github.com/eventflow/EventFlow)
-- [Web API rate limiting](https://github.com/stefanprodan/WebApiThrottle)
 - [Feature Management library for ASP.NET Core](https://github.com/microsoft/FeatureManagement-Dotnet)
 - [General Checklist for Projects](https://github.com/StephenCleary/Docs/blob/master/libraries/README.md)
 - [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
