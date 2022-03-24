@@ -1156,3 +1156,49 @@
 - Payments industry 
     - The process by which a business discerns that some money has the colour of revenue is called revenue recognition.
 
+- CBDC (Central bank Digital Currency)
+    - Database maintained by Central Bank 
+    - Like cash, it would not earn any interest
+    - only way to have account with RBI
+    - Crypto is de-centralized (so to say), CBDC is not 
+    - It can be programmed for restricted use like destination bound (as food coupons),or being time bound etc.
+    - Dollar reserves of RBI - Only onshore US banks can have these dollars and not RBI. Every central bank has account with one of these banks. US is aware of all international transactions happening in Dollars. 
+    - CBDC can potentially be used as alternative to USD with RBI acting as banker. India is Well placed for this because it has consistent current account deficit.
+
+- Tech 
+    - Consistent Hashing - Used to distribute requests/data efficiently and evenly across servers. One way to distribute hash keys across servers in a range. Lets say, given SHA-1 algorithm for hashing, we find out min (i.e. 0) and max of this algorithm and then allocate keys across servers in this range.
+
+## 2022-Mar-23 Wed
+
+- What is Observability?
+    - Observability means gaining visibility into the internal state of a system. It’s used to give users the tools to figure out what’s happening, where it’s happening, and why. At Cloudflare, we believe that observability has three core components: monitoring, analytics, and forensics. Monitoring measures the health of a system - it tells you when something is going wrong. Analytics give you the tools to visualize data to identify patterns and insights. Forensics helps you answer very specific questions about an event.
+
+- Human Psychology
+    - Uncertainty is the root of all progress and all growth. As the old adage goes, the man who believes he knows everything learns nothing
+    - Work expands so as to fill up the time available for its completion
+
+- Joel Greenblatt's wisdom
+    - 1. Understand incentives -Companies are run by people. Understand how the top management is being motivated.  Out of their total package, how much compensation is fixed and variable? Do they see their companies as their life's work or just another "job"?
+    2. Don't sell too early - If a company is performing well and its valuation is sensible, never sell it. (I'll probably sell a bit to feel good, but I'll keep the bulk.)We have our blind spots. Overcome it by sharing our thesis with others and listening to feedback.
+    3. The hard part - focusing on easy companies  - Simplicity is key. Invest in what we can understand well so we can succeed. In investing, it's about the returns we can generate -- not how complex our ideas are.
+    4. Control our emotions and do proper valuation work.= Take control of our emotions when we're investing. Don't take the shortcut, do proper work on valuations. Valuation work acts as an anchor during volatile markets.
+    5.  Focus on normalised earnings When Wall Street is short-sighted, it is easy to outperform just by being a long term investor. Focus on the bigger picture.If a high-quality business is facing short term challenges that are not fatal, give it a break. Stay vested.
+    6. Less leverage the better - we could be right in our analysis but short-term prices may disagree -- causing temporary negative losses.  If we're leveraged up, we may potentially suffer from a margin call before we're proven right.
+    7. Mr Market will eventually get it right = In the short term, the stock market is terrible at valuing businesses.  That is your opportunity. But in the long term, if your company is worth its weight, it will be reflected in its share price. 
+
+- US Taxation
+    -  if you buy stocks in your 401(k) tax-advantaged retirement account, and you sell them to buy other stocks in the 401(k), you don’t pay taxes; a 401(k) defers taxes until you take money out at retirement.
+    - if you buy shares in a mutual fund, and they go up, and you don’t sell, you might have to pay taxes anyway. A mutual fund pools your money with many other people’s money and buys a bunch of stocks for all of you. And if the mutual fund sells stocks, it incurs capital gains taxes, which it passes on to its holders. Roughly speaking what this means is that if you invest in a mutual fund, and it goes up, and you don’t sell, but other investors in the mutual fund do sell, then you have to pay taxes. (As do they.) One reason people like to invest in exchange- traded funds is that this rule is weird and the ETF business has found ways to avoid it.
+
+-  a cyclical is a company that will prosper in good times and suffer in bad. That's because it makes or sells expensive products or luxury items that customers can put off buying when they are short on cash. People continue to buy deodorant, dental floss, Big Macs, and headache pills no matter what, which is why drugstores and fast-food restaurants are not cyclicals.
+- The best time to get involved with cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest.
+
+
+- Peter lynch's stock criteria,
+    - Relatively debt free
+    - beaten down in market
+    - selling for less than cash in their bank accounts
+    -If it's a choice between investing in a good company in a great industry, or a great company in a lousy industry, I'll take the great company in the lousy industry any day. Good management, a strong balance sheet, and a sensible plan of action will overcome many obstacles, but when you've got weak
+    management, a weak balance sheet, and a misguided plan of action, the greatest industry in the world won't bail you out
+
+

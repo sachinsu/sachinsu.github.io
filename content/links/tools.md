@@ -22,6 +22,7 @@ Section covering useful tools for every day activities, Online learning etc.
 
 ## Useful Command line tools
 
+- [Shellcheck- a static analysis tool for shell scripts](https://www.shellcheck.net/)
 - [Useful online playgrounds by Julia Evans](https://jvns.ca/blog/2021/09/24/new-tool--an-nginx-playground/)
 - [dsq- run sql queries against CSV,JSON,TSV, Web server logs](https://github.com/multiprocessio/dsq)
 - [exa - colorful alternative to ls](https://github.com/ogham/exa)
