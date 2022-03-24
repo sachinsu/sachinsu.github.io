@@ -25,7 +25,6 @@ Knowledge base around general database related topics.
 - [Using Streamsets for CDC From Oracle to Other destinations](https://streamsets.com/blog/replicating-oracle-to-mysql-and-json/)
 - [Transactions in Google Spanner](https://spanner.fyi/transactions/)
 - [Things I Wished More Developers Knew About Databases](https://medium.com/@rakyll/things-i-wished-more-developers-knew-about-databases-2d0178464f78)
-- [MySQL Sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1)
 - [Interactive Book about SQL](https://selectstarsql.com/)
 - [SQL Interview Questions](https://quip.com/2gwZArKuWk7W)
 - [Hadoop or Laptop](https://veekaybee.github.io/2017/03/20/hadoop-or-laptop/)
@@ -104,6 +103,11 @@ Knowledge base around general database related topics.
 - [Mara pipelines - Opinionated ETL framework](https://github.com/mara/mara-pipelines)
 - [Enso - Interactive Data Workflow builder with no coding](https://github.com/enso-org/enso)
 - [Database for Event Sourcing](https://www.eventstore.com/)
+
+## Database scaling
+
+- [Sharding a database](https://stackoverflow.blog/2022/03/14/how-sharding-a-database-can-make-it-faster/)
+- [MySQL Sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1)
 
 
 ## Data Discovery

@@ -248,6 +248,10 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [10 API Product Manager Interview Questions](https://dzone.com/articles/10-api-product-manager-interview-questions)
 
+## API 
+
+- [Comparing API Architectural Styles](https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/)
+
 ## Interesting free services 
 
 - [Grist spreadsheets - alternative to Airtable](https://github.com/gristlabs/grist-core)
