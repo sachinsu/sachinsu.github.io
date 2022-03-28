@@ -52,7 +52,7 @@ Knowledge base around general database related topics.
 
 - [About Data Mesh Architecture](https://www.datamesh-architecture.com/)
 - [Data mesh vs. Data Fabric](https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/)
-- [Emerging Architectures for Modern Data Infrastructure](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
+- [Emerging Architectures for Modern Data Infrastructure](https://future.a16z.com/emerging-architectures-modern-data-infrastructure/)
 - [Data Visualization/Exploration platforms Comparion Matrix](https://dropbox.tech/application/why-we-chose-apache-superset-as-our-data-exploration-platform)
 - [Supercharging Apache Superset](https://medium.com/airbnb-engineering/supercharging-apache-superset-b1a2393278bd)
 - [Snowplow - Cloud Native Behavioral data engine (e.g. User Analytics)](https://github.com/snowplow/snowplow)

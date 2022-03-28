@@ -53,6 +53,7 @@ My current Favourite Language
 
 ### Libraries, Tools
 
+- [Scripting with Go](https://bitfieldconsulting.com/golang/scripting)
 - [Right way to check weather](https://github.com/chubin/wttr.in)
 - [Generate Go Code for Database / SQL for Mysql and PostgreSQL](https://sqlc.dev)
 - [Why SQLc is better approach than ORM](https://brandur.org/sqlc)

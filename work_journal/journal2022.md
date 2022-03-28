@@ -1211,15 +1211,11 @@
     4.	Divide and conquer. Write isolated modules with separate concerns which are loosely coupled. Test each part separately and together. Keep the tests close to reality but test the edge cases too.
     5.	Deprecate yourself. Don’t be the go-to person for the code. Optimize it for people to find their way fixing bugs and adding features to the code. Free yourself to move on to the next project/company. Don’t own the code or you’ll never grow beyond that.
     6.	Security comes in layers: each layer needs to be assessed individually but also in relation to the whole. Risk is a business decision and has direct relation to vulnerability and probability. Each product/organization has a different risk appetite (the risk they are willing to take for a bigger win). Often these 3 concerns fight with each other: UX, Security, Performance.
-    7.	Realize that every code has a life cycle and will die. Sometimes it dies in its infancy before seeing the light of production. Be OK with letting go. Know the difference between 4 categories of features and where to put your time and energy:
-    Core: like an engine in a car. The product is meaningless without it.
-    Necessary: like a car’s spare wheel. It’s rarely used but when needed, its function decides the success of the system.
-    Added value: like a car’s cup-holder. It’s nice to have but the product is perfectly usable without it.
-    Unique Selling Point: the main reason people should buy your product instead of your rivals. For example, your car is the best off-road vehicle.
+    7.	Realize that every code has a life cycle and will die. Sometimes it dies in its infancy before seeing the light of production. Be OK with letting go. Know the difference between 4 categories of features and where to put your time and energy: Core: like an engine in a car. The product is meaningless without it. Necessary: like a car’s spare wheel. It’s rarely used but when needed, its function decides the success of the system. Added value: like a car’s cup-holder. It’s nice to have but the product is perfectly usable without it. Unique Selling Point: the main reason people should buy your product instead of your rivals. For example, your car is the best off-road vehicle.
     8.	Don’t attach your identity to your code. Don’t attach anyone’s identity to their code. Realize that people are separate from the artifacts they produce. Don’t take code criticism personally but be very careful when criticizing others’ code.
     9.	Tech debt is like fast food. Occasionally it’s acceptable but if you get used to it, it’ll kill the product faster than you think (and in a painful way).
     10.	When making decisions about the solution all things equal, go for this priority:
-    Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance
+    **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
     But don’t follow that blindly because it is dependent on the nature of the product. Like any career, the more experience you earn, the more you can find the right balance for each given situation. For example, when designing a game engine, performance has the highest priority, but when creating a banking app, security is the most important factor.
     11.	Bugs’ genitals are called copy & paste. That’s how they reproduce. Always read what you copy, always audit what you import. Bugs take shelter in complexity. “Magic” is fine in my dependency but not in my code.
     12.	Don’t only write code for the happy scenario. Write good errors that answer why it happened, how it was detected and what can be done to resolve it. Validate all system input (including user input): fail early but recover from errors whenever possible. Assume the user hold a gun: put enough effort into your errors to convince them to shoot something other than your head!
@@ -1232,3 +1228,25 @@
     19.	Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t overengineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
     20.	Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
 
+## 2022-Mar-28 Mon
+
+- Behavioural Psychology 
+    - absolute freedom, by itself, means nothing.
+    - Travel is a fantastic self development tool, because it extricates you from the values of your culture and shows you that another society can live with entirely different values and still function and not hate themselves
+    - Appearances and salesmanship became more advantageous forms of expression in a society where there existed an abundance of economic opportunity
+    - There is such pressure in the West to be likable that people often reconfigure their entire personality depending on the person they’re dealing with.
+    - Rejection makes your life better. if we reject nothing (perhaps in fear of being rejected by something ourselves), we essentially have no identity at all.
+    - The desire to avoid rejection at all costs, to avoid confrontation and conflict, the desire to attempt to accept everything equally and to make everything cohere and harmonize, is a deep and subtle form of entitlement
+    - Healthy love is based on two people acknowledging and addressing their own problems with each other’s support.
+    - People in a healthy relationship with strong boundaries will take responsibility for their own values and problems and not take responsibility for their partner’s values and problems.
+    - Entitled people expect other people to take responsibility of their problem or they take too much responsibility for other people's problems.
+    - The setting of proper boundaries doesn’t mean you can’t help or support your partner or be helped and supported yourself. You both should support each other. But only because you choose to support and be supported. Not because you feel obligated or entitled.
+    - People with strong boundaries are not afraid of a temper tantrum, an argument, or getting hurt.People with weak boundaries are terrified of those things and will constantly mold their own behavior to fit the highs and lows of their relational emotional roller coaster
+    - People with strong boundaries, 
+        - It’s unreasonable to expect two people to accommodate each other 100 percent and fulfill every need the other has.
+        - They may hurt someone’s feelings sometimes, but ultimately they can’t determine how other people feel.
+        - A healthy relationship is not about controlling one another’s emotions, but rather about each partner supporting the other in their individual growth and in solving their own problems.
+    - When we’re overloaded with opportunities and options, we suffer from what psychologists refer to as the paradox of choice. Basically, the more options we’re given, the less satisfied we become with whatever we choose, because we’re aware of all the other options we’re potentially forfeiting.
+
+- Stock Markets
+    - Peter Lynch on Stock Markets "Some event will come out of left field, and the market will go down, or the market will go up. Volatility will occur. Markets will continue to have these ups and downs. … Basic corporate profits have grown about 8% a year historically. So, corporate profits double about every nine years. The stock market ought to double about every nine years. So I think — the market is about 3,800 today, or 3,700 — I'm pretty convinced the next 3,800 points will be up; it won't be down. The next 500 points, the next 600 points — I don’t know which way they’ll go. So, the market ought to double in the next eight or nine years. They’ll double again in eight or nine years after that. Because profits go up 8% a year, and stocks will follow. That's all there is to it."
