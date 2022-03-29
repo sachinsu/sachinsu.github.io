@@ -8,6 +8,7 @@ draft: false
 
 ## Design Approach
 
+- [Modern Web - Guides, tools and libraries for modern web development.](https://modern-web.dev/)
 - [How Stripe Designs Beautiful Websites](https://leerob.io/blog/how-stripe-designs-beautiful-websites)
 - [Tools for non artistic developers](https://nodesign.dev/)
 - [Principles of Design](https://principles.design/)

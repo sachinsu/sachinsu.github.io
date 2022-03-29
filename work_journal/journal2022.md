@@ -1250,3 +1250,10 @@
 
 - Stock Markets
     - Peter Lynch on Stock Markets "Some event will come out of left field, and the market will go down, or the market will go up. Volatility will occur. Markets will continue to have these ups and downs. … Basic corporate profits have grown about 8% a year historically. So, corporate profits double about every nine years. The stock market ought to double about every nine years. So I think — the market is about 3,800 today, or 3,700 — I'm pretty convinced the next 3,800 points will be up; it won't be down. The next 500 points, the next 600 points — I don’t know which way they’ll go. So, the market ought to double in the next eight or nine years. They’ll double again in eight or nine years after that. Because profits go up 8% a year, and stocks will follow. That's all there is to it."
+
+## 2022-Mar-29 Tue
+
+- energy
+    - synthesis of the ammonia needed to produce nitrogenous fertilizers now depends heavily on natural gas as the source of hydrogen
+    - There could be no natural gas–powered flight, as the energy density of methane is three orders of magnitude lower than that of aviation kerosene, and also no coal-powered flight—the density difference is not that large, but coal would not flow from wing tanks to engines. 
+    - Crude oil needs refining to separate the complex mixture of hydrocarbons into specific fuels—gasoline being the lightest; residual fuel oil the heaviest.

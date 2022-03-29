@@ -60,6 +60,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [API Design for Serverless Apps](https://www.readysetcloud.io/blog/allen.helton/the-importance-of-proper-serverless-api-design/)
 - [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
 - [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
+- [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
 
 
 ## Training
@@ -114,6 +115,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Syncthing - Free, OSS, File synchronization across devices](https://syncthing.net/)
 - [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
 - [Open source Project Management Software](https://github.com/opf/openproject)
+- [Blueboat - Serverless infrastructure for On-premise deployment](https://github.com/losfair/blueboat)
 
 
 ## Open source Pipelining, workflows 
@@ -157,7 +159,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Developer playbook approach by Hackney council](https://playbook.hackney.gov.uk/API-Playbook/)
 - [Nice content on Ansible](https://github.com/geerlingguy)
 - [Performance profiling using Open source Pyroscope Server](https://pyroscope.io/)
-- [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
+- [Act - Run Github Actions locally](https://github.com/nektos/act)
 
 
 ## Observability
