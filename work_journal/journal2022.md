@@ -1253,7 +1253,17 @@
 
 ## 2022-Mar-29 Tue
 
-- energy
-    - synthesis of the ammonia needed to produce nitrogenous fertilizers now depends heavily on natural gas as the source of hydrogen
-    - There could be no natural gas–powered flight, as the energy density of methane is three orders of magnitude lower than that of aviation kerosene, and also no coal-powered flight—the density difference is not that large, but coal would not flow from wing tanks to engines. 
+- Energy
+    - Synthesis of the ammonia needed to produce nitrogenous fertilizers now depends heavily on natural gas as the source of hydrogen
+    - There could be no natural gas–powered flight, as the energy density of methane is three orders of magnitude lower than that of aviation kerosene, and also no coal-powered flight—the density difference is not that large, but coal would not flow from wing tanks to engines.
     - Crude oil needs refining to separate the complex mixture of hydrocarbons into specific fuels—gasoline being the lightest; residual fuel oil the heaviest.
+
+## 2022-Mar-30 Wed
+
+- Investing#REIT
+    - Exist in developed markets since long time
+    - ~ 6% p.a. can be expected 
+    - Taxation
+        - Dividends are tax free
+        - Interest paid is taxable at slab rate
+        - Selling units attracts Capital Gains tax

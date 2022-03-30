@@ -36,3 +36,7 @@ Useful links for deep diving in various Cloud Ecosystems
 
 - [DynamoDB - Advanced Design Patterns](https://www.youtube.com/watch?v=6yqfmXiZTlM)
 - [DynamoDB - Deep Dive](https://www.slideshare.net/AWSAktuell/deep-dive-into-dynamodb)
+
+### Tools
+
+- [Infracost - Open Source tool that shows Cloud cost estimates for Terraform in pull requests](https://www.infracost.io/)

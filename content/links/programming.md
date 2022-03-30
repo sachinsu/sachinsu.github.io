@@ -54,7 +54,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## API Development, Security
 
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
-- [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis?utm_source=hackernewsletter&utm_medium=email&utm_term=code)
+- [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
 - [Google's API Design Guidelines](https://google.aip.dev/100)
 - [API Design for Serverless Apps](https://www.readysetcloud.io/blog/allen.helton/the-importance-of-proper-serverless-api-design/)
@@ -209,6 +209,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Distributed messaging, Streams
 
 - [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
+- [VerneMQ - A distributed MQTT message broker based on Erlang/OTP](https://github.com/vernemq/vernemq)
 - [Kafka - Capacity Planning](https://www.slideshare.net/slideshow/embed_code/key/EYwSnTsR6GxuyG)
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
 - [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
