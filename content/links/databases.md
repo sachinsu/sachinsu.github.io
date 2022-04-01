@@ -87,6 +87,7 @@ Knowledge base around general database related topics.
 - [UUIds are bad for performance](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)
 - [Noria - Caching and updating Relational query results](https://github.com/mit-pdos/noria)
 - [Differential Datalog - Language for incremental computation](https://github.com/vmware/differential-datalog)
+- [Using NanoIDs (not longer UUID) for public APis](https://planetscale.com/blog/why-we-chose-nanoids-for-planetscales-api)
 
 ## ETL,ELT, Evolutionary Practices 
 

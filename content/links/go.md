@@ -9,6 +9,8 @@ draft: false
 My current Favourite Language
 
 ### Articles, E-books
+
+- [When (and when not to) to use Generics in Go Ver. 1.8](https://planetscale.com/blog/generics-can-make-your-go-code-slower)
 - [High performance GO Workshop](https://dave.cheney.net/high-performance-go-workshop/gophercon-2019.html#welcome)
 - [Learnings from Production usage of Go](https://rytisbiel.com/2021/03/06/darker-corners-of-go/)
 - [Thoughts on Go performance optimization](https://github.com/dgryski/go-perfbook)
@@ -112,6 +114,7 @@ My current Favourite Language
 
 - [Remote service with Retries](https://play.golang.org/p/3mNhCTl01bX)
 - [Curated list of design patterns implemented in Go](https://github.com/tmrts/go-patterns)
+- [Gophercises - Exercises for Go Developers](https://gophercises.com/)
 
 ### Podcasts
 

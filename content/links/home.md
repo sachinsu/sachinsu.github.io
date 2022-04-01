@@ -46,3 +46,4 @@ draft: false
 - [Privacy - Nice Overview and content](https://www.eff.org/pages/tools)
 - [Privacy tools for everyday user](https://www.privacytools.io/)
 - [Hacker's Diet](https://www.fourmilab.ch/hackdiet/www/tableofcontents1_6.html)
+- [Beam - Blog for a Project or Organization](https://github.com/planetscale/beam)

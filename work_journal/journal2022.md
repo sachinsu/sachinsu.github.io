@@ -1267,3 +1267,21 @@
         - Dividends are tax free
         - Interest paid is taxable at slab rate
         - Selling units attracts Capital Gains tax
+
+- Software 
+    - monomorphized - Multiple implementations of same function but with different input data types.
+    - Generics in Go -  passing interfaces to a generic function in Go is never a good idea
+
+- Nuclear weapons, Ability to deploy and yield are important parameters 
+    - Tactical- Maint to be used in battle. 
+    - Strategic - More as a deterrent. they are Weapons of mass destruction
+
+- Electricity/Energy
+    -  it is still impossible to store electricity affordably in quantities sufficient to meet the demand of a medium-sized city (500,000 people) for only a week or two, or to supply a megacity (more than 10 million people) for just half a day.
+    - Electricity is the best form of energy for lighting: it has no competitor on any scale of private or public illumination, and very few innovations have produced such an impact on modern civilization as has the ability to remove the limits of daylight and to illuminate the night.
+    -  A nuclear renaissance would be particularly helpful if we cannot develop better ways of large-scale electricity storage soon. 
+    - modern nuclear reactors, if properly built and carefully run, offer safe, long lasting, and highly reliable ways of electricity generation; as already noted, they are able to operate more than 90 percent of the time, and their lifespan can exceed 40 years.
+    -  batteries, compressed air, and supercapacitors, still have capacities orders of magnitude lower than needed by large cities, even for a single day’s worth of storage.
+    - Nitrogen is needed in such great quantities because it is in every living cell: it is in chlorophyll, whose excitation powers photosynthesis; in the nucleic acids DNA and RNA, which store and process all genetic information; and in amino acids, which make up all theproteins required for the growth and maintenance of our tissues.The element is abundan —it makes up nearly 80 percent of the atmosphere, organisms live submerged in it—and yet it is a key limiting factor in crop productivity as well as in human growth. This is one of the great paradoxical realities of the biosphere and its explanation is simple: nitrogen exists in the atmosphere as a non-reactive molecule (N2), and only a few natural processes can split the bond between the two nitrogen atoms and make the element available to form reactive compounds.
+    -  Old way to enrich soil with  nitrogen stores was to collect and apply human and animal wastes
+

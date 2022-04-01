@@ -141,6 +141,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Devops/Monitoring
 
 - [Impact of Architecture on DevOps](https://cloud.google.com/solutions/devops/devops-tech-architecture)
+- [Run CI/CD pipeline locally with Dagger](https://dagger.io)
 - [List of how organizations do SRE (Publicly available)](https://github.com/upgundecha/howtheysre)
 - [Open source API Designer with CI/CD Workflow](https://github.com/Kong/insomnia)
 - [Microsoft Azure - DevOps Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops)

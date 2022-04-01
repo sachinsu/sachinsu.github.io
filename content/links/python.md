@@ -21,13 +21,13 @@ Python has become pervasive all throught Data Science be it Machine learning, De
 - [A quick-and-dirty guide on how to install packages for Python](https://snarky.ca/a-quick-and-dirty-guide-on-how-to-install-packages-for-python/)
 - [What to do when data doesn't fit in memory](https://pythonspeed.com/articles/data-doesnt-fit-in-memory/)
 
-
 ## Packages
 
 - [EasyOCR - supports 40+ languages](https://github.com/JaidedAI/EasyOCR)
 - [Simplified Static file serving for Python](http://whitenoise.evans.io/en/stable/)
 - [Static Site generator (with Markdown support)](https://github.com/getpelican/pelican)
 - [JupyterLab Desktop App](https://github.com/jupyterlab/jupyterlab_app#download)
+- [Python helper library for ETL between databases](https://github.com/BritishGeologicalSurvey/etlhelper)
 
 ## Podcasts
 
