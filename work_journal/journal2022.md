@@ -1285,3 +1285,179 @@
     - Nitrogen is needed in such great quantities because it is in every living cell: it is in chlorophyll, whose excitation powers photosynthesis; in the nucleic acids DNA and RNA, which store and process all genetic information; and in amino acids, which make up all theproteins required for the growth and maintenance of our tissues.The element is abundan —it makes up nearly 80 percent of the atmosphere, organisms live submerged in it—and yet it is a key limiting factor in crop productivity as well as in human growth. This is one of the great paradoxical realities of the biosphere and its explanation is simple: nitrogen exists in the atmosphere as a non-reactive molecule (N2), and only a few natural processes can split the bond between the two nitrogen atoms and make the element available to form reactive compounds.
     -  Old way to enrich soil with  nitrogen stores was to collect and apply human and animal wastes
 
+## 2022-apr-04 Mon
+
+- MySQL Replication 
+    - Typical issues
+        - Temporary lag - caused by cold cache after restart
+        - Occasional lag - caused by write burst or long transactions 
+        - Perpetual lag - Slaves almost never catch up
+        - How to avoid lags 
+            - avoid long transactions
+            - manage batches
+            - increase replication throughput 
+            - Alternative is to Shard
+        - Some use cases for replication, 
+            - backups are faster and less disruptive on slaves than master
+            - reading from slaves helps in resilience (when master is down or loaded)
+    - How to monitor lag - Either Pg_heartbeat from percona toolkit or "second behind master" from "show slave status"
+
+- World Finance (New Monitory Regime)
+    - Russia had no treasury securities and no onshore US dollar exposure, has no banking presense in US
+    - Eurodollars - Stateless money, its no one's liability
+    - Bretton woods 3 
+        - Bretton Woods 1 - US Dollars recognized as World's reserve currency
+        - Bretton Woods 2 was formal recognition of trade between US and china where china exports to US and earns dollars and invest those in treasuries.
+        - Way of exporting to US and earning dollars is no more going to work smoothly.
+
+- SQLite - Litestream - How it works 
+    -  In WAL-mode (the mode you very much want on a server, as it means writers do not block readers), SQLite appends to a WAL file and then periodically folds its contents back into the main database file as part of a checkpoint. Litestream interposes itself in this process: it grabs a lock so that no other process can checkpoint. It then watches the WAL file and streams the appended blocks up to S3, periodically checkpointing the database for you when it has the necessary segments uploaded.
+
+- Lee Kuan Yew (LKY) of Singapore 
+	- relentless determination to follow the facts where they lead
+	-  a pattern of initial tight control, caution, and centralized planning, followed by a slow move towards a freer economy as long as everything seemed to be working 
+    - insist that state-run corporations stay in the black or shut down. As they succeeded, they privatized--telecommunications, the port, and public utilities all started within the government and became independent profitabable companies over time
+	- We noted by the 1970s that when governments undertook primary responsibility for the basic duties of the head of a family, the drive in people weakened. Welfare undermined self-reliance. People did not have to work for their families' well-being. The handout became a way of life. The downward spiral was relentless as motivation and productivity went down. People lost the drive to achieve because they paid too.much in taxes. They became dependent on the state for their basic needs.
+	- constant tinkering and fine-tuning around incentive systems is core to LKY's planning.
+	- Taxation in Singapore 
+		- Top Tax rate is 22%
+		- Corporate tax rate is 17%
+		- No capital gains tax
+		- 7% GST 
+		- No duty on imports
+		- no inheritance/estate tax
+	-  The freedom of the press was the freedom of its owners to advance their personal and class interests.
+	-  the Asian Wall Street Journal (AWSJ) published an alleged defamatory article and had sales restricted, the AWSJ offered to distribute its journal free to its deprived subscribers to "forego its sales revenue in the spirit of helping Singapore businessmen". Singapore's government agreed, as long as it left out advertisements. The paper backed out, claiming cost issues. Singapore offered to cover half the additional costs. When the paper refused, Singapore gave an official response: "You are not interested in the business community getting information. You want the freedom to make money selling advertisements."
+	- 75 percent of Singaporeans are Chinese.
+	- On Minority communities, 
+		- Every solution on the table, go for the most direct and efficient way to achieve a goal, push forward regardless of decorum.More compelling was his emphasis on working with and through minority government members each time he worked with minority communities.
+         -  From experience, we knew that govt. officials could not reach out to minority parents and students in the way their own community leaders did. The respect these leaders enjoyed and their sincere interest in the welfare of the less successful persuaded parents and children to make the effort. Paid bureaucrats could never have the same commitment, zest, and rapport to move parents and their children. ...On such personal-emotional issues involving ethnic and family pride, only leaders of the wider ethnic family can reach out to the parents and their children.
+		-  LKY's approach blends traditional, family values and blunt realism easy to associate with the right with a determination to work with affected minorities and concern for their welfare that pattern-matches more clearly to the left. That mixture of familiarity and foreignness in his approach, and that tension between traditional and progressive values, is one reason this work was so refreshing for me, coming from a US background.
+	- Education and birthrate typically have an inverse correlation.
+		-  Provide preferential school selection for children of graduate mothers who have at least three kids.
+		- Establish a government matchmaking system to "facilitate socializing between men and women graduates"
+	- pay for performance over time on job.
+	- On Trade Unions
+		- Strict laws and tough talk alone could not have achieved this. It was our overall policy that convinced our workers and union leaders... but ultimately it was the trust and confidence they had in me, gained over long years of association, that helped transform industrial relations from one of militancy and confrontation to cooperation and partnership. 
+        - The key to peace and harmony in society is a sense of fair play, that everyone has a share in the fruits of our progress
+	- "Singapore will remain clean and honest only if honest and able men are willing to fight elections and assume office. They must be paid a wage commensurate with that men of their ability and integrity are earning for managing a big corporation or a sucessful legal or other professional practice 
+    - Basic Principles, 
+		- social cohesion through sharing the benefits of progress,
+		- equal opportunities for all, and meritocracy, with the best man or woman for the job, especially as leaders in government.
+
+
+- Life lessons, 
+
+	- Sometimes getting what you want is as simple as asking for it. Closed mouths don’t get fed.
+
+	- Talk to strangers—in the grocery store, at the airport, in line at the DMV—you'll meet cool people, have great stories to tell, and maybe even make a lonely person's day.
+
+	- It's cheap and easy to keep your home neat and clean. The positive mental benefits are enormous.
+
+	- On that note, cleaning is easy when you do it often. Wiping up a recent spill takes two seconds. Scraping dried spaghetti sauce from the counter takes too long.
+
+	- No coffee after noon and no alcohol at least four hours before bed improves sleep dramatically.
+
+	- Drink more water. 
+
+	- Publish content online. It's a creative outlet. It's fun to watch your work improve. It's a magnet for interesting people you’d otherwise never meet.
+
+	- Money spent on books is money well spent. Even if you only read some, you're getting more knowledge and entertainment than you're paying for.
+
+	- Spend more time working on mobility. You'll have fewer injuries. You'll feel better. As you get older, you'll maintain a higher quality of life for longer.
+
+	- Get comfortable sitting alone in silence. It’s something you'll need to practice. Put away your phone, pour a cup of coffee, and sit in a quiet place. Turn off the radio on your next long car ride. Allow yourself to be alone with your thoughts.
+
+	- Have more patience, especially with your parents. If anyone deserves your patience, it's the people who had to live with you during your most annoying years.
+
+	- Spend long weekends with good friends. Living together—even for a few days—deepens bonds and strengthens friendships. Life gets busy, and it's easy to not do this, but the dividends the relationship will pay throughout your life is worth the small time investment now.
+
+	- Make a habit of forming habits. They are the building blocks of the person you want to become. The best way to build a habit is to start smaller than you think you can accomplish, then work up.
+
+	- Bring your lunch to work, especially in your 20s. The compound interest lost from the money you spent on lunch is a terrible waste.
+
+	- Early in your career you should optimize for one of three things: making a lot of money, building a marketable skill, or doing something you love. My preference is for the first. If you make a lot of money and invest it wisely, you'll be able to pursue your passions while you're still young—without having to worry about finances.
+
+	- Write handwritten thank you notes. It takes five minutes and means a lot to the recipients, especially if they’re older.
+
+	- When it comes to clothing, fit is more important than fashion. A $10 t-shirt that fits you perfectly looks better than a $90 dress shirt that's baggy and loose in the arms.
+
+	- When you're planning anything, take the amount of time you think you’ll need and double it. Tasks usually take longer than you expect, and it's good to build in a buffer. Underpromise and overdeliver, even if it's just for yourself.
+
+	- There's value in sticking with one job for a long period of time—you'll get really good at it, your confidence will increase, you'll become specialized which is rewarded financially if it's in the right area. But there's also value in jumping around—bigger salary increases, bigger network, potentially broader base of skills, more unique experiences. Neither way is wrong, you just have to be clear with yourself about what you want.
+
+	- Setting reasonable expectations is a superpower. If you consistently underpromise and over deliver, people will always be happy with you.
+
+	- On the other side, never agree to something you're not positive you can do. People generally don't care if you say no in the first place. They'll get really mad if you say yes and then let them down.
+
+	- Your possessions increase to fill the amount of space you have. And possessions tend to be more burdensome than liberating. Before moving to a larger space, think about it deliberately. With each additional possession you purchase, ask yourself, “do I really need this thing?”
+
+	- One of the biggest wins in life is finding the things you REALLY care about, and then only focusing on those things. This won’t be easy at first, but if you filter all your decisions through the question, "Does this get me closer to or further from the things I REALLY care about?" you'll continuously move your life in a direction that makes you happy. Auditing the decisions you make, and ensuring they're aligned with the things that bring you the most joy, is one of the most important habits you can build. Do I really care about driving this car that costs me $600/month? No, I'd be happy with a car that costs $200/month. But I do really care about this family vacation every year, and reducing my car payment by $400/month helps me pay for the vacation.
+
+	- Do I really care about watching this thing I'm watching on TV right now? No, I wouldn't care at all if I missed it. But I do really care about getting better at playing the guitar. Cutting out the hour of TV I watch every night makes more room for guitar practice. 
+
+	= Marriage is for making things work. Dating is for finding the best person to make things work with. When you break up, break up. Don’t stay friends. Don’t take a break. Move on. Delete their social media. Block their number. Forget about them. It hurts at first and it’s easier to drag things out, but you’ll feel better faster if you don’t.
+
+	- People will use jargon and complicated language to make you think they're smart. But the smartest people you'll ever meet will speak so simply that you’ll underestimate their intelligence. This is because it takes an immense amount of intelligence and mastery to explain complicated topics in a simple way. If you don't have this level of mastery, you can either admit it (most people won't) or you can confuse people with big words and complicated phrases until they stop asking questions. 
+
+	- When you meet a jargon junkie, you can expose them by persistently asking simple questions and maintaining your composure. But the more mature you become, the less likely you’ll be to do this. Instead, you’ll start to feel bad for these people.
+
+	- Relatedly, the most insecure people you meet will often be the loudest. Confident people don't need to draw attention to themselves. Insecure people do. They are compensating for a lack of confidence or competence. It's meant to be a distraction so people don't "find them out."
+
+	- The biggest difference between this observation and #25 is intelligence level. This tactic will more often be used by people with lesser education or lower intelligence. The previous tactic will be used by people with higher education or intelligence. 
+
+	- Cell phones are best used resourcefully, not reflexively.
+
+	- Pull out your cell phone when you have a specific task to complete—you need directions, you have to make a call, you want to listen to music—not when you have time to kill. 
+
+	- My experience with cell phone scrolling is that it results in two things: dissatisfaction and anxiety. People say you never regret a workout, well, the opposite is true with a scroll session: you always regret it.
+
+	- Avoid complainers at all costs.
+
+	- Complaining is more contagious than COVID, and it's more deadly.
+
+		Being a complainer means you always find the bad in a situation rather than the good. You often find an excuse rather than a solution. And your overall mood and wellbeing will suffer.
+
+		Being around complainers makes you more likely to complain. It kills morale and productivity in teams. It limits your potential.
+
+		As a manager, do not tolerate complaining on your team. As a parent, don't complain in front of your children, and respond to their complaints with the positive side of the situation. As an adult, be direct with your friends and family members. Tell them you don't tolerate complaining. The sooner you eliminate it from your life, the happier and more successful you will be.
+
+		When people perpetually have "bad luck," it's usually not bad luck. It's the result of their perpetually poor decisions. Identify these people and avoid them.
+
+		- One heuristic to tell how good someone is at making decisions is by how much time they have. The busiest people are often the ones who make the worst decisions. Busy people spend a lot of time correcting poor decisions. And because they’re so busy correcting past decisions, they don’t have time to make good decisions. - Shane Parrish
+
+	- The best time to do everything was ten years ago—investing, exercising, learning a new skill, etc. Talk with older people you respect and ask what they wish they had started doing in their 20s, then start doing that thing immediately. It's rarely too late, but it's always better to start sooner rather than later.
+
+	W- aking up naturally, without an alarm, is a great feeling. Creating a consistent routine is one way to do this. Freeing yourself from work obligations is another. I recommend pursuing both. 
+
+	- You have to take calculated financial risks to see large increases in your net worth. I bought and sold investment properties leading to about a 15% increase in my net worth. I bought crypto which also increased my net worth by about 15%. I started a company that never made money and cost me about 6% of my net worth. Two wins and one loss, but the wins significantly outweighed the loss. The key is calculated risks. In each of the above ventures, I knew my absolute worst case scenario—my downside was capped. I also predicted potential upside in each case and determined the potential upside outweighed the potential downside. You won't be right every time, but if you take calculated risks, you should be right more often than you're wrong.
+
+	- Think about starting a lot of businesses. You won’t follow through on most of them, but the act of thinking through a big idea is a special type of exercise most people don't do often (or ever).
+
+	- One of the biggest secrets of fitness is avoiding injury. If you're healthy, you can exercise consistently. If you can exercise consistently, compounding will do its work. To avoid injury, tame your ego. There's rarely any reason to push past 85%, and if you don't, you're less likely to get injured.
+
+	- Seek advice from everyone, but filter it to fit your life. The purpose of asking for advice is to gain as much perspective as possible then make your own decision with that perspective, not to get someone else to make your decision for you.
+
+	- Good enough and done is better than perfect but imagined. 
+
+	- So much of the technology we lose our patience with today would've looked like magic ten years ago. Remember this when your phone is taking too long to play a YouTube video while you’re sitting on the beach.
+
+	- If you're constantly busy, you have underlying issues to address.
+
+	- If someone is bothering you, it's your fault until you've told them.
+
+	- If you aren't absolutely thrilled to watch it, turn off the TV and pick up a book instead. 
+
+	- Get on the dance floor at every wedding. Nobody cares if you're bad at dancing. They're too concerned about how bad they are. Plus, the more people on the dance floor, the more fun the wedding. Consider it your gift to the newlyweds. 
+
+	- Set rules for yourself. They make life better 95% of the time. Then break them 5% of the time.
+
+	- Spend less time checking boxes and more time building relationships. Checking boxes brings a certain level of success, but relationships bring fulfillment and opportunity you'll never find on your own.
+
+	- Buy a nice suit in your 20s and never let yourself outgrow it.
+
+	- Pick one or two hobbies you love and spend time getting better at them. Seeing yourself progress through deliberate practice is a confidence builder and a satisfaction booster.
+
+	- Spend enough time alone that you're comfortable doing it. Enjoying your own company is a wonderful gift to give yourself. 
+
+- During times of abundance, worldviews don’t get tested very strongly and people are shielded from the consequences of being inaccurate. It’s during the times of scarcity that reality reasserts itself and filters out the workable from the unworkable worldviews.
