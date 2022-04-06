@@ -1461,3 +1461,28 @@
 	- Spend enough time alone that you're comfortable doing it. Enjoying your own company is a wonderful gift to give yourself. 
 
 - During times of abundance, worldviews don’t get tested very strongly and people are shielded from the consequences of being inaccurate. It’s during the times of scarcity that reality reasserts itself and filters out the workable from the unworkable worldviews.
+
+
+## 2022-apr-06 Wed
+
+- Processed food - A lack of taste memory is one reason why Coca-Cola is such a profitable business. The recipe is engineered to not come with a taste memory, which is why the drink is so addicting. Cheetos are similar. According to the food scientist Steven Witherly, they bring so much pleasure because of the way each puff melts in your mouth. The way the food melts in the mouth is known as “vanishing caloric density,” which makes your brain think there are no calories in the food, which is why you can eat them for so long.
+
+- Parameters for Evaluation of decision/strategy, 
+    - Technical ease 
+    - Short term impact
+    - Long term impact
+    - Capital ease
+    - Ease of Organizational support 
+    - Ease of Scaling
+
+- World's dependence on Fossil fuels, 
+    - our food supply—be it staple grains, clucking birds, favorite vegetables, or seafood praised for its nutritious quality—has become increasingly dependent on fossil fuels.
+    - Eating meat has been as significant a component of our evolutionary heritage as our large brains (which evolved partly because of meat eating), bipedalism, and symbolic language.
+    - Four indespensible materials to modern civilization - cement, steel, plastics, and ammonia.\
+    -claims about 17 percent of the world’s primary energy supply, and 25 percent of all CO2 emissions originating in the combustion of fossil fuels—and currently there are no commercially available and readily deployable mass-scale alternatives to displace these established processes
+    - Ammonia is used as dominant nitrogen fertilizer.Ammonia is a simple inorganic compound of one nitrogen and three hydrogens (NH3),
+    which means that nitrogen makes up 82 percent of its mass.Nitrates are also used to produce explosives.natural gas is used as the source of hydrogen, and  efficient centrifugal compressors and better catalysts are used in process to produce ammonia. synthetic nitrogen feeds half of humanity—or, everything else being equal, half of the world’s population could not be sustained without synthetic nitrogenous fertilizers.About 80 percent of global ammonia production is used to fertilize crops; the rest is used to make nitric acid, explosives, rocket propellants, dyes, fibers, and window and floor cleaners.
+
+- Power stocks, 
+    - if you’re buying power stocks at p/b of 3x you deserve to lose money. NTPC was 3x in 2011, thereafter it was flat for a decade excl dividend. power stocks can’t earn more than cost of capital, so better to buy them at book or below book value. or not buy them at all
+
