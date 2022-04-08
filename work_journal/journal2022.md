@@ -1478,11 +1478,54 @@
 - World's dependence on Fossil fuels, 
     - our food supply—be it staple grains, clucking birds, favorite vegetables, or seafood praised for its nutritious quality—has become increasingly dependent on fossil fuels.
     - Eating meat has been as significant a component of our evolutionary heritage as our large brains (which evolved partly because of meat eating), bipedalism, and symbolic language.
-    - Four indespensible materials to modern civilization - cement, steel, plastics, and ammonia.\
-    -claims about 17 percent of the world’s primary energy supply, and 25 percent of all CO2 emissions originating in the combustion of fossil fuels—and currently there are no commercially available and readily deployable mass-scale alternatives to displace these established processes
-    - Ammonia is used as dominant nitrogen fertilizer.Ammonia is a simple inorganic compound of one nitrogen and three hydrogens (NH3),
-    which means that nitrogen makes up 82 percent of its mass.Nitrates are also used to produce explosives.natural gas is used as the source of hydrogen, and  efficient centrifugal compressors and better catalysts are used in process to produce ammonia. synthetic nitrogen feeds half of humanity—or, everything else being equal, half of the world’s population could not be sustained without synthetic nitrogenous fertilizers.About 80 percent of global ammonia production is used to fertilize crops; the rest is used to make nitric acid, explosives, rocket propellants, dyes, fibers, and window and floor cleaners.
+    - Four indespensible materials to modern civilization - cement, steel, plastics, and ammonia.
+    - claims about 17 percent of the world’s primary energy supply, and 25 percent of all CO2 emissions originating in the combustion of fossil fuels—and currently there are no commercially available and readily deployable mass-scale alternatives to displace these established processes
+    - Ammonia is used as dominant nitrogen fertilizer.Ammonia is a simple inorganic compound of one nitrogen and three hydrogens (NH3), which means that nitrogen makes up 82 percent of its mass.Nitrates are also used to produce explosives.natural gas is used as the source of hydrogen, and  efficient centrifugal compressors and better catalysts are used in process to produce ammonia. synthetic nitrogen feeds half of humanity—or, everything else being equal, half of the world’s population could not be sustained without synthetic nitrogenous fertilizers.About 80 percent of global ammonia production is used to fertilize crops; the rest is used to make nitric acid, explosives, rocket propellants, dyes, fibers, and window and floor cleaners.
 
 - Power stocks, 
-    - if you’re buying power stocks at p/b of 3x you deserve to lose money. NTPC was 3x in 2011, thereafter it was flat for a decade excl dividend. power stocks can’t earn more than cost of capital, so better to buy them at book or below book value. or not buy them at all
+    - if you’re buying power stocks at p/b of 3x you deserve to lose money. NTPC was 3x in 2011, thereafter it was flat for a decade excl. dividend. power stocks can’t earn more than cost of capital, so better to buy them at book or below book value. or not buy them at all.
+
+
+- Four indispensable materials to modern civilization - cement, steel, plastics, and ammonia.
+    - Steel - Modern steels are made from cast iron by reducing its high carbon content to 0.08–2.1 percent by weight.Steel’s typical tensile strength is about seven times that of aluminum and nearly four times that of copper; its hardness is, respectively, four and eight times higher; and it is heat resistant—aluminum melts at 660oC, copper at 1,085oC, steel only at 1,425oC. Iron is the Earth’s dominant element by mass because it is heavy (nearly eight times as heavy as water) and because it forms the planet’s core. But it is also abundant in the Earth’s crust: only three elements (oxygen, silicon, and aluminum) are more common; iron, with nearly 6 percent, ranks fourth.    
+        - Steel manufacturing process -  The process starts with blast furnaces (tall iron and steel structures lined with heat-resistant materials) that produce liquid (cast or pig) iron by smelting iron ore, coke, and limestone.74 The second step—reducing cast iron’s high carbon content and producing steel—takes place in a BOF (basic oxygen furnace; the adjective refers to the chemical properties of the produced slag). 
+
+    - Plastic - Plastics are a large group of synthetic (or semisynthetic) organic materials whose commonquality is that they are fit for forming (molding). The malleability of plastics makes it possible to form them by casting, pressing, or extruding, and they create shapes ranging from thin film to heavy-duty pipes and from feather-light bottles to massive and sturdy waste containers. Global output has been dominated by thermoplastics—polymers that soften readily when heated and harden again when cooled. 
+    
+    - Cement - Cement is the indispensable component of concrete, and it is produced by heating (to at least 1,450oC) ground limestone (a source of calcium) and clay, shale, or waste materials (sources of silicon, aluminum, and iron) in large kilns—long (100–220 meters) inclined metal cylinders.79 This high-temperature sintering produces clinker (fused limestone and aluminosilicates) that is ground to yield fine, powdery cement. 
+
+    - A typical lithium car battery weighing about 450 kilograms contains about 11 kilograms of lithium, nearly 14 kilograms of cobalt, 27 kilograms of nickel, more than 40 kilograms of copper, and 50 kilograms of graphite—as well as about 181 kilograms of steel, aluminum, and plastics. Supplying these materials for a single vehicle requires processing about 40 tons of ores, and given the low concentration of many elements in their ores it necessitates extracting and processing about 225 tons of raw materials. 
+    
+- Equity Investments 
+    - Direct indexing, investors own a benchmark’s underlying shares. That is, while index-fund owners possess one investment, those who index directly typically hold dozens or even hundreds of securities, depending upon whether they fully replicate an index, or only sample it. 
+
+- Tech 
+    - Approach to migration from one to another cloud
+        - Set up haproxy, nginx or similar as reverse proxy and carefully decide if you can handle retries on failed queries. If you want true zero-downtime migration there's a challenge here in making sure you have a setup that lets you add and remove backends transparently. There are many ways of doing this of various complexity. I've tended to favour using dynamic dns updates for this; in this specific instance we used Hashicorp's Consul to keep dns updated w/services. I've also used ngx_mruby for instances where I needed more complex backend selection (allows writing Ruby code to execute within nginx)
+
+        - Set up a VPN (or more depending on your networking setup) between the locations so that the reverse proxy can reach backends in both/all locations, and so that the backends can reach databases both places.
+
+      - Replicate the database to the new location.
+
+        - Ensure your app has a mechanism for determining which database to use as the master. Just as for the reverse proxy we used Consul to select. All backends would switch on promoting a replica to master.
+
+        - Ensure you have a fast method to promote a database replica to a master. You don't want to be in a situation of having to fiddle with this. We had fully automated scripts to do the failover.
+
+        - Ensure your app gracefully handles database failure of whatever it thinks the current master is. This is the trickiest bit in some cases, as you either need to make sure updates are idempotent, or you need to make sure updates during the switchover either reliably fail or reliably succeed. In the case I mentioned we were able to safely retry requests, but in many cases it'll be safer to just punt on true zero downtime migration assuming your setup can handle promotion of the new master fast enough (in our case the promotion of the new Postgres master took literally a couple of seconds, during which any failing updates would just translate to some page loads being slow as they retried, but if we hadn't been able to retry it'd have meant a few seconds downtime).
+
+        - Once you have the new environment running and capable of handling requests (but using the database in the old environment):
+
+        - Reduce DNS record TTL.
+
+        - Ensure the new backends are added to the reverse proxy. You should start seeing requests flow through the new backends and can verify error rates aren't increasing. This should be quick to undo if you see errors.
+
+        - Update DNS to add the new environment reverse proxy. You should start seeing requests hit the new reverse proxy, and some of it should flow through the new backends. Wait to see if any issues.
+
+        - Promote the replica in the new location to master and verify everything still works. Ensure whatever replication you need from the new master works. You should now see all database requests hitting the new master.
+
+        - Drain connections from the old backends (remove them from the pool, but leave them running until they're not handling any requests). You should now have all traffic past the reverse proxy going via the new environment.
+
+        - Update DNS to remove the old environment reverse proxy. Wait for all traffic to stop hitting the old reverse proxy.
+
+        - When you're confident everything is fine, you can disable the old environment and bring DNS TTL back up.
 
