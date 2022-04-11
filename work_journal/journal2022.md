@@ -1529,3 +1529,81 @@
 
         - When you're confident everything is fine, you can disable the old environment and bring DNS TTL back up.
 
+## 2022-apr-11 Mon
+
+- 3D Printers - There are broadly two types of 3D printers in common use. One uses thermoplastic filament sourced from a spool and extruded through a heated nozzle attached to a gantry with three axes of motion to build a printed object from the build plate on upwards. This was the first widely commercial available 3D printing technology for home or small business use, and while it has a lot to recommend it for many applications, it did not take off for the miniature use case. The other type of 3D printer is a resin printer, which are a technological marvel of chemistry and hardware design. 3D printer resins are liquid photoplastics; they cure (harden) in the presence of UV light. An LCD screen beneath the transparent bottom of a vat of ooze exposes a layer 30-50 microns thick to harden it; a single- dimensional screw then rotates to pull the build plate upwards (to remove it from the film) then downwards (to get more liquid resin stuck to the newly-solid layer then re-adhere to the film). The process then repeats until the print is done, in something a calculus teacher might describe as integration by parts and that a timelapse videographer might describe as absolutely mesmerizing.
+
+- Rajeev Thakkar 
+    - Fragility - being fragile 
+    - Anti-fragility - being robust in the event of adversity
+    - key work skills for young
+    - dont confine yourself to learning specific curriculum/subject
+    - be ready to be life long learner 
+    - Emphasis on understanding than memorizing 
+    - ability to solve real world problems would be important 
+    - Key skill (e.g. software) + Soft skills (communication, psychology) would be very useful
+    - impermanence of things - not to get to fixated by present
+    - books
+        - Peter lynch's books are good introductory ones. (One upon wall street) 
+
+- Dale Carnegie's how to win friends, 
+
+    - Techniques in Handling People (https://fs.blog/how-to-win-friends-and-influence-people/)
+        - Don’t criticize, condemn or complain.
+        - Give honest and sincere appreciation.
+        - Arouse in the other person an eager want.
+
+    - Six ways to Make People Like You
+        - Become genuinely interested in other people.
+        - Smile.
+        - Remember that a person’s name is to that person the sweetest and most important sound in any language.
+        - Be a good listener. Encourage others to talk about themselves.
+        - Talk in terms of the other person’s interests.
+        - Make the other person feel important – and do it sincerely.
+
+    - Win People to Your Way of Thinking
+        - The only way to get the best of an argument is to avoid it.
+        - Show respect for the other person’s opinions. Never say, “You’re wrong.”
+        - If you are wrong, admit it quickly and emphatically.
+        - Begin in a friendly way.
+        - Get the other person saying “yes, yes” immediately.
+        - Let the other person do a great deal of the talking.
+        - Let the other person feel that the idea is his or hers.
+        - Try honestly to see things from the other person’s point of view.
+        - Be sympathetic with the other person’s ideas and desires.
+        - Appeal to the nobler motives.
+        - Dramatize your ideas.
+        - Throw down a challenge.
+
+    - Be a Leader: How to Change People Without Giving Offense or Arousing Resentment
+        - Begin with praise and honest appreciation.
+        - Call attention to people’s mistakes indirectly.
+        - Talk about your own mistakes before criticizing the other person.
+        - Ask questions instead of giving direct orders.
+        - Let the other person save face.
+        - Praise the slightest improvement and praise every improvement. Be “hearty in your approbation and lavish in your praise.”
+        - Give the other person a fine reputation to live up to.
+        - Use encouragement. Make the fault seem easy to correct.
+        - Make the other person happy about doing the thing you suggest
+
+- Markets - Most of the return of the stock market over time comes from a few high- performing “superstocks.” More than 95% of all stocks, over their lifetime as public companies, collectively don’t even outperform cash, and more than half deliver negative returns, In the long run, the odds of making money in the stock market as a whole are very high—but the odds of making money in any single stock are low.
+
+- HDFC Bank's business model, 
+    - Focus on Commercial banking i.e. lending to companies.
+    - Offering services to India's cooperative banks to speed up their cheque processing as long as they maintained interest free deposits at the bank
+    - electronic processing system for funds that ran alongside the stock settlement
+    system, winning them the cash management business of an entire ecosystem of capital
+    markets participants.
+    - Lower costs of deposits by maintaining high CASA ratio (the ratio of lower cost current account and savings account deposits at a bank to total
+    deposits.)
+
+- On Signals, 
+    - status is associated with use of jargon. PhD students at lower-ranked universities used more linguistic complexity in their dissertation titles compared to students at higher-ranked schools.
+    - The logic of buried signals is that people with lots of positive attributes can afford to be modest because odds are at least one of their good traits will be uncovered. People with only one particular strength will be eager to show it, because it's all they have.
+    - But most people can’t counter signal. If you’re already a highly respected person, countersignaling can convey positive information about you. If you are not, then countersignaling might backfire. low-status people who countersignal lower their status even more. But high-status people who countersignal increase their status even more.
+
+- Propaganda
+-  the purpose of propaganda is not limited just to instilling desired beliefs. Often, demonstrating the regime’s strength, capacity, and resources to intimidate people is a more important goal.
+
+- Peter lynch
+    -  A general rule for investing in restaurants is that annual sales should exceed the cost of construction.I'm skittish about owning stock in restaurants that make most of their money on liquor. Liquor tastes the same everywhere, and a restaurant that becomes a bar is likely to lose its customers to a trendier bar.
