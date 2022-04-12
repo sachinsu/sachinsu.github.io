@@ -248,6 +248,10 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Contalks](https://www.reddit.com/r/ConTalks/)
 
+## Real world Architectures 
+
+- [Deployment @ Wikimedia](https://meta.wikimedia.org/wiki/Wikimedia_servers)
+
 ## Interview Questions
 
 - [10 API Product Manager Interview Questions](https://dzone.com/articles/10-api-product-manager-interview-questions)

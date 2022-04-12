@@ -1607,3 +1607,39 @@
 
 - Peter lynch
     -  A general rule for investing in restaurants is that annual sales should exceed the cost of construction.I'm skittish about owning stock in restaurants that make most of their money on liquor. Liquor tastes the same everywhere, and a restaurant that becomes a bar is likely to lose its customers to a trendier bar.
+
+
+## 2022-apr-12 Tue
+
+- "bogeyman in the closet" - The bogeyman hasn't come out yet, and you're not sure he's in there,
+but you aren't about to poke around in the dark to prove that he isn't.
+
+- Prof Aswath damodaran 
+    - the less activity you need to put into creating a portfolio, the better.
+    - on Indexing 
+        - many of these people who critique indexing have a very selfish reason for doing so – it’s taking away their living. And that’s for a very good reason, which is they’ve not been very good at what they do for a living and indexing has exposed that.
+        -  most active investing is built on mean-reversion. It’s very lazy investing, there is no research that goes in. You just buy stocks with low PE ratios and high growth. Again, we have this vision of analysts as being people who dig for the truth – and that is still there
+        - there is a potentially dark side to indexing. It has made momentum much stronger, because the nature of indexing is you pile on to whatever’s going up.
+    - On Momentum 
+        - Investing has always been a momentum game, at least on the pricing side, and it’s about momentum and momentum shifts. Pretty much all of trading can be summarized into those two groups: you can either be a momentum player or a player who detects shifts in momentum and tries to go against momentum just before it changes. So, all of trading is built around momentum or anti-momentum.
+        - you cannot devise a trading strategy which ignores momentum. It’s impossible.
+        - You can create an investing strategy that’s momentum-free – but that basically means you value something and then you sit there and pray and hope that, eventually, momentum fixes the gap for you. Even those people who believe they’re value players are far more dependent on momentum than they realize, because ultimately, for them to make money, the price has to move to its value. And that may require a momentum shift, which is what we call the catalyst, something that changes the momentum of the game.
+
+- Michael Moubaasin 
+    - Reversion to mean - the outcome that is far from average will be followed by outcome that is close to average
+
+
+- Tech#Architecture thinking
+    - Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain.
+    - eNumerate multiple candidate solutions. Don’t just start prodding at your favorite!
+    - Consider a candidate solution, then read the Paper if there is one.
+    - Determine the Historical context in which the candidate solution was designed or developed.
+    - Weigh Advantages against disadvantages. Determine what was de-prioritized to achieve what was prioritized.
+    - Think! Soberly and humbly ponder how well this solution fits your problem. What fact would need to be different for you to change your mind? For instance, how much smaller would the data need to be before you’d elect not to use Hadoop?
+
+- Stocks 
+    - Peter lynch's pan-and-shovel technique - In any industry, when multiple companies are struggling to sell the same thing, look for supplier who provides all of them stuff they all need.
+    
+    - cyclical - a cyclical is a company that will prosper in good times and suffer in bad. That's because it makes or sells expensive products or luxury items that customers can put off buying when they are short on cash. People continue to buy deodorant, dental floss, Big Macs, and headache pills no matter what, which is why drugstores and fast-food restaurants are not cyclicals. Some cyclical industries are machinery, homebuilders, appliance, furniture manufacturers, waste mgmt companies.
+    
+    - The best time to get involved with cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest
