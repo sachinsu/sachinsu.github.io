@@ -1,20 +1,6 @@
-- Work updates
-    DH, 
-    - Ongoing App Review and New architecture
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
-    BFL, 
-    - System Optimization initiative - Reducing load on Oracle, shifting reporting to MIS 
-
-    Axis bank -  migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accommodate additional compute?           
-
-    Issuance, 
-        - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-Shortlisting & interview for Mobile & C Architect role
-
+#SystemArchitecture
+#PersonalFinance 
+#Stocks
 
 ## 2021-sep-21 Tue
 
@@ -30,7 +16,7 @@ Shortlisting & interview for Mobile & C Architect role
     - Understanding terms is very important
     - May be nice if markets r looking like they will fail were principal-protected debenture will allow to participate in upside but protect downside.
 
-- Value investing criteria
+- Value investing criteria #Stocks
     - Buying cheaper than present value of future cash flows for a business that is sustainable over long periods of time (e.g Bajaj, HDFC, IT, Pharma).
     - So a Low ROCE Company is no no 
     - Value mostly underperforms in prolonged bull market. Momentum performs very well in prolonged bull market.  
@@ -49,7 +35,7 @@ Shortlisting & interview for Mobile & C Architect role
     - now regulators r trying to make lenders reluctant to fund non-productive investment projects (like evergrande) 
     - Good read at https://carnegieendowment.org/chinafinancialmarkets/85391
 
-- Momentum, value and everything else 
+- Momentum, value and everything else #Stocks
     - Be aware of limits of Momentum stategy as it can underperform. Accordingly do asset allocation.
 
 ## 2021-sep-22 Thu
@@ -108,7 +94,7 @@ Shortlisting & interview for Mobile & C Architect role
 
 ## 2021-sep-26 Sun
 
--   Sync and Async ( Everything can't be async ) 
+-   [Sync and Async ( Everything can't be async )][SystemArchitecture]
     - Javascript solves this by making everything non-blocking because blocking would destroy browser's UI Thread which is it's primary use case.
     - golang does this via go routines
     - .NET is one of the platforms that has excellent support for interop with the underlying OS (pinvokes) aka FFI (foreign function interfaces). It has one of the best FFI systems on the market
@@ -128,8 +114,8 @@ Shortlisting & interview for Mobile & C Architect role
     - Knowing about what you know is Rationality 101.
 
     - Bayesian reasoning 
-    - When new information comes in, you don’t want it to replace old information wholesale. Instead, you want it to modify what you already know to an appropriate degree. 
-    - The degree of modification depends both on your confidence in your preëxisting knowledge and on the value of the new data. Bayesian reasoners begin with what they call the “prior” probability of something being true, and then find out if they need to adjust it.
+        - When new information comes in, you don’t want it to replace old information wholesale. Instead, you want it to modify what you already know to an appropriate degree. 
+        - The degree of modification depends both on your confidence in your preëxisting knowledge and on the value of the new data. Bayesian reasoners begin with what they call the “prior” probability of something being true, and then find out if they need to adjust it.
     - Best practices
         - Start with the big picture, fixing it firmly in your mind. Be cautious as you integrate new information, and don’t jump to conclusions. Notice when new data points do and do not alter your baseline assumptions (most of the time, they won’t alter them), but keep track of how often those assumptions seem contradicted by what’s new. Beware the power of alarming news, and proceed by putting it in a broader, real-world context.
         - Real power of bayesian thinking is that it replaces the facts in our mind with probabilities
@@ -137,7 +123,7 @@ Shortlisting & interview for Mobile & C Architect role
 
 ## 2021-sep-27 Mon
 
--  Machine Learning 
+-  Machine Learning #SystemArchitecture 
     - It is tricky to apply it effectively 
     - Requires data and labels
     - First iteration should preferably be without machine learning
@@ -169,8 +155,8 @@ Shortlisting & interview for Mobile & C Architect role
     
 ## 2021-sep-28 Tue
 
-- Investing#Traits to avoid while investing (Anand Sridharan)
-    - Bad Promotors 
+- [Investing#Traits to avoid while investing (Anand Sridharan)][Stocks]
+    - Bad Promoters 
     - Government Owned
     - True owner is at a different level (Cummins inc and Cummins india)
     - No Owner (Credit ratings, Stock exchanges etc)
@@ -187,9 +173,11 @@ Shortlisting & interview for Mobile & C Architect role
     - server-side rendering is ideal for websites that need strong search engine presence, since search engine bots can just read the static content immediately instead of possibly running into issues with JS content. 
     - Server-side rendering is also necessary if clients have technical limitations, such as being unable to run JavaScript. Otherwise, server-side rendering is practically equal to client-side rendering.
 
-- Investing#Margin of safety - Practice of buying shares of a company only when they trade at a large discount to true value. Difference between estimated value of share and purchase price is margin of safety.
+- [Investing#Margin of safety][Stocks]
+     - Practice of buying shares of a company only when they trade at a large discount to true value. Difference between estimated value of share and purchase price is margin of safety.
 
-- Investing#Earnings yield - earnings per share / share price
+- [Investing#Earnings yield][Stocks]
+     - earnings per share / share price
     - higher earnings yield is better than lower (obviously)
     - business that earn high return on capital are better
     - high return on capital companies availble at bargain prices i.e. companies with high earning yield and high return on capital.
@@ -212,7 +200,7 @@ Shortlisting & interview for Mobile & C Architect role
     - Chinese companies affiliated with its government make 95% of the world’s containers
     - China has 37% of the shipbuilding market in 2019 by deadweight, and 45% of all new shipbuilding orders
 
-- Investing
+- [Investing][Stocks]
     - Owning a business that has the opportunity to invest some or all of its profits at a very high level of return can contribute to a very high rate of earnings growth.
 
 - Forex# Range of the day pricing 
@@ -220,7 +208,7 @@ Shortlisting & interview for Mobile & C Architect role
 
 ## 2021-sep-30 Thu
 
-- Technology# Memory Management
+- [Memory Management][SystemArchitecture]
    - OS has Virtual memory manager (VMM) that allocates VM to processes
     - VM enables both isolation and sharing
     - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
@@ -237,7 +225,7 @@ Shortlisting & interview for Mobile & C Architect role
             - In this case JIT tells the GC that object is still live 
             - JIT is free to lengthen the object lifetime till the end of method and has always been
  
-  - Psychology of human misjudgement
+- Psychology of human misjudgement
     - jacobi's principle of inversion
         - Study instances of bad judgement to recognize good judgement
     - if you would persuade, appeal to interest and not to reason.
@@ -300,22 +288,22 @@ Shortlisting & interview for Mobile & C Architect role
 
 - In a vacuum, most businesses would prefer making a fixed cost investment instead of paying on a marginal use basis. Consider Spotify’s music-streaming business: one of the company’s core challenges is that the more customers Spotify has the more it has to pay music labels — streaming rights are a marginal cost. A streaming service like Netflix, on the other hand, that spends up front for its own content, gets to keep whatever increased revenue that content drives for itself. This same logic applies to computing capacity: buying your own servers is, in theory, cheaper than renting compute from a service like AWS. 
 
-For Compute, 
-- First, usage may be uneven, whether that be because a business is seasonal, hit-driven, or anything in-between. That means that compute capacity has to be built out for the worst case scenario, even though that means most resources are sitting idle most of the time.
-- Second, compute capacity is likely growing — hopefully rapidly, in the case of a new business. Building out infrastructure, though, is not a linear process: new capacity comes online all at once, which means a business has to overbuild for their current needs so that they can accommodate future growth, which again means that most resources are sitting idle most of the time.
-- Third, compute capacity is complex and expensive. That means there are both huge fixed costs that have to be invested before the compute can be used, and also significant ongoing marginal costs to manage the compute already online.
+- For Compute, 
+    - First, usage may be uneven, whether that be because a business is seasonal, hit-driven, or anything in-between. That means that compute capacity has to be built out for the worst case scenario, even though that means most resources are sitting idle most of the time.
+    - Second, compute capacity is likely growing — hopefully rapidly, in the case of a new business. Building out infrastructure, though, is not a linear process: new capacity comes online all at once, which means a business has to overbuild for their current needs so that they can accommodate future growth, which again means that most resources are sitting idle most of the time.
+    - Third, compute capacity is complex and expensive. That means there are both huge fixed costs that have to be invested before the compute can be used, and also significant ongoing marginal costs to manage the compute already online.
 
--   This is why AWS was so transformative: Amazon would spend all of the up-front money to build out compute capacity for all of its customers, and then rent it on-demand, solving all of the problems I just listed:
+    -   This is why AWS was so transformative: Amazon would spend all of the up-front money to build out compute capacity for all of its customers, and then rent it on-demand, solving all of the problems I just listed:
 
-    - Customers could scale their compute up-or-down instantly in response to their needs.
-    - Customers could rent exactly how much compute they needed at any moment in time, even as they were able to seamlessly handle growth.
-    - AWS would be responsible for all of the up-front investment and ongoing maintenance, and because they would operate at such scale, they would get much better prices from suppliers than any individual company could on its own.
+        - Customers could scale their compute up-or-down instantly in response to their needs.
+        - Customers could rent exactly how much compute they needed at any moment in time, even as they were able to seamlessly handle growth.
+        - AWS would be responsible for all of the up-front investment and ongoing maintenance, and because they would operate at such scale, they would get much better prices from suppliers than any individual company could on its own.
 
-    - Amazon has a lot less cash and, more importantly, a lot less profit than Google or Microsoft. 
-    - Amazon already has significantly more scale, which means their costs on a per-customer basis are lower than Microsoft or Google.
-    - AWS charges for data transferred out of their network but not for data transferred into their network
+        - Amazon has a lot less cash and, more importantly, a lot less profit than Google or Microsoft. 
+        - Amazon already has significantly more scale, which means their costs on a per-customer basis are lower than Microsoft or Google.
+        - AWS charges for data transferred out of their network but not for data transferred into their network
 
--R2 is a compelling choice for a certain class of applications that could be built to s erve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.
+- R2 is a compelling choice for a certain class of applications that could be built to s erve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.
 
 - Moreover, like any true disruption, it will be very difficult for Amazon to respond: sure, R2 may lead Amazon to reduce its egress fees, but given the importance of those fees to both AWS’s margins and its lock-in, it’s hard to see them going away completely. More importantly, AWS itself is locked-in to its integrated approach: the entire service is architected both technically and economically to be an all-encompassing offering; to modularize itself in response to Cloudflare would be suicidal.
 
@@ -389,20 +377,20 @@ For Compute,
         - Use resilient AI/ML Algorithms
             - "adversarial ML" - developing robust learning methods that have multiple mathematical protections against evasion attacks. 
 
-- Tech#Facebook Outage 
+- [Facebook Outage Summary][SystemArchitecture] 
     - BGP stands for Border Gateway Protocol. It's a mechanism to exchange routing information between autonomous systems (AS) on the Internet. The big routers that make the Internet work have huge, constantly updated lists of the possible routes that can be used to deliver every network packet to their final destinations. Without BGP, the Internet routers wouldn't know what to do, and the Internet wouldn't work.
     - The Internet is literally a network of networks, and it’s bound together by BGP. BGP allows one network (say Facebook) to advertise its presence to other networks that form the Internet. As we write Facebook is not advertising its presence, ISPs and other networks can’t find Facebook’s network and so it is unavailable.
     - When someone types the https://facebook.com URL in the browser, the DNS resolver, responsible for translating domain names into actual IP addresses to connect to, first checks if it has something in its cache and uses it. If not, it tries to grab the answer from the domain nameservers, typically hosted by the entity that owns it.If the nameservers are unreachable or fail to respond because of some other reason, then a SERVFAIL is returned, and the browser issues an error to the user.
     - Border Gateway Protocol (BGP) is the postal service of the Internet. When someone drops a letter into a mailbox, the postal service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data across the Internet, BGP is responsible for looking at all of the available paths that data could travel and picking the best route, which usually means hopping between autonomous systems.BGP is the protocol that makes the Internet work. It does this by enabling data routing on the Internet. When a user in Singapore loads a website with origin servers in Argentina, BGP is the protocol that enables that communication to happen quickly and efficiently.
 
-    - Investing#Call options 
-        - Buying a call option at strike price (typically greater than CMP) is 
-            - bet on the price of the stock at expiry
-            - rewarded if underlying stock price goes up a lot
-            - not penalized if it goes down ( just lose the amount paid for the option)
-            - "delta" effect is when chances of stock prices going up at expiry is high because of jump in stock price 
-            - "theta" effect is if stock prices remain same over period of time in direction of expiry
-            - "vega" effect is if stock is volatile due to which Market thinks there will be hugh action at expiry. 
+- [Call options][Stocks] 
+    - Buying a call option at strike price (typically greater than CMP) is 
+        - bet on the price of the stock at expiry
+        - rewarded if underlying stock price goes up a lot
+        - not penalized if it goes down ( just lose the amount paid for the option)
+        - "delta" effect is when chances of stock prices going up at expiry is high because of jump in stock price 
+        - "theta" effect is if stock prices remain same over period of time in direction of expiry
+        - "vega" effect is if stock is volatile due to which Market thinks there will be hugh action at expiry. 
 
 ## 2021-oct-6 Wed
 
@@ -410,7 +398,7 @@ For Compute,
     - BGP is a protocol that companies use to advertise BGP Routes. 
     - If Company makes announcement for withdrawal of BGP Routes then all routers would delete those routes and site becomes inaccessible.
 
-- Tech#Micosoft .NET 
+- [.NET Specific Tech. Tips][SystemArchitecture]
     - at scale could means 
         - no. of users 
         - size of data
@@ -453,7 +441,7 @@ For Compute,
 
         - After the operation processing completes, a GET request to status monitor URL returns a response with a status field containing a terminal value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation. If the status is Failed, the status monitor resource must contain an error field with a code and message that describes the failure. If the status is Succeeded, the response may contain additional fields as appropriate, such as results of the operation processing.
 
-- Tech#Logging rules (https://tuhrig.de/my-logging-best-practices/)
+- [Logging rules][SystemArchitecture](https://tuhrig.de/my-logging-best-practices/)
     - INFO Level is for business while DEBUG is for developers
     - Log INFO after the operation is over and not before 
     - Distinguish between WARNING (Typically can be retried) and error
@@ -474,7 +462,7 @@ For Compute,
     - Productivity gains in commodity business typically benefit buyers than owners
     - when technology moves too fast it causes competitive destruction
     - every person has circle of competence and its hard to advance that circle
-    - if you play games where other peopl ehave the aptitudes and you don't then you are going to lose.
+    - if you play games where other people have the aptitudes and you don't then you are going to lose.
     - people can rise quite high in life by slowly developing circle of competence.
     - Its not given to human beings to have such talent that they can just know everything about everything all the time.
     - The wise ones bet heavily when the world offers them that opportunity. 
@@ -495,7 +483,7 @@ For Compute,
 - Tech#Garbage collection 
     - The rule-of-thumb for allocations is that they should either die in the first generation (Gen0) or live forever in the last (Gen2).
 
-- Tech#Peformance rules 
+- [.NET Performance][SystemArchitecture]
     - Avoid LINQ. LINQ is great in application code, but rarely belongs on a hot path in library/framework code. LINQ is difficult for the JIT to optimize (IEnumerable<T>...) and tends to be allocation-happy.
     - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most common being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> fo+r foreach.
     - Mark classes as sealed by default. When a class/method is marked as sealed, RyuJIT can take that into account and is likely able to inline a method call.
@@ -504,7 +492,7 @@ For Compute,
 
 ## 2021-oct-8 Fri
 
-- Tech#API 
+- [OpenAPI][SystemArchitecture][API] 
     - [OpenAPI](https://openapitools.org) & ASyncAPI - refers to API Specification 
     - OpenAPI is specification while swagger is tooling that uses OpenAPI Specification
     - API Definition - JSON/YAML documents that capture unique API's business intent aimed at meeting specification requirements.
@@ -525,6 +513,7 @@ For Compute,
             - API Security - Checks during development, testing and production 
             - API Observability - Measuring API Traffic 
         - Integration with SDLC 
+
 - Finance/Defi
     - Stablecoin lines on a blockchain , is easily exchangeable for Bitcoin (or other crypto assets) using the tools and exchanges and brokerages andprocesses of crypto world, but is always worth a dollar. 
     - Libor is in theory the rate at which big banks can borrow unsecured for some some specified period of time. 
@@ -533,7 +522,7 @@ For Compute,
 - Confidential Computing
     - Confidential computing is a breakthrough approach to data protection: sensitive workloads are run inside hardware-isolated and runtime-encrypted environments called enclaves. Enclaves can protect against threats like malware or rootkits and even rogue administrators and physical intruders. 
 
-- Tech#.NET
+- [.NET Performance][SystemArchitecture]
     - What affects scale 
         - GC (Too many GC Pauses)
         - Threadpool starvation
@@ -609,7 +598,7 @@ For Compute,
 
     - In quantitative investment research, a great deal of effort is put into “factor engineering” – the process of determining which features of a company are most valuable to forecasting the future. Deep learning provides the potential opportunity to let the algorithms discover the features based on raw financial data. That is, the “deep” in deep learning means that successive layers of a model are able to untangle important relationships in a hierarchical way from data as found “in the wild,” and these relationships may be stronger than the ones found via traditional approaches to factor engineering.
 
-- Investing#Position Sizing 
+- [Position Sizing][Stocks] 
     - First, clean up: Download current list of holdings, add a column “Percentage of Portfolio”, filter for holdings under 1%. Exit them. It doesn’t matter whether the next Amazon or the next Suzlon is in t here because they won’t move the needle, but they clutter up the screen and mind with their greens and reds.
     - Assign Conviction levels: Look through the remainder, assign Low-Medium-High conviction levels to each holding. This is not about a DCF valuation exercise but putting down your level of confidence that made you buy the stock in the first place. Note, “holding” here can mean individual stock, mutual fund, or even a set of stocks you transact as a portfolio e.g. if you allocate to a momentum portfolio, you wouldn’t assess each individual stock but the portfolio itself
     - Take Action - 
@@ -679,15 +668,13 @@ For Compute,
 ## 2021-oct-13 Wed
 
 - Competition Demystified 
-    - devising strategy without taking that response into account can be
-    a glaring mistake.
+    - devising strategy without taking that response into account can be a glaring mistake.
 
     - five forces that can affect competitive environment are Substitutes, Suppliers, Potential Entrants, Buyers, and Competitors within the Industry
-
+    
     - Genuine competitive advantages from supply side are, 
         - Supply
-        - Demand - dvantages arise because of customer captivity that is based on habit, on the costs of switching, or on the difficulties and expenses of
-        searching for a substitute provider. Economies of scale. 
+        - Demand - dvantages arise because of customer captivity that is based on habit, on the costs of switching, or on the difficulties and expenses of searching for a substitute provider. Economies of scale. 
         - Economies of scale
 
     - Groucho Marx’s rule not to join any club that would have him as a member
@@ -698,7 +685,7 @@ For Compute,
     - Classical game theory is primarily useful because it imposes a systematic approach to collecting and organizing the mass of information about how competitors may behave.
 
 
-- Investing 
+- [Investing][PersonalFinance] 
     - Dont bet what you can't afford to lose
     - Don't bet when your instincts say the game's rigged
     - Regulators may be biased
@@ -776,7 +763,7 @@ For Compute,
 
 ## 2021-oct-19 Tue
 
-- Investing#Thoughts from Samit Vartak
+- [Thoughts from Samit Vartak][Stocks]
 
     - Valuation is secondary and business analysis is primary concern 
     - ROE - 25%
@@ -856,7 +843,7 @@ For Compute,
 
 ## 2021-oct-27 Wed
 
-- Investing rules, 
+- [Investing rules][PersonalFinance] 
 
     - Cut your losses -  put a stop point to how much money you can lose in a stock. And when you reach that point, get the hell out. How much? Well, for some people it’s 2% per trade. For others it’s 30% absolute on each investment. That’s for you to figure out.
 
@@ -894,7 +881,7 @@ For Compute,
 
 ## 2021-oct-28 Thu
 
-   - API Gateway or not 
+   - [API Gateway[SystemArchitecture] 
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
        - Coupling - Without API Gateway, Client apps are coupled to the internal services. Any changes in internal services directly impact clients. 
        - Security - Api Gateway can handle security aspects required for endpoints exposed to outside world 
@@ -917,7 +904,7 @@ For Compute,
 
         - reference: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern
 
-- onthropology 
+- Onthropology 
     - Anthropologically, only 2-7% of population can do white collar jobs
     - rest are bread for blue collar jobs (meant to be beasts of burden)
     - Industrialization disturbed it. 
@@ -929,7 +916,7 @@ For Compute,
 
     - Humanities are monopolized by leftists
 
-- Retry guidelines 
+- [Retry guidelines][SystemArchitecture] 
     - As a general guideline, use an exponential back-off strategy for background operations, and immediate or regular interval retry strategies for interactive operations. In both cases, you should choose the delay and the retry count so that the maximum latency for all retry attempts is within the required end-to-end latency requirement.
 
     - Anti-patterns
@@ -949,7 +936,7 @@ For Compute,
 
 ## 2021-nov-01 Mon
 
-- India Economy, 
+- Indian Economy, 
     - South preferred over North; Central govt. discriminated against North
     - Freight equalisation policy was adopted by the government of India to facilitate the equal growth of industry all over the country. This meant a factory could be set up anywhere in India and the transportation of minerals would be subsidised by the central government. As a result of the policy, businesses preferred setting up industrial locations closer to the coastal trade hubs and markets in other parts of the country.
     - In other countries - Industries sprout around areas having abundant raw material. 
@@ -966,7 +953,7 @@ For Compute,
     - Hauling cargo via Containers was invented by Malcolm mclean in 1956.  It provided perfect platform to drive global connectivity as they connected all dots through transportation, infrastructure, supply chain and logistics (ship,rails & trucks)
     - The International Maritime Organization (IMO) published a set of shipping container standards in the 1970s. 
 
-- On Software Architecture
+- [On Software Architecture][SystemArchitecture]
 
     - Every thing in Software Architecture is a trade off
 
@@ -1013,14 +1000,14 @@ For Compute,
 
 ## 2021-nov-03 Wed
 
-- Behavioral
+- [Behavioral][PersonalFinance]
     - Extrinsically Motivated Goals (EM)- Owning a home,Money,fame,image   
     - Intrinsically Motivated Goals (IM)- Personal growth, intimacy, community
     - people are less happy with materialistic acquisitions 
     - homes are depreciating assets.
     - You are paying rent whether you own a house or not
 
-- Money fundas
+- [Money fundas][PersonalFinance]
     - have money but dont get tempted.
     - let money be facilitator
     - FD Rate + 5-7% is equity returns...anything promised over it is scam
@@ -1030,9 +1017,9 @@ For Compute,
     - buy because you need it
     - Upto 10 years -> Allocate to Debt; More than 10 years -> Allocate to Equity
 
-## 2021-nov-08 Mon
+## 2021-nov-08 Mon+
 
-- On ETFs 
+- [On ETFs][Stocks] 
     -  market maker is someone who buys and sells an asset in order to profit from the spread, not someone who accurately forecasts the price of an asset six months from now. End users want to buy or sell stocks or bonds or houses, they want to do it quickly at a predictable price, so they go to a market maker who will provide that service. The market maker buys from sellers and sells from buyers and does its best to match them up; ideally it buys an asset from a seller and resells it to a buyer within a fairly short time. It collects a “spread” from the buyer and seller: It buys from the buyer at a bit less than the fair market price, and sells to the seller at a bit more than the fair market price, because it is providing them a valuable service, the service of “immediacy” or “liquidity,” the service of always being available to buy or sell. 
     - Substantial differences from NAV rarely happen because traders all over the world actively trade ETF’s. They will sell ETF’s when they drift above their NAV and buy when they are below it. These actions keep the ETF’s share price close to the NAV.
     Another tool that ETF’s have to keep the price around the NAV is called creation/redemption. The ETF has agreements in place with entities known as authorized participants to exchange baskets of the ETF’s assets in exchange for shares. Authorized participants can also sell the ETF baskets of assets. The ETF can create new shares when the price is above NAV and destroy shares when the price is too low below NAV. Creation/redemption helps keep share prices in line with NAV.
@@ -1101,7 +1088,7 @@ For Compute,
         - Saturation 
         - Errors
 
-    - Every database technology has its Kryptonite.
+    - [Every database technology has its Kryptonite][SystemArchitecture]
 
         - MySQL: the query cache, replication, the buffer pool.MySQL lacks transactional schema changes and has brittle replication.
         - PostgreSQL: VACUUM, connection overhead, shared buffers. PostgreSQL is susceptible to vacuum and bloat problems during long-running transactions.
@@ -1147,27 +1134,18 @@ For Compute,
     - Data lineage is the common thread that ties together all of your data pipelines, workflows, and systems.  
 
   - Disk Access
-    - Disk accesses are slow because they involve mechanical operations. To read a
-block of data from a disk requires the read arm to move to the right track; the platter
-must then spin until the desired block is under the read head. This process typically
-takes 10 ms. Compare this to reading the same amount of information from RAM,
-which takes 0.002 ms, which is 5,000 times faster. The arm and platters (known as
-a spindle) can process only one request at a time. However, once the head is on
-the right track, it can read many sequential blocks. Therefore reading two blocks
-is often nearly as fast as reading one block if the two blocks are adjacent. Solidstate
-drives (SSDs) do not have mechanical spinning platters and are much faster,
-though more expensive.
+    - Disk accesses are slow because they involve mechanical operations. To read a block of data from a disk requires the read arm to move to the right track; the platter must then spin until the desired block is under the read head. This process typically takes 10 ms. Compare this to reading the same amount of information from RAM, which takes 0.002 ms, which is 5,000 times faster. The arm and platters (known as a spindle) can process only one request at a time. However, once the head is on the right track, it can read many sequential blocks. Therefore reading two blocks is often nearly as fast as reading one block if the two blocks are adjacent. Solidstate drives (SSDs) do not have mechanical spinning platters and are much faster, though more expensive.
 
 ## 2021-nov-12 wed
 
-- Apache Airflow for ETL 
+- [Apache Airflow for ETL][ETL][Airflow] 
     - Primarily a workflow Management tool
     - Using Airflow to schedule and monitor ELT pipelines, but use other open-source projects that are better suited for the extract, load and transform steps. Notably, using Airbyte for the extract and load steps and dbt for the transformation step.
     -   With Airflow you can use operators to transform data locally (PythonOperator, BashOperator...), remotely (SparkSubmitOperator, KubernetesPodOperator…) or in a data store (PostgresOperator, BigQueryInsertJobOperator...).
     -  One of the main issues of ETL pipelines is that they transform data in transit, so they break easier. Hence move to ELT.
     - Airflow transfer operators together with database operators can be used to build ELT pipelines
 
-- Container Strategy
+- [Container Strategy][SystemArchitecture]
     - Containers are an application packaging format that help developers and organizations to develop, ship, and run applications
     - Why?
         - they effectively bundle applications, related libraries, dependencies, and configurations in a package that can be deployed across multiple environments
@@ -1211,7 +1189,7 @@ though more expensive.
         - Rare Earths - China can flood the market at favourable price points
     - Compromised leadership
 
-- Technology Arch - How much spare capacity
+- [Technology Arch - How much spare capacity][SystemArchitecture]
     - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000 * 100 = 1.7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
 
 ## 2021-nov-12 fri
@@ -1219,10 +1197,10 @@ though more expensive.
 - Economy
     - Baltic dry index has fallen significantly this week. This means demand for bulk shipping is crashing.
 
-- Tech#Backpressure
+- [Tech#Backpressure][SystemArchitecture]
     - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens.  Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
 
-- Tech#Scale versus Resiliency
+- [Tech#Scale versus Resiliency][SystemArchitecture]
     - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.
     - If we are load balancing over two machines, each at 80 percent utilization, then there is no spare capacity available if one goes down. If one machine died, the remaining replica would receive all the traffic, which is 160 percent of what the machine can handle. The machine will be overloaded and may cease to function. Two machines each at 80 percent utilization represents an N+0 configuration. In this situation, the load balancer is used for scale, not resiliency.
 
@@ -1236,7 +1214,7 @@ though more expensive.
     - Default response handling based on status code
     - Security headers or authentication required on APIs
 
-- Tech#Scaling, Sharding etc.
+- [Tech#Scaling, Sharding etc.][SystemArchitecture][Databases]
     - Drawbacks of Scale Up
         - there are limits to system size. The fastest, largest, most powerful computer available may not be sufficient for the task at hand. No one computer can store the entire corpus of a web search engine or has the CPU power to process petabyte-scale datasets or respond to millions of HTTP queries per second. There are limits as to what is available on the market today.
         - this approach is not economical. A machine that is twice as fast costs more than twice as much. Such machines are not sold very often and, therefore, are not mass produced. You pay a premium when buying the latest CPU, disk drives, and other components.
@@ -1257,7 +1235,7 @@ though more expensive.
             - Odd or even or power of 2 (i.e. 2(n) where n is last n bits of hash) -- For 2 shards
             - reminder of hash divided by 4 - for 4 shards
 
-    - Threads vs Processes
+- [Threads vs Processes][SystemArchitecture]
         - Processes have their own address space, memory and open file tables
         - Processes are self isolating i.e. corrupt process cannot hurt other processes 
         - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
@@ -1268,8 +1246,6 @@ though more expensive.
 ## 2021-nov-16 Tue
 
 - History
-
-Caution! External email. Do not open attachments or click links, unless this email comes from a known sender and you know the content is safe.
     - The original Islamic rulers weren’t particularly interested in converting Christians as these provided them with tax revenues –the proselytism of Islam did not address those called “people of the book”, i.e. individuals of Abrahamic faith. In fact, my ancestors who survived thirteen centuries under Muslim rule saw advantages in not being Muslim: mostly in the avoidance of military conscription.
 
     - Gnostic religions are those with mysteries and knowledge that is typically accessible to only a minority of elders, with the rest of the members in the dark about the details of the faith
@@ -1277,7 +1253,7 @@ Caution! External email. Do not open attachments or click links, unless this ema
 - Economy
     - When fewer people move to a town/city, demand for housing falls, and when the demand for housing falls, so does the cost of living.
 
-- Architecture Decision Records (ADR) (https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+- [Architecture Decision Records (ADR)](https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)[SystemArchitecture]
     
     - Format of ADR 
         - Title - For Example: "ADR 1: Deployment on Ruby on rails 3.0.10" 
@@ -1291,7 +1267,7 @@ Caution! External email. Do not open attachments or click links, unless this ema
     - y-axis (vertical scaling) - scales by isolating transactions by their type or scope, such as using read-only database replicas for read queries and sequestering writes to the master database only.
     - z-axis (lookup based scaling) - is about splitting data across servers so that the workload is distributed according to data usage or physical geography
 
-- Software Resiliency
+- [Software Resiliency][SystemArchitecture]
     - Spare capacity is like an insurance policy: it is an expense you pay now to prepare for future trouble that you hope does not happen. It is better to have insurance and not need it than to need insurance and not have it.
     - in a 1+1 redundant system, 50 percent of the capacity is spare. In a 20+1 redundant system, less than
     5 percent of the capacity is spare. The latter is more cost-efficient.
@@ -1316,7 +1292,7 @@ Caution! External email. Do not open attachments or click links, unless this ema
     - Triggers are stored routine. They are interpreted and not compiled
     - Triggers are in same transactions as incoming queries and are executed concurrently. This means additional locks for resources 
 
-- Format for "Design Document" 
+- [Format for "Design Document"][SystemArchitecture][Documentation] 
     - Title : Title of the document 
     - Date: Date of last revision
     - Author(s)/Reviewer(s)/Approver(s)
@@ -1352,7 +1328,7 @@ Below are not mandatory but could be useful,
         - Ad-hoc transformations
         - lack of ownership from original owners
 
-- Data Mesh
+- [Data Mesh][SystemArchitecture][Databases]
     - a data mesh allows data sources to remain distributed and controlled by different organizations, but accessible to a centralized application. With a data mesh architecture, data is guaranteed to be highly available, easily discoverable, secure and interoperable with the applications that depend on accessing it.
     - Domain ownership - Data is owned by domains that are intimately familiar with it. 
     - Data as a Product - encourage domains to share the data. 
@@ -1384,7 +1360,7 @@ Below are not mandatory but could be useful,
         - Currency returns are driven by two variables: changes in the spot rate (i.e., how many rupees you can buy with a dollar) and changes in the spread between countries’ interest rates (i.e., how much interest rupees earn versus how much interest dollars earn in interest-bearing accounts).
         - Falling interest rate differentials and declining volatility have made currency markets a difficult place to make money.
 
-    - ETF,
+    - [ETF][Stocks]
         - An ETF is simply a basket of securities that are publicly traded in the marketplace.
         - Throughout the day, there is an “INAV,” or intra-day net-asset-value, which tracks the value of an ETF on a 15-second basis. The INAV will be based on the prices associated with underlying stocks.Unfortunately, INAVs are not always 100% accurate, and by design, they can be up to 15-seconds delayed. 
 
@@ -1420,10 +1396,10 @@ Below are not mandatory but could be useful,
 
 - An architectural quantum is defined as an independently deployable artifact with high functional cohesion, high static coupling, and synchronous dynamic coupling.
     - Coupling - Two parts of a software system are coupled if a change in one might cause a change in the other.
-    - Static coupling  - Represents how static dependencies resolve within the architecture via contracts.
-These dependencies include operating system, frameworks, and/or libraries delivered via transitive dependency management, and any other operational requirement to allow the quantum to operate.
-   - High static coupling implies that the elements inside the architecture quantum are tightly wired together, which is really an aspect of contracts.
+    - Static coupling  - Represents how static dependencies resolve within the architecture via contracts.These dependencies include operating system, frameworks, and/or libraries delivered via transitive dependency management, and any other operational requirement to allow the quantum to operate.
+       - High static coupling implies that the elements inside the architecture quantum are tightly wired together, which is really an aspect of contracts.
    - Dynamic coupling -Represents how quanta communicate at runtime, either synchronously or asynchronously.
+
 Thus, fitness functions for these characteristics must be continuous, typically utilizing monitors
 
 - A data domain is a collection of coupled database artifacts—tables, views, foreign keys, and triggers—that are all related to a particular domain and frequently used together within a limited functional scope
@@ -1440,7 +1416,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
 ## 2021-nov-23 Wed
     
-- R. Bala's Wisdom on finance and investing
+- [R. Bala's Wisdom on finance and investing][PersonalFinance]
     - On Financial Freedom 
         - Maximum possible contribution to PPF and Continue till 25 years
         - Manual Monthly SIP in Index ETF. SIP amount to be increased with rise in income
@@ -1489,7 +1465,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
             - Sell in the hope of being able to buy lower or simply sell and cut perceived losses
             - Sell only those shares which show a ‘profit’ and hang on to those under water
 
-- Architect Role
+- [Architect Role][SystemArchitecture]
     - Avoiding Snake Oil and Evangelism
         - One unfortunate side effect of enthusiasm for technology is evangelism, which should be a luxury reserved for tech leads and developers but tends to get architects in trouble.
         - Trouble comes because, when someone evangelizes a tool, technique, approach, or anything else people build enthusiasm for, they start enhancing the good parts and diminishing the bad parts. Unfortunately, in software architecture, the trade-offs always eventually return to complicate thin
@@ -1540,7 +1516,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - Europe - Single European payment area (SEPA) offers free and instance transactions between european banks. they are pull based. Fraud rates are highest than Furikomi, ACH or UPI. 
 
 
-- Investing
+- [Investing][Stocks]
     - BIN - Bias, information and noise. Noise is twice as important as bias 
     - Investors are buying partial stakes in companies. They need to ground their thinking in cash flow models. Speculators, in contrast, are trying to find stocks that go up. While there are pockets of speculation.
 
@@ -1555,7 +1531,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
 - Quote - "It is difficult to get a man to understand something, when his salary depends on his not understanding it" - Upton Sinclair
 
-- Architecture 
+- [System Architecture Decision Making][SystemArchitecture] 
     -  Don't adopt a new system unless you can make the first-principle argument for why your current stack fundamentally can't handle it.
     - Whenever you find yourself arguing for improving infrastructure by yanking up complexity, you need to be very careful. 
     - Typical issues while adopting new technologies are, 
@@ -1585,7 +1561,6 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 ## 2021-dec-02 Thu
 
 - IT 
-
     - CPaaS stands for Communications Platform as a Service. It is one of the coolest ways of enriching your customer communication channels. It acts as a platform for businesses to combine the reliability and backend of proven communication services with their custom applications through the use of APIs (application programming interface). It is programmable, customizable, and very versatile. 
 
 - Finance
@@ -1641,7 +1616,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - Help Users recognize, Diagnose and recover from errors 
         - Help & Documentation 
     - Use Participatory Design 
-    - 
+
 - API Styles 
         - Tunnel-RPC style
         - CRUD Style
@@ -1656,7 +1631,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - You cannot use this money for equity trading. It can only be used for personal purposes. I do not know how they track end use but at least on paper speculative use is banned.
     - In case of banks, they open current account for loan disbursal and interest is charged on withdrawals.
 
-- Stocks#Philip Fisher's approach 
+- [Philip Fisher's approach][Stocks]
     - shouldn’t be over-wedded to valuation, providing we own great businesses (Valuation is a secondary concern). Great businesses grow faster than investors expect, and sustain growth for longer. While they often seem expensive based on current profits, their extraordinary growth potential means their valuation is often more than justified.
     - every company has a personality. More successful the corporation is more likely it is to be unique in it's policies. 
     - Important aspects of a company are Sales and R&D.
@@ -1772,7 +1747,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
     - Experience APIs – Experience APIs are the means by which data can be reconfigured so that it is most easily consumed by its intended audience, all from a common data source, rather than setting up separate point-to-point integrations for each channel. An Experience API is usually created with API-first design principles where the API is designed for the specific user experience in mind.
 
-- Investing
+- [Investing by Sanjay Bhattacharya][PersonalFinance]
     - Holding a bond to maturity reduces that risk as you get closer and closer to the maturity date
     - HALT - H-Hungry, A-Angry,L-Lonely,T-Tired - Dont make investment decisions when in any of these states.
     - Smart investing is essentially about managing risk 
@@ -1854,7 +1829,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
         - Normative: Claims about what *should* be true. Or a goal.
     So whenever we say things, let’s ask ourselves: “Am I making a factual, predictive or normative statement?” And in particular, let’s communicate clearly which one it is! Even just asking myself this question helps unmuddle my thinking a lot of the time.
 
-- Investing#9 point financial plan, 
+- [9 point financial plan][PersonalFinance] 
     1. Make a will, but also, buy things in joint names.
 
     2. Pay off your credit cards, and your personal loans. But keep a credit card.
@@ -1911,7 +1886,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - more self-employed people would make the economy more resilient to future shocks.
     - it is a mortal sin to confuse the concept of consensus with science, for consensus is statement of politics, and speaks nothing of truth
 
-- SQLite 
+- [SQLite][Databases] 
     - Good for small to moderate workloads, like use cases involving 100s of transactions/sec if not 1000s
     - SQLite has single writer but can handle multiple read requests 
     - Scales vertically with CPU & RAM
@@ -1999,7 +1974,7 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
 ## 2021-dec-27 Mon
 
-- Tech
+- [How to run Software Business][SystemArchitecture]
     - Learnings from running business 
         - Build time assets - tools and processes that will save your time. 
         - Code is about 10% of the business. - 90% of the results of your business, and somewhere around 90% of the effort, are caused by non-coding activities: dealing with pre-sales inquiries, marketing, SEO, marketing, customer support, marketing, website copywriting, marketing, etc.
@@ -2072,14 +2047,14 @@ Thus, fitness functions for these characteristics must be continuous, typically 
     - Consumer Surplus - difference between max. price a consumer is willing to pay for a given quantity and market price.
     - Supply side - Increase in cost, reduces the supply (and vice-versa).
 
-- Datawarehouse#Data Modelling Approaches, 
+- [Datawarehouse#Data Modelling Approaches][SystemArchitecture][Databases] 
     - 3NF: 3NF, which stands for “third normal form,”  is an architectural standard designed to reduce the duplication of data and ensure referential integrity of the database.
     - Star schema: The simplest and most widely used architecture to develop data warehouses and dimensional data marts, the star schema consists of one or more fact tables referencing any number of dimension tables.
     - Data Vault (DV): Developed specifically to address agility, flexibility, and scalability issues found in other approaches, DV modeling was created as a granular, non-volatile, auditable, easily extensible, historical repository of enterprise data. It is highly normalized and combines elements of 3NF and star models.
 
 ## 2021-dec-29 Wed
 
-- Tech
+- [Tolerant HTTP Clients, Cloud Migration, Mobile][SystemArchitecture]
     - Important aspects for fault tolerant HTTP Clients 
         - Retries -  retries only some kinds of failures, like connection errors and HTTP 500s, and doesn’t retry on errors that are likely non-transient like HTTP 400s.
         - Timeouts  - Adjust the timeouts as per Application's Latency, throughput requirements
@@ -2140,4 +2115,3 @@ Thus, fitness functions for these characteristics must be continuous, typically 
 
     - Tom holland on Islam, 
         - There is very little contemporary historical evidence about the life of Muhammad, with no mention of him at all in historical texts until decades after his death, and no mention of Mecca in any datable text relating to him until over a century after he died. He concluded that it is much more likely that Islamic theology developed gradually over several centuries as the Arab Empire expanded, and that descriptions of Muhammad's home more closely resemble what is now southern Israel than Mecca.
-

@@ -19,8 +19,7 @@
 
 ## 2022-jan-03 Mon
 
-- Tech
-
+- [VMs or Serverless][SystemArchitecture]
     - VMs, Serverless and when they are useful,
         - Virtual machines (e.g. EC2 or Compute Engine) are useful for workloads that change no faster than you’re able to add capacity, or for work loads that can tolerate delay in scaling (e.g. queue based event systems). They are also useful for short lived sessions that can tolerate scale down events
         -  Containers (e.g. a Kubernetes cluster or Fargate) which run on top of fixed compute. Like virtual machines are useful for traffic volumes which slowly change over time. While you’re able to start up a new container quickly to handle a new session, you’re still limited by the underlying compute instance on which the containers are running. The underlying compute hardware has to scale to meet the demands of the running containers. Containers are great for long lived, stateful sessions, as they can be ported between physical hardware instances while still running.
@@ -45,7 +44,7 @@
     - That duration indicates huge observability (traces, logs etc.) data i.e. in tune of gigabytes
     - Rather than having storage for all of data this, the historical data is pushed to S3 periodically. 
 
-- Neural Net (https://sirupsen.com/napkin/neural-net?utm_source=computer-napkins&utm_medium=email), 
+- [Neural Networks](https://sirupsen.com/napkin/neural-net?utm_source=computer-napkins&utm_medium=email)[SystemArchitecture], 
     - Basically training the system by adjusting the weights so as to get optimal desired result. 
     - Has 3 layers 
         - Input layer - has representation of data to feed to network. 
@@ -63,7 +62,7 @@
 
 ## 2022-jan-06 Thu
 
-- How ASP.NET requests are processed (ref: https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45), 
+- [How ASP.NET requests are processed](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45)[SystemArchitecture], 
     - .NET framework maintains pool of threads and dispatched for a new request.
     - If request is processed synchronously then respective thread is busy for that duration 
     - Max number of threads is 5000 for .NET 4.5
@@ -107,6 +106,7 @@
 
 - Watercooler#Vodka
     - all (unflavoured) vodkas are pure ethanol plus distilled water. There is no difference between a cheap and expensive vodka
+
 - Homo Sapiens
     -Ever since the Cognitive Revolution, Sapiens has thus been living in a dual reality. On the one hand, the objective reality of rivers, trees and lions; and on the other hand, the imagined reality of gods, nations and corporations. As time went by, the imagined reality became ever more powerful, so that today the very survival of rivers, trees and lions depends on the grace of imagined entities such as gods, nations and corporations.
     
@@ -134,7 +134,6 @@
 - While there is nothing wrong with having wealth or wanting more, this should be of secondary importance, and wisdom is all about priorities. We should be encouraged to appreciate excellence in others to build excellence in ourselves. This takes faith, in that we have to believe our excellence in character, even if not reflected in the current status hierarchy, is appreciated by someone we admire, if not now, then in the future.
 
 - Lions, for example, are the only social species of cat.
-
 
 - Effective decision making,
     - People Interventionistas - Often these people come armed with solutions to solve the first-order consequences of a decision but create worse second and subsequent order consequences.iatrogenics to refer to any effect resulting from intervention in excess of gain.
@@ -172,7 +171,6 @@
         - Examining consequences and implications. (What if I am wrong? What are the consequences if I am?) 
         - Questioning the original questions. (Why did I think that? Was I correct? What conclusions can I draw from the reasoning process?) 
     
-    
     - Reasoning from first principles allows us to step outside of history and conventional wisdom and see what is possible. When you really understand the principles at work, you can decide if the existing methods make sense. Often they don’t.  Many people mistakenly believe that creativity is something that only some of us are born with, and either we have it or we don’t. Fortunately, there seems to be ample evidence that this isn’t true. We’re all born rather creative, but during our formative years, it can be beaten out of us by busy parents and teachers. As adults, we rely on convention and what we’re told because that’s easier than breaking things down into first principles and thinking for yourself. Thinking through first principles is a way of taking off the blinders. Most things suddenly seem more possible. 
 
 - Blockchain
@@ -192,7 +190,7 @@
 - Markets
     - While rising yields are generally a bullish sign for the economy, they also make riskier assets—like expensive tech stocks—less attractive compared to other names that may get a boost from higher interest rates. 
 
-- Database schema migrations - general flow of online schema migration, 
+- [Database schema migrations - general flow of online schema migration][Databases], 
     - Create a new, empty table, in the likeness of the original table. We title this the ghost table.
     - ALTER the ghost table. Since the table is empty, there is no overhead to this operation.
     - Validate the structural change is compatible with tooling requirements.
@@ -222,11 +220,12 @@
     6. Strategize a solution! This may involve both augmenting or adding to the forces in step 3, and reducing or eliminating the forces in step 4. 
 
 - Occam’s Razor, a classic principle of logic and problem-solving, indicates that Simpler explanations are more likely to be true than complicated ones.
+
 - Hanlon's Razor demonstrates that there are fewer true villains than you might suppose—what people are is human, and like you, all humans make mistakes and fall into traps of laziness, bad thinking, and bad incentives. Our lives are easier, better, and more effective when we recognize this truth and act accordingly.
 
 ## 2022-jan-17 Mon
 
-- Tech#about headless browser libraries, 
+- [about headless browser libraries][SystemArchitecture][Testing], 
     - Puppeteer - Puppeteer is the most popular browser automation library, that just like the name implies, allows you to manipulate a web page like a puppet and scrape the data you need using a Chrome browser.
     - Playwright - Released by Microsoft in 2020, Playwright.js is the new kid on the block and it very similar to Puppeteer in many ways (many of the Puppeteer team left Google, and created Playwright at Microsoft). However, it has been gaining a lot of traction because of its cross-browser support (can drive Chromium, WebKit, and Firefox browsers, whilst Puppeteer only drives Chromium) and some developer experience improvements that would have been breaking changes with Puppeteer.
 
@@ -242,13 +241,13 @@
     - Decision making. A Zwicky box can help you with strategizing, financial modelling, and daily decision making.
     - Brainstorming in a team. It can be helpful to brainstorm ideas with your team with a Zwicky box where everyone can contribute to creating and filling the Zwicky box.
 
-- Difference between ETF and MF
+- [Difference between ETF and MF][Stocks][PersonalFinance]
     - Because ETFs are cheaper, they can get big too fast and they almost never limit their growth in terms of AUM. Unlike mutual fund where AMC can stop inflows, ETF inflows can not be stopped. At the most, creation of new units will be halted but it means that existing units will be available at premium. This is not a problem for index tracking ETFs but it is for other (thematic or otherwise).
     - You can only buy future performance.
 
 - The difference between genius and stupidity is that genius has its limits.
 
-- Latest from Howard marks (the decision to trim positions or to sell out entirely comes down to judgment . . . like everything else that matters in investing) , 
+- [Latest from Howard marks (the decision to trim positions or to sell out entirely comes down to judgment . . . like everything else that matters in investing)][PersonalFinance] , 
     - we should base our investment decisions on our estimates of each asset’s potential,
     - we shouldn’t sell just because the price has risen and the position has swelled,
     - there can be legitimate reasons to limit the size of the positions we hold,
@@ -260,7 +259,7 @@
 
 ## 2022-jan-19 Wed
 
-- Data Storage for Observability use case
+- [Data Storage for Observability use case][Databases]
     - Metrics with a single value are referred to as univariate, whereas metrics comprised of multiple values are called multivariate. 
     - Embedded key value stores - designed to be general purpose but limited their ingestion throughput.
     - Full-fledged TSDBs (TimescaleDB, Clickhouse etc.) - are geared towards analytical queries rather than ingestion performance.
@@ -274,7 +273,7 @@
 - PostgreSQL Replication 
     - PostgreSQL supports block-based (physical) replication as well as the row-based (logical) replication. Physical replication is traditionally used to create read-only replicas of a primary instance, and utilized in both self-managed and managed deployments of PostgreSQL. Uses for physical read replicas can include high availability, disaster recovery, and scaling out the reader nodes. 
 
-- Data storage
+- [Data storage][Databases][SystemArchitecture]
     - Row oriented - Because data on a persistent medium such as a disk is typically accessed block-wise (in other words, a minimal unit of disk access is a block), a single block will contain data for all columns.This is great for cases when we’d like to access an entire user record, but makes queries accessing individual fields of multiple user records (for example, queries fetching only the phone numbers) more expensive, since data for the other fields will be paged in as well
     - Column-oriented - Store values by vertical partitioning ie. by column against storing values by horizontal partitioning (as in RDBMS).
         - In column-oriented layout, values of same column are stored contiguously on disk.For example, if we store historical stock market prices, price quotes are stored together. Storing values for different columns in separate files or file segments allows efficient queries by column, since they can be read in one pass rather than consuming entire rows and discarding data for columns that weren’t queried.
@@ -317,7 +316,7 @@
     - The American government was spending much more than it was earning. To finance the spending, it sold treasury bonds. Large financial investors such as banks, insurance companies, pension funds and mutual funds, bought these bonds. At the same time, the Fed was buying treasury bonds from the same large financial investors and thus financing the government indirectly.
 
 
-- Tech#Postgres indexes, 
+- [Postgres indexes][Databases], 
     - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query. 
     - BRIN indexes are block range indexes, specially targeted at very large datasets where the data you’re searching is in blocks, like timestamps and date ranges. They are known to be very performant and space efficient.
     - GIST indexes build a search tree inside your database and are most often used for spatial databases and full-text search use cases. 
@@ -339,7 +338,7 @@
 
 ## 2022-jan-27 Thu
 
-- Tech#Linux 
+- [Linux][SystemArchitecture] 
     - In Linux architecture, memory is separated into kernel space and user space. The kernel space is used to run the core kernel code and the device drivers. Processes running in kernel space have unrestricted access to all hardware, including CPU, memory, and disks. All other processes run in the user space, which relies on the kernel to access the hardware. Processes running in the user space use system calls to communicate with the kernel for privileged operations like disk or network I/O.A buggy code in a kernel module can easily crash the kernel. This is why Linux provides a way to run secure, verified sandboxed code in the kernel space through eBPF.
     - Good Article about eBPF, https://www.containiq.com/post/ebpf  
 
@@ -442,7 +441,7 @@
     - muxing is the process of combining multiple inputs into a single singal, de-muxing naturally is the opposite process. De-muxing, aka 
     Demultiplexing, is the process of separating a single output into its inputs
 
-- Software Architecture is about, 
+- [Software Architecture is][SystemArchitecture], 
     - Shared/Common understanding in stake holders about technically important aspects
     - Is not about craftmanship vs. economics. Economics always wins.
     - Architecture is about internal quality which is not directly visible. Quality is directly proportional to Customer satisfaction.
@@ -457,7 +456,7 @@
 - Default size of the stack,
     - 1 MB
 
-- Open source data stack 
+- [Open source data stack][SystemArchitecture] 
     - Airflow - Workflow
     - Airbyte - ELT
     - dbt - ELT
@@ -498,13 +497,13 @@
     - Smart intermediary are the only ones who are earning money. 
     - Markets are lightly regulated 
 
-- Financial Industry
+- [Financial Industry][PersonalFinance]
     - Reversion to mean -  yesterday’s best performing funds are tomorrow's worst performing funds.
     - selecting your fund for tomorrow by picking a winner from yesterday is an exercise fraught with peril.
     - Best-performing funds become worst and vice versa. But index funds continue to earn market returns. They are neither the best-performing nor the worst performing, they are squarely in the middle.
     - Nifty 50 Index fund charges 0.07%-0.20%, and active large-cap funds charge about 1-1.5%. So they have to generate 1-1.5% outperformance, just to cover the costs and then beat the index.
 
-- Criteria for Assets for Asset allocation plan, 
+- [Criteria for Assets for Asset allocation plan][PersonalFinance], 
     - Fundamentally different - asset classes must be fundamentally different and have unique risk. Stocks and bonds are different; one is ownership and the other is loan. U.S. stocks are different from international stocks in base currency and government policy. Real estate and commodities differ from common stocks in collateral structure. In contrast, U.S. mid-cap stocks are not fundamentally different than large cap and there is very little unique risk.  
     - Real return – an asset class must generate a real return in the long-term (after-inflation). U.S. stocks have outperformed inflation by about six percent historically and real estate has earned about the same. Government bonds have outperformed by about two percent.  In contrast, commodities have no expected return over the inflation rate and do not pass this gate.
 
@@ -582,7 +581,7 @@
 
 ## 2022-feb-11 Fri
 
-- Postgres High availability with Patroni, 
+- [Postgres High availability with Patroni][Databases][SystemArchitecture], 
     - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts. 
     - Basic components, 
         - PostgreSQL cluster: the database cluster, usually consisting of a primary and two or more replicas
@@ -635,7 +634,7 @@
 
 ## 2022-feb-14 Mon
 
-- Jack Bogle's investment advice 
+- [Jack Bogle's investment advice][PersonalFinance] 
     - Regular rebalancing is not necessary 
     - 60-40 is probably good allocation 
     - key things to think about how much risk one can take 
@@ -662,7 +661,7 @@
     -Religion is a culture of faith; science is a culture of doubt 
     -Institutions are hard to institute & maintain, because human beings are self-righteous, hubristic, and power-hungry (a la Trudeau "I will get my way no matter what"). We are always tempted to discard institutions when they become a short term nuisance/obstruction to expediency
 
-- Portfolio Construction , John Bogle ***
+- [Portfolio Construction , John Bogle ***][PersonalFinance]
     - Benjamin Graham believed that investors should never be entirely out of the stock market (or entirely in it, either).
     - Graham advised that when enthusiasm is high, you should trim back your stocks, but never to zero -- and when pessimism prevails, you should raise your allocation to stocks, but never to 100%.
     - Graham suggested keeping a minimum of 25% and a maximum of 75% in stocks, with the rest in bonds.
@@ -695,7 +694,7 @@
 - Obfuscation for Android 
     - R8 - standard optimizer and obfuscator. All classes, functions and variables are renamed to short, unreadable names. Proguard is alternative free Code obfuscation tool. 
 
-- Database Query performance analysis (MySQL) 
+- [Database Query performance analysis (MySQL)][Databases] 
     -  lock time greater than 50% of query time is a problem because MySQL should spend the vast majority of its time doing work, not waiting.
     - Locks are primarily used for writes (INSERT, UPDATE, DELETE, REPLACE) because rows must be locked before they can be written. Response time for writes depends, in part, on lock time
     - For reads (SELECT), there are nonlocking and locking reads. The distinction is easy because there are only two locking reads: SELECT…FOR UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is nonlocking, which is the normal case.
@@ -708,7 +707,7 @@
 
 - Cosmic rays altering the state of bit in a computer. Higher you go from earth's surface cosmic radiation increases. Blue screen appearing randomly could be due to cosmic particles 
 
-- Tech#How postgre stores rows
+- [How postgre stores rows][Databases]
     - PostgreSQL stores the actual data into segment files (more generally called heap files). Typically its fixed to 1GB size but you can configure that at compile time using --with-segsize. When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments. This arrangement avoids problems on platforms that have file size limitations but 1GB is very conservative choice for any modern platform. These segment files contain data in fixed size pages which is usually 8Kb, although a different page size can be selected when compiling the server with --with-blocksize option but this size usually falls in ideal size when considering performance and reliability tradeoffs. If the page size is too small, rows won’t fit inside the page and if it’s too large there is risk of write failure because hardware generally can only guarantee atomicity for a fixed size blocks which can vary disk to disk (usually ranges from 512 bytes to 4096 bytes).
     - Internally PostgreSQL maintains a unique row id for our data which is usually opaque to users. We can query it explicitly to see its value.in ctid First digit stand for the page number and the second digit stands for the tuple number. PostgreSQL moves around these tuples when VACUUM is run to defragment the page. 
 
@@ -717,7 +716,7 @@
     -  “spoofing,” -  involves flooding the market with fake orders in an effort to push a stock price up or down,
     - "Scalping" - short-sellers cash out their positions without disclosing it
 
-- Code Obfuscation types
+- [Code Obfuscation types][Security]
     - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
     - Flow obfuscation - h modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
 
@@ -733,41 +732,40 @@
 
 ## 2022-feb-22 Tue
 
-- Tech
-    - Easier ways of doing things
-        - SSL certificates, with Let’s Encrypt
-        - Concurrency, with async/await (in several languages)
-        - Centering in CSS, with flexbox/grid
-        - Building fast programs, with Go
-        - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
-        - Building cross-platform GUIs, with Electron
-        - VPNs, with Wireguard
-        - Running your own code inside the Linux kernel, with eBPF
-        - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
-        - Configuring cloud infrastructure, with Terraform
-        - Setting up a dev environment, with Docker
-        - Sharing memory safely with threads, with Rust
+- [Easier ways of doing things][SystemArchitecture]
+    - SSL certificates, with Let’s Encrypt
+    - Concurrency, with async/await (in several languages)
+    - Centering in CSS, with flexbox/grid
+    - Building fast programs, with Go
+    - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
+    - Building cross-platform GUIs, with Electron
+    - VPNs, with Wireguard
+    - Running your own code inside the Linux kernel, with eBPF
+    - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
+    - Configuring cloud infrastructure, with Terraform
+    - Setting up a dev environment, with Docker
+    - Sharing memory safely with threads, with Rust
     - Easier using hosted services
-        - CI/CD, with GitHub Actions/CircleCI/GitLab etc
-        - Making useful websites by only writing frontend code, with a variety of “serverless” backend services
-        - Training neural networks, with Colab
-        - Deploying a website to a server, with Netlify/Heroku etc
-        - Running a database, with hosted services like RDS
-        - Realtime web applications, with Firebase
-        - Image recognition, with hosted ML services like Teachable Machine
-        - Cryptography, with opinionated crypto primitives like libsodium
-        - Live updates to web pages pushed by the web server, with LiveView/Hotwire
-        - Embedded programming, with MicroPython
-        - Building videogames, with Roblox / Unity
-        - Writing code that runs on GPU in the browser (maybe with Unity?)
-        - Building IDE tooling with LSP (the language server protocol)
-        - Interactive theorem provers (not sure with what)
-        - NLP, with HuggingFace
-        - Parsing, with PEG or parser combinator libraries
-        - ESP microcontrollers
-        - Batch data processing, with Spark
+    - CI/CD, with GitHub Actions/CircleCI/GitLab etc
+    - Making useful websites by only writing frontend code, with a variety of “serverless” backend services
+    - Training neural networks, with Colab
+    - Deploying a website to a server, with Netlify/Heroku etc
+    - Running a database, with hosted services like RDS
+    - Realtime web applications, with Firebase
+    - Image recognition, with hosted ML services like Teachable Machine
+    - Cryptography, with opinionated crypto primitives like libsodium
+    - Live updates to web pages pushed by the web server, with LiveView/Hotwire
+    - Embedded programming, with MicroPython
+    - Building videogames, with Roblox / Unity
+    - Writing code that runs on GPU in the browser (maybe with Unity?)
+    - Building IDE tooling with LSP (the language server protocol)
+    - Interactive theorem provers (not sure with what)
+    - NLP, with HuggingFace
+    - Parsing, with PEG or parser combinator libraries
+    - ESP microcontrollers
+    - Batch data processing, with Spark
 
-- MySQL 
+- [MySQL][Databases] 
     - frequently dredging up old data is problematic for performance.
     - determine the ideal data model for the access, then use a data store built for that data model
     - Enqueue writes - Use a queue to stabilize write throughput. It allow the application to respond gracefully and predictably to flood of requests that overwhelms the application, or the database, or both.For write-heavy applications, enqueueing writes is the best practice and practically a requirement. Invest the time to learn and implement a queue.
@@ -827,7 +825,7 @@
 
 ## 2022-Mar-01 Tue
 
-- Optimistic concurrency 
+- [Optimistic concurrency][Databases] 
     - When OTP is generated, it must be getting saved in DB against Card Number. 
     - In that table, add version column (i.e. 'timestamp with time zone')
     - While beginning transaction, read this version and proceed with steps
@@ -935,7 +933,7 @@
 - Futures
     - Futures are mark-to-market financial products, and when the futures price goes up, the short side of the futures contract has to put up money today.
 
-- Tech#Database Record Access
+- [Database Record Access][Databases]
     - Why indexes, 
         - When data is stored on disk-based storage devices, it is stored as blocks of data. These blocks are accessed in their entirety, making them the atomic disk access operation. Disk blocks are structured in much the same way as linked lists; both contain a section for data, a pointer to the location of the next node (or block), and both need not be stored contiguously. Due to the fact that a number of records can only be sorted on one field, we can state that searching on a field that isn’t sorted requires a Linear Search which requires (N+1)/2 block accesses (on average), where N is the number of blocks that the table spans. If that field is a non-key field (i.e. doesn’t contain unique entries) then the entire tablespace must be searched at N block accesses. Whereas with a sorted field, a Binary Search may be used, which has log2 N block accesses. Also since the data is sorted given a non-key field, the rest of the table doesn’t need to be searched for duplicate values, once a higher value is found. Thus the performance increase is substantial.
 
@@ -1036,12 +1034,12 @@
     - people who base their self-worth on being right about everything prevent themselves from learning from their mistakes 
     - Good values are 1) reality-based, 2) socially constructive, and 3) immediate and controllable
 
-- Tech#Encryption 
+- [Encryption][Security] 
     - Symmetric-key algorithm - the same key is used to encrypt and decrypt.
 
 ## 2022-Mar-17 Thu
 
-- Database Workloads 
+- [Database Workloads][Databases] 
     - OLTP
         - Characterstics, 
             - Inserts, updates, and deletes only affect a single row. An example: Adding an item to a user’s shopping cart.
@@ -1078,7 +1076,7 @@
 
 ## 2022-Mar-21 Mon
 
-- Recommended Online security measures 
+- [Recommended Online security measures][Security] 
     - Use 2FA - Avoid SMS for second authentication as it is vulnerable to SIM jacking (i.e. SIM Swapping attack where In these attacks, a hacker convinces your mobile provider to reroute your phone number to their device. They can then access information and accounts linked to that phone.)
     - Use password Manager
     - Patch O/s for latest updates
@@ -1088,7 +1086,7 @@
     - setup email aliases for online accounts
     - Use VPN not public networks or computers
 
-- Web Appliation Monitoring 
+- [Web Appliation Monitoring][SystemArchitecture][Observability] 
     - Metrics to observe for Web Applications
         - Response Time p50, p90, p99, sum, avg 
         - Throughput by HTTP status 
@@ -1143,7 +1141,7 @@
         -  is probably top urbanized state in India (more than 60%)
         - % share of Agriculture could be 8%
 
-- Investing
+- [Investing wisdom][PersonalFinance]
     - John Bogle's recommendation for portfolio, 
     - 95% - Core allocation - Equity, Debt ...
     - 5% - Funny money, trading 
@@ -1204,7 +1202,7 @@
 - Tech
     - Directed acyclic graph (DAG) programming model, which defines tasks in stages so they can be executed sequentially or parallely.
 
-- Perspectives on Software Development,
+- [Perspectives on Software Development][SystemArchitecture],
     1.	Don’t fight the tools: libraries, language, platform, etc. Use as much native constructs as possible. Don’t bend the technology, but don’t bend the problem either. Pick the right tool for the job or you’ll have to find the right job for the tool you got.
     2.	You don’t write the code for the machines, you write it for your colleagues and your future self (unless it’s a throw away project or you’re writing assembly). Write it for the junior ones as a reference.
     3.	Any significant and rewarding piece of software is the result of collaboration. Communicate effectively and collaborate openly. Trust others and earn their trust. Respect people more than code. Lead by example. Convert your followers to leaders.
@@ -1287,7 +1285,7 @@
 
 ## 2022-apr-04 Mon
 
-- MySQL Replication 
+- [MySQL Replication][Databases] 
     - Typical issues
         - Temporary lag - caused by cold cache after restart
         - Occasional lag - caused by write burst or long transactions 
@@ -1467,7 +1465,7 @@
 
 - Processed food - A lack of taste memory is one reason why Coca-Cola is such a profitable business. The recipe is engineered to not come with a taste memory, which is why the drink is so addicting. Cheetos are similar. According to the food scientist Steven Witherly, they bring so much pleasure because of the way each puff melts in your mouth. The way the food melts in the mouth is known as “vanishing caloric density,” which makes your brain think there are no calories in the food, which is why you can eat them for so long.
 
-- Parameters for Evaluation of decision/strategy, 
+- [Parameters for Evaluation of decision/strategy][SystemArchitecture] 
     - Technical ease 
     - Short term impact
     - Long term impact
@@ -1482,7 +1480,7 @@
     - claims about 17 percent of the world’s primary energy supply, and 25 percent of all CO2 emissions originating in the combustion of fossil fuels—and currently there are no commercially available and readily deployable mass-scale alternatives to displace these established processes
     - Ammonia is used as dominant nitrogen fertilizer.Ammonia is a simple inorganic compound of one nitrogen and three hydrogens (NH3), which means that nitrogen makes up 82 percent of its mass.Nitrates are also used to produce explosives.natural gas is used as the source of hydrogen, and  efficient centrifugal compressors and better catalysts are used in process to produce ammonia. synthetic nitrogen feeds half of humanity—or, everything else being equal, half of the world’s population could not be sustained without synthetic nitrogenous fertilizers.About 80 percent of global ammonia production is used to fertilize crops; the rest is used to make nitric acid, explosives, rocket propellants, dyes, fibers, and window and floor cleaners.
 
-- Power stocks, 
+- [Power stocks][Stocks] 
     - if you’re buying power stocks at p/b of 3x you deserve to lose money. NTPC was 3x in 2011, thereafter it was flat for a decade excl. dividend. power stocks can’t earn more than cost of capital, so better to buy them at book or below book value. or not buy them at all.
 
 
@@ -1608,7 +1606,6 @@
 - Peter lynch
     -  A general rule for investing in restaurants is that annual sales should exceed the cost of construction.I'm skittish about owning stock in restaurants that make most of their money on liquor. Liquor tastes the same everywhere, and a restaurant that becomes a bar is likely to lose its customers to a trendier bar.
 
-
 ## 2022-apr-12 Tue
 
 - "bogeyman in the closet" - The bogeyman hasn't come out yet, and you're not sure he's in there,
@@ -1643,3 +1640,26 @@ but you aren't about to poke around in the dark to prove that he isn't.
     - cyclical - a cyclical is a company that will prosper in good times and suffer in bad. That's because it makes or sells expensive products or luxury items that customers can put off buying when they are short on cash. People continue to buy deodorant, dental floss, Big Macs, and headache pills no matter what, which is why drugstores and fast-food restaurants are not cyclicals. Some cyclical industries are machinery, homebuilders, appliance, furniture manufacturers, waste mgmt companies.
     
     - The best time to get involved with cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest
+
+## 2022-apr-13 Wed
+
+- [Things to consider while making technology choices][SystemArchitecture]
+    - Software Architecture cannot be created in a vacuum and solid technical foundation is not not enough.
+    - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
+    - Reasons behind it
+    - Impact on Team 
+        - Is it easy for them learn?
+        - Are they enthusiastic 
+    - External Attractiveness (from New Hire prespective)
+    - Effective communication 
+    - Time to market
+        - Trade off between idealism vs pragmatism 
+    - Long term Maintenance
+        - Cost of Maintenance in terms of 
+            - Testing difficulties
+                - Efficiency of QA Team is critical for Software product/application 
+            - Employee attrition
+                - What specific skills and domain knowledge will your design require, and how much value would be lost if one of your employees were to leave?
+                - the more your own developers build; the more you will depend on them.
+            - Flexibility 
+                - The more vendor agnostic your design is, the more easily you will be able to avoid getting stuck  on an outdated platform and more quickly you'll be able to upgrade or pivot your underlying infrastructure as technology changes. 
