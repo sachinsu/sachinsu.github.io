@@ -1663,3 +1663,106 @@ but you aren't about to poke around in the dark to prove that he isn't.
                 - the more your own developers build; the more you will depend on them.
             - Flexibility 
                 - The more vendor agnostic your design is, the more easily you will be able to avoid getting stuck  on an outdated platform and more quickly you'll be able to upgrade or pivot your underlying infrastructure as technology changes. 
+
+- [Investments][PersonalFinance] 
+- Retirement and the 4% Rule - The 4% Rule: If you can live on 4% of of your investment portfolio per year, the money should last you >30 years. The inverse of this rule is often usedto calculate: "How much do I need to retire?" Retirement number = 25 x annual expenses
+-  2 reasons why you shouldn't pick individual stocks Financial reason: The majority of pro money managers can't beat the index. Can you?
+Existential reason: How do you conclusively know you're a good stock picker?
+- When to sell? - only reasons are, 
+- Rebalance his portfolio
+- Exit a losing position
+- Meet some immediate financial need
+- In investing, selling after a bad stretch feels like the right thing to do. You learned your lesson and seek greener pastures. But everything we know about investing shows it’s the wrong action: the big money comes from compounding uninterrupted over years and decades, when what you’ve done is not as important as how long you’ve been doing it for.Nassim Taleb says if you’re going to panic in investing, panic early. Same goes for your career – if you’re going to quit, quit early so whatever’s next has a shot at compounding.
+-  Nearly half of all stocks decline by at least 70% and never recover their previous highs as per data by JP Morgan
+- You're much more likely to end up owning one of the thousands of stocks in Underperformance Land than one of the fortunate few out on the right end of the distribution.
+- That's why diversification is so important. Investing in the stock market is highly likely to pay off over many decades. Investing in a single stock is far riskier. And investors with the least capital have the most to lose. Intelligent investors should always diversify. The two exceptions are when you have control or information.
+- Control - Someone whose decisions can influence the stock price 
+- Information -  you're an investor who has objectively superior information about a company not
+available to the market as a whole, then you should use it to concentrate in the stock
+
+- Rules/policy/procedures should be employed wherever possible since it avoids subjective evaluation. 
+- Auto Market 
+- When a
+car part fails, it's the carmaker that gets the bad publicity and not the part maker, so carmakers are very
+careful about who gets the contract. A competitor might arrive with the best-looking aluminum wheel
+ever, but unless that competitor has a track record, carmakers aren't likely to give up on what already
+works.
+-  spare-parts business, also known as the aftermarket
+- Digital Gold in India - minute you buy it you instantly lose 4% because you can only sell it back at 4% lower. you can't sell it other people. Only back to the same source you bought from.
+
+
+## 2022-apr-18 Mon
+
+-  We think we’re better than we really are because it’s good for our self-esteem and it keeps us from becoming a bunch of dreary downers. Princeton psychologist Daniel Kahneman is fond of saying that if we could accurately assess how risky our actions are, we’d probably never do anything; we’d be too depressed.While positive thinking can be useful, unrealistic optimism is not. The reality is that your odds of beating the market over time are no better than one in four, and they’re probably worse. And chasing hot funds, or hot stocks, in a frenzied attempt to beat the market is the best way I know of to get burned — or turned off investing entirely. 
+
+- Economics 
+    - Marginal Utility theory - Each dollar we have gives us some benefit. Some "utility". But the MORE money we have, the LESS benefit we derive from each *additional* $1.
+    - Expected *Utility* Maximization may be a much better strategy than Expectation Maximization. For example, if we're worth $2M, and we use $1M of it to play this game, our optimal strategy may be to stop after 6 doubles:
+
+
+- Software - Outage Incident Management
+    - Incident Handling:
+
+    - Have a runbook for disaster recovery and black swan events. Expect the unexpected, and plan for how you will respond, assess, and communicate.
+
+    - Follow your own runbook of disaster recovery. Atlassian published their disaster recovery runbook for Confluence, and yet, did not follow this runbook. Their runbook states that any runbook has communication and escalation guidelines. Either the company did not have communication guidelines, or they did not follow these. A bad look, either way.
+
+    - Communicate directly and transparently. Atlassian did none of this until 9 days. This lack of communication eroded a huge amount of trust not just across impacted customers, but anyone being aware of the outage. While Atlassian might have assumed it is safe to not say anything: this is the worst choice to make. Take note of how transparent GitLab or Cloudflare communicates during outages - both of them publicly traded companies, just like Atlassian.
+
+    - Speak your customer’s language. Atlassian status updates were vague, and lacked all technical details. However, their customers were not business people. They were Head of ITs and CTOs who made the choice to buy Atlassian products… and could now not answer what the problem with the system was. By dumbing down messaging, Atlassian put their biggest sponsors - the technical people! - in an impossible situation to defend the company. If the company sees customer churn, I greatly attribute it to this mistake.
+
+    - An executive taking public ownership of the outage. It took until Day 9 for a C-level to acknowledge this outage. Again, at companies which developers trust, this happens almost immediately. Executives not issuing a statement signals the issue is too small for them to care about it.
+
+    - Reach out directly to customers, and talk to them. Customers did not feel heard during this outage and had no human talk to them. They were left with automated messages. During a black swan event, mobilize people to talk directly to customers - you can do this without impacting the mitigation effort.
+
+    - Avoid status updates that say nothing. The majority of status updates on the incident page were copy-pasting the same update. Atlassian clearly did this to provide updates every few hours… but these were not updates. They added to the feeling that the company did not have the outage under control.
+
+    - Avoid radio silence. Up to Day 9, Atlassian has been on radio silence. Avoid this approach at all costs. 
+
+- [Investing][PersonalFinance] 
+    -  The whole point of investing is not to earn more money than average, but to earn enough money to reach your own goals. The best way to measure your investing success is not by whether you’re beating the market but by whether your investments are growing steadily and rapidly enough to get you where you want to go. That means that staying put, in an index fund or even in a fund that is underperforming the S&P by a point or two, is better than climbing onto the whizzing treadmill of trying to beat the market.
+
+- Naval Strategy
+    - Sea denial - Any coastal nation can utilize mines to defend its coast. Mines are a cheap and effective way to deny the enemy maneuver.
+
+- Finance 
+    - Repo is where banks borrow from the RBI and reverse repo is where they park excess money with the RBI. 
+
+
+- Engineering lead Expectations 
+    -  Has shipped code with different development processes.
+    - Has examples of things that have failed but they’ll try again.
+    - Has strong opinions but is willing to change their mind.
+    - Unblocks all issues (not just engineering ones).
+    - Regularly identifies and destroys time wasters.
+    - History of high morale engineering orgs.
+    - Says things like “This will take three weeks, but if we make this change we can test in two days."
+    - Lets the customer own the problem, but takes ownership of the solution.
+    - Has mentors or mentees outside the company and continues to do external 1:1’s.
+    - Is effective at parting ways with low performers.
+    - Trusted by alumni to aid in their career aspirations
+    - Employees end up working for customers
+    - Known engineering brand at new employers
+    - Takes all of the blame and none of the credit.
+    - Available during a crisis.
+    - Focused on giving folks the best opportunity of their lives.
+    - Knows when conditions change to make technological change.    
+    - Can dive deep into a few things per quarter.
+    - Changes mind with new Information 
+    - Can try solutions to problems they’ve never encountered before.
+    - Doesn’t use a proxy to performance.
+    - Delegates surprisingly large decisions
+
+- [Investment][PersonalFinance] 
+    - Future returns expectation - The more highly valued your holdings are, the lower their return is likely to be down the road. High recent returns make you feel rich, naturally leading you to extrapolate further gains. But you’re just borrowing them from the future.
+    - What to do in low market returns environment, 
+        - Save more, spend less
+        - Avoid chasing illiquid assets 
+        - Diversify if foreign markets are cheaper 
+        - Don't take bigger gambles
+
+- Social media effect 
+    - 24/7 access to social media has over-socialized us. Every action is criticized, every sentence is scrutinized until soon, we get stuck in a prison of fear and risk-aversion. Plus, the Internet has a perfect memory. It only takes one tweet to end your career and permanently tarnish your Google search results. Like public relations professionals, we’ve become hyper-aware of how the masses will respond to everything we say and do.
+
+- Peter lynch 
+    - My idea of a great business is one that has a shortage of competitors.

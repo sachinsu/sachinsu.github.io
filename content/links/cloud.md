@@ -40,3 +40,4 @@ Useful links for deep diving in various Cloud Ecosystems
 ### Tools
 
 - [Infracost - Open Source tool that shows Cloud cost estimates for Terraform in pull requests](https://www.infracost.io/)
+- [About Infrastructure as a Code](https://unzip.dev/0x004-infrastructure-as-code/)
