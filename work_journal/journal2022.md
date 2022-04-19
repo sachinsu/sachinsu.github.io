@@ -1766,3 +1766,26 @@ works.
 
 - Peter lynch 
     - My idea of a great business is one that has a shortage of competitors.
+
+- Log Aggregation 
+    - SysLog -  They allow processes to send log entries to them that they’ll then redirect to a central location. NxLog is alternative for Windows.
+
+
+- Insurance business - It costs a lot of money to bring new insurance products to market, and the big payoff comes several years down the road. Insurance companies are required to maintain sizable cash reserves for various contingencies.
+
+- Why international diversification (Rajeev Thakkar)
+    - More from country-specific risk diversification than returns 
+    - Developed markets are safe bet to start with since they have robust legal and corporate governance system
+    - Also allows to cover for sectors that are not available in India like Semiconductors,Electric Vehicles,  Internet Companies (Google,Facebook) 
+    - FoF is one option and other option is LRS but it attracts taxation, estate duty etc. 
+
+- "Poison pill" in US against hostile acquisition 
+    - In the U.S., the board has a powerful tool in this fight. It is the poison pill. (Everyone calls it that, though its technical legal name is a “shareholder rights plan.”) The board of directors of a company, feeling threatened by a big acquirer of its stock or a corporate raider proposing to buy the company, will adopt a “shareholder rights plan.” The gist of the plan is that if anyone — meaning, basically, the buyer — acquires more than X% of the company’s stock (often X is 15 or 20), then that person’s shares go poof. You can’t actually do that — you can’t make one shareholder’s shares go poof — but you can get arbitrarily close by allowing all of the other shareholders of the company to buy many more shares at a discount, or by giving them more shares for free. So you say “if anyone goes above 15% of the stock, then we will distribute one free share of stock for each existing share, except that the person who went above 15% doesn’t get any of the free stock.” So if someone gets 15%, then everyone else’s shares get doubled, taking the acquirer down to about 8%.[2] (In theory you could do this repeatedly, so that the acquirer could never get a controlling stake.)
+
+- [Peter lynch on Banks][PersonalFinance]
+    - The common measure of a bank's profitability is return on assets. You get the ROA by dividing the bank's income by its assets over a specified period. A 1 percent ROA is average, and that's a good benchmark to use. Anything above that is a plus. Another useful measure is the price- to-earnings ratio. I look for thrifts with p/e ratios below 10. I'd be wary of investing in any thrift that is losing money (zero or negative earnings) at the time it goes public.
+    - Less than 0.5% Of NPA is comforting 
+    - If a bank owns its own branches, it's a plus. Real estate is carried on the books at cost and can be a valuable hidden asset.Another plus is what bankers call cheap deposits. A bank that has few branches and large concentrations of deposits tends to be more cost effective than one with many branches and smaller deposits.
+
+- [Peter lynch on Momentum][PersonalFinance] 
+    - Stocks on the way down usually don't hit bottom until the volume has subsided. Heavy volume in the upward direction is often a harbinger of more big moves.

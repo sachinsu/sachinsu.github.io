@@ -165,7 +165,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Observability
 
-- [Observability trends 2021](https://www.civo.com/blog/observability-trends-2021)
+- [All about Log Aggregation](https://sematext.com/blog/log-aggregation/)
+- [Observability in 2022](https://developers.redhat.com/articles/2022/04/12/observability-2022-why-it-matters-and-how-opentelemetry-can-help)
 - [Observability @ Cloudflare](https://blog.cloudflare.com/vision-for-observability/)
 - [What to Monitor and Metrics to collect for Web App with Background Jobs](https://sirupsen.com/metrics)
 - [What was observability again?](https://www.cncf.io/blog/2021/03/02/what-was-observability-again/?utm_source=o11y.news&utm_medium=email)

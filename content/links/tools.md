@@ -70,10 +70,14 @@ Section covering useful tools for every day activities, Online learning etc.
 - [How and why I stopped buying new laptops](https://solar.lowtechmagazine.com/2020/12/how-and-why-i-stopped-buying-new-laptops.html)
 
 
-## Useful spreadhsheet formulas 
+## Useful spreadsheet formulas 
 
 - [Formulas for Personal finance](https://bou.ke/blog/formulas/)
 
 ## Search tools 
 
 - [Grep app- Search across Git Repos](https://grep.app/)
+
+## Blogging platforms 
+
+- [Writefreely](https://github.com/writefreely/writefreely)
