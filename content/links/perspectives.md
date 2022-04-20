@@ -1,4 +1,4 @@
-    ---
+---
 title: "Perspectives"
 date: 2020-02-18T12:33:07+05:30
 draft: false
@@ -46,6 +46,12 @@ Section covering Business, project/programming perspectives
 - [Data structures implemented in JavaScript - I](https://github.com/trekhleb/javascript-algorithms)
 - [Data driven enterprises of 2025](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/the-data-driven-enterprise-of-2025)
 - [Some Benefits of Simple Software Architecture](https://www.wave.com/en/blog/simple-architecture/)
+- [Determining how Architectural decisions impact business via Value](https://martinfowler.com/articles/value-architectural-attribute.html)
+
+## Legacy Modernization 
+
+- [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
+
 
 ## Fintech 
 

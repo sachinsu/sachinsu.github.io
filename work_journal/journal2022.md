@@ -1690,7 +1690,6 @@ works.
 -  spare-parts business, also known as the aftermarket
 - Digital Gold in India - minute you buy it you instantly lose 4% because you can only sell it back at 4% lower. you can't sell it other people. Only back to the same source you bought from.
 
-
 ## 2022-apr-18 Mon
 
 -  We think we’re better than we really are because it’s good for our self-esteem and it keeps us from becoming a bunch of dreary downers. Princeton psychologist Daniel Kahneman is fond of saying that if we could accurately assess how risky our actions are, we’d probably never do anything; we’d be too depressed.While positive thinking can be useful, unrealistic optimism is not. The reality is that your odds of beating the market over time are no better than one in four, and they’re probably worse. And chasing hot funds, or hot stocks, in a frenzied attempt to beat the market is the best way I know of to get burned — or turned off investing entirely. 
@@ -1782,10 +1781,29 @@ works.
 - "Poison pill" in US against hostile acquisition 
     - In the U.S., the board has a powerful tool in this fight. It is the poison pill. (Everyone calls it that, though its technical legal name is a “shareholder rights plan.”) The board of directors of a company, feeling threatened by a big acquirer of its stock or a corporate raider proposing to buy the company, will adopt a “shareholder rights plan.” The gist of the plan is that if anyone — meaning, basically, the buyer — acquires more than X% of the company’s stock (often X is 15 or 20), then that person’s shares go poof. You can’t actually do that — you can’t make one shareholder’s shares go poof — but you can get arbitrarily close by allowing all of the other shareholders of the company to buy many more shares at a discount, or by giving them more shares for free. So you say “if anyone goes above 15% of the stock, then we will distribute one free share of stock for each existing share, except that the person who went above 15% doesn’t get any of the free stock.” So if someone gets 15%, then everyone else’s shares get doubled, taking the acquirer down to about 8%.[2] (In theory you could do this repeatedly, so that the acquirer could never get a controlling stake.)
 
-- [Peter lynch on Banks][PersonalFinance]
-    - The common measure of a bank's profitability is return on assets. You get the ROA by dividing the bank's income by its assets over a specified period. A 1 percent ROA is average, and that's a good benchmark to use. Anything above that is a plus. Another useful measure is the price- to-earnings ratio. I look for thrifts with p/e ratios below 10. I'd be wary of investing in any thrift that is losing money (zero or negative earnings) at the time it goes public.
-    - Less than 0.5% Of NPA is comforting 
-    - If a bank owns its own branches, it's a plus. Real estate is carried on the books at cost and can be a valuable hidden asset.Another plus is what bankers call cheap deposits. A bank that has few branches and large concentrations of deposits tends to be more cost effective than one with many branches and smaller deposits.
+- [Peter Lynch on Banks][PersonalFinance]
+    - The common measure of a bank's profitability is return on assets. You get the ROA by dividing the bank's income by its assets over a specified period. A 1 percent ROA is average, and that's a good benchmark to use. Anything above that is a plus. Another useful measure is the price- to-earnings ratio. I look for thrifts with p/e ratios below 10. I'd be wary of investing in any thrift that is losing money (zero or negative earnings) at the time it goes public. 
+        - Less than 0.5% of NPA is comforting 
+        - If a bank owns its own branches, it's a plus. Real estate is carried on the books at cost and can be a valuable hidden asset.Another plus is what bankers call cheap deposits. A bank that has few branches and large concentrations of deposits tends to be more cost effective than one with many branches and smaller deposits.
 
-- [Peter lynch on Momentum][PersonalFinance] 
+- [Peter Lynch on Momentum][PersonalFinance] 
     - Stocks on the way down usually don't hit bottom until the volume has subsided. Heavy volume in the upward direction is often a harbinger of more big moves.
+
+## 2022-apr-20 Wed
+
+- [Legacy Modernization][SystemArchitecture] 
+    -  As per Thoughtworks, Technology is at most only 50% of the legacy problem, ways of working, organization structure and leadership are just as important to success.
+    - Approach 
+        - Establish clear requirement for Modernization in terms of business value 
+        - Break the problem into smaller parts 
+        - Successfully deliver parts 
+        - Change the organization to allow this to happen 
+
+- [Assessing business Value in Architecture][SystemArchitecture]
+    - Value stream mapping of business processes,
+        - examining how each part of a customer journey impacts revenue and margin.
+        - how a business process or improvement in it helps in customer retention
+        - How business is impacted due to failures (either top-down i.e. business function and identifying relevant software systems or reverse i.e. starting with software system and considering failure ramifications)
+        - If existing components aren't contributing much value, then they shouldn't be copied into the new platform.
+        - The notion that separating IT staff from business staff causes untold ills to such a profession like software development whose value is rooted in how much software is deeply entwined in the activity of the enterprise it supports.
+        - When architects are disconnected from the understanding the flow of business value, it raises costs both in wasted technical effort and in loss of opportunities presented by changes in the environment. Software leaders need to put more attention into the interplay of business activities and software decision making, and ensure that this is part of the career development process for all the technical staff.
