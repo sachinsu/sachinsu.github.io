@@ -53,6 +53,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API Development, Security
 
+- [Equinor's API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
 - [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)

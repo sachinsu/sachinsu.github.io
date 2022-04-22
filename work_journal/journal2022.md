@@ -1807,3 +1807,22 @@ works.
         - If existing components aren't contributing much value, then they shouldn't be copied into the new platform.
         - The notion that separating IT staff from business staff causes untold ills to such a profession like software development whose value is rooted in how much software is deeply entwined in the activity of the enterprise it supports.
         - When architects are disconnected from the understanding the flow of business value, it raises costs both in wasted technical effort and in loss of opportunities presented by changes in the environment. Software leaders need to put more attention into the interplay of business activities and software decision making, and ensure that this is part of the career development process for all the technical staff.
+
+## 2022-apr-21 Thu
+
+- Typical RDBMS Architecture principles, 
+    - Disk and row-oriented storage and indexing structures.
+    - Multithreading to hide latency.
+    - Locking-based concurrency control mechanisms.
+    - Log-based recovery.
+
+- About Serverless Model on Cloud, 
+    - Difficulty in local testing. Emulations like  Serverless application model, Localstack usually cover only basic use cases.
+    - Less reuse - Without help from frameworks, DRY (Don't Repeat Yourself), KISS (Keep It Simple Stupid) and other essential programming paradigms are simply ignored. 
+    - Microservice hell & Deployment issues - Due to lack of proper code versioning in terms of repository structure
+    - Lack of standardization in terms of HTTP Responses 
+    - Runtime related 
+        - Cold starts 
+        - frameworks like SAM & Localstack unable to match pace of new features being added by cloud provider 
+        - Issues with Event Management 
+    - What's good about Serverless? - Deployment and scaling. That's really it for most organizations. For a lot of these organizations, it's hard to find the time, people, and money to figure out how to automatically provision new VM's, get access to a K8S cluster, etc. 

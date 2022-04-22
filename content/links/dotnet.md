@@ -106,6 +106,7 @@ Platform where i have spent most time till now.
 - [ASP.NET Web API Versioning](https://github.com/microsoft/aspnet-api-versioning)
 - [Samples of ASP.NET Core you can use](https://github.com/dodyg/practical-aspnetcore)
 - [Step by Step OpenTelemetry in .NET Core](https://logz.io/blog/csharp-dotnet-opentelemetry-instrumentation/#conc)
+- [Techempower performance benchmarks](https://www.techempower.com/benchmarks/)
 
 ## Security
 

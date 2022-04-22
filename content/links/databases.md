@@ -145,3 +145,8 @@ Knowledge base around general database related topics.
 
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
 - [Get Started with Opensearch](https://amulyasharma.medium.com/opensearch-up-and-running-in-10-mins-49e05689087e)
+
+## Capacity Planning 
+
+- [About Oracle Capacity Planning](http://www.dba-oracle.com/concepts/database_administration.htm)
+- [Guidelines for SQL Server Capacity Planning](https://docs.microsoft.com/en-us/sharepoint/administration/storage-and-sql-server-capacity-planning-and-configuration)

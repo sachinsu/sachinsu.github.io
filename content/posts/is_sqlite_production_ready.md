@@ -260,6 +260,7 @@ Hopefully, above provides good starting point in deciding database for your next
 * SQLite as a document database, read about it [here](https://dgl.cx/2020/06/sqlite-json-support)
 * [Interesting lists of extensions](https://github.com/nalgeon/sqlean)
 * [sqlite-utils - Collection of utilities including migration from MySQL/PostgreSQL](https://github.com/simonw/sqlite-utils)
+* [Sqlite and Go by David Crawshaw](https://youtu.be/RqubKSF3wig)
 
 Happy Coding !!
 
