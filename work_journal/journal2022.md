@@ -718,7 +718,7 @@
 
 - [Code Obfuscation types][Security]
     - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
-    - Flow obfuscation - h modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
+    - Flow obfuscation -  modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
 
 - Deng Xiaoping is going to go down as one of the greatest leaders that any nation ever had. Because he had to give up his own ideology to do something else that worked better.
 
@@ -1823,6 +1823,41 @@ works.
     - Lack of standardization in terms of HTTP Responses 
     - Runtime related 
         - Cold starts 
-        - frameworks like SAM & Localstack unable to match pace of new features being added by cloud provider 
+        - Frameworks like SAM & Localstack unable to match pace of new features being added by cloud provider 
         - Issues with Event Management 
     - What's good about Serverless? - Deployment and scaling. That's really it for most organizations. For a lot of these organizations, it's hard to find the time, people, and money to figure out how to automatically provision new VM's, get access to a K8S cluster, etc. 
+
+## 2022-apr-26 Tue
+
+- Loans - Every security is a claim on some future stream of cash flows. The cash flows, current price, and long-term return are linked by arithmetic. 
+
+- SQLite
+    - supports import from CSV into a new table using ".import" command
+    - Supports full text search via fts5 module.
+
+- The complete guide to protecting your APIs with OAuth2- https://stackoverflow.blog/2022/04/11/the-complete-guide-to-protecting-your-apis-with-oauth2/
+
+- Home Network
+    -  Category 5e cable ('Cat 5e') - Minimum needed to support a gigabit connection for upto 100 meters.Category 6e cables can support even faster multi-gigabit connections at longer lengths.
+    - The most reliable way to get the fastest internet possible? Connect your device to Ethernet
+    - routers and nodes should be:
+    - Three to 4 feet above the floor
+    - Out in the open, not in a cabinet
+    - Away from electronic equipment, metal or major appliances
+    - Ideally separated by a couple of rooms or different floors for multiple-node setups
+
+- Charles' Rules of Argument  (https://fishbowl.pastiche.org/2004/03/21/charles_rules_of_argument)
+    -  You will never change anyone's mind on a matter of opinion. People change their minds gradually, and if anything a prolonged argument only serves to back someone into a corner, huddling closer to the security blanket of what they believe. 
+    - Never seek out things to disagree with. There are too many of them out there, and correcting the ills of the world just isn't your job.
+    - If you come across something you disagree with while randomly browsing, let it pass without comment (see rule 1). If it's truly frustrating, write a reply, then delete it without sharing it with anyone else.
+    - Even in the limited scope remaining, it is not your job to correct everything you find that you disagree with. Try to limit yourself to things where the subject is at least something that makes some practical difference to your life.
+    - Do not argue about politics, religion, or matters of personal taste or comparative morality.
+    - DO NOT argue with Lisp programmers, believers in the Semantic Web, or furries.
+    - Saying something controversial in your own space (i.e. your weblog) is only arguing if you directly reference somebody you are disagreeing with (or it is clearly understood in subtext who you are disagreing with), and that person is likely to give a shit about what you said.
+    -  If someone disagrees with something you've said, you're already in an argument. 
+    - Once you find yourself in an argument, your job is now to make your point clearly, and then leave.
+        - State your case - Once you have stated your case, there's no point re-stating it.Going over the same ground repeatedly will damage your case.
+        - Clarify any misunderstandings 
+        - The ideal attitude to project during any argument is one of calm disinterest. 
+        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness
+
