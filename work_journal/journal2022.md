@@ -1859,5 +1859,15 @@ works.
         - State your case - Once you have stated your case, there's no point re-stating it.Going over the same ground repeatedly will damage your case.
         - Clarify any misunderstandings 
         - The ideal attitude to project during any argument is one of calm disinterest. 
-        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness
+        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.   
+
+- SQLite considerations, 
+    - single writer thread, and it's a library incorporated into your process, not a shared DB. It's faster because those other features of a server have a cost as well, particularly the cost of write arbitration.
+    - SQLite is fine when all your load can be served by a single backend process on a single machine. The moment you need multiple backends to handle more load, or the moment you need high availability, you can't do it with SQLite.
+
+- [Future - Expected low returns][PersonalFinance] 
+    -  The lower the expected and realized returns, the more that must be saved. Pension fund managers are well aware of this, and the author describes what might be called an “Ilmanen spiral,” a vicious cycle in which higher pension savings drive valuations up and expected returns down, which stimulates yet more saving and buying.
+
+- Stock Market investing 
+    - when there's a steady and prolonged drop in revenues, then you're looking at a serious, fundamental setback that won't be corrected overnight. The key lesson here is, you don't have to rush in to buy shares
 
