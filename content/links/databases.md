@@ -129,6 +129,7 @@ Knowledge base around general database related topics.
 
 ## SQLite 
 
+- [Scaling SQLITE to 4M QPS on Single Server](https://blog.expensify.com/2018/01/08/scaling-sqlite-to-4m-qps-on-a-single-server/)
 - [Streaming S3 Replication for SQLite](https://litestream.io)
 - [lightweight, distributed relational database built on SQLite](https://github.com/rqlite/rqlite)
 - [Interesting use cases for SQLITE](https://antonz.org/sqlite-is-not-a-toy-database/)

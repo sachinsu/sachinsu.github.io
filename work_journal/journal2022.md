@@ -1869,5 +1869,46 @@ works.
     -  The lower the expected and realized returns, the more that must be saved. Pension fund managers are well aware of this, and the author describes what might be called an “Ilmanen spiral,” a vicious cycle in which higher pension savings drive valuations up and expected returns down, which stimulates yet more saving and buying.
 
 - Stock Market investing 
-    - when there's a steady and prolonged drop in revenues, then you're looking at a serious, fundamental setback that won't be corrected overnight. The key lesson here is, you don't have to rush in to buy shares
+    - when there's a steady and prolonged drop in revenues, then you're looking at a serious, fundamental setback that won't be corrected overnight. The key lesson here is, you don't have to rush in to buy shares.
+
+
+## 2022-apr-29 Fri
+
+- Transport Level Communication (TLS)
+    - Cryptography relies on ciphers to encrypt our data. A cipher suite is a set of cryptographic algorithms.
+    - Cipher suites are used by Microsoft TLS/SSL Security provider to conduct secure communications over SSL or TLS
+    - Older versions of Windows do not support strong cipher suites as demanded standards like PCI.
+    - PCI Checklist, 
+        -  Weak ciphers must not be used (e.g. less than 128 bits; no NULL ciphers suite, due to no encryption used; no Anonymous Diffie-Hellmann, due to not provides authentication).
+	    - Weak protocols must be disabled (e.g. SSLv2 must be disabled, due to known weaknesses in protocol design).
+	    - Renegotiation must be properly configured (e.g. Insecure Renegotiation must be disabled, due to MiTM attacks and Client-initiated Renegotiation must be disabled, due to Denial of Service vulnerability).
+	    - No Export (EXP) level cipher suites, due to can be easily broken.
+	    - X.509 certificates key length must be strong (e.g. if RSA or DSA is used the key must be at least 1024 bits).
+	    - X.509 certificates must be signed only with secure hashing algoritms (e.g. not signed using MD5 hash, due to known collision attacks on this hash).
+	    - Keys must be generated with proper entropy (e.g, Weak Key Generated with Debian).
+        - PCI-DSS requires compliant parties to use “strong cryptography” without precisely defining key lengths and algorithms. Common interpretation, partially based on previous versions of the standard, is that at least 128 bit key cipher, no export strength algorithms and no SSLv2 should be used.
+
+- [Investing][PersonalFinance]
+    - Why is it essential not to buy below 200 DMA? 
+        - First - Outperformance. Most managers beat the benchmarks in a bull market, only to give up all the gains in a bear market. Over the long term, the people who Outperformance the benchmarks across multiple cycles have this innate ability to cut their losses and beat the benchmarks relatively to the downside in a bear market. The 1960 Buffett Partnership letter to investors included the following observation “I have pointed out that any superior record which we might accomplish should not be expected to be evidenced by a relatively constant advantage in performance compared to the Average. Rather, if such an advantage is achieved, it will be through better-than-average performance in stable or declining markets and average, or perhaps poorer-than-average performance in rising markets”.  - Source - Nomad Letters
+        - Second - Institutions. Stock prices are a slave to sentiment, earnings, and liquidity. The liquidity comes from the institutions and not from retail. Most of these significant hedge funds and family offices do not touch anything below the 200 DMA.
+        - Third - The biggest % rallies happen in a bear market. The so-called missing the best days snake oil propaganda sucks in naive investors and makes them buy the rally only to find their position down 20% further. They will be left with little or no capital when the new bull market arrives.
+        - All of this doesn't matter, if you are indexing, in that case, just keep SIP'ing. Indices automatically cut the losers, and add to the winners.
+    - comebacks are rarely that lucrative. A double or a triple is normally a great result. You get your ten-baggers from young companies in their fast-growth phases, not mature companies in a midlife crisis.
+    - Criteria for bargain hunting 
+        - Debt free
+        - Selling for less than cash i.e. price should be less than Cash available / no. of shares 
+        - Earnings (price should be less than ten times earnings)
+
+- Commodities 
+    - are basic products, but not every basic product is a commodity.
+    - all commodities come Physical out of the ground. Fundamentally, these commodities are are products created by natural forces
+    -  They are delivered globally, including by sea, usually in bulk.
+    - Economies of scale favour bulk delivery. The cost of transportation makes location a significant pricing factor.
+    - Commodities with similar physical characteristics are exchangeable, but these are not standard items. Exchanging them may have an effect on price and quality.
+    - There is no premium for branded goods. Pricing is determined by product quality and availability.
+    - They can be stored for long, in some cases unlimited, periods.
+    -  Iron ore is left untreated, but mined copper, lead, nickel and zinc ores are turned into concentrates, while bauxite is turned into alumina. 
+    -The term ‘commoditisation’ conveys the sense of total standardisation. 
+
 

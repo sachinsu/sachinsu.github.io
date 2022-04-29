@@ -79,7 +79,7 @@ Platform where i have spent most time till now.
 - [Open Source ing tool for .NET Core/.NET Framework that helps your application generate document-like reports](https://www.fast-report.com)
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
 - [bflat - No-frills, standalone compiler for .net](https://github.com/MichalStrehovsky/bflat)
-
+- [Hashids.NET - Generate Youtube-like hashes (short codes) from one or more numbers](https://github.com/ullmark/hashids.net)
 
 ## Task Queue/Scheduling tools
 
@@ -102,7 +102,7 @@ Platform where i have spent most time till now.
 - [BackgroundService Gotcha: Application Lifetime](https://blog.stephencleary.com/2020/06/backgroundservice-gotcha-application-lifetime.html)
 - [AWS Porting Assistant for .NET](https://aws.amazon.com/blogs/aws/announcing-the-porting-assistant-for-net/)
 - [Sample of Micro services in .NET Core](https://github.com/madslundt/NetCoreMicroservicesSample)
-- [WCF on .NET Core](https://corewcf.github.io/blog/2021/02/19/corewcf-ga-release)
+- [CoreWCF (SOAP,TCP, WS-HTTP support) on .NET Core](https://corewcf.github.io)
 - [ASP.NET Web API Versioning](https://github.com/microsoft/aspnet-api-versioning)
 - [Samples of ASP.NET Core you can use](https://github.com/dodyg/practical-aspnetcore)
 - [Step by Step OpenTelemetry in .NET Core](https://logz.io/blog/csharp-dotnet-opentelemetry-instrumentation/#conc)
