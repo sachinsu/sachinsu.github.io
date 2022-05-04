@@ -347,7 +347,7 @@
 
 - Tech#PostgreSQL
 
-    - Triggers for scaleout 
+    - Triggers for scale-out 
 
         - is limited to single server 
         - working set does not fit in memory
@@ -1890,11 +1890,11 @@ works.
 
 - [Investing][PersonalFinance]
     - Why is it essential not to buy below 200 DMA? 
-        - First - Outperformance. Most managers beat the benchmarks in a bull market, only to give up all the gains in a bear market. Over the long term, the people who Outperformance the benchmarks across multiple cycles have this innate ability to cut their losses and beat the benchmarks relatively to the downside in a bear market. The 1960 Buffett Partnership letter to investors included the following observation “I have pointed out that any superior record which we might accomplish should not be expected to be evidenced by a relatively constant advantage in performance compared to the Average. Rather, if such an advantage is achieved, it will be through better-than-average performance in stable or declining markets and average, or perhaps poorer-than-average performance in rising markets”.  - Source - Nomad Letters
+        - First - Outperformance. Most managers beat the benchmarks in a bull market, only to give up all the gains in a bear market. Over the long term, the people who Outperformance the benchmarks across multiple cycles have this innate ability to cut their losses and beat the benchmarks relatively to the downside in a bear market. The 1960 Buffett Partnership letter to investors included the following observation “I have pointed out that any superior record which we might accomplish should not be expected to be evidenced by a relatively constant advantage in performance compared to the Average. Rather, if such an advantage is achieved, it will be through better-than-average performance in stable or declining markets and average, or perhaps poorer-than-average performance in rising markets”.  
         - Second - Institutions. Stock prices are a slave to sentiment, earnings, and liquidity. The liquidity comes from the institutions and not from retail. Most of these significant hedge funds and family offices do not touch anything below the 200 DMA.
         - Third - The biggest % rallies happen in a bear market. The so-called missing the best days snake oil propaganda sucks in naive investors and makes them buy the rally only to find their position down 20% further. They will be left with little or no capital when the new bull market arrives.
         - All of this doesn't matter, if you are indexing, in that case, just keep SIP'ing. Indices automatically cut the losers, and add to the winners.
-    - comebacks are rarely that lucrative. A double or a triple is normally a great result. You get your ten-baggers from young companies in their fast-growth phases, not mature companies in a midlife crisis.
+    - Comebacks are rarely that lucrative. A double or a triple is normally a great result. You get your ten-baggers from young companies in their fast-growth phases, not mature companies in a midlife crisis.
     - Criteria for bargain hunting 
         - Debt free
         - Selling for less than cash i.e. price should be less than Cash available / no. of shares 
@@ -1903,12 +1903,69 @@ works.
 - Commodities 
     - are basic products, but not every basic product is a commodity.
     - all commodities come Physical out of the ground. Fundamentally, these commodities are are products created by natural forces
-    -  They are delivered globally, including by sea, usually in bulk.
+    - They are delivered globally, including by sea, usually in bulk.
     - Economies of scale favour bulk delivery. The cost of transportation makes location a significant pricing factor.
     - Commodities with similar physical characteristics are exchangeable, but these are not standard items. Exchanging them may have an effect on price and quality.
     - There is no premium for branded goods. Pricing is determined by product quality and availability.
     - They can be stored for long, in some cases unlimited, periods.
-    -  Iron ore is left untreated, but mined copper, lead, nickel and zinc ores are turned into concentrates, while bauxite is turned into alumina. 
-    -The term ‘commoditisation’ conveys the sense of total standardisation. 
+    - Iron ore is left untreated, but mined copper, lead, nickel and zinc ores are turned into concentrates, while bauxite is turned into alumina.
+    - The term ‘commoditisation’ conveys the sense of total standardisation. 
+
+## 2022-may-04 Wed
+
+- [Investment Learnings][PersonalFinance]
+    - Avoid “respect quota” or keep “respect quota” limited to a tiny percentage of the portfolio. “Respect quota” is mimicking investment/ trading based on investments/trades of other investors/ traders. More often than not such mimicking results in losses.
+    - Never get carried away with what others are doing.
+    - As soon as you see that easy money is in the making, be more alert and cautious.
+    - It is better to be slow.
+    - Avoid media/WhatsApp/Telegram/social media
+    - Go alone, take a break, take a deep breath, do meditation, calm down,
+    - Don't be in a hurry.
+    - Book profits and let someone else also earn.
+    - Read good books that help.
+    - Form a good circle of friends. This trusted circle should not be a source of “tips”. This circle of friends is to bounce off ideas and to check if your investment thesis has any holes.
+    - Never trust any “Tips”. Remember the reverse of “Tips” is “Pits”. “Tips” take you to “Pits”.
+    - Finally, NEVER TRUST ANYONE especially reputations. Keep in mind one thing that here anyone can go bankrupt if they are not disciplined and orderly.
+    -  ‘A clever person solves a problem. A wise person avoids it.’
+
+- [Investment Criteria][PersonalFinance]
+    - RoIC is 'Return on Invested Capital'. It tells us how much does a company earn annually on every Rupee that it invests. (Ideally, RoIC above 25% is considered good. RoIC above 35% is awesome.). companies with low RoIC simply DO NOT generate enough cash flow. And what happens when you do not generate enough cash flow? --> You end up relying on DEBT for expansion. Avoid financial stocks completely in this exercise. RoIC is useless to understand them.
+    - Make a list of 500 companies on websites like Screener.in which highlight their RoIC and EV/EBIT. Now, create a ranking system and select the top 25 from the above list whose RoIC is highest and EV/EBIT is lowest.
+
+- Finance 
+    - Bond prices and yields move inversely. So when interest rates fall, as they did for much of the past four decades, bond investors enjoy a capital gain. 
+
+- Health (Book: Why we get obese?) 
+    - Obesity and overweight, so we’ll be told, are associated with an increased risk of virtually every chronic disease that ails us—heart disease, stroke, diabetes, cancer, dementia, asthma.
+    -  two factors will essentially determine how much fat we accumulate, both having to do with the hormone insulin. First, when insulin levels are elevated, we accumulate fat in our fat tissue; when these levels fall, we liberate fat from the fat tissue and burn it for fuel. This has been known since the early 1960s and has never been controversial. Second, our insulin levels are effectively determined by the carbohydrates we eat—not entirely, but for all intents and purposes. The more carbohydrates we eat, and the easier they are to digest and the sweeter they are, the more insulin we will ultimately secrete, meaning that the level of it in our bloodstream is greater and so is the fat we retain in our fat cells.
+    - “Carbohydrate is driving insulin is driving fat"
+    - the stimulation of insulin secretion caused by eating easily digestible, carbohydrate rich foods: refined carbohydrates, including flour and cereal grains, starchy vegetables such as potatoes, and sugars, like sucrose (table sugar) and highfructose corn syrup. These carbohydrates literally make us fat, and by driving us to accumulate fat, they make us hungrier and they make us sedentary. 
+- FOODS THAT MUST BE EATEN EVERY DAY: 
+    - Salad Greens: 2 cups a day. Includes arugula, bok choy, cabbage (all varieties), chard, chives, endive, greens (all varieties, including beet, collards, mustard, and turnip), kale, lettuce (all varieties), parsley, spinach, radicchio, radishes, scallions, and watercress. (If it is a leaf, you may eat it.) 
+    - Vegetables: 1 cup (measured uncooked) a day. Includes artichokes, asparagus, broccoli, Brussels sprouts, cauliflower, celery, cucumber, eggplant, green beans (string beans), jicama, leeks, mushrooms, okra, onions, peppers, pumpkin, shallots, snow peas, sprouts (bean and alfalfa), sugar snap peas, summer squash, tomatoes, rhubarb, wax beans, zucchini. 
+    - Bouillon: 2 cups daily—as needed for sodium replenishment. Clear broth (consommé) is strongly recommended, unless you are on a sodium-restricted diet for hypertension or heart failure. 
+
+- EAT YOUR CHOICE OF THE FOLLOWING FOODS: 
+    - Meat: Beef (including hamburger and steak), pork, ham (unglazed), bacon, lamb, veal, or other meats. For processed meats (sausage, pepperoni, hot dogs), check the label carbohydrate count should be about 1 gram per serving. 
+    - Poultry: Chicken, turkey, duck, or other fowl. Fish and Shellfish: Any fish, including tuna, salmon, catfish, bass, trout, shrimp, scallops, crab, and lobster. 
+    - Eggs: Whole eggs are permitted without restrictions. 
+    - You do not have to avoid the fat that comes with the above foods. 
+    - You do not have to limit quantities deliberately, but you should stop eating when you feel
+    full. 
+
+- FOODS ALLOWED IN LIMITED QUANTITIES: 
+    - Cheese: up to 4 ounces a day. Includes hard, aged cheeses such as Swiss and Cheddar, as well as Brie, Camembert, blue, mozzarella, Gruyère, cream cheese, goat cheeses. Avoid processed cheeses, such as Velveeta. Check the label; carbohydrate count should be less than 1 gram per serving. 
+    - Cream: up to 4 tablespoonfuls a day. Includes heavy, light, or sour cream (not half and
+    half). 
+    - Mayonnaise: up to 4 tablespoons a day. Duke’s and Hellmann’s are low-carb. Check thelabels of other brands. Olives (Black or Green): up to 6 a day. 
+    - Avocado: up to 1⁄2 of a fruit a day. 
+    - Lemon/Lime Juice: up to 4 teaspoonfuls a day. 
+    - Soy Sauces: up to 4 tablespoons a day. Kikkoman is a low-carb brand. Check the labels of
+    other brands. 
+    - Pickles, Dill or Sugar-Free: up to 2 servings a day. Mt. Olive makes sugar-free pickles. Check
+    the labels for carbohydrates and serving size. 
+    - Snacks: Pork rinds/skins; pepperoni slices; ham, beef, turkey, and other meat roll-ups;
+    deviled eggs.
+
 
 
