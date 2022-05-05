@@ -1966,6 +1966,21 @@ works.
     the labels for carbohydrates and serving size. 
     - Snacks: Pork rinds/skins; pepperoni slices; ham, beef, turkey, and other meat roll-ups;
     deviled eggs.
+    - Insulin is the anabolic (building) hormone, and its primary job is to turn excess food into fat for future use. Insulin is a life-saving hormone without which humans wouldn’t have existed for a long time(Imagine storing food as abdominal fat and then giving energy until you find food). Now put this in perspective: eating every day, in fact, 3-4 times a day, insulin raises every time we eat, especially with refined carbohydrates, but it can also do protein and fat. Obesity rates are soaring all over the world(reason above). Insulin can be good and can also be equally harmful. Excess insulin leads to Diabetes, Inflammation, Atherosclerosis(Heart Disease), Obesity Etc
 
+
+- Learnings for Investor from Seneca
+    - “Be suspicious; be timid; resist every good that comes by chance. It is by the allurement of hope that the fish is caught, the game snared.”
+    - Dont predict but prepare
+    - Simplicity or singleness of approach is a greatly underestimated factor of market success. Focus. Be consistent.
+    - Hard won competence is the best hedges against adversity.
+    - Wait for Great opportunities 
+
+
+- Source of stock lending, traditionally, is margin accounts at retail brokerages. The basic
+deal is that if you open an account at a retail brokerage and buy stock with your own cash, your
+broker generally won’t lend out your shares; if you open a margin account and buy stock partly
+with money borrowed from your broker, your broker will probably try to lend out your shares to
+short sellers, and keep the fees.
 
 
