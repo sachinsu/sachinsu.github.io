@@ -110,6 +110,7 @@ Knowledge base around general database related topics.
 
 - [Sharding a database](https://stackoverflow.blog/2022/03/14/how-sharding-a-database-can-make-it-faster/)
 - [MySQL Sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1)
+- [CUID-Collision-resistant ids optimized for horizontal scaling and performance.](https://github.com/ericelliott/cuid)
 
 
 ## Data Discovery
