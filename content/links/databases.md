@@ -9,6 +9,8 @@ draft: false
 Knowledge base around general database related topics.
 
 ## General Links
+
+- [Database performance for Developers](https://www.crunchydata.com/blog/demystifying-database-performance-for-developers)
 - [Heimdall data -Database scale-out without Application changes](https://www.heimdalldata.com/)
 - [Database of databases](https://dbdb.io)
 - [Modern SQL in databases](https://use-the-index-luke.com/blog/2015-02/modern-sql)

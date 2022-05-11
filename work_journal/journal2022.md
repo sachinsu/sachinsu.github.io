@@ -1980,3 +1980,49 @@ deal is that if you open an account at a retail brokerage and buy stock with you
 broker generally won’t lend out your shares; if you open a margin account and buy stock partly
 with money borrowed from your broker, your broker will probably try to lend out your shares to
 short sellers, and keep the fees.
+
+## 2022-may-09 Mon
+
+- Database Indexes
+    - Cardinality is the inverse of "the number of records returned per value." High cardinality returns one record per index value, and low cardinality returns many records per index value. Efficient indexes are high-cardinality indexes. Primary keys are the best example of a high-cardinality index. String-based tags are an example of a low-cardinality index because there are typically many objects assigned to a single tag.Build the indexes to match your query needs, and note that high-cardinality is faster.
+    - Table scan happens when no suitable index exists.When using a table scan, the database keeps all of the records in RAM while comparing values.    
+    - All databases employ some level of copy-on-write. Postgres writes a new version of a row each time it inserts or updates a value. Other databases have a block-size allocated for a value, then, if an updated value exceeds the size, it writes to a new location. Other databases reject updates, claim immutability, and push the tracking of updates off to the application developer.
+
+
+- The more you're forced to take ownership over your decisions, the faster you'll learn,
+- Nothing inflation in is never economics is the same the second time after it happens than the first, because the first affects people’s attitudes in the second, and their attitudes always influence the activity itself. So the next crisis, the next crash, the next speculative mania is never exactly the same as the last. It merely rhymes.
+
+- Buffett and Munger eventually came around to the idea that department stores and textile mills are terrible businesses to own for the long run. The key is to keep learning, not only from your mistakes but learning in general. Knowledge accumulates. It compounds just like money.
+
+- [Filter for Stock selection][PersonalFinance] 
+    - Stocks with high level of Insider ownership  (Executives/Directors having significant shareholding)
+    - never buy anything sold by private equity 
+    - Look for family ownership
+
+- On Subsidies
+    - Trader principle: those who make, distribute, and improve on the things people want and need reap their just rewards.
+
+    - Subsidies exemplify cronyism, in which a government rewards companies according to proximity to power, not the value the company creates. Cronyism—an economy of “pull”—almost inevitably leads to stagnation. Subsidy seekers (moochers) benefit in the short term at the expense of everyone else. Subsidies are not only unjust, they also undermine the incentive structure that has led to progress and prosperity around the world.
+
+    - The single best predictor of the future returns of bonds, before inflation, is their yield to maturity. 
+
+
+- Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & metamodels. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
+    - Fats - they dont undergo any chemical changes till they reach intestine. Essentially replacement for Water at High temperature. 
+    - Fats do not cause insuline spike 
+    - Need certain amount of Fats.avoid trans-fats & refined oils. Always use refined oil for frying. 
+    - Moderate ghee, butter are fine.
+    - All spice flavours are fat soluble. Always spice add powders at the end and whole spices in fat i.e. Oil.
+    - Carbohydrates, 
+        - try to eat those has much fiber..Potatoes are better than grains.
+    - Avoid direct sugars. 
+    - Salt & Sugar sensors are at the tip of the toungue.
+    - Avoid any liquid that has sugar in it. 
+    - Cook vegetables and meat separately as both require different kind of heat. 
+    - People tend to skeptical when it comes to food which is natural. 
+    - Cooking generally has some degree of undoing like acid for bitter, dehydrate if soggy etc.
+    - Restaurants exploit craving for salty, sweet and fatty tastes
+
+- Fire
+    - 30 times of Annual expenses is needed to sustain cash flows in retirement. 
+
