@@ -6,6 +6,10 @@ draft: false
 
 # NOSQL Databases
 
+## MongoDB
+
+- [FerretDB - MongoDB Interface with underlying PostgreSQL as database engine](https://github.com/FerretDB/FerretDB)
+
 ## Amazon DynamoDB
 
 - [Data Modelling in DynamoDB](https://www.youtube.com/watch?v=6yqfmXiZTlM)

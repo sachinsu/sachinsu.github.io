@@ -2026,3 +2026,55 @@ short sellers, and keep the fees.
 - Fire
     - 30 times of Annual expenses is needed to sustain cash flows in retirement. 
 
+- Apache Parquet 
+    - language-independent storage format, designed for online analytics, so:
+        - Column oriented
+        - Typed
+        - Binary
+        - Compressed
+    - A Parquet file stores data column-oriented on the disk, in batches called "row groups".
+    - Parquet storage can provide substantial space savings.
+    - Parquet storage is a bit slower than native storage, but can offload management of static data from the back-up and reliability operations needed by the rest of the data.
+
+- gRPC and REST
+    - Allows browser apps to call gRPC services as RESTful APIs with JSON. The browser app doesn’t need to generate a gRPC client or know anything about gRPC.
+        - grpc-gateway is another technology for creating RESTful JSON APIs from gRPC services. It generates reverse proxy to convert RESTFUL calls to gRPC and vice versa
+        - gRPC JSON transcoding runs inside an ASP.NET Core app. It deserializes JSON into Protobuf messages, then invokes the gRPC service directly.JSON transcoding deserializes JSON to Protobuf messages and invokes the gRPC service directly. There are significant performance benefits in doing this in-process vs. making a new gRPC call to a different server.
+
+## 2022-may-13 Fri
+
+- [Learning from Markets][Stocks]
+    - Nothing lasts forever. When growth stocks were going up every day, it felt like it would never end. Now that growth stocks are going down, it feels like it will never end. Everything ends, eventually. 
+    - Survival is the most important thing. Your portfolio must be able to weather euphoria, panic, and malaise.
+    - Risk management is most critical when it feels like you’re getting punished for managing risk.
+    - Nothing is a perfect inflation hedge. Not gold, stocks, crypto, or cash. Different inflation hedges work in different inflationary regimes. No one size fits all.
+    - Diversification is the only answer to an unpredictable future. If everything is working, you’re not really diversified.
+    - Interest rates matter a lot. The cost of money is the lifeblood of the economy and the psychological north star for investors.
+    - Nothing is risk-free. The S&P 500 is down 16% year-to-date. Intermediate-term “risk-free” government bonds are down 20%.
+    - You’re not a genius on the way up or an idiot on the way down.
+    - When everything is going down, everybody loses money.
+    - Analogs are dangerous. We know how things played out in the past. That doesn’t tell us how things will play out in the future.
+    - The more confident somebody seems, the more cautious you should be in taking their advice.
+    - Inflation is unpredictable.
+    - Memes are not fundamentals.
+    - Nobody knows what will happen next.
+    - There are no new paradigms.
+    - Past performance is not indicative of future performance. Past behavior is.
+    - Too much leverage will eventually come back to bite you.
+    - Cash is not trash.
+    - You didn’t know this was going to happen. You don’t know what’s going to happen next.
+    - Investing is hard.
+    - never let bad market go waste
+
+- Eating rules by Michael Pollan 
+    - Eat the foods you want to eat that are, in general, closest to the way you might encounter them at their source. 
+    - When we eat too many simple carbohydrates, we get a blood sugar spike, and then an insulin spike and a blood sugar crash, and the result is that we’re hungry again, even though we just ate. Many processed foods kick-start this reaction, making moderation and portion control goals seem insurmountable.
+    - Make sure you always have, 
+        - Breakfast - add an egg, some tofu, yogurt, or some protein powder
+        - Snacks - Add nuts, cheese, or a little bit of meat to your snacks
+        - Meals -  Beans, lentils, peas, lean meats, low-fat dairy products
+        - Second, switch most or all of your grain foods to whole grains. Whole grain breads, pastas, cereals, and snack foods contain more fiber and nutrients, so you’ll be satisfied with less. 
+
+
+
+
