@@ -2075,6 +2075,10 @@ short sellers, and keep the fees.
         - Meals -  Beans, lentils, peas, lean meats, low-fat dairy products
         - Second, switch most or all of your grain foods to whole grains. Whole grain breads, pastas, cereals, and snack foods contain more fiber and nutrients, so you’ll be satisfied with less. 
 
+- Quotable [Quotes]
+    - “He who knows only his own side of the case, knows little of that.”
+- Tech
+    - Quantum computers are expected to break modern public key cryptography owing to Shor’s algorithm. As a result, these cryptosystems need to be replaced by quantum-resistant algorithms, also known as post-quantum cryptography (PQC) algorithms. 
 
-
-
+- [Stock Market][PersonalFinance]
+    -  Owning a put enables you to sell the underlying asset for a specified price by a given date. That shields you from any declines below that price until the option expires
