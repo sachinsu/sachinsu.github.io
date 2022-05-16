@@ -2066,6 +2066,24 @@ short sellers, and keep the fees.
     - Investing is hard.
     - never let bad market go waste
 
+
+- Spices
+    - Almost all are oil soluble and not water soluble
+    - Essential oil from them get mixed with Oil and then they can be discarded. This also means all spice poweders at end and not cook them, Whole spices to be added to oil.
+    - Cut out all liquid calaries or liquid having sugar in it like switch to water,black tea/coffee, salt lime soda
+    - Everyone experience flavours uniquely. 
+    - No two people enjoy the same dish in same way
+
+
+- (Personal Finance Basics (from Deepak Shenoy))[PersonalFinance]
+    - Trust no one
+    - If other side is getting commission then you are not getting sold the right kind of product. be cynical.Go for Cheapest and Simple product, any complexity means it has hidden incentives for selling it. 
+    - Hygiene - if shit happens can i take care of myself and family? 
+    - Medical Insurance - Opt for Super top up policy beyond base policy.
+    - Life Insurance - Go for Simple product.
+    - Emergency buffer - 6 months of expenses should be in bank account or FD. 
+    - Corpus for Retirement -->  < 50 years old - 30 times your annual expenses is what is needed. 
+
 - Eating rules by Michael Pollan 
     - Eat those foods which your great grandmother understands
     - Eat food that comes directly from animal or plant and not from packet. 
@@ -2103,13 +2121,6 @@ short sellers, and keep the fees.
     - Consider multiple options for each major design decision.
     - Comments Should Describe Thingsthat Aren’t Obvious from the Code
 
-- Spices
-    - Almost all are oil soluble and not water soluble
-    - Essential oil from them get mixed with Oil and then they can be discarded. This also means all spice poweders at end and not cook them, Whole spices to be added to oil.
-    - Cut out all liquid calaries or liquid having sugar in it like switch to water,black tea/coffee, salt lime soda
-    - Everyone experience flavours uniquely. 
-    - No two people enjoy the same dish in same way
-
 - Buy now pay later
     - They charge double of what credit card charges from Merchant/retailer.
     - Threatening to Banks and Credit card companies
@@ -2120,13 +2131,3 @@ short sellers, and keep the fees.
     - an expansion of industryowing to the renewable-energy shift and a move in supply chains away from China; 
     - continued pre-eminence in IT;
     - a high-tech welfare safety-net for the hundreds of millions left behind by all this
-
-
-- Financial Basics (from Deepak Shenoy)
-    - Trust no one
-    - if other side is getting commission then you are not getting sold the right kind of product. be cynical.Go for Cheapest and Simple product, any complexity means it has hidden incentives for selling it. 
-    - Hygiene - if shit happens can i take care of myself and family? 
-    - Medical Insurance - Opt for Super top up policy beyond base policy.
-    - Life Insurance - Go for Simple product.
-    - Emergency buffer - 6 months of expenses should be in bank account or FD. 
-    - Corpus for Retirement -->  < 50 years old - 30 times your annual expenses is what is needed. 
