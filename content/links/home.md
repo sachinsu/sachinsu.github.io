@@ -47,3 +47,4 @@ draft: false
 - [Privacy tools for everyday user](https://www.privacytools.io/)
 - [Hacker's Diet](https://www.fourmilab.ch/hackdiet/www/tableofcontents1_6.html)
 - [Beam - Blog for a Project or Organization](https://github.com/planetscale/beam)
+- [List of Greatest Novels of all time](https://editoreric.com)

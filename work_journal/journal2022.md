@@ -2067,6 +2067,8 @@ short sellers, and keep the fees.
     - never let bad market go waste
 
 - Eating rules by Michael Pollan 
+    - Eat those foods which your great grandmother understands
+    - Eat food that comes directly from animal or plant and not from packet. 
     - Eat the foods you want to eat that are, in general, closest to the way you might encounter them at their source. 
     - When we eat too many simple carbohydrates, we get a blood sugar spike, and then an insulin spike and a blood sugar crash, and the result is that we’re hungry again, even though we just ate. Many processed foods kick-start this reaction, making moderation and portion control goals seem insurmountable.
     - Make sure you always have, 
@@ -2082,3 +2084,49 @@ short sellers, and keep the fees.
 
 - [Stock Market][PersonalFinance]
     -  Owning a put enables you to sell the underlying asset for a specified price by a given date. That shields you from any declines below that price until the option expires
+
+- Philosophy of Software design by John Ousterhout - Notes
+    - Programmers are bound by limited ability to understand the systems they create.
+    - Complexity begets complexity 
+    - Software design is a continuous process that spans the entire lifecycle of a software system.
+    - Every rule has its exceptions, and every principle has its limits
+    - A dependency exists when a given piece of code cannot be understood and modifiedin isolation.
+    - Tactical vs. Strategic programming - Strategic programming requires an investment mindset to improve the design of thesystem even if it's not the fastest path to finish your current project while Tactical focuses on finishing task within time. Best approach is to make lot of small investments on a continual basis. Effective teams know when to use tactical/strategic.
+    - Interfaces and Methods 
+        - Each method should do one thing and do it completely
+        - Having methods with the same signature is not always bad. The important thing is thateach new method should contribute significant functionality. Pass-through methods arebad because they contribute no new functionality
+    - Four techniques for reducing the number of exception handlers,
+      -  Define errors out of existence by designing APIs that make an exceptionimpossible/unnecessary.
+      -  Mask exceptions by detecting and handling them at a low-level.
+      -  Exception aggregation by handling many exceptions with a single piece of code (at ahigher level)
+      -  Just crash when an exception is rare and difficult to deal with.
+    - Consider multiple options for each major design decision.
+    - Comments Should Describe Thingsthat Aren’t Obvious from the Code
+
+- Spices
+    - Almost all are oil soluble and not water soluble
+    - Essential oil from them get mixed with Oil and then they can be discarded. This also means all spice poweders at end and not cook them, Whole spices to be added to oil.
+    - Cut out all liquid calaries or liquid having sugar in it like switch to water,black tea/coffee, salt lime soda
+    - Everyone experience flavours uniquely. 
+    - No two people enjoy the same dish in same way
+
+- Buy now pay later
+    - They charge double of what credit card charges from Merchant/retailer.
+    - Threatening to Banks and Credit card companies
+    - Using BNPL may impact Credit score 
+
+- Four pillars of Indian Economy (2022), 
+    -  the forging of a single national market; 
+    - an expansion of industryowing to the renewable-energy shift and a move in supply chains away from China; 
+    - continued pre-eminence in IT;
+    - a high-tech welfare safety-net for the hundreds of millions left behind by all this
+
+
+- Financial Basics (from Deepak Shenoy)
+    - Trust no one
+    - if other side is getting commission then you are not getting sold the right kind of product. be cynical.Go for Cheapest and Simple product, any complexity means it has hidden incentives for selling it. 
+    - Hygiene - if shit happens can i take care of myself and family? 
+    - Medical Insurance - Opt for Super top up policy beyond base policy.
+    - Life Insurance - Go for Simple product.
+    - Emergency buffer - 6 months of expenses should be in bank account or FD. 
+    - Corpus for Retirement -->  < 50 years old - 30 times your annual expenses is what is needed. 

@@ -139,6 +139,7 @@ Knowledge base around general database related topics.
 - [Hosting SQLite databases on Github Pages](https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/)
 - [Joining CSV and JSON data with an in-memory SQLite database](https://simonwillison.net/2021/Jun/19/sqlite-utils-memory/)
 - [Baked Data Architecture Pattern -DB side by side Web App](https://simonwillison.net/2021/Jul/28/baked-data/)
+- [Cron based backups for SQLITE](https://litestream.io/alternatives/cron/)
 
 ## Data Security, GDPR 
 

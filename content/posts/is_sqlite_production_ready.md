@@ -262,7 +262,7 @@ Hopefully, above provides good starting point in deciding database for your next
 * [sqlite-utils - Collection of utilities including migration from MySQL/PostgreSQL](https://github.com/simonw/sqlite-utils)
 * [Sqlite and Go by David Crawshaw](https://youtu.be/RqubKSF3wig)
 * [Server side SQLite](https://fly.io/blog/all-in-on-sqlite-litestream/)
-
+* [SQLite backup using Cron](https://litestream.io/alternatives/cron/)
 
 Happy Coding !!
 
