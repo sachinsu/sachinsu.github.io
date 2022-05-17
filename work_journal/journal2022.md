@@ -2127,7 +2127,46 @@ short sellers, and keep the fees.
     - Using BNPL may impact Credit score 
 
 - Four pillars of Indian Economy (2022), 
-    -  the forging of a single national market; 
-    - an expansion of industryowing to the renewable-energy shift and a move in supply chains away from China; 
-    - continued pre-eminence in IT;
-    - a high-tech welfare safety-net for the hundreds of millions left behind by all this
+    - Forging of a single national market; 
+    - An expansion of industry owing to the renewable-energy shift and a move in supply chains away from China; 
+    - Continued pre-eminence in IT;
+    - A high-tech welfare safety-net for the hundreds of millions left behind by all this
+
+
+## 2022-may-17 Tue
+
+- Shift Left DevOps - Efforts of DevOps team to guarantee application security at the earliest stages in the development life cycle, as part of organization pattern known as DevSecOps. 
+    - Measures for Automated Security Assessment as part of CI/CD Pipeline, 
+        - Static Application Security Testing (SAST) is used to scan source code for known weaknesses and insecure coding practices. In DevSecOps, this testing is typically integrated into developers’ development environments for immediate security risk feedback. Software Composition Analysis (SCA) analyzes software to detect known software components, such as open source and third-party libraries, and identify any associated vulnerabilities. SCA complements SAST by finding vulnerabilities not detectable by scanning source code.
+        - Dynamic Application Security Testing (DAST) scans applications in runtime, prior to deployment into production environments. This enables an outside-in approach to testing applications for exploitable conditions that were not detectable in a static state.
+        - Runtime Application Self-Protection (RASP) runs alongside applications in production to observe and analyze behavior and notify or block anomalous and unauthorized actions. While this may place additional infrastructural burden on production environments, it delivers a real-time look into potential application security risks.
+        - Web Application Firewalls (WAF) monitor traffic at the application level and detect potential attacks and attempts to exploit vulnerabilities. WAFs can be configured to block certain potential attack vectors even without remediating the underlying software vulnerabilities.
+        - Container image scanning tools can continuously and automatically scan container images within the CI/CD pipeline and in container registries, prior to deployment into production environments. This enables identification of vulnerabilities or unsafe components, and provides remediation or mitigation guidance directly to developers and DevOps teams.
+        - Cloud Security Posture Management (CSPM) solutions identify misconfigurations in cloud infrastructure that could leave potential risks and attack vectors unchecked. CSPM solutions can recommend or automatically apply security best practices based on an organization’s internal policies or third-party security standards.
+
+- Food and Health
+    - Potato is starch which gets converted into Glucose. Glucose is less damaging than fructose.
+    - Sugar is 50-50% fructose and glucose. Glucose gets absorbed by Body, fructose can be processed only by Liver and gets converted to Fat.
+    - For a healthy heart, keep ratio triglycerides to HDL should be 2 or less.
+    -  avoid sugar, fructose, fine flour and vegetable oil
+    - Human body is optimized for fasting and feasting 
+    - Human body has enough vitamins and other nutrients for many days.
+    - It’s the combination of sugar, fat, and salt that make foods ‘hyper-palatable’ and drives us to want and eat more
+    - If you find you have certain foods that trigger you to overeat, don’t eat or keep these foods in the house. The more you decrease your exposure to these foods, the more likely you are to succeed with your diet. Studies suggest when people reduce the palatability of the diet, they’re more likely to succeed and keep the weight off in the long-term.
+    - Serving foods with smaller plates may reduce the amount of food you eat and decrease calorie intake.
+    - Don’t keep snacks around your desk while working. If you do want to grab a snack, make sure it’s kept in the office kitchen. The simple act of making it harder to get to will reduce the chances of mindless eating.
+    - Pay attention. Don’t assume just because it’s called a salad, it’s zero-calorie and healthy. Most restaurants have the ingredients listed in the menu, check the salad to make sure there aren’t any extra toppings. If there are you can factor these into your calorie count for the day or simply ask the restaurant not add these when they make your food – remember, you’re paying them.
+
+
+- If you can deny data to make motherhood statements then there's not much to debate.
+
+- Management Style
+    -  the rise of the intangible economy means a shift from command-and-control management to empowerment: Successful managers are “servant-leaders” who provide a nurturing atmosphere in which creative types lounge on beanbags and “bring their true selves to work.” 
+    -  Devote your life to your vocation with the same discipline that Jesuit priests devote theirs to God.
+    - Wintour doesn’t make a distinction between her personal and professional life. Her close friends are always somehow the leaders in their fields.
+    - Turn yourself intro brand
+    - Control everything 
+    - Never forget about high culture. 
+    - Don’t waste time on small talk.
+    - It’s better to be feared than loved, 
+    - Focus on entire ecosystems.

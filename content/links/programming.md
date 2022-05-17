@@ -53,6 +53,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API Development, Security
 
+- [Open Source Vulnerability Management](https://fossa.com/product/open-source-vulnerability-management?ref=unzip.dev)
 - [Equinor's API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
 - [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis)
@@ -141,6 +142,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Devops/Monitoring
 
+- [Trivy - Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues and hard-coded secrets](https://github.com/aquasecurity/trivy?ref=unzip.dev)
 - [Impact of Architecture on DevOps](https://cloud.google.com/solutions/devops/devops-tech-architecture)
 - [Run CI/CD pipeline locally with Dagger](https://dagger.io)
 - [List of how organizations do SRE (Publicly available)](https://github.com/upgundecha/howtheysre)
