@@ -2170,3 +2170,20 @@ short sellers, and keep the fees.
     - Don’t waste time on small talk.
     - It’s better to be feared than loved, 
     - Focus on entire ecosystems.
+
+- [Investing effects][PersonalFinance] 
+    - “the endowment effect.” The value you place on an asset will differ drastically depending on whether or not you already own it.
+    -  confirmation bias leads most people to seek out evidence supporting what they already believe or to ignore data that might disprove their beliefs.
+    -  myopic: Short-term losses or costs can blind them to the pursuit of longer-term rewards. inform your decisions with the base rate, or the best available historical evidence of how likely an outcome is.
+    -  disposition effect leads investors to sell their winning stocks too soon and hold onto their money-losing positions too long.
+    - bias blind spot, or the tendency to see clearly that other people’s behavior isn’t optimal while remaining oblivious to our own shortcomings.
+    - pre-mortem - Assume that a year from now you’ve lost every penny. Then flesh out as many specific reasons as you can why your investment went to zero.That exercise should help curtail your overconfidence and make your mind less resistant to negative information.
+    - Scout - Who simply wants to learn the lay of the land. I am the kind of person who takes pride in admitting when I'm wrong.
+
+- Food
+    - Reheating food cooked with vegetable seed oil generate trans fats. These fats are not good for health.
+    - A protein with a biological value of 100 contains all the amino acids in the right proportions for humans to use. Egg protein has a value of 100; gluten, the protein found in wheat, has a value of 64. If you eat eggs, you can use 100 percent of its protein. If you eat wheat, you can use only 64 percent of its protein. Plant proteins generally have lower biological values than animal proteins because humans are biologically much closer to animals than plants. Plant proteins serve vastly different purposes than animal proteins, such as contributing to photosynthesis, and they have vastly different physiology. However, the generally lower protein content and biological value of plants do not necessarily mean that plant foods are not good sources of protein.
+
+    - The classic combination of rice and beans, for example, provides all the amino acids necessary for optimal health
+    - A great way to get healthy sources of whole food plant protein is by eating organic nuts
+    - The darker the honey, the better it is for your health. 
