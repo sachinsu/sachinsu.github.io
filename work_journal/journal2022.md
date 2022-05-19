@@ -2187,3 +2187,43 @@ short sellers, and keep the fees.
     - The classic combination of rice and beans, for example, provides all the amino acids necessary for optimal health
     - A great way to get healthy sources of whole food plant protein is by eating organic nuts
     - The darker the honey, the better it is for your health. 
+
+- Streaming Platforms Comparison 
+    - Refer [streaming_platform_comparison.png]
+
+
+- Food
+    - Most children prefer bland, predictable food.
+    - The more aggressively religious the decor, the better it will be for the food. 
+    - best food recommendations come from local transport drivers and operators. 
+
+- [Peter lynch on bonds,bank IPOs etc.][PersonalFinance]
+    - Long term bonds (more than two to four years duration) are as volatile as stocks. 
+    - When interest rates go up, bond prices go down
+    - Bonds have no upside to reward if held till maturity. Less than maturity, you are exposing youself to potential losses. 
+    - Plan for regular income over time, 
+        - Let's say you've got $100,000 to invest for the long term, and you need an income of $7,000 per annum to make ends meet. Youc an get it by purchasing a 30-year bond paying 7 percent. But instead, you take Lynch's advice, shun the bonds, and build a portfolio of stocks that pays you a 3 percent dividend. In the first year you get $3,000 in dividends. Since you need $7,000to live on, you're $4,000 short on the income side, but that can be solved. You sell $4,000 worth of stock. It may sound crazy to be selling shares that you bought 12 months earlier, but bear with me. Let's assume the prices have gone up 8 percent, which is the historical norm for stocks. (Overtime, stocks return 8 percent on the price gains and 3 percent on the dividends, for a total return of 11 percent.) Between the dividends and the price gains, your portfolio would be worth$111,000 after the first year if you left it alone. But you don't. You take out the $3,000 in dividends and you sell the $4,000chunk of stock. After putting this $7,000 in your pocket, you begin year two with $104,000 in the account. You can see from the table on the next page what happens next. The companies in which you've invested raise their dividends as usual, so in the second year, the portfolio gives you an income of $3,120. At the end of year two, you have to sell only $3,880worth of stock to reach your $7,000 goal. Every year thereafter, as dividends are raised and stock prices go up, you're selling less and less stock to cover your expenses. In year 16, you receive$7,000 out of the dividends alone, and from this point forward, you never have to sell a single share to get the customary payout. In fact, your payout goes up. These numbers are theoretical, but they're based on the average returns from stocks and dividends over this entire century. Assuming these same results hold for the future, after 20 years, your original $100,000 will have grown into $349,140. You'll be more than three times richer than when you started, on top of the$146,820 worth of dividends you've spent along the way. By taking the bond route, you would have received $140,000 in interest and gotten your $100,000 back.
+
+    - Criteria for banks - price-to-earnings ratio to be relatively low (last year I suggested p/e's of 10 or below), the equity-to-assets ratio to be relatively high (5 or above), and the percentage of nonperforming assets to be on the decline.amount of money raised in the offering to roughly correspond to the book value of the company before the offering
+
+    - Timeless wisdom from peter lynch, 
+        - If timing the market is such a great strategy, why haven't we seen the names of any market timers at the top of the Forbes list of richest Americans?
+        - People who exit the stock market to avoid a decline are odds-on favorites to miss the next rally. If you don't believe corporate profits will continue to rise, and you can't stomach a decline in the market, don't buy stocks or equity mutual funds.
+        - If you were out of stocks in 40 key months over the past 40 years, your annual return on investment dropped from 11.4 percent to 2.7 percent. You underperformed your savings account.
+        - In this century, we've had 53 corrections of 10 percent or more, roughly one every two years. We've had 15 corrections of 25 percent or more, roughly one every six years. These setbacks are normal and come with the territory.
+        - A stock certificate is not a lottery ticket. Behind every stock is a company. Stock prices go up 8 percent a year, on average, because corporate profits go up 8 percent a year. Add in the dividend yield of 2.5 percent (today's levels) and stocks give you a total return of 10.5 percent. Dividends are raised, on average, by 8 percent a year, right along with corporate profits.
+        - Even if we go into a long economic slump during which corporate profits grow at only half the normal rate, or 4 percent a year, stock prices should follow suit, rising an annual 4 percent a year. Assuming the 2.5 percent dividend, you would still get a 6.5 percent return, which is better than a 6 percent bond.
+        - Stocks outperformed bonds in eight out of the nine previous decades in this century, and they are well ahead halfway through this one.
+        - Since 1965, if you bought stocks once a year and were unlucky enough to pick the worst day to invest (when stocks were at their highest prices) 30 years in a row, you ended up with an annual return of 10.6 percent. If you were incredibly lucky and invested on the best day of the year 30 years in a row, you ended up with an annual return of 11.7 percent. So the difference between perfect timing and horrendous timing is 1.1 percent. This timing business is much ado about very little.
+        - In a correction or a bear market, great companies, good companies, mediocre companies, and terrible companies all see the prices of their stocks decline. A correction is a wonderful opportunity to buy your favorite companies at a bargain price.
+        -  best way to own gold is to own shares in the best mining companies or in the gold funds that
+        invest in them. 
+
+    - Real estate is a cyclical business, and most REITs are enjoying a very profitable part of the cycle. Eventually the wheel will turn, and then we'll see which REITs actually have the best holdings, the best management, and the best honest-to-goodness long- term prospects.
+    - how Equity REITs work - Raise funds through IPO and promoters and borrow from elsewhere. Build or buy income-producing property. the source of income is rent paid by families/companies/stores. its required redistribute % of income as dividend.
+    - Mortgage REITs - They dont buy property but instead invest in mortages taken by buildersand property owners.  They succeed only if borrowers dont default and interest rates dont go up or down sharpely. 
+    - Individual investors are best off with Equity REITs.If you're a shareholder in an equity REIT, you're a landlord. If you own shares in a mortgage REIT, you're a money lender who lives and dies with interest rates.
+    - The best REITs don't want to just pay dividends. They want to grow--buy more
+    properties, collect more rent, drive their stock prices up.
+
+
