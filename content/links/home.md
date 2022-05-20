@@ -48,3 +48,4 @@ draft: false
 - [Hacker's Diet](https://www.fourmilab.ch/hackdiet/www/tableofcontents1_6.html)
 - [Beam - Blog for a Project or Organization](https://github.com/planetscale/beam)
 - [List of Greatest Novels of all time](https://editoreric.com)
+- [Cryptonomics by Tyler Cowen](https://marginalrevolution.com/wp-content/uploads/2022/05/Cryptoeconomics-Modern-Principles.pdf)

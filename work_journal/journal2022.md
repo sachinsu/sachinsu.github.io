@@ -2192,7 +2192,7 @@ short sellers, and keep the fees.
     - Refer [streaming_platform_comparison.png]
 
 
-- Food
+- Food observations by Tyler Cowen
     - Most children prefer bland, predictable food.
     - The more aggressively religious the decor, the better it will be for the food. 
     - best food recommendations come from local transport drivers and operators. 
@@ -2225,5 +2225,38 @@ short sellers, and keep the fees.
     - Individual investors are best off with Equity REITs.If you're a shareholder in an equity REIT, you're a landlord. If you own shares in a mortgage REIT, you're a money lender who lives and dies with interest rates.
     - The best REITs don't want to just pay dividends. They want to grow--buy more
     properties, collect more rent, drive their stock prices up.
+
+- Joel Mokyr
+    - I actually think that a society that penalizes people for thinking in ways that are not convenient to the government, those societies in the end will not be nearly as creative as societies in which there's some freedom of thought in which the government basically shrugs and takes an agnostic view and you can say and think whatever you want.
+    - nuclear fusion when economically done, will mean infinite energy at very low cost and zero environmental impact
+    - Economics is all about incentives.
+    - China has become truly oppresive autocracy that could be costly in economic terms.
+    - Stalin could not raise living standards by much but he could industrialize Russia enough to defeat germany.
+    - Pandemic accelerated work from anywhere (which was moving slowly) and research in Medical Technology i.e. messenger RNA.
+    - Most things like that in the world are neither wholly bad nor wholly good. But they're complicated. 
+
+- Cryptography, Crypto economics etc.
+    - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
+    - transposition cypher with random key is difficult to decrypt.
+    - in 1976 Whitfield Diffie and Martin Hellman created a new kind of cryptography, one that allowed for secure communication of a secret key over an insecure network.Diffie and Hellman revolutionized cryptography by proving that a secret key could be distributed over an insecure network.
+    - RSA, showed that the key used to encrypt a message did not have to be the same as the key used to decrypt a message.
+        - Using RSA, two keys are created public and private. Public key is shared.  Public key is used to encrypt a message which can only be decrypted using private key. It works reverse too i.e. encryption using private key and decryption using public key. 
+    - Message services such as WhatsApp and Signal also use Diffie-Hellman algorithms so that people across the world can communicate securely. 
+    - Each smart card has a unique public key known to the credit card com- pany, say Visa, and a corresponding private key stored on the chip in the card. When the card is presented for payment,Visa sends it a random number. The chip in the card encrypts the random number using its private key and sends the encrypted message back to Visa.Visa then attempts to decrypt the message using the card’s public key. If the decrypted message reveals the random num- ber sent by Visa, then Visa knows exactly which card is being used.
+    - A digital signature is a message that can only be decrypted using Publius’s public key.
+    - A cryptographic hash is like a digital fingerprint, a much shorter message that in practice can be uniquely associated with any message.a cryptographic hash function takes any data as input and out- puts a digital fingerprint of that data, an essentially unique ID such that if any piece of the data is ever changed it won’t hash to the same ID. 
+    - SHA256 algorithm converts any input to a 256 digit long hash consisting of 0's and 1's.
+        - Hash functions like SHA256 are collision-resistant that is it is infeasible to find two messages with the same hash.
+    - Digital Signatures offer, 
+        - Authenticity means that a digital signature is strong evidence that the signer has the identity associated with the public key.
+        - The integrity of the message is provided by comparing the message hash within the signature with the hash of the message. 
+        -  since only the holder of the private key can sign the digital signature, the signer cannot repudiate having signed the document.
+
+    -  NFT - An NFT is just a cryptographic hash of an art- work (or other digital file) signed with a digital signature
+    - How Bitcoin network works - When Alice wants to send Bob a bitcoin she doesn’t contact her bank or Visa or Stripe. Instead she broadcasts a message to the bitcoin network that says “I authorize a transfer of bitcoin to Bob. Here’s my digital signature.” Bitcoin “miners” listen for transaction messages, verify that the transactions are valid and compile them into blocks. In about 10 min- utes (we explain why it takes 10 minutes further below) a block with Alice’s new transaction will be added to the blockchain. Anyone in the world can then verify that Alice transferred a bitcoin to Bob and if Bob wants to make a subsequent transaction with Tom anyone can verify that he has the funds to do so. Alice has no contract with the miners and they are not obligated to pro- duce blocks.
+    
+    - Why bitcoin mining is computationally expensive -  bitcoin miners must try trillions of hashes to find the rare hash to deploy block onto the blockchain. 
+    -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
+    - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
 
 
