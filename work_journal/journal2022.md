@@ -2260,3 +2260,50 @@ short sellers, and keep the fees.
     - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
 
 
+## 2022-may-23 Mon
+
+- Quotes
+    - Hanlon's Razor: The number of genuinely evil people in the world is minuscule compared to the number of idiots, so never blame on malice what can be adequately explained by stupidity. 
+    - Bonhoeffer's Theory of Stupidity: Evil can be guarded against. Stupidity cannot. And the world's few evil people have little power without the help of the world's many stupid people. As a result, stupidity is a far greater threat than evil.
+    - Mean World Syndrome: The news exists to get your attention, so it tends to shock. As such, it doesn't reflect reality but precisely that which is uncharacteristic of reality. But since it's all we see, we begin to think the world is crazier than it actually is.
+    - Sealioning: When someone pesters an online opponent with endless "innocent" questions to clarify their position. The sealion has no interest in the answers, but by questioning can expend minimal effort while exhausting the opponent until they slip or flip, "losing" the debate.
+    - Two-Step Flow Theory: Most people's opinions are copied from their favorite influencers, who in turn copy the opinions of their favored mass media. As such, politics is largely a battle between two armies of puppets being ventriloquized by a handful of actual thinkers.
+    - Sayre's Law: The lower the stakes, the more vicious the politics. In tense nuclear talks, people act civilized. In Twitter culture wars, people act like Armageddon has come, raging like maniacs, calling for total war, safe in the knowledge none of it matters.
+    - Blind Men & An Elephant: People assume their experiences are a representative sample of the universe, and thus base their assumptions about reality on a few meager impressions. They shrink the world to fit their minds and think they've expanded their minds to grasp the world.
+    - The Lesser Minds Problem: We dismiss those we disagree with as stupid, insane or evil because it saves us from having to deal with the complex truth: that people see things differently from us largely because the labyrinth of experience has led them to different conclusions.
+    - Rally 'Round The Flag Syndrome: During times of crisis, approval ratings of political leaders go up as people unify against the threat. This incentivizes unpopular leaders to exaggerate, fabricate, or even initiate crises (e.g. by starting wars).
+    - Fact-check is shitty thing to do
+    - Principle of Least Effort: Human behavior tends to favor the path that requires least effort. People will accept the first idea that comes to mind, get their info from the first relevant search result, etc. This makes them easy to predict and vulnerable to error.
+    - Sturgeon's Law: 90% of everything is crap. Doesn't matter if you're talking about books, science papers, tweets, YouTube videos. Due to the Principle of Least Effort, the vast majority of works produced in any medium are low effort garbage, so consume with extreme prejudice.
+    - The Imp Of The Perverse: When you forbid someone from something, it makes them want it even more. A big reason why censorship is often ineffective; banning information only increases its appeal, leading to a Streisand Effect in which the info becomes shared even more widely.
+    - Iron Law Of Oligarchy: All organizations of people, no matter how democratic & egalitarian, will eventually be controlled by a dominant few, since if everyone has power then no one has power, and if someone has power, they'll use it to get more power.
+    - Noble Cause Corruption:The greatest evils come not from people seeking to do bad, but people seeking to do good and believing the ends justify the means. Ironically, few things legitimize the immoral treatment of others more than the belief that you're more moral than them.
+    - Agenda-Setting Theory: What's important doesn't become the news, the news becomes what's important. The public conversation is based on whatever's reported by the press, giving the impression that this news matters most, when really it's just what was chosen by a few editors.
+    - Firehosing: With so many competing narratives in the digital age, disinformation agents can't convince you of any single narrative, so instead they overwhelm you with many contradictory narratives until you start to doubt everything and become confused, demoralized & passive.
+    - Intellectual Obesity: We evolved to seek out sugar as it was a scarce source of energy. But when we learned to mass-produce it, our love for it became a liability. The same is true of data. Our curiosity, which once focused us, now distracts us, bloating our minds with junk.
+    - 10:10:10 Strategy: If you're fighting an addiction and tempted to have a cigarette/chocolate muffin/Twitter scroll, consider how indulging now will make you feel in 10 minutes, 10 months, and 10 years. Escape the lure of immediate gratification by stepping out of the present.
+    - Beautiful Mess Effect: We tend to view our mistakes & vulnerabilities with shame because we think they make us look unappealing. But research suggests our mistakes & vulnerabilities actually make us more relatable and endearing to other people. So don't be afraid to be human.
+    - Backwards Law: The more you pursue happiness, the less likely you are to obtain it, because chasing it will only remind you how much you don't have it. Ironically, the best way to find happiness is to stop worrying about it.
+    - Reversion to the mean is a powerful force. In economics as well as politics, extremes
+    cannot survive for long. People tend toward average, and competitive forces in business
+    lead to mean reversion.
+
+
+- [Value Averaging][PersonalFinance]
+    - In value averaging, you set a target amount by which you want your account to grow each period. Say you want to end each month with $1,000 more than you started with. In periods when stocks fall, you have to add enough to your holdings to hit the target you’ve set. If, for instance, the value of your portfolio falls $250, you would need to buy $1,250 in stocks to finish the month with $1,000 more than you had at the beginning. If your portfolio’s value drops $500, then you’d add $1,500, and so on. In a rising market, you’d buy less than $1,000—and even sell some, if stock prices go through the roof.
+    - Most investing is learning to accept being wrong, not holding a single point of view, and working to discover what is not known. It is forcing yourself to be the ultimate scientist. 
+
+    - “Do not use power to suppress opinions you think pernicious, for if you do the opinions will suppress you.”
+
+    - The difference between good and great results is often found in consistently doing the boring things you know you should do exactly when you feel like doing them the least.
+
+    - Recession means two quarters of negative GDP
+
+
+
+- Tech - Reasons for having SPAs
+    - Need for omnipresent elements that survives page navigation
+    - infinite-loading list that, on pressing the back button, returns to the previous position in the list.
+
+
+
