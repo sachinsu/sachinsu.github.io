@@ -128,3 +128,7 @@ draft: false
 - [Using PGQ to invalidate caches](https://www.hagander.net/talks/cache_invalidation_2014.pdf)
 - [pgstream- turns your  database into an event stream](https://github.com/tmc/pqstream)
 - [Wal-listener CLI](https://github.com/ihippik/wal-listener)
+
+## Data Privacy
+
+- [PostgreSQL Anonymizer -  hides or replaces personally identifiable information (PII)](https://www.postgresql.org/about/news/postgresql-anonymizer-10-privacy-by-design-for-postgres-2452/)

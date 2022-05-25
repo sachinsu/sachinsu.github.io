@@ -2259,7 +2259,6 @@ short sellers, and keep the fees.
     -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
     - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
 
-
 ## 2022-may-23 Mon
 
 - Quotes
@@ -2299,11 +2298,38 @@ short sellers, and keep the fees.
 
     - Recession means two quarters of negative GDP
 
-
-
 - Tech - Reasons for having SPAs
     - Need for omnipresent elements that survives page navigation
     - infinite-loading list that, on pressing the back button, returns to the previous position in the list.
 
+- About Solid state drives (SSD)
+    - A solid-state drives (SSD) is a flash-memory based data storage device. Bits are stored into cells, which exist in three types: 1 bit per cell (single level cell, SLC), 2 bits per cell (multiple level cell, MLC), 3 bits per cell (triple-level cell, TLC).
+    - Each cell has a maximum number of P/E cycles (Program/Erase), after which the cell is considered defective. This means that NAND-flash memory wears off and has a limited lifespan.
+    - The two main host interfaces offered by manufacturers are SATA 3.0 (550 MB/s) and PCI Express 3.0 (1 GB/s per lane, using multiple lanes). Serial Attached SCSI (SAS) is also available for enterprise SSDs. In their latest versions, PCI Express and SAS are faster than SATA, but they are also more expensive.
 
+- Epistemology -  “how do you know what you know?”
+    - Street Epistemology - SE intends to make your interlocutor realize the flaws in the way they came to build a belief, and based on that, concluded by themselves that if the foundation is broken, then the belief itself must be invalid.
+        - What: the claims. What does this person believe? What level of confidence does he have in this belief?
+        - Why: the reasons. Why does the person believe this? What are the reasons?
+        - How: the methods (the epistemologies). How is the person confirming those reasons are the main reasons for thinking something is true? How did he confirm that?
+
+- [Contrarian Criteria][PersonalFinance] - any stock above p/s > 10x and ebitda mgn < 40% is to be excluded
+
+- Secular inflationary forces include
+    -  underinvestment in fossil fuels;
+    -  climate policies/carbon taxes;
+    -  deglobalization (geopolitics)
+    -  populist entitlement inflation;
+    -  increasing regulation;
+    -  aging populations;
+    -  perennial healthcare/education price inflation.
+
+- Concrete is made by mixing sand, gravel, water and cement. And cement is made by roasting limestone, a rock composed of calcium carbonate, to drive off carbon dioxide and leave behind calcium oxide.
+- Graphene - It is thinnest known material. It is 200 times stronger than steel. 
+
+- Amazon's Values, 
+    - Everything has to be perfect
+    - customer obsession and unrelentingly high standards, into every
+    step  team took.
+    - Underpromise and overdeliver
 
