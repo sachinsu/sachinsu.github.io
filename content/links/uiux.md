@@ -13,6 +13,7 @@ draft: false
 - [Tools for non artistic developers](https://nodesign.dev/)
 - [Principles of Design](https://principles.design/)
 - [Micro frontends - Techniques, strategies and recipes for building a modern web app with multiple teams that can ship features independently.](https://micro-frontends.org/)
+- [Thoughts on SPAs](https://nolanlawson.com/2022/05/25/more-thoughts-on-spas/)
 
 ## Articles
 

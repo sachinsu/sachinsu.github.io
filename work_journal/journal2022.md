@@ -1433,29 +1433,17 @@
 	- Think about starting a lot of businesses. You won’t follow through on most of them, but the act of thinking through a big idea is a special type of exercise most people don't do often (or ever).
 
 	- One of the biggest secrets of fitness is avoiding injury. If you're healthy, you can exercise consistently. If you can exercise consistently, compounding will do its work. To avoid injury, tame your ego. There's rarely any reason to push past 85%, and if you don't, you're less likely to get injured.
-
 	- Seek advice from everyone, but filter it to fit your life. The purpose of asking for advice is to gain as much perspective as possible then make your own decision with that perspective, not to get someone else to make your decision for you.
-
 	- Good enough and done is better than perfect but imagined. 
-
 	- So much of the technology we lose our patience with today would've looked like magic ten years ago. Remember this when your phone is taking too long to play a YouTube video while you’re sitting on the beach.
-
 	- If you're constantly busy, you have underlying issues to address.
-
 	- If someone is bothering you, it's your fault until you've told them.
-
 	- If you aren't absolutely thrilled to watch it, turn off the TV and pick up a book instead. 
-
 	- Get on the dance floor at every wedding. Nobody cares if you're bad at dancing. They're too concerned about how bad they are. Plus, the more people on the dance floor, the more fun the wedding. Consider it your gift to the newlyweds. 
-
 	- Set rules for yourself. They make life better 95% of the time. Then break them 5% of the time.
-
 	- Spend less time checking boxes and more time building relationships. Checking boxes brings a certain level of success, but relationships bring fulfillment and opportunity you'll never find on your own.
-
 	- Buy a nice suit in your 20s and never let yourself outgrow it.
-
 	- Pick one or two hobbies you love and spend time getting better at them. Seeing yourself progress through deliberate practice is a confidence builder and a satisfaction booster.
-
 	- Spend enough time alone that you're comfortable doing it. Enjoying your own company is a wonderful gift to give yourself. 
 
 - During times of abundance, worldviews don’t get tested very strongly and people are shielded from the consequences of being inaccurate. It’s during the times of scarcity that reality reasserts itself and filters out the workable from the unworkable worldviews.
@@ -2301,6 +2289,11 @@ short sellers, and keep the fees.
 - Tech - Reasons for having SPAs
     - Need for omnipresent elements that survives page navigation
     - infinite-loading list that, on pressing the back button, returns to the previous position in the list.
+    - only one browser tab is ever open at a time
+    - page loads are infrequent
+    - content is very dynamic
+    - Core Web Vitals and SEO are not a big concern for you, e.g. because your app is behind a login gate.
+    - 
 
 - About Solid state drives (SSD)
     - A solid-state drives (SSD) is a flash-memory based data storage device. Bits are stored into cells, which exist in three types: 1 bit per cell (single level cell, SLC), 2 bits per cell (multiple level cell, MLC), 3 bits per cell (triple-level cell, TLC).
@@ -2332,4 +2325,3 @@ short sellers, and keep the fees.
     - customer obsession and unrelentingly high standards, into every
     step  team took.
     - Underpromise and overdeliver
-

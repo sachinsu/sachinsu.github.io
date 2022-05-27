@@ -10,6 +10,7 @@ My current Favourite Language
 
 ### Articles, E-books
 
+- [About Go - Compiler, packaging etc.](https://christine.website/blog/we-have-go-2)
 - [When (and when not to) to use Generics in Go Ver. 1.8](https://planetscale.com/blog/generics-can-make-your-go-code-slower)
 - [High performance GO Workshop](https://dave.cheney.net/high-performance-go-workshop/gophercon-2019.html#welcome)
 - [Learnings from Production usage of Go](https://rytisbiel.com/2021/03/06/darker-corners-of-go/)
