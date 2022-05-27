@@ -6,7 +6,7 @@ draft: false
 
 ## Go Language
 
-My current Favourite Language
+My current Favorite Language
 
 ### Articles, E-books
 
