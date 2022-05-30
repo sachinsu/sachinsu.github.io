@@ -2325,3 +2325,8 @@ short sellers, and keep the fees.
     - customer obsession and unrelentingly high standards, into every
     step  team took.
     - Underpromise and overdeliver
+
+# 2022-may-30 Mon 
+
+- Think like a scientist - As scientists constantly test and challenge their views.
+
