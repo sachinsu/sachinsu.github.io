@@ -625,3 +625,5 @@
     - Highly suitable for Microservices based architecture 
     - Requires asynchronous communication and eventual consistency
     - It is more difficult in architectures where analytical and operational data must stay in sync at all times, which presents a daunting challenge in distributed architectures.
+
+- Observability - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
