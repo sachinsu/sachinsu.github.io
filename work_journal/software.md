@@ -8,6 +8,35 @@
         - “What was the result?”
     - Bar Raiser process steps such as preparing a set of behavior-based interview questions in advance of the interview, insisting on written transcripts of the interview, rereading the transcript post interview (before making an assessment), conducting debriefs, basing debriefs on the interview transcripts, and making assessments based on well-understood principles are all steps that seek to eliminate individual biases. Having a diverse group of people involved in the process obviously reduces the chance of unconscious bias worming its way in.
 
+- [Things to consider while making technology choices][Architecture]
+    - Software Architecture cannot be created in a vacuum and solid technical foundation is not not enough.
+    - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
+    - Reasons behind it
+    - Impact on Team 
+        - Is it easy for them learn?
+        - Are they enthusiastic 
+    - External Attractiveness (from New Hire perspective)
+    - Effective communication 
+    - Time to market
+        - Trade off between idealism vs pragmatism 
+    - Long term Maintenance
+        - Cost of Maintenance in terms of 
+            - Testing difficulties
+                - Efficiency of QA Team is critical for Software product/application 
+            - Employee attrition
+                - What specific skills and domain knowledge will your design require, and how much value would be lost if one of your employees were to leave?
+                - the more your own developers build; the more you will depend on them.
+            - Flexibility 
+                - The more vendor agnostic your design is, the more easily you will be able to avoid getting stuck  on an outdated platform and more quickly you'll be able to upgrade or pivot your underlying infrastructure as technology changes. 
+
+- [Architectural thinking][Architecture]
+    - Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain.
+    - eNumerate multiple candidate solutions. Don’t just start prodding at your favorite!
+    - Consider a candidate solution, then read the Paper if there is one.
+    - Determine the Historical context in which the candidate solution was designed or developed.
+    - Weigh Advantages against disadvantages. Determine what was de-prioritized to achieve what was prioritized.
+    - Think! Soberly and humbly ponder how well this solution fits your problem. What fact would need to be different for you to change your mind? For instance, how much smaller would the data need to be before you’d elect not to use Hadoop?
+
 - [On Software Architecture][Architecture]
 
     - Every thing in Software Architecture is a trade off
@@ -627,3 +656,393 @@
     - It is more difficult in architectures where analytical and operational data must stay in sync at all times, which presents a daunting challenge in distributed architectures.
 
 - Observability - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
+
+## 2022-jan-03 Mon
+
+- [VMs or Serverless][Architecture][Infrastructure]
+    - VMs, Serverless and when they are useful,
+        - Virtual machines (e.g. EC2 or Compute Engine) are useful for workloads that change no faster than you’re able to add capacity, or for work loads that can tolerate delay in scaling (e.g. queue based event systems). They are also useful for short lived sessions that can tolerate scale down events
+        -  Containers (e.g. a Kubernetes cluster or Fargate) which run on top of fixed compute. Like virtual machines are useful for traffic volumes which slowly change over time. While you’re able to start up a new container quickly to handle a new session, you’re still limited by the underlying compute instance on which the containers are running. The underlying compute hardware has to scale to meet the demands of the running containers. Containers are great for long lived, stateful sessions, as they can be ported between physical hardware instances while still running.
+        - Serverless functions (e.g. Lambda or Cloud Run) are, in essence, containers running on top of physical hardware. They are ideally suited for handling unpredictable traffic volumes and for non-persistent and stateless connections.
+
+- [Neural Networks](https://sirupsen.com/napkin/neural-net?utm_source=computer-napkins&utm_medium=email)[AIML], 
+    - Basically training the system by adjusting the weights so as to get optimal desired result. 
+    - Has 3 layers 
+        - Input layer - has representation of data to feed to network. 
+        - Hidden layer - Does a math on the input layer to convert it to our prediction. Training refers to changing math of this layer to generate predictions. Values in this layer are called weights 
+        -  Output layer - Contains Final prediction.
+    - Training indicates adjusting weights in hidden layer so as to achieve better prediction. Its like teaching hidden layer to apply certain function without actually applying it. 
+    - loss function indicates how the prediction fair against expected outcome. large loss means wrong model and vice-versa. 
+    - Minimizing the loss of a function is absolutely fundamental to machine learning.
+    - While training, gradient descent is a method that minimizes value of a function. It helps in avoiding ad-hoc randomization (to achieve better prediction) and reducing loss .
+    - epoch  - an iteration over the full training set is referred to as an epoch. 
+    - Autograd (pytorch) is an automatic differentiation engine. grad stands for gradient, which we can think of as the derivative/slope of a function with more than one parameter. It keeps track of all the math functions applied and applies derivative.
+    - To avoid overstepping in gradient descent, something called as "learning rate" is applied. 
+    - For a Non-linear use cases (e.g. identify cat vs. calculate average), one has to add non-linear component to neural net. This is called as activation function. 
+    - The core operations in neural net involve matrix multiplication. Frameworks like Pytorch perform this in underneath 'C' layer instead of Python. Using GPUs make them even faster.
+
+- [How ASP.NET requests are processed](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45)[Architecture][dotnet] 
+    - .NET framework maintains pool of threads and dispatched for a new request.
+    - If request is processed synchronously then respective thread is busy for that duration 
+    - Max number of threads is 5000 for .NET 4.5
+    - If long running processing of requests blocks many threads then its called as thread starvation 
+    - In case of "thread starvation", web server queues requests and when queue is full it responds with HTTP 203 (server busy)
+    - Each new thread has overhead of about 1MB of RAM
+    - In case when "async...await" is used,  ASP.NET will not be using any threads between the async method call and the await.
+    - An asynchronous request takes the same amount of time to process as a synchronous request. However, during an asynchronous call, a thread is not blocked from responding to other requests while it waits for the first request to complete. Therefore, asynchronous requests prevent request queuing and thread pool growth when there are many concurrent requests that invoke long-running operations.
+    - Guidance, 
+        - Use synchronous when,
+            - Operation is short-lived
+            - Simplicity is more important (No need for parallelism)
+            - Primarily CPU based instead of I/o (Network, Disk etc.)
+
+- [PostgreSQL Replication][Databases] 
+    - PostgreSQL supports block-based (physical) replication as well as the row-based (logical) replication. Physical replication is traditionally used to create read-only replicas of a primary instance, and utilized in both self-managed and managed deployments of PostgreSQL. Uses for physical read replicas can include high availability, disaster recovery, and scaling out the reader nodes. 
+
+- [Data storage][Databases][Architecture]
+    - Row oriented - Because data on a persistent medium such as a disk is typically accessed block-wise (in other words, a minimal unit of disk access is a block), a single block will contain data for all columns.This is great for cases when we’d like to access an entire user record, but makes queries accessing individual fields of multiple user records (for example, queries fetching only the phone numbers) more expensive, since data for the other fields will be paged in as well
+    - Column-oriented - Store values by vertical partitioning ie. by column against storing values by horizontal partitioning (as in RDBMS).
+        - In column-oriented layout, values of same column are stored contiguously on disk.For example, if we store historical stock market prices, price quotes are stored together. Storing values for different columns in separate files or file segments allows efficient queries by column, since they can be read in one pass rather than consuming entire rows and discarding data for columns that weren’t queried.
+        - Column-oriented stores are a good fit for analytical workloads that compute aggregates, such as finding trends, computing average values, etc. Processing complex aggregates can be used in cases when logical records have multiple fields, but some of them (in this case, price quotes) have different importance and are often consumed together.
+        - Apache Parquet, Apache ORC are column-oriented file formats.
+        - Reading multiple values for the same column in one run significantly improves cache utilization and computational efficiency.
+        - If the read data is consumed in records (i.e., most or all of the columns are requested) and the workload consists mostly of point queries and range scans, the row-oriented approach is likely to yield better results. If scans span many rows, or compute aggregate over a subset of columns, it is worth considering a column-oriented approach.
+        - Wide column stores 
+            - data is represented as a multidimensional map, columns are grouped into column families (usually storing data of the same type), and inside each column family, data is stored row-wise. This layout is best for storing data retrieved by a key or a sequence of keys.
+            -Each row is indexed by its row key. Related columns are grouped together in column families.
+            - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
+            - Column families store multiple versions of data by timestamp.
+
+
+- [Postgres indexes][Databases], 
+    - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query. 
+    - BRIN indexes are block range indexes, specially targeted at very large datasets where the data you’re searching is in blocks, like timestamps and date ranges. They are known to be very performant and space efficient.
+    - GIST indexes build a search tree inside your database and are most often used for spatial databases and full-text search use cases. 
+    - GIN indexes are useful when you have multiple values in a single column which is very common when you’re storing array or json data. 
+
+- [Postgres Triggers][Databases]
+    - is limited to single server 
+    - working set does not fit in memory
+    - reaching limit of network attached storage, CPU
+    - Analytical queries take too long
+    - Autovacuum can not keep up with transaction load
+
+
+- [Database schema migrations - general flow of online schema migration][Databases], 
+    - Create a new, empty table, in the likeness of the original table. We title this the ghost table.
+    - ALTER the ghost table. Since the table is empty, there is no overhead to this operation.
+    - Validate the structural change is compatible with tooling requirements.
+    - Analyze the diff.
+    - Begin a long running process of copying existing rows from the original tables to the ghost table. Rows are copied in small batches.
+    - Capture or react to ongoing changes to the original table, and continuously apply them onto the ghost table.
+    - Monitor general database and replication metric, and throttle so as to prioritize production traffic as needed.
+    - When the existing data copy is complete, the migration is generally considered as ready to cut-over, give or take some small backlog or state of the replication topology.
+    - Final step is the cut-over: renaming away of the original table, and renaming the ghost table in its place. Up to some locking or small table outage time, the users and apps are largely ignorant that the table has been swapped under their feet.
+
+- [Open source data stack][Architecture] 
+    - Airflow - Workflow
+    - Airbyte - ELT
+    - dbt - ELT
+    - Metabase - Dashboards and reporting 
+    - superset - Dashboards and reporting 
+    - PostgreSQL - RDBMS
+    - Great_Expectations - Data pipeline testing
+    - datahub - Data catalog/lineage
+
+- Quantum computing and 3d printing. 
+    - Quantum computing  has the potential to break the encryption used to protect sensitive data in the digital world of today and tomorrow.Powerful countries, companies, and universities are pouring money into the task of building a quantum computer powerful enough to perform exponentially faster than the computers of today.Google and IBM use the same basic building block in their machines to create quantum behavior, known as transmon qubits which were invented by NSA.
+    - Monitoring 5G successfully requires a deep understanding of what makes it fundamentally different from its predecessors: higher speed, lower range, more distribution nodes, different data protocols.
+    - NSA says "In the future, superpowers will be made or broken based on the strength of their cryptanalytic programs"
+
+## 2022-Mar-03 Thu
+
+- Quantum Computing's impact
+    -  the most important security and privacy properties to protect in the face of a quantum computer are confidentiality and authentication.
+        - quantum computers will not only be able to decrypt on-going traffic, but also any traffic that was recorded and stored prior to their arrival.
+        - The threat model for authentication is a little more complex: a quantum computer could be used to impersonate a party in a connection or conversation. 
+
+- [Database Record Access][Databases]
+    - Why indexes, 
+        - When data is stored on disk-based storage devices, it is stored as blocks of data. These blocks are accessed in their entirety, making them the atomic disk access operation. Disk blocks are structured in much the same way as linked lists; both contain a section for data, a pointer to the location of the next node (or block), and both need not be stored contiguously. Due to the fact that a number of records can only be sorted on one field, we can state that searching on a field that isn’t sorted requires a Linear Search which requires (N+1)/2 block accesses (on average), where N is the number of blocks that the table spans. If that field is a non-key field (i.e. doesn’t contain unique entries) then the entire tablespace must be searched at N block accesses. Whereas with a sorted field, a Binary Search may be used, which has log2 N block accesses. Also since the data is sorted given a non-key field, the rest of the table doesn’t need to be searched for duplicate values, once a higher value is found. Thus the performance increase is substantial.
+
+    - What is indexing?
+        - Indexing is a way of sorting a number of records on multiple fields. Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it. The downside to indexing is that these indices require additional space on the disk since the indices are stored together in a table using the MyISAM engine, this file can quickly reach the size limits of the underlying file system if many fields within the same table are indexed. 
+    - When should it be used?
+        - Given that creating an index requires additional disk space (277,778 blocks extra from the above example, a ~28% increase), and that too many indices can cause issues arising from the file systems size limits, careful thought must be used to select the correct fields to index.
+
+## 2022-Mar-10 Thu
+
+- PostgreSQL Learnings, 
+    - LEFT JOIN in place of an INNER JOIN helps the planner make more accurate row count predictions. Adding redundant ON clauses improves Hash Joins.
+    -  ANY(VALUES ...) instead of IN can enforce a Hash Aggregate with many elements.
+    - It’s a bad idea to make the table primary key a varchar.
+    - CLUSTER rocks when the query returns many related rows.
+    - pg_hint_plan offers powerful hints, including the estimated row count correction Rows, JOIN sequence enforcer Leading, and the index override IndexScan. Though the latter may strike back.
+    - https://explain.tensor.ru to visualize EXPLAIN-s.
+
+
+- [Postgres High availability with Patroni][Databases][Architecture], 
+    - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts. 
+    - Basic components, 
+        - PostgreSQL cluster: the database cluster, usually consisting of a primary and two or more replicas
+        - Patroni: used as the failover management utility
+        - etcd: used as a distributed configuration store (DCS), containing cluster information such as configuration, health, and current status.
+    - How HA Works, 
+        - Each PostgreSQL instance within the cluster has one application database. These instances are kept in sync through streaming replication.
+        -  Each database host has its own Patroni instance which monitors the health of its PostgreSQL database and stores this information in etcd. 
+        - The Patroni instances use this data to:
+            - keep track of which database instance is primary
+            - maintain quorum among available replicas and keep track of which replica is the most "current"
+            - determine what to do in order to keep the cluster healthy as a whole
+            - Patroni manages the instances by periodically sending out a heartbeat request to etcd which communicates the health and status of the PostgreSQL instance. etcd records this information and sends a response back to Patroni. 
+        - Streaming replication
+            - Keeps replica more up to date compared to file based log shipping. 
+            - The standby connects to the primary, which streams WAL records to the standby as they're generated, without waiting for the WAL file to be filled.
+            - is asynchronous by default.
+
+- [Database Query performance analysis (MySQL)][Databases] 
+    -  lock time greater than 50% of query time is a problem because MySQL should spend the vast majority of its time doing work, not waiting.
+    - Locks are primarily used for writes (INSERT, UPDATE, DELETE, REPLACE) because rows must be locked before they can be written. Response time for writes depends, in part, on lock time
+    - For reads (SELECT), there are nonlocking and locking reads. The distinction is easy because there are only two locking reads: SELECT…FOR UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is nonlocking, which is the normal case.
+    - Locking reads should be avoided, especially SELECT…FOR UPDATE, because they don’t scale, they tend to cause problems, and there is usually a nonlocking solution to achieve the same result
+    - Rows examined is the number of rows that MySQL accessed to find matching rows. It indicates the selectivity of the query and the indexes. The more selective both are, the less time MySQL wastes examining nonmatching rows.
+
+
+- [How postgre stores rows][Databases]
+    - PostgreSQL stores the actual data into segment files (more generally called heap files). Typically its fixed to 1GB size but you can configure that at compile time using --with-segsize. When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments. This arrangement avoids problems on platforms that have file size limitations but 1GB is very conservative choice for any modern platform. These segment files contain data in fixed size pages which is usually 8Kb, although a different page size can be selected when compiling the server with --with-blocksize option but this size usually falls in ideal size when considering performance and reliability tradeoffs. If the page size is too small, rows won’t fit inside the page and if it’s too large there is risk of write failure because hardware generally can only guarantee atomicity for a fixed size blocks which can vary disk to disk (usually ranges from 512 bytes to 4096 bytes).
+    - Internally PostgreSQL maintains a unique row id for our data which is usually opaque to users. We can query it explicitly to see its value.in ctid First digit stand for the page number and the second digit stands for the tuple number. PostgreSQL moves around these tuples when VACUUM is run to defragment the page. 
+
+
+- [Code Obfuscation types][Security]
+    - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
+    - Flow obfuscation -  modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
+
+- [Easier ways of doing things][SystemArchitecture]
+    - SSL certificates, with Let’s Encrypt
+    - Concurrency, with async/await (in several languages)
+    - Centering in CSS, with flexbox/grid
+    - Building fast programs, with Go
+    - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
+    - Building cross-platform GUIs, with Electron
+    - VPNs, with Wireguard
+    - Running your own code inside the Linux kernel, with eBPF
+    - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
+    - Configuring cloud infrastructure, with Terraform
+    - Setting up a dev environment, with Docker
+    - Sharing memory safely with threads, with Rust
+    - Easier using hosted services
+    - CI/CD, with GitHub Actions/CircleCI/GitLab etc
+    - Making useful websites by only writing frontend code, with a variety of “serverless” backend services
+    - Training neural networks, with Colab
+    - Deploying a website to a server, with Netlify/Heroku etc
+    - Running a database, with hosted services like RDS
+    - Realtime web applications, with Firebase
+    - Image recognition, with hosted ML services like Teachable Machine
+    - Cryptography, with opinionated crypto primitives like libsodium
+    - Live updates to web pages pushed by the web server, with LiveView/Hotwire
+    - Embedded programming, with MicroPython
+    - Building videogames, with Roblox / Unity
+    - Writing code that runs on GPU in the browser (maybe with Unity?)
+    - Building IDE tooling with LSP (the language server protocol)
+    - Interactive theorem provers (not sure with what)
+    - NLP, with HuggingFace
+    - Parsing, with PEG or parser combinator libraries
+    - ESP microcontrollers
+    - Batch data processing, with Spark
+
+- [MySQL][Databases] 
+    - frequently dredging up old data is problematic for performance.
+    - determine the ideal data model for the access, then use a data store built for that data model
+    - Enqueue writes - Use a queue to stabilize write throughput. It allow the application to respond gracefully and predictably to flood of requests that overwhelms the application, or the database, or both.For write-heavy applications, enqueueing writes is the best practice and practically a requirement. Invest the time to learn and implement a queue.
+    - Data Partitioning - separating hot and cold data: frequently and infrequently accessed data, respectively. It partitions by Access and it archives by moving the infrequently accessed (cold) data out of the access path of the frequently accessed (hot) data
+    - Reference data size limit of a single MySQL instance to 2 or 4 TB (on SSD):
+        - 2 TB - For average queries and access patterns, commodity hardware is sufficient for acceptable performance, and operations complete in reasonable time.
+        - 4 TB - For exceptionally optimized queries and access patterns, mid- to highend hardware is sufficient for acceptable performance, but operations might take slightly longer than acceptable.
+    - Sharding 
+        - High cardinality - An ideal shard key has high cardinality (see “Extreme Selectivity”) so that data is evenly distributed across shards. A great example is a website that lets you watch videos: it could assign each video a unique identifier like dQw4w9WgXcQ. The column that stores that identifier is an ideal shard key because every value is unique, therefore cardinality is maximal.
+        - Reference application entities - An ideal shard key references application entities so that access patterns do not cross shards. A great example is an application that stores payments: although each payment is unique (maximal cardinality), the customer is the application entity. Therefore, the primary access pattern for the application is by customer, not by payment. Sharding by customer is ideal because all payments for a single customer should be located on the same shard.
+        - When opting for sharding, plan to accomodate at least four years of data growth.
+        - ProxySQL and Vitess are middlewares (between app and MySQL) that support sharding by several mechanisms.
+    - A common misconception is that the application needs thousands of connections to MySQL for performance or to support thousands of users. This is patently not true. The limiting factor is threads, not connections—more on Threads_running in a moment. A single MySQL instance can easily handle thousands of connections. I’ve seen 4,000 connections in production and more in benchmarks. But for most applications, several hundred connections (total) is more than sufficient. If your application demonstrably requires several thousand connections, then you need to shard.
+    - MySQL runs one thread per client connection 
+    - One CPU Core runs one thread.When the number of threads running is greater than the number of CPU cores, it means that some threads are stalled - waiting for CPU Time.
+    - Four metrics count the occurrence of SELECT statements that are usually bad for performance:
+        - Select_scan
+        - Select_full_join
+        - Select_full_range_join
+    - Database Capacity planning
+        - the four-year fit is an estimate of data size or access in four years applied to the capacity of your hardware today
+        - It’s better to be more precise and collect table sizes every 15 minutes.Near-term data growt trending is used to estimate when the disk will run out of space. Long term trend is used to estimate when sharding is necessary.
+    - A deadlock occurs when two (or more) transactions hold row locks that the other transaction needs
+
+
+
+- [Database Workloads][Databases] 
+    - OLTP
+        - Characterstics, 
+            - Inserts, updates, and deletes only affect a single row. An example: Adding an item to a user’s shopping cart.
+            - Read operations only read a handful of items from the database. An example: listing the items in a shopping cart for a user.
+            - Aggregations are used rarely, and when they are used they are only used on small sets of data. Example: getting the total price of all items in a user their shopping cart.
+        - Relevant benchmarks
+            - Throughput in TPS (transactions per second)
+            - Query latency, usually at different percentiles (p95, etc.)
+    - OLAP 
+        - Characteristics, 
+            - Periodic batch inserts of data. 
+            - Read operations often read large parts of the database.
+            - Aggregations are used in almost every query.
+            - Queries are large and complex. 
+            - Not a lot of concurrent users 
+        - Relevant benchmarks
+            - How long it took to run all of the queries that are part of the benchmark
+            - How long it took to run each of the queries, measured separately per query 
+    - HTAP (Hybrid transactional/analytical processing)
+        - Combines characteristics from OLTP and OLAP
+    - Important questions while benchmarking 
+        - Is it running on production infrastructure? A lot more performance can usually be achieved when critical production features have been disabled. Things like backups, High Availability (HA) or security features (like TLS) can all impact performance.
+        - How big is the dataset that was used? Does it fit in RAM or not? Reading from disk is much slower than reading from RAM. So, it matters a lot for the results of a benchmark if all the data fits in RAM.
+        - Is the hardware excessively expensive? Obviously a database that costs $500 per month is expected to perform worse than one that costs $50,000 per month.
+        - What benchmark implementation was used? Many vendors publish results of a TPC benchmark specification, where the benchmark was run using a custom implementation of the spec. These implementations have often not been validated and thus might not implement the specification correctly.
+
+- [Web Application Monitoring][Architecture][Observability] 
+    - Metrics to observe for Web Applications
+        - Response Time p50, p90, p99, sum, avg 
+        - Throughput by HTTP status 
+        - Worker Utilization 
+        - Request Queuing Time 
+        - Service calls 
+        - Database(s), caches, internal services, third-party APIs, ..
+        - Enqueued jobs are important!
+        - Circuit Breaker tripping  
+        - Errors, throughput, latency p50, p90, p99
+        - Throttling 
+        - Cache hits and misses % 
+        - CPU and Memory Utilization
+        - Exception counts 
+
+    - Metrics to observe for Web Applications
+        - Job Backend (e.g. Sidekiq, Celery, Bull, ..)
+        - Job Execution Time p50, p90, p99, sum, avg 
+        - Throughput by Job Status {error, success, retry} 
+        - Worker Utilization 
+        - Time in Queue  
+        - Queue Sizes  
+        - Don’t forget scheduled jobs and retries!
+        - Service calls p50, p90, p99, count, by type 
+        - Throttling 
+        - CPU and Memory Utilization
+        - Exception counts  
+    - Relevant Metrics should be available to slice by endpoint or job, tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
+    - In absense of observability setup, start with logs. For Format, consider using https://stripe.com/blog/canonical-log-lines
+
+    - Key Non-functional aspects of a Payments System
+        - Reliability and fauly tolerance 
+        - Reconciliation 
+
+    - Non relational databases are good for below requirements, 
+        - Application requires super-low latency
+        - Data is unstructured or no relational data
+        - Only need to serialize/de-serialize data 
+        - Store massive amount of data
+
+    - Message queues provide Decoupling, async processing which is good for scalability of applications
+    - Idempotency in API, 
+        - idempotency key is usually a unique value that is generated by the client and expires after a certain period of time. A UUID is commonly used as an idempotency key and it is recommended 
+        - To perform an idempotent payment request, an idempotency key is added to the HTTP header <idempotency-key: key_value>
+        - an idempotency key is sent to the payment system as part of the HTTP request
+        - For the second request, it’s treated as a retry because the payment system has already seen the idempotency key. When we include a previously specified idempotency key in the request header, the payment system returns the latest status of the previous request. 
+        - If multiple concurrent requests are detected with the same idempotency key, only one request is processed and the others receive the “429 Too Many Requests” status code. 
+        - To support idempotency, we can use the database's unique key constraint.
+
+
+- What is Observability?
+    - Observability means gaining visibility into the internal state of a system. It’s used to give users the tools to figure out what’s happening, where it’s happening, and why. At Cloudflare, we believe that observability has three core components: monitoring, analytics, and forensics. Monitoring measures the health of a system - it tells you when something is going wrong. Analytics give you the tools to visualize data to identify patterns and insights. Forensics helps you answer very specific questions about an event.
+
+
+- [Perspectives on Software Development][SystemArchitecture],
+    1.	Don’t fight the tools: libraries, language, platform, etc. Use as much native constructs as possible. Don’t bend the technology, but don’t bend the problem either. Pick the right tool for the job or you’ll have to find the right job for the tool you got.
+    2.	You don’t write the code for the machines, you write it for your colleagues and your future self (unless it’s a throw away project or you’re writing assembly). Write it for the junior ones as a reference.
+    3.	Any significant and rewarding piece of software is the result of collaboration. Communicate effectively and collaborate openly. Trust others and earn their trust. Respect people more than code. Lead by example. Convert your followers to leaders.
+    4.	Divide and conquer. Write isolated modules with separate concerns which are loosely coupled. Test each part separately and together. Keep the tests close to reality but test the edge cases too.
+    5.	Deprecate yourself. Don’t be the go-to person for the code. Optimize it for people to find their way fixing bugs and adding features to the code. Free yourself to move on to the next project/company. Don’t own the code or you’ll never grow beyond that.
+    6.	Security comes in layers: each layer needs to be assessed individually but also in relation to the whole. Risk is a business decision and has direct relation to vulnerability and probability. Each product/organization has a different risk appetite (the risk they are willing to take for a bigger win). Often these 3 concerns fight with each other: UX, Security, Performance.
+    7.	Realize that every code has a life cycle and will die. Sometimes it dies in its infancy before seeing the light of production. Be OK with letting go. Know the difference between 4 categories of features and where to put your time and energy: Core: like an engine in a car. The product is meaningless without it. Necessary: like a car’s spare wheel. It’s rarely used but when needed, its function decides the success of the system. Added value: like a car’s cup-holder. It’s nice to have but the product is perfectly usable without it. Unique Selling Point: the main reason people should buy your product instead of your rivals. For example, your car is the best off-road vehicle.
+    8.	Don’t attach your identity to your code. Don’t attach anyone’s identity to their code. Realize that people are separate from the artifacts they produce. Don’t take code criticism personally but be very careful when criticizing others’ code.
+    9.	Tech debt is like fast food. Occasionally it’s acceptable but if you get used to it, it’ll kill the product faster than you think (and in a painful way).
+    10.	When making decisions about the solution all things equal, go for this priority:
+    **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
+    But don’t follow that blindly because it is dependent on the nature of the product. Like any career, the more experience you earn, the more you can find the right balance for each given situation. For example, when designing a game engine, performance has the highest priority, but when creating a banking app, security is the most important factor.
+    11.	Bugs’ genitals are called copy & paste. That’s how they reproduce. Always read what you copy, always audit what you import. Bugs take shelter in complexity. “Magic” is fine in my dependency but not in my code.
+    12.	Don’t only write code for the happy scenario. Write good errors that answer why it happened, how it was detected and what can be done to resolve it. Validate all system input (including user input): fail early but recover from errors whenever possible. Assume the user hold a gun: put enough effort into your errors to convince them to shoot something other than your head!
+    13.	Don’t use dependencies unless the cost of importing, maintaining, dealing with their edge cases/bugs and refactoring when they don’t satisfy the needs is significantly less than the code that you own.
+    14.	Stay clear from hype-driven development. But learn all you can. Always have pet projects.
+    15.	Get out of your comfort zone. Learn every day. Teach what you learn. If you’re the master, you’re not learning. Expose yourself to other languages, technologies, culture and stay curious.
+    16.	Good code doesn’t need documentation, great code is well documented so that anyone who hasn’t been part of the evolution, trial & error process and requirements that led to the current status can be productive with it. An undocumented feature is a non-existing feature. A non-existing feature shouldn’t have code.
+    17.	Avoid overriding, inheritance and implicit smartness as much as possible. Write pure functions. They are easier to test and reason about. Any function that’s not pure should be a class. Any code construct that has a different function, should have a different name.
+    18.	Never start coding (making a solution) unless you fully understand the problem. It’s very normal to spend more time listening and reading than typing code. Understand the domain before starting to code. A problem is like a maze. You need to progressively go through the code-test-improve cycle and explore the problem space till you reach the end.
+    19.	Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t overengineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
+    20.	Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
+
+
+- [MySQL Replication][Databases] 
+    - Typical issues
+        - Temporary lag - caused by cold cache after restart
+        - Occasional lag - caused by write burst or long transactions 
+        - Perpetual lag - Slaves almost never catch up
+        - How to avoid lags 
+            - avoid long transactions
+            - manage batches
+            - increase replication throughput 
+            - Alternative is to Shard
+        - Some use cases for replication, 
+            - backups are faster and less disruptive on slaves than master
+            - reading from slaves helps in resilience (when master is down or loaded)
+    - How to monitor lag - Either Pg_heartbeat from percona toolkit or "second behind master" from "show slave status"
+
+
+- SQLite - Litestream - How it works 
+    -  In WAL-mode (the mode you very much want on a server, as it means writers do not block readers), SQLite appends to a WAL file and then periodically folds its contents back into the main database file as part of a checkpoint. Litestream interposes itself in this process: it grabs a lock so that no other process can checkpoint. It then watches the WAL file and streams the appended blocks up to S3, periodically checkpointing the database for you when it has the necessary segments uploaded.
+
+- [Database Indexes][Databases]
+    - Cardinality is the inverse of "the number of records returned per value." High cardinality returns one record per index value, and low cardinality returns many records per index value. Efficient indexes are high-cardinality indexes. Primary keys are the best example of a high-cardinality index. String-based tags are an example of a low-cardinality index because there are typically many objects assigned to a single tag.Build the indexes to match your query needs, and note that high-cardinality is faster.
+    - Table scan happens when no suitable index exists.When using a table scan, the database keeps all of the records in RAM while comparing values.    
+    - All databases employ some level of copy-on-write. Postgres writes a new version of a row each time it inserts or updates a value. Other databases have a block-size allocated for a value, then, if an updated value exceeds the size, it writes to a new location. Other databases reject updates, claim immutability, and push the tracking of updates off to the application developer.
+
+- Apache Parquet 
+    - language-independent storage format, designed for online analytics, so:
+        - Column oriented
+        - Typed
+        - Binary
+        - Compressed
+    - A Parquet file stores data column-oriented on the disk, in batches called "row groups".
+    - Parquet storage can provide substantial space savings.
+    - Parquet storage is a bit slower than native storage, but can offload management of static data from the back-up and reliability operations needed by the rest of the data.
+
+- gRPC and REST
+    - Allows browser apps to call gRPC services as RESTful APIs with JSON. The browser app doesn’t need to generate a gRPC client or know anything about gRPC.
+        - grpc-gateway is another technology for creating RESTful JSON APIs from gRPC services. It generates reverse proxy to convert RESTFUL calls to gRPC and vice versa
+        - gRPC JSON transcoding runs inside an ASP.NET Core app. It deserializes JSON into Protobuf messages, then invokes the gRPC service directly.JSON transcoding deserializes JSON to Protobuf messages and invokes the gRPC service directly. There are significant performance benefits in doing this in-process vs. making a new gRPC call to a different server.
+
+- Cryptography, Crypto economics etc.
+    - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
+    - transposition cypher with random key is difficult to decrypt.
+    - in 1976 Whitfield Diffie and Martin Hellman created a new kind of cryptography, one that allowed for secure communication of a secret key over an insecure network.Diffie and Hellman revolutionized cryptography by proving that a secret key could be distributed over an insecure network.
+    - RSA, showed that the key used to encrypt a message did not have to be the same as the key used to decrypt a message.
+        - Using RSA, two keys are created public and private. Public key is shared.  Public key is used to encrypt a message which can only be decrypted using private key. It works reverse too i.e. encryption using private key and decryption using public key. 
+    - Message services such as WhatsApp and Signal also use Diffie-Hellman algorithms so that people across the world can communicate securely. 
+    - Each smart card has a unique public key known to the credit card com- pany, say Visa, and a corresponding private key stored on the chip in the card. When the card is presented for payment,Visa sends it a random number. The chip in the card encrypts the random number using its private key and sends the encrypted message back to Visa.Visa then attempts to decrypt the message using the card’s public key. If the decrypted message reveals the random num- ber sent by Visa, then Visa knows exactly which card is being used.
+    - A digital signature is a message that can only be decrypted using Publius’s public key.
+    - A cryptographic hash is like a digital fingerprint, a much shorter message that in practice can be uniquely associated with any message.a cryptographic hash function takes any data as input and out- puts a digital fingerprint of that data, an essentially unique ID such that if any piece of the data is ever changed it won’t hash to the same ID. 
+    - SHA256 algorithm converts any input to a 256 digit long hash consisting of 0's and 1's.
+        - Hash functions like SHA256 are collision-resistant that is it is infeasible to find two messages with the same hash.
+    - Digital Signatures offer, 
+        - Authenticity means that a digital signature is strong evidence that the signer has the identity associated with the public key.
+        - The integrity of the message is provided by comparing the message hash within the signature with the hash of the message. 
+        -  since only the holder of the private key can sign the digital signature, the signer cannot repudiate having signed the document.
+
+    -  NFT - An NFT is just a cryptographic hash of an art- work (or other digital file) signed with a digital signature
+    - How Bitcoin network works - When Alice wants to send Bob a bitcoin she doesn’t contact her bank or Visa or Stripe. Instead she broadcasts a message to the bitcoin network that says “I authorize a transfer of bitcoin to Bob. Here’s my digital signature.” Bitcoin “miners” listen for transaction messages, verify that the transactions are valid and compile them into blocks. In about 10 min- utes (we explain why it takes 10 minutes further below) a block with Alice’s new transaction will be added to the blockchain. Anyone in the world can then verify that Alice transferred a bitcoin to Bob and if Bob wants to make a subsequent transaction with Tom anyone can verify that he has the funds to do so. Alice has no contract with the miners and they are not obligated to pro- duce blocks.
+    
+    - Why bitcoin mining is computationally expensive -  bitcoin miners must try trillions of hashes to find the rare hash to deploy block onto the blockchain. 
+    -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
+    - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges

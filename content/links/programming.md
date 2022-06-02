@@ -51,7 +51,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
 - [Why refactoring?](https://xp123.com/articles/refactoring-whole-team-guide/)
 
-## API Development, Security
+## API Development, Security, Cryptography
 
 - [Open Source Vulnerability Management](https://fossa.com/product/open-source-vulnerability-management?ref=unzip.dev)
 - [Equinor's API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
@@ -63,7 +63,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
 - [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
 - [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
-
+- [Schannel in Windows for Strong Ciphers/Cryptography](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233)
 
 ## Training
 

@@ -1,29 +1,3 @@
-- Work updates
-    DH, 
-    - Ongoing Application design Review and New architecture
-
-    BFL, 
-    - Dynamic Rules in Oneview.  
-
-    Issuance,
-        - Issue in CwM App for one of the report only on single server. Currently, deployed on separate server for that client. 
-        - Issue with Bank of India for which they had raised penalty and they wanted to understand data flow within systems. Shared updated issuance architecture diagram to be used to explain data flow. 
-
-    Interviews,
-        Shortlisting & interview for Mobile & C Architect role
-
-    Axis bank - migration of existing document mgmt system to MOS. Migration of 1Tb of documents. Approach for the same? and whether existing infrastructure can accommodate additional compute?           
-
-    Sahil, 
-    - Unified non-card transactions from different channels
-
-## 2022-jan-03 Mon
-
-- [VMs or Serverless][SystemArchitecture]
-    - VMs, Serverless and when they are useful,
-        - Virtual machines (e.g. EC2 or Compute Engine) are useful for workloads that change no faster than you’re able to add capacity, or for work loads that can tolerate delay in scaling (e.g. queue based event systems). They are also useful for short lived sessions that can tolerate scale down events
-        -  Containers (e.g. a Kubernetes cluster or Fargate) which run on top of fixed compute. Like virtual machines are useful for traffic volumes which slowly change over time. While you’re able to start up a new container quickly to handle a new session, you’re still limited by the underlying compute instance on which the containers are running. The underlying compute hardware has to scale to meet the demands of the running containers. Containers are great for long lived, stateful sessions, as they can be ported between physical hardware instances while still running.
-        - Serverless functions (e.g. Lambda or Cloud Run) are, in essence, containers running on top of physical hardware. They are ideally suited for handling unpredictable traffic volumes and for non-persistent and stateless connections.
 
 ## 2022-jan-05 Wed
 
@@ -44,39 +18,6 @@
     - That duration indicates huge observability (traces, logs etc.) data i.e. in tune of gigabytes
     - Rather than having storage for all of data this, the historical data is pushed to S3 periodically. 
 
-- [Neural Networks](https://sirupsen.com/napkin/neural-net?utm_source=computer-napkins&utm_medium=email)[SystemArchitecture], 
-    - Basically training the system by adjusting the weights so as to get optimal desired result. 
-    - Has 3 layers 
-        - Input layer - has representation of data to feed to network. 
-        - Hidden layer - Does a math on the input layer to convert it to our prediction. Training refers to changing math of this layer to generate predictions. Values in this layer are called weights 
-        -  Output layer - Contains Final prediction.
-    - Training indicates adjusting weights in hidden layer so as to achieve better prediction. Its like teaching hidden layer to apply certain function without actually applying it. 
-    - loss function indicates how the prediction fair against expected outcome. large loss means wrong model and vice-versa. 
-    - Minimizing the loss of a function is absolutely fundamental to machine learning.
-    - While training, gradient descent is a method that minimizes value of a function. It helps in avoiding ad-hoc randomization (to achieve better prediction) and reducing loss .
-    - epoch  - an iteration over the full training set is referred to as an epoch. 
-    - Autograd (pytorch) is an automatic differentiation engine. grad stands for gradient, which we can think of as the derivative/slope of a function with more than one parameter. It keeps track of all the math functions applied and applies derivative.
-    - To avoid overstepping in gradient descent, something called as "learning rate" is applied. 
-    - For a Non-linear use cases (e.g. identify cat vs. calculate average), one has to add non-linear component to neural net. This is called as activation function. 
-    - The core operations in neural net involve matrix multiplication. Frameworks like Pytorch perform this in underneath 'C' layer instead of Python. Using GPUs make them even faster.
-
-## 2022-jan-06 Thu
-
-- [How ASP.NET requests are processed](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45)[SystemArchitecture], 
-    - .NET framework maintains pool of threads and dispatched for a new request.
-    - If request is processed synchronously then respective thread is busy for that duration 
-    - Max number of threads is 5000 for .NET 4.5
-    - If long running processing of requests blocks many threads then its called as thread starvation 
-    - In case of "thread starvation", web server queues requests and when queue is full it responds with HTTP 203 (server busy)
-    - Each new thread has overhead of about 1MB of RAM
-    - In case when "async...await" is used,  ASP.NET will not be using any threads between the async method call and the await.
-    - An asynchronous request takes the same amount of time to process as a synchronous request. However, during an asynchronous call, a thread is not blocked from responding to other requests while it waits for the first request to complete. Therefore, asynchronous requests prevent request queuing and thread pool growth when there are many concurrent requests that invoke long-running operations.
-    - Guidance, 
-        - Use synchronous when,
-            - Operation is short-lived
-            - Simplicity is more important (No need for parallelism)
-            - Primarily CPU based instead of I/o (Network, Disk etc.)
-
 ## 2022-jan-07 Fri
 
 - Business philosophy
@@ -86,23 +27,6 @@
     - What it may do?
         - Digital identity - Web3 introduces wallets that use public key cryptography to let people identify via a private key owned by themselves instead of a OAuth2 login provided by a corporation (e.g. Google).It also introduces authentication via a smart contract that enables advances features like social recovery, which lets you recover your account if you lose your key via a smart contract that takes votes from guardians (friends or paid services).Social recovery wallets are based on smart contracts which fundamentally based on the blockchain, and solve a huge problem relating to digital identity ownership that hasn’t been solved previously with non-blockchain solutions.
 
-- How your organization works (https://copyconstruct.medium.com/know-how-your-org-works-or-how-to-become-a-more-effective-engineer-1a3287d1f58d)
-    - Organizations usually reward those who "get the job done"
-    - Necessary to understand skills that get rewarded 
-    - Soft skills are hard skills
-    - Understand implicit hierarchies 
-    - Know the culture - Top-down or bottom-up
-    - In all the mess that has evolved over long time, it is important to, 
-    - how to gather just the right amount of information to get on with your task
-    - how to reproduce bugs quickly without elaborate local configurations and setups
-    - how to read a lot of code at a fast clip and come away with a reasonably good mental model of what it’s trying to do
-    - how to come up with hypothesis and use a variety of general purpose techniques and tools to validate the hypothesis
-    - Look for small wins
-    - Understand Org constraints and manage your expectation 
-    - Force multiplier characteristics, 
-    - good at solving pressing problems
-    - relentlessly getting things done
-    - successfully creating change than just endlessly talking about the need to do so
 
 - Watercooler#Vodka
     - all (unflavoured) vodkas are pure ethanol plus distilled water. There is no difference between a cheap and expensive vodka
@@ -162,16 +86,6 @@
 - A lot of extraordinary things in life are the result of things that are first-order negative, second order positive
 - One big mistake people repeatedly make is focusing on proving themselves right, instead of focusing on achieving the best outcome. 
 
-- First principles 
-    - Process of Socratic questioning
-        - Clarifying your thinking and explaining the origins of your ideas. (Why do I think this? What exactly do I think?) 
-        - Challenging assumptions. (How do I know this is true? What if I thought the opposite?) 
-        - Looking for evidence. (How can I back this up? What are the sources?) 
-        - Considering alternative perspectives. (What might others think? How do I know I am correct?) 
-        - Examining consequences and implications. (What if I am wrong? What are the consequences if I am?) 
-        - Questioning the original questions. (Why did I think that? Was I correct? What conclusions can I draw from the reasoning process?) 
-    
-    - Reasoning from first principles allows us to step outside of history and conventional wisdom and see what is possible. When you really understand the principles at work, you can decide if the existing methods make sense. Often they don’t.  Many people mistakenly believe that creativity is something that only some of us are born with, and either we have it or we don’t. Fortunately, there seems to be ample evidence that this isn’t true. We’re all born rather creative, but during our formative years, it can be beaten out of us by busy parents and teachers. As adults, we rely on convention and what we’re told because that’s easier than breaking things down into first principles and thinking for yourself. Thinking through first principles is a way of taking off the blinders. Most things suddenly seem more possible. 
 
 - Blockchain
     - Dapps are a growing movement of applications that use Ethereum to disrupt business models or invent new ones. 
@@ -189,17 +103,6 @@
 
 - Markets
     - While rising yields are generally a bullish sign for the economy, they also make riskier assets—like expensive tech stocks—less attractive compared to other names that may get a boost from higher interest rates. 
-
-- [Database schema migrations - general flow of online schema migration][Databases], 
-    - Create a new, empty table, in the likeness of the original table. We title this the ghost table.
-    - ALTER the ghost table. Since the table is empty, there is no overhead to this operation.
-    - Validate the structural change is compatible with tooling requirements.
-    - Analyze the diff.
-    - Begin a long running process of copying existing rows from the original tables to the ghost table. Rows are copied in small batches.
-    - Capture or react to ongoing changes to the original table, and continuously apply them onto the ghost table.
-    - Monitor general database and replication metric, and throttle so as to prioritize production traffic as needed.
-    - When the existing data copy is complete, the migration is generally considered as ready to cut-over, give or take some small backlog or state of the replication topology.
-    - Final step is the cut-over: renaming away of the original table, and renaming the ghost table in its place. Up to some locking or small table outage time, the users and apps are largely ignorant that the table has been swapped under their feet.
 
 - Never believe in individual rather believe in institutions. Hero worship should be abandoned.
 
@@ -241,20 +144,8 @@
     - Decision making. A Zwicky box can help you with strategizing, financial modelling, and daily decision making.
     - Brainstorming in a team. It can be helpful to brainstorm ideas with your team with a Zwicky box where everyone can contribute to creating and filling the Zwicky box.
 
-- [Difference between ETF and MF][Stocks][PersonalFinance]
-    - Because ETFs are cheaper, they can get big too fast and they almost never limit their growth in terms of AUM. Unlike mutual fund where AMC can stop inflows, ETF inflows can not be stopped. At the most, creation of new units will be halted but it means that existing units will be available at premium. This is not a problem for index tracking ETFs but it is for other (thematic or otherwise).
-    - You can only buy future performance.
 
 - The difference between genius and stupidity is that genius has its limits.
-
-- [Latest from Howard marks (the decision to trim positions or to sell out entirely comes down to judgment . . . like everything else that matters in investing)][PersonalFinance] , 
-    - we should base our investment decisions on our estimates of each asset’s potential,
-    - we shouldn’t sell just because the price has risen and the position has swelled,
-    - there can be legitimate reasons to limit the size of the positions we hold,
-    - but there’s no way to scientifically calculate what those limits should be. 
-    - simply being invested is by far “the most important thing.”.
-    - someone entering adulthood today is practically guaranteed to be well fixed by the time they retire if they merely start investing promptly and avoid tampering with the process by trading
-
 - Economy#The way to get out of the middle-income trap is to compete on brand and technology rather than price, and that generally means making a job that doesn’t exist yet. There wasn’t a market for Walkman before Sony made them; they had to build the product and then sell it.
 
 ## 2022-jan-19 Wed
@@ -270,33 +161,8 @@
 - Distributed systems 
     - Backpressure is a strategy that allows us to cope with producers that publish messages at a rate that is faster than the rate at which consumers can process them by slowing down the producers.
 
-- PostgreSQL Replication 
-    - PostgreSQL supports block-based (physical) replication as well as the row-based (logical) replication. Physical replication is traditionally used to create read-only replicas of a primary instance, and utilized in both self-managed and managed deployments of PostgreSQL. Uses for physical read replicas can include high availability, disaster recovery, and scaling out the reader nodes. 
-
-- [Data storage][Databases][SystemArchitecture]
-    - Row oriented - Because data on a persistent medium such as a disk is typically accessed block-wise (in other words, a minimal unit of disk access is a block), a single block will contain data for all columns.This is great for cases when we’d like to access an entire user record, but makes queries accessing individual fields of multiple user records (for example, queries fetching only the phone numbers) more expensive, since data for the other fields will be paged in as well
-    - Column-oriented - Store values by vertical partitioning ie. by column against storing values by horizontal partitioning (as in RDBMS).
-        - In column-oriented layout, values of same column are stored contiguously on disk.For example, if we store historical stock market prices, price quotes are stored together. Storing values for different columns in separate files or file segments allows efficient queries by column, since they can be read in one pass rather than consuming entire rows and discarding data for columns that weren’t queried.
-        - Column-oriented stores are a good fit for analytical workloads that compute aggregates, such as finding trends, computing average values, etc. Processing complex aggregates can be used in cases when logical records have multiple fields, but some of them (in this case, price quotes) have different importance and are often consumed together.
-        - Apache Parquet, Apache ORC are column-oriented file formats.
-        - Reading multiple values for the same column in one run significantly improves cache utilization and computational efficiency.
-        - If the read data is consumed in records (i.e., most or all of the columns are requested) and the workload consists mostly of point queries and range scans, the row-oriented approach is likely to yield better results. If scans span many rows, or compute aggregate over a subset of columns, it is worth considering a column-oriented approach.
-        - Wide column stores 
-            - data is represented as a multidimensional map, columns are grouped into column families (usually storing data of the same type), and inside each column family, data is stored row-wise. This layout is best for storing data retrieved by a key or a sequence of keys.
-            -Each row is indexed by its row key. Related columns are grouped together in column families.
-            - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
-            - Column families store multiple versions of data by timestamp.
-
-- Eurodollar - Offshore (outside US) currency systems, denominated in US Dollars. Outside the scope of US Regulation. Has nothing to do with Euro. Timed deposits, dollar denominated deposits kept in UK Banks outside of US Jurisdiction. Instead of immediately remitting the foreign currency to the central bank or depositing it in their accounts in the U.S., banks used their dollar deposits for loans to third parties either in the U.K. or abroad. This system was supposedly very big till 2007. Global financial crisis was Eurodollar system breaking down. All the global banks are heavily involved in it. It essentially means Global money. It is US dollar denominated but a ledger, ghost money. Without the Eurodollar, Globalization might not have taken place. The US dollar denominated resources were created without actual currency involved. Fed reserve, treasury dep. or authorities in countries have no influence on eurodollar capacity. They don't have capacity, wisdom. 
 
 ## 2022-jan-20 Thu
-
-- David sinclair takeaways for healthy life 
-    - Eat less often (Skip a meal), don't snack
-    - avoid sugary drinks and food
-    - reduce meat intake and opt for more plant based diet
-    - choose the veggies that are stressed out 
-    - Put the sugar at the end of the meal
 
 - Education has general benefits in improving quality of thinking and receptiveness to information.
 - When you have to make decision, break it into sub-decisions/sub-aspects  that you are going to look at and score them individually. Do not form intermediate impression.do not form intuition until more information is available which is going to improve quality of sub-decisions. 
@@ -306,21 +172,6 @@
 
 ## 2022-jan-24 Mon
 
-- Economy#Inflation, Interest Rates etc.
-    - The (US) Fed increases rates, this increases borrowing costs for banks and pretty much everyone else. Interest rates increase drive mortgage and credit card rates up, disposable income goes down. the consumer, are spending less money. When you spend less, firms sell less stuff. This in turn affects company earnings, and by extension their stock prices.
-    - Stocks always compete with the safest options in the market – bank fixed deposits or government securities.This makes for an inverse relationship between interest rates and equity valuations. 
-    - the excess money and easy credit light the fuse that sparks inflation. This is because the supply side does not have the confidence to grow even as easy money with the spenders drives up demand. 
-    - Worry is that high interest rates would slow down economic activity, slow down demand and eat into profits
-    - The US dollar is the world's reserve currency or the medium of exchange in which international trade is largely carried out and the currency in which other countries hold a good portion of their foreign exchange reserves. So, whatever the Federal Reserve does to control inflation through interest rates, impacts countries across the world, including India.
-    - Treasury bonds are financial securities issued by the US government to borrow money to finance its fiscal deficit or the difference between what it earns and what it spends.
-    - The American government was spending much more than it was earning. To finance the spending, it sold treasury bonds. Large financial investors such as banks, insurance companies, pension funds and mutual funds, bought these bonds. At the same time, the Fed was buying treasury bonds from the same large financial investors and thus financing the government indirectly.
-
-
-- [Postgres indexes][Databases], 
-    - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query. 
-    - BRIN indexes are block range indexes, specially targeted at very large datasets where the data you’re searching is in blocks, like timestamps and date ranges. They are known to be very performant and space efficient.
-    - GIST indexes build a search tree inside your database and are most often used for spatial databases and full-text search use cases. 
-    - GIN indexes are useful when you have multiple values in a single column which is very common when you’re storing array or json data. 
 
 - Psychology
     - Wisdom is coexistence of contradictory truths, and money is the clearest example of this. We must internalize its importance while also recognizing its pointlessness.
@@ -345,15 +196,6 @@
 - Observability#Sampling in Tracing
     - In distributed tracing, sampling is frequently used to reduce the number of traces that are collected and stored in the backend. This is often desirable because it is easy to produce more data than can be efficiently stored and queried. Sampling allows us to store only a subset of the total traces produced.
 
-- Tech#PostgreSQL
-
-    - Triggers for scale-out 
-
-        - is limited to single server 
-        - working set does not fit in memory
-        - reaching limit of network attached storage, CPU
-        - Analytical queries take too long
-        - Autovacuum can not keep up with transaction load
 
 - Tech#Raft consensus protocol
 
@@ -393,8 +235,6 @@
 
     - Recency bias - Put simply, recency bias is the practice of giving disproportionate weight to the events of the recent past when formulating expectations and plans.
 
-    - India as Market - India isn’t really one big market. There are multiple markets and markets within markets. India is not a single language market when it comes to the entertainment business. Also, not many Indians speak English.Just because India has 1.4 billion people doesn’t mean that the market for any product is as big or even a small portion of it.India and Indians seek value for money every time they spend money on something, and Netflix simply doesn’t provide that for most of us. Any form of mass communication needs to be simple enough for the average individual to understand, irrespective of whether it is writing that wants to entertain or propaganda that intends to influence.
-
 ## 2022-feb-02 Wed
 
 - Tech
@@ -414,26 +254,8 @@
     - Second order thinking and Chesterton's fence
         - Chesterton describes the classic case of the reformer who notices something, such as a fence, and fails to see the reason for its existence. However, before they decide to remove it, they must figure out why it exists in the first place. It means "Do not remove a fence until you know why it was put up in the first place." or " If a fence exists, there is likely a reason for it. "
 
-        -The test of a first-rate intelligence is the ability to hold two opposing ideas in mind at the same time and still retain the ability to function. One should, for example, be able to see that things are hopeless yet be determined to make them otherwise.
+        - The test of a first-rate intelligence is the ability to hold two opposing ideas in mind at the same time and still retain the ability to function. One should, for example, be able to see that things are hopeless yet be determined to make them otherwise.
 
-    - Markets & Investing
-        - A wash trade is a form of market manipulation in which an investor simultaneously sells and buys the same financial instruments to create misleading, artificial activity in the marketplace. First, an investor will place a sell order, then place a buy order to buy from themself, or vice
-        versa.Wash trading works best when the market is thin. If your above-fair-price wash trades run into real orders from other traders, you’ll lose money! You want to maximize the likelihood that you actually sell to yourself.
-
-        - One reason stocks tend to have high returns over the long run is to compensate investors for the ever-present risk of losing at least half their money in the short run.
-
-        - virtue of great investors: skepticism. If I've learned anything in decades of reporting on investing, it's that the main product of the financial industry isn't portfolios; it's propaganda. And propaganda with numbers, cloaked in jargon, can hit investors like general anesthesia: You just drift off to sleep while financial professionals surgically remove your money.
-            - When someone says, "Studies have shown that...," ask the names of the studies, where they were published and whether this person has read them in full.
-            - When someone describes a "strategy," ask how that differs from a tactic.
-            - When asset managers talk about "sell discipline," ask if they measure how the stocks they sell do after being sold. If the firm doesn't know that, how does it know its sell discipline works?
-            - Are these past results based on a backtest? 
-            - What do the results look like after trading costs, fees and taxes?
-            - Do these numbers account for survivorship bias?
-            - Who's on the other side of this trade, and why would they let you make so much money?
-            - Is there data on the average performance of people who have tried this in the past? How did they do, and what makes me or you so special that we should believe we can do better?
-            - Always read the footnotes. Read financial disclosures from back to front, as if they were written in Hebrew or Arabic. The stuff you really need to know is almost always near the back.
-
-    - A great company is a great investment only when you pay the right price for it.
 
 ## 2022-feb-03 Thu
 
@@ -452,19 +274,6 @@
     - due to Covid, production has shifted from unorganized to organized.
 
 ## 2022-feb-07 Mon
-
-- Default size of the stack,
-    - 1 MB
-
-- [Open source data stack][SystemArchitecture] 
-    - Airflow - Workflow
-    - Airbyte - ELT
-    - dbt - ELT
-    - Metabase - Dashboards and reporting 
-    - superset - Dashboards and reporting 
-    - PostgreSQL - RDBMS
-    - Great_Expectations - Data pipeline testing
-    - datahub - Data catalog/lineage
 
 - Bikeshedding is a metaphor to illustrate the strange tendency we have to spend excessive time on trivial matters, often glossing over important ones.
     - The Law of Triviality states that the amount of time spent discussing an issue in an organization is inversely correlated to its actual importance in the scheme of things.Major, complex issues get the least discussion while simple, minor ones get the most discussion.
@@ -485,31 +294,11 @@
 
 - Plague pandemic caused loss of faith in Church in Europe.
 
-- Quantum computing and 3d printing. 
-    - Quantum computing  has the potential to break the encryption used to protect sensitive data in the digital world of today and tomorrow.Powerful countries, companies, and universities are pouring money into the task of building a quantum computer powerful enough to perform exponentially faster than the computers of today.Google and IBM use the same basic building block in their machines to create quantum behavior, known as transmon qubits which were invented by NSA.
-    - Monitoring 5G successfully requires a deep understanding of what makes it fundamentally different from its predecessors: higher speed, lower range, more distribution nodes, different data protocols.
-    - NSA says "In the future, superpowers will be made or broken based on the strength of their cryptanalytic programs"
-
-
 - Constantly claiming to be a victim is not a sign of virtue. It's a strategy for narcissists and psychopaths to get ahead. Data: people who regularly signal victimhood are more willing to lie, cheat, and steal. Beware those who air personal grievances like every day is Festivus.
 
 - Crypto, 
     - Smart intermediary are the only ones who are earning money. 
     - Markets are lightly regulated 
-
-- [Financial Industry][PersonalFinance]
-    - Reversion to mean -  yesterday’s best performing funds are tomorrow's worst performing funds.
-    - selecting your fund for tomorrow by picking a winner from yesterday is an exercise fraught with peril.
-    - Best-performing funds become worst and vice versa. But index funds continue to earn market returns. They are neither the best-performing nor the worst performing, they are squarely in the middle.
-    - Nifty 50 Index fund charges 0.07%-0.20%, and active large-cap funds charge about 1-1.5%. So they have to generate 1-1.5% outperformance, just to cover the costs and then beat the index.
-
-- [Criteria for Assets for Asset allocation plan][PersonalFinance], 
-    - Fundamentally different - asset classes must be fundamentally different and have unique risk. Stocks and bonds are different; one is ownership and the other is loan. U.S. stocks are different from international stocks in base currency and government policy. Real estate and commodities differ from common stocks in collateral structure. In contrast, U.S. mid-cap stocks are not fundamentally different than large cap and there is very little unique risk.  
-    - Real return – an asset class must generate a real return in the long-term (after-inflation). U.S. stocks have outperformed inflation by about six percent historically and real estate has earned about the same. Government bonds have outperformed by about two percent.  In contrast, commodities have no expected return over the inflation rate and do not pass this gate.
-
-    - High liquidity – an asset class must have daily liquidity. Stocks that trade on an organized exchange, and bonds that trade over-the-counter on a regular basis, pass this gate. Real estate ownership − outright or in a partnership − would not pass this gate, although real estate investment trusts (REITs) are exchange traded and do pass. Coins, artwork and other collectables tend to be illiquid and do not qualify.
-
-    - Diversified, low-cost funds – the asset class must be packaged in a liquid, low-cost and broadly diversified product such as a mutual fund or exchange-traded fund (ETF). Since all the analysis on has been based on an index, I prefer to replicate that index in portfolios with index funds and ETFs. An actively-managed product can be used (absent of a good index product), as long as it is broadly diversified and low cost. 
 
 - Philosophy
     - Consistency is the playground of dull minds.
@@ -547,7 +336,7 @@
     - Buddhism - suffering arises from craving; the only way to be fully liberated from suffering is to be fully liberated from craving; and the only way to be liberated from craving is to train the mind to experience reality as it is.
 
     - Middle east
-        - Iran - Was pamperred child of US before religious revolution.
+        - Iran - Was pampered child of US before religious revolution.
         - One of the main reasons for revolution was 1973 huge drop in oil prices (due to israel war) 
         - reza pahlavi was already fled Iran.
         - Khomaini was installed by religious body
@@ -580,25 +369,6 @@
 
 
 ## 2022-feb-11 Fri
-
-- [Postgres High availability with Patroni][Databases][SystemArchitecture], 
-    - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts. 
-    - Basic components, 
-        - PostgreSQL cluster: the database cluster, usually consisting of a primary and two or more replicas
-        - Patroni: used as the failover management utility
-        - etcd: used as a distributed configuration store (DCS), containing cluster information such as configuration, health, and current status.
-    - How HA Works, 
-        - Each PostgreSQL instance within the cluster has one application database. These instances are kept in sync through streaming replication.
-        -  Each database host has its own Patroni instance which monitors the health of its PostgreSQL database and stores this information in etcd. 
-        - The Patroni instances use this data to:
-            - keep track of which database instance is primary
-            - maintain quorum among available replicas and keep track of which replica is the most "current"
-            - determine what to do in order to keep the cluster healthy as a whole
-            - Patroni manages the instances by periodically sending out a heartbeat request to etcd which communicates the health and status of the PostgreSQL instance. etcd records this information and sends a response back to Patroni. 
-        - Streaming replication
-            - Keeps replica more up to date compared to file based log shipping. 
-            - The standby connects to the primary, which streams WAL records to the standby as they're generated, without waiting for the WAL file to be filled.
-            - is asynchronous by default.
 
 - History
     - history’s choices are not made for the benefit of humans. This is difficult to evaluate due to lack of scale.
@@ -634,12 +404,6 @@
 
 ## 2022-feb-14 Mon
 
-- [Jack Bogle's investment advice][PersonalFinance] 
-    - Regular rebalancing is not necessary 
-    - 60-40 is probably good allocation 
-    - key things to think about how much risk one can take 
-    -pay attention to GDP
-
 - Adam Smith in "The wealth of nations", 
     - an increase in the profits of private entrepreneurs is the basis for the increase in collective wealth and prosperity.
     - Egoism is altruism.
@@ -661,21 +425,6 @@
     -Religion is a culture of faith; science is a culture of doubt 
     -Institutions are hard to institute & maintain, because human beings are self-righteous, hubristic, and power-hungry (a la Trudeau "I will get my way no matter what"). We are always tempted to discard institutions when they become a short term nuisance/obstruction to expediency
 
-- [Portfolio Construction , John Bogle ***][PersonalFinance]
-    - Benjamin Graham believed that investors should never be entirely out of the stock market (or entirely in it, either).
-    - Graham advised that when enthusiasm is high, you should trim back your stocks, but never to zero -- and when pessimism prevails, you should raise your allocation to stocks, but never to 100%.
-    - Graham suggested keeping a minimum of 25% and a maximum of 75% in stocks, with the rest in bonds.
-
-    - On virtues of Investors, 
-        - Investors can cultivate their independence by working at it, by always asking whether what other people are saying or doing makes sense, by never pursuing a course of action just because other people are.
-    - Norway Model vs Yale Model 
-        - Norway has Social security program worth 1.3T for 5 million population 
-        - It began after it discovered an abundance of oil back in 1969, and the country designed an investment strategy to grow their newfound wealth.
-        - More than half of assets are in growth stocks alone. The Norway Pension Fund Global is the single  largest owner of global stocks in the entire world.
-        - The Norway Model is characterized by minimal use of expensive products, like private equity and hedge funds, and focuses instead on keeping fees low, and diversifying across publicly traded stocks and bonds. It uses passive management – meaning the investment decision-makers don't purport to have the expertise to pick which stocks will outperform which other stocks. They just buy a little bit of every stock.
-        -  Norway's pension fund currently has money in over 9,100 stocks, across 69 countries!
-        - The other model is  Yale Model is characterized by usage of expensive alternative assets like hedge funds and private equity.
-        -It is access to certain people, deals, and funds that make investing in expensive, private products potentially worth it. An institution like Yale has this access, and these connections, in spades. It is the institutions who don't have elite access, most of whom have, like lemmings, followed Yale into this investment approach, whose communities and alumni bases are being poorly served. Not everyone is Yale.
 
 - International payments,
     -  cross-border transfers: “Correspondent banking is an arrangement, where one bank (the correspondent) holds deposits
@@ -694,12 +443,6 @@
 - Obfuscation for Android 
     - R8 - standard optimizer and obfuscator. All classes, functions and variables are renamed to short, unreadable names. Proguard is alternative free Code obfuscation tool. 
 
-- [Database Query performance analysis (MySQL)][Databases] 
-    -  lock time greater than 50% of query time is a problem because MySQL should spend the vast majority of its time doing work, not waiting.
-    - Locks are primarily used for writes (INSERT, UPDATE, DELETE, REPLACE) because rows must be locked before they can be written. Response time for writes depends, in part, on lock time
-    - For reads (SELECT), there are nonlocking and locking reads. The distinction is easy because there are only two locking reads: SELECT…FOR UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is nonlocking, which is the normal case.
-    - Locking reads should be avoided, especially SELECT…FOR UPDATE, because they don’t scale, they tend to cause problems, and there is usually a nonlocking solution to achieve the same result
-    - Rows examined is the number of rows that MySQL accessed to find matching rows. It indicates the selectivity of the query and the indexes. The more selective both are, the less time MySQL wastes examining nonmatching rows.
 
 ## 2022-feb-21 Mon
 
@@ -707,18 +450,11 @@
 
 - Cosmic rays altering the state of bit in a computer. Higher you go from earth's surface cosmic radiation increases. Blue screen appearing randomly could be due to cosmic particles 
 
-- [How postgre stores rows][Databases]
-    - PostgreSQL stores the actual data into segment files (more generally called heap files). Typically its fixed to 1GB size but you can configure that at compile time using --with-segsize. When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments. This arrangement avoids problems on platforms that have file size limitations but 1GB is very conservative choice for any modern platform. These segment files contain data in fixed size pages which is usually 8Kb, although a different page size can be selected when compiling the server with --with-blocksize option but this size usually falls in ideal size when considering performance and reliability tradeoffs. If the page size is too small, rows won’t fit inside the page and if it’s too large there is risk of write failure because hardware generally can only guarantee atomicity for a fixed size blocks which can vary disk to disk (usually ranges from 512 bytes to 4096 bytes).
-    - Internally PostgreSQL maintains a unique row id for our data which is usually opaque to users. We can query it explicitly to see its value.in ctid First digit stand for the page number and the second digit stands for the tuple number. PostgreSQL moves around these tuples when VACUUM is run to defragment the page. 
-
 - Stock Markets
     - Terminologies used by Short sellers
     -  “spoofing,” -  involves flooding the market with fake orders in an effort to push a stock price up or down,
     - "Scalping" - short-sellers cash out their positions without disclosing it
 
-- [Code Obfuscation types][Security]
-    - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
-    - Flow obfuscation -  modifies code order or the controlflow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
 
 - Deng Xiaoping is going to go down as one of the greatest leaders that any nation ever had. Because he had to give up his own ideology to do something else that worked better.
 
@@ -731,64 +467,6 @@
     - Cancellationtoken can be passed for cancelling the stream
 
 ## 2022-feb-22 Tue
-
-- [Easier ways of doing things][SystemArchitecture]
-    - SSL certificates, with Let’s Encrypt
-    - Concurrency, with async/await (in several languages)
-    - Centering in CSS, with flexbox/grid
-    - Building fast programs, with Go
-    - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
-    - Building cross-platform GUIs, with Electron
-    - VPNs, with Wireguard
-    - Running your own code inside the Linux kernel, with eBPF
-    - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
-    - Configuring cloud infrastructure, with Terraform
-    - Setting up a dev environment, with Docker
-    - Sharing memory safely with threads, with Rust
-    - Easier using hosted services
-    - CI/CD, with GitHub Actions/CircleCI/GitLab etc
-    - Making useful websites by only writing frontend code, with a variety of “serverless” backend services
-    - Training neural networks, with Colab
-    - Deploying a website to a server, with Netlify/Heroku etc
-    - Running a database, with hosted services like RDS
-    - Realtime web applications, with Firebase
-    - Image recognition, with hosted ML services like Teachable Machine
-    - Cryptography, with opinionated crypto primitives like libsodium
-    - Live updates to web pages pushed by the web server, with LiveView/Hotwire
-    - Embedded programming, with MicroPython
-    - Building videogames, with Roblox / Unity
-    - Writing code that runs on GPU in the browser (maybe with Unity?)
-    - Building IDE tooling with LSP (the language server protocol)
-    - Interactive theorem provers (not sure with what)
-    - NLP, with HuggingFace
-    - Parsing, with PEG or parser combinator libraries
-    - ESP microcontrollers
-    - Batch data processing, with Spark
-
-- [MySQL][Databases] 
-    - frequently dredging up old data is problematic for performance.
-    - determine the ideal data model for the access, then use a data store built for that data model
-    - Enqueue writes - Use a queue to stabilize write throughput. It allow the application to respond gracefully and predictably to flood of requests that overwhelms the application, or the database, or both.For write-heavy applications, enqueueing writes is the best practice and practically a requirement. Invest the time to learn and implement a queue.
-    - Data Partitioning - separating hot and cold data: frequently and infrequently accessed data, respectively. It partitions by Access and it archives by moving the infrequently accessed (cold) data out of the access path of the frequently accessed (hot) data
-    - Reference data size limit of a single MySQL instance to 2 or 4 TB (on SSD):
-        - 2 TB - For average queries and access patterns, commodity hardware is sufficient for acceptable performance, and operations complete in reasonable time.
-        - 4 TB - For exceptionally optimized queries and access patterns, mid- to highend hardware is sufficient for acceptable performance, but operations might take slightly longer than acceptable.
-    - Sharding 
-        - High cardinality - An ideal shard key has high cardinality (see “Extreme Selectivity”) so that data is evenly distributed across shards. A great example is a website that lets you watch videos: it could assign each video a unique identifier like dQw4w9WgXcQ. The column that stores that identifier is an ideal shard key because every value is unique, therefore cardinality is maximal.
-        - Reference application entities - An ideal shard key references application entities so that access patterns do not cross shards. A great example is an application that stores payments: although each payment is unique (maximal cardinality), the customer is the application entity. Therefore, the primary access pattern for the application is by customer, not by payment. Sharding by customer is ideal because all payments for a single customer should be located on the same shard.
-        - When opting for sharding, plan to accomodate at least four years of data growth.
-        - ProxySQL and Vitess are middlewares (between app and MySQL) that support sharding by several mechanisms.
-    - A common misconception is that the application needs thousands of connections to MySQL for performance or to support thousands of users. This is patently not true. The limiting factor is threads, not connections—more on Threads_running in a moment. A single MySQL instance can easily handle thousands of connections. I’ve seen 4,000 connections in production and more in benchmarks. But for most applications, several hundred connections (total) is more than sufficient. If your application demonstrably requires several thousand connections, then you need to shard.
-    - MySQL runs one thread per client connection 
-    - One CPU Core runs one thread.When the number of threads running is greater than the number of CPU cores, it means that some threads are stalled - waiting for CPU Time.
-    - Four metrics count the occurrence of SELECT statements that are usually bad for performance:
-        - Select_scan
-        - Select_full_join
-        - Select_full_range_join
-    - Database Capacity planning
-        - the four-year fit is an estimate of data size or access in four years applied to the capacity of your hardware today
-        - It’s better to be more precise and collect table sizes every 15 minutes.Near-term data growt trending is used to estimate when the disk will run out of space. Long term trend is used to estimate when sharding is necessary.
-    - A deadlock occurs when two (or more) transactions hold row locks that the other transaction needs
 
 - Stock Market#Indices
     - Index providers like MSCI make money in three ways. They charge index funds and managers of exchange-traded funds a few basis points on the assets that track their benchmarks; they charge exchanges like CME a commission on each traded option or futures contract linked to their indices; and they charge subscription fees to a range of third-party users.
@@ -858,13 +536,6 @@
 - How Petrodollars work
     - The crucial point that this highlights is that Russia’s reserve accumulation, like reserve accumulation by other oil and gas producers such as Norway or Saudi Arabia, is a source of funding in Western markets. The reserves do not simply sit idly in central banks accounts, they are lent out. With sanctions, the funding provided by Russia’s petro- and gas-dollars is in jeopardy. And that impacts not only the Russians.The Russian funds in European central banks are not simply pools of money sitting idly. They are part of complex chains of transactions that may now be put in jeopardy by the sanctions.This is true more generally for global financial markets at a time of huge uncertainty.
 
-## 2022-Mar-03 Thu
-
-- Quantum Computing's impact
-    -  the most important security and privacy properties to protect in the face of a quantum computer are confidentiality and authentication.
-        - quantum computers will not only be able to decrypt on-going traffic, but also any traffic that was recorded and stored prior to their arrival.
-        - The threat model for authentication is a little more complex: a quantum computer could be used to impersonate a party in a connection or conversation. 
-
 ## 2022-Mar-04 Fri
 
 - China and Russia Trade
@@ -874,26 +545,20 @@
     - Russia is one of the world's largest exporters of oil with the United States importing more than 600,000 barrels per day. Russian oil represents more than a third of Europe's total imports.
 
 - International Payments
-    - Banks largely cannot hold money extraterritorially directly, for most useful values of “directly.” Instead, they rely on a correspondent banking relationship.
+    - Banks largely cannot hold money extra territorially directly, for most useful values of “directly.” Instead, they rely on a correspondent banking relationship.
     - Banks can have accounts at other banks, and extremely frequently do. A major reason to do this internationally is to facilitate payments in other currencies and other jurisdictions.
     - SWIFT: The world’s most expensive encrypted messaging service
-    - SWIFT is almost synonymous with international wires because it is the primary way that banks and their correspondents choose to interoperate with respect to wires
+    - SWIFT is almost synonymous with international wires because it is the primary way that banks and their correspondents choose to inter operate with respect to wires
     -  Specifically, they send a MT 103 message, which is a bit longer than a tweet, and then each bank operates their internal books and other banking systems to make the request encoded in the message a reality (or fail gracefully) 
  
 
 - Gold only has value, if “gold whales” (=central banks) aren’t selling it.
 
-- Inflation is not result of Central bank printing money but rather due to Government's borrowings and how much credit is created in economy.  India has around 200 lakh crore money in circulation. out of this, 10% of money is in circulation.
+- Inflation is not result of Central bank printing money but rather due to Government's borrowings and  how much credit is created in economy.  India has around 200 lakh crore money in circulation. out of this, 10% of money is in circulation.
 
 ## 2022-Mar-07 Mon
 
-- Analysing Balance Sheet 
-    - Check "Profit before Tax" against "Net Fixed assets". See if company is generating healthy profit compared to other safe investment options like Govt. Bonds etc.
-
-- Psychology of Money 
-    - what people really want in life is independence and autonomy. Money is a conduit to gain it.
-
-- Internation investment through NSE IFSC 
+- International investment through NSE IFSC 
     - When a company listed on exchanges in one country wants to attract investors and trading in another country, it is done through Depository Receipts (DRs). If the company offers the DR, it is called sponsored DR and if the company isn’t involved, it is called unsponsored DR.
     - Charges
     - the exchange itself will charge 12 cents for every $100 or 0.12% compared to 0.00345% charged within India for equity trades. ( the transaction charges would go down with an increase in trading volumes.)
@@ -920,37 +585,7 @@
 - Financial Instruments
     - credit default swap is an insurance policy on the bonds of a country or company. If you buy a $100 bond and a $100 CDS, you should always get back $100.
 
-- Investing 
-    - Warning signs
-        - No response to queries even after followups
-    - Criteria
-        - Sales & Profit growth 
-        - No Cyclic profits but should be consistent
-        - Enough Cash flows (Profits converted into cash) 
-        - Low in debt
-        - Management Quality
 
-- Futures
-    - Futures are mark-to-market financial products, and when the futures price goes up, the short side of the futures contract has to put up money today.
-
-- [Database Record Access][Databases]
-    - Why indexes, 
-        - When data is stored on disk-based storage devices, it is stored as blocks of data. These blocks are accessed in their entirety, making them the atomic disk access operation. Disk blocks are structured in much the same way as linked lists; both contain a section for data, a pointer to the location of the next node (or block), and both need not be stored contiguously. Due to the fact that a number of records can only be sorted on one field, we can state that searching on a field that isn’t sorted requires a Linear Search which requires (N+1)/2 block accesses (on average), where N is the number of blocks that the table spans. If that field is a non-key field (i.e. doesn’t contain unique entries) then the entire tablespace must be searched at N block accesses. Whereas with a sorted field, a Binary Search may be used, which has log2 N block accesses. Also since the data is sorted given a non-key field, the rest of the table doesn’t need to be searched for duplicate values, once a higher value is found. Thus the performance increase is substantial.
-
-    - What is indexing?
-        - Indexing is a way of sorting a number of records on multiple fields. Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it. The downside to indexing is that these indices require additional space on the disk since the indices are stored together in a table using the MyISAM engine, this file can quickly reach the size limits of the underlying file system if many fields within the same table are indexed. 
-    - When should it be used?
-        - Given that creating an index requires additional disk space (277,778 blocks extra from the above example, a ~28% increase), and that too many indices can cause issues arising from the file systems size limits, careful thought must be used to select the correct fields to index.
-
-## 2022-Mar-10 Thu
-
-- PostgreSQL Learnings, 
-    - LEFT JOIN in place of an INNER JOIN helps the planner make more accurate row count predictions. Adding redundant ON clauses improves Hash Joins.
-    -  ANY(VALUES ...) instead of IN can enforce a Hash Aggregate with many elements.
-    - It’s a bad idea to make the table primary key a varchar.
-    - CLUSTER rocks when the query returns many related rows.
-    - pg_hint_plan offers powerful hints, including the estimated row count correction Rows, JOIN sequence enforcer Leading, and the index override IndexScan. Though the latter may strike back.
-    - https://explain.tensor.ru to visualize EXPLAIN-s.
 
 ## 2022-Mar-11 Fri
 
@@ -978,14 +613,6 @@
 
 -- Genghis khan - a persistent cycle of pragmatic learning, experimental adaptation, and constant revision driven by his uniquely disciplined and focused will. He took chinese noodles to west. 
 
-- Prof. Richard Thaler's advice on investing 
-    - Put away money to take care of emergency (typically government bonds)
-    - Use low-cost index funds as core holdings. Plan on investing for decades.
-    - Decide on Asset allocation
-
-- Investing#Index fund
-    - TRI - Total returns index - Nifty index values are ignoring dividends but TRI shows figure dividends/bonuses re-invested back. 
-    - It is necessary to compare index fund returns with TRI and not index itself.
 
 - Russian History   
     - Post Soviet breakup, two harward economists (Shliefer and sacks) were enlisted as advisors by Russian Govt. (Chuikov) as advisors for privatization
@@ -1039,40 +666,10 @@
 
 ## 2022-Mar-17 Thu
 
-- [Database Workloads][Databases] 
-    - OLTP
-        - Characterstics, 
-            - Inserts, updates, and deletes only affect a single row. An example: Adding an item to a user’s shopping cart.
-            - Read operations only read a handful of items from the database. An example: listing the items in a shopping cart for a user.
-            - Aggregations are used rarely, and when they are used they are only used on small sets of data. Example: getting the total price of all items in a user their shopping cart.
-        - Relevant benchmarks
-            - Throughput in TPS (transactions per second)
-            - Query latency, usually at different percentiles (p95, etc.)
-    - OLAP 
-        - Characteristics, 
-            - Periodic batch inserts of data. 
-            - Read operations often read large parts of the database.
-            - Aggregations are used in almost every query.
-            - Queries are large and complex. 
-            - Not a lot of concurrent users 
-        - Relevant benchmarks
-            - How long it took to run all of the queries that are part of the benchmark
-            - How long it took to run each of the queries, measured separately per query 
-    - HTAP (Hybrid transactional/analytical processing)
-        - Combines characteristics from OLTP and OLAP
-    - Important questions while benchmarking 
-        - Is it running on production infrastructure? A lot more performance can usually be achieved when critical production features have been disabled. Things like backups, High Availability (HA) or security features (like TLS) can all impact performance.
-        - How big is the dataset that was used? Does it fit in RAM or not? Reading from disk is much slower than reading from RAM. So, it matters a lot for the results of a benchmark if all the data fits in RAM.
-        - Is the hardware excessively expensive? Obviously a database that costs $500 per month is expected to perform worse than one that costs $50,000 per month.
-        - What benchmark implementation was used? Many vendors publish results of a TPC benchmark specification, where the benchmark was run using a custom implementation of the spec. These implementations have often not been validated and thus might not implement the specification correctly.
-
 - Tech#DNS Servers
     - Two types
         - Resolvers - handle DNS Queries
         - Authoritative Nameservers - Has database of DNS Entries.
-- Psychology 
-    - Everything comes with an inherent sacrifice
-    - What creates our positive experiences will define our negative experiences
 
 ## 2022-Mar-21 Mon
 
@@ -1086,55 +683,6 @@
     - setup email aliases for online accounts
     - Use VPN not public networks or computers
 
-- [Web Appliation Monitoring][SystemArchitecture][Observability] 
-    - Metrics to observe for Web Applications
-        - Response Time p50, p90, p99, sum, avg 
-        - Throughput by HTTP status 
-        - Worker Utilization 
-        - Request Queuing Time 
-        - Service calls 
-        - Database(s), caches, internal services, third-party APIs, ..
-        - Enqueued jobs are important!
-        - Circuit Breaker tripping  
-        - Errors, throughput, latency p50, p90, p99
-        - Throttling 
-        - Cache hits and misses % 
-        - CPU and Memory Utilization
-        - Exception counts 
-
-    - Metrics to observe for Web Applications
-        - Job Backend (e.g. Sidekiq, Celery, Bull, ..)
-        - Job Execution Time p50, p90, p99, sum, avg 
-        - Throughput by Job Status {error, success, retry} 
-        - Worker Utilization 
-        - Time in Queue  
-        - Queue Sizes  
-        - Don’t forget scheduled jobs and retries!
-        - Service calls p50, p90, p99, count, by type 
-        - Throttling 
-        - CPU and Memory Utilization
-        - Exception counts  
-    - Relevant Metrics should be available to slice by endpoint or job, tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
-    - In absense of observability setup, start with logs. For Format, consider using https://stripe.com/blog/canonical-log-lines
-
-    - Key Non-functional aspects of a Payments System
-        - Reliability and fauly tolerance 
-        - Reconciliation 
-
-    - Non relational databases are good for below requirements, 
-        - Application requires super-low latency
-        - Data is unstructured or no relational data
-        - Only need to serialize/de-serialize data 
-        - Store massive amount of data
-
-    - Message queues provide Decoupling, async processing which is good for scalability of applications
-    - Idempotency in API, 
-        - idempotency key is usually a unique value that is generated by the client and expires after a certain period of time. A UUID is commonly used as an idempotency key and it is recommended 
-        - To perform an idempotent payment request, an idempotency key is added to the HTTP header <idempotency-key: key_value>
-        - an idempotency key is sent to the payment system as part of the HTTP request
-        - For the second request, it’s treated as a retry because the payment system has already seen the idempotency key. When we include a previously specified idempotency key in the request header, the payment system returns the latest status of the previous request. 
-        - If multiple concurrent requests are detected with the same idempotency key, only one request is processed and the others receive the “429 Too Many Requests” status code. 
-        - To support idempotency, we can use the database's unique key constraint.
 
 - India
     - TN
@@ -1168,9 +716,6 @@
 
 ## 2022-Mar-23 Wed
 
-- What is Observability?
-    - Observability means gaining visibility into the internal state of a system. It’s used to give users the tools to figure out what’s happening, where it’s happening, and why. At Cloudflare, we believe that observability has three core components: monitoring, analytics, and forensics. Monitoring measures the health of a system - it tells you when something is going wrong. Analytics give you the tools to visualize data to identify patterns and insights. Forensics helps you answer very specific questions about an event.
-
 - Human Psychology
     - Uncertainty is the root of all progress and all growth. As the old adage goes, the man who believes he knows everything learns nothing
     - Work expands so as to fill up the time available for its completion
@@ -1190,41 +735,12 @@
 
 -  a cyclical is a company that will prosper in good times and suffer in bad. That's because it makes or sells expensive products or luxury items that customers can put off buying when they are short on cash. People continue to buy deodorant, dental floss, Big Macs, and headache pills no matter what, which is why drugstores and fast-food restaurants are not cyclicals.
 - The best time to get involved with cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest.
-
-- Peter lynch's stock criteria,
-    - Relatively debt free
-    - beaten down in market
-    - selling for less than cash in their bank accounts
-    - If it's a choice between investing in a good company in a great industry, or a great company in a lousy industry, I'll take the great company in the lousy industry any day. Good management, a strong balance sheet, and a sensible plan of action will overcome many obstacles, but when you've got weak management, a weak balance sheet, and a misguided plan of action, the greatest industry in the world won't bail you out
     
 ## 2022-Mar-24 Thu
 
 - Tech
     - Directed acyclic graph (DAG) programming model, which defines tasks in stages so they can be executed sequentially or parallely.
 
-- [Perspectives on Software Development][SystemArchitecture],
-    1.	Don’t fight the tools: libraries, language, platform, etc. Use as much native constructs as possible. Don’t bend the technology, but don’t bend the problem either. Pick the right tool for the job or you’ll have to find the right job for the tool you got.
-    2.	You don’t write the code for the machines, you write it for your colleagues and your future self (unless it’s a throw away project or you’re writing assembly). Write it for the junior ones as a reference.
-    3.	Any significant and rewarding piece of software is the result of collaboration. Communicate effectively and collaborate openly. Trust others and earn their trust. Respect people more than code. Lead by example. Convert your followers to leaders.
-    4.	Divide and conquer. Write isolated modules with separate concerns which are loosely coupled. Test each part separately and together. Keep the tests close to reality but test the edge cases too.
-    5.	Deprecate yourself. Don’t be the go-to person for the code. Optimize it for people to find their way fixing bugs and adding features to the code. Free yourself to move on to the next project/company. Don’t own the code or you’ll never grow beyond that.
-    6.	Security comes in layers: each layer needs to be assessed individually but also in relation to the whole. Risk is a business decision and has direct relation to vulnerability and probability. Each product/organization has a different risk appetite (the risk they are willing to take for a bigger win). Often these 3 concerns fight with each other: UX, Security, Performance.
-    7.	Realize that every code has a life cycle and will die. Sometimes it dies in its infancy before seeing the light of production. Be OK with letting go. Know the difference between 4 categories of features and where to put your time and energy: Core: like an engine in a car. The product is meaningless without it. Necessary: like a car’s spare wheel. It’s rarely used but when needed, its function decides the success of the system. Added value: like a car’s cup-holder. It’s nice to have but the product is perfectly usable without it. Unique Selling Point: the main reason people should buy your product instead of your rivals. For example, your car is the best off-road vehicle.
-    8.	Don’t attach your identity to your code. Don’t attach anyone’s identity to their code. Realize that people are separate from the artifacts they produce. Don’t take code criticism personally but be very careful when criticizing others’ code.
-    9.	Tech debt is like fast food. Occasionally it’s acceptable but if you get used to it, it’ll kill the product faster than you think (and in a painful way).
-    10.	When making decisions about the solution all things equal, go for this priority:
-    **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
-    But don’t follow that blindly because it is dependent on the nature of the product. Like any career, the more experience you earn, the more you can find the right balance for each given situation. For example, when designing a game engine, performance has the highest priority, but when creating a banking app, security is the most important factor.
-    11.	Bugs’ genitals are called copy & paste. That’s how they reproduce. Always read what you copy, always audit what you import. Bugs take shelter in complexity. “Magic” is fine in my dependency but not in my code.
-    12.	Don’t only write code for the happy scenario. Write good errors that answer why it happened, how it was detected and what can be done to resolve it. Validate all system input (including user input): fail early but recover from errors whenever possible. Assume the user hold a gun: put enough effort into your errors to convince them to shoot something other than your head!
-    13.	Don’t use dependencies unless the cost of importing, maintaining, dealing with their edge cases/bugs and refactoring when they don’t satisfy the needs is significantly less than the code that you own.
-    14.	Stay clear from hype-driven development. But learn all you can. Always have pet projects.
-    15.	Get out of your comfort zone. Learn every day. Teach what you learn. If you’re the master, you’re not learning. Expose yourself to other languages, technologies, culture and stay curious.
-    16.	Good code doesn’t need documentation, great code is well documented so that anyone who hasn’t been part of the evolution, trial & error process and requirements that led to the current status can be productive with it. An undocumented feature is a non-existing feature. A non-existing feature shouldn’t have code.
-    17.	Avoid overriding, inheritance and implicit smartness as much as possible. Write pure functions. They are easier to test and reason about. Any function that’s not pure should be a class. Any code construct that has a different function, should have a different name.
-    18.	Never start coding (making a solution) unless you fully understand the problem. It’s very normal to spend more time listening and reading than typing code. Understand the domain before starting to code. A problem is like a maze. You need to progressively go through the code-test-improve cycle and explore the problem space till you reach the end.
-    19.	Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t overengineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
-    20.	Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
 
 ## 2022-Mar-28 Mon
 
@@ -1285,21 +801,6 @@
 
 ## 2022-apr-04 Mon
 
-- [MySQL Replication][Databases] 
-    - Typical issues
-        - Temporary lag - caused by cold cache after restart
-        - Occasional lag - caused by write burst or long transactions 
-        - Perpetual lag - Slaves almost never catch up
-        - How to avoid lags 
-            - avoid long transactions
-            - manage batches
-            - increase replication throughput 
-            - Alternative is to Shard
-        - Some use cases for replication, 
-            - backups are faster and less disruptive on slaves than master
-            - reading from slaves helps in resilience (when master is down or loaded)
-    - How to monitor lag - Either Pg_heartbeat from percona toolkit or "second behind master" from "show slave status"
-
 - World Finance (New Monitory Regime)
     - Russia had no treasury securities and no onshore US dollar exposure, has no banking presense in US
     - Eurodollars - Stateless money, its no one's liability
@@ -1307,9 +808,6 @@
         - Bretton Woods 1 - US Dollars recognized as World's reserve currency
         - Bretton Woods 2 was formal recognition of trade between US and china where china exports to US and earns dollars and invest those in treasuries.
         - Way of exporting to US and earning dollars is no more going to work smoothly.
-
-- SQLite - Litestream - How it works 
-    -  In WAL-mode (the mode you very much want on a server, as it means writers do not block readers), SQLite appends to a WAL file and then periodically folds its contents back into the main database file as part of a checkpoint. Litestream interposes itself in this process: it grabs a lock so that no other process can checkpoint. It then watches the WAL file and streams the appended blocks up to S3, periodically checkpointing the database for you when it has the necessary segments uploaded.
 
 - Lee Kuan Yew (LKY) of Singapore 
 	- relentless determination to follow the facts where they lead
@@ -1345,23 +843,14 @@
 
 
 - Life lessons, 
-
 	- Sometimes getting what you want is as simple as asking for it. Closed mouths don’t get fed.
-
 	- Talk to strangers—in the grocery store, at the airport, in line at the DMV—you'll meet cool people, have great stories to tell, and maybe even make a lonely person's day.
-
 	- It's cheap and easy to keep your home neat and clean. The positive mental benefits are enormous.
-
 	- On that note, cleaning is easy when you do it often. Wiping up a recent spill takes two seconds. Scraping dried spaghetti sauce from the counter takes too long.
-
 	- No coffee after noon and no alcohol at least four hours before bed improves sleep dramatically.
-
 	- Drink more water. 
-
 	- Publish content online. It's a creative outlet. It's fun to watch your work improve. It's a magnet for interesting people you’d otherwise never meet.
-
 	- Money spent on books is money well spent. Even if you only read some, you're getting more knowledge and entertainment than you're paying for.
-
 	- Spend more time working on mobility. You'll have fewer injuries. You'll feel better. As you get older, you'll maintain a higher quality of life for longer.
 
 	- Get comfortable sitting alone in silence. It’s something you'll need to practice. Put away your phone, pour a cup of coffee, and sit in a quiet place. Turn off the radio on your next long car ride. Allow yourself to be alone with your thoughts.
@@ -1394,7 +883,7 @@
 
 	- Do I really care about watching this thing I'm watching on TV right now? No, I wouldn't care at all if I missed it. But I do really care about getting better at playing the guitar. Cutting out the hour of TV I watch every night makes more room for guitar practice. 
 
-	= Marriage is for making things work. Dating is for finding the best person to make things work with. When you break up, break up. Don’t stay friends. Don’t take a break. Move on. Delete their social media. Block their number. Forget about them. It hurts at first and it’s easier to drag things out, but you’ll feel better faster if you don’t.
+	- Marriage is for making things work. Dating is for finding the best person to make things work with. When you break up, break up. Don’t stay friends. Don’t take a break. Move on. Delete their social media. Block their number. Forget about them. It hurts at first and it’s easier to drag things out, but you’ll feel better faster if you don’t.
 
 	- People will use jargon and complicated language to make you think they're smart. But the smartest people you'll ever meet will speak so simply that you’ll underestimate their intelligence. This is because it takes an immense amount of intelligence and mastery to explain complicated topics in a simple way. If you don't have this level of mastery, you can either admit it (most people won't) or you can confuse people with big words and complicated phrases until they stop asking questions. 
 
@@ -1519,19 +1008,6 @@
 
 - 3D Printers - There are broadly two types of 3D printers in common use. One uses thermoplastic filament sourced from a spool and extruded through a heated nozzle attached to a gantry with three axes of motion to build a printed object from the build plate on upwards. This was the first widely commercial available 3D printing technology for home or small business use, and while it has a lot to recommend it for many applications, it did not take off for the miniature use case. The other type of 3D printer is a resin printer, which are a technological marvel of chemistry and hardware design. 3D printer resins are liquid photoplastics; they cure (harden) in the presence of UV light. An LCD screen beneath the transparent bottom of a vat of ooze exposes a layer 30-50 microns thick to harden it; a single- dimensional screw then rotates to pull the build plate upwards (to remove it from the film) then downwards (to get more liquid resin stuck to the newly-solid layer then re-adhere to the film). The process then repeats until the print is done, in something a calculus teacher might describe as integration by parts and that a timelapse videographer might describe as absolutely mesmerizing.
 
-- Rajeev Thakkar 
-    - Fragility - being fragile 
-    - Anti-fragility - being robust in the event of adversity
-    - key work skills for young
-    - dont confine yourself to learning specific curriculum/subject
-    - be ready to be life long learner 
-    - Emphasis on understanding than memorizing 
-    - ability to solve real world problems would be important 
-    - Key skill (e.g. software) + Soft skills (communication, psychology) would be very useful
-    - impermanence of things - not to get to fixated by present
-    - books
-        - Peter lynch's books are good introductory ones. (One upon wall street) 
-
 - Dale Carnegie's how to win friends, 
 
     - Techniques in Handling People (https://fs.blog/how-to-win-friends-and-influence-people/)
@@ -1599,84 +1075,12 @@
 - "bogeyman in the closet" - The bogeyman hasn't come out yet, and you're not sure he's in there,
 but you aren't about to poke around in the dark to prove that he isn't.
 
-- Prof Aswath damodaran 
-    - the less activity you need to put into creating a portfolio, the better.
-    - on Indexing 
-        - many of these people who critique indexing have a very selfish reason for doing so – it’s taking away their living. And that’s for a very good reason, which is they’ve not been very good at what they do for a living and indexing has exposed that.
-        -  most active investing is built on mean-reversion. It’s very lazy investing, there is no research that goes in. You just buy stocks with low PE ratios and high growth. Again, we have this vision of analysts as being people who dig for the truth – and that is still there
-        - there is a potentially dark side to indexing. It has made momentum much stronger, because the nature of indexing is you pile on to whatever’s going up.
-    - On Momentum 
-        - Investing has always been a momentum game, at least on the pricing side, and it’s about momentum and momentum shifts. Pretty much all of trading can be summarized into those two groups: you can either be a momentum player or a player who detects shifts in momentum and tries to go against momentum just before it changes. So, all of trading is built around momentum or anti-momentum.
-        - you cannot devise a trading strategy which ignores momentum. It’s impossible.
-        - You can create an investing strategy that’s momentum-free – but that basically means you value something and then you sit there and pray and hope that, eventually, momentum fixes the gap for you. Even those people who believe they’re value players are far more dependent on momentum than they realize, because ultimately, for them to make money, the price has to move to its value. And that may require a momentum shift, which is what we call the catalyst, something that changes the momentum of the game.
-
-- Michael Moubaasin 
-    - Reversion to mean - the outcome that is far from average will be followed by outcome that is close to average
-
-
-- Tech#Architecture thinking
-    - Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain.
-    - eNumerate multiple candidate solutions. Don’t just start prodding at your favorite!
-    - Consider a candidate solution, then read the Paper if there is one.
-    - Determine the Historical context in which the candidate solution was designed or developed.
-    - Weigh Advantages against disadvantages. Determine what was de-prioritized to achieve what was prioritized.
-    - Think! Soberly and humbly ponder how well this solution fits your problem. What fact would need to be different for you to change your mind? For instance, how much smaller would the data need to be before you’d elect not to use Hadoop?
-
 - Stocks 
     - Peter lynch's pan-and-shovel technique - In any industry, when multiple companies are struggling to sell the same thing, look for supplier who provides all of them stuff they all need.
     
     - cyclical - a cyclical is a company that will prosper in good times and suffer in bad. That's because it makes or sells expensive products or luxury items that customers can put off buying when they are short on cash. People continue to buy deodorant, dental floss, Big Macs, and headache pills no matter what, which is why drugstores and fast-food restaurants are not cyclicals. Some cyclical industries are machinery, homebuilders, appliance, furniture manufacturers, waste mgmt companies.
     
     - The best time to get involved with cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest
-
-## 2022-apr-13 Wed
-
-- [Things to consider while making technology choices][SystemArchitecture]
-    - Software Architecture cannot be created in a vacuum and solid technical foundation is not not enough.
-    - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
-    - Reasons behind it
-    - Impact on Team 
-        - Is it easy for them learn?
-        - Are they enthusiastic 
-    - External Attractiveness (from New Hire prespective)
-    - Effective communication 
-    - Time to market
-        - Trade off between idealism vs pragmatism 
-    - Long term Maintenance
-        - Cost of Maintenance in terms of 
-            - Testing difficulties
-                - Efficiency of QA Team is critical for Software product/application 
-            - Employee attrition
-                - What specific skills and domain knowledge will your design require, and how much value would be lost if one of your employees were to leave?
-                - the more your own developers build; the more you will depend on them.
-            - Flexibility 
-                - The more vendor agnostic your design is, the more easily you will be able to avoid getting stuck  on an outdated platform and more quickly you'll be able to upgrade or pivot your underlying infrastructure as technology changes. 
-
-- [Investments][PersonalFinance] 
-- Retirement and the 4% Rule - The 4% Rule: If you can live on 4% of of your investment portfolio per year, the money should last you >30 years. The inverse of this rule is often usedto calculate: "How much do I need to retire?" Retirement number = 25 x annual expenses
--  2 reasons why you shouldn't pick individual stocks Financial reason: The majority of pro money managers can't beat the index. Can you?
-Existential reason: How do you conclusively know you're a good stock picker?
-- When to sell? - only reasons are, 
-- Rebalance his portfolio
-- Exit a losing position
-- Meet some immediate financial need
-- In investing, selling after a bad stretch feels like the right thing to do. You learned your lesson and seek greener pastures. But everything we know about investing shows it’s the wrong action: the big money comes from compounding uninterrupted over years and decades, when what you’ve done is not as important as how long you’ve been doing it for.Nassim Taleb says if you’re going to panic in investing, panic early. Same goes for your career – if you’re going to quit, quit early so whatever’s next has a shot at compounding.
--  Nearly half of all stocks decline by at least 70% and never recover their previous highs as per data by JP Morgan
-- You're much more likely to end up owning one of the thousands of stocks in Underperformance Land than one of the fortunate few out on the right end of the distribution.
-- That's why diversification is so important. Investing in the stock market is highly likely to pay off over many decades. Investing in a single stock is far riskier. And investors with the least capital have the most to lose. Intelligent investors should always diversify. The two exceptions are when you have control or information.
-- Control - Someone whose decisions can influence the stock price 
-- Information -  you're an investor who has objectively superior information about a company not
-available to the market as a whole, then you should use it to concentrate in the stock
-
-- Rules/policy/procedures should be employed wherever possible since it avoids subjective evaluation. 
-- Auto Market 
-- When a
-car part fails, it's the carmaker that gets the bad publicity and not the part maker, so carmakers are very
-careful about who gets the contract. A competitor might arrive with the best-looking aluminum wheel
-ever, but unless that competitor has a track record, carmakers aren't likely to give up on what already
-works.
--  spare-parts business, also known as the aftermarket
-- Digital Gold in India - minute you buy it you instantly lose 4% because you can only sell it back at 4% lower. you can't sell it other people. Only back to the same source you bought from.
 
 ## 2022-apr-18 Mon
 
@@ -1834,21 +1238,6 @@ works.
     - Away from electronic equipment, metal or major appliances
     - Ideally separated by a couple of rooms or different floors for multiple-node setups
 
-- Charles' Rules of Argument  (https://fishbowl.pastiche.org/2004/03/21/charles_rules_of_argument)
-    -  You will never change anyone's mind on a matter of opinion. People change their minds gradually, and if anything a prolonged argument only serves to back someone into a corner, huddling closer to the security blanket of what they believe. 
-    - Never seek out things to disagree with. There are too many of them out there, and correcting the ills of the world just isn't your job.
-    - If you come across something you disagree with while randomly browsing, let it pass without comment (see rule 1). If it's truly frustrating, write a reply, then delete it without sharing it with anyone else.
-    - Even in the limited scope remaining, it is not your job to correct everything you find that you disagree with. Try to limit yourself to things where the subject is at least something that makes some practical difference to your life.
-    - Do not argue about politics, religion, or matters of personal taste or comparative morality.
-    - DO NOT argue with Lisp programmers, believers in the Semantic Web, or furries.
-    - Saying something controversial in your own space (i.e. your weblog) is only arguing if you directly reference somebody you are disagreeing with (or it is clearly understood in subtext who you are disagreing with), and that person is likely to give a shit about what you said.
-    -  If someone disagrees with something you've said, you're already in an argument. 
-    - Once you find yourself in an argument, your job is now to make your point clearly, and then leave.
-        - State your case - Once you have stated your case, there's no point re-stating it.Going over the same ground repeatedly will damage your case.
-        - Clarify any misunderstandings 
-        - The ideal attitude to project during any argument is one of calm disinterest. 
-        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.   
-
 - SQLite considerations, 
     - single writer thread, and it's a library incorporated into your process, not a shared DB. It's faster because those other features of a server have a cost as well, particularly the cost of write arbitration.
     - SQLite is fine when all your load can be served by a single backend process on a single machine. The moment you need multiple backends to handle more load, or the moment you need high availability, you can't do it with SQLite.
@@ -1901,60 +1290,9 @@ works.
 
 ## 2022-may-04 Wed
 
-- [Investment Learnings][PersonalFinance]
-    - Avoid “respect quota” or keep “respect quota” limited to a tiny percentage of the portfolio. “Respect quota” is mimicking investment/ trading based on investments/trades of other investors/ traders. More often than not such mimicking results in losses.
-    - Never get carried away with what others are doing.
-    - As soon as you see that easy money is in the making, be more alert and cautious.
-    - It is better to be slow.
-    - Avoid media/WhatsApp/Telegram/social media
-    - Go alone, take a break, take a deep breath, do meditation, calm down,
-    - Don't be in a hurry.
-    - Book profits and let someone else also earn.
-    - Read good books that help.
-    - Form a good circle of friends. This trusted circle should not be a source of “tips”. This circle of friends is to bounce off ideas and to check if your investment thesis has any holes.
-    - Never trust any “Tips”. Remember the reverse of “Tips” is “Pits”. “Tips” take you to “Pits”.
-    - Finally, NEVER TRUST ANYONE especially reputations. Keep in mind one thing that here anyone can go bankrupt if they are not disciplined and orderly.
-    -  ‘A clever person solves a problem. A wise person avoids it.’
-
-- [Investment Criteria][PersonalFinance]
-    - RoIC is 'Return on Invested Capital'. It tells us how much does a company earn annually on every Rupee that it invests. (Ideally, RoIC above 25% is considered good. RoIC above 35% is awesome.). companies with low RoIC simply DO NOT generate enough cash flow. And what happens when you do not generate enough cash flow? --> You end up relying on DEBT for expansion. Avoid financial stocks completely in this exercise. RoIC is useless to understand them.
-    - Make a list of 500 companies on websites like Screener.in which highlight their RoIC and EV/EBIT. Now, create a ranking system and select the top 25 from the above list whose RoIC is highest and EV/EBIT is lowest.
-
 - Finance 
     - Bond prices and yields move inversely. So when interest rates fall, as they did for much of the past four decades, bond investors enjoy a capital gain. 
 
-- Health (Book: Why we get obese?) 
-    - Obesity and overweight, so we’ll be told, are associated with an increased risk of virtually every chronic disease that ails us—heart disease, stroke, diabetes, cancer, dementia, asthma.
-    -  two factors will essentially determine how much fat we accumulate, both having to do with the hormone insulin. First, when insulin levels are elevated, we accumulate fat in our fat tissue; when these levels fall, we liberate fat from the fat tissue and burn it for fuel. This has been known since the early 1960s and has never been controversial. Second, our insulin levels are effectively determined by the carbohydrates we eat—not entirely, but for all intents and purposes. The more carbohydrates we eat, and the easier they are to digest and the sweeter they are, the more insulin we will ultimately secrete, meaning that the level of it in our bloodstream is greater and so is the fat we retain in our fat cells.
-    - “Carbohydrate is driving insulin is driving fat"
-    - the stimulation of insulin secretion caused by eating easily digestible, carbohydrate rich foods: refined carbohydrates, including flour and cereal grains, starchy vegetables such as potatoes, and sugars, like sucrose (table sugar) and highfructose corn syrup. These carbohydrates literally make us fat, and by driving us to accumulate fat, they make us hungrier and they make us sedentary. 
-- FOODS THAT MUST BE EATEN EVERY DAY: 
-    - Salad Greens: 2 cups a day. Includes arugula, bok choy, cabbage (all varieties), chard, chives, endive, greens (all varieties, including beet, collards, mustard, and turnip), kale, lettuce (all varieties), parsley, spinach, radicchio, radishes, scallions, and watercress. (If it is a leaf, you may eat it.) 
-    - Vegetables: 1 cup (measured uncooked) a day. Includes artichokes, asparagus, broccoli, Brussels sprouts, cauliflower, celery, cucumber, eggplant, green beans (string beans), jicama, leeks, mushrooms, okra, onions, peppers, pumpkin, shallots, snow peas, sprouts (bean and alfalfa), sugar snap peas, summer squash, tomatoes, rhubarb, wax beans, zucchini. 
-    - Bouillon: 2 cups daily—as needed for sodium replenishment. Clear broth (consommé) is strongly recommended, unless you are on a sodium-restricted diet for hypertension or heart failure. 
-
-- EAT YOUR CHOICE OF THE FOLLOWING FOODS: 
-    - Meat: Beef (including hamburger and steak), pork, ham (unglazed), bacon, lamb, veal, or other meats. For processed meats (sausage, pepperoni, hot dogs), check the label carbohydrate count should be about 1 gram per serving. 
-    - Poultry: Chicken, turkey, duck, or other fowl. Fish and Shellfish: Any fish, including tuna, salmon, catfish, bass, trout, shrimp, scallops, crab, and lobster. 
-    - Eggs: Whole eggs are permitted without restrictions. 
-    - You do not have to avoid the fat that comes with the above foods. 
-    - You do not have to limit quantities deliberately, but you should stop eating when you feel
-    full. 
-
-- FOODS ALLOWED IN LIMITED QUANTITIES: 
-    - Cheese: up to 4 ounces a day. Includes hard, aged cheeses such as Swiss and Cheddar, as well as Brie, Camembert, blue, mozzarella, Gruyère, cream cheese, goat cheeses. Avoid processed cheeses, such as Velveeta. Check the label; carbohydrate count should be less than 1 gram per serving. 
-    - Cream: up to 4 tablespoonfuls a day. Includes heavy, light, or sour cream (not half and
-    half). 
-    - Mayonnaise: up to 4 tablespoons a day. Duke’s and Hellmann’s are low-carb. Check thelabels of other brands. Olives (Black or Green): up to 6 a day. 
-    - Avocado: up to 1⁄2 of a fruit a day. 
-    - Lemon/Lime Juice: up to 4 teaspoonfuls a day. 
-    - Soy Sauces: up to 4 tablespoons a day. Kikkoman is a low-carb brand. Check the labels of
-    other brands. 
-    - Pickles, Dill or Sugar-Free: up to 2 servings a day. Mt. Olive makes sugar-free pickles. Check
-    the labels for carbohydrates and serving size. 
-    - Snacks: Pork rinds/skins; pepperoni slices; ham, beef, turkey, and other meat roll-ups;
-    deviled eggs.
-    - Insulin is the anabolic (building) hormone, and its primary job is to turn excess food into fat for future use. Insulin is a life-saving hormone without which humans wouldn’t have existed for a long time(Imagine storing food as abdominal fat and then giving energy until you find food). Now put this in perspective: eating every day, in fact, 3-4 times a day, insulin raises every time we eat, especially with refined carbohydrates, but it can also do protein and fat. Obesity rates are soaring all over the world(reason above). Insulin can be good and can also be equally harmful. Excess insulin leads to Diabetes, Inflammation, Atherosclerosis(Heart Disease), Obesity Etc
 
 - Learnings for Investor from Seneca
     - “Be suspicious; be timid; resist every good that comes by chance. It is by the allurement of hope that the fish is caught, the game snared.”
@@ -1970,12 +1308,6 @@ with money borrowed from your broker, your broker will probably try to lend out 
 short sellers, and keep the fees.
 
 ## 2022-may-09 Mon
-
-- Database Indexes
-    - Cardinality is the inverse of "the number of records returned per value." High cardinality returns one record per index value, and low cardinality returns many records per index value. Efficient indexes are high-cardinality indexes. Primary keys are the best example of a high-cardinality index. String-based tags are an example of a low-cardinality index because there are typically many objects assigned to a single tag.Build the indexes to match your query needs, and note that high-cardinality is faster.
-    - Table scan happens when no suitable index exists.When using a table scan, the database keeps all of the records in RAM while comparing values.    
-    - All databases employ some level of copy-on-write. Postgres writes a new version of a row each time it inserts or updates a value. Other databases have a block-size allocated for a value, then, if an updated value exceeds the size, it writes to a new location. Other databases reject updates, claim immutability, and push the tracking of updates off to the application developer.
-
 
 - The more you're forced to take ownership over your decisions, the faster you'll learn,
 - Nothing inflation in is never economics is the same the second time after it happens than the first, because the first affects people’s attitudes in the second, and their attitudes always influence the activity itself. So the next crisis, the next crash, the next speculative mania is never exactly the same as the last. It merely rhymes.
@@ -1994,66 +1326,11 @@ short sellers, and keep the fees.
 
     - The single best predictor of the future returns of bonds, before inflation, is their yield to maturity. 
 
-
-- Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & metamodels. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
-    - Fats - they dont undergo any chemical changes till they reach intestine. Essentially replacement for Water at High temperature. 
-    - Fats do not cause insuline spike 
-    - Need certain amount of Fats.avoid trans-fats & refined oils. Always use refined oil for frying. 
-    - Moderate ghee, butter are fine.
-    - All spice flavours are fat soluble. Always spice add powders at the end and whole spices in fat i.e. Oil.
-    - Carbohydrates, 
-        - try to eat those has much fiber..Potatoes are better than grains.
-    - Avoid direct sugars. 
-    - Salt & Sugar sensors are at the tip of the toungue.
-    - Avoid any liquid that has sugar in it. 
-    - Cook vegetables and meat separately as both require different kind of heat. 
-    - People tend to skeptical when it comes to food which is natural. 
-    - Cooking generally has some degree of undoing like acid for bitter, dehydrate if soggy etc.
-    - Restaurants exploit craving for salty, sweet and fatty tastes
-
 - Fire
     - 30 times of Annual expenses is needed to sustain cash flows in retirement. 
 
-- Apache Parquet 
-    - language-independent storage format, designed for online analytics, so:
-        - Column oriented
-        - Typed
-        - Binary
-        - Compressed
-    - A Parquet file stores data column-oriented on the disk, in batches called "row groups".
-    - Parquet storage can provide substantial space savings.
-    - Parquet storage is a bit slower than native storage, but can offload management of static data from the back-up and reliability operations needed by the rest of the data.
-
-- gRPC and REST
-    - Allows browser apps to call gRPC services as RESTful APIs with JSON. The browser app doesn’t need to generate a gRPC client or know anything about gRPC.
-        - grpc-gateway is another technology for creating RESTful JSON APIs from gRPC services. It generates reverse proxy to convert RESTFUL calls to gRPC and vice versa
-        - gRPC JSON transcoding runs inside an ASP.NET Core app. It deserializes JSON into Protobuf messages, then invokes the gRPC service directly.JSON transcoding deserializes JSON to Protobuf messages and invokes the gRPC service directly. There are significant performance benefits in doing this in-process vs. making a new gRPC call to a different server.
 
 ## 2022-may-13 Fri
-
-- [Learning from Markets][Stocks]
-    - Nothing lasts forever. When growth stocks were going up every day, it felt like it would never end. Now that growth stocks are going down, it feels like it will never end. Everything ends, eventually. 
-    - Survival is the most important thing. Your portfolio must be able to weather euphoria, panic, and malaise.
-    - Risk management is most critical when it feels like you’re getting punished for managing risk.
-    - Nothing is a perfect inflation hedge. Not gold, stocks, crypto, or cash. Different inflation hedges work in different inflationary regimes. No one size fits all.
-    - Diversification is the only answer to an unpredictable future. If everything is working, you’re not really diversified.
-    - Interest rates matter a lot. The cost of money is the lifeblood of the economy and the psychological north star for investors.
-    - Nothing is risk-free. The S&P 500 is down 16% year-to-date. Intermediate-term “risk-free” government bonds are down 20%.
-    - You’re not a genius on the way up or an idiot on the way down.
-    - When everything is going down, everybody loses money.
-    - Analogs are dangerous. We know how things played out in the past. That doesn’t tell us how things will play out in the future.
-    - The more confident somebody seems, the more cautious you should be in taking their advice.
-    - Inflation is unpredictable.
-    - Memes are not fundamentals.
-    - Nobody knows what will happen next.
-    - There are no new paradigms.
-    - Past performance is not indicative of future performance. Past behavior is.
-    - Too much leverage will eventually come back to bite you.
-    - Cash is not trash.
-    - You didn’t know this was going to happen. You don’t know what’s going to happen next.
-    - Investing is hard.
-    - never let bad market go waste
-
 
 - Spices
     - Almost all are oil soluble and not water soluble
@@ -2061,16 +1338,6 @@ short sellers, and keep the fees.
     - Cut out all liquid calaries or liquid having sugar in it like switch to water,black tea/coffee, salt lime soda
     - Everyone experience flavours uniquely. 
     - No two people enjoy the same dish in same way
-
-
-- (Personal Finance Basics (from Deepak Shenoy))[PersonalFinance]
-    - Trust no one
-    - If other side is getting commission then you are not getting sold the right kind of product. be cynical.Go for Cheapest and Simple product, any complexity means it has hidden incentives for selling it. 
-    - Hygiene - if shit happens can i take care of myself and family? 
-    - Medical Insurance - Opt for Super top up policy beyond base policy.
-    - Life Insurance - Go for Simple product.
-    - Emergency buffer - 6 months of expenses should be in bank account or FD. 
-    - Corpus for Retirement -->  < 50 years old - 30 times your annual expenses is what is needed. 
 
 - Eating rules by Michael Pollan 
     - Eat those foods which your great grandmother understands
@@ -2132,19 +1399,6 @@ short sellers, and keep the fees.
         - Container image scanning tools can continuously and automatically scan container images within the CI/CD pipeline and in container registries, prior to deployment into production environments. This enables identification of vulnerabilities or unsafe components, and provides remediation or mitigation guidance directly to developers and DevOps teams.
         - Cloud Security Posture Management (CSPM) solutions identify misconfigurations in cloud infrastructure that could leave potential risks and attack vectors unchecked. CSPM solutions can recommend or automatically apply security best practices based on an organization’s internal policies or third-party security standards.
 
-- Food and Health
-    - Potato is starch which gets converted into Glucose. Glucose is less damaging than fructose.
-    - Sugar is 50-50% fructose and glucose. Glucose gets absorbed by Body, fructose can be processed only by Liver and gets converted to Fat.
-    - For a healthy heart, keep ratio triglycerides to HDL should be 2 or less.
-    -  avoid sugar, fructose, fine flour and vegetable oil
-    - Human body is optimized for fasting and feasting 
-    - Human body has enough vitamins and other nutrients for many days.
-    - It’s the combination of sugar, fat, and salt that make foods ‘hyper-palatable’ and drives us to want and eat more
-    - If you find you have certain foods that trigger you to overeat, don’t eat or keep these foods in the house. The more you decrease your exposure to these foods, the more likely you are to succeed with your diet. Studies suggest when people reduce the palatability of the diet, they’re more likely to succeed and keep the weight off in the long-term.
-    - Serving foods with smaller plates may reduce the amount of food you eat and decrease calorie intake.
-    - Don’t keep snacks around your desk while working. If you do want to grab a snack, make sure it’s kept in the office kitchen. The simple act of making it harder to get to will reduce the chances of mindless eating.
-    - Pay attention. Don’t assume just because it’s called a salad, it’s zero-calorie and healthy. Most restaurants have the ingredients listed in the menu, check the salad to make sure there aren’t any extra toppings. If there are you can factor these into your calorie count for the day or simply ask the restaurant not add these when they make your food – remember, you’re paying them.
-
 
 - If you can deny data to make motherhood statements then there's not much to debate.
 
@@ -2194,25 +1448,6 @@ short sellers, and keep the fees.
 
     - Criteria for banks - price-to-earnings ratio to be relatively low (last year I suggested p/e's of 10 or below), the equity-to-assets ratio to be relatively high (5 or above), and the percentage of nonperforming assets to be on the decline.amount of money raised in the offering to roughly correspond to the book value of the company before the offering
 
-    - Timeless wisdom from peter lynch, 
-        - If timing the market is such a great strategy, why haven't we seen the names of any market timers at the top of the Forbes list of richest Americans?
-        - People who exit the stock market to avoid a decline are odds-on favorites to miss the next rally. If you don't believe corporate profits will continue to rise, and you can't stomach a decline in the market, don't buy stocks or equity mutual funds.
-        - If you were out of stocks in 40 key months over the past 40 years, your annual return on investment dropped from 11.4 percent to 2.7 percent. You underperformed your savings account.
-        - In this century, we've had 53 corrections of 10 percent or more, roughly one every two years. We've had 15 corrections of 25 percent or more, roughly one every six years. These setbacks are normal and come with the territory.
-        - A stock certificate is not a lottery ticket. Behind every stock is a company. Stock prices go up 8 percent a year, on average, because corporate profits go up 8 percent a year. Add in the dividend yield of 2.5 percent (today's levels) and stocks give you a total return of 10.5 percent. Dividends are raised, on average, by 8 percent a year, right along with corporate profits.
-        - Even if we go into a long economic slump during which corporate profits grow at only half the normal rate, or 4 percent a year, stock prices should follow suit, rising an annual 4 percent a year. Assuming the 2.5 percent dividend, you would still get a 6.5 percent return, which is better than a 6 percent bond.
-        - Stocks outperformed bonds in eight out of the nine previous decades in this century, and they are well ahead halfway through this one.
-        - Since 1965, if you bought stocks once a year and were unlucky enough to pick the worst day to invest (when stocks were at their highest prices) 30 years in a row, you ended up with an annual return of 10.6 percent. If you were incredibly lucky and invested on the best day of the year 30 years in a row, you ended up with an annual return of 11.7 percent. So the difference between perfect timing and horrendous timing is 1.1 percent. This timing business is much ado about very little.
-        - In a correction or a bear market, great companies, good companies, mediocre companies, and terrible companies all see the prices of their stocks decline. A correction is a wonderful opportunity to buy your favorite companies at a bargain price.
-        -  best way to own gold is to own shares in the best mining companies or in the gold funds that
-        invest in them. 
-
-    - Real estate is a cyclical business, and most REITs are enjoying a very profitable part of the cycle. Eventually the wheel will turn, and then we'll see which REITs actually have the best holdings, the best management, and the best honest-to-goodness long- term prospects.
-    - how Equity REITs work - Raise funds through IPO and promoters and borrow from elsewhere. Build or buy income-producing property. the source of income is rent paid by families/companies/stores. its required redistribute % of income as dividend.
-    - Mortgage REITs - They dont buy property but instead invest in mortages taken by buildersand property owners.  They succeed only if borrowers dont default and interest rates dont go up or down sharpely. 
-    - Individual investors are best off with Equity REITs.If you're a shareholder in an equity REIT, you're a landlord. If you own shares in a mortgage REIT, you're a money lender who lives and dies with interest rates.
-    - The best REITs don't want to just pay dividends. They want to grow--buy more
-    properties, collect more rent, drive their stock prices up.
 
 - Joel Mokyr
     - I actually think that a society that penalizes people for thinking in ways that are not convenient to the government, those societies in the end will not be nearly as creative as societies in which there's some freedom of thought in which the government basically shrugs and takes an agnostic view and you can say and think whatever you want.
@@ -2222,30 +1457,6 @@ short sellers, and keep the fees.
     - Stalin could not raise living standards by much but he could industrialize Russia enough to defeat germany.
     - Pandemic accelerated work from anywhere (which was moving slowly) and research in Medical Technology i.e. messenger RNA.
     - Most things like that in the world are neither wholly bad nor wholly good. But they're complicated. 
-
-- Cryptography, Crypto economics etc.
-    - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
-    - transposition cypher with random key is difficult to decrypt.
-    - in 1976 Whitfield Diffie and Martin Hellman created a new kind of cryptography, one that allowed for secure communication of a secret key over an insecure network.Diffie and Hellman revolutionized cryptography by proving that a secret key could be distributed over an insecure network.
-    - RSA, showed that the key used to encrypt a message did not have to be the same as the key used to decrypt a message.
-        - Using RSA, two keys are created public and private. Public key is shared.  Public key is used to encrypt a message which can only be decrypted using private key. It works reverse too i.e. encryption using private key and decryption using public key. 
-    - Message services such as WhatsApp and Signal also use Diffie-Hellman algorithms so that people across the world can communicate securely. 
-    - Each smart card has a unique public key known to the credit card com- pany, say Visa, and a corresponding private key stored on the chip in the card. When the card is presented for payment,Visa sends it a random number. The chip in the card encrypts the random number using its private key and sends the encrypted message back to Visa.Visa then attempts to decrypt the message using the card’s public key. If the decrypted message reveals the random num- ber sent by Visa, then Visa knows exactly which card is being used.
-    - A digital signature is a message that can only be decrypted using Publius’s public key.
-    - A cryptographic hash is like a digital fingerprint, a much shorter message that in practice can be uniquely associated with any message.a cryptographic hash function takes any data as input and out- puts a digital fingerprint of that data, an essentially unique ID such that if any piece of the data is ever changed it won’t hash to the same ID. 
-    - SHA256 algorithm converts any input to a 256 digit long hash consisting of 0's and 1's.
-        - Hash functions like SHA256 are collision-resistant that is it is infeasible to find two messages with the same hash.
-    - Digital Signatures offer, 
-        - Authenticity means that a digital signature is strong evidence that the signer has the identity associated with the public key.
-        - The integrity of the message is provided by comparing the message hash within the signature with the hash of the message. 
-        -  since only the holder of the private key can sign the digital signature, the signer cannot repudiate having signed the document.
-
-    -  NFT - An NFT is just a cryptographic hash of an art- work (or other digital file) signed with a digital signature
-    - How Bitcoin network works - When Alice wants to send Bob a bitcoin she doesn’t contact her bank or Visa or Stripe. Instead she broadcasts a message to the bitcoin network that says “I authorize a transfer of bitcoin to Bob. Here’s my digital signature.” Bitcoin “miners” listen for transaction messages, verify that the transactions are valid and compile them into blocks. In about 10 min- utes (we explain why it takes 10 minutes further below) a block with Alice’s new transaction will be added to the blockchain. Anyone in the world can then verify that Alice transferred a bitcoin to Bob and if Bob wants to make a subsequent transaction with Tom anyone can verify that he has the funds to do so. Alice has no contract with the miners and they are not obligated to pro- duce blocks.
-    
-    - Why bitcoin mining is computationally expensive -  bitcoin miners must try trillions of hashes to find the rare hash to deploy block onto the blockchain. 
-    -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
-    - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
 
 ## 2022-may-23 Mon
 
@@ -2329,4 +1540,3 @@ short sellers, and keep the fees.
 # 2022-may-30 Mon 
 
 - Think like a scientist - As scientists constantly test and challenge their views.
-
