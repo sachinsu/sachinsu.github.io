@@ -57,8 +57,6 @@
         deviled eggs.
         - Insulin is the anabolic (building) hormone, and its primary job is to turn excess food into fat for future use. Insulin is a life-saving hormone without which humans wouldn’t have existed for a long time(Imagine storing food as abdominal fat and then giving energy until you find food). Now put this in perspective: eating every day, in fact, 3-4 times a day, insulin raises every time we eat, especially with refined carbohydrates, but it can also do protein and fat. Obesity rates are soaring all over the world(reason above). Insulin can be good and can also be equally harmful. Excess insulin leads to Diabetes, Inflammation, Atherosclerosis(Heart Disease), Obesity Etc
 
-
-
 - Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & metamodels. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
     - Fats - they dont undergo any chemical changes till they reach intestine. Essentially replacement for Water at High temperature. 
     - Fats do not cause insulin spike 
