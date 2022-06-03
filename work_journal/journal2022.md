@@ -1540,3 +1540,19 @@ short sellers, and keep the fees.
 # 2022-may-30 Mon 
 
 - Think like a scientist - As scientists constantly test and challenge their views.
+
+## 2022-jun-03 fri
+
+- About France
+    - The African and Eurasian tectonic plates push each other, forming the southern European mountains.
+    - These create a bad terrain for agriculture in Southern Europe (hence its relative poverty), but an extremely high density of navigable waterways in Northern Europe.
+    - These rivers have facilitated the emergence of plenty of independent cultures in Europe.
+    - Many of them have remained independent, except in France, where all these waterways connect to each other. That has created a massive interconnected economy that very quickly grew its population and wealth.
+    - Cities sprung up at every confluence of every river. Since the land is so fertile, and so many of these rivers were navigable, the population and wealth grew over time, especially in the northern half of France. Within all of that, Paris was naturally the best positioned city, at the confluence of all these rivers, within the most fertile region in the country, and close enough to its trade partners and enemies.
+    - If the Rhône had flowed northwards, and the mountains between the Alps, the Massif Central, and the Pyrenees had touched each other, there wouldn’t have been passes between the amazingly rich northern part of France and the Mediterranean coast. That would have made the unity of the north and south nearly impossible, France would be at least two countries, and what is today northern France would have never been as powerful as it has been.
+    - The flat land in the north of the continent is called the Northern European Plain, and is some of the most fertile land on earth. France was gifted with a big chunk of it, making it remarkably fertile.
+    - But unlike most other northern European countries, France is safely protected by seas and mountains.
+    - Its only opening is through the northeast, what is today Belgium, and exposes France to Germany, a more powerful country because of its higher population that comes from its higher population density. This is why France will always obsess about Germany, and needs it as a tight ally in the EU to secure its existence.
+    - That means that the seas were never the biggest priority for France, which is why it never invested much in its colonies, why most of them lost money, and why France is the biggest maritime country in the world: it kept islands here and there that were poor enough that nobody wanted to fight for them.
+    - France's population has been in decline. This smaller population is the reason why France is weaker economically than Germany—it’s not productivity: France’s productivity per worker is higher than Germany’s .
+    - Germany, meanwhile, can be threatened on all sides, so it benefits from good relationships with its regional neighbors—for example, with Russia. Giving up Russia is much riskier for Germany than France, and increases its exposure to France.

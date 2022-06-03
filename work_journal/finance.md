@@ -77,6 +77,18 @@
         - you cannot devise a trading strategy which ignores momentum. It’s impossible.
         - You can create an investing strategy that’s momentum-free – but that basically means you value something and then you sit there and pray and hope that, eventually, momentum fixes the gap for you. Even those people who believe they’re value players are far more dependent on momentum than they realize, because ultimately, for them to make money, the price has to move to its value. And that may require a momentum shift, which is what we call the catalyst, something that changes the momentum of the game.
 
+- [Mohnish pabrai][PersonalFinance], 
+    - No leverage - Live to play another day in entirely unpredictable world
+    - No shorting 
+    - Not much opportunity in US Markets.
+    - Be patient
+    - Job description in investing - be curious, reading and thinking but not acting much.
+    - Variables controlling  wealth creation journey,
+    - Length of runway
+    - Capital to start with
+    - Rate of return 
+
+
 - Michael Moubaasin 
     - Reversion to mean - the outcome that is far from average will be followed by outcome that is close to average
 

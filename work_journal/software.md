@@ -1042,7 +1042,48 @@
 
     -  NFT - An NFT is just a cryptographic hash of an art- work (or other digital file) signed with a digital signature
     - How Bitcoin network works - When Alice wants to send Bob a bitcoin she doesn’t contact her bank or Visa or Stripe. Instead she broadcasts a message to the bitcoin network that says “I authorize a transfer of bitcoin to Bob. Here’s my digital signature.” Bitcoin “miners” listen for transaction messages, verify that the transactions are valid and compile them into blocks. In about 10 min- utes (we explain why it takes 10 minutes further below) a block with Alice’s new transaction will be added to the blockchain. Anyone in the world can then verify that Alice transferred a bitcoin to Bob and if Bob wants to make a subsequent transaction with Tom anyone can verify that he has the funds to do so. Alice has no contract with the miners and they are not obligated to pro- duce blocks.
-    
     - Why bitcoin mining is computationally expensive -  bitcoin miners must try trillions of hashes to find the rare hash to deploy block onto the blockchain. 
     -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
     - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
+
+- Data science use cases
+    - Spelling corrections 
+        - Dictionary approach - Involves creating a dictionary of correctly spelled words and then 
+        - Classify it - identify misspelled words
+        - Recommendation - Present possible corrections 
+        - Transformation - automatically replace with corrections.
+    Has certain limitations like lack of regular updates to word list for slang words, proper names; it can autocorrect grammatical errors
+    - Data intensive approach - Corpus consisting of compilation of text is prepared. This has certain advantages like language-specific dictionary is not needed. It can show words in context unlike Dictionary approach with does word by word checks.
+        - Speech Recognition / Speech to text 
+        - Its hard because, 
+            - Speech is analog and each person’s speech is a little bit different, whereas every typist
+            who transposes the “ie” in “belief” ends up with exactly the same result, “beleif.”
+            - Speech has systematic variation due to different accents, mixed language, speech
+            impediments, random variation due to background noise, and multiple people speaking
+            at once.
+            - Speech has ambiguity due to homophones as well as the absence of capitalization and
+            punctuation.
+            - Transcription errors can be distracting to users, but are usually not life-threatening. Risks
+            related to errors, could prevent ASR’s use in applications where an error would cause
+            great harm.
+        - This area is dominated by neural networks. They can learn to compensate for accents and user-supplied corrections to system errors. 
+    - Music Recommendation 
+        -  These systems recommend a user's next song, movie, book, app, or romantic partner.
+        - The recommendation system builds a model from three types of data: a song's waveform, a song's metadata (title, artist, genre, composer, date recorded, length, etc.), and listener reactions. A “reaction” may be passively listening to the currently playing song, or it may be actively starting, skipping or replaying a song, or rating it with a star or a thumbs down.A song's waveform can be analyzed for tempo, beat, timbre, and other factors. The system can recommend a song with similar features to songs that the user has previously liked or, for variety, perhaps recommend a contrasting song. The recommendations can be specialized for activity or time of day; perhaps fast, energetic songs for exercising and slow mellow songs at the end of the day. Metadata can be applied in many ways and even extended to permit creation of predictive,semantic relations between its entities.
+        - collaborative filtering builds on this idea to examine the songs a listener has liked (or disliked), and compares them to every other listener’s reactions. When it finds a similar history, the songs that the user likes can be recommended to each other.
+        - How approaches apply in the field of investment management, 
+            - Momentum investing based on understanding what others are doing is analogous to
+            collaborative filtering.
+            - Fundamental investing based on knowledge of an investment’s business is analogous to
+            using semantic knowledge.
+            - Technical investing based on raw stock prices and market volumes is analogous to
+            musical signal analysis.
+    - Protein folding 
+        - Healthcare 
+        - Prediction about patients more  at risk of developing diseases so as to benefit from preventive actions. 
+
+
+
+
+
+

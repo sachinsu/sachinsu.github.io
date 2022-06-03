@@ -57,6 +57,17 @@
         deviled eggs.
         - Insulin is the anabolic (building) hormone, and its primary job is to turn excess food into fat for future use. Insulin is a life-saving hormone without which humans wouldn’t have existed for a long time(Imagine storing food as abdominal fat and then giving energy until you find food). Now put this in perspective: eating every day, in fact, 3-4 times a day, insulin raises every time we eat, especially with refined carbohydrates, but it can also do protein and fat. Obesity rates are soaring all over the world(reason above). Insulin can be good and can also be equally harmful. Excess insulin leads to Diabetes, Inflammation, Atherosclerosis(Heart Disease), Obesity Etc
 
+- Dr. Jamnadas on fasting
+    - Ketosis - Fasting results in  lower Insulin levels which results in energy drawn from fats. Fats get converted to tryglcerides and fatty acids. These goto liver and converted to keytons.
+    - Low carb, low sugar diet helps get into keto genesis much faster.
+    - As long as insulin levels are high, one can not lose weight.
+    - Autophagy is the body's way of cleaning out damaged cells, in order to regenerate newer, healthier cells.
+    - High glycemic index fruits - Pineapple. Cherries. Mango. Papaya. Grapes. Kiwis. Watermelon. Cantaloupe.
+    - Good, low glycemic index fruits - Berries, citrus fruits and Apples, peaches, plums and apricot, pears
+    - Too much protein is troublesome. Increases risk of cancer. Taking protein powder is not a good idea. 
+    - Tea , coffee without cream, sugar is ok during fasting 
+    - No processed/refined food. No Sugar. Reduce Carbs. 
+
 - Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & metamodels. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
     - Fats - they dont undergo any chemical changes till they reach intestine. Essentially replacement for Water at High temperature. 
     - Fats do not cause insulin spike 
