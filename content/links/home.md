@@ -9,7 +9,7 @@ draft: false
 - [Awesome](http://awesome.re/) - de-facto repository covering wide range of technical topics.
 - [Awesome list of self hosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
 - [List of Open source Alternatives to SASS](https://github.com/Runacapital/awesome-oss-alternatives)
-- [Onlinef Learning](/links/onlearn/)
+- [Online Learning](/links/onlearn/)
 - [Perspectives](/links/perspectives/)
 - [Distributed Systems Design, Architecture ...](/links/programming/)
 - [Testing](/links/testing/)

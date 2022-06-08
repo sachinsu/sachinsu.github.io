@@ -1070,20 +1070,12 @@
     - Music Recommendation 
         -  These systems recommend a user's next song, movie, book, app, or romantic partner.
         - The recommendation system builds a model from three types of data: a song's waveform, a song's metadata (title, artist, genre, composer, date recorded, length, etc.), and listener reactions. A “reaction” may be passively listening to the currently playing song, or it may be actively starting, skipping or replaying a song, or rating it with a star or a thumbs down.A song's waveform can be analyzed for tempo, beat, timbre, and other factors. The system can recommend a song with similar features to songs that the user has previously liked or, for variety, perhaps recommend a contrasting song. The recommendations can be specialized for activity or time of day; perhaps fast, energetic songs for exercising and slow mellow songs at the end of the day. Metadata can be applied in many ways and even extended to permit creation of predictive,semantic relations between its entities.
-        - collaborative filtering builds on this idea to examine the songs a listener has liked (or disliked), and compares them to every other listener’s reactions. When it finds a similar history, the songs that the user likes can be recommended to each other.
+        - Collaborative filtering builds on this idea to examine the songs a listener has liked (or disliked), and compares them to every other listener’s reactions. When it finds a similar history, the songs that the user likes can be recommended to each other.
         - How approaches apply in the field of investment management, 
             - Momentum investing based on understanding what others are doing is analogous to
             collaborative filtering.
-            - Fundamental investing based on knowledge of an investment’s business is analogous to
-            using semantic knowledge.
-            - Technical investing based on raw stock prices and market volumes is analogous to
-            musical signal analysis.
+            - Fundamental investing based on knowledge of an investment’s business is analogous to using semantic knowledge.
+            - Technical investing based on raw stock prices and market volumes is analogous to musical signal analysis.
     - Protein folding 
         - Healthcare 
         - Prediction about patients more  at risk of developing diseases so as to benefit from preventive actions. 
-
-
-
-
-
-

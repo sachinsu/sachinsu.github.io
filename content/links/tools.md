@@ -8,6 +8,7 @@ draft: false
 
 Section covering useful tools for every day activities, Online learning etc.
 
+- [Dark Lang - Declarative platform to build serverless backend](https://darklang.com/)
 - [OBS Studio - Free and open source software for video recording and live streaming.](https://obsproject.com/)
 - [Open source Wiki platform](https://github.com/BookStackApp/BookStack)
 - [Open source  3D parametric modeler](https://github.com/FreeCAD/FreeCAD)
