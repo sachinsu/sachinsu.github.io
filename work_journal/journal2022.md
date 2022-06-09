@@ -1556,3 +1556,14 @@ short sellers, and keep the fees.
     - That means that the seas were never the biggest priority for France, which is why it never invested much in its colonies, why most of them lost money, and why France is the biggest maritime country in the world: it kept islands here and there that were poor enough that nobody wanted to fight for them.
     - France's population has been in decline. This smaller population is the reason why France is weaker economically than Germany—it’s not productivity: France’s productivity per worker is higher than Germany’s .
     - Germany, meanwhile, can be threatened on all sides, so it benefits from good relationships with its regional neighbors—for example, with Russia. Giving up Russia is much riskier for Germany than France, and increases its exposure to France.
+
+## 2022-jun-09 Thu
+
+- when there are vast numbers of people to coordinate, and they have access to most of the information about the problem they must solve, decision-making should not be centralized. A better information management system is to give people close to the problem the mission—the why and the what—, give them the right incentives, and let them figure out how to achieve the mission.
+
+-  if you only have a few stocks, you will have their average return, and a slightly better risk than any portfolio independently. But if you have all the stocks in the world, you will get the best risk-adjusted reward.
+
+- Daniel Kahneman's 2 Systems of thinking, 
+    - System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control. 
+    - System 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration. It is activated when an event is detected that violates the model of the world that system 1 maintains. 
+    - Intense focusing on a task can make people effectively blind, even to stimuli that normally attract attention. 
