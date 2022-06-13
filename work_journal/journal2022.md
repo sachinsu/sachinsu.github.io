@@ -1567,3 +1567,8 @@ short sellers, and keep the fees.
     - System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control. 
     - System 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration. It is activated when an event is detected that violates the model of the world that system 1 maintains. 
     - Intense focusing on a task can make people effectively blind, even to stimuli that normally attract attention. 
+
+
+- “Semmelweis Reflex” is a metaphor for our reflex-like tendency to reject new evidence or new knowledge because it contradicts our established norms, beliefs, or paradigms.   
+
+- The ability of bad actors to steal your attention is greater than your ability to filter their endless flow of content.

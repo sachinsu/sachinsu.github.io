@@ -42,6 +42,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [PostgreSQL Tips](https://www.crunchydata.com/postgres-tips)
 - [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)
 - [Various index types and their usage](https://blog.crunchydata.com/blog/postgres-indexes-for-newbies?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
 - [Few gotchas for Application Developers](https://www.hagander.net/talks/PostgreSQL%20Gotchas%20for%20App%20Developers.pdf)

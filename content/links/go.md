@@ -56,6 +56,7 @@ My current Favorite Language
 
 ### Libraries, Tools
 
+- [Staticcheck - The advaned Go linter](https://github.com/dominikh/go-tools)
 - [Scripting with Go](https://bitfieldconsulting.com/golang/scripting)
 - [Right way to check weather](https://github.com/chubin/wttr.in)
 - [Generate Go Code for Database / SQL for Mysql and PostgreSQL](https://sqlc.dev)
