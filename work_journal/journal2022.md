@@ -1584,3 +1584,27 @@ short sellers, and keep the fees.
     - A nuclear power plant is a type of thermal power plant, where a heat source is used to turn water into steam, which then drives a turbine. For nuclear power, the heat source is radioactive nuclear fuel producing a nuclear chain reactionn
 
 - Quantity has quality of its own - Stalin
+
+- Daniel Kahneman's Thinking fast and slow,
+    -  the idea of money primes individualism: a reluctance to be involved with others, to depend on others, or to accept demands from others. 
+    - A reliable way to make people believe in falsehoods is frequent repetition, because
+    familiarity is not easily distinguished from truth.
+    - Biological fact: an organism should react cautiously to a novel stimulus, with
+    withdrawal and fear.
+    - When you have doubts about the quality of the evidence: let your judgments of
+    probability stay close to the base rate.
+    -You should not let yourself believe whatever comes to your mind. To be useful, your
+    beliefs should be constrained by the logic of probability.
+    - Base rates matter, even in the presence of evidence about the case at hand.
+    - extreme groups regress to the mean over time
+    - The magic of error reduction works well only when the observations are independent and their errors uncorrelated.To derive the most useful information from multiple sources of evidence, you should always try to make these sources independent of each other.
+    - The financial benefits of self-employment are mediocre: given the same qualifications, people achieve higher average returns by selling their skills to employers than by setting out on their own. The evidence suggests that optimism is widespread, stubborn, and costly.
+    - Rehearse the mantra that will get you significantly closer to economic rationality: you win a few, you lose a few. The main purpose of the mantra is to control your emotional response when you do lose.
+    - If you are serious about hiring the best possible person for the job, this is what you should do. First, select a few traits that are prerequisites for success in this position (technical proficiency, engaging personality, reliability, and so on). Don’t overdo it - six dimensions is a good number. The traits you choose should be as independent as possible from each other, and you should feel that you can assess them reliably by asking a few factual questions. Next, make a list of those questions for each trait and think about how you will score it, say on a 1–5 scale. Collect the information on one trait at a time, scoring each before you move on to the next one. Do not skip around. To evaluate each candidate, add up the six scores.
+    - If you were allowed one wish for your child, seriously consider wishing him or her optimism. Optimists are normally cheerful and happy, and therefore popular; they are resilient in adapting to failures and hardships, their chances of clinical depression are reduced, their immune system is stronger, they take better care of their health, they feel healthier than others and are in fact likely to live longer. A study of people who exaggerate their expected life span beyond actuarial predictions showed that they work longer hours, are more optimistic about their future
+    -Bad emotions, bad parents, and bad feedback have more impact than good ones, and bad information is processed more thoroughly than good. The self is more motivated to avoid bad self-definitions than to pursue good ones. Bad impressions and bad stereotypes are quicker to form and more resistant to disconfirmation than good ones.
+
+
+
+
+
