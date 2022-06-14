@@ -279,5 +279,28 @@
         - Low in debt
         - Management Quality
 
+
+    - when there are vast numbers of people to coordinate, and they have access to most of the information about the problem they must solve, decision-making should not be centralized. A better information management system is to give people close to the problem the mission—the why and the what—, give them the right incentives, and let them figure out how to achieve the mission.
+    -  if you only have a few stocks, you will have their average return, and a slightly better risk than any portfolio independently. But if you have all the stocks in the world, you will get the best risk-adjusted reward.
+
 - Futures
     - Futures are mark-to-market financial products, and when the futures price goes up, the short side of the futures contract has to put up money today.
+
+
+- Walter schloss "Factors to make money in stock markets" 
+    - Price is the most important factor 
+    - Try to establish value of company, start with book value. Make sure that debt does not equal 100% of equity
+    - Have patience 
+    - Dont sell on bad news
+    - Dont be afraid to be loner but be sure to be correct on judgement 
+    - Dont be in too much hurry to sell 
+    - When buying a stock, buy near low of past few years. 
+    - Try to buy assets at discount than earnings. 
+    - Be careful of leverage
+
+- Personal Finance 
+    - Instead of chasing short-term dopamine highs, build a portfolio around a short list of
+    evidence-based rules.
+    - Exercise the discipline to follow those rules. Successful investors reduce fees and stick to
+    something imperfect rather than endlessly pursue perfection.
+    - Loss tolerance - More important than risk tolerance. It indicates how much loss the person will be able to tolerate before he changes his mind and makes mistakes.

@@ -1567,8 +1567,20 @@ short sellers, and keep the fees.
     - System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control. 
     - System 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration. It is activated when an event is detected that violates the model of the world that system 1 maintains. 
     - Intense focusing on a task can make people effectively blind, even to stimuli that normally attract attention. 
+    - System 2 is activated when an event is detected that violates the model of the world that System 1 maintains.
+    - acquisition of skill is driven by the balance of benefits and
+    costs
+    - One of the main functions of System 2 is to monitor and control thoughts and actions “suggested” by System 1, allowing some to be expressed directly in behavior and suppressing or modifying others. 
+    -  System 1 is impulsive and intuitive; System 2 is capable of reasoning, and it is cautious, but at least for some people it is also lazy. 
 
 
 - “Semmelweis Reflex” is a metaphor for our reflex-like tendency to reject new evidence or new knowledge because it contradicts our established norms, beliefs, or paradigms.   
 
 - The ability of bad actors to steal your attention is greater than your ability to filter their endless flow of content.
+
+
+
+- Nuclear Energy 
+    - A nuclear power plant is a type of thermal power plant, where a heat source is used to turn water into steam, which then drives a turbine. For nuclear power, the heat source is radioactive nuclear fuel producing a nuclear chain reactionn
+
+- Quantity has quality of its own - Stalin

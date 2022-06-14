@@ -1079,3 +1079,16 @@
     - Protein folding 
         - Healthcare 
         - Prediction about patients more  at risk of developing diseases so as to benefit from preventive actions. 
+
+
+
+- Types of databases and related industries/use cases
+    - Relational - Lift and shift, Finance, ERP , CRM 
+    - Key-value - Real-time bidding, shopping cart, social , product catalog, customer preferences 
+    - Document - Content Mgmt, Personalization, Mobile
+    - In-memory - Leaderboards, real-time analytics, caching
+    - Graph - Fraud detection, social networking, recommendation engine 
+    - Time-series - IoT, event tracking 
+    - Ledger - System of records, supply chain, healthcare, registrations, financial.
+
+
