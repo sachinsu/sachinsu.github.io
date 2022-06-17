@@ -118,6 +118,7 @@ Platform where i have spent most time till now.
 ## Networking 
 
 - [.NET 5 Networking Improvements](https://devblogs.microsoft.com/dotnet/net-5-new-networking-improvements/)
+- [Understanding WebRequest Problems and Exceptions](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/understanding-webrequest-problems-and-exceptions)
 
 ## Twitter Handles
 
