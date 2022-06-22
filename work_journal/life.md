@@ -11,11 +11,11 @@
 - [Recommendations for Food intake][Health]
     - Liquid calories are not same as solid calories. Avoid liquid calories as body is not able to effectively apply measuring mechanism as it does with solid calories due to million years of evolution.
     - Things to check,
-    - Eat as little as possible.(Eat less often)
-    - Pay attention to fructose intake - eat less of super sweet fruits like mangoes and banana and more of less sweet fruits like Melons, guava. Get rid of fruit juices
-    - Sugar is 50% glucose and 50% fructose - so consider using Glucon-D instead of white sugar Since it has 100% glucose
-    - Honey and jaggery are mostly fructose. So eat less of it. Jaggery is 90% same as sugar. 
-    - Starches are actually long chains of glucose.
+       - Eat as little as possible.(Eat less often)
+        - Pay attention to fructose intake - eat less of super sweet fruits like mangoes and banana and more of less sweet fruits like Melons, guava. Get rid of fruit juices
+        - Sugar is 50% glucose and 50% fructose - so consider using Glucon-D instead of white sugar Since it has 100% glucose
+        - Honey and jaggery are mostly fructose. So eat less of it. Jaggery is 90% same as sugar. 
+        - Starches are actually long chains of glucose.
     - More you feed gut bacteria , good it is. Shift diet to whole grains like red rice,Rajma. reduce maida,ata. Go large on portion of dal and small on rice. Switch to Millets
     - Use ghee.  Fat reduces rate at which blood sugar spikes
     - Getting body into ketosis (16 or more hours of fasting) is very beneficial
@@ -157,5 +157,4 @@
         - State your case - Once you have stated your case, there's no point re-stating it.Going over the same ground repeatedly will damage your case.
         - Clarify any misunderstandings 
         - The ideal attitude to project during any argument is one of calm disinterest. 
-        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.   
-
+        - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.  
