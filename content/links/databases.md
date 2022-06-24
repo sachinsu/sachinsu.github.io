@@ -127,6 +127,7 @@ Knowledge base around general database related topics.
 
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
+- [Efficiently diff rows across two different databases.](https://github.com/datafold/data-diff)
 
 ## Metadata Management
 

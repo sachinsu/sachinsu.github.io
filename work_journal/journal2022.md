@@ -1565,6 +1565,7 @@ short sellers, and keep the fees.
 
 - Daniel Kahneman's 2 Systems of thinking, 
     - System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control. 
+    - The tendency to like (or dislike) everything about a person—including things you have not observed—is known as the halo effect.
     - System 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration. It is activated when an event is detected that violates the model of the world that system 1 maintains. 
     - Intense focusing on a task can make people effectively blind, even to stimuli that normally attract attention. 
     - System 2 is activated when an event is detected that violates the model of the world that System 1 maintains.
@@ -1604,3 +1605,29 @@ short sellers, and keep the fees.
     - If you were allowed one wish for your child, seriously consider wishing him or her optimism. Optimists are normally cheerful and happy, and therefore popular; they are resilient in adapting to failures and hardships, their chances of clinical depression are reduced, their immune system is stronger, they take better care of their health, they feel healthier than others and are in fact likely to live longer. A study of `
     people who exaggerate their expected life span beyond actuarial predictions showed that they work longer hours, are more optimistic about their future
     - Bad emotions, bad parents, and bad feedback have more impact than good ones, and bad information is processed more thoroughly than good. The self is more motivated to avoid bad self-definitions than to pursue good ones. Bad impressions and bad stereotypes are quicker to form and more resistant to disconfirmation than good ones.
+
+    - Travel 
+        - Odissha,
+        - If you are a bird watchers, mangaljodi near chilka is a must. But not many accommodation options though
+        - Am not sure why you are covering Gopalpur in that limited time. Chilka, Puri and Bhubaneswar is the perfect triangle 
+                - Gopalpur I heard has better beaches. And if you are going from Bhubaneswar to Chilika, then Gopalpur is not far away. That said, Puri does make for a decent substitute for Gopalpur in case you want to see the Jagannath Temple and/or Konark Temple. Their are Architectural marvels. Just make sure that you do not land in these temples on a weekend or on a religiously significant day. The whole experience for me at any of these temples has been dependent on whether there was sparse crowd, or a lot of it.
+            - Chilika dhaba .. at chilika lake. Absolute must do for sea food lovers. Bhubaneswar you can do Raja Rani temple, lingaraj. Gopalpur I've heard good things about the beach but the sea is very very rough and unpredictable these days even minus monsoon
+            - Given limited time in Bhubaneswar, you would probably choose to cover Konark Temple, Chausath yogini temple in Hirapur is a notable diversion imo on way back, there are only a handful such temples in india.. (edited) 
+            - I just saw that you are staying there for 3 days. So, I would recommend that you cancel Gopalpur and go to Puri itself.
+            - In Bhubaneswar itself there's Udaygiri, Khandgiri caves and dhauli inscriptions if you are a history buff, lingaraja temple .. note that if you stay in Puri it'll be easier to cover more of this but honestly given limited time..do konark, Chausath yogini and Ashoka dhauli inscriptions on way back
+            - In Puri the best properties are Hans Coco Palm and Mayfair. Hans has a better beach access. Puri is a laid back place with nothing to do, the Jagannath temple is closed this time of year because the Lords have a fever else I would have recommended a temple meal which is delicious. I would definitely recommend going to Raghurajpur there which is on outskirts. It's a craft village and you will get remarkable paintings and handicrafts direct from artisans. My other favourite hidden place about Puri is its government bhang shop. If you choose Puri, you can lounge a day there and cover Konark in afternoon. That'll give little more time for Bhubaneswar the next day. Btw In monsoons the sea is rough and going for a dip either in Gopalpur or Puri may not be that much fun (edited) 
+            - Gopalpur is meh except the Mayfair resort there.I would skip it.
+            - Puri is overhyped (unless visiting temple is something you want to do). For most of our weekends in college, we prefered driving to Konark instead ,using the new BBSR-Puri highway and then Marine drive. Lotus resort in Konark is at par with Mayfair at Puri. Beaches are better. Konark sun temple is there if temple is something you’d like to visit.
+            - There's no good touristy thing to do in BBSR. Udaygiri and Khandagiri are absolutely avoidable.
+            I feel the same way about BBSR except an hour at Lingaraj temple complex. I don't like those Udaygiri/ Khandgiri.
+            - Eat/drink recommendations:
+                -Mayfair lagoon, Bbsr
+                -Ram Mandir alley for all the Food trucks, Bbsr
+                -NEVER eat those white round sweet things they call Rasgulla. You’ll lose faith in Rosogolla if you try them. Avoid
+                -Dalma & Pakhal are low key good but i doubt any tourist will eat them when they are there. It was more of a local thingy when I was living there -kheera=milk & not kheer, pilla= child and not “kutte ka baccha”. So dont get them 
+                - Sweets, I should add, uniquely there is chhena poda (sort of like a sweet chenna bread) and khaja. I have not seen the 2 of any comparable quality outside Odisha. 
+                -also, Chena poda. The best Chena poda you can get is at the sweet shop in Mayfair Lagoon, Bbsr
+                - If you do Puri, then do go to Ananda bazaar (iirc) in the temple and eat the bhog. Most satisfying meal I've ever had. You can also try the different gaujjas that the suars (the sweetshop owners) sell. Super stuff. But this is also Rath Yatra season. So take care!
+                -  snana purnima happened a few days back. The lords are kept out of sight till Rath Yatra as they catch a fever after the bath (which is 15 days).. There'll be no food. Lingaraja will be open, in general odisha temple food is :ok_hand: (edited) 
+
+

@@ -151,10 +151,11 @@
     - Even in the limited scope remaining, it is not your job to correct everything you find that you disagree with. Try to limit yourself to things where the subject is at least something that makes some practical difference to your life.
     - Do not argue about politics, religion, or matters of personal taste or comparative morality.
     - DO NOT argue with Lisp programmers, believers in the Semantic Web, or furries.
-    - Saying something controversial in your own space (i.e. your weblog) is only arguing if you directly reference somebody you are disagreeing with (or it is clearly understood in subtext who you are disagreing with), and that person is likely to give a shit about what you said.
+    - Saying something controversial in your own space (i.e. your weblog) is only arguing if you directly reference somebody you are disagreeing with (or it is clearly understood in subtext who you are disagreeing with), and that person is likely to give a shit about what you said.
     -  If someone disagrees with something you've said, you're already in an argument. 
     - Once you find yourself in an argument, your job is now to make your point clearly, and then leave.
         - State your case - Once you have stated your case, there's no point re-stating it.Going over the same ground repeatedly will damage your case.
         - Clarify any misunderstandings 
         - The ideal attitude to project during any argument is one of calm disinterest. 
         - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.  
+        

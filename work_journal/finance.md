@@ -304,3 +304,9 @@
     - Exercise the discipline to follow those rules. Successful investors reduce fees and stick to
     something imperfect rather than endlessly pursue perfection.
     - Loss tolerance - More important than risk tolerance. It indicates how much loss the person will be able to tolerate before he changes his mind and makes mistakes.
+
+- - Ways to identify Market Capitulation, 
+    - Index providers offer us a handy tool to gauge if markets, on any given day, are in the grip of euphoria or paranoia. The India VIX, or Volatility Index, disseminated by NSE is deemed the fear gauge for Indian markets.  This index captures the annualised volatility expected by options traders in the market over the next 30 trading days. So, a VIX of 21 indicates that traders expect the Nifty50 to move at an annualised rate of 21% in the next month. (More on the workings of the VIX).While the India VIX has tended to trade in the 15 to 30 range in normal times, periods of high fear in the market have seen it shoot above 70. When selling climaxed in end-October 2008, the India VIX which was trading at 30-40 levels at the beginning of the month, shot up to over 80 to peak at 90. - it is also quite possible that the Indian markets don’t get into a capitulation phase at all for now, and simply keep moving sideways for months. When valuation bubbles burst, a time correction, where markets test investors by staying range-bound for a long spell and not breaking out in either direction, is as much of a possibility as a price-based correction. This is why it is best not to wait interminably in the hope of catching stocks at a capitulation phase. Deploy part of your cash whenever you find the stocks you want to own at attractive levels, while keeping some powder dry for that capitulation phase. This will ensure that you don’t lose out on buying opportunities, even if the mouth-watering opportunities provided by capitulation prove elusive.
+
+
+
