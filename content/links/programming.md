@@ -221,6 +221,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [A comparison between RabbitMQ and Apache Kafka](https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/)
 - [Comparing RabbitMQ and Kafka](https://www.cloudamqp.com/blog/2019-12-12-when-to-use-rabbitmq-or-apache-kafka.html)
 - [Strategies for Working with Message Queues](http://www.doxsey.net/blog/strategies-for-working-with-message-queues)
+- [All about Queues](https://www.youtube.com/watch?v=bHSV916YbHE&feature=youtu.be)
 - [Benefits of Message Queues](https://aws.amazon.com/message-queue/benefits/)
 - [Reasons to use Message Queues](https://stackify.com/message-queues-12-reasons/)
 - [NSQ - a realtime distributed messaging platform designed to operate at scale](https://nsq.io)

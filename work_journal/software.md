@@ -1092,3 +1092,26 @@
     - Ledger - System of records, supply chain, healthcare, registrations, financial.
 
 
+- Queues  [Src](https://www.youtube.com/watch?v=bHSV916YbHE&feature=youtu.be)
+    - One of the most fundamental and most important data structures in computing 
+    - Sequence of records , commonly ordered by moment of arrival
+    - Write/add at the bottom , read/consume at the top 
+    - Consumed records are removed
+    - Length of queue can always be read 
+    - Characteristics of Message queues 
+    - Accepts, stores and makes message available for consumption 
+    - Queue individually manages lifecycle of each message
+    - Each mesage is exclusively acquired by one consumer
+    - The queue length can be queried
+    - Kafka is not a "message queue"
+        - Messages are acquired by consumer groups 
+        - consumer groups can query topic back and forth.
+        - Its event streaming engine
+    - Use cases
+        - Load leveling - allows a business process to handle transactions at optimal capacity use and without getting overwhelmed.Spiky loads are buffered by the queue until the processor can handle them .
+        - Discrete event router - Push style distribution of discrete events to serverless workloads or other messaging infrastructures (Azure event grid)
+        - Queue pub/sub broker - Pull-style, queue based transfer of  jobs (RabbitMQ)
+        - Event Stream engine - Partitioned, high volume, sequential recording and unlimited pull style re-reads of event streams. (kafka, pulsar) 
+        - Event stream aggregator - Stateful processing of event streams yielding event streams (Apache samza, apache flink)
+
+
