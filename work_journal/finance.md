@@ -317,4 +317,10 @@
     - 4. Growth: Markets love growth. It’s not a law but is almost one. If you can demonstrate growth in revenue to markets it will bend over backwards to give you money. That’s why new categories are the biggest winners in any market. The base is small and they give you 100% growth,
     - 5. Environment - This is probably the most important law. Just like in physics the frame of reference is key. You have to be able to figure out what type of a market environment are we in? Is it bullish, bearish, choppy or volatile or any other adjective you can think of. Similarly there is a time to be aggressive and a time to be defensive. Every major decision depends on the environment and your understanding of your strategy  vis-a-vis the current environment. Stopping a SIP in a bear market is probably the worst thing you can do as SIP. No point doing sip in a bull market. Know the market environment and make decisions accordingly. 
 
+- On Market timing 
+    -  The moment when you are feeling the most ebullient about your portfolio, when it seems like it’s going up most every day and you can’t believe how much you are making, that is the point at which you want to adjust your stock allocation down
+    - If at the moment you were happiest about your investments you reduced risk, you would probably come pretty close to getting out of the market at the highs. 
+    - when you are feeling the worst about your portfolio, when you have abandoned all hope and are considering just liquidating everything to stop the pain, it is probably time to be taking more risk.
+    - If you can sense big turning points in sentiment, you can make subtle changes to your asset allocation and increase returns over time
+
 

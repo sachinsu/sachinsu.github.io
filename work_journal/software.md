@@ -780,6 +780,17 @@
     - pg_hint_plan offers powerful hints, including the estimated row count correction Rows, JOIN sequence enforcer Leading, and the index override IndexScan. Though the latter may strike back.
     - https://explain.tensor.ru to visualize EXPLAIN-s.
 
+- When should NOSQL be used?
+    - Massive write scaling is required, more than a single server can provide 
+    - Only simple data access pattern is required 
+    - Strong transactional or data retention guarantees are not required 
+    - Unstructured duplicate data that greatly benefits from column compression
+
+- When relational storage be used?
+    - Variable workloads and reporting 
+    - Easy Administration 
+    - Simplified development
+    - Strong data retention
 
 - [Postgres High availability with Patroni][Databases][Architecture], 
     - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts. 
@@ -1092,26 +1103,30 @@
     - Ledger - System of records, supply chain, healthcare, registrations, financial.
 
 
-- Queues  [Src](https://www.youtube.com/watch?v=bHSV916YbHE&feature=youtu.be)
-    - One of the most fundamental and most important data structures in computing 
-    - Sequence of records , commonly ordered by moment of arrival
-    - Write/add at the bottom , read/consume at the top 
-    - Consumed records are removed
-    - Length of queue can always be read 
+- Asynchonicity, Queues  [Src](https://www.youtube.com/watch?v=bHSV916YbHE&feature=youtu.be)
+    - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for an outcome.
+    - asynchronous messaging infrastructure does,
+        * Decoupling: A system handling work behind a messaging infrastructure can be running at capacity and yet not be overwhelmed and can even be down while the messaging infrastructure still accepts messages on its behalf.
+        * Delivery: You can entrust over your messages and the messaging system will try its best not lose them. It will then attempt to deliver them to the right parties and will retry as often as necessary.
+        * Buffering: A messaging infrastructure is generally great at accepting bursts of messages at once and organizing them for later retrieval. The retrieval can then occur at the pace that your application can handle. That is also called load-leveling.
+        * Network-Bridging: Messaging infrastructures can often be attached to multiple networks, allowing information to pass between applications in those networks without there being IP-level connectivity between them.
+    - Queues are One of the most fundamental and most important data structures in computing 
+        - Sequence of records , commonly ordered by moment of arrival
+        - Write/add at the bottom , read/consume at the top 
+        - Consumed records are removed
+        - Length of queue can always be read 
     - Characteristics of Message queues 
-    - Accepts, stores and makes message available for consumption 
-    - Queue individually manages lifecycle of each message
-    - Each mesage is exclusively acquired by one consumer
-    - The queue length can be queried
+        - Accepts, stores and makes message available for consumption 
+        - Queue individually manages lifecycle of each message
+        - Each mesage is exclusively acquired by one consumer
+        - The queue length can be queried
     - Kafka is not a "message queue"
         - Messages are acquired by consumer groups 
         - consumer groups can query topic back and forth.
         - Its event streaming engine
-    - Use cases
-        - Load leveling - allows a business process to handle transactions at optimal capacity use and without getting overwhelmed.Spiky loads are buffered by the queue until the processor can handle them .
-        - Discrete event router - Push style distribution of discrete events to serverless workloads or other messaging infrastructures (Azure event grid)
-        - Queue pub/sub broker - Pull-style, queue based transfer of  jobs (RabbitMQ)
-        - Event Stream engine - Partitioned, high volume, sequential recording and unlimited pull style re-reads of event streams. (kafka, pulsar) 
-        - Event stream aggregator - Stateful processing of event streams yielding event streams (Apache samza, apache flink)
-
-
+        - Use cases
+            - Load leveling - allows a business process to handle transactions at optimal capacity use and without getting overwhelmed.Spiky loads are buffered by the queue until the processor can handle them .
+            - Discrete event router - Push style distribution of discrete events to serverless workloads or other messaging infrastructures (Azure event grid)
+            - Queue pub/sub broker - Pull-style, queue based transfer of  jobs (RabbitMQ)
+            - Event Stream engine - Partitioned, high volume, sequential recording and unlimited pull style re-reads of event streams. (kafka, pulsar) 
+            - Event stream aggregator - Stateful processing of event streams yielding event streams (Apache samza, apache flink)

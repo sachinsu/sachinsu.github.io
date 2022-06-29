@@ -158,4 +158,8 @@
         - Clarify any misunderstandings 
         - The ideal attitude to project during any argument is one of calm disinterest. 
         - Any emotional involvement you show is a weakness that can be exploited by your opponent.Even being passionate about your subject is dangerous, because over time passion becomes zeal, and zeal becomes shrillness.  
-        
+
+- Stoicism, 
+    - Stoicism maintains that you should only focus on what YOU can control.  if you can't control it, there is no decision, and no virtue involved.And therefore it can neither make your life better nor worse.
+    - Stoicism isn't about not needing friends, for example. It's about being able to bear the loss or lack of friends in the best way. It's about remaining self-fulfilled even after that love has ended, whether in heartbreak or grief.
+    - Stoicism is unusually emphatic about action. To *do* is baked into the fabric of the Stoic philosophy.
