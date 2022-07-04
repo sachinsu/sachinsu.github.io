@@ -1573,7 +1573,7 @@ short sellers, and keep the fees.
     costs
     - One of the main functions of System 2 is to monitor and control thoughts and actions “suggested” by System 1, allowing some to be expressed directly in behavior and suppressing or modifying others. 
     -  System 1 is impulsive and intuitive; System 2 is capable of reasoning, and it is cautious, but at least for some people it is also lazy. 
-
+    - Principle of Skill training - rewards for improved performance works better than punishment of mistakes.
 
 - “Semmelweis Reflex” is a metaphor for our reflex-like tendency to reject new evidence or new knowledge because it contradicts our established norms, beliefs, or paradigms.   
 

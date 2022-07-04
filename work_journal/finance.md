@@ -8,7 +8,7 @@
 
 - [Portfolio Construction , John Bogle ***][PersonalFinance]
     - Benjamin Graham believed that investors should never be entirely out of the stock market (or entirely in it, either).
-    - Graham advised that when enthusiasm is high, you should trim back your stocks, but never to zero -- and when pessimism prevails, you should raise your allocation to stocks, but never to 100%.
+    - Graham advised that when enthusiasm is high, you should trim back your stocks, but never to zero and when pessimism prevails, you should raise your allocation to stocks, but never to 100%.
     - Graham suggested keeping a minimum of 25% and a maximum of 75% in stocks, with the rest in bonds.
 
     - On virtues of Investors, 
@@ -322,5 +322,18 @@
     - If at the moment you were happiest about your investments you reduced risk, you would probably come pretty close to getting out of the market at the highs. 
     - when you are feeling the worst about your portfolio, when you have abandoned all hope and are considering just liquidating everything to stop the pain, it is probably time to be taking more risk.
     - If you can sense big turning points in sentiment, you can make subtle changes to your asset allocation and increase returns over time
+
+
+- Lesson's from [Ed thorp](https://tim.blog/thorp)  
+    - Buying Index as whole has earned around 10-10.5% and it should be the way to go for most of the investors 
+    - Active investing involves fund selection, paying tax every time trade happens, paying financial advisors, spending time in analysis. 
+    - If your time horizon is long i.e. 15-20 years or more, put 90% equities and rest in bonds. 
+    - 4% rule - spend 4% or less capital each year and put rest in equities. It is mostly likely to suffice till end of life. 
+    - 2% rule - Only drain 2% of net worth per year then capital will last perpetually. 
+    - Externalities -Consequences of somebody's action that are usually bad 
+    - “hedge fund,” is a private limited partnership that invests in wide-ranging products like  real estate loans, equities, commodities etc.
+    - first fundamental thing is, if everybody’s heard about it already, there’s, historically at least, no reason to believe that you have any kind of edge.
+    -  other-directed people - They tend to get their direction on their values and their ratification from people around them. So they tend to conform, and they tend to go with fads, and they tend to go with a majority vote on things.they pick up their cues about what to do and how to behave, and what’s good and what’s bad, from the crowd. Those people are afloat without a compass. And it’s harder to be that kind of person. And those people are lonely because they don’t really have anything inside that helps them feel a sense of worth, and helps them make decisions that are clear cut and that they feel like they can really count upon. 
+    -  inner-directed people - they tend to be more self-deciding about things.By inner-directed, think of yourself as having your own independent moral and ethical compass, set of rules for living and guiding yourself.
 
 
