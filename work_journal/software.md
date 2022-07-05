@@ -1136,3 +1136,15 @@
         - The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format. The connection remains open until closed by calling EventSource.close().
         - Unlike WebSockets, server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, EventSource is a useful approach for handling things like social media status updates, news feeds, or delivering data into a client-side storage mechanism like IndexedDB or web storage.
         - Example of Public API using this technique - https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams 
+
+
+- HTTP/3
+    - TCP has been cornerstone protocol and http runs on top of it.
+    - QUIC is intended to replace TCP and HTTP/3 is small adaptation of HTTP/2 to run top of it.
+    - QUIC is a generic transport protocol which can be used for HTTP. It runs on top of UDP. QUIC essentially reimplements almost all features that make TCP such a powerful and popular (yet somewhat slower) protocol
+    - HTTP/3 isn’t magically faster than HTTP/2 just because we swapped TCP for UDP.
+    - QUIC deeply integrates with TLS.
+    - QUIC supports multiple independent byte streams.
+    - QUIC uses connection IDs. Faster connection setup
+    - QUIC uses frames.
+    - QUIC is more secure as its not possible to transport cleartext

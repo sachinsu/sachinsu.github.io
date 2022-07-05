@@ -1574,12 +1574,17 @@ short sellers, and keep the fees.
     - One of the main functions of System 2 is to monitor and control thoughts and actions “suggested” by System 1, allowing some to be expressed directly in behavior and suppressing or modifying others. 
     -  System 1 is impulsive and intuitive; System 2 is capable of reasoning, and it is cautious, but at least for some people it is also lazy. 
     - Principle of Skill training - rewards for improved performance works better than punishment of mistakes.
+    - Extreme predictions and a willingness to predict rare events from weak evidence are both
+    manifestations of System 1
+    - A general limitation of the human mind is its imperfect ability to reconstruct past states of
+    knowledge, or beliefs that have changed. Once you adopt a new view of the world (or of
+    any part of it), you immediately lose much of your ability to recall what you used to
+    believe before your mind changed. 
+    - Smarter you are the less compliant you are.m
 
 - “Semmelweis Reflex” is a metaphor for our reflex-like tendency to reject new evidence or new knowledge because it contradicts our established norms, beliefs, or paradigms.   
 
 - The ability of bad actors to steal your attention is greater than your ability to filter their endless flow of content.
-
-
 
 - Nuclear Energy 
     - A nuclear power plant is a type of thermal power plant, where a heat source is used to turn water into steam, which then drives a turbine. For nuclear power, the heat source is radioactive nuclear fuel producing a nuclear chain reactionn
@@ -1611,7 +1616,7 @@ short sellers, and keep the fees.
         - If you are a bird watchers, mangaljodi near chilka is a must. But not many accommodation options though
         - Am not sure why you are covering Gopalpur in that limited time. Chilka, Puri and Bhubaneswar is the perfect triangle 
                 - Gopalpur I heard has better beaches. And if you are going from Bhubaneswar to Chilika, then Gopalpur is not far away. That said, Puri does make for a decent substitute for Gopalpur in case you want to see the Jagannath Temple and/or Konark Temple. Their are Architectural marvels. Just make sure that you do not land in these temples on a weekend or on a religiously significant day. The whole experience for me at any of these temples has been dependent on whether there was sparse crowd, or a lot of it.
-            - Chilika dhaba .. at chilika lake. Absolute must do for sea food lovers. Bhubaneswar you can do Raja Rani temple, lingaraj. Gopalpur I've heard good things about the beach but the sea is very very rough and unpredictable these days even minus monsoon
+                - Chilika dhaba .. at chilika lake. Absolute must do for sea food lovers. Bhubaneswar you can do Raja Rani temple, lingaraj. Gopalpur I've heard good things about the beach but the sea is very very rough and unpredictable these days even minus monsoon
             - Given limited time in Bhubaneswar, you would probably choose to cover Konark Temple, Chausath yogini temple in Hirapur is a notable diversion imo on way back, there are only a handful such temples in india.. (edited) 
             - I just saw that you are staying there for 3 days. So, I would recommend that you cancel Gopalpur and go to Puri itself.
             - In Bhubaneswar itself there's Udaygiri, Khandgiri caves and dhauli inscriptions if you are a history buff, lingaraja temple .. note that if you stay in Puri it'll be easier to cover more of this but honestly given limited time..do konark, Chausath yogini and Ashoka dhauli inscriptions on way back
