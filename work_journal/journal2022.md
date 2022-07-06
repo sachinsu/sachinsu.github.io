@@ -1610,8 +1610,22 @@ short sellers, and keep the fees.
     - If you were allowed one wish for your child, seriously consider wishing him or her optimism. Optimists are normally cheerful and happy, and therefore popular; they are resilient in adapting to failures and hardships, their chances of clinical depression are reduced, their immune system is stronger, they take better care of their health, they feel healthier than others and are in fact likely to live longer. A study of `
     people who exaggerate their expected life span beyond actuarial predictions showed that they work longer hours, are more optimistic about their future
     - Bad emotions, bad parents, and bad feedback have more impact than good ones, and bad information is processed more thoroughly than good. The self is more motivated to avoid bad self-definitions than to pursue good ones. Bad impressions and bad stereotypes are quicker to form and more resistant to disconfirmation than good ones.
+    - Rational investors trade only if the expected gains exceed transactions costs
+    - Overconfident investors overestimate the precision of their information and thereby the expected gains of trading.
+    - Individuals and mutual funds that trade most earn the lowest returns.
+    - The evidence from more than fifty years of research is conclusive: for a large majority of fund managers, the selection of stocks is more like rolling dice than like playing poker. Typically at least two out of every three mutual funds underperform the overall market in any given year. 
+    - Financial experts (and media) are in the business of creating illusion of valid prediction. 
+    - Person who acquires more knowledge develops an enhanced illusion of her skill and becomes unrealistically overconfident
+    - How to do evaluation in interviews 
+    - First, select a few traits that are prerequisites for success in this position (technical proficiency, engaging personality, reliability, and so on). Don’t overdo it—six dimensions is a good number. The traits you choose should be as independent as possible from each other, and you should feel that you can assess them reliably by asking a few factual questions.
+    - Next, make a list of those questions for each trait and think about how you will score it, say on a 1–5 scale. You should have an idea of what you will call “very weak” or “very strong.” 
+    - To avoid halo effect, you must collect the information on one trait at a time, scoring each before you move on to the next one. Do not skip around.
+    - To evaluate each candidate, add up the six scores.
 
-    - Travel 
+
+
+
+- Travel 
         - Odissha,
         - If you are a bird watchers, mangaljodi near chilka is a must. But not many accommodation options though
         - Am not sure why you are covering Gopalpur in that limited time. Chilka, Puri and Bhubaneswar is the perfect triangle 
