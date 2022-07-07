@@ -1148,3 +1148,20 @@
     - QUIC uses connection IDs. Faster connection setup
     - QUIC uses frames.
     - QUIC is more secure as its not possible to transport cleartext
+
+- Data oriented programming 
+    - `lscpu` command shows info about CPUs 
+    - Each CPU Core, 
+        - Has L1 cache
+        - May share L2 cache with other cores 
+        - shares L3 Cache with all other CPU cores
+        - L1 is fastest 
+    - All operations between Core and L1/L2/L3 cache are way faster than accessing main memory 
+    - Crux is "Identify where you have many objects in memory and make the size of each object smaller 
+    - Every construct (e.g. struct) has natural alignment and size. 
+    - Strategies to reduce memory footprint, 
+    - 64 bit CPUs can access more RAM but they also consume more memory (for e.g. 32 bit for pointer whereas its 16-bit on 32-bit CPUs). Consider avoiding pointers and use indexes. 
+    - store boolean out of band. (out of struct) 
+    - Eliminate padding with having struct of Arrays. 
+    - Store sparse data in separate hashmap than as part of struct. 
+

@@ -46,6 +46,7 @@ Knowledge base around general database related topics.
 ## Tools Collection 
 
 - [DBMS Tools](https://dbmstools.com/)
+- [OctoSQL - Query, Join CSV with Postgresql/mysql from Command line](https://github.com/cube2222/octosql)
 - [TSBS - tool to benchmark bulk load performance and query execution performance.](https://github.com/timescale/tsbs)
 - [Goose - Database schema migrations](https://pressly.github.io/goose/)
 - [HammerDB - Benchmarking Suite for databases](https://www.hammerdb.com/)
