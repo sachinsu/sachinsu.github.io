@@ -54,6 +54,7 @@
 
     - Three basic Architecture Styles
         - Monolith (Single Deployment)
+            - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
         - Service based 
         - Microservices (independant deployability)
             - Common topologies 

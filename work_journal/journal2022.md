@@ -1580,7 +1580,14 @@ short sellers, and keep the fees.
     knowledge, or beliefs that have changed. Once you adopt a new view of the world (or of
     any part of it), you immediately lose much of your ability to recall what you used to
     believe before your mind changed. 
-    - Smarter you are the less compliant you are.m
+    - Smarter you are the less compliant you are.
+    - people respond to a difficult question by answering an easier one
+    - the outcome of a start-up depends as much on the achievements of its competitors and on changes in the market as on its own efforts
+    - Confidence is valued over uncertainty.optimism is highly valued, socially and in the market; people and firms reward the providers of dangerously misleading information more than they reward truth tellers.
+    - An unbiased appreciation of uncertainty is a cornerstone of rationality
+    - Premortem - Imagining failure of plan being implemented and writing brief about the disaster/failure.
+    - Organisms that treat threats as more urgent than opportunities have a better chance to survive and reproduce.
+
 
 - “Semmelweis Reflex” is a metaphor for our reflex-like tendency to reject new evidence or new knowledge because it contradicts our established norms, beliefs, or paradigms.   
 
