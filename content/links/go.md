@@ -64,6 +64,7 @@ My current Favorite Language
 - [Golang style guide by Uber](https://github.com/uber-go/guide/blob/master/style.md)
 - [ORM to Model and Traversal of Data as a Graph structure](https://entgo.io/)
 - [Gops-A tool to list and diagnose Go processes currently running on your system](https://github.com/google/gops)
+- [Pocketbase - SQlite database with Go-based Wrapper to expose API](https://pocketbase.io/)
 - [Wails - Electron like environment in Go](https://github.com/wailsapp/wails)
 - [Visualize call graph of a Go program using dot (Graphviz)](https://ofabry.github.io/go-callvis/)
 - [Semgrep - Lightweight static code analysis focussed on Security](https://semgrep.dev/)
@@ -111,7 +112,8 @@ My current Favorite Language
 - [Real-world systems in Go](https://www.youtube.com/watch?v=_YK0viplIl4)
 - [Host Free Go Web app on Netlify](https://blog.carlmjohnson.net/post/2020/how-to-host-golang-on-netlify-for-free/)
 - [Zen of Go - Ten engineering values for writing simple, readable, maintainable Go code](https://the-zen-of-go.netlify.com/)
-- [Ultimate Go Study Guide](https://github.com/hoanhan101/ultimate-go)
+- [Ultimate Go Study Guide](https://githu
+b.com/hoanhan101/ultimate-go)
 
 ### Code snippets
 
