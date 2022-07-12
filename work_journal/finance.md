@@ -337,3 +337,10 @@
     -  inner-directed people - they tend to be more self-deciding about things.By inner-directed, think of yourself as having your own independent moral and ethical compass, set of rules for living and guiding yourself.
 
 
+- Things to always remember while investing, 
+    - The first step in avoiding being taken for a ride is to recognize that you are a mark for people trying to get rich off your money.
+    - Burn the principle into your brain that financial markets are large and competitive and have a lot of smart people in them.
+    - Easy money-making opportunities are almost never real; professional mercenaries would have found and exploited them first.
+    - High returns with low risk explained away by complicated and nontransparent strategies deserve great scrutiny.
+    - On the institutional side, keep in mind that the world is a relatively small place and tremendous value can be gleaned by asking the views of people close to a particular market or strategy.
+    - Ask questions; be skeptical; do not assume that just because brand-name firms or authority figures are involved that all is well.
