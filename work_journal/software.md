@@ -1166,3 +1166,7 @@
     - Eliminate padding with having struct of Arrays. 
     - Store sparse data in separate hashmap than as part of struct. 
 
+- On Estimation 
+    - estimation is valuable when it helps you make a significant decision.
+    - Estimation is useful when it helps with coordination within teams
+    - 

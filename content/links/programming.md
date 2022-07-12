@@ -26,6 +26,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)
 - [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
+- [Steps to migrate from Monolith to Microservices](https://semaphoreci.com/blog/monolith-microservices#modularize)
 - [Distributed architecture concepts I learned while building a large payments system](https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/)
 - [Video: Developing Asynchronous Microservices • Chris Richardson](https://www.youtube.com/watch?v=kyNL7yCvQQc)
 - [Collection of Software development Videos](https://dev.tube/)
@@ -118,7 +119,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Library for Code Scanning Across GO, C#, Java etc.](https://securitylab.github.com/tools/codeql)
 - [Open source Project Management Software](https://github.com/opf/openproject)
 - [Blueboat - Serverless infrastructure for On-premise deployment](https://github.com/losfair/blueboat)
-
+- [Text to Timeline (Gantt) chart](https://github.com/kochrt/markwhen)
 
 ## Open source Pipelining, workflows 
 
@@ -179,6 +180,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [What is OpenTelemetry?](https://otel.lightstep.com)
 - [Course on using Opentelemetry](https://www.youtube.com/watch?v=r8UvWSX3KA8)
 - [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
+- [Techniques for Monitoring Web services](https://jvns.ca/blog/2022/07/09/monitoring-small-web-services/)
 - [OpenTelemetry, Distributed Tracing, W3c Trace Context](https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/)
 - [Tracing at Slack using Kafka](https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs/)
 - [Distributed tracing covering Client (Mobile App) tracing at slack](https://slack.engineering/client-tracing-understanding-mobile-and-desktop-application-performance-at-scale/)

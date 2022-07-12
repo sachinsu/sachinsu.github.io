@@ -37,6 +37,7 @@ draft: false
 #### Miscellaneous
 
 - [Open Source alternative tools](https://degoogle.jmoore.dev/)
+- [Gokey - Derived random passwords based on Master password](https://github.com/cloudflare/gokey)
 - [Useful tools for Windows by Scott Hanselman](https://www.hanselman.com/blog/scott-hanselmans-2021-ultimate-developer-and-power-users-tool-list-for-windows)
 - [Library of Free music](https://cchound.com/)
 - [Ergonomic Home office setup](https://blog.amirathi.com/2019/08/18/ergonomic-office-setup/)
