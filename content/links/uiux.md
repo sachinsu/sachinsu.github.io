@@ -14,6 +14,7 @@ draft: false
 - [Principles of Design](https://principles.design/)
 - [Micro frontends - Techniques, strategies and recipes for building a modern web app with multiple teams that can ship features independently.](https://micro-frontends.org/)
 - [Thoughts on SPAs](https://nolanlawson.com/2022/05/25/more-thoughts-on-spas/)
+- [33 JavaScript concepts every Developer should know](https://github.com/leonardomso/33-js-concepts#8-iife-modules-and-namespaces)
 
 ## Articles
 
@@ -32,6 +33,7 @@ draft: false
 - [How TCP Communication works between Client & Server](https://sirupsen.com/napkin/problem-15/)
 - [Practical Frontend Architecture using React,GraphQL, Next.JS and Typescript](https://jaredgorski.org/writing/14-practical-frontend-architecture/)
 - [The baseline for Web development in 2022](https://engineering.linecorp.com/en/blog/the-baseline-for-web-development-in-2022/)
+- [Web UI Patterns by Addy Osmani](https://www.patterns.dev/)
 
 
 ## Testing
@@ -46,7 +48,8 @@ draft: false
 - [Polaris design system by shopify](https://polaris.shopify.com/)
 - [Qiankun - Complete solution for Micro front-ends](https://github.com/umijs/qiankun)
 - [Single SPA - Router for Micro front-ends](https://single-spa.js.org/)
-- [htmx-access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
+- [HTMX -access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
+- [Bulletproof React - Opinionated React starter kit](https://github.com/alan2207/bulletproof-react)
 - [Javascript based Query/filter creator](https://querybuilder.js.org/)
 - [React based Sci-fi style UI Library with Animation and Sound](https://arwes.dev/)
 - [Javascript libraries for Date and Time (Alternative to Moment.js)](https://dockyard.com/blog/2020/02/14/you-probably-don-t-need-moment-js-anymore)

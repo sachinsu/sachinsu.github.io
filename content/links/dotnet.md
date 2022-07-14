@@ -80,6 +80,7 @@ Platform where i have spent most time till now.
 - [Open source database, Optimized for Event sourcing](https://github.com/eventstore/eventstore)
 - [bflat - No-frills, standalone compiler for .net](https://github.com/MichalStrehovsky/bflat)
 - [Hashids.NET - Generate Youtube-like hashes (short codes) from one or more numbers](https://github.com/ullmark/hashids.net)
+- [Rate Limiting Library from Microsoft](https://devblogs.microsoft.com/dotnet/announcing-rate-limiting-for-dotnet/)
 
 ## Task Queue/Scheduling tools
 
