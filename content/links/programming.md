@@ -102,6 +102,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Awesome Design tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
 - [Regex Repository](https://ihateregex.io/)
 - [SpiderFoot, the most complete OSINT collection and reconnaissance tool](https://github.com/smicallef/spiderfoot)
+- [Analyze TCP Connections by proxy](https://github.com/kevwan/tproxy)
 - [Cloud Architecture Diagrams](https://cloudcraft.co)
 - [Free Online Cloud Architecture Diagram Tool](https://www.cloudskew.com/)
 - [Online Flowcharts, UML diagrams](https://www.draw.io/)
