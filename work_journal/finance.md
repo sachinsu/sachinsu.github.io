@@ -341,3 +341,7 @@
     - High returns with low risk explained away by complicated and nontransparent strategies deserve great scrutiny.
     - On the institutional side, keep in mind that the world is a relatively small place and tremendous value can be gleaned by asking the views of people close to a particular market or strategy.
     - Ask questions; be skeptical; do not assume that just because brand-name firms or authority figures are involved that all is well.
+
+- At the end of the day, unintelligent people always look for a scapegoat. Intelligent people are hungry for continual guidance and mentorship, take responsibility for their actions, and can control their emotions in times of instability. 
+- The first principle of any investment strategy, especially if you do not have a lot of money, should be to make sure that the value of your investment does not go down dramatically because you don’t understand what you are doing and have been naively trusting someone else.
+- any investment is a way of making money, and if you get so attached to it that it becomes a part of your identity
