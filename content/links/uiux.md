@@ -45,6 +45,8 @@ draft: false
 ## Libraries and Tools
 
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
+- [Remix - Modern SPA framework](https://github.com/remix-run/remix)
+- [Blitz - Modern SPA framework based on React](https://github.com/blitz-js/blitz)
 - [Polaris design system by shopify](https://polaris.shopify.com/)
 - [Qiankun - Complete solution for Micro front-ends](https://github.com/umijs/qiankun)
 - [Single SPA - Router for Micro front-ends](https://single-spa.js.org/)
