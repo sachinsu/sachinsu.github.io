@@ -166,3 +166,8 @@
 
 - Work day,
     - Sit to do computer work. Sit using a height-adjustable, downward titling keyboard tray for the best work posture, then every 20 minutes stand for 8 minutes AND MOVE for 2 minutes. The absolute time isn’t critical but about every 20-30 minutes take a posture break and stand and move for a couple of minutes.  Simply standing is insufficient. Movement is important to get blood circulation through the muscles. And movement is FREE! Research shows that you don’t need to do vigorous exercise (e.g. jumping jacks) to get the benefits, just walking around is sufficient. So build in a pattern of creating greater movement variety in the workplace (e.g. walk to a printer, water fountain, stand for a meeting, take the stairs, walk around the floor, park a bit further away from the building each day).So the key is to build frequent movement variety into the normal workday
+
+- In the absence of variety, bad ideas tend to stick around, which is also exactly what happens in closed societies and large corporations.
+- Passion is inversely proportional to the amount of real information available. The real world is often very boring. 
+- People’s expectations rise faster than living standards, so a society that becomes exponentially wealthier can see a decline in net happiness and satisfaction. There is virtually nothing people can’t get accustomed to, which also helps explain why there is so much desire for innovation and improvement.
+

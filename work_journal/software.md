@@ -375,6 +375,12 @@
             ```
     - Async programming - don't block
 
+- TCP Protocol
+    - Runs on top of IP.any data you send via TCP gets converted into one or more datagrams, then sent over the networking using IP, then is reassembled into a stream of data on the other end. 
+    - Created to ensure that all packets sent arrive at the destination. That too in same sequence and without duplication
+    - In UDP, data is sent one datagram at a time unlike TCP. 
+    - Socket is a endpoint for network communication. Its a virtual device exposed on a computer.
+
 - Websockets
     -  web socket server starts off by being an HTTP server, accepting TCP conections and handling the HTTP requests on the TCP connection. When a request comes in that switches that connection to a being a web socket connection, the protocol handler is changed from an HTTP handler to a WebSocket handler. So it is only that TCP connection that gets its role changed: the server continues to be an HTTP server for other requests, while the TCP socket underlying that one connection is used as a web socket.
 
