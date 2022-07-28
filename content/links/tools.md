@@ -20,6 +20,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Parsr - Transform PDF,Image into Structured data](https://github.com/axa-group/parsr)
 - [SOPS - Tool to secure  secrets (JSON,YAML, INI etc.) via Command line and as GO library](https://github.com/mozilla/sops)
 - [Windows Powertools for greater productivity](https://github.com/microsoft/PowerToys)
+- [Ex-googler's list similar tools/techniques](https://github.com/jhuangtw/xg2xg)
 
 ## Useful Command line tools
 

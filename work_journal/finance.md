@@ -229,6 +229,16 @@
     - but there’s no way to scientifically calculate what those limits should be. 
     - simply being invested is by far “the most important thing.”.
     - someone entering adulthood today is practically guaranteed to be well fixed by the time they retire if they merely start investing promptly and avoid tampering with the process by trading
+    - Markets swing dramatically, from bullish to bearish, and from overpriced to underpriced.
+    - Their movements are driven by the actions of “the crowd,” “the herd,” and “most people.”  Bull markets occur because more people want to buy than sell, or the buyers are more highly motivated than the sellers.  The market rises as people switch from being sellers to being buyers, and as buyers become even more motivated and the sellers less so.  (If buyers didn’t predominate, the market wouldn’t be rising.)
+    - Market extremes represent inflection points.  These occur when bullishness or bearishness reaches a maximum.  Figuratively speaking, a top occurs when the last person who will become a buyer does so.  Since every buyer has joined the bullish herd by the time the top is reached, bullishness can go no further, and the market is as high as it can go.  Buying or holding is dangerous.
+    - Since there’s no one left to turn bullish, the market stops going up.  And if the next day one person switches from buyer to seller, it will start to go down.
+    - So at the extremes, which are created by what “most people” believe, most people are wrong.
+    - Therefore, the key to investment success has to lie in doing the opposite: in diverging from the crowd.  Those who recognize the errors that others make can profit enormously from contrarianism.
+    - No strategy – and no level of brilliance – will make every quarter or every year a successful one.  Strategies become more or less effective as the environment changes and their popularity waxes and wanes.
+
+
+
 
 
 - India as Market - India isn’t really one big market. There are multiple markets and markets within markets. India is not a single language market when it comes to the entertainment business. Also, not many Indians speak English.Just because India has 1.4 billion people doesn’t mean that the market for any product is as big or even a small portion of it.India and Indians seek value for money every time they spend money on something, and Netflix simply doesn’t provide that for most of us. Any form of mass communication needs to be simple enough for the average individual to understand, irrespective of whether it is writing that wants to entertain or propaganda that intends to influence.
@@ -345,3 +355,13 @@
 - At the end of the day, unintelligent people always look for a scapegoat. Intelligent people are hungry for continual guidance and mentorship, take responsibility for their actions, and can control their emotions in times of instability. 
 - The first principle of any investment strategy, especially if you do not have a lot of money, should be to make sure that the value of your investment does not go down dramatically because you don’t understand what you are doing and have been naively trusting someone else.
 - any investment is a way of making money, and if you get so attached to it that it becomes a part of your identity
+
+- On leveraged market strategies
+    - Leverage cuts both ways: You will make more money when you are right, and lose more when you are wrong. Tragically, the extra money you make on the upside can hook you and feed your hubris, making you overstay your strategy until those huge gains turn into huge losses.
+
+- Good Investing skills From Morgan housel,
+    - Lack of FOMO
+    - A well-calibrated sense of your future regret
+    - A sensitive bullshit detector
+    - Respecting luck as much as you respect risk
+    - Identifying what game you are playing and not being persuaded by people playing different games.

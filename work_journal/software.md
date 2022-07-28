@@ -422,6 +422,13 @@
     - Streaming
         - All the ETL use cases are potentially candidates for streaming
 
+    - A data warehouse is a relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
+
+    - A data lake is a file store, usually on a distributed file system for high performance data access. Technologies like Spark or Hadoop are often used to process queries on the stored files and return data for reporting and analytics. These systems often apply a schema-on-read approach to define tabular schemas on semi-structured data files at the point where the data is read for analysis, without applying constraints when it's stored. Data lakes are great for supporting a mix of structured, semi-structured, and even unstructured data that you want to analyze without the need for schema enforcement when the data is written to the store.
+
+    - Data lakehouse - The raw data is stored as files in a data lake, and a relational storage layer abstracts the underlying files and expose them as tables, which can be queried using SQL. SQL pools in Azure Synapse Analytics include PolyBase, which enables you to define external tables based on files in a datalake (and other sources) and query them using SQL. Synapse Analytics also supports a Lake Database approach in which you can use database templates to define the relational schema of your data warehouse, while storing the underlying data in data lake storage – separating the storage and compute for your data warehousing solution. Data lakehouses are a relatively new approach in Spark-based systems, and are enabled through technologies like Delta Lake; which adds relational storage capabilities to Spark, so you can define tables that enforce schemas and transactional consistency, support batch-loaded and streaming data sources, and provide a SQL API for querying.
+
+
 - [API Gateway][Architecture] 
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
        - Coupling - Without API Gateway, Client apps are coupled to the internal services. Any changes in internal services directly impact clients. 
@@ -1020,7 +1027,9 @@
 
 - SQLite - Litestream - How it works 
     -  In WAL-mode (the mode you very much want on a server, as it means writers do not block readers), SQLite appends to a WAL file and then periodically folds its contents back into the main database file as part of a checkpoint. Litestream interposes itself in this process: it grabs a lock so that no other process can checkpoint. It then watches the WAL file and streams the appended blocks up to S3, periodically checkpointing the database for you when it has the necessary segments uploaded.
-
+    - Storing integers instead of floating point numbers is much more efficient as SQLite does not compress floats.
+    
+     
 - [Database Indexes][Databases]
     - Cardinality is the inverse of "the number of records returned per value." High cardinality returns one record per index value, and low cardinality returns many records per index value. Efficient indexes are high-cardinality indexes. Primary keys are the best example of a high-cardinality index. String-based tags are an example of a low-cardinality index because there are typically many objects assigned to a single tag.Build the indexes to match your query needs, and note that high-cardinality is faster.
     - Table scan happens when no suitable index exists.When using a table scan, the database keeps all of the records in RAM while comparing values.    

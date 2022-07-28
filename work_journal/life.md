@@ -171,3 +171,9 @@
 - Passion is inversely proportional to the amount of real information available. The real world is often very boring. 
 - People’s expectations rise faster than living standards, so a society that becomes exponentially wealthier can see a decline in net happiness and satisfaction. There is virtually nothing people can’t get accustomed to, which also helps explain why there is so much desire for innovation and improvement.
 
+- Principled negotiation techniques
+    - Separate people from the problem
+    - Focus on interests not positions 
+    - Generate a variety of possibilities before deciding what to do
+    - Insist that results be based on some objective standard (like market value, expert opinion, custom or law)
+
