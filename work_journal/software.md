@@ -221,6 +221,7 @@
 
 
 - [.NET Specific Tech. Tips][Architecture]
+    - Azure App service account can (and should) be used to host multiple applications
     - at scale could means 
         - no. of users 
         - size of data

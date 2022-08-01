@@ -11,7 +11,7 @@ draft: false
 - [List of Open source Alternatives to SASS](https://github.com/Runacapital/awesome-oss-alternatives)
 - [Online Learning](/links/onlearn/)
 - [Perspectives](/links/perspectives/)
-- [Distributed Systems Design, Architecture ...](/links/programming/)
+- [Distributed Systems Design, Architecture](/links/programming/)
 - [Testing](/links/testing/)
 - [UI/UX](/links/uiux)
 - [Languages](/links/planguages/)

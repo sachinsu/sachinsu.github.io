@@ -52,6 +52,7 @@ Platform where i have spent most time till now.
 - [What not to do in ASP.NET, and what to do instead](https://docs.microsoft.com/en-us/aspnet/aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead#standards)
 - [Use Task.Run at the invocation, not in the implementation](https://blog.stephencleary.com/2013/11/taskrun-etiquette-examples-dont-use.html)
 - [Take Advantage of ASP.NET Built-in Features to Fend Off Web Attacks](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms972969(v=msdn.10)?redirectedfrom=MSDN)
+- [Blazor for Web Form Developers](https://dotnet.microsoft.com/en-us/learn/aspnet/architecture#ebook-blazor-for-web-forms-devs-swimlane)
 
 ## Windows Forms 
 
