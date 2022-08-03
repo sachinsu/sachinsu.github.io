@@ -219,6 +219,11 @@
 
     - Moreover, like any true disruption, it will be very difficult for Amazon to respond: sure, R2 may lead Amazon to reduce its egress fees, but given the importance of those fees to both AWS’s margins and its lock-in, it’s hard to see them going away completely. More importantly, AWS itself is locked-in to its integrated approach: the entire service is architected both technically and economically to be an all-encompassing offering; to modularize itself in response to Cloudflare would be suicidal.
 
+- Case for Cloud vs. On-prem
+    - Bursty Workload ( If your workload goes through long periods of idleness punctuated with large unpredictable bursts of activity) is good case for a cloud based architecture
+    - Using CDN is a good use of Cloud infrastructure
+    - Today's servers are highly capable and scaling vertically is easy. Once limit of the server is reached then go for sharding and horizontal scaling or use cloud architecture that gives horizontal scaling for "free". 
+    - Using one big server is comparatively cheap, keeps your overheads at a minimum, and actually has a pretty good availability story if you are careful to prevent correlated hardware failures. It’s not glamorous and it won’t help your resume, but one big server will serve you well.
 
 - [.NET Specific Tech. Tips][Architecture]
     - Azure App service account can (and should) be used to host multiple applications
