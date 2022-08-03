@@ -48,6 +48,7 @@ Section covering Business, project/programming perspectives
 - [Data driven enterprises of 2025](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/the-data-driven-enterprise-of-2025)
 - [Some Benefits of Simple Software Architecture](https://www.wave.com/en/blog/simple-architecture/)
 - [Determining how Architectural decisions impact business via Value](https://martinfowler.com/articles/value-architectural-attribute.html)
+- [Use just one big Server](https://www.specbranch.com/posts/one-big-server/)
 
 ## Legacy Modernization 
 
