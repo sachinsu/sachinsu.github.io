@@ -428,7 +428,16 @@
     - A data lake is a file store, usually on a distributed file system for high performance data access. Technologies like Spark or Hadoop are often used to process queries on the stored files and return data for reporting and analytics. These systems often apply a schema-on-read approach to define tabular schemas on semi-structured data files at the point where the data is read for analysis, without applying constraints when it's stored. Data lakes are great for supporting a mix of structured, semi-structured, and even unstructured data that you want to analyze without the need for schema enforcement when the data is written to the store.
 
     - Data lakehouse - The raw data is stored as files in a data lake, and a relational storage layer abstracts the underlying files and expose them as tables, which can be queried using SQL. SQL pools in Azure Synapse Analytics include PolyBase, which enables you to define external tables based on files in a datalake (and other sources) and query them using SQL. Synapse Analytics also supports a Lake Database approach in which you can use database templates to define the relational schema of your data warehouse, while storing the underlying data in data lake storage – separating the storage and compute for your data warehousing solution. Data lakehouses are a relatively new approach in Spark-based systems, and are enabled through technologies like Delta Lake; which adds relational storage capabilities to Spark, so you can define tables that enforce schemas and transactional consistency, support batch-loaded and streaming data sources, and provide a SQL API for querying.
-
+    - Star schema (The name “star schema” comes from the fact that when the table relationships are visualized, the fact table is in the middle, surrounded by its dimension tables; the connections to these tables are like the rays of a star.)
+        - Fact table - represents an event that occurred at a particular time
+        - Dimension table - dimensions represent the who, what, where, when, how, and why of the event. Dimension tables are usually much smaller (millions of rows).
+        - Snowflake schema - where dimensions are further broken down into sub-dimensions.Snowflake schemas are more normalized than star schemas, but star schemas are often preferred because they are simpler for analysts to work with.
+        - The idea behind column-oriented storage is simple: don’t store all the values from one row together, but store all the values from each column together instead. If each column is stored in a separate file, a query only needs to read and parse those columns that are used in that query, which can save a lot of work. Columnar storage can be significantly faster for ad hoc analytical queries.
+    - OLAP Cubes are a grid of aggregates grouped by different dimensions.
+    - LSM-trees - All writes first go to an in-memory store, where they are added to a sorted structure and prepared for writing to disk. It doesn’t matter whether the in-memory store is row-oriented or column-oriented. When enough writes have accumulated, they are merged with the column files on disk and written to new files in bulk.
+    - Replication 
+        - Synchronous - the leader waits until follower 1 confirms receipt of changes/updates
+        - Asynchronous - the leader Doesn't wait for confirmation from follower 
 
 - [API Gateway][Architecture] 
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
@@ -1185,4 +1194,11 @@
 - On Estimation 
     - estimation is valuable when it helps you make a significant decision.
     - Estimation is useful when it helps with coordination within teams
-    - 
+
+- Cypress.io - End to end test platform
+    - Cypress takes screenshots as tests run 
+    - automatically reloads when tests are changed
+    - Waits for commands and assertions 
+    - is not a general purpose tool like for indexing the web.
+    - Only JS is supported for test cases
+    - Each test is bound to single domain.

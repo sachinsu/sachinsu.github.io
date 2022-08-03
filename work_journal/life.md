@@ -177,3 +177,22 @@
     - Generate a variety of possibilities before deciding what to do
     - Insist that results be based on some objective standard (like market value, expert opinion, custom or law)
 
+- Three rules of thumb
+    - Anchoring rule - Use the first available piece of information as the basis for making an estimate about something that has absolutely nothing to do with that information.
+    - Representative heuristics (or Rule of typical things) - choose intuition over logic. Belief about typicality. It 'generally favors outcomes that make good
+    stories or good hypotheses. It is particularly good for learning from the very worst sort of experiences.
+    - Availability heuristics - 
+
+- Leadership
+    - Watching video games is like living other people's life.
+    - Living in the past is like living someone else's life.
+    - It is good to try achieve things but dont get fixated with outcome.
+    - We are here to make positive difference in life and not being smart or right
+    - Make peace with decision who has power to make it 
+    - Questions 
+        - Did i do my best to, 
+            - set clear goals
+            - progress towards achieving my goal
+            - be happy
+            - build positive relationships
+            
