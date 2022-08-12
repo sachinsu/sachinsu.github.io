@@ -369,4 +369,3 @@
 - Sageone's Samit Vartak on Markets, 
     -   analysis clearly depicts that even though it’s difficult to time your entries with short term duration in mind, but one can time it with high degree of certainty keeping long term duration in mind. Entries below the median P/B of 3.5x have resulted in above average returns whereas entries above the median P/B of 4x have resulted in significantly below average returns over the long term.
     -  Stretching your horizon is a much reliable way of generating significant incremental returns.
-

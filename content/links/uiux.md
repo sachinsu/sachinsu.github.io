@@ -49,6 +49,7 @@ draft: false
 - [Blitz - Modern SPA framework based on React](https://github.com/blitz-js/blitz)
 - [Polaris design system by shopify](https://polaris.shopify.com/)
 - [Qiankun - Complete solution for Micro front-ends](https://github.com/umijs/qiankun)
+- [Astro - a website build tool](https://github.com/withastro/astro)
 - [Single SPA - Router for Micro front-ends](https://single-spa.js.org/)
 - [HTMX -access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes](https://htmx.org)
 - [Bulletproof React - Opinionated React starter kit](https://github.com/alan2207/bulletproof-react)

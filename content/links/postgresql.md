@@ -42,6 +42,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [5 Minutes in PostgreSQL - Videos](https://www.youtube.com/channel/UCDV_1Dz2Ixgl1nT_3DUZVFw/videos)
 - [PostgreSQL Tips](https://www.crunchydata.com/postgres-tips)
 - [Optimizing AutoVaccum in Postgresql](https://www.citusdata.com/blog/2022/07/28/debugging-postgres-autovacuum-problems-13-tips/)
 - [10 Things i hate about PostgreSQL](https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791)

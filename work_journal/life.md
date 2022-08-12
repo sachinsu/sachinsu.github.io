@@ -195,4 +195,28 @@
             - progress towards achieving my goal
             - be happy
             - build positive relationships
-            
+
+
+- Religions
+    - Churches thrive on obsession. Obsessed believers become missionaries, preachers, and evangelists. Obsession is a feature, not a flaw, of religion.
+    - Nothing is more persuasive than the opinion you desperately want to believe is true.
+    - Religion is a core component of identity for billions of people. Religion provides structure, a moral compass, and a sense of right and wrong. Religion gives us a sense of purpose. The belief in a higher power, whether it be God, Allah, or Yahweh, shelters us against the fear of death and the infinite unknown.
+    - "I never desire to converse with a man who has written more than he has read."
+
+- Thomas Sowell's Quotes
+    - Intellect is not wisdom
+    - When you want to help people, you tell them the truth. When you want to help yourself, you tell them what they want to hear.
+    - People who pride themselves on their "complexity" and deride others for being "simplistic" should realize that the truth is often not very complicated.What gets complex is evading the truth.
+    - Bailing out people who made ill-advised mortgages makes no more sense than bailing out people who lost their life savings in Las Vegas casinos.
+    - The problem isn't that Johnny can't read. The problem isn't even that Johnny can't think.The problem is that Johnny doesn't know what thinking is. He confuses it with feeling.
+    - It takes considerable knowledge just to realize the extent of your own ignorance.
+    - There are no solutions. There are only trade-offs.
+    - Despite a voluminous and often fervent literature on "income distribution," the cold fact is that most income is not distributed: It is earned.
+    - The great escape of our times is escape from personal responsibility for the consequences of one’s own behavior.
+    - When people get used to preferential treatment, equal treatment seems like discrimination.
+    - Too much of what is called 'education' is little more than an expensive isolation from reality.
+    - The least productive people are usually the ones who are most in favor of holding meetings.
+    - There are few talents more richly rewarded with both wealth and power, in countries around the world, than the ability to convince backward people that their problems are caused by other people who are more advanced.
+
+
+

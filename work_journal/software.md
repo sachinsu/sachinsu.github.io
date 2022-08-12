@@ -443,6 +443,12 @@
     - Replication 
         - Synchronous - the leader waits until follower 1 confirms receipt of changes/updates
         - Asynchronous - the leader Doesn't wait for confirmation from follower 
+    - Data vault 
+        -  designed for historical tracking all aspects of data – relationships and attributes as well as where the data is being sourced from over time. Satellites, which are similar to dimensions.
+        - Puts forth a set of design principles & structures for increasing historical tracking performance within the Vault (PiT and Bridge). The Data Vault model is flexible enough to adopt these structures at any point in time within the iterative modeling process and does not require advanced planning.
+        - Data Vault is essentially a layer between the information mart / star schema and staging. There is some additional overhead that comes with developing this layer both in terms of ETL development and modeling. If the project is on a small scale or the project’s life is short-lived, it may not be worth pursuing a Data Vault model.
+        - One of the main driving factors behind using Data Vault is for both audit and historical tracking purposes. If none of these are important to you or your organization, it can be difficult to eat the overhead required to introduce another layer into your modeling. However, speaking from long-term requirements, it may be a worthwhile investment upfront.
+
 
 - [API Gateway][Architecture] 
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
@@ -1211,3 +1217,20 @@
     3. Design and build software, even operating systems, to be tried early, ideally within weeks. Don’t hesitate to throw away the clumsy parts and rebuild them.
     4. Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you’ve finished using them.
     5. In Unix, file descriptor is an interface which can be used to represent things like actual file on filesystem, Communication channel to other process, a device driver, a TCP socket etc.
+
+- Quantum resistant Encryption 
+    - Problem: Quantum computers will be able to break current cryptography schemes (mainly asymmetric encryption, like RSA) easily.
+    - Solution: Use Lattice-based (a mathematical concept) Encryption, which is currently believed to be hard for quantum computers to solve efficiently.
+    - In Sum: Quantum computers are becoming an imminent problem. We as developers need to start thinking about implementing post-quantum cryptography algorithms to protect them now before it’s too late.
+    - Prepare for the future: Post-quantum cryptography is around the corner (Q-day), and starting to spread awareness and implementing strong encryption mechanisms today is important for that future. 
+    - Hidden advancements: The biggest quantum computer we know about is currently IBM’s Eagle with 127 stable qbits, planning to reach 433 in 2022. The question is, what about bad actors and rogue nation-states working on quantum computers we don’t know about? They might reach quantum supremacy a lot sooner than we anticipate.
+    - Hack now, decrypt later: There are threat actors that save ciphertexts from hacked targets right now, to later decrypt them with quantum computers. This means that sensitive information sent today is still prone to attack.
+    - Most promising: At the moment, lattices seem like the best candidates to secure against quantum computers
+
+- Distributed Systems 
+    - The closer the processing and caching of your data is kept to its persistent storage, the more efficient your processing, and the easier it will be to keep your caching consistent and fast. Networks have more failures and more latency than pointer dereferences and fread(3).
+    -  Extract services. “Service” here means “a distributed system that incorporates higher-level logic than a storage system and typically has a request-response style API”. Be on the lookout for code changes that would be easier to do if the code existed in a separate service instead of in your system. An extracted service provides the benefits of encapsulation typically associated with creating libraries
+    - "Feature flags” are a common way product engineers roll out new features in a system. Feature flags are typically associated with frontend A/B testing where they are used to show a new design or feature to only some of the userbase.
+    - Exposing metrics (such as latency percentiles, increasing counters on certain actions, rates of change) is the only way to cross the gap from what you believe your system does in production and what it actually is doing.
+    - Find ways to be partially available. Partial availability is being able to return some results even when parts of your system is failing.
+    - Implement backpressure throughout your system. Backpressure is the signaling of failure from a serving system to the requesting system and how the requesting system handles those failures to prevent overloading itself and the serving system. Designing for backpressure means bounding resource use during times of overload and times of system failure. This is one of the basic building blocks of creating a robust distributed system.

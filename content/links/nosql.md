@@ -30,6 +30,7 @@ draft: false
 
 ## Redis
 
+- [About Redis](https://architecturenotes.co/redis/)
 - [DragonflyDB - Alternative to Redis](https://dragonflydb.io/)
 - [Redis High Availability](https://alex.dzyoba.com/blog/redis-ha/)
 - [Redis Cluster](https://alex.dzyoba.com/blog/redis-cluster/)
