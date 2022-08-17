@@ -9,6 +9,7 @@ draft: false
 Section covering Business, project/programming perspectives
 
 - [Don't call yourself a programmer](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
+- [Grasp Responsibility Patterns](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 - [Things every programmer should know](https://github.com/mtdvio/every-programmer-should-know)
 - [Guiding principles after 20 years of programming](https://alexewerlof.medium.com/my-guiding-principles-after-20-years-of-programming-a087dc55596c)
 - [Programmers: Before you turn 40, get a plan B](https://improvingsoftware.com/2009/05/19/programmers-before-you-turn-40-get-a-plan-b/)

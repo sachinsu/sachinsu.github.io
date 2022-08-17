@@ -448,7 +448,12 @@
         - Puts forth a set of design principles & structures for increasing historical tracking performance within the Vault (PiT and Bridge). The Data Vault model is flexible enough to adopt these structures at any point in time within the iterative modeling process and does not require advanced planning.
         - Data Vault is essentially a layer between the information mart / star schema and staging. There is some additional overhead that comes with developing this layer both in terms of ETL development and modeling. If the project is on a small scale or the project’s life is short-lived, it may not be worth pursuing a Data Vault model.
         - One of the main driving factors behind using Data Vault is for both audit and historical tracking purposes. If none of these are important to you or your organization, it can be difficult to eat the overhead required to introduce another layer into your modeling. However, speaking from long-term requirements, it may be a worthwhile investment upfront.
-
+    - Wherescape
+        - Additional layer between Staging and Star schema 
+        - Wherescape (WS) doesn't address Real time integration itself...needs another product 
+        - There is additional overhead but advantages are better historical tracking and auditing
+        - WS has dependency on Windows 
+        - It has dependency on SQL Server for Modelling (?) ...not sure if it has to be in HA Mode .... One option discussed was free SQL Server Express Edition but  HA Options with these edition are not available.
 
 - [API Gateway][Architecture] 
        - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
@@ -685,6 +690,27 @@
     - It is more difficult in architectures where analytical and operational data must stay in sync at all times, which presents a daunting challenge in distributed architectures.
 
 - Observability - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
+    - Structured log events with rich context specific details (often maintained as key-value pair) are highly useful where aim of observability  is for swiftly identifying where in your system the error or problem is coming from, so you can debug it — by reproducing it, or seeing what it has in common with other erroring requests. 
+    - The rule is to have one observability event per request per service hop (example, if your request hit the edge, API, four internal services, two databases … but ran 1 query on one db and 10 queries on the second db … you would generate a total of *19 observability events* for this request where all of them are linked by randomly generated "Request ID".) 
+    - Structure events are richer than metrics due to its payload. 
+    - Think about the data you need while debugging the issue.
+    - Request id must be unique and sequence of these events should be preserved.
+    - only gather observability events from services that we can and do introspect
+    - Each event should be dense all the useful context like,
+        - Metadata like src, dst headers
+        - The timing stats and contents of every network call (our beelines wrap all outgoing http calls and db queries automatically) 
+        - Every raw db query, normalized query family, execution time etc
+        - Infra details like AZ, instance type, provider
+        - Language/environment context like $lang version, build flags, $ENV variables
+        - Any and all unique identifying bits you can get your grubby little paws on — request ID, shopping cart ID, user ID, request ID, transaction ID, any other ID … these are always the highest value data for debugging.
+        - Any other useful application context.  Service name, build id, ordering info, error rates, cache hit rate, counters, whatever.
+        - Possibly the system resource state at this point in time.  e.g. values from /proc/net/ipv4 stats 
+    - pretty metrics and dashboards and aggregates from structured events
+    - Event storage - How long and which, 
+        - Events must be sampled and some rules are, 
+        -  health checks that return 200 OK usually represent a significant chunk of your traffic and are basically useless, while 500s are almost always interesting
+        - all requests to /login or /payment endpoints
+        -  For database traffic: SELECTs for health checks are useless, DELETEs and all other mutations are rare but you should keep all of them.
 
 ## 2022-jan-03 Mon
 
@@ -764,7 +790,7 @@
     - Analyze the diff.
     - Begin a long running process of copying existing rows from the original tables to the ghost table. Rows are copied in small batches.
     - Capture or react to ongoing changes to the original table, and continuously apply them onto the ghost table.
-    - Monitor general database and replication metric, and throttle so as to prioritize production traffic as needed.
+    - Monitor general database and replication metric, and throttle so as to prioritize production traffic as needed.   
     - When the existing data copy is complete, the migration is generally considered as ready to cut-over, give or take some small backlog or state of the replication topology.
     - Final step is the cut-over: renaming away of the original table, and renaming the ghost table in its place. Up to some locking or small table outage time, the users and apps are largely ignorant that the table has been swapped under their feet.
 
@@ -1234,3 +1260,8 @@
     - Exposing metrics (such as latency percentiles, increasing counters on certain actions, rates of change) is the only way to cross the gap from what you believe your system does in production and what it actually is doing.
     - Find ways to be partially available. Partial availability is being able to return some results even when parts of your system is failing.
     - Implement backpressure throughout your system. Backpressure is the signaling of failure from a serving system to the requesting system and how the requesting system handles those failures to prevent overloading itself and the serving system. Designing for backpressure means bounding resource use during times of overload and times of system failure. This is one of the basic building blocks of creating a robust distributed system.
+
+- Javascript on web, 
+    - JavaScript is known as a “render-blocking” resource. This means when a browser encounters JavaScript it goes through a multistep process which involves it being downloaded, then uncompressed, before it’s finally parsed and executed. This all happens within a device's available Central Processing Unit (CPU) and memory. These tasks can be very slow and energy intensive depending on the device and connection. 
+    - Images and image data aren't “render-blocking”, meaning parts of the webpage can be painted to the page while additional image data is being downloaded in parallel. Therefore, a 32 Kb image has much less of a performance impact than 32 Kb of compressed JavaScript. This is especially true for users on low specification devices that are generally slower, older and less expensive.
+

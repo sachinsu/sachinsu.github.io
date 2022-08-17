@@ -219,4 +219,14 @@
     - There are few talents more richly rewarded with both wealth and power, in countries around the world, than the ability to convince backward people that their problems are caused by other people who are more advanced.
 
 
+- Feynman's technique for evaluating information, 
+    - the first trick has to do with deciding whether someone else truly knows their stuff or is mimicking others
+    - The second trick has to do with dealing with uncertainty
+    - realization that as we investigate whether something is true or not, new evidence and new methods of experimentation should show the effect of getting stronger and stronger, not weaker. 
+    - ask the right question, which is not “Could this be the case?” but “Is this actually the case?”
+    - not using the same data that gave you the clue to make the conclusion.
+    - Use proper statistical sampling to know whether or not we know what we are talking about 
+    - Realize that many errors are due to lack of information 
+    - Use Bayesian updating—starting with a priori odds, based on earlier understanding, and “updating” the odds of something based on what you learn thereafter.
+
 
