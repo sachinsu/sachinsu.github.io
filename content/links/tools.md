@@ -21,6 +21,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [SOPS - Tool to secure  secrets (JSON,YAML, INI etc.) via Command line and as GO library](https://github.com/mozilla/sops)
 - [Windows Powertools for greater productivity](https://github.com/microsoft/PowerToys)
 - [Ex-googler's list similar tools/techniques](https://github.com/jhuangtw/xg2xg)
+- [Recoll - Desktop full search tool](https://www.lesbonscomptes.com/recoll/index.html)
 
 ## Useful Command line tools
 

@@ -369,3 +369,23 @@
 - Sageone's Samit Vartak on Markets, 
     -   analysis clearly depicts that even though it’s difficult to time your entries with short term duration in mind, but one can time it with high degree of certainty keeping long term duration in mind. Entries below the median P/B of 3.5x have resulted in above average returns whereas entries above the median P/B of 4x have resulted in significantly below average returns over the long term.
     -  Stretching your horizon is a much reliable way of generating significant incremental returns.
+
+
+- Double entry financial accounting.
+    - Core idea is one transaction, at least two entries, one representing the source and the other representing the use of funds
+    - The core principle of double-entry accounting is that every transaction should record both where the money came from and what the money was used for.
+    - A ledger is a timestamped log of events that have a monetary impact.
+    - An account is a discrete pool of value that represents a balance you want to track.
+    - A transaction is an event recorded in the ledger.
+    - Computing balance from ledger (i.e. log) is optimal than mutating balances in account 
+    - uses of funds are assets and expenses. e.g. Buying inventory, making an investment, acquiring physical property, and so on
+    - sources of funds—such as liabilities, equity, or revenue—can mean bank loans, investors' capital, accumulated profits, or income.
+    - Accounts that represent funds you own, or uses of money, are debit normal accounts.
+    - Accounts that represent funds you owe, or sources of money, are credit normal accounts.
+    - Entries can be added onto the ledger “on the debit side” or “on the credit side." Debits and credits refer to how a given entry will affect an account’s balance:
+    - Debits—or entries on the debit side—increase the balance of debit normal accounts, while credits decrease it.
+    - Credits—or entries on the credit side—increase the balance of credit normal accounts, while debits decrease it.If the sum of balances of all credit normal account
+
+    - A common misconception is that one account needs to decrease while another needs to increase. However, they can both increase or decrease in tandem, depending on the debit and credit entries in the transaction and the account types.
+    - A system of accounts will balance as long as the balance on debit normal accounts equals the balance on credit normal accounts
+

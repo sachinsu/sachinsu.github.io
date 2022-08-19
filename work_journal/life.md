@@ -230,3 +230,4 @@
     - Use Bayesian updating—starting with a priori odds, based on earlier understanding, and “updating” the odds of something based on what you learn thereafter.
 
 
+- Geography - Geography plays important role in determining human life in the region. Mountainous regions are often less populated, economically backward and have sessionist tendencies. Mountains also contribute to what is called as "Rain Shadow" like in spain, where one side of the land remains dry because clouds usually empty on their way on the other side. Thus such regions make it hard for humans, goods and wealth to grow.22

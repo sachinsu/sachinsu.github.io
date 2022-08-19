@@ -52,6 +52,7 @@ Section covering Business, project/programming perspectives
 - [Use just one big Server](https://www.specbranch.com/posts/one-big-server/)
 - [When are Microservices a bad idea?](https://semaphoreci.com/blog/bad-microservices)
 
+
 ## Legacy Modernization 
 
 - [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
@@ -59,6 +60,7 @@ Section covering Business, project/programming perspectives
 
 ## Fintech 
 
+- [Accounting for Computer Geeks](https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)
 - [Mifos X - Open source Financial Inclusion platform](https://mifos.org/mifos-x/)
 - [Moov.io - Tools/Libraries to integrate bank processing into their own software products like ISO8583](https://github.com/moov-io)
 - [Awesome Fintech Resources](https://github.com/moov-io/awesome-fintech)
