@@ -156,6 +156,7 @@ Knowledge base around general database related topics.
 
 ## Search
 
+- [ZincSearch - lightweight alternative to ElastricSearch](https://zincsearch.com/)
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
 - [Get Started with Opensearch](https://amulyasharma.medium.com/opensearch-up-and-running-in-10-mins-49e05689087e)
 
