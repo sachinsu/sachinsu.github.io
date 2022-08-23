@@ -199,7 +199,6 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Healthchecks.io -Simple and Effective Cron Job Monitoring](https://healthchecks.io/)
 - [Decks on Prometheus deep dive, OpenMetrics](https://github.com/RichiH/talks/tree/master/2018/12-CloudNativeCon_Seattle)
 - [Improving Observability with AWS App Mesh](https://nathanpeck.com/improving-observability-with-aws-app-mesh-amazon-ecs/)
-- [Signoz - Open source alternative to DataDog](signoz.io)
 - [Metrics to track for your API](https://sematext.com/blog/api-monitoring)
 - [Details about Cortex vs Thanos, Grafana Loki and Tempo](https://opstrace.com/blog/why-cortex-loki)
 - [Get started with Prometheus, Grafana and loki](https://christine.website/blog/prometheus-grafana-loki-nixos-2020-11-20)
