@@ -51,3 +51,4 @@ draft: false
 - [OraTOTP, Free tool to enable 2 factor authentication](https://www.dbarj.com.br/en/oratotp-oracle-time-based-one-time-password/)
 - [Audit table Generator for Oracle Tables](https://github.com/connormcd/audit_utility)
 - [Swingbench,  free load generator (and benchmarks) designed to stress test an Oracle database (12c, 18c, 19c).](http://www.dominicgiles.com/swingbench.html)
+- [Create Excel file PL/SQL](https://technology.amis.nl/languages/oracle-plsql/create-an-excel-file-with-plsql/)
