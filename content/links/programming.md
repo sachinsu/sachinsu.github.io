@@ -103,6 +103,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Regex Repository](https://ihateregex.io/)
 - [SpiderFoot, the most complete OSINT collection and reconnaissance tool](https://github.com/smicallef/spiderfoot)
 - [Analyze TCP Connections by proxy](https://github.com/kevwan/tproxy)
+- [TCP/IP -Why your websites should be 14KB in size](https://endtimes.dev/why-your-website-should-be-under-14kb-in-size/)
 - [Cloud Architecture Diagrams](https://cloudcraft.co)
 - [Free Online Cloud Architecture Diagram Tool](https://www.cloudskew.com/)
 - [Online Flowcharts, UML diagrams](https://www.draw.io/)
