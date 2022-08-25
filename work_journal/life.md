@@ -230,4 +230,16 @@
     - Use Bayesian updating—starting with a priori odds, based on earlier understanding, and “updating” the odds of something based on what you learn thereafter.
 
 
+- Big beliefs,
+    - The inability to forecast the past has no impact on our desire to forecast the future
+    - No one’s success is proven until they’ve survived a calamity.
+    - It takes less effort to increase confidence than it does ability.
+    - Incentives are the strongest force in the world. 
+    - Sitting still feels reckless in a fast-moving world, even in situations where it offers the best odds of long-term compounding.
+    - It’s hard to determine what is dumb luck and what is unfortunate risk.
+    - Calm plants the seeds of crazy
+    - Stories are more powerful than statistics, because they’re easier to understand and contextualize to your own life. 
+    - Most people are blind to their own faults.
+
+
 - Geography - Geography plays important role in determining human life in the region. Mountainous regions are often less populated, economically backward and have sessionist tendencies. Mountains also contribute to what is called as "Rain Shadow" like in spain, where one side of the land remains dry because clouds usually empty on their way on the other side. Thus such regions make it hard for humans, goods and wealth to grow.22
