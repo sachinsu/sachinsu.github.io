@@ -26,6 +26,7 @@ Section covering useful tools for every day activities, Online learning etc.
 
 ## Useful Command line tools
 
+- [Devbox - Quick  shell with runtime environment without polluting laptop/desktop](https://github.com/jetpack-io/devbox)
 - [Shellcheck- a static analysis tool for shell scripts](https://www.shellcheck.net/)
 - [Useful online playgrounds by Julia Evans](https://jvns.ca/blog/2021/09/24/new-tool--an-nginx-playground/)
 - [New list of useful Command line tools](https://jvns.ca/blog/2022/04/12/a-list-of-new-ish--command-line-tools/)

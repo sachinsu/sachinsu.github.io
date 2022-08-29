@@ -242,4 +242,17 @@
     - Most people are blind to their own faults.
 
 
-- Geography - Geography plays important role in determining human life in the region. Mountainous regions are often less populated, economically backward and have sessionist tendencies. Mountains also contribute to what is called as "Rain Shadow" like in spain, where one side of the land remains dry because clouds usually empty on their way on the other side. Thus such regions make it hard for humans, goods and wealth to grow.22
+- Geography - Geography plays important role in determining human life in the region. Mountainous regions are often less populated, economically backward and have sessionist tendencies. Mountains also contribute to what is called as "Rain Shadow" like in spain, where one side of the land remains dry because clouds usually empty on their way on the other side. Thus such regions make it hard for humans, goods and wealth to grow.
+
+- Naval's Quotes on Reality 
+    - Desire is a contract that you make with yourself to be unhappy until you get what you want.
+    - How much of the day is spent doing things out of obligation rather than out of interest?
+    - 40-hour workweeks are a relic of the Industrial Age. Knowledge workers function like athletes — train and sprint, then rest and reassess.
+    - Following your genuine intellectual curiosity is a better foundation for a career than following whatever is making money right now.
+    - It’s the mark of a charlatan to try and explain simple things in complex ways and it’s the mark of a genius to explain complicated things in simple ways.
+    - Mute the nitpickers, block the outraged, like the kind,follow the insightful
+    - The modern world is managed by bureaucracies staffed with average people. Bureaucrats pile on rule after rule to keep the below-average from hurting themselves or others. Smart & capable individuals need to either opt-out of society or win big before the system suffocates them.
+    - Smart money is just dumb money that’s been through a crash
+    - People who live far below their means enjoy a freedom that people busy upgrading their lifestyles can’t fathom.
+    - Retirement is when you stop sacrificing today for an imaginary tomorrow. When today is complete, in and of itself, you’re retired.You retire by saving up enough money, becoming a monk, or by finding work that feels like play to you.
+

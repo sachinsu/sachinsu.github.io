@@ -1265,3 +1265,21 @@
     - JavaScript is known as a “render-blocking” resource. This means when a browser encounters JavaScript it goes through a multistep process which involves it being downloaded, then uncompressed, before it’s finally parsed and executed. This all happens within a device's available Central Processing Unit (CPU) and memory. These tasks can be very slow and energy intensive depending on the device and connection. 
     - Images and image data aren't “render-blocking”, meaning parts of the webpage can be painted to the page while additional image data is being downloaded in parallel. Therefore, a 32 Kb image has much less of a performance impact than 32 Kb of compressed JavaScript. This is especially true for users on low specification devices that are generally slower, older and less expensive.
 
+- Cassandra - NOSQL Database 
+    - Features
+        - Linear Scalability
+        - Automatic Failover
+        - Low Maintenance
+        - Predictable Performance 
+    - Data Modelling
+        - KKV Store 
+            - The first K is the partition key and is used to determine which node the data lives on and where it is found on disk. The partition contains multiple rows within it and a row within a partition is identified by the second K, which is the clustering key. The clustering key acts as both a primary key within the partition and how the rows are sorted. 
+        - Schemas are cheap to alter without performance penalty
+    - it trades strong consistency for availability
+    - Reads are expensive than writes 
+    - Scylla, a Cassandra compatible database written in C++
+
+- On Minimum Viable Product 
+    - Lets you objectively measure customer response fast and then tweak
+    - so cheap and fast to build, you can try lots of different ones, add and remove advertised features, and see how that changes user responses
+- Market Niche -  If you can name a conference attended by a particular group of people, that group is a market niche.

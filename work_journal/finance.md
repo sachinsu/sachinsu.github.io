@@ -389,3 +389,13 @@
     - A common misconception is that one account needs to decrease while another needs to increase. However, they can both increase or decrease in tandem, depending on the debit and credit entries in the transaction and the account types.
     - A system of accounts will balance as long as the balance on debit normal accounts equals the balance on credit normal accounts
 
+- System Characteristics 
+    - Concurrency—relating to the number of concurrent users, sensors, and other devices that create events to which the product must respond.
+    - Throughput—relating to the volume of transactions or data that the product must be able to process over a defined time period.
+    - Latency and responsiveness—relating to how quickly the product must respond to events.
+    - Scalability—relating to the ability of a system to handle an increased workload by increasing the cost of the system, general in a near-linear relationship.
+    - Persistency—relating to the throughput and structure (or lack thereof) of data that must be stored and retrieved by the product. Often includes decisions about different kinds of data storage technologies (e.g. SQL DBMS, NoSQL DBMS, etc.).
+    - Security—relating to how the product will protect itself from unauthorized use or access to product data, by achieving confidentiality, integrity, and availability.
+    Monitoring—relating to how the product will be instrumented so that the people who support the product can understand when the product starts to fail to meet QARs and prevent critical system issues.
+    - Platform—relating to how the product will meet QARs related to system resource constraints such as memory, storage, event signaling, etc. For example, real-time and embedded products (such as a digital watch, or an automatic braking system) have quite different constraints than cloud-based information systems.
+    - User interface—relating to decisions made about how the product will communicate with users; for example, virtual reality interfaces have quite different QARs than 2-dimensional graphical user interfaces, which have quite different QARs than command-line interfaces. These decisions may affect other QARs noted above. (GUI, VR, command line, or other kinds of interfaces.)

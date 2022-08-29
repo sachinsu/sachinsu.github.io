@@ -158,6 +158,7 @@ Knowledge base around general database related topics.
 
 - [ZincSearch - lightweight alternative to ElastricSearch](https://zincsearch.com/)
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
+- [Peer to peer web search and Intranet Search Appliance](https://github.com/yacy/yacy_search_server)
 - [Get Started with Opensearch](https://amulyasharma.medium.com/opensearch-up-and-running-in-10-mins-49e05689087e)
 
 ## Capacity Planning 

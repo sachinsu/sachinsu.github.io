@@ -75,6 +75,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
 - [The Service Mesh: What Every Software Engineer Needs to Know about the World's Most Over-Hyped Technology](https://servicemesh.io/)
+- [Very Brief intro to Container Orchestrators](https://lwn.net/SubscriberLink/905164/e1f4d4c1ce35f8b9/)
 - [E-book kubernetes Up & Running](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
 - [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
 - [Containers - Training resources](https://container.training/)

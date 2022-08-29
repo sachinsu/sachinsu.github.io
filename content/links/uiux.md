@@ -44,6 +44,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [Tauri - smaller, faster, and more secure desktop applications with a web frontend](https://github.com/tauri-apps/tauri)
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
 - [Remix - Modern SPA framework](https://github.com/remix-run/remix)
 - [Blitz - Modern SPA framework based on React](https://github.com/blitz-js/blitz)
