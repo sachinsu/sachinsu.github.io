@@ -1283,3 +1283,27 @@
     - Lets you objectively measure customer response fast and then tweak
     - so cheap and fast to build, you can try lots of different ones, add and remove advertised features, and see how that changes user responses
 - Market Niche -  If you can name a conference attended by a particular group of people, that group is a market niche.
+
+- Triggers for choosing service boundaries, 
+    - Security isolation could be one of the trigger for splitting functionalities in services.
+    - Monolith taking long time to startup. This makes upgrades painful. so you might want to split out the slow part to make upgrading other things go faster.
+    - Do some parts scale differently from other parts? 
+    - Do expensive requests need to be run with less parallelism?  - If solution is to use messaging i.e. relaying messages through queue/broker then be vary of Queue Explosion which generates heavy load on message brokers. Alternatives are HTTP based (REST, gRPC) services or Messaging based on peer to peer or routed protocols (where instead of sending messages to a broker which persists messages, messages are either sent directly to another consumer via a point-to-point network connection or are sent to a router which immediately sends the message to a consumer) using say ZeroMQ or Apache QPID Proton 
+
+- System Characteristics (Quality Attribute Requirements) 
+    - Concurrency—relating to the number of concurrent users, sensors, and other devices that create events to which the product must respond.
+    - Throughput—relating to the volume of transactions or data that the product must be able to process over a defined time period.
+    - Latency and responsiveness—relating to how quickly the product must respond to events.
+    - Scalability—relating to the ability of a system to handle an increased workload by increasing the cost of the system, general in a near-linear relationship.
+    - Persistency—relating to the throughput and structure (or lack thereof) of data that must be stored and retrieved by the product. Often includes decisions about different kinds of data storage technologies (e.g. SQL DBMS, NoSQL DBMS, etc.). 
+    - Security—relating to how the product will protect itself from unauthorized use or access to product data, by achieving confidentiality, integrity, and availability.
+    - Monitoring—relating to how the product will be instrumented so that the people who support the product can understand when the product starts to fail to meet QARs and prevent critical system issues.
+    - Platform—relating to how the product will meet QARs related to system resource constraints such as memory, storage, event signaling, etc. For example, real-time and embedded products (such as a digital watch, or an automatic braking system) have quite different constraints than cloud-based information systems.
+    - User interface—relating to decisions made about how the product will communicate with users; for example, virtual reality interfaces have quite different QARs than 2-dimensional graphical user interfaces, which have quite different QARs than command-line interfaces. These decisions may affect other QARs noted above. (GUI, VR, command line, or other kinds of interfaces.)
+
+- Networking 
+	- MAC addresses: All devices that people use to ac- cess the Internet have been assigned an identifier by the device manufacturer. This is the media access control (MAC) address, sometimes also called hard- ware address or burned-in address. The standards for MAC addresses are set by the Institute of Electri- cal and Electronics Engineers (IEEE), a US-based pro- fessional association. The most used addresses are 48-bit long, which allows for 248, i.e., more than 281 trillion, possible MAC addresses
+	- Radio Access Networks: This term is specifically used for the radio connection of mobile phones to antennas that are connected to the wired core net- work of mobile network operators and the Internet at large. RAN standards are ordered into generations (e.g., 3G, 4G, 5G) and set by the industrial partner- ship 3GPP and the ITU. 
+	- Wide Area Networks (WANs): Companies may think that the public packet-switched Internet is too unre- liable, insecure, and path-agnostic for connecting their sites. Hence, they may use a layer 2 WAN to connect different locations of offices, production sites, and stores belonging to the same company. One option for a WAN is for companies to lease a private communications circuit from an ISP, which reserves a specific amount of bandwidth for them. The downside of leased lines is that they are expen- sive. An alternative is the use of multiprotocol label switching (MPLS). This is a “layer 2.5” protocol that adds an additional label on IP-packets which con- tains a predetermined route.A more recent alternative is the use of software-de-fined networking.66 Its key feature is that the rules for how to forward data packets are computed in and then distributed from a central location to switches or routers in the entire network. In its ter- minology, the forwarding rules are the control plane, whereas the switches or routers that implement the forwarding are called the data plane. A software-de- fined WAN (SD-WAN) is generally cheaper than MPLS.
+	- Network Layers
+		- IPV4 (32) bit that can have upto 4.3 billion unique addresses while IPv4(128) bit can have 340 trillion trillion trillion unique IPv6 addresses.

@@ -255,4 +255,3 @@
     - Smart money is just dumb money that’s been through a crash
     - People who live far below their means enjoy a freedom that people busy upgrading their lifestyles can’t fathom.
     - Retirement is when you stop sacrificing today for an imaginary tomorrow. When today is complete, in and of itself, you’re retired.You retire by saving up enough money, becoming a monk, or by finding work that feels like play to you.
-

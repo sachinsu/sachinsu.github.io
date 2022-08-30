@@ -111,6 +111,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Embeddable charts using DataWrapper](https://app.datawrapper.de/)
 - [Figma - Design and prototype builder](https://www.figma.com/)
 - [Open source Voice chat](https://www.mumble.info/)
+- [Zulip - Open source alternative to Slack](https://github.com/zulip/zulip)
 - [Open source Video Conferencing](https://jitsi.org/)
 - [Open network for secure, decentralized communication](https://matrix.org/)
 - [Alternatives for Local Kubernetes development](https://seroter.com/2020/03/10/lets-look-at-your-options-for-local-development-with-kubernetes/)
