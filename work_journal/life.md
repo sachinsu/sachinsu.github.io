@@ -255,3 +255,26 @@
     - Smart money is just dumb money that’s been through a crash
     - People who live far below their means enjoy a freedom that people busy upgrading their lifestyles can’t fathom.
     - Retirement is when you stop sacrificing today for an imaginary tomorrow. When today is complete, in and of itself, you’re retired.You retire by saving up enough money, becoming a monk, or by finding work that feels like play to you.
+
+
+- Solitude and leadership
+	- In bereaucratic environments, what is rewarded above all is conformity, some one who keeps routine going.
+    - Need of the hour is People who know how to do more than follow orders and execute routines.
+	- Thinking means concentrating on one thing long enough to develop an idea about it.Not learning other people’s ideas, or memorizing a body of information, however much those may sometimes be useful. Developing your own ideas. In short, thinking for yourself. first thought is never my best thought. My first thought is always someone else’s; it’s always what I’ve already heard about the subject, always the conventional wisdom. It’s only by concentrating, sticking to the question, being patient, letting all the parts of my mind come into play, that I arrive at an original idea. By giving my brain a chance to make associations, draw connections, take me by surprise. And often even that idea doesn’t turn out to be very good. I need time to think about it, too, to make mistakes and recognize them, to make false starts and correct them, to outlast my impulses, to defeat my desire to declare the job done and move on to the next thing
+	- You do your best thinking by slowing down and concentrating.
+
+- Wisdom from Charlie Munger
+	- safest way to try and get what you want is to try and deserve what you want
+	- A man who doesn’t know what happened before he was born goes through life like a child.
+	- extremely intense ideology should be avoided because it cabbages up one’s mind.
+	- I’m not entitled to have an opinion on this subject unless I can state the arguments against my position better than the people do who are supporting it.
+	- there is no love that’s so right as admiration-based love
+	- Wisdom acquisition is a moral duty.
+	- envy, resentment, revenge, and self-pity are disastrous modes of thought. Self-pity gets pretty close to paranoia and paranoia is one of the very hardest things to reverse.
+	- inversion will help you solve problems that you can't solve in other ways.
+	- avoid working directly under somebody you really don't admire and don't want to be like	
+	- you want to get out of yourself: thinking that what’s good for you is good for the wider civilization and rationalizing all these ridiculous conclusions based on the subconscious tendency to serve one’s self. 
+	- If you want to persuade, appeal to interest not to reason - Ben franklin
+	- planck knowledge - the people who really know. Chauffer knowledge - shallow knowledge.
+	- anticipate trouble all the time and be ready to perform adequately if trouble came
+	
