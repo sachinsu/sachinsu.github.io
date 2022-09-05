@@ -406,3 +406,43 @@
 	- efficient markets hypothesis does not hold true, especially over short to medium periods. 
 	-Equities are a generous asset class. The tailwind of a growing economy and growing companies overshadows mistakes of timing and security selection in diversified portfolios in most cases over long periods. The key is patience to stay invested for long periods.
 	- Active vs. Passive - While outperforming benchmarks is not easy and will probably get tougher, especially net of expenses, some managers should be able to outperform over time. In most cases, this out performance is however unlikely to be linear or consistent. Significant divergence of portfolios from benchmarks and consequently a higher tracking error (that many equate to risk, though there are strong arguments to the contrary) will be needed in many cases to overcome the hurdle of costs and to generate alpha over long periods in my judgement
+
+- Banks
+	- Branches are sales offices. They exist to sell new accounts.
+	- bank assumes that, in expectation, well-qualified customers are making a 10+ year commitment.
+	- Net interest margin (spread) - A bank’s advantage versus every other business in the economy, and the reason why they are the economy’s major source of credit, is the ability to leverage their capital via the use of borrowed money. Much of those borrowings are cheap or free to the bank, in the form of deposits. Net interest is the difference between the rates banks pay on their deposits and what they take in from their loan book. 
+	- most of the retail deposit base is, structurally, older, wealthier depositors who are at or near retirement. In a real sense, the branch exists for them and your ability to use it is a courtesy.This is also the main reason why branches have not disappeared despite their immense cost and the feasibility of doing almost all bank transactions through other channels. The banks’ favorite customers like them a lot.
+	- Affluent account holders of the bank (Retirees, doctors etc.) are serviced by commissioned sales professional who carefully presents as different social class than regular branch employee.
+	- Larger banks treat small businesses largely as a necessary detail to attract wealthy retail depositors, because a large portion of wealthy people own or operate businesses
+	- Staff @ bank branches
+		- with the sophistication of information technology, banks have been distributing functions among branches rather than deploying all functions to each branch.
+		- a typical bank branch will have about six employees: one manager, one to two tellers, and the remainder bankers.	
+		- Bankers are basically all commissioned sales representatives who are generally in a high-pressure sales environment, with the branch manager being a quota-driving line sales manager. They are discouraged from spending their time on transactions except to the extent necessary to sell more accounts.
+		- branch managers are no longer CEO of the branch involved in underwriting decisions on loan or make accommodations for customers.
+
+- Investing in Small caps 
+	- They should not be part of core portfolio
+	- Commit meaningful amounts
+	- Bet for long haul
+	- Factors while choosing
+		- potential to grow faster than GDP, Promoter quality, Accounting quality, Free Cash Flow, Past growth rates, 
+		- Commodity stocks are unlikely to fit here 
+		- should grow top line without constraints (like auto ancilliaries constrained by size of auto industry). Retail business could possibly fit in here
+		- Acrysil - manufacture a product that is always going to be needed and they have the quality. The potential to grow is big.
+		- Wait for small caps to be recognized by Market.
+		- Go for those having healthy ROCE (Well above cost of debt)
+		- Promoter holding should be high.Typically,a  good company will not make a follow on offer but IPO followed by one or two rounds of QIP should be ok.
+		- Check for promoter quality
+
+- Economic principles 
+	- There is no such thing as a free lunch. When someone gets something, they almost always give something up in return. 
+	-  try, when possible, to put numbers on things.
+
+- Charlie Munger's Wisdom 
+	- Braun's rule of Five W's
+		- who was going to do what, where, when and why
+    - huge productivity increases that would come from a better machine introduced into the production of a commodity product would all go to the benefit of the buyers of the product (textiles). Nothing was going to stick to owners.
+    -  it makes sense to load up on the very few good insights you have instead of pretending to know everything about everything at all times. 
+    - Over the long term, it's hard for a stock to earn a much better return than the business which underlies it earns.
+    - betting on the quality of a business is better than betting on the quality of management. 
+    - In fact, any time anybody offers you anything with a big commission and a 200- page prospectus, don't buy it.

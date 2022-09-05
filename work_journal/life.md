@@ -258,7 +258,7 @@
 
 
 - Solitude and leadership
-	- In bereaucratic environments, what is rewarded above all is conformity, some one who keeps routine going.
+	- In bureaucratic environments, what is rewarded above all is conformity, some one who keeps routine going.
     - Need of the hour is People who know how to do more than follow orders and execute routines.
 	- Thinking means concentrating on one thing long enough to develop an idea about it.Not learning other people’s ideas, or memorizing a body of information, however much those may sometimes be useful. Developing your own ideas. In short, thinking for yourself. first thought is never my best thought. My first thought is always someone else’s; it’s always what I’ve already heard about the subject, always the conventional wisdom. It’s only by concentrating, sticking to the question, being patient, letting all the parts of my mind come into play, that I arrive at an original idea. By giving my brain a chance to make associations, draw connections, take me by surprise. And often even that idea doesn’t turn out to be very good. I need time to think about it, too, to make mistakes and recognize them, to make false starts and correct them, to outlast my impulses, to defeat my desire to declare the job done and move on to the next thing
 	- You do your best thinking by slowing down and concentrating.
@@ -277,4 +277,13 @@
 	- If you want to persuade, appeal to interest not to reason - Ben franklin
 	- planck knowledge - the people who really know. Chauffer knowledge - shallow knowledge.
 	- anticipate trouble all the time and be ready to perform adequately if trouble came
-	
+
+
+- Life
+	- Like oxygen, we ignore time when it's abundant, but we desperately want more as it becomes scarce.
+	- But compound interest isn't solely reserved for finance. In fact, its most valuable application is in your health.
+	-"A healthy man wants a thousand things, a sick man only wants one."
+	- Health's greatest value is the optionality it gives you.
+	- Every other form of wealth is irrelevant if you have a scarcity of relationships. 
+	- Money is an infinite resource, but experiences, like time, are finite.
+
