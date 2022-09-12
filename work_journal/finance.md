@@ -446,3 +446,8 @@
     - Over the long term, it's hard for a stock to earn a much better return than the business which underlies it earns.
     - betting on the quality of a business is better than betting on the quality of management. 
     - In fact, any time anybody offers you anything with a big commission and a 200- page prospectus, don't buy it.
+
+- Munger - there’s great opportunities for excess and nasty contractions after unnatural booms and so on.
+    - Inverted expertise - Overconfidence grows worse as people become more expert in a given field. 
+    - Representativeness (sometimes called “the law of small numbers”) is the human tendency to consider short series of data to be typical of long-term trends.
+    - Availability, meanwhile, is the natural inclination to let recent and vivid events overwhelm our judgment about normal expected outcomes

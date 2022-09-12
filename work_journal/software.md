@@ -1307,3 +1307,10 @@
 	- Wide Area Networks (WANs): Companies may think that the public packet-switched Internet is too unre- liable, insecure, and path-agnostic for connecting their sites. Hence, they may use a layer 2 WAN to connect different locations of offices, production sites, and stores belonging to the same company. One option for a WAN is for companies to lease a private communications circuit from an ISP, which reserves a specific amount of bandwidth for them. The downside of leased lines is that they are expen- sive. An alternative is the use of multiprotocol label switching (MPLS). This is a “layer 2.5” protocol that adds an additional label on IP-packets which con- tains a predetermined route.A more recent alternative is the use of software-de-fined networking.66 Its key feature is that the rules for how to forward data packets are computed in and then distributed from a central location to switches or routers in the entire network. In its ter- minology, the forwarding rules are the control plane, whereas the switches or routers that implement the forwarding are called the data plane. A software-de- fined WAN (SD-WAN) is generally cheaper than MPLS.
 	- Network Layers
 		- IPV4 (32) bit that can have upto 4.3 billion unique addresses while IPv4(128) bit can have 340 trillion trillion trillion unique IPv6 addresses.
+
+- Stable Diffusion
+	- Open source image synthesis model that generates images basis natural language
+	- Can be run on PC with GPU
+	- Uses technique called Latent diffusion - the model learns to recognize familiar shapes in a field of pure noise, then gradually brings those elements into focus if they match the words in the prompt.
+	-  the model associates words with images thanks to a technique called CLIP (Contrastive Language–Image Pre-training), which was invented by OpenAI
+	- As per authors, Stable diffusion will run on smartphones in future.

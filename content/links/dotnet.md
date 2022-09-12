@@ -17,7 +17,7 @@ Platform where i have spent most time till now.
 - [.NET Presentations - Events in a Box](https://presentations.dotnetfoundation.org/)
 - [Building Microservices in .NET](https://altkomsoftware.pl/en/blog/building-microservices-on-net-core-1/)
 - [Materialized View Pattern for Cross Service Queries](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view)
-- [Oracle DB & .NET - Optimizing Real-World Performance with Static Connection Pools](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/jjucp/optimizing-real-world-performance.html#GUID-BC09F045-5D80-4AF5-93F5-FEF0531E0E1D)
+- [Oracle DB and .NET - Optimizing Real-World Performance with Static Connection Pools](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/jjucp/optimizing-real-world-performance.html#GUID-BC09F045-5D80-4AF5-93F5-FEF0531E0E1D)
 - [Clean Code concepts and tools adapted for .NET](https://github.com/thangchung/clean-code-dotnet)
 - [Multiple ways how to limit parallel tasks processing](https://docs.microsoft.com/en-us/archive/blogs/fkaduk/multiple-ways-how-to-limit-parallel-tasks-processing)
 - [Parallel programming in .NET](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/)
