@@ -1314,3 +1314,14 @@
 	- Uses technique called Latent diffusion - the model learns to recognize familiar shapes in a field of pure noise, then gradually brings those elements into focus if they match the words in the prompt.
 	-  the model associates words with images thanks to a technique called CLIP (Contrastive Language–Image Pre-training), which was invented by OpenAI
 	- As per authors, Stable diffusion will run on smartphones in future.
+
+- Aspects in Building Systems
+    -	Defining Requirements - work with the Product Manager to understand what problem they want to solve; maybe you’ll have some ideas on how to solve it with much lower effort?
+    -	Defining NFR’s - talk to your PM about the non-functional requirements - how many users should the System handle, what are the requirements for performance, throughput, latency? Are there any security or compliance considerations? Do we need auditing? What’s the desired availability?
+    -	Planning Iterations - work with your team to propose an implementation plan; make sure you define small, demoable milestones, so that you can start delivering value ASAP; agree with the PM on the milestones.
+    -	Determining Dependencies - make sure you identified all the dependencies outside of your team and work with your EM or with the teams directly to get some ETA’s for them. Adjust your milestones accordingly.
+    -	Testing - depending on how your company operates, decide on your testing strategy with your team or with the QE team. Agree on the quality threshold needed for the rollout (e.g. no unresolved Major bugs or test coverage above X%).
+    -	Deployment - work with your team to decide how the system will be deployed. Do you need some new infrastructure for it or can you reuse the existing? If you need a lot of it, what will be the cost?
+    -	Observability - decide how are you going to monitor the health of the system and set up processes for solving production issues (e.g. team on-call). Use a third-party solution (like Sumo Logic) to set up monitors and dashboards for that purpose.
+    -	Rollout Communication - once you agree on a rollout date with your team and the PM, make sure that all stakeholders are aware of it. Check whether any documentation changes are required.
+    -	Measuring Success - decide on metrics that will tell you whether the project was a success. Is anyone using the new system? Do users manage to accomplish their tasks? You can leverage your Observability suite for this purpose.
