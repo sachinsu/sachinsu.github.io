@@ -430,6 +430,8 @@
 
     - A data warehouse is a relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
 
+    - Data Lineage allows one to track data flow from its source to the consumers, by also tracking all its transformations in between
+    
     - A data lake is a file store, usually on a distributed file system for high performance data access. Technologies like Spark or Hadoop are often used to process queries on the stored files and return data for reporting and analytics. These systems often apply a schema-on-read approach to define tabular schemas on semi-structured data files at the point where the data is read for analysis, without applying constraints when it's stored. Data lakes are great for supporting a mix of structured, semi-structured, and even unstructured data that you want to analyze without the need for schema enforcement when the data is written to the store.
 
     - Data lakehouse - The raw data is stored as files in a data lake, and a relational storage layer abstracts the underlying files and expose them as tables, which can be queried using SQL. SQL pools in Azure Synapse Analytics include PolyBase, which enables you to define external tables based on files in a datalake (and other sources) and query them using SQL. Synapse Analytics also supports a Lake Database approach in which you can use database templates to define the relational schema of your data warehouse, while storing the underlying data in data lake storage – separating the storage and compute for your data warehousing solution. Data lakehouses are a relatively new approach in Spark-based systems, and are enabled through technologies like Delta Lake; which adds relational storage capabilities to Spark, so you can define tables that enforce schemas and transactional consistency, support batch-loaded and streaming data sources, and provide a SQL API for querying.
@@ -1325,3 +1327,18 @@
     -	Observability - decide how are you going to monitor the health of the system and set up processes for solving production issues (e.g. team on-call). Use a third-party solution (like Sumo Logic) to set up monitors and dashboards for that purpose.
     -	Rollout Communication - once you agree on a rollout date with your team and the PM, make sure that all stakeholders are aware of it. Check whether any documentation changes are required.
     -	Measuring Success - decide on metrics that will tell you whether the project was a success. Is anyone using the new system? Do users manage to accomplish their tasks? You can leverage your Observability suite for this purpose.
+
+- Code Hale on Organizations,
+	- Centralize Decision making and vision
+	- Create a small group of people who are on same page, open to new ideas,be imperical, have small meetings and make decision quickly. 
+	- then decentralize for execution. give developers autonomy. 
+	- avoid exponential bikeshading
+
+- Statistics 
+	- Median
+		- If set of values are odd then, the middle value when ordered is Median
+		- If set of values are even then, the average of 2 middle values is Median
+		- Median is not affected by outliers (Extremes in data set)
+	- Mean 
+		- Some of all the values in set divided by number of values 
+		- Mean gets impacted by outliers. 

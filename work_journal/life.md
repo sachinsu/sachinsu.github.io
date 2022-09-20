@@ -287,3 +287,12 @@
 	- Every other form of wealth is irrelevant if you have a scarcity of relationships. 
 	- Money is an infinite resource, but experiences, like time, are finite.
 
+- Principles to note when disagreeing with someone who is more powerful than you, 
+    - Do:
+        •	Explain that you have a different opinion and ask if you can voice it.
+        •	Restate the original point of view or decision so it’s clear you understand it.
+        •	Speak slowly — talking in an even tone calms you and the other person down.
+    - Don’t:
+        •	Assume that disagreeing is going to damage your relationship or career — the consequences are often less dramatic than we think.
+        •	State your opinions as facts; simply express your point of view and be open to dialogue.
+        •	Use judgment words, such as “hasty,” “foolish,” or “wrong,” that might upset or incite your counterpart.
