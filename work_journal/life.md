@@ -297,7 +297,7 @@
         •	State your opinions as facts; simply express your point of view and be open to dialogue.
         •	Use judgment words, such as “hasty,” “foolish,” or “wrong,” that might upset or incite your counterpart.
 
--- Rules for following Circadian rhythm of Body, 
+- Rules for following Circadian rhythm of Body, 
 	- No food for at least 2 hours after waking up
 	- Try to have meals within 10 hours in a day 
 	- Stop eating at least 2 hours before sleep
