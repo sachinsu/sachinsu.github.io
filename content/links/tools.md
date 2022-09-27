@@ -59,7 +59,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Hyperfine - Generic Benchmarking tool](https://github.com/sharkdp/hyperfine)
 - [Gmail backup tool](https://github.com/jay0lee/got-your-back)
 - [gmvault - gmail backup tool](https://github.com/gaubert/gmvaulthttps://github.com/gaubert/gmvault) 
-
+- [Age - Simple File Encryption tool (Go)](https://github.com/filosottile/age)
 
 ## Linux related References
 
