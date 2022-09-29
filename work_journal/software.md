@@ -1345,9 +1345,23 @@
 	- Standard deviation - measures the average distance , the data values are, from the mean (average).
     	- It can not be negative 
 	- Rounding rule - Always round the number to one more additional digit.
-
+    - Standard deviation
+		- Data value outside of 3 times standard deviation (from mean) is extremely rare.
+	- Z-score - # of standard deviations away from the mean a data value is.
+	- Quartiles 
+		- 1st Quartile - bottom 25% of ordered set 
+		- 2nd Quartile - bottom 50% (median) of ordered set 
+		- 3rd quartile - bottom 75% of ordered set (excluding median)
+	- Percentiles - separates data into hundred parts
+		- percentile of x = [count (values)  less than x/ total # of values]*100
 
 - WebAuthn is a protocol for using hardware devices in order to authenticate users by proof of ownership. The basic idea is that you have a hardware security module of some kind (such as an iPhone’s Secure Enclave or a Yubikey) that contains a private key, and then the server validates signatures against the public key of the device to authenticate sessions. It is also set up so that phishing attacks are impossible to pull off, each WebAuthn registration is bound to the domain it was set up with. A keypair for xeiaso.net cannot be used to authenticate with evil-xeiaso.net. The user experience is fantastic. A website makes a request to the authentication API and then the browser spawns an authentication window in such a way that cannot be replicated with web technologies. The browser itself will ask you what authenticator you want to use (usually this lets you pick between an embedded hardware security module or a USB security key) and then proceed from there. It is impossible to phish this. Even if the visual styles were copied, the authenticator will do nothing to authenticate the browser!
     - An authenticator is a map from (RP ID, user ID) pairs, to public key credentials.
     - An authenticator, traditionally, is the physical thing that holds keys and signs stuff. Security keys are authenticators
     - An RP ID identifies a website. It's a string that contains a domain name. (In non-web cases, like SSH, it can be a URL, but I'm not covering them here.) 
+
+- Queues
+	- Help off-load tasks from the critical path 
+	- Transform, filter and fan-out messages thus enabling parallel processing 
+	- Cost for queueing, 
+		- To effectively deliver a message, it usually takes three operations: one write, one read, and one acknowledgement. You can estimate your usage by considering the cost of messages delivered by multiplying cost per operation by 3. 

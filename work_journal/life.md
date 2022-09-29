@@ -218,6 +218,8 @@
     - The least productive people are usually the ones who are most in favor of holding meetings.
     - There are few talents more richly rewarded with both wealth and power, in countries around the world, than the ability to convince backward people that their problems are caused by other people who are more advanced.
 
+- If I spend somebody else’s money on somebody else, I’m not concerned about how much it is, and I’m not concerned about what I get. And that’s government.
+
 
 - Feynman's technique for evaluating information, 
     - the first trick has to do with deciding whether someone else truly knows their stuff or is mimicking others
