@@ -86,3 +86,7 @@ Section covering useful tools for every day activities, Online learning etc.
 ## Blogging platforms 
 
 - [Writefreely](https://github.com/writefreely/writefreely)
+
+## Book of secret knowledge 
+
+- [Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge)

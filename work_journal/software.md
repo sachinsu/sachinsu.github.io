@@ -1365,3 +1365,20 @@
 	- Transform, filter and fan-out messages thus enabling parallel processing 
 	- Cost for queueing, 
 		- To effectively deliver a message, it usually takes three operations: one write, one read, and one acknowledgement. You can estimate your usage by considering the cost of messages delivered by multiplying cost per operation by 3. 
+
+- Characteristics of Distributed System
+	- Communication - Reliable links, secure links, discovery, APIs.
+	- Coordination - System models, failure detection, time, leader election, replication, coordination avoidance, transactions.
+	- Scalability - HTTP caching, content delivery networks, partitioning, file storage, data storage, caching, microservices, control panes and data panes, messaging.
+	- Resiliency - Common failure causes, redundancy, fault isolation, downstream resiliency, upstream resiliency.
+	- Maintainability - Testing, continuous delivery and deployment, monitoring, observability, and manageability.
+
+	- Downstream resiliency	
+		- Timeout - As a rule of thumb, always set timeouts when making network calls, and be wary of third-party libraries that make network calls but don’t expose settings for timeouts. 	
+		- Retries with exponential back-off
+
+	- Upstream resiliency
+		- Load shedding - Rejecting the request(s) once beyond server's capacity.
+		- Load leveling - Introducing messaging channel between client and service to decouple load on Service. However, this works in cases where client is not expecting immediate response.
+		- Load-shedding and load leveling don’t address an increase in load directly but rather protect a service from getting overloaded.
+		- Rate limiting 
