@@ -306,6 +306,18 @@
             - API Security - Checks during development, testing and production 
             - API Observability - Measuring API Traffic 
         - Integration with SDLC 
+        - General Principles 
+            - API Should Do One Thing and Do it Well
+            - API Should Be As Small As Possible But No Smaller
+            - Minimize Accessibility of Everything (Classes, Methods etc.)
+            - Names should be self-explanatory
+            - Document religiously
+            - Consider Performance Consequences of API Design Decisions
+            - Minimize mutability of classes 
+            - for Methods, avoid long parameter list Three or fewer parameters is ideal. 
+                - Two techniques for shortening parameter lists
+                    _ Break up method
+                    _ Create helper class to hold parameters
 
 - [Confidential Computing][Cryptography]
     - Confidential computing is a breakthrough approach to data protection: sensitive workloads are run inside hardware-isolated and runtime-encrypted environments called enclaves. Enclaves can protect against threats like malware or rootkits and even rogue administrators and physical intruders. 
@@ -1354,6 +1366,11 @@
 		- 3rd quartile - bottom 75% of ordered set (excluding median)
 	- Percentiles - separates data into hundred parts
 		- percentile of x = [count (values)  less than x/ total # of values]*100
+    - Probability
+        - Observed probability (What did happen) - Estimated based on observation
+        - Classical probability (what should happen) - Based on change of an event occuring.
+        - Subjective Probability - Educated guess. No data available.
+
 
 - WebAuthn is a protocol for using hardware devices in order to authenticate users by proof of ownership. The basic idea is that you have a hardware security module of some kind (such as an iPhone’s Secure Enclave or a Yubikey) that contains a private key, and then the server validates signatures against the public key of the device to authenticate sessions. It is also set up so that phishing attacks are impossible to pull off, each WebAuthn registration is bound to the domain it was set up with. A keypair for xeiaso.net cannot be used to authenticate with evil-xeiaso.net. The user experience is fantastic. A website makes a request to the authentication API and then the browser spawns an authentication window in such a way that cannot be replicated with web technologies. The browser itself will ask you what authenticator you want to use (usually this lets you pick between an embedded hardware security module or a USB security key) and then proceed from there. It is impossible to phish this. Even if the visual styles were copied, the authenticator will do nothing to authenticate the browser!
     - An authenticator is a map from (RP ID, user ID) pairs, to public key credentials.
@@ -1382,3 +1399,13 @@
 		- Load leveling - Introducing messaging channel between client and service to decouple load on Service. However, this works in cases where client is not expecting immediate response.
 		- Load-shedding and load leveling don’t address an increase in load directly but rather protect a service from getting overloaded.
 		- Rate limiting 
+
+- Measures for resilient systems by Shopify
+	- Ensure that timeout is specified for network request like over HTTP or TCP. Try to lower them whenever possible
+	- Use circuit breakers
+	- Monitoring and alerting for below, 
+		- Latency: the amount of time it takes to process a unit of work, broken down between success and failures. With circuit breakers failures can happen very fast and lead to misleading graphs.
+		- Traffic: the rate in which new work comes into the system, typically expressed in requests per minute.
+		- Errors: the rate of unexpected things happening. In payments, we distinguish between payment failures and errors. An example of a failure is a charge being declined due to insufficient funds, which isn’t unexpected at all. HTTP 500 response codes from our financial partners on the other hand are. However a sudden increase in failures might need further investigation.
+		- Saturation: how much load the system is under, relative to its total capacity. This could be the amount of memory used versus available or a thread pool’s active threads versus total number of threads available, in any layer of the system.
+	- Implement structured logging - Use co-relation id for every request.

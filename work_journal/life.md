@@ -304,3 +304,13 @@
 	- Try to have meals within 10 hours in a day 
 	- Stop eating at least 2 hours before sleep
 	- Try to be in bed for at least 8 hours
+
+- Public Key infrastructure, 
+    -   Uses signature (A message authentication code (MAC) is a bit of data that’s used to verify which entity sent a message, and to ensure that a message hasn’t been modified.) based on Shared secret. Signature can be verified by public key but can only be generated using corresponding private key. 
+    - Based on public key cryptography (a.k.a. Asymmetric cryptography)
+        - public key that can be distributed 
+        - private key which is kept confidential by server
+    - You can encrypt some data with the public key. The only way to decrypt that data is with the corresponding private key.
+    - You can sign some data with the private key. Anyone who knows the corresponding public key can verify the signature, proving which private key produced it.    
+    - A certificate is a data structure that contains a public key and a name. The data structure is then signed. The signature binds the public key to the name
+    -  The entity that signs a certificate is called the issuer (or certificate authority) and the entity named in the certificate is called the subject.
