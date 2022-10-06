@@ -1409,3 +1409,10 @@
 		- Errors: the rate of unexpected things happening. In payments, we distinguish between payment failures and errors. An example of a failure is a charge being declined due to insufficient funds, which isn’t unexpected at all. HTTP 500 response codes from our financial partners on the other hand are. However a sudden increase in failures might need further investigation.
 		- Saturation: how much load the system is under, relative to its total capacity. This could be the amount of memory used versus available or a thread pool’s active threads versus total number of threads available, in any layer of the system.
 	- Implement structured logging - Use co-relation id for every request.
+
+
+- Approach to Selecting/Upgrading the technology/tool
+    - Always Measure first 
+        - Define your service level objectives (SLOs) and measure them via an observability system like Datadog. You usually want, at a minimum, an availability SLO (i.e., 99.9% of requests succeed) and a latency SLO (p99 latency is < 1s).
+        - Define your load objective. This is just the number of users you want to be able to support at a given time. If you’re launching a new product, ask marketing how much traffic they expect on launch day and double it. If there isn’t going to be a splashy launch, try to project out where you’ll be in, say, one year, and add a 10-20% buffer.
+        - Run a load test by spinning up a test cluster and writing some scripts to simulate real usage. Keep fixing bottlenecks and re-running load tests until you hit your objective.

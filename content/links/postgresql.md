@@ -106,6 +106,7 @@ draft: false
 - [Database lab Engine - Fast cloning of Database for dev/QA/staging](https://postgres.ai/products/how-it-works)
 - [PGSync - Sync data from one Postgres database to another](https://github.com/ankane/pgsync)
 - [Neon - Serverless Open source PostgreSQL](https://github.com/neondatabase/neon)
+- [Push PG Listen/Notify events over Websockets](https://github.com/CrunchyData/pg_eventserv)
 
 ## Migration to PostgreSQL
 
@@ -131,6 +132,7 @@ draft: false
 - [Using PGQ to invalidate caches](https://www.hagander.net/talks/cache_invalidation_2014.pdf)
 - [pgstream- turns your  database into an event stream](https://github.com/tmc/pqstream)
 - [Wal-listener CLI](https://github.com/ihippik/wal-listener)
+- [Postgres as Message Queue](https://dagster.io/blog/skip-kafka-use-postgres-message-queue)
 
 ## Data Privacy
 
