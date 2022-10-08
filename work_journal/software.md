@@ -354,7 +354,7 @@
                 - AsyncLocal leaks
         - Threadpool 
             - Sync over async 
-                - APIs that masquarade as synchronous but are actually blocking async methods 
+                - APIs that masquerade as synchronous but are actually blocking async methods 
                 - Uses 2 threads to complete single operation 
             - Blocking APIs are bad 
                 - Avoid blocking APIs e.g. Task.Wait, Task.Result, Thread.Sleep, 
@@ -1416,3 +1416,11 @@
         - Define your service level objectives (SLOs) and measure them via an observability system like Datadog. You usually want, at a minimum, an availability SLO (i.e., 99.9% of requests succeed) and a latency SLO (p99 latency is < 1s).
         - Define your load objective. This is just the number of users you want to be able to support at a given time. If you’re launching a new product, ask marketing how much traffic they expect on launch day and double it. If there isn’t going to be a splashy launch, try to project out where you’ll be in, say, one year, and add a 10-20% buffer.
         - Run a load test by spinning up a test cluster and writing some scripts to simulate real usage. Keep fixing bottlenecks and re-running load tests until you hit your objective.
+
+- Typical Archetypes in Software engineering, 
+	- The Team Lead guides the approach and execution of a particular team. Most frequently they partner closely with a single manager, but sometimes they partner with two or three managers within a focused area.
+	- The Architect is responsible for the direction, quality and approach within a critical area, both today and stretching into the multi-year future horizon. They combine a deep knowledge of technical constraints, user needs, and organization level leadership.
+	- The Right Hand is a partner and an extension of an executive-level manager, borrowing their scope and authority to operate particularly complex organizations. They provide additional leadership bandwidth to leaders of large-scale organizations.
+
+	- The Solver digs deep into arbitrarily complex problems and finds an appropriate path forward. Some focus on a given area for long periods, others bounce from hotspot to hotspot as guided by organizational leadership.
+

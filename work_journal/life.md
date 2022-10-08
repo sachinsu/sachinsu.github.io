@@ -314,3 +314,7 @@
     - You can sign some data with the private key. Anyone who knows the corresponding public key can verify the signature, proving which private key produced it.    
     - A certificate is a data structure that contains a public key and a name. The data structure is then signed. The signature binds the public key to the name
     -  The entity that signs a certificate is called the issuer (or certificate authority) and the entity named in the certificate is called the subject.
+
+- Economics 
+	- The real cost of anything is still its value in alternative usage. e.g. The real cost of building a bridge are the other things that could have been built with same labor and material. 
+
