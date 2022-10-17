@@ -31,6 +31,7 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Save 99.93% for Lambda with Init time](https://medium.com/@hichaelmart/shave-99-93-off-your-lambda-bill-with-this-one-weird-trick-33c0acebb2ea)
 - [Architecture of SAAS on Cloud managed by One man Team](https://anthonynsimon.com/blog/one-man-saas-architecture/)
 - [AWS Costs that every programmer should know](https://david-codes.hatanian.com/2019/06/09/aws-costs-every-programmer-should-now.html)
+- [You should not be probably using AWS](https://www.karlsutt.com/articles/you-should-not-be-using-aws/)
 
 ### Videos, Talks (AWS)
 

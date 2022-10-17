@@ -34,7 +34,7 @@ draft: false
 - [Practical Frontend Architecture using React,GraphQL, Next.JS and Typescript](https://jaredgorski.org/writing/14-practical-frontend-architecture/)
 - [The baseline for Web development in 2022](https://engineering.linecorp.com/en/blog/the-baseline-for-web-development-in-2022/)
 - [Web UI Patterns by Addy Osmani](https://www.patterns.dev/)
-
+- [The Web's Next Transition](https://www.epicweb.dev/the-webs-next-transition)
 
 ## Testing
 

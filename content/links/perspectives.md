@@ -51,7 +51,7 @@ Section covering Business, project/programming perspectives
 - [Determining how Architectural decisions impact business via Value](https://martinfowler.com/articles/value-architectural-attribute.html)
 - [Use just one big Server](https://www.specbranch.com/posts/one-big-server/)
 - [When are Microservices a bad idea?](https://semaphoreci.com/blog/bad-microservices)
-
+- [The best engineers think like Investors not Builders](https://levelup.gitconnected.com/the-best-engineers-think-like-investors-not-builders-cf005e75ab80)
 
 ## Legacy Modernization 
 
