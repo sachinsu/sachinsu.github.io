@@ -726,6 +726,16 @@
         - all requests to /login or /payment endpoints
         -  For database traffic: SELECTs for health checks are useless, DELETEs and all other mutations are rare but you should keep all of them.
 
+
+- Google's measures for handling overload, 
+	- we implement a per-request retry budget of up to three attempts. If a request has already failed three times, we let the failure bubble up to the caller. The rationale is that if a request has already landed on overloaded tasks three times, it's relatively unlikely that attempting it again will help because the whole datacenter is likely overloaded.
+	- we implement a per-client retry budget. Each client keeps track of the ratio of requests that correspond to retries. A request will only be retried as long as this ratio is below 10%. The rationale is that if only a small subset of tasks are overloaded, there will be relatively little need to retry.
+	- Observability 
+		- Latency - The time it takes to service a request. It’s important to distinguish between the latency of successful requests and the latency of failed requests. For example, an HTTP 500 error triggered due to loss of connection to a database or other critical backend might be served very quickly; however, as an HTTP 500 error indicates a failed request, factoring 500s into your overall latency might result in misleading calculations. On the other hand, a slow error is even worse than a fast error! Therefore, it’s important to track error latency, as opposed to just filtering out errors.
+        - Traffic - A measure of how much demand is being placed on your system, measured in a high-level system-specific metric. For a web service, this measurement is usually HTTP requests per second, perhaps broken out by the nature of the requests (e.g., static versus dynamic content). For an audio streaming system, this measurement might focus on network I/O rate or concurrent sessions. For a key-value storage system, this measurement might be transactions and retrievals per second.
+        - Errors - The rate of requests that fail, either explicitly (e.g., HTTP 500s), implicitly (for example, an HTTP 200 success response, but coupled with the wrong content), or by policy (for example, "If you committed to one-second response times, any request over one second is an error"). Where protocol response codes are insufficient to express all failure conditions, secondary (internal) protocols may be necessary to track partial failure modes. Monitoring these cases can be drastically different: catching HTTP 500s at your load balancer can do a decent job of catching all completely failed requests, while only end-to-end system tests can detect that you’re serving the wrong content.
+        - Saturation - How "full" your service is. A measure of your system fraction, emphasizing the resources that are most constrained (e.g., in a memory-constrained system, show memory; in an I/O-constrained system, show I/O). Note that many systems degrade in performance before they achieve 100% utilization, so having a utilization target is essential.In complex systems, saturation can be supplemented with higher-level load measurement: can your service properly handle double the traffic, handle only 10% more traffic, or handle even less traffic than it currently receives? For very simple services that have no parameters that alter the complexity of the request (e.g., "Give me a nonce" or "I need a globally unique monotonic integer") that rarely change configuration, a static value from a load test might be adequate. As discussed in the previous paragraph, however, most services need to use indirect signals like CPU utilization or network bandwidth that have a known upper bound. Latency increases are often a leading indicator of saturation. Measuring your 99th percentile response time over some small window (e.g., one minute) can give a very early signal of saturation.Finally, saturation is also concerned with predictions of impending saturation, such as "It looks like your database will fill its hard drive in 4 hours."
+
 ## 2022-jan-03 Mon
 
 - [VMs or Serverless][Architecture][Infrastructure]
@@ -1424,3 +1434,17 @@
 
 	- The Solver digs deep into arbitrarily complex problems and finds an appropriate path forward. Some focus on a given area for long periods, others bounce from hotspot to hotspot as guided by organizational leadership.
 
+- What is Wine? wine is a “dynamic loader” for Windows executables. It’s a native Linux binary, hence it can just run normally, and it knows how to deal with EXE and DLLs.
+
+- Pschycology for Software Development 
+	- Spend more time to consider, 
+		- the financial costs 
+		- the payoff periods 
+		- the opportunity costs
+	- focused on work that paid off sooner than later - engineers should avoid work that pays off too far into the future. This mistake happens particularly when it comes to engineering migrations.I have a rule that any engineering work must have a minimum of 2x of the rewards to justify the cost.
+	- calculated if the work was worth their time or not before diving into it
+	- weighed the opportunity costs of their work
+
+- Approach for modernization of problematic source code
+	- Get testing in place ...if not already available
+	- use Strangler pattern - one piece at a time 

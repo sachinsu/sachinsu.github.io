@@ -42,6 +42,7 @@ Knowledge base around general database related topics.
 - [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
 - [How databases optimize Sub-queries](https://scattered-thoughts.net/writing/materialize-decorrelation)
 - [Approaches to database migration](https://www.wix.engineering/post/wix-inbox-journey-3-approaches-for-zero-downtime-database-migration)
+- [Tigetbeetle - Fast financial accounting database](https://tigerbeetle.com/)
 
 ## Tools Collection 
 

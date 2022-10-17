@@ -8,6 +8,15 @@
     - choose the veggies that are stressed out 
     - Put the sugar at the end of the meal
 
+- Health advice by Prof valter
+    - Eat mostly vegan, plus a little fish, limiting meals with fish to a maximum of two or three per week. Choose fish, crustaceans, and mollusks with a high omega-3, omega-6, and vitamin B12 content (salmon, anchovies, sardines, cod, sea bream, trout, clams, shrimp.  Pay attention to the quality of the fish, choosing those with low levels of mercury.
+	- If you are below the age of 65, keep protein intake low (0.31 to 0.36 grams per pound of body weight). That comes to 40 to 47 grams of proteins per day for a person weighing 130 pounds, and 60 to 70 grams of protein per day for someone weighing 200 to 220 pounds. Over age 65, you should slightly increase protein intake but also increase consumption of fish, eggs, white meat, and products derived from goats and sheep to preserve muscle mass. Consume beans, chickpeas, green peas, and other legumes as your main source of protein.
+	- Minimize saturated fats from animal and vegetable sources (meat, cheese) and sugar, and maximize good fats and complex carbs. Eat whole grains and high quantities of vegetables (tomatoes, broccoli, carrots, legumes, etc.) with generous amounts of olive oil (3 tablespoons per day) and nuts (1 ounce per day).
+	- Follow a diet with high vitamin and mineral content, supplemented with a multivitamin buffer every three days. 
+	- Based on your weight, age, and abdominal circumference, decide whether to have two or three meals per day. If you are overweight or tend to gain weight easily, consume two meals a day: breakfast and either lunch or dinner, plus two low-sugar (less than 5 grams) snacks with fewer than 100 calories each. If you are already at a normal weight, or if you tend to lose weight easily or are over 65 and of normal weight, eat three meals a day and one low-sugar (less than 3 to 5 grams) snack with fewer than 100 calories.
+	- Confine all eating to within a twelve-hour period; for example, start after 8 a.m. and end before 8 p.m. Don’t eat anything within three to four hours of bedtime.
+
+
 - [Recommendations for Food intake][Health]
     - Liquid calories are not same as solid calories. Avoid liquid calories as body is not able to effectively apply measuring mechanism as it does with solid calories due to million years of evolution.
     - Things to check,
@@ -316,5 +325,10 @@
     -  The entity that signs a certificate is called the issuer (or certificate authority) and the entity named in the certificate is called the subject.
 
 - Economics 
-	- The real cost of anything is still its value in alternative usage. e.g. The real cost of building a bridge are the other things that could have been built with same labor and material. 
-
+	- The real cost of anything is still its value in alternative usage. e.g. The real cost of building a bridge are the other things that could have been built with same labor and material.
+	- The nirvana fallacy is the informal fallacy of comparing actual things with unrealistic, idealized alternatives. comparing imperfect market solution to a government solution. 
+	- politics reduces cost of irrationality
+	- In price-coordinated economy, nobody needs to know specifics of all the things. 
+	- The crucial requirement for maintaining growth and progress is that successful experiments be continued and unsuccessful experiments be terminated.
+     - What is important is not the success or failure of particular individuals or companies, but the success of particular knowledge and insights in prevailing despite the blindness or resistance of others. Given the scarcity of such resources, an economy in which they have decisive advantages is an economy which itself has greater advantages in creating higher standards of living. A Society that taps all kinds of talents from all kind of resources has advantage.No economic system can depend on the continuing wisdom of select few (Existing leaders). Economic pressures (Competition @ Marketplace, irrate stackholders etc.) can force leaders to change course. Hence economies under the thumb of commisars have seldom matched track record of capitalist economies. 
+	- The difference between limited knowledge of business executive from government official is that he is received instructions from others on what to do while government official is giving instructions to others and compelling them to obey. 
