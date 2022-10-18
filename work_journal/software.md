@@ -1143,8 +1143,7 @@
         - Dictionary approach - Involves creating a dictionary of correctly spelled words and then 
         - Classify it - identify misspelled words
         - Recommendation - Present possible corrections 
-        - Transformation - automatically replace with corrections.
-    Has certain limitations like lack of regular updates to word list for slang words, proper names; it can autocorrect grammatical errors
+        - Transformation - automatically replace with corrections.Has certain limitations like lack of regular updates to word list for slang words, proper names; it can autocorrect grammatical errors.
     - Data intensive approach - Corpus consisting of compilation of text is prepared. This has certain advantages like language-specific dictionary is not needed. It can show words in context unlike Dictionary approach with does word by word checks.
         - Speech Recognition / Speech to text 
         - Its hard because, 
