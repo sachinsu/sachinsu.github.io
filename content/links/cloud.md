@@ -11,7 +11,7 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Zero dollar Infrastructure stack](https://medium.com/better-programming/the-zero-dollar-infrastructure-stack-7c840a8b555b)
 - [Cloud Server Performance, Prices, Specs and Features](https://www.vpsbenchmarks.com/)
 - [The Cost of Cloud, a Trillion Dollar Paradox](https://a16z.com/2021/05/27/cost-of-cloud-paradox-market-cap-cloud-lifecycle-scale-growth-repatriation-optimization/)
-
+- [Why we are leaving cloud](https://world.hey.com/dhh/why-we-re-leaving-the-cloud-654b47e0)
 
 ### Articles (GCP)
 

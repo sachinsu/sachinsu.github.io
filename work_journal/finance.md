@@ -5,6 +5,13 @@
     - 60-40 is probably good allocation 
     - key things to think about how much risk one can take 
     - pay attention to GDP
+	- First, pare costs to the bone. Realize that in investing you get what you don’t pay for
+	- Second, diversify. Own American business and hold on to it. Not one company or industry, but a broadly diversified portfolio of lots of companies and industries. Buy such a portfolio, never sell, and hold it forever. No one knows what stocks will do tomorrow, or even what they’ll do over the next decade, but over the long pull the dividends and earnings growth of American business will be reflected in rising stock prices
+    - Third, don’t forget to allocate your assets prudently between stocks and bonds.
+	- Fourth, don’t do something, just stand there. Stay the course. 
+    - Caution! External email. Do not open attachments or click links, unless this email comes from a known sender and you know the content is safe.
+    - The greatest enemy of a good plan is the dream of a perfect plan
+
 
 - [Portfolio Construction , John Bogle ***][PersonalFinance]
     - Benjamin Graham believed that investors should never be entirely out of the stock market (or entirely in it, either).
@@ -451,3 +458,11 @@
     - Inverted expertise - Overconfidence grows worse as people become more expert in a given field. 
     - Representativeness (sometimes called “the law of small numbers”) is the human tendency to consider short series of data to be typical of long-term trends.
     - Availability, meanwhile, is the natural inclination to let recent and vivid events overwhelm our judgment about normal expected outcomes
+
+- Economics
+	- Profits on sale are different than profits on investments. This is because profit on sale involves costs like employees, utility expenses, taxes on suppliers etc.
+	- In virtually all jobs, the quality of equipment, management and other workers goes into determining worker's productivity.
+	- Combination of supply and demand determines the prices of goods and services.
+	- Capitalism 
+		- Profit is a price paid for efficiency
+		- Business owner acting as monitor for the economic efficiency of the business is one enormous advantage. 
