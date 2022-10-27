@@ -52,6 +52,7 @@ Section covering Business, project/programming perspectives
 - [Use just one big Server](https://www.specbranch.com/posts/one-big-server/)
 - [When are Microservices a bad idea?](https://semaphoreci.com/blog/bad-microservices)
 - [The best engineers think like Investors not Builders](https://levelup.gitconnected.com/the-best-engineers-think-like-investors-not-builders-cf005e75ab80)
+- [CUPID principles](https://dannorth.net/2022/02/10/cupid-for-joyful-coding/)
 
 ## Legacy Modernization 
 

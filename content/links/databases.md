@@ -52,6 +52,7 @@ Knowledge base around general database related topics.
 - [Goose - Database schema migrations](https://pressly.github.io/goose/)
 - [HammerDB - Benchmarking Suite for databases](https://www.hammerdb.com/)
 - [Sysbench - Scriptable database and system performance benchmark](https://github.com/akopytov/sysbench)
+- [Soda core - Data schema checks, for Quality, as code](https://www.soda.io/core)
 
 ## Data Analytics 
 
@@ -123,6 +124,7 @@ Knowledge base around general database related topics.
 
 ## Data Discovery
 
+- [OpenMetadata - Data Discovery, Lineage, Data Quality](https://open-metadata.org/)
 - [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
 - [Data Discovery at Shopify](https://engineering.shopify.com/blogs/engineering/solving-data-discovery-challenges-shopify)
 - [Great Expectations - Data Documentation and Profiling tool](https://github.com/great-expectations/great_expectations)
