@@ -1117,11 +1117,11 @@
         - gRPC JSON transcoding runs inside an ASP.NET Core app. It deserializes JSON into Protobuf messages, then invokes the gRPC service directly.JSON transcoding deserializes JSON to Protobuf messages and invokes the gRPC service directly. There are significant performance benefits in doing this in-process vs. making a new gRPC call to a different server.
 
 - Cryptography, Crypto economics etc.
-    - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
     - Hashing use cases - To verify the sendor , Password storage , Time-stamping
     - Public key encryption
         - Message encrypted usng public key can  be decrypted using private key and vice-versa. 
         - Digital Signature - Message is encrypted using private key but can be decrypted using public key.
+    - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
     - transposition cypher with random key is difficult to decrypt.
     - in 1976 Whitfield Diffie and Martin Hellman created a new kind of cryptography, one that allowed for secure communication of a secret key over an insecure network.Diffie and Hellman revolutionized cryptography by proving that a secret key could be distributed over an insecure network.
     - RSA, showed that the key used to encrypt a message did not have to be the same as the key used to decrypt a message.
