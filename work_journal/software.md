@@ -1118,6 +1118,10 @@
 
 - Cryptography, Crypto economics etc.
     - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
+    - Hashing use cases - To verify the sendor , Password storage , Time-stamping
+    - Public key encryption
+        - Message encrypted usng public key can  be decrypted using private key and vice-versa. 
+        - Digital Signature - Message is encrypted using private key but can be decrypted using public key.
     - transposition cypher with random key is difficult to decrypt.
     - in 1976 Whitfield Diffie and Martin Hellman created a new kind of cryptography, one that allowed for secure communication of a secret key over an insecure network.Diffie and Hellman revolutionized cryptography by proving that a secret key could be distributed over an insecure network.
     - RSA, showed that the key used to encrypt a message did not have to be the same as the key used to decrypt a message.
@@ -1138,6 +1142,12 @@
     - Why bitcoin mining is computationally expensive -  bitcoin miners must try trillions of hashes to find the rare hash to deploy block onto the blockchain. 
     -  blockchain makes data more secure because tampering with one element requires changing every subsequent block
     - A smart contract is a kind of contract where the performance is guaranteed by software instead of by lawyers and judges
+    - CryptoCurrency
+        -  an electronic payment system based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party. 
+        - Bitcoin is basically Public key and associated balance of bitcoins. Owner as corresponding private key which allows him to trade. Combination of public and private key is enough to define a coin. Cryptocurrency is called cryptocurrency because it’s a currency derived from cryptography. Every transaction of bitcoin is broadcasted to entire network so everyone who maintains ledger can update it.
+    	- Mining the bitcoin involves taking the hash of the previous block, plus the transactions that have come in since then, plus a new nonce, and try to find a new hash.Each miner takes a summary of the list of transactions in the block, along with a hash of the previous block. Then the miner sticks another arbitrary number—called a “nonce”—on the end of the list. The miner runs the whole thing (list plus nonce) through a SHA-256 hashing algorithm. This generates a 64-digit hexadecimal number. If that number is small enough, then the miner has mined the block. If not, the miner tries again with a different nonce.
+
+
 
 - Data science use cases
     - Spelling corrections 
