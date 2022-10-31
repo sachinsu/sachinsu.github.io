@@ -38,7 +38,6 @@ Knowledge base around general database related topics.
 - [Some SQL tricks from Application DBA](https://hakibenita.com/sql-tricks-application-dba)
 - [Best Practices while writing SQL](https://www.metabase.com/learn/building-analytics/sql-templates/sql-best-practices)
 - [Using checksums to verify syncing 100M database records](https://sirupsen.com/napkin/problem-14-using-checksums-to-verify/)
-- [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
 - [How to populate a  table with 1 million records using single query](https://antonz.org/random-table/)
 - [How databases optimize Sub-queries](https://scattered-thoughts.net/writing/materialize-decorrelation)
 - [Approaches to database migration](https://www.wix.engineering/post/wix-inbox-journey-3-approaches-for-zero-downtime-database-migration)
@@ -70,7 +69,6 @@ Knowledge base around general database related topics.
 - [Designing a data transformation that delivers value right from the beginning](https://www.mckinsey.com/industries/financial-services/our-insights/designing-a-data-transformation-that-delivers-value-right-from-the-start#)
 - [List of Computational Data Analysis Workflow Systems](https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
 - [Data Visualization framework for Python](https://dash.plotly.com/)
-- [Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it](https://medium.com/@budilov/create-a-serverless-data-lake-on-aws-and-migrate-your-on-prem-data-to-it-80dad09e23cb)
 - [Analytics Academy by Segment](https://segment.com/academy/)
 - [Analytics Whitepapers by Sisense](https://www.sisense.com/whitepapers/)
 - [SQL Analytics Training](https://mode.com/sql-tutorial/sql-business-analytics-training/)
@@ -78,7 +76,6 @@ Knowledge base around general database related topics.
 - [Chart types and its usage](https://looker.com/blog/different-types-graphs-charts-uses)
 - [Rudder - Open source Customer Data Infrastructure](https://rudderstack.com/)
 - [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
-- [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
 - [Modern Data stack guide by Castor](https://notion.castordoc.com/)
@@ -89,7 +86,6 @@ Knowledge base around general database related topics.
 - [Awesome list of Business Intelligence Tools](https://github.com/thenaturalist/awesome-business-intelligence)
 - [Article Series on Open source Data Analytics Stack (Postgres,Meltano, Airflow, dbt and Superset) ](https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-iii-dcfd46da9f9f)
 - [Posthog - open source product analytics platform](https://posthog.com)
-- [What is delta lakehouse?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
 - [Typical Analytics Stack](https://technically.dev/posts/what-your-data-team-is-using)
 - [Flat Data - Scheduled Data Download on GitHub Actions in Repository and visualization](https://octo.github.com/projects/flat-data)
 - [Nocodb - Turn *MySQL/PostgreSQL data in smart Spreadsheet](https://github.com/nocodb/nocodb)
@@ -159,7 +155,7 @@ Knowledge base around general database related topics.
 
 ## Search
 
-- [ZincSearch - lightweight alternative to ElastricSearch](https://zincsearch.com/)
+- [ZincSearch - lightweight alternative to ElasticSearch](https://zincsearch.com/)
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
 - [Peer to peer web search and Intranet Search Appliance](https://github.com/yacy/yacy_search_server)
 - [Get Started with Opensearch](https://amulyasharma.medium.com/opensearch-up-and-running-in-10-mins-49e05689087e)
@@ -168,3 +164,15 @@ Knowledge base around general database related topics.
 
 - [About Oracle Capacity Planning](http://www.dba-oracle.com/concepts/database_administration.htm)
 - [Guidelines for SQL Server Capacity Planning](https://docs.microsoft.com/en-us/sharepoint/administration/storage-and-sql-server-capacity-planning-and-configuration)
+
+## Data Engineering
+
+- [Concepts](https://glossary.airbyte.com/term/data-engineering-concepts/)
+- [Choosing a Data Catalog](https://sarahsnewsletter.substack.com/p/choosing-a-data-catalog)
+- [Awesome Data Catalog](https://github.com/opendatadiscovery/awesome-data-catalogs)
+- [Create a Serverless Data Lake on AWS and Migrate your On-Prem Data to it](https://medium.com/@budilov/create-a-serverless-data-lake-on-aws-and-migrate-your-on-prem-data-to-it-80dad09e23cb)
+- [Data Engineering How tos- List of Curated Articles/Videos](https://github.com/adilkhash/Data-Engineering-HowTo)
+- [Guide to Data lake, Data lake house](https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi)
+- [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
+- [What is delta lake house?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
+- [Poor man's Data lake with Duckdb](https://dagster.io/blog/duckdb-data-lake)
