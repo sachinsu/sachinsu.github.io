@@ -441,6 +441,7 @@
             - Storage Layer - Typically object storage service is used (e.g. S3)
             - Data lake file formats -  that mainly compresses the data for either row or column-oriented writing or querying. E.g. Apache Parquet, Apache Avro , Apache Arrow. These formats provide features such as split ability and schema evolution (adding new columns without breaking anything or even enlarging some types).             
             - Data lake table formats sit on top of these file formats to provide robust features. data lake table format bundles distributed files into one table that is otherwise hard to manage.They allow to efficiently query your data directly out of your data lake. They lack support for ACID transactions and support for ANSI SQL. Some of the data formats are Delta lake, Apache Iceberg, Apache Hudi.
+                - Delta lake is open source layer that uses parquet for storage with Apache Spark. It supports automated partitioning
         
     - When it comes to AI and machine learning, a lot of the secret sauce to getting really great results or predictions comes from augmenting your data with additional metadata that you have.
 
@@ -792,6 +793,13 @@
         - In column-oriented layout, values of same column are stored contiguously on disk.For example, if we store historical stock market prices, price quotes are stored together. Storing values for different columns in separate files or file segments allows efficient queries by column, since they can be read in one pass rather than consuming entire rows and discarding data for columns that weren’t queried.
         - Column-oriented stores are a good fit for analytical workloads that compute aggregates, such as finding trends, computing average values, etc. Processing complex aggregates can be used in cases when logical records have multiple fields, but some of them (in this case, price quotes) have different importance and are often consumed together.
         - Apache Parquet, Apache ORC are column-oriented file formats.
+            - Parquet
+                - They use hybrid (row & colum) approach for storage. Values of each column for set of rows (rowgroups) are stored contiguously.
+                - Usually not stored as single file. 
+                - Supports Compression using techniques like RLE (Run length encoding). Stores repeated value only once and associated encoded data. 
+                - Smaller files results in lesser I/O
+                - Can be inspected using Parquet-tools
+                - Uses optimization techniques like predicate pushdown (which stores range of column value per row. This is then used during querying)
         - Reading multiple values for the same column in one run significantly improves cache utilization and computational efficiency.
         - If the read data is consumed in records (i.e., most or all of the columns are requested) and the workload consists mostly of point queries and range scans, the row-oriented approach is likely to yield better results. If scans span many rows, or compute aggregate over a subset of columns, it is worth considering a column-oriented approach.
         - Wide column stores 

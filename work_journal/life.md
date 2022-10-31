@@ -93,6 +93,11 @@
     - Cooking generally has some degree of undoing like acid for bitter, dehydrate if soggy etc.
     - Restaurants exploit craving for salty, sweet and fatty tastes
 
+- How to eat @ Restaurant 
+    -	Choose a restaurant where the patrons aren’t smiling (because that means the regulars are here to eat, not socialize)
+    -	When it comes to cuisines not native to the town you are in, choose a restaurant located on the outskirts of town rather than in the centre, it is more likely to have genuinely good food (lower rents, closer to recent immigrants into said town, both of which are likely to be good indicators of genuinely good food.)
+    -	The weirder a dish sounds relative to the rest of the menu, the more likely it is to be worth ordering (for why else would the restaurant choose to include it in the menu in the first place)
+
 
 - Food and Health
     - Potato is starch which gets converted into Glucose. Glucose is less damaging than fructose.
