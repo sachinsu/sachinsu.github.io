@@ -1656,4 +1656,9 @@ short sellers, and keep the fees.
                 - If you do Puri, then do go to Ananda bazaar (iirc) in the temple and eat the bhog. Most satisfying meal I've ever had. You can also try the different gaujjas that the suars (the sweetshop owners) sell. Super stuff. But this is also Rath Yatra season. So take care!
                 -  snana purnima happened a few days back. The lords are kept out of sight till Rath Yatra as they catch a fever after the bath (which is 15 days).. There'll be no food. Lingaraja will be open, in general odisha temple food is :ok_hand: (edited) 
 
-
+- Truth behind Marshall Plan 
+    - The Marshall plan was about containing Stalin first, filling vacuum of retreating Britain second.
+    - Goals for the Marshall plan were, in order:
+        - Prevent communism spread
+        - Prevent humanitarian crisis
+        - Stop threat to American economy

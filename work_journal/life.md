@@ -103,7 +103,7 @@
     - Potato is starch which gets converted into Glucose. Glucose is less damaging than fructose.
     - Sugar is 50-50% fructose and glucose. Glucose gets absorbed by Body, fructose can be processed only by Liver and gets converted to Fat.
     - For a healthy heart, keep ratio triglycerides to HDL should be 2 or less.
-    -  avoid sugar, fructose, fine flour and vegetable oil
+    - Avoid sugar, fructose, fine flour and vegetable oil
     - Human body is optimized for fasting and feasting 
     - Human body has enough vitamins and other nutrients for many days.
     - It’s the combination of sugar, fat, and salt that make foods ‘hyper-palatable’ and drives us to want and eat more
