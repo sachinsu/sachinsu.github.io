@@ -420,6 +420,19 @@
 
 - [History of Data Architectures][Architecture][Data] 
     
+    - Best practices for Data Ingestion 
+        - Write down all of the most important connectors for your business, the skills and time your team has to offer, and your budget when deciding on the right ingestion tool.
+        - Document all of your data sources and how they are being ingested into your data warehouse, including any special setup.
+        - Always keep a database with your raw, untouched data.
+        - Run data syncs and models synchronously so there are no gaps in data.
+        - Create alerts at the data sources rather than downstream data models. 
+
+    - Parameters to evaluate Data Ingestion tool 
+        - Data connectors available (Shopify, Azure Blob, Facebook, NetSuite, etc.) 
+        - Capabilities of your team (time to set-up, time to maintain, skillset, etc.)
+        - Budget (monthly costs to ingest expected volume of data)
+        - Support (Slack communities, dedicated support agents, etc.)
+
     -  It all started with need for business leaders to understand how business was doing. so process was to get data out of operational data systems , transform it into a central place (Data warehouse) and perform analytics on it.
     - This enabled business analysts to understand how was business was performing 
     - However, this approach started to have challenges when,
@@ -808,6 +821,27 @@
             - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
             - Column families store multiple versions of data by timestamp.
 
+
+- [PostgreSQL Connection Pool size][Databases]
+    - Formula
+        pool size = min(num_cores, max_parallel_ios)/active_Factor*Parallelism 
+    - Determining Active Factor 
+        - PostgreSQL 14,
+            - easy with the new session statistics in PostgreSQL v14:
+                    SELECT active_time / (active_time + idle_in_transaction_time)
+                    FROM pg_stat_database
+                    WHERE datname = 'mydb'
+                    AND active_time > 0
+        - Alternate way
+            - for a coarse estimate, query pg_stat_activity several times and use  an average:
+                    SELECT (count(*) FILTER (WHERE state = 'active'))::float8
+                    / count(*) FILTER (WHERE state in
+                    ('active', 'idle in transaction'))
+                    FROM pg_stat_activity
+                    WHERE datname = 'mydb';
+    - “num_cores” is the number of CPU cores
+    - “max_parallel_ios” is the upper limit of concurrent I/O requests that the disk can handle
+     - “parallelism” is the average number of server processes used for a single SQL statement
 
 - [Postgres indexes][Databases], 
     - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query. 
