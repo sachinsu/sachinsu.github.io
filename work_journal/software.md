@@ -573,6 +573,18 @@
     - pod is a single instance of your application, and to scale to demand, many identical pods are used to replicate the application by a workload resource (such as a Deployment, DaemonSet, or StatefulSet). Your pods may include sidecar containers supporting monitoring, network, and security, and “init” containers for pod bootstrap, enabling you to deploy different application styles. These sidecars are likely to have elevated privileges and be of interest to an adversary.
     - The lifecycle of a pod is controlled by the kubelet, the Kubernetes API server’s deputy, deployed on each node in the cluster to manage and run containers. If the kubelet loses contact with the API server, it will continue to manage its workloads, restarting them if necessary. If the kubelet crashes, the container manager will also keep containers running in case they crash. The kubelet and container manager oversee your workloads.
 
+- Data orchestration landscape (Source: https://airbyte.com/blog/data-engineering-past-present-and-future), 
+	- Evolution 
+		- In 1987, it started with the mother of all scheduling tools, (Vixie) cron
+		- to more graphical drag-and-drop ETL tools around 2000 such as Oracle OWB, SQL Server Integration Services, Informatica 
+		- to simple orchestrators around 2014 with Apache Airflow, Luigi, Oozie
+		- to modern orchestrators around 2019 such as Prefect, Kedro, Dagster, or Temporal
+
+	- Airflow - recommended to use intermediary storage to pass data between different tasks.
+	- Prefect if you need a fast and dynamic modern orchestration with a straightforward way to scale out.
+	- Dagster when you foresee higher-level data engineering problems. They focus heavily on data integrity, testing, idempotency, data assets, etc. 
+
+
 - [Apache Airflow for ETL][ETL][Airflow] 
     - Primarily a workflow Management tool
     - Using Airflow to schedule and monitor ELT pipelines, but use other open-source projects that are better suited for the extract, load and transform steps. Notably, using Airbyte for the extract and load steps and dbt for the transformation step.

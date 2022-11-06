@@ -1,6 +1,39 @@
 
 ## 2022-may-30 Mon
 
+- Dr. Jason fung 
+	- Food order - Order in which to eat food
+		- Protein, fat and vegetables upfront 
+		- Carbohydrates
+	- Sugar is much worse than carbohydrates
+	- Give your body a chance to digest food
+	- Adding acid (Vinegar, Lemon juice, Fermented foods) to carbohydrates (e.g. Rice) results in less spike in blood glucose and insulin. It also increase satiaty. This is because it reduces glycemic index. 
+	- Focus on foods and less on carbs etc.
+	- Eat whole and unprocessed foods (in their natural form)
+	- No Added sugars 
+
+- Dr. Satchin Panda
+	- Go to bed at consistent time and try to be in bed for 8 Hours so that you can get 7 hours of sleep.
+	- In Morning, wait for at least 1 hour before eating.
+	- Consistent time for breakfast and then finish eating within next Max. 10 hours
+	- Try to be outdoor everyday for at least 30 minutes in daylight (even if cloudy)
+	- Exercise daily. Afternoon physical activity is better than any other time also much better in reducing blood sugar.
+	- 3 hours before sleep, 
+		- No eating 
+		- No bright lights
+	- It takes 5 hours to digest food
+	- After dinner, blood flows to stomach to absorb nutrients hence temp. is high. 
+	- Morning meal - Simple sugars. Evening meal - Protein and fat that will help with fast till next day.
+	- Dim lights 2-3 hours before sleep. e.g. use table lamps. Prefer orange or blue light.	
+	- Try to eat within window of 10 (or less) hours in a day. However, allways be practical with your life (i.e. working , commuting time).
+	- Retina has protein named melanin which helps even blind people sense light.
+	- Avoiding Jet lag - By resetting the body clock. 
+		- No food in flight. 
+		- Depending on the flight time, Finish last meal before boarding flight or try to adhere to usual fasting timeline. 
+		- don't get light exposure in flight. Don't read much but get sleep.
+	- Shift work - Do not eat during shift work. 
+	- Humans are designed to take nap after lunch. We are active in morning and early evening. 
+
 - David sinclair takeaways for healthy life 
     - Eat less often (Skip a meal), don't snack
     - avoid sugary drinks and food
@@ -337,3 +370,6 @@
 	- The crucial requirement for maintaining growth and progress is that successful experiments be continued and unsuccessful experiments be terminated.
      - What is important is not the success or failure of particular individuals or companies, but the success of particular knowledge and insights in prevailing despite the blindness or resistance of others. Given the scarcity of such resources, an economy in which they have decisive advantages is an economy which itself has greater advantages in creating higher standards of living. A Society that taps all kinds of talents from all kind of resources has advantage.No economic system can depend on the continuing wisdom of select few (Existing leaders). Economic pressures (Competition @ Marketplace, irrate stackholders etc.) can force leaders to change course. Hence economies under the thumb of commisars have seldom matched track record of capitalist economies. 
 	- The difference between limited knowledge of business executive from government official is that he is received instructions from others on what to do while government official is giving instructions to others and compelling them to obey. 
+	- The very thing that makes a modern industrial society so efficient and so effective in raising living standards 
+    - the constant quest for newer and better ways of getting work done and more goods produced
+    - also makes it impossible to keep on doing things the same old familiar ways with same workers doing same job.
