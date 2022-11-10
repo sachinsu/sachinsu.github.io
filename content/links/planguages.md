@@ -24,3 +24,4 @@ draft: false
 
 ## Containers 
 - [Awesome Collection of Docker Compose Recipes](https://github.com/docker/awesome-compose)
+- [Podman Desktop - Alternative to Docker Desktop](https://github.com/containers/podman-desktop)

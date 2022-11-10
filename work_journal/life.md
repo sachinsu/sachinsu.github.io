@@ -218,17 +218,11 @@
 - Passion is inversely proportional to the amount of real information available. The real world is often very boring. 
 - People’s expectations rise faster than living standards, so a society that becomes exponentially wealthier can see a decline in net happiness and satisfaction. There is virtually nothing people can’t get accustomed to, which also helps explain why there is so much desire for innovation and improvement.
 
-- Principled negotiation techniques
-    - Separate people from the problem
-    - Focus on interests not positions 
-    - Generate a variety of possibilities before deciding what to do
-    - Insist that results be based on some objective standard (like market value, expert opinion, custom or law)
 
 - Three rules of thumb
     - Anchoring rule - Use the first available piece of information as the basis for making an estimate about something that has absolutely nothing to do with that information.
     - Representative heuristics (or Rule of typical things) - choose intuition over logic. Belief about typicality. It 'generally favors outcomes that make good
     stories or good hypotheses. It is particularly good for learning from the very worst sort of experiences.
-    - Availability heuristics - 
 
 - Leadership
     - Watching video games is like living other people's life.
@@ -362,14 +356,58 @@
     - A certificate is a data structure that contains a public key and a name. The data structure is then signed. The signature binds the public key to the name
     -  The entity that signs a certificate is called the issuer (or certificate authority) and the entity named in the certificate is called the subject.
 
-- Economics 
+- Economics
+    - Most basic economic principle is less is demanded at higher price than at a lower price.
+	- Knowledge is never perfect and the longer the time between decision and its consequences the wider the gray area of uncertainty. One of the ways of dealing with this uncertainty is to prepare alternate courses of action.
+	- Those businesses which come closest to the optimal size of inventory will have their profit prospects enhanced.
+	- Investment is a way of transferring resources to where they have alternate uses that are more valuable than where they are.
+	- In case of physical quantities of natural resources, economic concepts of cost, prices and present values must be considered if practical conclusions are to be reached. Any amount of natural resources will count for little without considering costs for extraction and processing.
 	- The real cost of anything is still its value in alternative usage. e.g. The real cost of building a bridge are the other things that could have been built with same labor and material.
 	- The nirvana fallacy is the informal fallacy of comparing actual things with unrealistic, idealized alternatives. comparing imperfect market solution to a government solution. 
 	- politics reduces cost of irrationality
 	- In price-coordinated economy, nobody needs to know specifics of all the things. 
+    - A price artificially raised tends to cause more to be supplied and less to be demanded than when prices are left to be determined in a free market.
 	- The crucial requirement for maintaining growth and progress is that successful experiments be continued and unsuccessful experiments be terminated.
      - What is important is not the success or failure of particular individuals or companies, but the success of particular knowledge and insights in prevailing despite the blindness or resistance of others. Given the scarcity of such resources, an economy in which they have decisive advantages is an economy which itself has greater advantages in creating higher standards of living. A Society that taps all kinds of talents from all kind of resources has advantage.No economic system can depend on the continuing wisdom of select few (Existing leaders). Economic pressures (Competition @ Marketplace, irrate stackholders etc.) can force leaders to change course. Hence economies under the thumb of commisars have seldom matched track record of capitalist economies. 
 	- The difference between limited knowledge of business executive from government official is that he is received instructions from others on what to do while government official is giving instructions to others and compelling them to obey. 
 	- The very thing that makes a modern industrial society so efficient and so effective in raising living standards 
     - the constant quest for newer and better ways of getting work done and more goods produced
     - also makes it impossible to keep on doing things the same old familiar ways with same workers doing same job.
+    - What people will bid for bonds depends on how much they could get for the same money by putting it somewhere else. That is why bond prices go down when interest rate goes up and vice-versa. A Bond with 105 a year from now is not worth buying for 100 today if the current interest rate is 6 percent.
+	- For a period of year, bonds are likely to be much safer than stocks. For a period of 20 or 30 years, the risk of inflation threatens the value of bonds or other assets with fixed amounts.Even in the absense of inflation, stock prices can generally be relied on to rise over a period of decades while bond prices and the prices of other fixed assets do not. 
+	- "It is wrong for people to be penalized for things that are not their fault" - This implicitly changes subject from risk to morality.
+	- Politics and economics differ radilly in a way they deal with time. 
+	- In economics, future consequences are anticipated in concept of "present value". 
+	- In the context of National Economy, Avoid "Fallacy of composition" - What applies to part applies to the whole. 
+	- GDP - sum total of everything produced within a nation's borders. Over the period of generations, the goods and services which constitute national output change so much that statistical comparisons become practically meaningless.
+	- Rare (or in limited supply) metals like Gold, silver were chosen so as to deprive those in powers from expanding money supply which triggers inflation.
+	- As tax rates reach higher levels, particular economic activities may be abandoned by those who do not find the net rate of return on these activities, after taxes, to be enough to justify efforts.
+	- Inflation is in effect hidden tax. The money that people have saved is robbed of part of its purchasing power, which is quietly transferred to the government that issues new money.
+	- By setting interest rate on the money it lends to the banks, central banks indirectly control the interest rate that banks will charge general public. 
+	- The most basic function of government is to provide a framework of law and order, within which the people are free to engage in whatever economic and other activities they choose. Some other functions are, 
+		- Military defence 
+		- Setting standards
+	- Specific knowledge is far more important than general expertise. 
+
+- Negotiations 
+	- Leverage: Preparation is vital. Leverage comes from knowing what they need. The person that is more comfortable with “no deal” usually has more leverage.
+	- Goals: Make them specific and aim high. Use recognized third-party sources or the other side’s previous deals. This will give you confidence and reduce fear.
+	- Negotiate Process: Make sure they have the authority to say yes. Establish that information exchange is not binding. “Nothing is agreed until everything is agreed.”
+	- Establish and Maintain Trust: If you tell me a drought is coming and my first instinct is to buy a canoe, I’m walking away. Lack of trust can kill even the best deals.
+	- Information Exchange: Listening = more leverage. Don’t go zero-sum; expand the pie and create value.
+	- Offers: If you don’t have good information, let them make the first offer. If you have good information, go first. Ask for the most you can justify. Don’t be too reasonable at first — most people expect a back and forth.
+	- Concessions: Link them with “if…then.” Make sure they recognize you’re giving up something of value so they feel the need to reciprocate.
+	- When Things Break Down: Don’t make ultimatums if you don’t have to. Ignore their ultimatums. If it gets ugly, involve a third party.
+	- Closing And Commitment: You want them to feel happy. This creates follow through and better subsequent negotiations.
+    - Principled negotiation techniques
+        - Separate people from the problem
+        - Focus on interests not positions 
+        - Generate a variety of possibilities before deciding what to do
+        - Insist that results be based on some objective standard (like market value, expert opinion, custom or law)
+
+- Idly batter Tips
+	- Urad - Dont throw away soaked water. wash only once and soak only for 2 hours (so that urad dal mixture gets fermented and not soaked water). Urad acts as yeast and responsible for fermentation and not rice or methi. Urad has to be ground first like bitten egg white. 
+	- Rice - Soak for 4 hours and throw away water. Add methi to Rice. Dont use rice rawa. add 2 castor beans (shells removed).
+	- Add salt just before making idli. 
+
+

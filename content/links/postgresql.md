@@ -83,6 +83,7 @@ draft: false
 - [All about indexes in PostgreSQL](https://pganalyze.com/blog/postgres-create-index)
 - [Use cases for Partitioning](https://blog.anayrat.info/en/2021/09/01/partitioning-use-cases-with-postgresql/#storage-tiering)
 - [Asynchronous Commits for faster data loading](https://www.percona.com/blog/2020/08/21/postgresql-synchronous_commit-options-and-synchronous-standby-replication/)
+- [Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked](https://www.enterprisedb.com/blog/listening-postgres-how-listen-and-notify-syntax-promote-high-availability-application-layer)
 
 ## Interesting Extensions/Products
 
