@@ -388,6 +388,20 @@
 		- Military defence 
 		- Setting standards
 	- Specific knowledge is far more important than general expertise. 
+	- Media journalists love to feature the fortunes or misfortunes of particular individual/groups etc. and tend to present these stories as if they are typical of what is happening over all.
+	- The temptation is always to try to "solve" the problem of those whose plight has been singled out for attention, without regard for the effects elsewhere.
+	- Absolute advantage - One country, for any number of reasons, can produce some things cheaper than another
+	- Comparative advantage - One country is efficient in producing product more efficiently than other country. Britain has not produced enough food to feed itself in more than a century but it can afford to do so since it has concentrated efforts on producing things in which it has comparative advantage.
+	- Financial leverage - Ratio between assets and liabilities.It provides a quick way to quantify how much risk a financial business is taking on.A 10:1 levered firm is wiped out if assets lose 1/11th (~9.09%) of their value.
+	- In domestic or international markets, exchanges take place only to the extent that both parties benefit. 
+ 
+	- complexity is a means of rationalizing opacity in societies that pretend to transparency.
+	- The market is merely a mechanism thorough which millions of human beings express their own preferences and values, rather than have some elite with political power impose that elite's preferences and values on all. To say "the market decides" is only to say that these millions of people decide instead of having decisions imposed on them. Ecnomics is the study of the use of scarce resources for alternative uses, then it follows that there will always be unmet needs.
+	- Economics is about trade-offs and not "needs" and "solutions".
+	- Efficiency is defined as most effective way to fulfil people's desires.
+	- Competition is the condition in the market in which there is no way to keep out those who wish to enter an industry. 
+	- It would require people to stop and think, instead of being swept along by emotions, rhetoric or of the moment. For those who are willing to stop, economics provides the tools for evaluating poin terms of logical implications and empirical evidence.
+
 
 - Negotiations 
 	- Leverage: Preparation is vital. Leverage comes from knowing what they need. The person that is more comfortable with “no deal” usually has more leverage.
