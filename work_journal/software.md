@@ -1533,3 +1533,15 @@
         - Request-Response Messaging. RabbitMQ offers a lot of support for RPC style communication by means of the correlation ID and direct reply-to feature, which allows RPC clients to receive replies directly from their RPC server, without going through a dedicated reply queue that needs to be set up. Hence, RabbitMQ, having speci€c support to facilitate this usecase and stronger ordering guarantees, would be the preferred choice. 
         - Operational Metrics Tracking. RabbitMQ would be a good choice for realtime processing, based on the complex €ltering the broker could provide. Although Kaˆa would be a good choice as an interface to apply o„ine analytics, given that it can store messages for a long time and allows replay of messages. Œroughput per topic could be another criterion to decide. 
         - Underlying Layer for IoT Applications Platform. RabbitMQ can be used to connect individual operator nodes in a dataƒow graph, regardless of where the operators are instantiated. A lot of the features of RabbitMQ directly cover platform requirements: (i) sub 5ms latency for the majority of the packets, throughput up to 40Kpps for single nodes, (ii) excellent visibility on internal metrics and easy test and debug cycles for dataƒow setup through the web management interface, (iii) support for the MQTT protocol, (iv) sophisticated routing capability allows to expose packet €lters as part of an associated data processing language, and (v) the possibility to handle a very large number of streams that all have rather small throughput requirements, with a large number of applications all interested in di‚erent small subsets of these streams. - Information-centric Networking. Œis is essentially a game on the capabilities of the architecture to intelligently route packets. Œerefore, RabbitMQ would be the preferred choice, maybe even with a speci€c exchange that understands the link between routing key and destination.
+
+    - Domain driven design basics, 
+        - The composition of domain objects:
+            •	Entity: a domain object that has ID and life cycle. 
+            •	Value Object: a domain object without ID. It is used to describe the property of Entity.
+            •	Aggregate: a collection of Entities that are bounded together by Aggregate Root (which is also an entity). It is the unit of storage. 
+        - The life cycle of domain objects:
+            •	Repository: storing and loading the Aggregate.
+            •	Factory: handling the creation of the Aggregate.
+        - Behavior of domain objects:
+            •	Domain Service: orchestrate multiple Aggregate.
+            •	Domain Event: a description of what has happened to the Aggregate. The publication is made public so others can consume and reconstruct it.

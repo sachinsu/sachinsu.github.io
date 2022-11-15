@@ -90,3 +90,7 @@ Section covering useful tools for every day activities, Online learning etc.
 ## Book of secret knowledge 
 
 - [Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge)
+
+## Guidance and Templates for Resume Building 
+
+- [Harward Uni.](https://hwpi.harvard.edu/files/ocs/files/undergrad_resumes_and_cover_letters.pdf)
