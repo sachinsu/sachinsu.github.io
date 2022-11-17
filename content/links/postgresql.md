@@ -96,6 +96,7 @@ draft: false
 - [TOTP implementation in PLPGSQL](https://github.com/pyramation/totp)
 - [Connection pooler - Odyssey](https://github.com/yandex/odyssey)
 - [Connection pooler - PGBouncer](https://www.pgbouncer.org/)
+- [Setting up Multiple pgBouncer Instances](https://www.2ndquadrant.com/en/blog/running-multiple-pgbouncer-instances-with-systemd/)
 - [Connection pooler and much more - Pgpool-II](https://www.pgpool.net/)
 - [Change data capture in PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
 - [Swarm64 DA -20x faster PostgreSQL query performance](https://swarm64.com/swarm64-da/)
