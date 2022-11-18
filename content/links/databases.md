@@ -110,6 +110,7 @@ Knowledge base around general database related topics.
 - [Mara pipelines - Opinionated ETL framework](https://github.com/mara/mara-pipelines)
 - [Enso - Interactive Data Workflow builder with no coding](https://github.com/enso-org/enso)
 - [Database for Event Sourcing](https://www.eventstore.com/)
+- [What are Data Contracts](https://mlops.community/an-engineers-guide-to-data-contracts-pt-1/)
 
 ## Database scaling
 
