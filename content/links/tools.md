@@ -23,6 +23,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Ex-googler's list similar tools/techniques](https://github.com/jhuangtw/xg2xg)
 - [Recoll - Desktop full search tool](https://www.lesbonscomptes.com/recoll/index.html)
 - [Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs](https://github.com/freedomofpress/dangerzone)
+- [Briar - Secure peer to peer messaging on Android](https://briarproject.org/quick-start/)
 
 ## Useful Command line tools
 
