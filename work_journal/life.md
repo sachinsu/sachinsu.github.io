@@ -7,7 +7,7 @@
 		- Carbohydrates
 	- Sugar is much worse than carbohydrates
 	- Give your body a chance to digest food
-	- Adding acid (Vinegar, Lemon juice, Fermented foods) to carbohydrates (e.g. Rice) results in less spike in blood glucose and insulin. It also increase satiaty. This is because it reduces glycemic index. 
+	- Adding acid (Vinegar, Lemon juice, Fermented foods) to carbohydrates (e.g. Rice) results in less spike in blood glucose and insulin. It also increase satiety. This is because it reduces glycemic index. 
 	- Focus on foods and less on carbs etc.
 	- Eat whole and unprocessed foods (in their natural form)
 	- No Added sugars 
@@ -25,7 +25,7 @@
 	- After dinner, blood flows to stomach to absorb nutrients hence temp. is high. 
 	- Morning meal - Simple sugars. Evening meal - Protein and fat that will help with fast till next day.
 	- Dim lights 2-3 hours before sleep. e.g. use table lamps. Prefer orange or blue light.	
-	- Try to eat within window of 10 (or less) hours in a day. However, allways be practical with your life (i.e. working , commuting time).
+	- Try to eat within window of 10 (or less) hours in a day. However, always be practical with your life (i.e. working , commuting time).
 	- Retina has protein named melanin which helps even blind people sense light.
 	- Avoiding Jet lag - By resetting the body clock. 
 		- No food in flight. 
@@ -41,7 +41,7 @@
     - choose the veggies that are stressed out 
     - Put the sugar at the end of the meal
 
-- Health advice by Prof valter
+- Health advice by Prof walter
     - Eat mostly vegan, plus a little fish, limiting meals with fish to a maximum of two or three per week. Choose fish, crustaceans, and mollusks with a high omega-3, omega-6, and vitamin B12 content (salmon, anchovies, sardines, cod, sea bream, trout, clams, shrimp.  Pay attention to the quality of the fish, choosing those with low levels of mercury.
 	- If you are below the age of 65, keep protein intake low (0.31 to 0.36 grams per pound of body weight). That comes to 40 to 47 grams of proteins per day for a person weighing 130 pounds, and 60 to 70 grams of protein per day for someone weighing 200 to 220 pounds. Over age 65, you should slightly increase protein intake but also increase consumption of fish, eggs, white meat, and products derived from goats and sheep to preserve muscle mass. Consume beans, chickpeas, green peas, and other legumes as your main source of protein.
 	- Minimize saturated fats from animal and vegetable sources (meat, cheese) and sugar, and maximize good fats and complex carbs. Eat whole grains and high quantities of vegetables (tomatoes, broccoli, carrots, legumes, etc.) with generous amounts of olive oil (3 tablespoons per day) and nuts (1 ounce per day).
@@ -110,7 +110,7 @@
     - Tea , coffee without cream, sugar is ok during fasting 
     - No processed/refined food. No Sugar. Reduce Carbs. 
 
-- Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & metamodels. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
+- Ashok Krish - Detested memorizing stuff. Exams are test of time than knowledge and analytical ability. Understand things from first principles, basic heuristics , models & meta models. Avoid Hard manual labour, picks things that can be broken down and mastered. In terms of Indian cooking, tacit knowledge is no where captured. Health and nutrition is very complex subject.
     - Fats - they dont undergo any chemical changes till they reach intestine. Essentially replacement for Water at High temperature. 
     - Fats do not cause insulin spike 
     - Need certain amount of Fats.avoid trans-fats & refined oils. Always use refined oil for frying. 

@@ -50,18 +50,18 @@
     - Trends of 2021, 
         - Exploration of low-code/no-code environments. 
         - Focus on Architecture as part of daily activities of development process. Realization of importance of evolutionary and incremental architectures
-        - Move to hybrid from pure microservices based architecture. 
+        - Move to hybrid from pure micro-services based architecture. 
 
     - Three basic Architecture Styles
         - Monolith (Single Deployment)
             - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
         - Service based 
-        - Microservices (independant deployability)
+        - Micro-services (independent deployability)
             - Common topologies 
                 - API REST-based topology
-                - application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
-                - centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
-                - typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
+                - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
+                - Centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
+                - t ypically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
 
     - An architecture style describes the way your overall system is structured (such as microservices, layered monolith, and so on), whereas architecture patterns are ways of describing certain and specific architectural aspects of that overall structure. 
 
@@ -121,8 +121,6 @@
             - You need terabytes of storage to have runway for the next ~5 years
             - You need more read capacity (i.e. use Read Replicas)
 
-
-
 -   [Sync and Async ( Everything can't be async )][Architecture]
     - Javascript solves this by making everything non-blocking because blocking would destroy browser's UI Thread which is it's primary use case.
     - golang does this via go routines
@@ -160,8 +158,8 @@
     - ElasticSearch shortcomings documented by Yelp w.r.t. Scale, 
         - Document is indexed individually on every replica 
         - Uneven load distribution across cluster 
-        - Difficult to autoscale 
-    - Yelp is using Lucene based alternate search solution call nrtsearch, at https://github.com/Yelp/nrtsearch 
+        - Difficult to auto-scale 
+    - Yelp is using Lucene based alternate search solution called nrtsearch, at https://github.com/Yelp/nrtsearch 
         It Provides, 
         - Near real time segment replication 
         - Concurrent query execution
@@ -179,9 +177,9 @@
         - Server-side rendering is also necessary if clients have technical limitations, such as being unable to run JavaScript. Otherwise, server-side rendering is practically equal to client-side rendering.
 
 - [Memory Management][SystemArchitecture]
-   - OS has Virtual memory manager (VMM) that allocates VM to processes
-    - VM enables both isolation and sharing
-    - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
+    - OS has Virtual memory manager (VMM) that allocates VM to processes
+        - VM enables both isolation and sharing
+        - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
         - Provided by the MMU (Memory Management Unit)
         - Memory divided in pages (usually 4k)
         - Virtual to physical page mapping in page tables (that the MMU walks)

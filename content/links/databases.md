@@ -156,6 +156,7 @@ Knowledge base around general database related topics.
 
 ## Search
 
+- [Manticore Search -  easy to use open source fast database for search](https://github.com/manticoresoftware/manticoresearch/)
 - [ZincSearch - lightweight alternative to ElasticSearch](https://zincsearch.com/)
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
 - [Peer to peer web search and Intranet Search Appliance](https://github.com/yacy/yacy_search_server)

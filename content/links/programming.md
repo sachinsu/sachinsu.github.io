@@ -65,6 +65,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
 - [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
 - [Schannel in Windows for Strong Ciphers/Cryptography](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233)
+- [Definitive guide to key management](https://info.townsendsecurity.com/definitive-guide-to-encryption-key-management-fundamentals)7
 
 ## Training
 
