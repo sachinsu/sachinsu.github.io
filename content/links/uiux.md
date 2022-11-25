@@ -75,3 +75,4 @@ draft: false
 - [Mermaid - Generate Diagrams from Markdown](https://github.com/mermaid-js/mermaid)
 - [AutoMerge - Network agnostic library for JSON-like data structure (a CRDT) that can be modified concurrently by different users, and merged again automatically.](https://github.com/automerge/automerge)
 - [Text (DSL) to diagrams](https://d2lang.com)
+- [Interactive guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
