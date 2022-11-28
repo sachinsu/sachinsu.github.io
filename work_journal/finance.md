@@ -465,4 +465,5 @@
 	- Combination of supply and demand determines the prices of goods and services.
 	- Capitalism 
 		- Profit is a price paid for efficiency
-		- Business owner acting as monitor for the economic efficiency of the business is one enormous advantage. 
+		- Business owner acting as monitor for the economic efficiency of the business is one enormous advantage.
+    - Robust property rights for individuals and governments with clear restraints on executive power, democratic political processes and a lack of government corruption were all associated with economic growth. 

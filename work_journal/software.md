@@ -544,10 +544,10 @@
         - Errors
 
 - [Every database technology has its Kryptonite][Databases]
-
-        - MySQL: the query cache, replication, the buffer pool.MySQL lacks transactional schema changes and has brittle replication.
-        - PostgreSQL: VACUUM, connection overhead, shared buffers. PostgreSQL is susceptible to vacuum and bloat problems during long-running transactions.
-        - MongoDB: missing indexes, lock contention
+    - MySQL: the query cache, replication, the buffer pool.MySQL lacks transactional schema changes and has brittle replication.
+    - PostgreSQL: VACUUM, connection overhead, shared buffers. PostgreSQL is susceptible to vacuum and bloat problems during long-running transactions.
+    - MongoDB: missing indexes, lock contention
+    - index merge (Query using multiple individual indexes to arrive at result) will be ~10x slower than the composite index. 
 
 
 - Citus for PostgreSQL

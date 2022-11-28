@@ -425,4 +425,24 @@
 	- Rice - Soak for 4 hours and throw away water. Add methi to Rice. Dont use rice rawa. add 2 castor beans (shells removed).
 	- Add salt just before making idli. 
 
+- Narratives 
+	- Narratives are not the truth; rather, they nudge you to understand the truth in a particular way. They are never neutral or innocent; they are always strategic. Narratives are about perceptions – of events and goals. The most important requisite for a narrative to be successfully sold is a receptive audience.
+	- People’s perceptions are filtered through their emotion; they tend to interpret the world according to what they want to see. Feed their expectations, manufacture a reality to match their desires, and they will fool themselves.
+    - The best of deception is based on ambiguity, mixing fact and fiction so that one cannot be disentangled from the other. Control people’s perceptions of reality and you can control them.
+
+- Economics, 
+	- Laissez-faire is a policy of minimum governmental interference in the economic affairs of individuals and society
+
+- Howard marks on Investments 
+	- Develop the mindset that you don't make money on what you buy and sell; you make money on what you hold. Think more. Trade less.
+	- What really matters is the performance of your holdings over next five or ten years and how the value at the end of the period compares to the amount you invested and to your needs. 
+	- Most investors and anyone who understands limitations regarding outperformance would probably be better off holding index funds over the long term.
+
+- Islam vs christianity, 
+	- A key difference between Islam and Christianity is that the former has far more to say on political governance. Mohammad was not only a prophet, but the political leader of an official state, and thus had views on governance and law which are officially prescribed by the faith.
+
+- Saudi Arabia
+	- The Saudi economy is essentially a massive wealth redistribution scheme. Saudi citizens feel entitled to oil wealth due to their loyalty to the crown, but not everyone can work for Aramco (it doesn’t help that the oil industry has low labor intensity), so they need to draw wealth another way.
+	- much of oil money flows into an enormous welfare state. This is treated by the royal family as a way to buy loyalty, so they aren’t too concerned with where it’s going or why.
+	- the oil industry carries the Saudi state and economy, the non-oil half of the Saudi economy has little pressure to be efficient, so businessmen and the state apparatus monitoring them can easily afford to be corrupt.
 
