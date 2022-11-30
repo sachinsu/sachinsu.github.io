@@ -1518,6 +1518,19 @@
 	- Get testing in place ...if not already available
 	- use Strangler pattern - one piece at a time 
 
+- RabbitMQ Concepts, 
+    -	Exchange: this is the entry point to which messages are published.
+    -	Queue: exchanges are linked to one or more message queues. A message queue is exactly as it says.
+    -	Binding: the connection between the exchange and the queues. Bindings can have binding keys.
+    -	Routing policy: the strategy on how the exchange handles routing.
+        - 	Fanout: sends all inbound messages to the exchange and all queues bound to it, regardless of routing keys. This approach ignores routing keys.
+        - 	Direct: the message is sent to queues for which the routing key matches the binding key.
+        - 	Topic: allows wildcat matching between the routing key and the binding key. For example, you could set a topic of “tasks” and this would route to both the “tasks.important” and “tasks.unimportant” bindings.
+        -	Headers: uses the header of a request to decide routings.
+    - Rabbit's main problem is its handling of partitions and general cluster interruptions.
+        - recovering from a dead cluster usually involves resetting it completely
+        - creating/destroying  a queue and bindings in RabbitMQ is slow and expensive.
+
 - Use cases for Kafka and RabbitMQ
     - Kafka 
         -Pub/Sub Messaging. Kaˆa can be a good match for the pub/sub use cases that exhibit the following properties: (i) if the routing logic is simple, so that a Kaˆa “topic” concept can handle the requirements, (ii) if throughput per topic is beyond what RabbitMQ can handle (e.g. event €rehose). 

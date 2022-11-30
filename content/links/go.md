@@ -121,6 +121,7 @@ b.com/hoanhan101/ultimate-go)
 - [Curated list of design patterns implemented in Go](https://github.com/tmrts/go-patterns)
 - [Gophercises - Exercises for Go Developers](https://gophercises.com/)
 - [Practical concurrency guide in Go, communication by channels, patterns](https://github.com/luk4z7/go-concurrency-guide)
+- [Sample DDD Project with Code](https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example)
 
 ### Podcasts
 
