@@ -87,6 +87,7 @@ My current Favorite Language
 
 ### Task queues
 
+- [Queueing with Update..skip locked](https://ente.io/blog/tech/postgres-queue/)
 - [Machinery - Asynchronous task queue/job queue](https://github.com/RichardKnop/machinery)
 - [Bleve - Full text Search Engine](http://blevesearch.com/)
 - [Event Sourcing, pub/sub using AMQP/SQL/Channels](https://github.com/ThreeDotsLabs/watermill)

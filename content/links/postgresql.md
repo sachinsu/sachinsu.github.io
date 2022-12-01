@@ -110,6 +110,7 @@ draft: false
 - [PGSync - Sync data from one Postgres database to another](https://github.com/ankane/pgsync)
 - [Neon - Serverless Open source PostgreSQL](https://github.com/neondatabase/neon)
 - [Push PG Listen/Notify events over Websockets](https://github.com/CrunchyData/pg_eventserv)
+- [Generate ERD using D2 Diagrams](https://github.com/zekenie/d2-erd-from-postgres)
 
 ## Migration to PostgreSQL
 
