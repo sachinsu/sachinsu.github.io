@@ -59,6 +59,11 @@ Section covering Business, project/programming perspectives
 - [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
 
 
+## Stategic Approach 
+
+- [A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups](https://github.com/kuchin/awesome-cto)
+- [Best Websites for Programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
+
 ## Fintech 
 
 - [Accounting for Computer Geeks](https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html)

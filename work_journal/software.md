@@ -460,6 +460,32 @@
         - All the ETL use cases are potentially candidates for streaming
 
     - A data warehouse is a relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
+        - Dimension Modelling Process (https://about.gitlab.com/handbook/business-technology/data-team/platform/edw/#background)
+            - Choose the business process e.g. track monthly revenue
+            - Declare the grain e.g. per customer
+            - Identify the dimensions (Context, e groups of hierarchies and descriptors that define the facts)
+            - Identify the fact (measures, numeric values that can be aggregated)
+            - PREP TABLES: prep_<subject> = Used to clean raw data and prepare it for dimensional analysis.
+            - FACT TABLES: fct_<verb> Facts represent events or real-world processes that occur. Facts can often be identified because they represent the action or 'verb'. (e.g. session, transaction)
+                - All fact tables must have a primary key. The Primary Key can be either a single column using a column(surrogate key), a column(natural key), or set of columns(composite key) that have meaning to the business user and uniquely identifies a row in a table. The primary key should be the first column in the fact table.
+                - All fact tables should have a foreign key section
+                - Atomic Facts Facts are the things being measured in a process. The terms measurement or metric are often used instead of fact to describe what is happening in the model. The Atomic Facts are modeled at the lowest level of the process they are measuring. They do not filter out any data and include all the rows that have been generated from the process the Atomic Fact table is describing. 
+                - Derived Facts Derived Facts are built on top of the Atomic Facts. The Derived Fact directly references the Atomic Fact thereby creating an auditable, traceable lineage.
+            - DIMENSION TABLES: dim_<noun> = dimension table. Dimensions provide descriptive context to the fact records. Dimensions can often be identified because they are 'nouns' such as a person, place, or thing (e.g. customer, employee) The dimension attributes act as 'adjectives'. (e.g. customer type, employee division)
+                - All dimensions must have a surrogate key. The hashed surrogate key is a type of primary key that uniquely identifies each record in a model. 
+                - All dimensions must have a natural key.A natural key is a type of primary key that uniquely identifies each record in a model. The natural key is fetched from the source system application.A natural key can be a single field key value or the key value can be composed from multiple columns to generate uniqueness.
+                - All dimensions must have a missing member value.
+            - MART TABLES: mart_<subject> = Join dimension and fact tables together with minimal filters and aggregations. Because they have minimal filters and aggregations, mart tables can be used for a wide variety of reporting purposes.
+                - Marts are a combination of dimensions and facts that are joined together and used by business entities for insights and analytics. They are often grouped by business units such as marketing, finance, product, and sales.
+            - REPORT TABLES: rpt_<subject> = Can be built on top of dim, fact, and mart tables. Very specific filters are applied that make report tables applicable to a narrow subset of reporting purposes.
+            - PUMP TABLES: pump_<subject> = Can be built on top of dim, fact, mart, and report tables. Used for models that will be piped into a third party tool.
+            - MAP TABLES: map_<subjects> = Used to maintain one-to-one relationships between data that come from different sources.
+            - BRIDGE TABLES: bdg_<subjects> = Used to maintain many-to-many relationships between data that come from different sources. See the Kimball Group's documentation for tips on how to build bridge tables.
+                - These tables act as intermediate tables to resolve many-to-many relationships between two tables.
+            - Singular naming should be used, e.g. dim_customer, not dim_customers.
+            - Use prefixes in table and column names to group like data. Data will remain logically grouped when sorted alphabetically, e.g. dim_geo_location, dim_geo_region, dim_geo_sub_region.
+            - Use dimension table names in primary and foreign key naming. This makes it clear to the user what table will need to be joined to pull in additional attributes. For example, the primary key for dim_crm_account is dim_crm_account_id. If this field appears in fct_subscription, it will be named dim_crm_account_id to make it clear the user will need to join to dim_crm_account to get additional account details. 
+            - Dimension, fact, and mart tables are not to contain references to operational systems. We abstract the name away from the source system the data is produced into a name that describes the business entity or semantic significance of the data. For example, data from Salesforce is described as crm in the dimensional model and not sfdc or salesforce
 
     - Data Lineage allows one to track data flow from its source to the consumers, by also tracking all its transformations in between
 
@@ -809,6 +835,9 @@
 
 - [PostgreSQL Replication][Databases] 
     - PostgreSQL supports block-based (physical) replication as well as the row-based (logical) replication. Physical replication is traditionally used to create read-only replicas of a primary instance, and utilized in both self-managed and managed deployments of PostgreSQL. Uses for physical read replicas can include high availability, disaster recovery, and scaling out the reader nodes. 
+    -   High availability
+        - Recovery Point Objective (RPO) -  the time span within which transactions may be lost after recovery
+        - Recovery Time Objective (RTO) - the time it takes from failure to successful recovery
 
 - [Data storage][Databases][Architecture]
     - Row oriented - Because data on a persistent medium such as a disk is typically accessed block-wise (in other words, a minimal unit of disk access is a block), a single block will contain data for all columns.This is great for cases when we’d like to access an entire user record, but makes queries accessing individual fields of multiple user records (for example, queries fetching only the phone numbers) more expensive, since data for the other fields will be paged in as well
