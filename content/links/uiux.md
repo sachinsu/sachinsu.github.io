@@ -15,6 +15,7 @@ draft: false
 - [Micro frontends - Techniques, strategies and recipes for building a modern web app with multiple teams that can ship features independently.](https://micro-frontends.org/)
 - [Thoughts on SPAs](https://nolanlawson.com/2022/05/25/more-thoughts-on-spas/)
 - [33 JavaScript concepts every Developer should know](https://github.com/leonardomso/33-js-concepts#8-iife-modules-and-namespaces)
+- [Server side Events for Real-time streaming Updates](https://shopifyengineering.myshopify.com/blogs/engineering/server-sent-events-data-streaming)
 
 ## Articles
 

@@ -280,3 +280,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Grist spreadsheets - alternative to Airtable](https://github.com/gristlabs/grist-core)
 - [Penpot - prototyping tool](https://github.com/penpot/penpot)
+
+## C, C++
+
+- [Learnings from C Lang](https://tmewett.com/c-tips/)
