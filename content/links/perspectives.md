@@ -71,3 +71,7 @@ Section covering Business, project/programming perspectives
 - [Mifos X - Open source Financial Inclusion platform](https://mifos.org/mifos-x/)
 - [Moov.io - Tools/Libraries to integrate bank processing into their own software products like ISO8583](https://github.com/moov-io)
 - [Awesome Fintech Resources](https://github.com/moov-io/awesome-fintech)
+
+## Scheduling
+
+- [Evidence based scheduling](https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/)
