@@ -1585,3 +1585,76 @@
         - Behavior of domain objects:
             •	Domain Service: orchestrate multiple Aggregate.
             •	Domain Event: a description of what has happened to the Aggregate. The publication is made public so others can consume and reconstruct it.
+
+* Characteristics of Common distributed systems
+    * Outsourced heaps
+        * Redis, memcached, ...
+        * Data fits in memory, complex data structures
+        * Useful when your language's built-in data structures are slow/awful
+        * Excellent as a cache
+        * Or as a quick-and-dirty scratchpad for shared state between platforms
+        * Not particularly safe
+    * KV stores
+        * Riak, Couch, Mongo, Cassandra, RethinkDB, HDFS, ...
+        * Often 1,2,3 dimensions of keys
+        * O(1) access, sometimes O(range) range scans by ID
+        * No strong relationships between values
+        * Objects may be opaque or structured
+        * Large data sets
+        * Often linear scalability
+        * Often no transactions
+        * Range of consistency models--often optional linearizable/sequential ops.
+    * SQL databases
+        * Postgres, MySQL, Percona XtraDB, Oracle, MSSQL, VoltDB, CockroachDB, ...
+            *        Defi*ned by relational algebra: restrictions of products of records, etc
+            *        Mode*rate sized data sets
+            *        Almo*st always include multi-record transactions
+            *        Rela*tions and transactions require coordination, which reduces scalability
+            *        Many* systems are primary-secondary failover
+            *        Acce*ss cost varies depending on indexes
+            *        Typically strong consistency (SI, serializable, strict serializable)
+    *   Search
+        *  Elasticsear*ch, SolrCloud, ...
+        * Documents r*eferenced by indices
+        * Moderate-to*-large data sets
+        * Usually O(1*) document access, log-ish search
+        * Good scalab*ility
+        * Typically w*eak consistency
+    * Coordination services
+        *  Zookeeper, etcd, Consul, ...*
+        * Typically strong (sequential or l*inearizable) consistency
+        * mall data sets
+        * Useful as a coordination primitive for stateless services
+    * Streaming systems
+        * Storm, Spark...
+        * Usually custom-designed, or toolkits to build your own.
+        * Typically small in-memory data volume
+        * Low latencies
+        * High throughput
+        * Weak consistency
+    * Distributed queues
+        * Kafka, Kestrel, Rabbit, IronMQ, ActiveMQ, HornetQ, Beanstalk, SQS, Celery, ...
+        * Journals work to disk on multiple nodes for redundancy
+        * Useful when you need to acknowledge work now, and actually do it later
+        * Send data reliably between stateless services
+        * The only one I know that won't lose data in a partition is Kafka
+        * Maybe SQS?
+        * Queues do not improve end-to-end latency
+        * Always faster to do the work immediately
+        * Queues do not improve mean throughput
+        * Mean throughput limited by consumers
+        * Queues do not provide total event ordering when consumers are concurrent
+        * Your consumers are almost definitely concurrent
+        * Likewise, queues don't guarantee event order with async consumers
+        * Because consumer side effects could take place out of order
+        * So, don't rely on order
+        * Queues can offer at-most-once or at-least-once delivery
+        * Anyone claiming otherwise is trying to sell you something
+        * Recovering exactly-once delivery requires careful control of side effects
+        * Make your queued operations idempotent
+        * Queues do improve burst throughput
+        * Smooth out load spikes
+        * Distributed queues also improve fault tolerance (if they don't lose data)
+            * If you don't need the fault-tolerance or large buffering, just use TCP
+            * Lots of people use a queue with six disk writes and fifteen network hops where a single socket write() could have sufficed
+        * Queues can get you out of a bind when you've chosen a poor runtime
