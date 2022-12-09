@@ -1658,3 +1658,10 @@
             * If you don't need the fault-tolerance or large buffering, just use TCP
             * Lots of people use a queue with six disk writes and fifteen network hops where a single socket write() could have sufficed
         * Queues can get you out of a bind when you've chosen a poor runtime
+
+- P2PE (Point to point Encryption) -  is an encryption standard established by the Payment Card Industry Security Standards Council. It stipulates that cardholder information is encrypted immediately after the card is used with the merchant’s point-of-sale terminal and isn’t decrypted until it has been processed by the payment processor. 
+    - Encryption of card information at the POI/payment terminal
+    - Secure management of all encryption and decryption devices
+    - P2PE applications at the POI
+    - Secure management of the description environment and decrypted data
+    - Use of encryption methodologies and cryptographic key operations

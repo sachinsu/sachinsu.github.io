@@ -37,6 +37,7 @@ Useful links for deep diving in various Cloud Ecosystems
 
 - [DynamoDB - Advanced Design Patterns](https://www.youtube.com/watch?v=6yqfmXiZTlM)
 - [DynamoDB - Deep Dive](https://www.slideshare.net/AWSAktuell/deep-dive-into-dynamodb)
+- [Migration from Postgres to DynamoDB](https://www.instacart.com/company/how-its-made/from-postgres-to-amazon-dynamodb-%EF%BF%BC/)
 
 ### Tools
 
