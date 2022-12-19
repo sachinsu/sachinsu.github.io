@@ -8,6 +8,11 @@
         - “What was the result?”
     - Bar Raiser process steps such as preparing a set of behavior-based interview questions in advance of the interview, insisting on written transcripts of the interview, rereading the transcript post interview (before making an assessment), conducting debriefs, basing debriefs on the interview transcripts, and making assessments based on well-understood principles are all steps that seek to eliminate individual biases. Having a diverse group of people involved in the process obviously reduces the chance of unconscious bias worming its way in.
 
+- Process vs Threads
+	- Process - Unit of isolation at OS level. Process starts when OS runs program which is stored as file. 
+    - Thread - Unit of execution within process. Process at least has one thread. 
+
+
 - [Things to consider while making technology choices][Architecture]
     - Software Architecture cannot be created in a vacuum and solid technical foundation is not not enough.
     - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.

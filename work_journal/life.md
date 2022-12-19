@@ -446,3 +446,28 @@
 	- much of oil money flows into an enormous welfare state. This is treated by the royal family as a way to buy loyalty, so they aren’t too concerned with where it’s going or why.
 	- the oil industry carries the Saudi state and economy, the non-oil half of the Saudi economy has little pressure to be efficient, so businessmen and the state apparatus monitoring them can easily afford to be corrupt.
 
+- Politics and Leadership
+    - Three dimensions that govern the world, 
+        - Essential
+        - influential
+        - interchangeable 
+
+    - Five rules for leaders to succeed, 
+        -  Rule 1: Keep your winning coalition as small as possible. A small coalition allows a leader to rely on very few people to stay in power. Fewer essentials equals more control andcontributes to more discretion over expenditures. 
+        -  Rule 2: Keep your nominal selectorate as large as possible. Maintain a large selectorate of interchangeables and you can easily replace any troublemakers in your coalition, influentials and essentials alike. After all, a large selectorate permits a big supply of substitute supporters to put the essentials on notice that they should be loyal and well behaved or else face being replaced. 
+        - Rule 3: Control the flow of revenue 
+        - Rule 4: Pay your key supporters just enough to keep them loyal. 
+        - Rule 5: Don’t take money out of your supporter’s pockets to make the people’s lives better.
+
+    -In politics, coming to power is always about convenient or helpful for a purpose, but possibly not completely honest or moral.
+
+    - Most professions, even ones that look wildly different, live under the umbrella of “Understanding how people respond to incentives, how to convincingly solve their problems, and how to work with others who are difficult to communicate with and/or disagree with you.”
+    - self-interest is a freight train of persuasion.
+    - Start with the assumption that everyone is innocently out of touch and you’ll be more likely to explore what’s going on through multiple points of view, instead of cramming what’s going on into the framework of your own experiences.
+    -  politics is about getting and keeping political power. It is not about the general welfare of “We, the people.” 
+    - political survival is best assured by depending on few people to attain and retain office. 
+    - when the small group of cronies knows that there is a large pool of people waiting on the sidelines, hoping to replace them in the queue for gorging at the public trough, then the top leadership has great discretion over how revenue is spent and how much to tax.
+    - dependence on a small coalition liberates leaders to tax at high rates.
+    -  where politics are concerned, ideology, nationality, and culture don’t matter all that much.
+    - Hsun Tzu (Chinese philosopher)
+        - Man is born with a love of gain. If he indulges this love, he will be quarrelsome and greedy, shedding all sense of courtesy or humility. He is born with feelings of envy and hatred, and if he indulges these, they will lead him into violence and villainy and all sense of loyalty and good faith will disappear. Man is born with desires of the senses, and if he indulges these, he will be licentious and wanton and will observe neither propriety nor principles. If he is clever, he will surely be a robber; if he is brave, he will be a bandit; if he is able, he will cause trouble; if he is a debater, his arguments will make nonsense.
