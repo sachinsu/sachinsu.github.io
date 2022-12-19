@@ -175,6 +175,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Observability
 
+- [Tips for Analyzing logs](https://jvns.ca/blog/2022/12/07/tips-for-analyzing-logs/)
 - [All about Log Aggregation](https://sematext.com/blog/log-aggregation/)
 - [Observability in 2022](https://developers.redhat.com/articles/2022/04/12/observability-2022-why-it-matters-and-how-opentelemetry-can-help)
 - [Observability @ Cloudflare](https://blog.cloudflare.com/vision-for-observability/)
@@ -274,6 +275,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API 
 
+- [REST API Best practices](https://blog.devgenius.io/best-practice-and-cheat-sheet-for-rest-api-design-6a6e12dfa89f)
 - [Comparing API Architectural Styles](https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/)
 
 ## Interesting free services 

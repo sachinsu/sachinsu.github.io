@@ -39,6 +39,7 @@ draft: false
 - [Ways to easily generate JSON in PostgreSQL](https://blog.crunchydata.com/blog/generating-json-directly-from-postgres)
 - [Grouping, Rollups and Cubes](https://www.cybertec-postgresql.com/en/postgresql-grouping-sets-rollup-cube/)
 - [Row level Security](https://www.tangramvision.com/blog/hands-on-with-postgresql-authorization-part-2-row-level-security)
+- [Just use postgres](https://www.amazingcto.com/postgres-for-everything/)
 
 ## Performance tuning, configuration etc.
 
@@ -140,4 +141,5 @@ draft: false
 
 ## Data Privacy
 
+- [PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management](https://github.com/michelp/pgsodium)
 - [PostgreSQL Anonymizer -  hides or replaces personally identifiable information (PII)](https://www.postgresql.org/about/news/postgresql-anonymizer-10-privacy-by-design-for-postgres-2452/)
