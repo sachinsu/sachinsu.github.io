@@ -54,6 +54,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API Development, Security, Cryptography
 
+- [REST API Guidelines from Microsoft](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning)
 - [Open Source Vulnerability Management](https://fossa.com/product/open-source-vulnerability-management?ref=unzip.dev)
 - [Equinor's API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)

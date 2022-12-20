@@ -106,7 +106,7 @@ Platform where i have spent most time till now.
 - [AWS Porting Assistant for .NET](https://aws.amazon.com/blogs/aws/announcing-the-porting-assistant-for-net/)
 - [Sample of Micro services in .NET Core](https://github.com/madslundt/NetCoreMicroservicesSample)
 - [CoreWCF (SOAP,TCP, WS-HTTP support) on .NET Core](https://corewcf.github.io)
-- [ASP.NET Web API Versioning](https://github.com/microsoft/aspnet-api-versioning)
+- [ASP.NET Web API Versioning](https://github.com/dotnet/aspnet-api-versioning)
 - [Samples of ASP.NET Core you can use](https://github.com/dodyg/practical-aspnetcore)
 - [Step by Step OpenTelemetry in .NET Core](https://logz.io/blog/csharp-dotnet-opentelemetry-instrumentation/#conc)
 - [Techempower performance benchmarks](https://www.techempower.com/benchmarks/)

@@ -75,3 +75,8 @@ Section covering Business, project/programming perspectives
 ## Scheduling
 
 - [Evidence based scheduling](https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/)
+
+## Capacity planning, Database scalability 
+
+- [Capacity planning for Web Application](https://kirshatrov.com/posts/capacity-planning-for-web-apps/)
+- [Scaling MySQL](https://kirshatrov.com/posts/scaling-mysql-stack-part-1-timeouts/)
