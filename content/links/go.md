@@ -127,3 +127,7 @@ b.com/hoanhan101/ultimate-go)
 ### Podcasts
 
 - [Go Time](https://changelog.com/gotime)
+
+## Performance Analysis 
+
+- [Example of Performance analysis of Go Program using benchmarks](https://f4t.dev/software/go-performance-memory/)

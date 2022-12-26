@@ -12,6 +12,7 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Cloud Server Performance, Prices, Specs and Features](https://www.vpsbenchmarks.com/)
 - [The Cost of Cloud, a Trillion Dollar Paradox](https://a16z.com/2021/05/27/cost-of-cloud-paradox-market-cap-cloud-lifecycle-scale-growth-repatriation-optimization/)
 - [Why we are leaving cloud](https://world.hey.com/dhh/why-we-re-leaving-the-cloud-654b47e0)
+- [General Guidelines when working as Cloud Engineer](https://www.lockedinspace.com/posts/001.html)
 
 ### Articles (GCP)
 
@@ -45,3 +46,4 @@ Useful links for deep diving in various Cloud Ecosystems
 - [Infracost - Open Source tool that shows Cloud cost estimates for Terraform in pull requests](https://www.infracost.io/)
 - [About Infrastructure as a Code](https://unzip.dev/0x004-infrastructure-as-code/)
 - [Cloud Native Wiki - Cloud native Architectures, DevSecOps etc.](https://www.aquasec.com/cloud-native-academy/)
+- [Mock AWS Infrastructure](https://github.com/spulec/moto)
