@@ -471,3 +471,23 @@
     -  where politics are concerned, ideology, nationality, and culture don’t matter all that much.
     - Hsun Tzu (Chinese philosopher)
         - Man is born with a love of gain. If he indulges this love, he will be quarrelsome and greedy, shedding all sense of courtesy or humility. He is born with feelings of envy and hatred, and if he indulges these, they will lead him into violence and villainy and all sense of loyalty and good faith will disappear. Man is born with desires of the senses, and if he indulges these, he will be licentious and wanton and will observe neither propriety nor principles. If he is clever, he will surely be a robber; if he is brave, he will be a bandit; if he is able, he will cause trouble; if he is a debater, his arguments will make nonsense.
+
+
+- Food 
+	- When making noodles (instant or otherwise), a pinch of soda to the boiling water will add a springy, Kollywood stunt actor texture to the noodles. And finally, if you add a pinch when parboiling peeled potatoes, baking soda will break down the pectin in the cell walls of the potato, which will help you get the most astonishingly crispy, golden brown colour and texture when frying them.
+
+    -  The rules of politics dictate that leaders to do no more for the people than is absolutely essential to prevent rebellion. Leaders who spend on public welfare at the expense of their essentials are courting disaster. 
+
+- Dictator's Handbook 
+    - Education, 
+        - Highly educated people are potential threats to autocrats and so autocrats make sure to limit educational opportunity.
+        - When the leadership relies on few essentials, higher education is for the children of the powerful; when the bloc of essentials is big, it is for the betterment of everyone.
+
+    - Who makes up the essentials in a corporation? The coalition typically includes no more than a few people in senior management and the members of the board of directors. These directors are drawn from a mix of senior management in the company, large institutional shareholders, handpicked friends and relatives of the CEO (generally described as civic leaders, no doubt), and the CEO herself. In the parlance of economists who study corporations, the makeup of these boards boils down to insiders (employees), grey members (friends, relatives), and outsiders. One part of any corporate board’s duties is to appoint, retain, or remove CEOs. 
+        - Leaders know that it is better to have incompetent loyals than competent rivals. 
+        - Principle of choosing close advisors who can not rise to the top is good advice. 
+
+    - The easiest way to incentivize the leader to liberalize policy is to force him to rely on tax revenue to generate funds. Once this happens, the incumbent can no longer suppress the population because the people won’t work if he does. 
+
+    - Designated seats for underrepresented minorities is another means by which leaders reduce the number of people upon whom they are dependent. Such policies areadvertised as empowering minorities, whether they are women, or members of a particular caste or religion. In reality they empower leaders. That a candidate is elected by a small subset of the population reduces the number of essentials required to retain power. At a very basic level, electoral victory in a two-party parliamentary system requires the support of half the people in half the districts; that is, in principle, 25 percent of the voters. Suppose 10 percent of the seats were reserved for election by one specific group that happens to be geographically concentrated (such as gay voters in the Castro in our earlier account of Harvey Milk’s election in San Francisco). To retain half the seats in parliament, the incumbent party need only retain 40 percent of the regular single member district seats, which is readily done with just over 22 percent of the vote. So by focusing on districts in which the privileged minority is prevalent, a party can reduce the number of votes it requires by 12 percent.  Delegated positions also make it easier to form a small coalition. 
+
