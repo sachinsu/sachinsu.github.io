@@ -131,6 +131,19 @@
         - Ignore negative comments when choosing restaurant (Internet incentivize negative comments)
         -	When it comes to cuisines not native to the town you are in, choose a restaurant located on the outskirts of town rather than in the centre, it is more likely to have genuinely good food (lower rents, closer to recent immigrants into said town, both of which are likely to be good indicators of genuinely good food.)
         -	The weirder a dish sounds relative to the rest of the menu, the more likely it is to be worth ordering (for why else would the restaurant choose to include it in the menu in the first place)
+    - Cooking
+        - All vegetables have defensive mechanisms when attacked (i.e. peeled/cut).
+        - Pinch of baking soda to palak helps retain green color while cooking 
+        - Potato/brinjal are soaked in water to avoid them browning.
+        - Coconut is only plant based saturated fat.
+        - For indian cooking, stainless steel (and cast iron) are preferred because use of savouring agents (tamarind etc.) tend to react with Metal and it gets mixed with food.
+        - To get restaurant like texture, brown vegetables separately than gravy. 
+        - Adding some fat (e.g. oil) to legumes will avoid froth while boiling them.
+        - Plants adopt defensive action when peeled/cooked etc. and they release chemicals which gives distinct aroma.
+        - Heating spices unlocks flavour oils which is then used in oil for frying
+        - Salt and sugar amplify flavours
+        - Store spices, legumes in refrigerator.
+
 
 
 - Food and Health
@@ -482,6 +495,10 @@
     - Education, 
         - Highly educated people are potential threats to autocrats and so autocrats make sure to limit educational opportunity.
         - When the leadership relies on few essentials, higher education is for the children of the powerful; when the bloc of essentials is big, it is for the betterment of everyone.
+
+    - Securities fraud is more likely to be committed by firms with financial problems and a large coalition than by firms with comparable financial problems and a small coalition. After all, executives who depend on a relatively large coalition are particularly vulnerable to being replaced when corporate performance is poor. Being at greater risk of deposition, larger coalition executives try to hide poor corporate performance through fraudulent reporting. 20 What is more, one of the best early-warning indicators of corporate fraud is that senior management is paid less—not more—than one would expect given the firm’s reported performance! 
+
+    - Let’s be clear, democrats act as if they care about the welfare of their people because they need their support. They are not helping out of the goodness of their hearts, and their concern extends only as far as their own people—the ones from whom they need a lot of supporters. Democrats cannot greatly enrich their essential backers by handing out cash. There are simply too many people who need rewarding. Democrats need to deliver the public policies their coalition wants. 
 
     - Who makes up the essentials in a corporation? The coalition typically includes no more than a few people in senior management and the members of the board of directors. These directors are drawn from a mix of senior management in the company, large institutional shareholders, handpicked friends and relatives of the CEO (generally described as civic leaders, no doubt), and the CEO herself. In the parlance of economists who study corporations, the makeup of these boards boils down to insiders (employees), grey members (friends, relatives), and outsiders. One part of any corporate board’s duties is to appoint, retain, or remove CEOs. 
         - Leaders know that it is better to have incompetent loyals than competent rivals. 
