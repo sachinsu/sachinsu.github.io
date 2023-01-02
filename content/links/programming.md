@@ -219,6 +219,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Skywalking - Open source Application Performance Monitoring tool](https://github.com/apache/skywalking)
 - [HTTP Toolkit - Freemium HTTP Interceptor toolkit](https://httptoolkit.tech/)
 - [Comparing Open source log collectors Fluentd, Logstash, Fluentbit](https://www.cncf.io/blog/2022/02/10/logstash-fluentd-fluent-bit-or-vector-how-to-choose-the-right-open-source-log-collector/)
+- [Observing Network Traffic with Open source tools](https://davquar.it/post/self-hosting/ntopng-fritzbox-monitoring/)
 
 ## Distributed messaging, Streams
 

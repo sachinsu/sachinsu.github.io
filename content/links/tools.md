@@ -62,7 +62,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Gmail backup tool](https://github.com/jay0lee/got-your-back)
 - [gmvault - gmail backup tool](https://github.com/gaubert/gmvaulthttps://github.com/gaubert/gmvault) 
 - [Age - Simple File Encryption tool (Go)](https://github.com/filosottile/age)
-
+- [Encryption with Pass but Age as backend](https://words.filippo.io/dispatches/passage/)
 ## Linux related References
 
 - [Understand grep, awk and sed](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
