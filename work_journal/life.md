@@ -1,4 +1,4 @@
-
+	
 ## 2022-may-30 Mon
 
 - Dr. Jason fung 
@@ -507,4 +507,32 @@
     - The easiest way to incentivize the leader to liberalize policy is to force him to rely on tax revenue to generate funds. Once this happens, the incumbent can no longer suppress the population because the people won’t work if he does. 
 
     - Designated seats for underrepresented minorities is another means by which leaders reduce the number of people upon whom they are dependent. Such policies areadvertised as empowering minorities, whether they are women, or members of a particular caste or religion. In reality they empower leaders. That a candidate is elected by a small subset of the population reduces the number of essentials required to retain power. At a very basic level, electoral victory in a two-party parliamentary system requires the support of half the people in half the districts; that is, in principle, 25 percent of the voters. Suppose 10 percent of the seats were reserved for election by one specific group that happens to be geographically concentrated (such as gay voters in the Castro in our earlier account of Harvey Milk’s election in San Francisco). To retain half the seats in parliament, the incumbent party need only retain 40 percent of the regular single member district seats, which is readily done with just over 22 percent of the vote. So by focusing on districts in which the privileged minority is prevalent, a party can reduce the number of votes it requires by 12 percent.  Delegated positions also make it easier to form a small coalition. 
+	- A SUCCESSFUL LEADER ALWAYS PUTS THE WANTS OF his essential supporters before the needs of the people.  Without the support of his coalition a leader is nothing and is quickly swept away by a rival. 
+	- economy and decreased aid receipts, also faced a mass rebellion. When autocrats lack abundant resources they have a more difficult time managing the people. First and foremost, leaders must pay their essential backers or they will be gone.
+    - Leaders without adequate revenues from aid, natural resources, or borrowing must obtain them by encouraging the people to work and by taxing them. Unfortunately for leaders, many of the public goods that increase productivity also improve the people’s ability to coordinate and, therefore, protest. Further, because the leader needs the tax revenues  the workers provide, such protests are more likely to be met with concessions than in a resource-rich nation or one with huge cash reserves. The factors that lead to rebellion are relatively uncomplicated. How much a leader does to enhance the welfare of the people by providing public goods determines the desire of the people to rebel. The level of freedom determines the ease with which they can act upon these desires by taking to the streets.
+	- History is full of democratic Davids beating autocratic Goliaths. 
+	-  Autocrats and democrats, at one level, fight over the exact same thing: staying in power. At another level, they are motivated to fight over different things. Democrats more often than autocrats fight when all other means of gaining policy concessions from foreign foes fail. In contrast, autocrats are more likely to fight casually, in the pursuit of land, slaves,and treasure. 
+
+
+- Phil stutz 
+	- 3 aspects of reality 
+		- Pain 
+		- Uncertainty 
+		- Constant work 
+	- Life force 
+		- Physical body - Diet, exercices and sleeping 
+		- Relationships
+		- Yourself  
+
+- Conversation Skills 
+	- Don't interrupt - A conversation is best when both parties are interested, engaged, and want to share. If you interrupt you show that you are uninterested and you blunt the other person’s motivation to share. 
+	- Accept, Don’t Seek 
+	- Gauge Interest  
+	- Ask Questions - An ideal conversation is a mix of listening, asking questions, and sharing in a way that allows the other person to politely guide the conversation. 
+    - Verbalize when you change your mind- eg. "Ok, maybe you’re right. I hadn’t thought about that before."
+	- Disagree Positively 
+		- Benchmarking - If you get a lot of single word answers, you are not keeping the other person interested. 
+		- 50% Talk Time 
+		- Depth - Real depth doesn’t happen unless both parties are sharing, so you must be willing to be vulnerable and share things about yourself, and must also have the awareness to ask questions to induce the other person to do the same.
+ 
 
