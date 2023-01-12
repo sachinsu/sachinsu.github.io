@@ -87,9 +87,10 @@ Section covering useful tools for every day activities, Online learning etc.
 
 - [Grep app- Search across Git Repos](https://grep.app/)
 
-## Blogging platforms 
+## Blogging platforms, RSS etc
 
 - [Writefreely](https://github.com/writefreely/writefreely)
+- [Yarr - Yet another feed aggregator](https://github.com/nkanaev/yarr)
 
 ## Book of secret knowledge 
 

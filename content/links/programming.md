@@ -147,6 +147,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Microsoft App Inspector](https://github.com/microsoft/ApplicationInspector)
 - [Open Policy Agent - General purpose Policy Engine](https://www.openpolicyagent.org)
 - [Teler - Tool for Real time HTTP Intrusion detection](https://github.com/kitabisa/teler)
+- [Joern - platform for analyzing source code, bytecode, and binary executables](https://joern.io/)
 
 ## Devops/Monitoring
 
