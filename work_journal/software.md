@@ -12,11 +12,21 @@
 	- Process - Unit of isolation at OS level. Process starts when OS runs program which is stored as file. 
     - Thread - Unit of execution within process. Process at least has one thread. 
 
+- What is "tech stack" in context of Product 
+    - Customers don't care about how Novel tech stack is 
+    - Customers want software that delivers problem-solving impact. 
+    - Set overarching goal and tie technology decisions to it,  like 
+        - Ship the product - Frequently and reliably
+        - Support Growth - Be able to bring in more people, gradually that can "Ship the product"
+        - Specific goals 
+            - No sacred bits: Launch, learn, iterate.
+            - Today’s bets over tomorrow’s theoreticals. 
+            - Favor “boring technology” and in-house expertise. 
+            - Buy non-core competencies whenever prudent. 
 
 - [Things to consider while making technology choices][Architecture]
-    - Software Architecture cannot be created in a vacuum and solid technical foundation is not not enough.
+    - Software Architecture cannot be created in a vacuum and solid technical foundation is not enough.
     - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
-    - Reasons behind it
     - Impact on Team 
         - Is it easy for them learn?
         - Are they enthusiastic 
@@ -45,7 +55,6 @@
 - [On Software Architecture][Architecture]
 
     - Every thing in Software Architecture is a trade off
-
     - The top 3 soft skills for any software architect are negotiation, facilitation, and leadership. Negotiation is a required skill as an architect because almost every decision you make as an architect will be challenged. Your decisions will be challenged by other architects who think they have a better approach than you do; your decisions will be challenged by business stakeholders because they think your decision takes too long to implement or is too expensive or is not aligned with the business goals; and finally, your decisions will be challenged by development teams who believe they have a better solution. All of this requires an architect to understand the political climate of the enterprise and how to navigate the politics to get your decisions approved and accepted.
 
     - Facilitation is another necessary soft skill as a software architect. Architects not only collaborate with development teams, but also collaborate closely with various business stakeholders to understand business drivers, explain important architecture characteristics, describe architectural solutions, and so on. All of these gatherings and meetings require a keen sense of facilitation and leadership within these meetings to keep things on track.
@@ -60,7 +69,13 @@
     - Three basic Architecture Styles
         - Monolith (Single Deployment)
             - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
-        - Service based 
+            - Enforce boundaries adhering to Domain driven perspective, 
+                - Think of Module (or Micro-service) as bounded context
+                - It helps with , 
+                    - No price to be paid for Network and potential associated failures
+                    - Rapid development if going with Modular Monolith
+                    - Possibility of breaking off a Module and convert it in Micro-service, if needed
+                    - being purposeful - Architecture that satisfies business needs.  
         - Micro-services (independent deployability)
             - Common topologies 
                 - API REST-based topology
@@ -126,14 +141,131 @@
             - You need terabytes of storage to have runway for the next ~5 years
             - You need more read capacity (i.e. use Read Replicas)
 
--   [Sync and Async ( Everything can't be async )][Architecture]
+- [Sync and Async ( Everything can't be async )][Architecture]
     - Javascript solves this by making everything non-blocking because blocking would destroy browser's UI Thread which is it's primary use case.
     - golang does this via go routines
     - .NET is one of the platforms that has excellent support for interop with the underlying OS (pinvokes) aka FFI (foreign function interfaces). It has one of the best FFI systems on the market
-    - The moment you need to call into the underlying platform, you need to context switch from your current “green” thread, to one compatible to what the underlying platform supports. This is one of the big costs and why golang had to rewrite things in go and goasm.
+    - The moment you need to call into the underlying platform, you need to context switch from your current “green” thread, to one compatible to what the underlying platform supports. This is one of the big costs and why golang had to rewrite things in go and goasm. 
     - The other difficulty .NET has is that it allows pinning memory. Maybe you pinned some object to get the address or pass it to another function. This is problematic, when you want you want to grow the stack dynamically in your user mode thread implementation.
     - The inability to copy the stack means you need to do a linked list instead. This is a complex and inefficient implementation. Java and go can both copy because there’s no way to get the underlying address of anything (without really unsafe code).
     - Async state machines in .NET form linked list. 
+
+- Case for Cloud vs. On-prem
+    - Bursty Workload ( If your workload goes through long periods of idleness punctuated with large unpredictable bursts of activity) is good case for a cloud based architecture
+    - Using CDN is a good use of Cloud infrastructure
+    - Today's servers are highly capable and scaling vertically is easy. Once limit of the server is reached then go for sharding and horizontal scaling or use cloud architecture that gives horizontal scaling for "free". 
+    - Using one big server is comparatively cheap, keeps your overheads at a minimum, and actually has a pretty good availability story if you are careful to prevent correlated hardware failures. It’s not glamorous and it won’t help your resume, but one big server will serve you well.
+
+- [Logging rules][Architecture](https://tuhrig.de/my-logging-best-practices/)
+    - INFO Level is for business while DEBUG is for developers
+    - Log INFO after the operation is over and not before 
+    - Distinguish between WARNING (Typically can be retried) and error
+
+- [Memory Management][SystemArchitecture]
+    - OS has Virtual memory manager (VMM) that allocates VM to processes
+        - VM enables both isolation and sharing
+        - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
+        - Provided by the MMU (Memory Management Unit)
+        - Memory divided in pages (usually 4k)
+        - Virtual to physical page mapping in page tables (that the MMU walks)
+        - When a virtual page doesn’t have a valid corresponding physical page, a page fault occurs
+        - Control is transferred to the OS to provide a physical page (or an AV) Demand paging
+
+    - How does Garbage collector (GC) decides if it should collect out object?
+        - GC.Collect() collects the whole heap
+            - This means GC does NOT decide the objects’ lifetime
+            - GC only gets told by others if an object is live
+            - In this case JIT tells the GC that object is still live 
+            - JIT is free to lengthen the object lifetime till the end of method and has always been
+- [Technology Arch - How much spare capacity][Architecture][Sizing]
+    - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000 * 100 = 1.7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
+
+
+- [Tech#Backpressure][Architecture]
+    - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens.  Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
+
+- [Tech#Scale versus Resiliency][Architecture]
+    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.
+    - If we are load balancing over two machines, each at 80 percent utilization, then there is no spare capacity available if one goes down. If one machine died, the remaining replica would receive all the traffic, which is 160 percent of what the machine can handle. The machine will be overloaded and may cease to function. Two machines each at 80 percent utilization represents an N+0 configuration. In this situation, the load balancer is used for scale, not resiliency.
+
+- [Tech#Scaling, Sharding etc.][Architecture][Databases]
+    - Drawbacks of Scale Up
+        - there are limits to system size. The fastest, largest, most powerful computer available may not be sufficient for the task at hand. No one computer can store the entire corpus of a web search engine or has the CPU power to process petabyte-scale datasets or respond to millions of HTTP queries per second. There are limits as to what is available on the market today.
+        - this approach is not economical. A machine that is twice as fast costs more than twice as much. Such machines are not sold very often and, therefore, are not mass produced. You pay a premium when buying the latest CPU, disk drives, and other components.
+        - scaling up simply won’t work in all situations.
+            - Buying a faster, more powerful machine without changing the design of the software being used usually won’t result in proportionally faster throughput.
+            - Software that is single-threaded will not run faster on a machine with multiple processors.
+            - Software that is written to spread across all processors may not see much performance improvement beyond a certain number of CPUs due to bottlenecks such as lock contention.
+    - Some Scaling techniques, 
+        - Segment plus Replicas: Segments that are being accessed more frequently can be replicated at a greater depth. This enables scaling to larger datasets (moresegments) and better performance (more replicas of a segment). 
+        - Dynamic Replicas: Replicas are added and removed dynamically to achieve required performance. If latency is too high, add replicas. If utilization is too low, remove replicas.
+        -  Architectural Change: Replicas are moved to faster or slower technology based on need. Infrequently accessed shards are moved to slower, less expensive technology such as disk. Shards in higher demand are moved to faster technology such as solid-state drives (SSD). Extremely old segments might be archived to tape or optical disk.
+    - Cache 
+        - The Least Recently Used (LRU) algorithm tracks when each cache entry was used and discards the least recently accessed entry    
+        - The Least Frequently Used (LFU) algorithm counts the number of times a cache entry is accessed and discards the least active entries
+
+    - Data Sharding  - is a way to segment the database that is flexible, scalable and resilient. A hash function is algorithm that maps data of varying length to a fixed length value. 
+        - Distributed hash table pattern involves generating hash of the key and allocating data as per hash value like, 
+            - Odd or even or power of 2 (i.e. 2(n) where n is last n bits of hash) -- For 2 shards
+            - reminder of hash divided by 4 - for 4 shards
+
+- [Threads vs Processes][Architecture]
+    - Processes have their own address space, memory and open file tables
+    - Processes are self isolating i.e. corrupt process cannot hurt other processes 
+    - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
+    - So how do we decide between multiprocessing and multithreading?
+        - Multithreading for I/O intensive tasks
+            - Multiprocessing for CPU intensive tasks (if you have multiple cores available)
+
+- [Architecture Decision Records (ADR)](https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)[Architecture]
+    
+    - Format of ADR 
+        - Title - For Example: "ADR 1: Deployment on Ruby on rails 3.0.10" 
+        - Context - Describes forces at play including technological, political, social and project local. The language in this section should be describing facts and nothing else
+        - Decision - Describes response to forces mentioned in "Context".  It is stated in full sentences, with active voice. "We will …"
+        - Status - A decision may be "proposed" if the project stakeholders haven't agreed with it yet, or "accepted" once it is agreed. If a later ADR changes or reverses a decision, it may be marked as "deprecated" or "superseded" with a reference to its replacement.
+        - Consequences - This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
+
+- [Format for "Design Document"][Architecture][Documentation] 
+    - Title : Title of the document 
+    - Date: Date of last revision
+    - Author(s)/Reviewer(s)/Approver(s)
+    - Revision Number 
+    - Status - In draft/in review/approved/in progress.
+    - Executive Summary - brief summary of the project that contains the major goal of the project and how it is achieved.
+    - Goals ("In Scope") - What is to be achieved by the project, typically represented as a bullet list. Include non-tangible, process goals such as standardization or metrics requirements.  
+    - Non-goals ("Out of scope") - A list of non-goals should explicitly identify what is not included in the scope for this project.
+    - Background - brief history. Identify any acronyms or unusual terminology used. Document any previous decisions made that resulted in limitations or constraints. 
+    - High-level Design - How design works at a high level. 
+    - Detailed Design - The full design, including diagrams, sample configuration files, algorithms, and so on. This will be your full and detailed description of what you plan to accomplish on this project
+    - Alternatives Considered - A list of alternatives that were rejected, along with why they were rejected.
+    - Special Constraints - A list of special constraints regarding things like security, auditing controls, privacy, and so on.
+
+    Below are not mandatory but could be useful, 
+
+    - Cost Projections: The cost of the project—both initial capital and operational costs, plus a forecast of the costs to keep the systems running.
+    - Support Requirements: Operational maintenance requirements. This ties into Cost Projections, as support staff have salary and benefit costs, hardware and licensing have costs, and so on.
+    - Schedule: Timeline of which project events happen when, in relation to each other.
+    - Security Concerns: Special mention of issues regarding security related to the project, such as protection of data.
+    - Privacy and PII Concerns: Special mention of issues regarding user privacy or anonymity, including plans for handling personally identifiable information (PII) in accordance with applicable rules and regulations.
+    - Compliance Details: Compliance and audit plans for meeting regulatory obligations under SOX, HIPPA, PCI, FISMA, or similar laws.
+    - Launch Details: Roll-out or launch operational details and requirements.
+
+
+- AKF Scaling Cube
+    - x-axis (horizontal scaling) - cloning systems or increasing their capacities to achieve greater performance.
+    - y-axis (vertical scaling) - scales by isolating transactions by their type or scope, such as using read-only database replicas for read queries and sequestering writes to the master database only.
+    - z-axis (lookup based scaling) - is about splitting data across servers so that the workload is distributed according to data usage or physical geography
+
+- [Software Resiliency][Architecture]
+    - Spare capacity is like an insurance policy: it is an expense you pay now to prepare for future trouble that you hope does not happen. It is better to have insurance and not need it than to need insurance and not have it.
+    - in a 1+1 redundant system, 50 percent of the capacity is spare. In a 20+1 redundant system, less than
+    5 percent of the capacity is spare. The latter is more cost-efficient.
+    - Mean time between failures (MTBF) - The MTBF of the system is only as high as that of its lowest-MTBF part.
+    - The time it takes to repair or replace the down capacity is called the mean time to repair (MTTR).
+    - The probability of second failure happening during repair window is MTTR/MTBF * 100
+    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.A load balancer provides scale when we use it to keep up with capacity, and resiliency when we use it to exceed capacity.
+
 
 -  [Machine Learning][AIML]
     - It is tricky to apply it effectively 
@@ -155,6 +287,7 @@
         - Pride of Ownership
         - Psychological effect - once basic needs are fulfilled, we seek more. Entire art industry is about the idea of people assigning monetary value to a canvas
         - Speculative nature
+
     - [How Blockchain works](https://graphics.reuters.com/TECHNOLOGY-BLOCKCHAIN/010070MF1E7/index.html)
         - Consists of database that has record bundled together into blocks and added to chain one after another. It has, 
             - The record  - can be any information (e.g. deal)
@@ -181,22 +314,6 @@
         - server-side rendering is ideal for websites that need strong search engine presence, since search engine bots can just read the static content immediately instead of possibly running into issues with JS content. 
         - Server-side rendering is also necessary if clients have technical limitations, such as being unable to run JavaScript. Otherwise, server-side rendering is practically equal to client-side rendering.
 
-- [Memory Management][SystemArchitecture]
-    - OS has Virtual memory manager (VMM) that allocates VM to processes
-        - VM enables both isolation and sharing
-        - Hardware implements a mechanism called paging which allows the OS to implement virtual memory
-        - Provided by the MMU (Memory Management Unit)
-        - Memory divided in pages (usually 4k)
-        - Virtual to physical page mapping in page tables (that the MMU walks)
-        - When a virtual page doesn’t have a valid corresponding physical page, a page fault occurs
-        - Control is transferred to the OS to provide a physical page (or an AV) Demand paging
-
-    - How does Garbage collector (GC) decides if it should collect out object?
-        - GC.Collect() collects the whole heap
-            - This means GC does NOT decide the objects’ lifetime
-            - GC only gets told by others if an object is live
-            - In this case JIT tells the GC that object is still live 
-            - JIT is free to lengthen the object lifetime till the end of method and has always been
  
 - Serverless on Cloudflare
     - R2 will run across Cloudflare’s global network, which is most known for providing anti-DDoS services to its customers by absorbing and dispersing the massive amounts of traffic that accompany denial-of-service attacks on websites. It will be compatible with S3’s API, which makes it much easier to move applications already written with S3 in mind, and Cloudflare said that beyond the elimination of egress fees, the new service will be 10% cheaper to operate than S3.
@@ -221,12 +338,6 @@
     - R2 is a compelling choice for a certain class of applications that could be built to s erve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.
 
     - Moreover, like any true disruption, it will be very difficult for Amazon to respond: sure, R2 may lead Amazon to reduce its egress fees, but given the importance of those fees to both AWS’s margins and its lock-in, it’s hard to see them going away completely. More importantly, AWS itself is locked-in to its integrated approach: the entire service is architected both technically and economically to be an all-encompassing offering; to modularize itself in response to Cloudflare would be suicidal.
-
-- Case for Cloud vs. On-prem
-    - Bursty Workload ( If your workload goes through long periods of idleness punctuated with large unpredictable bursts of activity) is good case for a cloud based architecture
-    - Using CDN is a good use of Cloud infrastructure
-    - Today's servers are highly capable and scaling vertically is easy. Once limit of the server is reached then go for sharding and horizontal scaling or use cloud architecture that gives horizontal scaling for "free". 
-    - Using one big server is comparatively cheap, keeps your overheads at a minimum, and actually has a pretty good availability story if you are careful to prevent correlated hardware failures. It’s not glamorous and it won’t help your resume, but one big server will serve you well.
 
 - [.NET Specific Tech. Tips][Architecture]
     - Azure App service account can (and should) be used to host multiple applications
@@ -276,10 +387,6 @@
 
         - After the operation processing completes, a GET request to status monitor URL returns a response with a status field containing a terminal value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation. If the status is Failed, the status monitor resource must contain an error field with a code and message that describes the failure. If the status is Succeeded, the response may contain additional fields as appropriate, such as results of the operation processing.
 
-- [Logging rules][Architecture](https://tuhrig.de/my-logging-best-practices/)
-    - INFO Level is for business while DEBUG is for developers
-    - Log INFO after the operation is over and not before 
-    - Distinguish between WARNING (Typically can be retried) and error
 
 - [.NET Performance][Architecture]
     - Avoid LINQ. LINQ is great in application code, but rarely belongs on a hot path in library/framework code. LINQ is difficult for the JIT to optimize (IEnumerable<T>...) and tends to be allocation-happy.
@@ -651,94 +758,6 @@
             - What processes are needed to keep images up to date?
             - What are you going to do to scan your images before build and deployment?
 
-- [Technology Arch - How much spare capacity][Architecture][Sizing]
-    - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000 * 100 = 1.7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
-
-
-- [Tech#Backpressure][Architecture]
-    - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens.  Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
-
-- [Tech#Scale versus Resiliency][Architecture]
-    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.
-    - If we are load balancing over two machines, each at 80 percent utilization, then there is no spare capacity available if one goes down. If one machine died, the remaining replica would receive all the traffic, which is 160 percent of what the machine can handle. The machine will be overloaded and may cease to function. Two machines each at 80 percent utilization represents an N+0 configuration. In this situation, the load balancer is used for scale, not resiliency.
-
-- [Tech#Scaling, Sharding etc.][Architecture][Databases]
-    - Drawbacks of Scale Up
-        - there are limits to system size. The fastest, largest, most powerful computer available may not be sufficient for the task at hand. No one computer can store the entire corpus of a web search engine or has the CPU power to process petabyte-scale datasets or respond to millions of HTTP queries per second. There are limits as to what is available on the market today.
-        - this approach is not economical. A machine that is twice as fast costs more than twice as much. Such machines are not sold very often and, therefore, are not mass produced. You pay a premium when buying the latest CPU, disk drives, and other components.
-        - scaling up simply won’t work in all situations.
-            - Buying a faster, more powerful machine without changing the design of the software being used usually won’t result in proportionally faster throughput.
-            - Software that is single-threaded will not run faster on a machine with multiple processors.
-            - Software that is written to spread across all processors may not see much performance improvement beyond a certain number of CPUs due to bottlenecks such as lock contention.
-    - Some Scaling techniques, 
-        - Segment plus Replicas: Segments that are being accessed more frequently can be replicated at a greater depth. This enables scaling to larger datasets (moresegments) and better performance (more replicas of a segment). 
-        - Dynamic Replicas: Replicas are added and removed dynamically to achieve required performance. If latency is too high, add replicas. If utilization is too low, remove replicas.
-        -  Architectural Change: Replicas are moved to faster or slower technology based on need. Infrequently accessed shards are moved to slower, less expensive technology such as disk. Shards in higher demand are moved to faster technology such as solid-state drives (SSD). Extremely old segments might be archived to tape or optical disk.
-    - Cache 
-        - The Least Recently Used (LRU) algorithm tracks when each cache entry was used and discards the least recently accessed entry    
-        - The Least Frequently Used (LFU) algorithm counts the number of times a cache entry is accessed and discards the least active entries
-
-    - Data Sharding  - is a way to segment the database that is flexible, scalable and resilient. A hash function is algorithm that maps data of varying length to a fixed length value. 
-        - Distributed hash table pattern involves generating hash of the key and allocating data as per hash value like, 
-            - Odd or even or power of 2 (i.e. 2(n) where n is last n bits of hash) -- For 2 shards
-            - reminder of hash divided by 4 - for 4 shards
-
-- [Threads vs Processes][Architecture]
-    - Processes have their own address space, memory and open file tables
-    - Processes are self isolating i.e. corrupt process cannot hurt other processes 
-    - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
-    - So how do we decide between multiprocessing and multithreading?
-        - Multithreading for I/O intensive tasks
-            - Multiprocessing for CPU intensive tasks (if you have multiple cores available)
-
-- [Architecture Decision Records (ADR)](https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions)[Architecture]
-    
-    - Format of ADR 
-        - Title - For Example: "ADR 1: Deployment on Ruby on rails 3.0.10" 
-        - Context - Describes forces at play including technological, political, social and project local. The language in this section should be describing facts and nothing else
-        - Decision - Describes response to forces mentioned in "Context".  It is stated in full sentences, with active voice. "We will …"
-        - Status - A decision may be "proposed" if the project stakeholders haven't agreed with it yet, or "accepted" once it is agreed. If a later ADR changes or reverses a decision, it may be marked as "deprecated" or "superseded" with a reference to its replacement.
-        - Consequences - This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
-
-- [Format for "Design Document"][Architecture][Documentation] 
-    - Title : Title of the document 
-    - Date: Date of last revision
-    - Author(s)/Reviewer(s)/Approver(s)
-    - Revision Number 
-    - Status - In draft/in review/approved/in progress.
-    - Executive Summary - brief summary of the project that contains the major goal of the project and how it is achieved.
-    - Goals ("In Scope") - What is to be achieved by the project, typically represented as a bullet list. Include non-tangible, process goals such as standardization or metrics requirements.  
-    - Non-goals ("Out of scope") - A list of non-goals should explicitly identify what is not included in the scope for this project.
-    - Background - brief history. Identify any acronyms or unusual terminology used. Document any previous decisions made that resulted in limitations or constraints. 
-    - High-level Design - How design works at a high level. 
-    - Detailed Design - The full design, including diagrams, sample configuration files, algorithms, and so on. This will be your full and detailed description of what you plan to accomplish on this project
-    - Alternatives Considered - A list of alternatives that were rejected, along with why they were rejected.
-    - Special Constraints - A list of special constraints regarding things like security, auditing controls, privacy, and so on.
-
-    Below are not mandatory but could be useful, 
-
-    - Cost Projections: The cost of the project—both initial capital and operational costs, plus a forecast of the costs to keep the systems running.
-    - Support Requirements: Operational maintenance requirements. This ties into Cost Projections, as support staff have salary and benefit costs, hardware and licensing have costs, and so on.
-    - Schedule: Timeline of which project events happen when, in relation to each other.
-    - Security Concerns: Special mention of issues regarding security related to the project, such as protection of data.
-    - Privacy and PII Concerns: Special mention of issues regarding user privacy or anonymity, including plans for handling personally identifiable information (PII) in accordance with applicable rules and regulations.
-    - Compliance Details: Compliance and audit plans for meeting regulatory obligations under SOX, HIPPA, PCI, FISMA, or similar laws.
-    - Launch Details: Roll-out or launch operational details and requirements.
-
-
-- AKF Scaling Cube
-    - x-axis (horizontal scaling) - cloning systems or increasing their capacities to achieve greater performance.
-    - y-axis (vertical scaling) - scales by isolating transactions by their type or scope, such as using read-only database replicas for read queries and sequestering writes to the master database only.
-    - z-axis (lookup based scaling) - is about splitting data across servers so that the workload is distributed according to data usage or physical geography
-
-- [Software Resiliency][Architecture]
-    - Spare capacity is like an insurance policy: it is an expense you pay now to prepare for future trouble that you hope does not happen. It is better to have insurance and not need it than to need insurance and not have it.
-    - in a 1+1 redundant system, 50 percent of the capacity is spare. In a 20+1 redundant system, less than
-    5 percent of the capacity is spare. The latter is more cost-efficient.
-    - Mean time between failures (MTBF) - The MTBF of the system is only as high as that of its lowest-MTBF part.
-    - The time it takes to repair or replace the down capacity is called the mean time to repair (MTTR).
-    - The probability of second failure happening during repair window is MTTR/MTBF * 100
-    - If we are load balancing over two machines, each at 40 percent utilization, then either machine can die and the remaining machines will be 80 percent utilized. In such a case, the load balancer is used for resiliency.A load balancer provides scale when we use it to keep up with capacity, and resiliency when we use it to exceed capacity.
 
 
 - Data Lake pattern 

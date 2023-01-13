@@ -8,6 +8,7 @@ draft: false
 
 Section covering Business, project/programming perspectives
 
+- [Your tech stack is not the product](https://hoho.com/posts/your-stack-is-not-the-product/)
 - [Don't call yourself a programmer](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
 - [Grasp Responsibility Patterns](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 - [Things every programmer should know](https://github.com/mtdvio/every-programmer-should-know)
