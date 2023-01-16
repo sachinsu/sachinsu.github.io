@@ -160,6 +160,15 @@
     - INFO Level is for business while DEBUG is for developers
     - Log INFO after the operation is over and not before 
     - Distinguish between WARNING (Typically can be retried) and error
+    - While Logging, ask questions like, 
+        - Is this log really needed? does it rely important information I couldn’t get from the other logs in the same flow?
+        - Am I going to log an object that can be huge on production? If so, can I just log a few metrics of that objects instead? for example, it’s length, or handpick a few important attribute to log.
+        - Does the information I am about to log will help me to debug/understand the flow?
+    - Alternative use of Log levels 
+        - ERROR: Parts of the flow failed, we want to send alerts to our on-call for this failures.
+        - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
+        - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
+        - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
 
 - [Memory Management][SystemArchitecture]
     - OS has Virtual memory manager (VMM) that allocates VM to processes
