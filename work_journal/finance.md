@@ -467,3 +467,65 @@
 		- Profit is a price paid for efficiency
 		- Business owner acting as monitor for the economic efficiency of the business is one enormous advantage.
     - Robust property rights for individuals and governments with clear restraints on executive power, democratic political processes and a lack of government corruption were all associated with economic growth. 
+
+- General 
+	- any subject area has a core / fundamental area (the science) and an applied area (use of the technique or application repeatedly towards the same or different problems)
+
+- Notes from "how to correct money mistakes", 
+	- Mental Accounting 
+		- you don’t think you’re a reckless spender, but you have trouble saving. 
+		- you have savings in the bank and revolving balances on your credit cards. 
+		-  you’re more likely to splurge with a tax refund than with savings. 
+		- you seem to spend more when you use credit cards than when you use cash
+		-  most of your retirement savings are in fixed-income or other conservative investment
+
+	- Decision paralysis 
+		- you have a hard time choosing among investment options. 
+		- you don’t contribute to retirement plans at work. 
+		- you tend to beat yourself up when your decisions turn out poorly. 
+		- you frequently buy things that offer “trial periods”—but infrequently take advantage and return them. 
+		- you delay making investment or spending decisions. 
+
+	- Number numbness
+		- you invest in last year’s hot mutual funds. 
+		-  you have very low insurance deductibles. 
+		-  you don’t really understand the relationship between inflation and buying power. 
+		-  you invest without much concern about commission costs and management fees. 
+		- you ignore the implications of compound interest and let your credit-card balances carry over. 
+		-  you don’t really understand compound interest. 
+
+	- Confirmation bias or anchoring 
+		- you’re especially confident about your ability to negotiate and bargain. 
+		- you make spending and investment decisions without much research. 
+		- you’re especially loyal to certain brands for mindless reasons. 
+		- you find it hard to sell investments for less than you paid. 
+		- you rely on sellers to set a price rather than assessing the value yourself. 
+
+	- Overconfidence 
+		- you’re especially confident about your ability to negotiate and bargain. 
+		- you make spending and investment decisions without much research. 
+		- you’re especially loyal to certain brands for mindless reasons. 
+		- you find it hard to sell investments for less than you paid. 
+		- you rely on sellers to set a price rather than assessing the value yourself. 
+
+	- Following the herd 
+		- you make investment decisions frequently. 
+		- you invest in “hot” stocks or other popular investments. 
+		- you sell investments because they’re suddenly out of favor, not because your opinion of them has otherwise changed. 
+		- you’re likely to buy when stock prices are rising and sell when they are falling.
+		- you make spending and investment decisions based solely on the opinions of friends, colleagues, or financial advisers. 
+		- your spending decisions are heavily influenced by which products, restaurants, or vacation spots are “in.” 
+
+	- Reflexive financial thinking 
+		- you spend money in impulsive bursts. 
+		- you shop when you’re feeling blue. 
+		- you tend to buy extended warranties or extra insurance policies, just to be safe. 
+		- you feel extraordinarily anxious when stock prices fall, even if you don’t need your invested money for years to come. 
+		- you tend to hold on to winning investments well beyond the price you think the security is worth. 
+		- you routinely spend more for goods and services than you planned to. 
+
+	- Sunk cost fallacy 
+		- you make important spending decisions based on how much you’ve already spent. 
+		- you generally prefer bonds over stocks. 
+		- you tend to sell winning investments more readily than losing ones. 
+		- you’re seriously tempted to take money out of the stock market when prices fall. 
