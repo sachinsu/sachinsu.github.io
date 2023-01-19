@@ -1,4 +1,3 @@
-## 2022-may-30 Mon
 
 - [Amazon interview process][Interview]
     -  STAR (Situation, Task, Action, Result):
@@ -168,7 +167,7 @@
         - ERROR: Parts of the flow failed, we want to send alerts to our on-call for this failures.
         - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
         - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
-        - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
+        - DEBUG: Like INFO but more detailed, including inspection into obcts, data structures, etc.
 
 - [Memory Management][SystemArchitecture]
     - OS has Virtual memory manager (VMM) that allocates VM to processes
@@ -312,11 +311,21 @@
         - Concurrent query execution
 
 - UI
-    - Framework for front-end
-        - React: easy componentization, commonly used, flexible
-        - Apollo GraphQL: commonly used (good docs), simple, automatic type generation
-        - Next.js: SSR by default, capable filesystem server, built-in SPA router, helpful docs
-        - Typescript: catch runtime errors at build, easy debugging
+    - Server side web app or SPA 
+        - Use traditional web applications when:
+            - Your application’s client-side requirements are simple or even read-only.
+            - Your application needs to function in browsers without JavaScript support.
+            - Your team is unfamiliar with JavaScript or TypeScript development techniques
+        - Use a SPA when:
+            - Your application must expose a rich user interface with many features.
+            - Your team is familiar with JavaScript, TypeScript, or Blazor WebAssembly development.
+            - Your application must already expose an API for other (internal or public) clients.
+        - Framework for front-end
+            - React: easy componentization, commonly used, flexible
+            - Apollo GraphQL: commonly used (good docs), simple, automatic type generation
+            - Next.js: SSR by default, capable filesystem server, built-in SPA router, helpful docs
+            - Typescript: catch runtime errors at build, easy debugging
+        
     - SSR and CSR
         - Server-side rendering does basically the same job as client-side rendering: generating HTML. 
         - The only real difference is that server-side rendering provides pre-rendered HTML to clients while client-side rendering requires the client to run JS files to render the HTML. 
@@ -1608,6 +1617,7 @@
         - Underlying Layer for IoT Applications Platform. RabbitMQ can be used to connect individual operator nodes in a dataƒow graph, regardless of where the operators are instantiated. A lot of the features of RabbitMQ directly cover platform requirements: (i) sub 5ms latency for the majority of the packets, throughput up to 40Kpps for single nodes, (ii) excellent visibility on internal metrics and easy test and debug cycles for dataƒow setup through the web management interface, (iii) support for the MQTT protocol, (iv) sophisticated routing capability allows to expose packet €lters as part of an associated data processing language, and (v) the possibility to handle a very large number of streams that all have rather small throughput requirements, with a large number of applications all interested in di‚erent small subsets of these streams. - Information-centric Networking. Œis is essentially a game on the capabilities of the architecture to intelligently route packets. Œerefore, RabbitMQ would be the preferred choice, maybe even with a speci€c exchange that understands the link between routing key and destination.
 
     - Domain driven design basics, 
+        - Bounded contexts are a central pattern in Domain-Driven Design. They provide a way of tackling complexity in large applications or organizations by breaking it up into separate conceptual modules. Each conceptual module then represents a context that is separated from other contexts (hence, bounded), and can evolve independently. Each bounded context should ideally be free to choose its own names for concepts within it, and should have exclusive access to its own persistence store
         - The composition of domain objects:
             •	Entity: a domain object that has ID and life cycle. 
             •	Value Object: a domain object without ID. It is used to describe the property of Entity.
