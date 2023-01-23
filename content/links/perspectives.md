@@ -61,6 +61,13 @@ Section covering Business, project/programming perspectives
 - [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
 
 
+## Documenting the Architecture 
+
+- [Arc42 - Open source Template for documenting the Software Architecture](https://arc42.org/)
+- [Arc42 + C4 - Example](https://github.com/bitsmuggler/arc42-c4-software-architecture-documentation-example)
+- [Structurizr - C4 Diagrams as Code](https://structurizr.com/)
+
+
 ## Stategic Approach 
 
 - [A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups](https://github.com/kuchin/awesome-cto)

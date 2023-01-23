@@ -995,6 +995,10 @@
     - Only simple data access pattern is required 
     - Strong transactional or data retention guarantees are not required 
     - Unstructured duplicate data that greatly benefits from column compression
+    - Tradeoff vis-a-vis relational, 
+        - Basically Available – The system can guarantee availability, as defined by the CAP theorem, but by potentially trading off consistency.
+        - Soft State – The database doesn’t enforce data consistency, and values may change without interaction, due to eventual consistency.
+        - Eventual Consistency – When data is written, it isn’t guaranteed to be immediately consistent to all database consumers. Generally speaking, it has to be replicated across all nodes in the database, which means that any reads occurring during that time could be inconsistent.
 
 - When relational storage be used?
     - Variable workloads and reporting 
@@ -1708,3 +1712,24 @@
     - P2PE applications at the POI
     - Secure management of the description environment and decrypted data
     - Use of encryption methodologies and cryptographic key operations
+
+- Learnings of Experience Software Professional (https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/)
+    - I don't know - The reason many of us love software is because we are lifelong learners, and in software no matter which direction you look, there are wide vistas of knowledge going off in every direction and expanding by the day. This means that you can spend decades in your career, and still have a huge knowledge gap compared to someone who has also spent decades in a seemingly similar role. The sooner you realize this, the sooner you can start to shed your imposter syndrome and instead delight in learning from and teaching others.
+    - The hardest part is building the right thing - Due to Complexity and irrationality of the environments. Designing software is mostly a listening activity, and we often have to be part software engineer, part psychic, and part anthropologist. Investing in this design process, whether through dedicated UX team members or by simply educating yourself, will deliver enormous dividends.
+    - Think like Designers - Concentrate on User experience of the Code. Be it API, UI ; consider who will be using it , why and how it will be used and what is important to the users. 
+    - the best code is no code or the one you don't have to maintain
+    - The primary job of software engineer is delivering value 
+    - Maintain balance between research and getting started with implementation 
+    - be wary of people designing systems who haven't written code in long time. keep up with developer ecosystem.
+    - Worry less about elegance and perfection; instead strive for continuous improvement and creating a livable system that your team enjoys working in and sustainably delivers value.
+    - keep asking questions about assumptions and approaches even if they sound dumb. 
+    - Avoid programmers who wastes time, doesn’t ask for feedback, doesn’t test their code, doesn’t consider edge cases.
+    - As a senior, you must have opinion about way things should be. Best way to levelling up for this is explore other languages, libraries, and paradigms
+    - People expect cheap wins and novelty under the pretext of "Innovation"
+    - Strive to keep data in clean and orderly fasion as it is likely to outlive code
+    - Dont bet against older technologies and replace them only if there is good reason for it (e.g. inherent Limitations)
+    -  Never assume that just because someone isn’t throwing their opinions in your face that they don’t have anything to add.
+    -  regularly blog, journal, write documentation and in general do anything that requires them to keep their written communication skills sharp
+    - Stay lean on process until you know you need more
+    - Remember team need to feel ownership for them to deliver 
+    - Always strive to build a smaller system

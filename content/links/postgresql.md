@@ -36,7 +36,7 @@ draft: false
 - [PostgreSQL - Using SQL for Data Analysis](https://hakibenita.com/sql-for-data-analysis)
 - [Approach to Bulk Import in PostGreSQL](https://www.cybertec-postgresql.com/en/postgresql-bulk-loading-huge-amounts-of-data/)
 - [Schema updates with zero downtime in PostgreSQL](https://fabianlindfors.se/blog/schema-migrations-in-postgres/)
-- [Ways to easily generate JSON in PostgreSQL](https://blog.crunchydata.com/blog/generating-json-directly-from-postgres)
+- [How to  JSON in PostgreSQL](https://ftisiot.net/postgresqljson/main/)
 - [Grouping, Rollups and Cubes](https://www.cybertec-postgresql.com/en/postgresql-grouping-sets-rollup-cube/)
 - [Row level Security](https://www.tangramvision.com/blog/hands-on-with-postgresql-authorization-part-2-row-level-security)
 - [Just use postgres](https://www.amazingcto.com/postgres-for-everything/)

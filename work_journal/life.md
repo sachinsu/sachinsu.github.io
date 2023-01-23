@@ -547,3 +547,12 @@
 		- Depth - Real depth doesn’t happen unless both parties are sharing, so you must be willing to be vulnerable and share things about yourself, and must also have the awareness to ask questions to induce the other person to do the same.
  
 
+- Techniques to evaluate Character 
+    - Look at who they marry 
+    - See how they treat service workers 
+    - Discover what experiences formed their character in early life
+    - How do they invest their time and money 
+    - Identify what irritates people the most in others
+    - Can they Listen?
+    - If they cheat at small things, they will cheat at big things.
+    - Watch how they handle unexpected problems
