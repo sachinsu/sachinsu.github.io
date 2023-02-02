@@ -556,3 +556,6 @@
     - Can they Listen?
     - If they cheat at small things, they will cheat at big things.
     - Watch how they handle unexpected problems
+
+- Activism - Resort if you want to become prominent early on. Activism usually means you are not good at something so avoid activism. 
+- Mediocrity - Clasic signs of Elite is to prop of mediocrity to prolong rule as much as possible. 
