@@ -537,7 +537,7 @@
 
 - Conversation Skills 
 	- Don't interrupt - A conversation is best when both parties are interested, engaged, and want to share. If you interrupt you show that you are uninterested and you blunt the other person’s motivation to share. 
-	- Accept, Don’t Seek 
+	- Accept, Don’t Seek    
 	- Gauge Interest  
 	- Ask Questions - An ideal conversation is a mix of listening, asking questions, and sharing in a way that allows the other person to politely guide the conversation. 
     - Verbalize when you change your mind- eg. "Ok, maybe you’re right. I hadn’t thought about that before."
@@ -559,3 +559,14 @@
 
 - Activism - Resort if you want to become prominent early on. Activism usually means you are not good at something so avoid activism. 
 - Mediocrity - Clasic signs of Elite is to prop of mediocrity to prolong rule as much as possible. 
+
+- Russel Bertrand on Skepticism 
+    - As per Pyrrhonism, we never know enough to be sure that one course of action is wiser than another.
+    - 3 rules, 
+        - when the experts are agreed, the opposite opinion cannot be held to be certain
+        - that when they are not agreed, no opinion can be regarded as certain by a non-expert
+        - when they all hold that no sufficient grounds for a positive opinion exist, the ordinary man would do well to suspend his judgement.
+    - opinions that are held with passion are always those for which no good ground exists
+    - Passion is measure of lack of rational conviction (Opinions in politics and religion are almost always held passionately) 
+    - Respectability, regularity and routine—the whole cast-iron discipline of a modern industrial society—have atrophied the artistic impulse, and imprisoned love so that it can no longer be generous and free and creative, but must be either stuffy or furtive.
+    - Man is essentially a dreamer, wakened sometimes for a moment by some peculiarly obtrusive element in the outer world, but lapsing again quickly into the happy somnolence of imagination.

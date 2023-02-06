@@ -1733,3 +1733,6 @@
     - Stay lean on process until you know you need more
     - Remember team need to feel ownership for them to deliver 
     - Always strive to build a smaller system
+
+
+- PageRank Algorithm - Each page receives a ranking based on the number and importance of other pages that are linking to it. The pages with a higher page rank, increase the ranking of the page they link to more than the pages with a lower rank. In graph database terminology, the PageRank algorithm is used to measure the importance of each node based on the number of incoming relationships and the rank of the related source nodes. What the PageRank algorithm actually outputs is a probability distribution that represents the likelihood of visiting any particular node by randomly traversing the graph.
