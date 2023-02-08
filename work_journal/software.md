@@ -1606,6 +1606,19 @@
         - recovering from a dead cluster usually involves resetting it completely
         - creating/destroying  a queue and bindings in RabbitMQ is slow and expensive.
 
+- Big Data [Src: https://motherduck.com/blog/big-data-is-dead/]
+    - When the cost of keeping data around is less than the cost of figuring out what to throw away.
+    - Keep questioning whether you really need so much data 
+    - Data is a liability. 
+        - Non-compliance to regulatiohs (keeping data beyond what is allowed) can attract penalties/law suits.
+        - Old data contributes to Big Data. If you are keeping around old data, it is good to understand why you are keeping it. 
+        - Are you really generating a huge amount of data?
+            - If so, do you really need to use a huge amount of data at once?
+            - If so, is the data really too big to fit on one machine?
+            - If so, are you sure you’re not just a data hoarder?
+            - If so, are you sure you wouldn’t be better off summarizing?
+   
+
 - Use cases for Kafka and RabbitMQ
     - Kafka 
         -Pub/Sub Messaging. Kaˆa can be a good match for the pub/sub use cases that exhibit the following properties: (i) if the routing logic is simple, so that a Kaˆa “topic” concept can handle the requirements, (ii) if throughput per topic is beyond what RabbitMQ can handle (e.g. event €rehose). 
@@ -1736,3 +1749,4 @@
 
 
 - PageRank Algorithm - Each page receives a ranking based on the number and importance of other pages that are linking to it. The pages with a higher page rank, increase the ranking of the page they link to more than the pages with a lower rank. In graph database terminology, the PageRank algorithm is used to measure the importance of each node based on the number of incoming relationships and the rank of the related source nodes. What the PageRank algorithm actually outputs is a probability distribution that represents the likelihood of visiting any particular node by randomly traversing the graph.
+
