@@ -1750,3 +1750,9 @@
 
 - PageRank Algorithm - Each page receives a ranking based on the number and importance of other pages that are linking to it. The pages with a higher page rank, increase the ranking of the page they link to more than the pages with a lower rank. In graph database terminology, the PageRank algorithm is used to measure the importance of each node based on the number of incoming relationships and the rank of the related source nodes. What the PageRank algorithm actually outputs is a probability distribution that represents the likelihood of visiting any particular node by randomly traversing the graph.
 
+- Apache Spark 
+    - Designed to work with distributed file system like HDFC or GFS. Spark generates On the fly java byte code that executes on nodes/Workers and target partitioned/sharded file (i.e. chunk of file being operated upon). 
+    - Primarily aimed at big data use cases.
+    - It also manages node failures.
+    - Can use languages like Scala to write jobs.
+    - Delayed execution like reading the file only when processing instructions are executed on it. 
