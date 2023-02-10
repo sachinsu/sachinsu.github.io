@@ -1754,5 +1754,7 @@
     - Designed to work with distributed file system like HDFC or GFS. Spark generates On the fly java byte code that executes on nodes/Workers and target partitioned/sharded file (i.e. chunk of file being operated upon). 
     - Primarily aimed at big data use cases.
     - It also manages node failures.
+    - Suitable for batch processing involving hugh data.
+    - Evolution of Map-Reduce. Also provides some streaming support. 
     - Can use languages like Scala to write jobs.
     - Delayed execution like reading the file only when processing instructions are executed on it. 

@@ -179,3 +179,4 @@ Knowledge base around general database related topics.
 - [Data Lake - Solution Patterns](https://blogs.oracle.com/bigdata/data-lake-solution-patterns-use-cases)
 - [What is delta lake house?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
 - [Poor man's Data lake with Duckdb](https://dagster.io/blog/duckdb-data-lake)
+- [Data Model for Managing Collaborative Editing of Data](https://www.hytradboi.com/2022/viewing-collaborative-editing-through-a-databases-lens)
