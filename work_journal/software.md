@@ -154,6 +154,10 @@
     - Using CDN is a good use of Cloud infrastructure
     - Today's servers are highly capable and scaling vertically is easy. Once limit of the server is reached then go for sharding and horizontal scaling or use cloud architecture that gives horizontal scaling for "free". 
     - Using one big server is comparatively cheap, keeps your overheads at a minimum, and actually has a pretty good availability story if you are careful to prevent correlated hardware failures. It’s not glamorous and it won’t help your resume, but one big server will serve you well.
+    - On-premise is generally less vulnerable to price increase, data leakage or external security threats (assuming internal security is mature.)
+    - If the ratio of annual perpetual license is more than 2x of cloud subscription rate then cloud is attractive else it is on-premise that scores. 
+    - Cost control and Governance are key when deciding about cloud vs. on-prem. 
+    - If an organization has high confidence in the capacity of internal IT resources and high confidence in their ability to deliver necessary results, then the On-Premise cost structure can be expected to save money over the longer term when compared to Cloud. If, instead, the convenience and flexibility of Cloud is sought, with the extra hand-holding for upgrades and guidance services, and the operating budget can afford an ongoing multi-year Cloud subscription, then relying on the external centralized hosted solution could be more compelling. 
 
 - [Logging rules][Architecture](https://tuhrig.de/my-logging-best-practices/)
     - INFO Level is for business while DEBUG is for developers

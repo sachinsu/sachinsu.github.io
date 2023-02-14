@@ -157,6 +157,8 @@ Knowledge base around general database related topics.
 
 ## Search
 
+- [Google Code Search using Inverted Index](https://swtch.com/~rsc/regexp/regexp4.html)
+- [Open source Google Code Search tool in Go](https://github.com/google/codesearch)
 - [Manticore Search -  easy to use open source fast database for search](https://github.com/manticoresoftware/manticoresearch/)
 - [ZincSearch - lightweight alternative to ElasticSearch](https://zincsearch.com/)
 - [Why OpenSearch, fork of ElasticSearch](https://logz.io/learn/opensearch-faq-what-is-opensearch/)
