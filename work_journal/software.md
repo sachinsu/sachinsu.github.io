@@ -1762,3 +1762,10 @@
     - Evolution of Map-Reduce. Also provides some streaming support. 
     - Can use languages like Scala to write jobs.
     - Delayed execution like reading the file only when processing instructions are executed on it. 
+
+
+- ChatGPT 
+    - is always fundamentally trying to do is to produce a “reasonable continuation” of whatever text it’s got so far
+    - It does this (i.e. picking up next word) based on probabilities
+    - There are about 40000 reasonably commonly used words in english. Using large corpus of english text, it is possible to get frequency of occurance of each word.Using these frequencies, one can start constructing sentenses.
+    - While finding out next words with top probabality, a factor called temperature is introduced to indicate whether to always pickup next word with highest probability or apply temperature and choose one with slightly lower probabilty. 
