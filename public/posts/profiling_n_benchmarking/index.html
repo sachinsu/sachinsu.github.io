@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Profiling and benchmarking tools for Applications - Learnings in IT</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Profiling and benchmarking tools for Applications" />
+<meta property="og:description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&rsquo;s objectives.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behavior of a program." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/profiling_n_benchmarking/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-12T01:00:00+05:30" />
+<meta property="article:modified_time" content="2021-12-12T01:00:00+05:30" />
+
+
+		<meta itemprop="name" content="Profiling and benchmarking tools for Applications">
+<meta itemprop="description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&rsquo;s objectives.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behavior of a program."><meta itemprop="datePublished" content="2021-12-12T01:00:00+05:30" />
+<meta itemprop="dateModified" content="2021-12-12T01:00:00+05:30" />
+<meta itemprop="wordCount" content="943">
+<meta itemprop="keywords" content="pyroscope,crank,flame graph,CPU," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Profiling and benchmarking tools for Applications"/>
+<meta name="twitter:description" content="Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&rsquo;s objectives.
+Lets look at what they mean,
+ Profiling is defined as process aimed at understanding the behavior of a program."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-169012216-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Learnings in IT</div>
+					<div class="logo__tagline">A Simple Technical Blog</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/projects/">
+				
+				<span class="menu__text">Projects</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://gist.github.com/sachinsu">
+				
+				<span class="menu__text">Gists</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/links/home">
+				
+				<span class="menu__text">Useful Links</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Profiling and benchmarking tools for Applications</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-12-12T01:00:00&#43;05:30">Dec 12 2021</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#profiling">Profiling</a></li>
+    <li><a href="#benchmarking">Benchmarking</a>
+      <ul>
+        <li><a href="#useful-references">Useful References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="introduction">Introduction</h2>
+<p>We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&rsquo;s objectives.</p>
+<p>Lets look at what they mean,</p>
+<ul>
+<li>Profiling is defined as process <code>aimed at  understanding the behavior of a program. A profile result might be a table of time taken per function,</code> as per <a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling
+    
+    target=_blank rel="noopener noreferrer"
+>this</a> and <a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
+    
+    target=_blank rel="noopener noreferrer"
+>this</a>)</li>
+<li>Benchmarking  <code>measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.</code>. Refer <a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29
+    
+    target=_blank rel="noopener noreferrer"
+>this</a> for more information. Also do check <a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/
+    
+    target=_blank rel="noopener noreferrer"
+>Benchmarking correctly is hard by Julia Evans</a>.</li>
+</ul>
+<p>Typically, Profiling is supported by most of the environments (either via IDEs like <a href=https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view&#61;vs-2022
+    
+    target=_blank rel="noopener noreferrer"
+>Visual Studio</a> or through language itself [Like <a href=https://go.dev/blog/pprof
+    
+    target=_blank rel="noopener noreferrer"
+>Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
+<p>In this article, We will look at couple of tools in this space that can be easily integrated in developer&rsquo;s workflow so as to get early feedback. Lets' go.</p>
+<h2 id="profiling">Profiling</h2>
+<p><a href=https://pyroscope.io
+    
+    target=_blank rel="noopener noreferrer"
+>Pyroscope</a> is Open Source Application for profiling Application. It is a cross-language tool i.e. programs in variety of languages can be profiled using it. It works in client server model where in,
+- Client - Pyroscope executable runs the intended code (in languages like C#, Ruby) etc. (in case of Go, it is available as dependency) and collects instrumentation details to be sent to server.
+- Server - Runs as a separate process (on Linux [Works in WSL if using Windows] or Mac), collects the data from client processes and renders them as table and/or flame graph via Web UI.A flamegraph is a way to visualize resources used by a program, like CPU usage or memory allocations, and see which parts of your code were responsible.</p>
+<p>Lets see how a function in C# can be instrumented using PyroScope.</p>
+<ol>
+<li>Develop function to be profiled
+Lets have ASP.NET Core 5.0 based Web API as below,</li>
+</ol>
+<figure><img src="/images/profiling3.png"/><figcaption>
+            <h4>Simple Web API handler in C#</h4>
+        </figcaption>
+</figure>
+
+<ol start="2">
+<li>
+<p>Setup Pyroscope</p>
+<p>Install Pyroscope Application by following instructions <a href=https://pyroscope.io/docs/agent-install-windows
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> for Windows. Note that, Pyroscope server component won&rsquo;t run on Windows in which case either <a href=https://docs.microsoft.com/en-us/windows/wsl/install
+    
+    target=_blank rel="noopener noreferrer"
+>Windows Subsystem for Linux (WSL)</a> or <a href=https://pyroscope.io/docs/docker-guide
+    
+    target=_blank rel="noopener noreferrer"
+>Docker</a> can be used. In case of Linux, instructions provided <a href=https://pyroscope.io/docs/server-install-linux
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> are sufficient for both client and server components.</p>
+<p>I have setup the application on Windows 10 while using WSL for Pyroscope Server.</p>
+</li>
+<li>
+<p>Configure Pyroscope client and run the Application</p>
+<ul>
+<li>
+<p>Build the application using <code>dotnet build</code></p>
+</li>
+<li>
+<p>Configure below environment variables (below is powershell format or you can use <code>SET ...</code> commands on command prompt),</p>
+<pre><code>  ```
+      $env:PYROSCOPE_SPY_NAME=&quot;dotnetspy&quot;;
+      $env:PYROSCOPE_APPLICATION_NAME=&quot;my.dotnet.app&quot;;
+      $env:PYROSCOPE_SERVER_ADDRESS=&quot;http://localhost:4040&quot;;
+
+  ```
+</code></pre>
+</li>
+<li>
+<p>Update path to include pyroscope installation folder using <code>$env:Path += &quot;;C:\Program Files\Pyroscope\Pyroscope Agent\&quot;</code></p>
+</li>
+<li>
+<p>Run the Application using <code>pyroscope exec dotnet .\bin\Debug\net5.0\webapi.dll</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Run Pyroscope Server</p>
+<ul>
+<li>
+<p>Start Pyroscope server from WSL Linux prompt using, <code>sudo pyroscope server</code>. The output of this command should show Port on which server is running.</p>
+<ul>
+<li>Either use <a href=https://curl.se/
+    
+    target=_blank rel="noopener noreferrer"
+>curl</a> or <a href=https://github.com/rakyll/hey
+    
+    target=_blank rel="noopener noreferrer"
+>hey</a> tool to invoke the API. Below command shows how to generate load using hey,
+<ul>
+<li>run <code>.\hey.exe -m GET -c 10 -q 2 http://localhost:5000/weatherforecast</code> (Note: Modify the URL As appropriate)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Observe the flame graph in Pyroscope Web UI.</p>
+<ul>
+<li>
+<p>Observe the Table and/or flamegraph using Pyroscope Web interface. Below screenshot shows flamegraph for above code. Refer <a href=https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> and <a href=https://www.datadoghq.com/knowledge-center/distributed-tracing/flame-graph/
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> for everything about flame graphs.</p>
+<figure><img src="/images/profiling1.png"/><figcaption>
+            <h4>Table and flamegraph for API</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="/images/profiling2.png"/><figcaption>
+            <h4>Table and flamegraph for API</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<p>Overall, Pyroscope provides easy way to observe Memory/CPU utilization as part of developer workflow on workstation itself. This is especially useful for development environments which do not provide profiling out of the box.</p>
+<h2 id="benchmarking">Benchmarking</h2>
+<p>Crank is tool used by Microsoft internally to benchmark applications. It is released as <a href=https://nuget.org
+    
+    target=_blank rel="noopener noreferrer"
+>Nuget</a> package and currently .NET based code or Docker Containers can be benchmarked using it. Lets see steps to benchmark .NET Application using Crank.</p>
+<ol>
+<li>
+<p>Write code, intended to be benchmarked. In this case, its very simple one as below,</p>
+<pre><code> <figure><img src="/images/crank-prof4.png"/><figcaption>
+            <h4>C# Code to be benchmarked</h4>
+        </figcaption>
+</figure>
+
+</code></pre>
+</li>
+<li>
+<p>Setup Crank</p>
+<p>Follow the instructions provided <a href=https://github.com/dotnet/crank/blob/main/docs/getting_started.md
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> to setup crank. Crank expects Configuration in YAML format which contains details like <em>Job</em> to be used. Crank has built-in jobs which are essentially wrappers around CLI load testing tools like <a href=https://github.com/codesenberg/bombardier
+    
+    target=_blank rel="noopener noreferrer"
+>bombardier</a> and <a href=https://github.com/wg/wrk
+    
+    target=_blank rel="noopener noreferrer"
+>wrk</a> and so on. Since i am using Windows to run crank, we will go with Bombardier which is cross platform. Below is how a basic configuration looks like,</p>
+<figure><img src="/images/crank-prof3.png"/><figcaption>
+            <h4>Crank YAML Configuration</h4>
+        </figcaption>
+</figure>
+
+<p>It allows for extensibility in terms of overriding the job configuration in terms of how load should be generated etc.</p>
+</li>
+<li>
+<p>Run Crank Agent - Next step is to run  crank agent in a command prompt or powershell by simply running <code>crank-agent</code></p>
+</li>
+<li>
+<p>Record data for benchmarking using Crank CLI.</p>
+<p>Now run Crank from the application folder as <code>crank --config crank.benchmarks.yml --scenario hello --profile local --application.options.displayOutput true</code></p>
+<p>This command builds the code and launches job while recording the Utilization and other parameters and shows output like,</p>
+<figure><img src="/images/crank-prof1.png"/><figcaption>
+            <h4>Application&#39;s CPU Utilization</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="/images/crank-prof2.png"/><figcaption>
+            <h4>Observations during executing load testing</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ol>
+<p>Overall,  i found Crank helpful for following,</p>
+<ul>
+<li>it helps quickly test effect of any code changes by means of quickly benchmarking the application. The overall benchmarking might not be similar to end state ie. when the application will be deployed on target infrastructure. However, it still gives insights to developer about impact of code changes</li>
+<li>Crank can be easily used for local applications as well as for docker containers.</li>
+<li>It can either be used locally or in distributed manner.</li>
+</ul>
+<h3 id="useful-references">Useful References</h3>
+<ul>
+<li><a href=https://pyroscope.io
+    
+    target=_blank rel="noopener noreferrer"
+>Pyroscope</a></li>
+<li><a href=https://github.com/dotnet/crank
+    
+    target=_blank rel="noopener noreferrer"
+>Crank</a></li>
+<li><a href=https://queue.acm.org/detail.cfm?id&#61;1117403
+    
+    target=_blank rel="noopener noreferrer"
+>Performance Anti-patterns</a></li>
+</ul>
+<p>Happy Profiling and Benchmarking !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/pyroscope/" rel="tag">pyroscope</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/crank/" rel="tag">crank</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/flame-graph/" rel="tag">flame graph</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/cpu/" rel="tag">CPU</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sachin Sunkle</span>
+	</div>
+	<div class="authorbox__description">
+		A Coder in IT
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/dbre/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Database Reliability Engineering - My Notes</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/is_sqlite_production_ready/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Can SQLite be considered for Server Applications?</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Sachin Sunkle.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

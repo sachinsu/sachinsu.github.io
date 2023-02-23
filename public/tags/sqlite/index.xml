@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQLite on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/sqlite/</link>
+    <description>Recent content in SQLite on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Can SQLite be considered for Server Applications?</title>
+      <link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link>
+      <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid>
+      <description>Introduction While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on. In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server.</description>
+    </item>
+    
+    <item>
+      <title>Tool to mass DM followers on Twitter in Go</title>
+      <link>https://sachinsu.github.io/posts/massdmgolang/</link>
+      <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
+      <description>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
+This is an attempt to write CLI tool in Golang in response to it.
+For detailed requirements, refer here
+Approach In Brief,
+  CLI should,
+ accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.</description>
+    </item>
+    
+  </channel>
+</rss>

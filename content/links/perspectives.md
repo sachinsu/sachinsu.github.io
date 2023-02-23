@@ -70,6 +70,7 @@ Section covering Business, project/programming perspectives
 
 ## Stategic Approach 
 
+- [Writing an Engineering Strategy](https://lethain.com/eng-strategies/)
 - [A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups](https://github.com/kuchin/awesome-cto)
 - [Best Websites for Programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
 

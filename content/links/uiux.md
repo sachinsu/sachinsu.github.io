@@ -16,6 +16,7 @@ draft: false
 - [Thoughts on SPAs](https://nolanlawson.com/2022/05/25/more-thoughts-on-spas/)
 - [33 JavaScript concepts every Developer should know](https://github.com/leonardomso/33-js-concepts#8-iife-modules-and-namespaces)
 - [Server side Events for Real-time streaming Updates](https://shopifyengineering.myshopify.com/blogs/engineering/server-sent-events-data-streaming)
+- [Four ways to build Web Apps](https://tomhummel.com/posts/four-web-apps/)
 
 ## Articles
 
@@ -46,7 +47,6 @@ draft: false
 ## Libraries and Tools
 
 - [RedwoodJS - App framework](https://github.com/redwoodjs/redwood )
-- [Tauri - smaller, faster, and more secure desktop applications with a web frontend](https://github.com/tauri-apps/tauri)
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
 - [Remix - Modern SPA framework](https://github.com/remix-run/remix)
 - [Blitz - Modern SPA framework based on React](https://github.com/blitz-js/blitz)
@@ -65,7 +65,7 @@ draft: false
 - [Msw - Mock Service Worker for REST & GraphQL API Mocking](https://mswjs.io/)
 - [Modern JavaScript Tutorial](https://javascript.info/)
 - [Web Vitals- Essential metrics for a healthy site.](https://web.dev/vitals)
-- [Clerk - User Management as Service](https://clerk.dev)
+- [Clerk - User Management as Service](hthttps://tomhummel.com/posts/four-web-apps/tps://clerk.dev)
 - [Go based Fast Javascript bundler and minifier](https://esbuild.github.io/)
 - [Finite State Machine in JS/Typescript](https://xstate.js.org/docs)
 - [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)
@@ -78,3 +78,8 @@ draft: false
 - [AutoMerge - Network agnostic library for JSON-like data structure (a CRDT) that can be modified concurrently by different users, and merged again automatically.](https://github.com/automerge/automerge)
 - [Text (DSL) to diagrams](https://d2lang.com)
 - [Interactive guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
+- [End to end encryption in browser](https://blog.excalidraw.com/end-to-end-encryption/)
+
+## Desktop App frameworks 
+
+- [Tauri - smaller, faster, and more secure desktop applications with a web frontend (Native Webviews and no chromium)](https://github.com/tauri-apps/tauri)

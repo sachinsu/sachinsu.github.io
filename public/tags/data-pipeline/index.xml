@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data pipeline on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/data-pipeline/</link>
+    <description>Recent content in data pipeline on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/data-pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ELT approach for Data Pipelines</title>
+      <link>https://sachinsu.github.io/posts/elt/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/elt/</guid>
+      <description>Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
+ Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on.</description>
+    </item>
+    
+  </channel>
+</rss>

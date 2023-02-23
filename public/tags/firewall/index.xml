@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firewall on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/firewall/</link>
+    <description>Recent content in Firewall on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trobleshooting TCP Connection request time outs</title>
+      <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
+      <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
+      <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
+Simplified deployment Architecture is as below,
+ High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
+    </item>
+    
+  </channel>
+</rss>

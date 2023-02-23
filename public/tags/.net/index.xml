@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.NET on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/.net/</link>
+    <description>Recent content in .NET on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>URL Shortener in High Throughput Service</title>
+      <link>https://sachinsu.github.io/posts/shortidgeneration/</link>
+      <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/shortidgeneration/</guid>
+      <description>Background A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends SMS to Customer&amp;rsquo;s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it.</description>
+    </item>
+    
+    <item>
+      <title>Nuke as Build Automation tool for .NET projects</title>
+      <link>https://sachinsu.github.io/posts/nukebuildautomation/</link>
+      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/nukebuildautomation/</guid>
+      <description>Background How Nuke Helps Summary Key Advantages of Nuke are,
+ C# based DSL to compose build pipeline Build pipeline is part of solution (i.e. actual code) display a dependency graph logging support for lot of CI/CD helper tools  Useful References,  Nuke - Documentation Cake Fake  Happy Code building !!
+  </description>
+    </item>
+    
+    <item>
+      <title>Trobleshooting TLS handshake issue</title>
+      <link>https://sachinsu.github.io/posts/tlshandsharefailure/</link>
+      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/tlshandsharefailure/</guid>
+      <description>Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
+The requirement is as simple as consuming REST API from a Application over TLS.
+Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
+During Development, Windows 10 is used to develop and test the code.</description>
+    </item>
+    
+    <item>
+      <title>Domain driven Design: Learnings</title>
+      <link>https://sachinsu.github.io/posts/domain_driven_transcript_from_pluralsight/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/domain_driven_transcript_from_pluralsight/</guid>
+      <description>Course Overview Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we&amp;rsquo;d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading API: Learnings</title>
+      <link>https://sachinsu.github.io/posts/apiupgrade/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/apiupgrade/</guid>
+      <description>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
+This means that upgrade must be done keeping in mind,</description>
+    </item>
+    
+    <item>
+      <title>Trobleshooting TCP Connection request time outs</title>
+      <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
+      <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
+      <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
+Simplified deployment Architecture is as below,
+ High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
+    </item>
+    
+  </channel>
+</rss>
