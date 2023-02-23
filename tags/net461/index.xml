@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>net461 on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/net461/</link>
+    <description>Recent content in net461 on Learnings in IT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Apr 2022 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/net461/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nuke as Build Automation tool for .NET projects</title>
+      <link>https://sachinsu.github.io/posts/nukebuildautomation/</link>
+      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/nukebuildautomation/</guid>
+      <description>Background How Nuke Helps Summary Key Advantages of Nuke are,
+ C# based DSL to compose build pipeline Build pipeline is part of solution (i.e. actual code) display a dependency graph logging support for lot of CI/CD helper tools  Useful References,  Nuke - Documentation Cake Fake  Happy Code building !!
+  </description>
+    </item>
+    
+  </channel>
+</rss>
