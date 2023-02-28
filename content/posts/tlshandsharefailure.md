@@ -2,7 +2,7 @@
 title: "Troubleshooting TLS handshake issue"
 date: 2023-02-25T10:25:04+05:30
 draft: false
-tags: [Wireshark, TCP, TLS, .NET, Schannel]
+tags: [Wireshark, TCP, TLS, .NET, Schannel,SSPI, Bouncy Castle]
 ---
 
 ## Background
