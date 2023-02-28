@@ -585,6 +585,7 @@
         - Components of Data Lake 
             - Storage Layer - Typically object storage service is used (e.g. S3)
             - Data lake file formats -  that mainly compresses the data for either row or column-oriented writing or querying. E.g. Apache Parquet, Apache Avro , Apache Arrow. These formats provide features such as split ability and schema evolution (adding new columns without breaking anything or even enlarging some types).             
+            - Apache Arrow - In memory, Columnar Data format. 
             - Data lake table formats sit on top of these file formats to provide robust features. data lake table format bundles distributed files into one table that is otherwise hard to manage.They allow to efficiently query your data directly out of your data lake. They lack support for ACID transactions and support for ANSI SQL. Some of the data formats are Delta lake, Apache Iceberg, Apache Hudi.
                 - Delta lake is open source layer that uses parquet for storage with Apache Spark. It supports automated partitioning
         
