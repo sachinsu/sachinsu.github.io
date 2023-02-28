@@ -17,29 +17,6 @@
     </item>
     
     <item>
-      <title>Nuke as Build Automation tool for .NET projects</title>
-      <link>https://sachinsu.github.io/posts/nukebuildautomation/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/nukebuildautomation/</guid>
-      <description>Background How Nuke Helps Summary Key Advantages of Nuke are,
- C# based DSL to compose build pipeline Build pipeline is part of solution (i.e. actual code) display a dependency graph logging support for lot of CI/CD helper tools  Useful References,  Nuke - Documentation Cake Fake  Happy Code building !!
-  </description>
-    </item>
-    
-    <item>
-      <title>Trobleshooting TLS handshake issue</title>
-      <link>https://sachinsu.github.io/posts/tlshandsharefailure/</link>
-      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/tlshandsharefailure/</guid>
-      <description>Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
-The requirement is as simple as consuming REST API from a Application over TLS.
-Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
-During Development, Windows 10 is used to develop and test the code.</description>
-    </item>
-    
-    <item>
       <title>PostgreSQL</title>
       <link>https://sachinsu.github.io/links/postgresql/</link>
       <pubDate>Mon, 10 Jan 2022 15:08:50 +0530</pubDate>
@@ -88,15 +65,6 @@ Lets look at what they mean,
       <guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid>
       <description>Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
 What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?</description>
-    </item>
-    
-    <item>
-      <title>Domain driven Design: Learnings</title>
-      <link>https://sachinsu.github.io/posts/domain_driven_transcript_from_pluralsight/</link>
-      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/domain_driven_transcript_from_pluralsight/</guid>
-      <description>Course Overview Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we&amp;rsquo;d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design.</description>
     </item>
     
     <item>

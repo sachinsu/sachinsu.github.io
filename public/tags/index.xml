@@ -98,87 +98,6 @@
     </item>
     
     <item>
-      <title>.net core</title>
-      <link>https://sachinsu.github.io/tags/.net-core/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://sachinsu.github.io/tags/automation/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>msbuild</title>
-      <link>https://sachinsu.github.io/tags/msbuild/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/msbuild/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>net461</title>
-      <link>https://sachinsu.github.io/tags/net461/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/net461/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>netframework</title>
-      <link>https://sachinsu.github.io/tags/netframework/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/netframework/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Schannel</title>
-      <link>https://sachinsu.github.io/tags/schannel/</link>
-      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/schannel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TCP</title>
-      <link>https://sachinsu.github.io/tags/tcp/</link>
-      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/tcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TLS</title>
-      <link>https://sachinsu.github.io/tags/tls/</link>
-      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/tls/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wireshark</title>
-      <link>https://sachinsu.github.io/tags/wireshark/</link>
-      <pubDate>Tue, 22 Feb 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/wireshark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bombardier</title>
       <link>https://sachinsu.github.io/tags/bombardier/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
@@ -620,6 +539,15 @@
     </item>
     
     <item>
+      <title>.net core</title>
+      <link>https://sachinsu.github.io/tags/.net-core/</link>
+      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>.net framework</title>
       <link>https://sachinsu.github.io/tags/.net-framework/</link>
       <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
@@ -715,6 +643,15 @@
       <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/tags/polly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TCP</title>
+      <link>https://sachinsu.github.io/tags/tcp/</link>
+      <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/tcp/</guid>
       <description></description>
     </item>
     

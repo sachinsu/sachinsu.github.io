@@ -45,39 +45,6 @@
     <loc>https://sachinsu.github.io/tags/uuid/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/tags/.net-core/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/automation/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/msbuild/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/net461/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/netframework/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/posts/nukebuildautomation/</loc>
-    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/schannel/</loc>
-    <lastmod>2022-02-22T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/tcp/</loc>
-    <lastmod>2022-02-22T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/tls/</loc>
-    <lastmod>2022-02-22T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/posts/tlshandsharefailure/</loc>
-    <lastmod>2022-02-22T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/wireshark/</loc>
-    <lastmod>2022-02-22T10:25:04+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/links/</loc>
     <lastmod>2022-01-10T15:08:50+05:30</lastmod>
   </url><url>
@@ -163,9 +130,6 @@
     <lastmod>2021-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/corewcf/</loc>
-    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/posts/domain_driven_transcript_from_pluralsight/</loc>
     <lastmod>2021-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/soap/</loc>
@@ -264,6 +228,9 @@
     <loc>https://sachinsu.github.io/posts/temporalworkflow/</loc>
     <lastmod>2020-12-07T08:25:04+05:30</lastmod>
   </url><url>
+    <loc>https://sachinsu.github.io/tags/.net-core/</loc>
+    <lastmod>2020-11-07T08:25:04+05:30</lastmod>
+  </url><url>
     <loc>https://sachinsu.github.io/tags/.net-framework/</loc>
     <lastmod>2020-11-07T08:25:04+05:30</lastmod>
   </url><url>
@@ -304,6 +271,9 @@
     <lastmod>2020-08-25T10:25:04+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/polly/</loc>
+    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/tcp/</loc>
     <lastmod>2020-08-25T10:25:04+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/posts/connectiontimeouts/</loc>

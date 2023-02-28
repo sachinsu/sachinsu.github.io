@@ -109,57 +109,6 @@ if (!doNotTrack) {
 	<article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/webassembly/" rel="bookmark">
-			Is WebAssembly future of Web Development
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-06-02T10:25:04&#43;05:30">Jun 2 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/usinggithubactions/" rel="bookmark">
-			Using Github Actions for Automated Testing and Deployment
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-05-28T10:25:04&#43;05:30">May 28 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Background The source code of tracfee.com is hosted on Github Private.
-At a High level, Tracfee&rsquo;s Architecture involves,
- Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud  So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM.
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/windowsservicecancellabletask/" rel="bookmark">
-			Windows Service with Cancelable Task
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-05-05T12:25:04&#43;05:30">May 5 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Background Recently, we had requirement wherein a process should,
- Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go  The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
 			<a href="/posts/usingbenchmarkdotnet/" rel="bookmark">
 			Optimizing  .NET Code using Benchmarks
 			</a>
@@ -192,13 +141,60 @@ At a High level, Tracfee&rsquo;s Architecture involves,
 		Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
 During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.
 	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/channelsforproducerconsumer/" rel="bookmark">
+			Using Channels for High performance Producer consumer implementation
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-02-12T10:25:04&#43;05:30">Feb 12 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
+This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/dotnetstandard/" rel="bookmark">
+			Using .NET standard Assembly in .NET core and .NET Framework
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-02-07T10:25:04&#43;05:30">Feb 7 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it&rsquo;s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+ High availability Lightweight, High throughput (Need to support few thousand(s) active users)  Accordingly, we have been exploring developing this Web Application in .
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/dddnotes/" rel="bookmark">
+			
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Even Eric Evans explicitly states that DDD isn&rsquo;t suitable for problems when there&rsquo;s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that&rsquo;s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother
+	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/4/">«</a>
-	<span class="pagination__item pagination__item--current">5/6</span>
-	<a class="pagination__item pagination__item--next btn" href="/page/6/">»</a>
+	<span class="pagination__item pagination__item--current">5/5</span>
 </div>
 
 			</div>
@@ -233,10 +229,10 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/shortidgeneration/">URL Shortener in High Throughput Service</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/nukebuildautomation/">Nuke as Build Automation tool for .NET projects</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Trobleshooting TLS handshake issue</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/is_sqlite_production_ready/">Can SQLite be considered for Server Applications?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/profiling_n_benchmarking/">Profiling and benchmarking tools for Applications</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/dbre/">Database Reliability Engineering - My Notes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/nrtanalysispostgresql/">Near real time API Monitoring with Grafana and PostgreSQL</a></li>
 		</ul>
 	</div>
 </div>
@@ -249,7 +245,6 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="analytics">analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/api/" title="API">API</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asmx/" title="ASMX">ASMX</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="automation">automation</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/aws/" title="AWS">AWS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/azure/" title="Azure">Azure</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bash/" title="bash">bash</a>
@@ -285,11 +280,8 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 		<a class="widget-taglist__link widget__link btn" href="/tags/microservices/" title="MicroServices">MicroServices</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft/" title="Microsoft">Microsoft</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/msbuild/" title="msbuild">msbuild</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nanoid/" title="Nanoid">Nanoid</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/net461/" title="net461">net461</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/netframework/" title="netframework">netframework</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ninja/" title="ninja">ninja</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nsetools/" title="nsetools">nsetools</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/observability/" title="Observability">Observability</a>
@@ -304,7 +296,6 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 		<a class="widget-taglist__link widget__link btn" href="/tags/real-time/" title="real-time">real-time</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rest/" title="REST">REST</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rqlite/" title="rqlite">rqlite</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="sed">sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="shopify">shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
@@ -315,7 +306,6 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 		<a class="widget-taglist__link widget__link btn" href="/tags/temporal.io/" title="temporal.io">temporal.io</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/time-series/" title="time series">time series</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/timescaledb/" title="timescaledb">timescaledb</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tls/" title="TLS">TLS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/toxiproxy/" title="toxiproxy">toxiproxy</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/trino/" title="Trino">Trino</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/twitter/" title="Twitter">Twitter</a>
@@ -324,7 +314,6 @@ During the Development, a mock HTML Page was developed to simulate launching of 
 		<a class="widget-taglist__link widget__link btn" href="/tags/uuid/" title="UUID">UUID</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wcf/" title="WCF">WCF</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/webassembly/" title="WebAssembly">WebAssembly</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wireshark/" title="Wireshark">Wireshark</a>
 	</div>
 </div>
 </aside>
