@@ -28,26 +28,30 @@ So, i used wireshark during test from CURL as well as from the Application and b
 
 ### Using CURL 
 
-            {{< figure src="/images/wireshark-curl-1.png" title="List of Ciphers Exchanged during 'Client Hello'" >}}
+{{< figure src="/images/wireshark-curl-1.png" title="List of Ciphers Exchanged during 'Client Hello'" >}}
 
-            {{< figure src="/images/wireshark-curl-2.png" title="Cipher returned by Server during 'Server Hello'" >}}
+{{< figure src="/images/wireshark-curl-2.png" title="Cipher returned by Server during 'Server Hello'" >}}
 
-            With CURl, TLS handshare happens as intended and API works as expected.
+With CURl, TLS handshare happens as intended and API works as expected.
 
 ### Via Application
-        - Below is list of ciphers exchanged and list is considerably short compared to earlier. 
 
-            {{< figure src="/images/wireshark-app-1.png" title="List of Ciphers Exchanged during 'Client Hello'" >}}
+- Below is list of ciphers exchanged and list is considerably short compared to earlier. 
 
-        - Below is error logged 
-            {{< figure src="/images/wireshark-app-2.png" title="TLS handshake Error" >}}
+    {{< figure src="/images/wireshark-app-1.png" title="List of Ciphers Exchanged during 'Client Hello'" >}}
+
+- Below is error logged 
+
+    {{< figure src="/images/wireshark-app-2.png" title="TLS handshake Error" >}}
 
 
 To understand this behavior, Let's do a quick primer. 
 
 There are many implementations of TLS/SSL (a.k.a. Security service providers) available across platforms. Notably, 
-    - [Network Security Services](https://en.wikipedia.org/wiki/Network_Security_Services) - This is used by browsers like Firefox
-    - [LibreSSL](https://en.wikipedia.org/wiki/LibreSSL) - Used by Chrome, curl (in ready-to-use build, refer [here](https://everything.curl.dev/build/tls))
+
+- [Network Security Services](https://en.wikipedia.org/wiki/Network_Security_Services) This is used by browsers like Firefox
+
+- [LibreSSL](https://en.wikipedia.org/wiki/LibreSSL) - Used by Chrome, curl (in ready-to-use build, refer [here](https://everything.curl.dev/build/tls))
 
 Refer [here](https://en.wikipedia.org/wiki/Comparison_of_TLS_implementations) for nice comparison of various implementations in summary format. 
 
