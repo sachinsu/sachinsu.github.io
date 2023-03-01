@@ -46,6 +46,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [GoatCounter - Open source Web site Analytics](https://github.com/arp242/goatcounter)
 - [RedwoodJS - App framework](https://github.com/redwoodjs/redwood )
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
 - [Remix - Modern SPA framework](https://github.com/remix-run/remix)
