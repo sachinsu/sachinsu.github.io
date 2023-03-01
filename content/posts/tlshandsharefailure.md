@@ -65,6 +65,10 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 
 Microsoft Windows and development platforms like .NET use this implementation by default. Via this provider it is possible for Administrators to enforce policies like restrict version of TLS, usage of ciphers and so on. Note that, as part of Security/Compliance requirements, It is often necessary to have these policies enforced and this is exactly what was done.   
 
+Below is Sample C# code using [BouncyCastle](https://github.com/bcgit/bc-csharp) (alternate library for cryptography)
+
+{{< carbon gistid="22bb5e70334101dba1880de3a6c0e504"  >}}
+
 
 ## Wrap up 
 
