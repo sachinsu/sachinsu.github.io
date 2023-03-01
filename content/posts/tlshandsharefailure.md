@@ -73,8 +73,9 @@ Below is Sample C# code using [BouncyCastle](https://github.com/bcgit/bc-csharp)
 ## Wrap up 
 
 Hence, the resolution for this could be,
-    - Make sure that Server hosting the API complies with any of the ciphers allowed on the client.
-    - In case if this is not possible then , Cipher restrictions on the client will have to be modified (assuming its within the requirement for Compliance).
+
+- Make sure that Server hosting the API complies with any of the ciphers allowed on the client.
+- In case if this is not possible then , Cipher restrictions on the client will have to be modified (assuming its within the requirement for Compliance).
 
 ### Useful References,
 
