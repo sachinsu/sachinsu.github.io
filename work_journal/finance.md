@@ -529,3 +529,12 @@
 		- you generally prefer bonds over stocks. 
 		- you tend to sell winning investments more readily than losing ones. 
 		- you’re seriously tempted to take money out of the stock market when prices fall. 
+
+- Personal finance rules (Vidya Bala)
+    - Go only with regulated product
+    - Understand how the product works 
+    - Short term goals (< 5 years)
+        - Deposits, Short term debt mutual funds, Govt. treasury bills, 
+    - Long term goals 
+        - Equity Index funds
+        - High quality corporate bond funds
