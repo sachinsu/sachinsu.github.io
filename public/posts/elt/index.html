@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ELT approach for Data Pipelines - Learnings in IT</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="ELT approach for Data Pipelines" />
+<meta property="og:description" content="Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
+ Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sachinsu.github.io/posts/elt/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-14T00:00:00+05:30" />
+<meta property="article:modified_time" content="2021-03-14T00:00:00+05:30" />
+
+
+		<meta itemprop="name" content="ELT approach for Data Pipelines">
+<meta itemprop="description" content="Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
+ Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on."><meta itemprop="datePublished" content="2021-03-14T00:00:00+05:30" />
+<meta itemprop="dateModified" content="2021-03-14T00:00:00+05:30" />
+<meta itemprop="wordCount" content="1183">
+<meta itemprop="keywords" content="DBT,ELT,ETL,Python,Go,PostgreSQL,CSV,data pipeline,nsetools," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ELT approach for Data Pipelines"/>
+<meta name="twitter:description" content="Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
+ Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-169012216-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Learnings in IT</div>
+					<div class="logo__tagline">A Simple Technical Blog</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/projects/">
+				
+				<span class="menu__text">Projects</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://gist.github.com/sachinsu">
+				
+				<span class="menu__text">Gists</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/links/home">
+				
+				<span class="menu__text">Useful Links</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">ELT approach for Data Pipelines</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-14T00:00:00&#43;05:30">Mar 14 2021</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#e--l-in-elt----get-the-list-of-cnx-500-companies-and-also-get-stock-price-for-each-of-them"><code>E</code> &amp; <code>L</code> in ELT -  Get the list of CNX 500 Companies and also get stock price for each of them</a></li>
+        <li><a href="#t-in-elt---transform-the-company-wise-data-to-arrive-at-weekly-list-of-momentum-stocks"><code>T</code> in ELT - Transform the company-wise data to arrive at weekly list of momentum stocks</a></li>
+        <li><a href="#orchestration">Orchestration</a></li>
+        <li><a href="#useful-references">Useful References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="introduction">Introduction</h2>
+<p>While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,</p>
+<ul>
+<li><strong>Extract</strong> - typically involves retrieving data from source. This could also be via streaming</li>
+<li><strong>Transform</strong> - Apply transformation to the extracted data.</li>
+<li><strong>Load</strong> -  Loading the data in Operation Data store (ODS) or data warehouse
+Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close
+    
+    target=_blank rel="noopener noreferrer"
+>here</a> for more details on ETL. ETL has been made easy by tools like <a href=https://www.talend.com/products/talend-open-studio/
+    
+    target=_blank rel="noopener noreferrer"
+>Talend</a>, <a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services
+    
+    target=_blank rel="noopener noreferrer"
+>SSIS</a> and so on.</li>
+</ul>
+<p>However, there has been shift from above approach due to,</p>
+<ul>
+<li>Need to handle different kinds of data (Structured and Unstructured)</li>
+<li>hugh volumes of data (IOT, Customer data management)</li>
+<li>Availability of cheaper storage and compute along with availability of internet scale cloud based data warehouses</li>
+</ul>
+<p>has recently caused wide adoption of ELT (Extract-transform-load) over ETL.</p>
+<p>ELT offers an alternative to ETL in which data is loaded into the warehouse (sometimes in storage area called as data lake) before transforming it. It allows focussing on extraction and loading with heavy transformation offloaded to later stage. Since the transformation happens in the warehouse, it can potentially be defined using SQL (thus using same language across the pipeline). This allows more roles (say Data Analysts) to contribute to (or entirely own) the transformation logic. Data warehouse becomes single source of truth for data. Ref: <a href=https://dataschool.com/data-governance/etl-vs-elt/
+    
+    target=_blank rel="noopener noreferrer"
+>ETL vs ELT</a></p>
+<p>Typically, Data flow pipeline consists of below phases (it also lists available tools for each phase),</p>
+<ul>
+<li>Ingestion - <a href=https://airbyte.io
+    
+    target=_blank rel="noopener noreferrer"
+>Airbyte</a>, <a href=https://fivetran.com
+    
+    target=_blank rel="noopener noreferrer"
+>Fivetran</a>, <a href=https://stitchdata.com
+    
+    target=_blank rel="noopener noreferrer"
+>Stitch</a></li>
+<li>Warehousing - <a href=https://snowflake.com
+    
+    target=_blank rel="noopener noreferrer"
+>Snowflake</a>, <a href=https://cloud.google.com/bigquery
+    
+    target=_blank rel="noopener noreferrer"
+>BigQuery</a>, <a href=https://aws.amazon.com/redshift
+    
+    target=_blank rel="noopener noreferrer"
+>Redshift</a>, <a href=https://postgresql.org
+    
+    target=_blank rel="noopener noreferrer"
+>PostgreSQL</a></li>
+<li>Transformation - <a href=https://getdbt.com
+    
+    target=_blank rel="noopener noreferrer"
+>dbt</a></li>
+<li>Orchestration - <a href=airflow.apache.org
+    
+    
+>Airflow</a>, <a href=https://prefect.io
+    
+    target=_blank rel="noopener noreferrer"
+>Prefect</a>, <a href=https://dagster.io
+    
+    target=_blank rel="noopener noreferrer"
+>Dagster</a></li>
+<li>BI - <a href=superset.apache.org
+    
+    
+>Superset</a>, <a href=https://metabase.com
+    
+    target=_blank rel="noopener noreferrer"
+>Metabase</a>, <a href=redash.io
+    
+    
+>Redash</a>, <a href=looker.com
+    
+    
+>Looker</a> etc.</li>
+</ul>
+<p>I think the best way to understand the landscape is to use above tools. So i decided to implement below problem statement. The requirement is to run a weekly process that,</p>
+<ol>
+<li>Downloads list of CNX 500 companies from Exchange&rsquo;s web site</li>
+<li>For each of the company , get Last traded price(<code>ltp</code>) and 52 week high price (<code>yearlyhigh</code>)</li>
+<li>Exclude companies having ltp &lt; 20 or ltp &gt; 50000</li>
+<li>Rank companies by closeness of <code>ltp</code> to <code>yearlyhigh</code></li>
+<li>Prepare <code>buy</code> list of up to 20 such companies. Earlier short listed stocks, which are not in top 20 this week or further than 5% from their <code>yearlyhigh</code>, should be marked for <code>sell</code>.</li>
+</ol>
+<p>Above is hypothetical example and using full fledged data stack may be overkill but should suffice the purpose of this article.</p>
+<h3 id="e--l-in-elt----get-the-list-of-cnx-500-companies-and-also-get-stock-price-for-each-of-them"><code>E</code> &amp; <code>L</code> in ELT -  Get the list of CNX 500 Companies and also get stock price for each of them</h3>
+<p>Below are some of the options available for this task under <code>extract</code> and <code>load</code> category,</p>
+<ul>
+<li>Use Python to download list of stocks and then use <a href=https://pypi.org/project/yfinance/
+    
+    target=_blank rel="noopener noreferrer"
+>yfinance</a> to get the price and yearly high.</li>
+<li>Use tool like <a href=https://airbyte.io
+    
+    target=_blank rel="noopener noreferrer"
+>Airbyte</a> which provides declarative way of importing the data via HTTP. I am planning to explore this option later.</li>
+<li>Use Go to perform the task. I decided to go with this one and code is available at <a href=https://github.com/sachinsu/momentumflow/tree/main/gover
+    
+    target=_blank rel="noopener noreferrer"
+>here</a>. It downloads CSV file from Exchange&rsquo;s website (containing list of stocks in Index) and loads them to database. Since Yahoo finance no longer provides Free tier for API, It uses <a href=github.com/antchfx/htmlquery
+    
+    
+>htmlquery</a> library to parse HTML and retrieve stock price and yearly high value.</li>
+</ul>
+<h3 id="t-in-elt---transform-the-company-wise-data-to-arrive-at-weekly-list-of-momentum-stocks"><code>T</code> in ELT - Transform the company-wise data to arrive at weekly list of momentum stocks</h3>
+<p>This is implemented using <a href=https://getdbt.com
+    
+    target=_blank rel="noopener noreferrer"
+>dbt</a>. dbt (Data Build Tool) is a framework to facilitate transformations using SQL along with version control, automates tests, support for incremental load, snapshots and so on. It has <code>notion</code> of <strong>project</strong> or <strong>workspace</strong> that many developers are familiar with.
+It is offered as Command line interface (CLI)  as well as on cloud which also provides web based UI. I have used CLI for this exercise. For a quick recap of dbt folder structure, refer [here]https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3).</p>
+<p>Source code of dbt project <a href=https://github.com/sachinsu/momentumflow/tree/main/dbt
+    
+    target=_blank rel="noopener noreferrer"
+>here</a>.  We will go through key part of this project which are Models that carry out the transformation. After the initial setup of dbt like configuring target (i.e. data source which in this case is a PostgreSQL database), below are Models used,</p>
+<ul>
+<li>
+<p>Since Loading  of company-wise data is already done in earlier step, next step is to rank the companies w.r.t. <code>closeness</code> to their yearly high. Below is <code>dbt</code> SQL which does it (At run time, dbt converts below SQL to the one understood by the Target database),</p>
+<pre><code> ```
+
+ {{
+     config(
+         materialized='incremental',
+     )
+ }}
+
+ with
+     cnxcompanies
+     as
+     (
+
+         select
+             symbol,
+             company,
+             ltp,
+             yearlyhigh,
+             updatedat,
+             rank() over (order by yearlyhigh-ltp) as diff_rank
+         from {{ source('datastore', 'cnx500companies') }}
+     where yearlyhigh::money::numeric::float8 - ltp::money::numeric::float8 &gt; 0 and ltp::money::numeric::float8 &gt; 20 and ltp::money::numeric::float8 &lt; 50000
+
+ ),
+ cnxtopstocks as
+ (
+
+     select
+     symbol,
+     company,
+     ltp,
+     yearlyhigh,
+     updatedat,
+     diff_rank
+     from  cnxcompanies
+     order by updatedat desc,diff_rank 
+ )
+
+ select * from cnxtopstocks
+
+ ```
+</code></pre>
+<p>Above model creates corresponding table in database (as such dbt abstracts changes to database from developer and manages it on its own). Note that model is marked <code>incremental</code> so that it doesn&rsquo;t overwrite the table on every run but rather incrementally applies changes.</p>
+</li>
+<li>
+<p>Next step is to arrive at Weekly list of stocks to <code>buy</code> and even <code>sell</code> those which are lacking momentum.</p>
+<pre><code>  ```
+
+  {{
+  config(
+  materialized='incremental',
+  unique_key='concat(symbol,updatedat)'
+      )
+  }}
+
+  with currentlist as (
+      select distinct symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'buy' as buyorsell
+      from  {{ref('rankstocks')}} 
+      where (yearlyhigh-ltp)/ltp*100 &lt;= 5
+      order by updatedat desc, diff_rank
+      limit 20
+  ),
+  finallist as (
+      {% if is_incremental() %}
+          select symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'sell' as buyorsell from {{this}} as oldlist
+              where not exists (select symbol from currentlist where symbol=oldlist.symbol and (yearlyhigh-ltp)/ltp*100 &lt;= 5 )
+          union 
+          select  symbol,
+              company,
+              ltp,
+              yearlyhigh,
+              updatedat,diff_rank,'buy' as buyorsell  from  currentlist 
+              where not exists (select symbol from {{this}} where symbol=currentlist.symbol and buyorsell='buy')   
+      {% else %}
+          select * from currentlist
+      {% endif %}
+  )
+
+
+  select * from finallist
+
+  ```
+</code></pre>
+<p>This model refers to earlier one using <code>{{..}}</code> jinja directive. It also refers to itself using <code>{{this}}</code> directive.</p>
+<p>Among others, below are key feature of DBT that were observed,</p>
+<ul>
+<li>Concept of Project/Workspace which programmers are typically familiar with</li>
+<li>Using SQL for Data Transformation</li>
+<li>Support for Version control</li>
+<li>Support for testing</li>
+<li>Support for incremental load</li>
+<li>Support for snapshots</li>
+<li>Automatic schema updates</li>
+<li>Out of the box Documentation browser covering traceability across sources and models.</li>
+</ul>
+</li>
+</ul>
+<h3 id="orchestration">Orchestration</h3>
+<p>After completing <code>ELT</code> aspects, now it&rsquo;s time to  orchestrate this pipeline wherein the whole process will run every week. Typically, one can use task scheduler like Airflow or Prefect to do this. But for the purpose of this article, lets use <a href=https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks
+    
+    target=_blank rel="noopener noreferrer"
+>at</a> on windows (or <a href=https://en.wikipedia.org/wiki/Cron
+    
+    target=_blank rel="noopener noreferrer"
+>cron</a> if you are using Linux).</p>
+<p>so a simplest possible batch file (as below),</p>
+<pre tabindex="0"><code>set http_proxy=
+set https_proxy=
+
+.\gover\go run .
+
+.\.venv\scripts\activate &amp; .\dbt\dbt run
+</code></pre><p>will run the whole process and generate weekly list in <code>weeklylist</code> table in database. This batch file can be scheduled to run on weekly basis using command <code>at 23:00 /every:F runscript.bat</code>.</p>
+<p>This is very basic approach to scheduling (with no error handling/retries or monitoring). Hopefully, i will be able to work on these part (something like <a href=https://docs.airbyte.io/tutorials/connecting-el-with-t-using-dbt
+    
+    target=_blank rel="noopener noreferrer"
+>this</a>). Till then&hellip;</p>
+<h3 id="useful-references">Useful References</h3>
+<ul>
+<li><a href=https://medium.com/memory-leak/reverse-etl-a-primer-4e6694dcc7fb
+    
+    target=_blank rel="noopener noreferrer"
+>Reverse ETL</a></li>
+<li><a href=https://towardsdatascience.com/data-stacks-for-fun-nonprofit-part-ii-d375d824abf3
+    
+    target=_blank rel="noopener noreferrer"
+>Data stacks for Fun and Profit</a></li>
+<li><a href=https://dataschool.com/data-governance/what-warehouse-to-use/
+    
+    target=_blank rel="noopener noreferrer"
+>What warehouse to use</a></li>
+<li><a href=https://tech.fretlink.com/build-your-own-data-lake-for-reporting-purposes/
+    
+    target=_blank rel="noopener noreferrer"
+>Build Data Lake in PostgreSQL using FDW, Singer, Metabase</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/dbt/" rel="tag">DBT</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/elt/" rel="tag">ELT</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/etl/" rel="tag">ETL</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">Python</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/go/" rel="tag">Go</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/postgresql/" rel="tag">PostgreSQL</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/csv/" rel="tag">CSV</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/data-pipeline/" rel="tag">data pipeline</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/nsetools/" rel="tag">nsetools</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sachin Sunkle</span>
+	</div>
+	<div class="authorbox__description">
+		A Coder in IT
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/restapiversioning/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/presto/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Presto - A distributed SQL Engine for variety of data stores</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Sachin Sunkle.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

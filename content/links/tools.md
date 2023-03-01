@@ -17,6 +17,7 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Zoomit - screen zoom and annotation tool for technical presentations that include application demonstrations](https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit)
 - [revealjs - HTML Presentation framework](https://revealjs.com/)
 - [List of Self hosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
+- [Open source Alternative to Heroku/Netlify for Self hosting](https://github.com/coollabsio/coolify)
 - [A book of Secret knowledge - Collection of Useful tools](https://github.com/trimstray/the-book-of-secret-knowledge)
 - [Parsr - Transform PDF,Image into Structured data](https://github.com/axa-group/parsr)
 - [SOPS - Tool to secure  secrets (JSON,YAML, INI etc.) via Command line and as GO library](https://github.com/mozilla/sops)
