@@ -45,6 +45,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [GoatCounter - Open source Web site Analytics](https://github.com/arp242/goatcounter)
 - [RedwoodJS - App framework](https://github.com/redwoodjs/redwood )
 - [Tauri - smaller, faster, and more secure desktop applications with a web frontend](https://github.com/tauri-apps/tauri)
 - [Gatsby - React based fast framework](https://www.gatsbyjs.com/)
