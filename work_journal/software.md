@@ -1770,3 +1770,42 @@
     - It does this (i.e. picking up next word) based on probabilities of single words and n-grams. However, it is very difficult to get miningful english text only basis this. 
     - There are about 40000 reasonably commonly used words in english. Using large corpus of english text, it is possible to get frequency of occurance of each word.Using these frequencies, one can start constructing sentenses.
     - While finding out next words with top probabality, a factor called temperature is introduced to indicate whether to always pickup next word with highest probability or apply temperature and choose one with slightly lower probabilty. 
+
+- System Design Interviewing tips 
+    - If the interviewer interrupts you, it's probably because you’re going off track.
+    - It's more important to cover everything broadly than it is to explain every small thing in detail.Interviewers are not looking for specific answers with ironclad certainty. They want to see well-reasoned, qualified decisions based on engineering trade-offs.
+    - Whatever decision you make, explain why. In a system design interview, why is more important than what. For anything you say, be prepared to explain why.
+    - Your interviewer cares less about whether your design is good in itself, and more about whether you are able to talk about the trade-offs (positives and negatives) of your decisions.
+    - For a System design interview, Interviewer looks for, 
+            - a broad, base-level understanding of system design fundamentals.
+            - back-and-forth about problem constraints and parameters.
+            - well-reasoned, qualified decisions based on engineering trade-offs.
+            - the unique direction your experience and decisions take them.
+            - a holistic view of a system and its users.
+            - Not interested in deep expertise in the given problem domain. 
+    - Initial prompts to system design problems tend to be intentionally light on detail. Do not extrapolate from it basis assumptions but Ask for details. 
+    - You can never go wrong by making the end user the driving force in your design.
+    - Design Concepts 
+        - API - 3 Architectural styles - REST, RPC and GraphQL
+        - Databases 
+            - SQL Databases 
+                - Preferred when consistency is important
+                - Slower write but faster query - B-trees based storage is slower while writing (Data is stored in a B-Tree structure that divides the available space into fixed-size blocks called pages;each page is traditionally 4 KB in size and maps onto a specific sector of hard drive space. Once a page becomes too large, this page is repartitioned to point to new children pages and the values get sorted into them.)
+                - 
+            - NoSQL Databases
+                - Different types like key/value,Document, Columnar etc.
+                - Do not require fixed Schemas  
+                - Faster write but slower query -  since they use log structure that only appends data.
+        - Authentication 
+            - Session vs JWT - While a session token is an opaque string that means nothing without access to the session database, a JWT explicitly encodes the user's access.
+        - Message Queues 
+            - Characteristics 
+                -     Guaranteed delivery.
+                - No duplicate messages are delivered.
+                - Ensure that the order of messages is maintained.
+                - At least once delivery with idempotent consumers.
+        - Replication 
+            - Replica: Copy of data
+            - Leader: Machine that handles write requests to the data store.
+            - Followers: Machines that are replicas of the leader node, and cater to read requests.
+        

@@ -51,3 +51,4 @@ draft: false
 - [List of Greatest Novels of all time](https://editoreric.com)
 - [Cryptonomics by Tyler Cowen](https://marginalrevolution.com/wp-content/uploads/2022/05/Cryptoeconomics-Modern-Principles.pdf)
 - [All About Public key Infrastructure(PKI)](https://smallstep.com/blog/everything-pki/)
+- [Most data work seems fundamentally Worthless](https://ludic.mataroa.blog/blog/most-data-work-seems-fundamentally-worthless)
