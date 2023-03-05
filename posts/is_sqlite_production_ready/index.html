@@ -28,7 +28,7 @@ func Open(dsn string) (*sql.DB, error) {
 
 	return db, nil
 }
-</code></pre><p>We will use <a href=https://pkg.go.dev/modernc.org/SQLite target=_blank rel="noopener noreferrer">ModernC SQLite</a> library which is CGO free port of SQLite. However, there are other libraries listed <a href="https://pkg.go.dev/search?q=SQLite&m=" target=_blank rel="noopener noreferrer">here</a></p><p>Next,we have HTTP handler which exposes <code>POST</code> end point and writes data to SQLite database,</p><pre tabindex=0><code>
+</code></pre><p>We will use <a href=https://pkg.go.dev/modernc.org/SQLite target=_blank rel="noopener noreferrer">ModernC SQLite</a> library which is CGO free port of SQLite. However, there are other libraries listed <a href="https://pkg.go.dev/search?q=SQLite&amp;m=" target=_blank rel="noopener noreferrer">here</a></p><p>Next,we have HTTP handler which exposes <code>POST</code> end point and writes data to SQLite database,</p><pre tabindex=0><code>
 func main() {
 
 	err := setUpDB()
