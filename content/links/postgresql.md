@@ -113,6 +113,7 @@ draft: false
 - [Neon - Serverless Open source PostgreSQL](https://github.com/neondatabase/neon)
 - [Push PG Listen/Notify events over Websockets](https://github.com/CrunchyData/pg_eventserv)
 - [Generate ERD using D2 Diagrams](https://github.com/zekenie/d2-erd-from-postgres)
+- [Mathesar - Spreadsheet-like Web interface for PostgreSQL](https://github.com/centerofci/mathesar)
 
 ## Migration to PostgreSQL
 

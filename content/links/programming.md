@@ -178,6 +178,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Observability
 
 - [Tips for Analyzing logs](https://jvns.ca/blog/2022/12/07/tips-for-analyzing-logs/)
+- [Decision guide on Tooling](https://blog.devgenius.io/observability-tooling-decision-guide-d46171e84d23)
+- [Prometheus and Cardinality of Metric](https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/)
 - [All about Log Aggregation](https://sematext.com/blog/log-aggregation/)
 - [Observability in 2022](https://developers.redhat.com/articles/2022/04/12/observability-2022-why-it-matters-and-how-opentelemetry-can-help)
 - [Observability @ Cloudflare](https://blog.cloudflare.com/vision-for-observability/)

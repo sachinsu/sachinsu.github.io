@@ -570,3 +570,9 @@
     - Passion is measure of lack of rational conviction (Opinions in politics and religion are almost always held passionately) 
     - Respectability, regularity and routine—the whole cast-iron discipline of a modern industrial society—have atrophied the artistic impulse, and imprisoned love so that it can no longer be generous and free and creative, but must be either stuffy or furtive.
     - Man is essentially a dreamer, wakened sometimes for a moment by some peculiarly obtrusive element in the outer world, but lapsing again quickly into the happy somnolence of imagination.
+
+
+- Tips for effective use of phone's camera
+    - Use Pro Mode 
+    - Turn on "RAW" mode 
+    - Turn off all AI suggestions 
