@@ -280,6 +280,8 @@
 
 
 -  [Machine Learning][AIML]
+    - Deterministic: A deterministic process is a process that, given a particular input, will always produce the same output.
+    - Stochastic: A stochastic process is a process that, given a particular input, is more likely to produce some outputs and less likely to produce others.
     - It is tricky to apply it effectively 
     - Requires data and labels
     - First iteration should preferably be without machine learning
