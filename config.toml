@@ -32,8 +32,9 @@ googleAnalytics = "UA-169012216-1"
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
-  fontFamilyPrimary = "segoe-ui, 'Open Sans', Helvetica, Arial, sans-serif"
-  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+  fontFamilyPrimary = "Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif"
+  fontFamilySecondary = "segoe-ui, 'Open Sans', Helvetica, Arial, sans-serif"
+  # fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
   title = "" # Logo title, otherwise will use site title
