@@ -60,6 +60,7 @@ Platform where i have spent most time till now.
 
 ## Tools, Libraries
 
+- [Coravel - In-memory Task Scheduling , Queueing Library](https://github.com/jamesmh/coravel)
 - [Generate PDF using Scriban and Playwright](https://www.meziantou.net/generate-pdf-files-using-an-html-template-and-playwright.htm)
 - [.NET Playground](https://sharplab.io/)
 - [RestSharp - REST HTTP Client](https://github.com/restsharp/RestSharp)
