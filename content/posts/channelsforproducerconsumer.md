@@ -53,7 +53,20 @@ Generic Implementation is as follows,
 {{< carbon gistid="6fcbc36e6e5cc58c7b5ba9007e276afc"  >}}
 
 
+
+
 Refer Gist [here](https://gist.github.com/sachinsu/6fcbc36e6e5cc58c7b5ba9007e276afc)
+
+Additionally, one may want to process requests out of order or asynchronously without using message queues. One such use case could be service to send Notifications where this service is exposed as Web API and it uses external service to dispatch notifications. For such scenarios, one can use back ground job in conjunction with Channels to process requests. 
+
+Below code shows a Web API that handles HTTP Requests and delegates actual task to background worker which is deployed as hosted service. 
+
+{{< carbon gistid="d0d2672d002be670366d58394c1d6031"  >}}
+
+
+Refer Gist [here](https://gist.github.com/sachinsu/d0d2672d002be670366d58394c1d6031)
+
+However, note that there are trade-offs vis-a-vis message queues with this approach. Notably, in case of Web server crash, the pending jobs in queue will be lost.
 
 ## Summary 
 Other languages (notably [Channels in Go](https://tour.golang.org/concurrency/2)) have been providing out of the box implementation for in-memory producer with concurrent, parallel consumers. With Channels, .NET Ecosystem finally has construct that can be effectively put to use for high performance, concurrent use cases.
