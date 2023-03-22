@@ -75,6 +75,10 @@ Section covering useful tools for every day activities, Online learning etc.
 - [Visual guide to SSH Tunnels](https://robotmoon.com/ssh-tunnels/)
 - [Web based interface for Servers](https://cockpit-project.org/)
 
+## Structured data tools 
+
+- [Structured data tools](https://github.com/dbohdan/structured-text-tools)
+
 ## Hardware
 
 - [10 Best Lightweight Operating System for old Laptop](https://lotoftech.com/10-best-lightweight-operating-system-for-old-computers/)
