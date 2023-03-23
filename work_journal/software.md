@@ -1260,6 +1260,9 @@
 - Cryptography, Crypto economics etc.
     - Hashing use cases - To verify the sendor , Password storage , Time-stamping
     - Public key encryption
+        - This has 2 parts, public key and private key 
+            - Public key is made up by multiplying 2 random prime numbers and this is published along with auxilliary value.  
+            - Two  prime numbers are kept secret and they can be used to decrypt the message.
         - Message encrypted usng public key can  be decrypted using private key and vice-versa. 
         - Digital Signature - Message is encrypted using private key but can be decrypted using public key.
     - transposition cypher, replacing each letter in a sentence with a different letter, say, the next in the alphabet
