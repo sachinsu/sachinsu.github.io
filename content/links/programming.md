@@ -148,6 +148,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Open Policy Agent - General purpose Policy Engine](https://www.openpolicyagent.org)
 - [Teler - Tool for Real time HTTP Intrusion detection](https://github.com/kitabisa/teler)
 - [Joern - platform for analyzing source code, bytecode, and binary executables](https://joern.io/)
+- [Syft - Software Bill of Materials (SBOM) generator for vulnerability scanning](https://github.com/anchore/syft)
 
 ## Devops/Monitoring
 
