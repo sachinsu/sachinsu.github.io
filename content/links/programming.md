@@ -67,6 +67,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
 - [Schannel in Windows for Strong Ciphers/Cryptography](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233)
 - [Definitive guide to key management](https://info.townsendsecurity.com/definitive-guide-to-encryption-key-management-fundamentals)7
+- [A deep dive in CyberSecurity](https://hhhypergrowth.com/flavors-of-security/)
 
 ## Training
 
