@@ -597,6 +597,15 @@
         - All the ETL use cases are potentially candidates for streaming
 
     - A data warehouse is a relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
+        - Star schema 
+            - Fact table - 1 table usually. Typically very large. Updated frequently and usually append only. They reference dimension tables.
+                - Examples - Sales transactions, Course enrollments, Page views 
+            - Dimension table - Many tables. Infrequent updates. Not very large. 
+                - Examples - Stores, items, Customers, Students, Courses.
+            - Typical Query Flow over Star Schema - Join ==> Filter ==> Group ==> Aggregate
+            - Extensive use of Materialized Views.
+            - Data cube (a.k.a. multidimensional OLAP)
+                - Dimension tables form axes while fact data in cells. 
         - Dimension Modelling Process (https://about.gitlab.com/handbook/business-technology/data-team/platform/edw/#background)
             - Choose the business process e.g. track monthly revenue
             - Declare the grain e.g. per customer
