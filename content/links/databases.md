@@ -140,6 +140,7 @@ Knowledge base around general database related topics.
 ## SQLite 
 
 - [Online SQLite Fiddle](https://sqlite.org/fiddle/)
+- [Performance tuning settings](https://phiresky.github.io/blog/2020/sqlite-performance-tuning)
 - [Pocketbase - SQlite database with Go-based Wrapper to expose API](https://pocketbase.io/)
 - [Scaling SQLITE to 4M QPS on Single Server](https://blog.expensify.com/2018/01/08/scaling-sqlite-to-4m-qps-on-a-single-server/)
 - [Streaming S3 Replication for SQLite](https://litestream.io)
