@@ -57,6 +57,7 @@ Knowledge base around general database related topics.
 ## Data Analytics 
 
 - [Cube.dev - Open source Headless BI platform](https://cube.dev/)
+- [Evidence.dev - BI as Code - SQL + Markdown to generate Reports](https://evidence.dev/)
 - [Apache spark defined](https://www.infoworld.com/article/3236869/what-is-apache-spark-the-big-data-platform-that-crushed-hadoop.html)
 - [Getting started with Spark in Python](https://towardsdatascience.com/a-neanderthals-guide-to-apache-spark-in-python-9ef1f156d427)
 - [About Data Mesh Architecture](https://www.datamesh-architecture.com/)

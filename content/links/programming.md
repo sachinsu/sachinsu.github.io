@@ -9,12 +9,13 @@ draft: false
 Links covering concepts and approaches around Distributed Systems, DevOps, Observability etc.
 
 ## Architectural Case studies 
+
 - [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
 - [Temenos @ AWS Architecture Diagrams](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/Temenos-on-aws.pdf?did=wp_card&trk=wp_card)
 - [Architecture for Generations](https://increment.com/software-architecture/architecture-for-generations/)
 - [Uber's Domain-Oriented Microservice Architecture](https://eng.uber.com/microservice-architecture/)
 
-## Books on Architecture,Desigm 
+## Books on Architecture,Design
 
 - [Software Architecture Patterns by Mark Richards](https://www.oreilly.com/content/software-architecture-patterns/)
 - [A comprehensive list of books on Software Architecture.](https://github.com/mhadidg/software-architecture-books)
@@ -175,6 +176,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Nice content on Ansible](https://github.com/geerlingguy)
 - [Performance profiling using Open source Pyroscope Server](https://pyroscope.io/)
 - [Act - Run Github Actions locally](https://github.com/nektos/act)
+- [Approach to Uptime Guarantees](https://world.hey.com/itzy/uptime-guarantees-a-pragmatic-perspective-736d7ea4)
 
 
 ## Observability

@@ -69,7 +69,7 @@ Section covering Business, project/programming perspectives
 - [Structurizr - C4 Diagrams as Code](https://structurizr.com/)
 
 
-## Stategic Approach 
+## Strategic Approach 
 
 - [Writing an Engineering Strategy](https://lethain.com/eng-strategies/)
 - [A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups](https://github.com/kuchin/awesome-cto)
