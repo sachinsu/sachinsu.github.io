@@ -538,3 +538,5 @@
     - Long term goals 
         - Equity Index funds
         - High quality corporate bond funds
+
+- Mutual fund - a Sharpe ratio exceeding 10 indicates a fund earned extraordinarily high returns for the amount of risk it took, while a beta of zero means it fluctuated far less than the stock market. 
