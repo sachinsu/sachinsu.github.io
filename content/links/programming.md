@@ -287,6 +287,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [REST API Best practices](https://blog.devgenius.io/best-practice-and-cheat-sheet-for-rest-api-design-6a6e12dfa89f)
 - [Comparing API Architectural Styles](https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/)
+- [Eventcatalog - Open source tool to document event driven Architectures](https://www.eventcatalog.dev/)
 
 ## Interesting free services 
 
