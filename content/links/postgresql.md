@@ -44,6 +44,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [Database Configuration Builder](https://www.pgconfig.org)
 - [Configuration for Diagnosing Performance issues](https://www.crunchydata.com/blog/exposing-postgres-performance-secrets)
 - [OrioleDB- Solving Wicked problems of PostgreSQL](https://www.slideshare.net/AlexanderKorotkov/solving-postgresql-wicked-problems)
 - [5 Minutes in PostgreSQL - Videos](https://www.youtube.com/channel/UCDV_1Dz2Ixgl1nT_3DUZVFw/videos)
