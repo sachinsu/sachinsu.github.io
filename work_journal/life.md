@@ -576,3 +576,15 @@
     - Use Pro Mode 
     - Turn on "RAW" mode 
     - Turn off all AI suggestions 
+
+
+- Urbanization 
+    - Mumbai is transforming itself by being Data Center Capital (concentrated around Navi Mumbai Belt) and logistics hub at Bhiwandi.
+    - Urbanization - Resistance from rural locals as they feel it would add to more taxes, more scrutiny. 
+    - Why are Cities important? 
+        - Cities are fundamentally Job Market, primary engines of economic Growth
+        - Tokyo's GDP is bigger than that of Russia 
+        - GDP of Mumbai and Delhi is higher than Pakistan 
+        - 70-75% of Maharashtra's GDP is concentrated in Mumbai-Pune belt
+        - "What is a village but a sink of localism, a den of ignorance, narrow mindedness, caste and communalism" - Ambedkar
+        - Poverty digestors - Take in poor people and provide them income/jobs etc.
