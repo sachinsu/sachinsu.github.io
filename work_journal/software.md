@@ -717,6 +717,10 @@
 
 - [Every database technology has its Kryptonite][Databases]
     - MySQL: the query cache, replication, the buffer pool.MySQL lacks transactional schema changes and has brittle replication.
+        - innodb_buffer_pool size / table size decides whether there’ll be a performance downgrade.
+        - A more meaningful metric to tell whether you need to split a MySQL table is query runtime / buffer pool hit rate. If the queries always hit the buffer, there’ll not be any performance issue. 20M rows is just a value based on experience.
+        - Except for spliting table, increase innodb_buffer_pool size / database memory is also a choice.
+        - If possible, avoid select * in production, which causes 2 times index tree lookup in the worst case.
     - PostgreSQL: VACUUM, connection overhead, shared buffers. PostgreSQL is susceptible to vacuum and bloat problems during long-running transactions.
     - MongoDB: missing indexes, lock contention
     - index merge (Query using multiple individual indexes to arrive at result) will be ~10x slower than the composite index. 
