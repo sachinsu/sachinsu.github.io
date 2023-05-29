@@ -181,6 +181,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Observability
 
+- [Ntfy - OSS Server + Android App to send & receive notification on Desktop/Android App](https://github.com/binwiederhier/ntfy)
 - [Tips for Analyzing logs](https://jvns.ca/blog/2022/12/07/tips-for-analyzing-logs/)
 - [Decision guide on Tooling](https://blog.devgenius.io/observability-tooling-decision-guide-d46171e84d23)
 - [Prometheus and Cardinality of Metric](https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/)
