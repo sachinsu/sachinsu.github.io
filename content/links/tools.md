@@ -8,6 +8,7 @@ draft: false
 
 Section covering useful tools for every day activities, Online learning etc.
 
+- [Plane - Open source alternative to JIRA](https://github.com/makeplane/plane)
 - [ShareX - Screen capture, file sharing and productivity tools (Windows only)](https://getsharex.com)
 - [Dark Lang - Declarative platform to build serverless backend](https://darklang.com/)
 - [OBS Studio - Free and open source software for video recording and live streaming.](https://obsproject.com/)

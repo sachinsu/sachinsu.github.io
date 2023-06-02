@@ -109,6 +109,7 @@ Knowledge base around general database related topics.
 - [Dolt - Git for Data](https://github.com/liquidata-inc/dolt)
 - [GridDB - next generation database for IoT & big data with both NoSQL interface & SQL Interface.](https://griddb.org)
 - [Compressing data with Parquet](https://dev.l1x.be/posts/2021/03/08/compressing-data-with-parquet/)
+- [Lance - alternate columnar, compressed format for ML](https://github.com/lancedb/lance)
 - [Mara pipelines - Opinionated ETL framework](https://github.com/mara/mara-pipelines)
 - [Enso - Interactive Data Workflow builder with no coding](https://github.com/enso-org/enso)
 - [Database for Event Sourcing](https://www.eventstore.com/)
