@@ -540,3 +540,6 @@
         - High quality corporate bond funds
 
 - Mutual fund - a Sharpe ratio exceeding 10 indicates a fund earned extraordinarily high returns for the amount of risk it took, while a beta of zero means it fluctuated far less than the stock market. 
+
+- Planck knowledge - from the people with aptitude 
+- Chauffer Knowledge - from those who have learned to prattle the talk.
