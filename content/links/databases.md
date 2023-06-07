@@ -97,7 +97,7 @@ Knowledge base around general database related topics.
 - [Differential Datalog - Language for incremental computation](https://github.com/vmware/differential-datalog)
 - [Using NanoIDs (not longer UUID) for public APis](https://planetscale.com/blog/why-we-chose-nanoids-for-planetscales-api)
 
-## ETL,ELT, Evolutionary Practices 
+## ETL,ELT, Database-as-a-queue, Evolutionary Practices 
 
 - [All about ETL](https://www.sas.com/en_us/insights/data-management/what-is-etl.html#:~:text=ETL%20is%20a%20type%20of,to%20build%20a%20data%20warehouse.)
 - [Airbyte-Open source ELT](https://github.com/airbytehq/airbyte)
@@ -114,6 +114,7 @@ Knowledge base around general database related topics.
 - [Enso - Interactive Data Workflow builder with no coding](https://github.com/enso-org/enso)
 - [Database for Event Sourcing](https://www.eventstore.com/)
 - [What are Data Contracts](https://mlops.community/an-engineers-guide-to-data-contracts-pt-1/)
+- [Centrifuge - Database as a Queue](https://segment.com/blog/introducing-centrifuge/)
 
 ## Database scaling
 

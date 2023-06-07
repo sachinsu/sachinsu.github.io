@@ -88,6 +88,7 @@ draft: false
 - [Use cases for Partitioning](https://blog.anayrat.info/en/2021/09/01/partitioning-use-cases-with-postgresql/#storage-tiering)
 - [Asynchronous Commits for faster data loading](https://www.percona.com/blog/2020/08/21/postgresql-synchronous_commit-options-and-synchronous-standby-replication/)
 - [Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked](https://www.enterprisedb.com/blog/listening-postgres-how-listen-and-notify-syntax-promote-high-availability-application-layer)
+- [Queues in PostgreSQL](https://www.youtube.com/watch?v=WIRy1Ws47ic&list=PLlrxD0HtieHjSzUZYCMvqffEU5jykfPTd)
 
 ## Interesting Extensions/Products
 
