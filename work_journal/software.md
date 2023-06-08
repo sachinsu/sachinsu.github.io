@@ -1830,3 +1830,25 @@
 - Web fingerprinting - Fingerprinting is a more sophisticated approach to identify a user among millions of others. It works by studying your web browser and hardware configuration. Many websites use a fingerprinting library to generate a unique ID. This library collects data from multiple JavaScript APIs offered by your web browser. For example, websites can see web browser version, number of CPUs on your device, screen size, number of touchpoints, video/audio codecs, operating system and many other details that you would not want a typical news website to see. All of these values are combined to generate a unique ID. Surprisingly, each user’s device and browser specifications differ so much that they get a unique ID among millions.
 
 - GPU - Graphics processing units or GPUs are dedicated highly parallel hardware accelerators that were originally design to accelerate the creation of images. More recently, folks have been looking at GPUs to accelerate other workloads like Database analytics and transaction processing (OLTP). Although GPUs have little or no use for OLTP style workloads, they have been shown to accelerate analytics.
+
+- Vector Databases
+    - Need from Generative AI perspective,
+      - Embeddings - High dimensional Vector representation of Words, sentences, images and audio.Embeddings capture the “relatedness” of text, images, video, or other types of information. This relatedness is most commonly used for:
+                 -   Search: how similar is a search term to a body of text?
+                 -   Recommendations: how similar are two products?
+                 -   Classifications: how do we categorize a body of text?
+                 -   Clustering: how do we identify trends?
+ 
+
+        - Because of advancements in LLMs the embeddings we get have a better “understanding” of your text. This means that querying for the similarity between those vectors produces much better semantic results than before
+        - Vector databases use algorithms like ANN (Approximate Nearest Neighbours) so they can facilitate efficient storage, retrieval, and similarity search operations, rather than relying on exact match or range queries. This is especially important for recommendation systems or semantic search, where the nearest or most similar items are as valuable as exact matches.
+
+    - Why not RDBMS
+            RDBMS excel at handling structured data with a fixed schema, they often struggle with unstructured or high-dimensional data, such as images, audio, and text. Traditional databases have not been designed to efficiently handle the task of searching for similar items in a large dataset, specifically high-dimensional vector data which makes them perform worse at scale.
+            There are extensions being made available (e.g. pgvector, RediSearch ) that extend RDBMS to support Vector storage/search functionality
+
+    - Advantages
+            Embeddings generation is relatively cheaper than invoking a full LLM API call (OpenAI offers an API to generate embeddings for a string of text using its language model. You feed it any text information (blog articles, documentation, your company's knowledge base), and it will output a vector of floating point numbers that represents the “meaning” of that text.). Querying our embeddings against our DB is much cheaper. Embeddings still retain some semantic information about the text, so we could get the best of both worlds.
+
+- Cloud Computing 
+    - Cloud computing is the on-demand delivery of IT resources with primarily pay-as-you-go pricing.

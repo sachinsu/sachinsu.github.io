@@ -148,3 +148,7 @@ draft: false
 
 - [PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management](https://github.com/michelp/pgsodium)
 - [PostgreSQL Anonymizer -  hides or replaces personally identifiable information (PII)](https://www.postgresql.org/about/news/postgresql-anonymizer-10-privacy-by-design-for-postgres-2452/)
+
+## Vector Embeddings 
+
+- [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)

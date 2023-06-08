@@ -34,3 +34,7 @@ Useful links related from AI, ML space
 
 - [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
 - [Deep Learning: A Crash course](https://www.youtube.com/watch?v=r0Ogt-q956I)
+
+## Vector Embeddings, Vector Databases 
+
+- [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
