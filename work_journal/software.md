@@ -1852,3 +1852,100 @@
 
 - Cloud Computing 
     - Cloud computing is the on-demand delivery of IT resources with primarily pay-as-you-go pricing.
+    - Four aspects you need to consider when deciding which AWS Region to use, compliance, latency, price, and service availability.
+        - Latency - If your application is sensitive to latency (the delay between a request for data and the response), choose a Region that is close to your user base. This helps prevent long wait times for your customers. Synchronous applications such as gaming, telephony, WebSockets, and Internet of Things (IoT) are significantly affected by high latency. Asynchronous workloads, such as ecommerce applications, can also suffer from user connectivity delays.
+        - Price - Due to the local economy and the physical nature of operating data centers, prices vary from one Region to another. Internet connectivity, imported equipment costs, customs, real estate, and other factors impact a Region's pricing. Instead of charging a flat rate worldwide, AWS charges based on the financial factors specific to each Region.
+        - Service Availability - Some services might not be available in some Regions. The AWS documentation provides a table that shows the services available in each Region.
+        - Data Compliance - Enterprise companies often must comply with regulations that require customer data to be stored in a specific geographic territory. If applicable, choose a Region that meets your compliance requirements.
+    - Each region has Availability zones (AZ) and each AZ has one or more data centers.
+    - Each AWS Service is scoped at Global or Region or AZ (With these services, you are often responsible for increasing the data durability and high availability of these resources) level.
+    - For high availability and resiliency, At a minimum, you should use two Availability Zones.
+    - Security - Shared Responsibility. AWS is responsible for securing base layer (i.e. upto virtualization layer.). Customer is responsible for securing Operating System (for EC2 VMs), Encrypting data in transit and at rest,Configuring firewall, User Access Management, Customer Data.
+    - AWS Root user 
+        - Has two sets of credentials 
+            - 1 - email address and password 
+            - 2 - Access key (which has 2 parts Acess key ID and Secret Access key). Recommended to disable/delete this one. 
+        - Best practices 
+            - Choose a strong password for the root user.
+            - Enable multi-factor authentication (MFA) for the root user.
+            - Never share your root user password or access keys with anyone.
+            - Disable or delete the access keys associated with the root user.
+            - Create an Identity and Access Management (IAM) user for administrative tasks or everyday tasks.
+        - Support MFA devices 
+             - Virtual MFA - Apps like Google authenticator 
+             - Hardware TOTP token
+             - FIDO Security keys
+    - AWS Identity and Access Management (IAM) is an AWS service that helps you manage access to your AWS account and resources. It also provides a centralized view of who and what are allowed inside your AWS account (authentication), and who and what have permissions to use and work with your AWS resources (authorization).
+        - IAM is global and not specific to any one Region. You can see and use your IAM configurations from any Region in the AWS Management Conso
+        - IAM is integrated with many AWS services by default.
+        - You can grant other identities permission to administer and use resources in your AWS account without having to share your password and key.
+        - IAM supports MFA. You can add MFA to your account and to individual users for extra security.
+        - IAM supports identity federation, which allows users with passwords elsewhere—like your corporate network or internet identity provider—to get temporary access to your AWS account. 
+        - Any AWS customer can use IAM; the service is offered at no additional charge.
+        - An IAM group is a collection of users. All users in the group inherit the permissions assigned to the group. This makes it possible to give permissions to multiple users at once. It’s a more convenient and scalable way of managing permissions for users in your AWS account. This is why using IAM groups is a best practice.
+        - To manage access and provide permissions to AWS services and resources, you create IAM policies and attach them to an IAM identity. Whenever an IAM identity makes a request, AWS evaluates the policies associated with them. 
+        - Most policies are stored in AWS as JSON documents with several policy elements.
+        - Best practices 
+            - Lock down AWS root user
+            - Follow the principle of least privilege
+            - Use IAM apropriately
+            - Use IAM Roles when possible
+            - Consider using Identity provider 
+            - Regularly review and remove unused users, roles etc.
+    - AWS EC2
+        - To create an EC2 Instance, 
+            - Hardware specifications: CPU, memory, network, and storage
+            - Logical configurations: Networking location, firewall rules, authentication, and the operating system of your choice
+        - Amazon Machine Image (AMI) are bundled operating system images offered by AWS. 
+        - EC2 instances are a combination of virtual processors (vCPUs), memory, network, and, in some cases, instance storage and graphics processing units (GPUs). 
+        - Instance families 
+            - General purpose - Ideal for applications that use these resources in equal proportions, such as web servers and code repositories
+            - Compute Optimized - Well-suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference, and other compute intensive applications
+            - Memory Optimized - Memory-intensive applications, such as high-performance databases, distributed web-scale in-memory caches, mid-size in-memory databases, real-time big-data analytics, and other enterprise applications
+            - Accelerated computing - Machine learning, HPC, computational fluid dynamics, computational finance, seismic analysis, speech recognition, autonomous vehicles, and drug discovery
+            - Storage optimized- NoSQL databases (Cassandra, MongoDB and Redis), in-memory databases, scale-out transactional databases, data warehousing, Elasticsearch, and analytics
+            - HPC optimized - Ideal for applications that benefit from high-performance processors, such as large, complex simulations and deep learning workloads
+            - EC2 Instance states, 
+                - Pending - Billing has not started
+                - Running - billing begins 
+                - Rebooting - reboot operating system 
+                - Stopping/Stopped
+                - Terminate - Both public and private IP are lost. Billing stops. 
+            - Types of instances
+                - On-demand instances (pay for compute capacity per hour or per second)
+                    - Users who prefer the low cost and flexibility of Amazon EC2 without upfront payment or long-term commitments            
+                    - Applications with short-term, spiky, or unpredictable workloads that cannot be interrupted
+                    - Applications being developed or tested on Amazon EC2 for the first time    
+                - Spot instances (for up to 90 percent off the On-Demand price)
+                    - Applications that have flexible start and end times            
+                    - Applications that are only feasible at very low compute prices            
+                    - Users with fault-tolerant or stateless workloads            
+                - Savings Plan (low usage prices for a 1-year or 3-year term commitment to a consistent amount of usage)
+                    - Workloads with a consistent and steady-state usage            
+                    - Customers who want to use different instance types and compute solutions across different locations        
+                    - Customers who can make monetary commitment to use Amazon EC2 over a 1-year or 3-year term
+                - Reserved instances (save up to 75 percent compared to On-Demand Instance pricing.)
+                - Dedicated hosts -  physical Amazon EC2 server. Ideal for managing server bound licenses like Windows/Oracle 
+    - Container Services
+        - containers can run on EC2 instances.Amazon ECS is an end-to-end container orchestration service that helps you spin up new containers. 
+        - If you choose to have more control by running and managing your containers on a cluster of Amazon EC2 instances, you will also need to install the Amazon ECS container agent on your EC2 instances. 
+        - Amazon EKS is a managed service that you can use to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes.
+        - ECS vs. EKS
+            - In Amazon ECS, the machine that runs the containers is an EC2 instance that has an ECS agent installed and configured to run and manage your containers. This instance is called a container instance. In Amazon EKS, the machine that runs the containers is called a worker node or Kubernetes node. 
+            - An ECS container is called a task. An EKS container is called a pod.
+            - Amazon ECS runs on AWS native technology. Amazon EKS runs on Kubernetes.  
+        - Serverless
+            - Characteristics 
+                - There are no servers to provision or manage.
+                - It scales with usage.
+                - You never pay for idle resources.
+                - Availability and fault tolerance are built in.
+            - Fargate abstracts the EC2 instance so that you’re not required to manage the underlying compute infrastructure. However, with Fargate, you can use all the same Amazon ECS concepts, APIs, and AWS integrations. It natively integrates with IAM and Amazon Virtual Private Cloud (Amazon VPC). 
+                - AWS Fargate is a purpose-built serverless compute engine for containers. AWS Fargate scales and manages the infrastructure, so developers can work on what they do best, application development. It achieves this by allocating the right amount of compute. This eliminates the need to choose and manage EC2 instances, cluster capacity, and scaling. Fargate supports both Amazon ECS and Amazon EKS architecture and provides workload isolation and improved security by design.
+            - AWS Lambda - The Lambda function is the foundational principle of AWS Lambda. 
+                - Concepts 
+                    - Function - A function is a resource that you can invoke to run your code in Lambda. Lambda runs instances of your function to process events.
+                    - Triggers describe when a Lambda function should run. A trigger integrates your Lambda function with other AWS services and event source mappings. So you can run your Lambda function in response to certain API calls or by reading items from a stream or queue. 
+                    - An event is a JSON-formatted document that contains data for a Lambda function to process. The runtime converts the event to an object and passes it to your function code. When you invoke a function, you determine the structure and contents of the event.
+                    - The AWS Lambda function handler is the method in your function code that processes events. When your function is invoked, Lambda runs the handler method. When the handler exits or returns a response, it becomes available to handle another event. 
+        - Which AWS Compute Service Should I Choose For My Use Case?
