@@ -1949,3 +1949,89 @@
                     - An event is a JSON-formatted document that contains data for a Lambda function to process. The runtime converts the event to an object and passes it to your function code. When you invoke a function, you determine the structure and contents of the event.
                     - The AWS Lambda function handler is the method in your function code that processes events. When your function is invoked, Lambda runs the handler method. When the handler exits or returns a response, it becomes available to handle another event. 
         - Which AWS Compute Service Should I Choose For My Use Case?
+    - Networking
+        -  IP addresses
+            - CIDR notation is a compressed way of representing a range of IP addresses.
+                - It begins with a starting IP address and is separated by a forward slash (the / character) followed by a number. The number at the end specifies how many of the bits of the IP address are fixed. In this example, the first 24 bits of the IP address are fixed. The rest (the last 8 bits) are flexible.The higher the number after the /, the smaller the number of IP addresses in your network. For example, a range of 192.168.1.0/24 is smaller than 192.168.1.0/16.
+        - A virtual private cloud (VPC) is an isolated network that you create in the AWS Cloud, similar to a traditional network in a data center. 
+            - IP range for the VPC in CIDR notation – This determines the size of your network. Each VPC can have up to five CIDRs: one primary and four secondaries for IPv4. Each of these ranges can be between /28 (in CIDR notation) and /16 in size.
+            - Subnet - Smaller network inside base network. In an on-premises network, the typical use case for subnets is to isolate or optimize network traffic. In AWS, subnets are used to provide high availability and connectivity options for your resources. Use a public subnet for resources that must be connected to the internet and a private subnet for resources that won't be connected to the internet. Creating subnets that are configured in two availability zones is recommended.
+                - AWS reserves 5 IP addresses in each subnet that can not be assigned to a resource.
+            - Internet Gateway - Connects VPC to internet and is highly available and scalable.
+            - Virtual private gateway - A virtual private gateway connects your VPC to another private network.
+            - AWS Direct connect - to establish secure physical connection between on-premises data center and Amazon VPC.With AWS Direct Connect, your internal network is linked to an AWS Direct Connect location over a standard Ethernet fiber-optic cable.
+            - Main route table -  A route table contains a set of rules, called routes, that are used to determine where network traffic is directed. 
+            - Network Access control list - Acts as a virtual firewall at the subnet level.A network ACL lets you control what kind of traffic is allowed to enter or leave your subnet. 
+            - Security groups - Virtual firewall to control inbound/outbound traffic for EC2 instance.
+    - Storage
+        - Block storage - File storage treats files as a singular unit, but block storage splits files into fixed-size chunks of data called blocks that have their own addresses. Each block is an individual piece of data storage. Because each block is addressable, blocks can be retrieved efficiently. Think of block storage as a more direct route to access the data. Optimized for low-latency operations, it is a preferred storage choice for high-performance enterprise workloads and transactional, mission-critical, and I/O-intensive applications. analogous to direct-attached storage (DAS) or a storage area network (SAN).
+            - Use cases, 
+                - Transactional workloads
+                - Containers 
+                - Virtual Machines
+        - Object storage - In object storage, files are stored as objects. These objects are stored in a bucket using a flat structure, meaning there are no folders, directories, or complex hierarchies. Each object contains a unique identifier. This identifier, along with any additional metadata, is bundled with the data and stored.
+            - Use cases, 
+                - Data archiving
+                - Backup and Recovery
+                - Rich Media
+        - Elastic File System - set-and-forget file system that automatically grows and shrinks as you add and remove files. There is no need for provisioning or managing storage capacity and performance. Amazon EFS can be used with AWS compute services and on-premises resources.
+        - Fsx - FSx is a fully managed service that offers reliability, security, scalability, and a broad set of capabilities that make it convenient and cost effective to launch, run, and scale high-performance file systems in the cloud. 
+        - EC2 Instance Store - provides temporary block-level storage for an instance. This storage is located on disks that are physically attached to the host computer. This ties the lifecycle of the data to the lifecycle of the EC2 instance.  ideal if you host applications that replicate data to other EC2 instances 
+        - Elastic Block store (EBS) - Block level storage that can be attached to EC2 instance. EBS volumes are organized into two main categories: solid-state drives (SSDs) and hard-disk drives (HDDs). SSDs are used for transactional workloads with frequent read/write operations with small I/O size. HDDs are used for large streaming workloads that need high throughput performance.  EBS snapshots are incremental backups that only save the blocks on the volume that have changed after your most recent snapshot. 
+            - Use cases, 
+                - Operating system 
+                - Databases
+                - Enterprise Applications
+                - Big Data Analytical Engines
+        - S3 -Amazon S3 is an object storage service. Object storage stores data in a flat structure. An object is a file combined with metadata. You can store as many of these objects as you want. All the characteristics of object storage are also characteristics of Amazon S3.Amazon S3 reinforces encryption in transit (as it travels to and from Amazon S3) and at rest. To protect data, Amazon S3 automatically encrypts all objects on upload and applies server-side encryption with S3-managed keys as the base level of encryption for every bucket in Amazon S3 at no additional cost. 
+            - Use cases, 
+                - Backup and storage 
+                - Media Hosting
+                - Software delivery
+                - Data lakes
+                - Static websites
+                - Static content
+        - When to use what,
+            - EC2 instance store - well suited for temporary storage of information that is constantly changing, such as buffers, caches, and scratch data. It is not meant for data that is persistent or long lasting. 
+            - EBS - meant for data that changes frequently and must persist through instance stops, terminations, or hardware failures. 
+            - S3 - If your data doesn’t change often, Amazon S3 might be a cost-effective and scalable storage solution for you. Amazon S3 is ideal for storing static web content and media, backups and archiving, and data for analytics. It can also host entire static websites with custom domain names.
+            - EFS -  ideal for workloads that require the highest levels of durability and availability. EFS One Zone storage classes are ideal for workloads such as development, build, and staging environments.
+            - FSx - machine learning, analytics, high performance computing (HPC) applications, and media and entertainment.  
+    - Databases
+        - Unmanaged - If you operate a relational database on premises, you are responsible for all aspects of operation. This includes data center security and electricity, host machines management, database management, query optimization, and customer data management. You are responsible for absolutely everything, which means you have control over absolutely everything.
+        - Managed - These services provide the setup of both the EC2 instance and the database, and they provide systems for high availability, scalability, patching, and backups. However, in this model, you’re still responsible for database tuning, query optimization, and ensuring that your customer data is secure. This option provides the ultimate convenience but the least amount of control compared to the two previous options.
+        - RDS 
+            Amazon RDS supports most of the popular RDBMSs, ranging from commercial options to open-source options and even a specific AWS option. The storage portion of DB instances for Amazon RDS use Amazon Elastic Block Store (Amazon EBS) volumes for database and log storage. This includes MySQL, MariaDB, PostgreSQL, Oracle, and SQL Server. When using Aurora, data is stored in cluster volumes, which are single, virtual volumes that use solid-state drives (SSDs). 
+            - Backups - It is advisable to deploy both backup options. Automated backups are beneficial for point-in-time recovery. With manual snapshots, you can retain backups for longer than 35 days. 
+            -  Redundancy - Amazon RDS Multi-AZ ensures that you have two copies of your database running and that one of them is in the primary role. If an availability issue arises, such as the primary database loses connectivity, Amazon RDS initiates an automatic failover.
+            - Security - Network ACLs and security groups help users dictate the flow of traffic. If you want to restrict the actions and resources others can access, you can use AWS Identity and Access Management (IAM) policies. 
+
+            Supported Amazon RDS engines include the following:
+                - Commercial: Oracle, SQL Server
+                - Open source: MySQL, PostgreSQL, MariaDB
+                - Cloud native: Aurora 
+        - Purpose built
+            -  DynamoDB is the database of choice for high-scale and serverless applications, it can work for nearly all online transaction processing (OLTP) application workloads. 
+            - Easticcache - Provides in-memory cache using Redis or Memcached
+            - MemoryDB - a fully managed, primary database to build high-performance applications. You do not need to separately manage a cache, durable database, or the required underlying infrastructure.
+            - DocumentDB - Use cases are content management systems, profile management, and web and mobile applications.
+            - Keyspaces - Good option for high-volume applications with straightforward access patterns. With Amazon Keyspaces, you can run your Cassandra workloads on AWS using the same Cassandra Query Language (CQL) code, Apache 2.0 licensed drivers, and tools that you use today.
+            - Neptune - Use cases are Recommendation engines, fraud detection, and knowledge graphs.
+            - Timestream - Used for measuring events that change over time, such as stock prices over time or temperature measurements over time.
+            - Quantum Ledger DB - provides a complete and cryptographically verifiable history of all changes made to your application data.
+    - Monitoring
+        - Cloudwatch - CloudWatch is a monitoring and observability service that collects your resource data and provides actionable insights into your applications. With CloudWatch, you can respond to system-wide performance changes, optimize resource usage, and get a unified view of operational health.
+            - Metrics - Metrics are the fundamental concept in CloudWatch. A metric represents a time-ordered set of data points that are published to CloudWatch. 
+    - Load balancer - Elastic Load Balancer 
+        - Hybrid mode – Because ELB can load balance to IP addresses, it can work in a hybrid mode, which means it also load balances to on-premises servers.
+        - High availability – ELB is highly available. The only option you must ensure is that the load balancer's targets are deployed across multiple Availability Zones.
+        - Scalability – In terms of scalability, ELB automatically scales to meet the demand of the incoming traffic. It handles the incoming traffic and sends it to your backend application. 
+        - ELB supports 2 types of health checks, 
+            - Establishing a connection to a backend EC2 instance using TCP and marking the instance as available if the connection is successful.
+            - Making an HTTP or HTTPS request to a webpage that you specify and validating that an HTTP response code is returned.
+        - Types of load balancers, 
+            - Application Load Balancer - An Application Load Balancer functions at Layer 7 of the Open Systems Interconnection (OSI) model. It is ideal for load balancing HTTP and HTTPS traffic. After the load balancer receives a request, it evaluates the listener rules in priority order to determine which rule to apply. It then routes traffic to targets based on the request content.
+            - Network Load Balancer - ideal for load balancing TCP and UDP traffic. It functions at Layer 4 of the OSI model, routing connections from a target in the target group based on IP protocol data.
+            - Gateway Load Balancer - helps you to deploy, scale, and manage your third-party appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems. It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
+    - EC2 auto scaling 
+        - The Amazon EC2 Auto Scaling service adds and removes capacity to keep a steady and predictable performance at the lowest possible cost. By adjusting the capacity to exactly what your application uses, you only pay for what your application needs. This means Amazon EC2 Auto Scaling helps scale your infrastructure and ensure high availability. the ELB service integrates seamlessly with Amazon EC2 Auto Scaling. As soon as a new EC2 instance is added to or removed from the Amazon EC2 Auto Scaling group, ELB is notified.
