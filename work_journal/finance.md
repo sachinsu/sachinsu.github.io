@@ -543,3 +543,10 @@
 
 - Planck knowledge - from the people with aptitude 
 - Chauffer Knowledge - from those who have learned to prattle the talk.
+
+- Pulak prasad's book
+    - Aim is for Permanent ownership
+    - Typical selection criteria
+        - Promoter's integrity - Forensic due diligence and also studying past history
+        - Excess cash 
+        - Maximum Debt/Equity Ratio not exceeding 0.3 (Debt diminishes strategic flexibility and hence long-term value creation.) 

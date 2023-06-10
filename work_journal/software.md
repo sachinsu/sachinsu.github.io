@@ -1832,6 +1832,7 @@
 - GPU - Graphics processing units or GPUs are dedicated highly parallel hardware accelerators that were originally design to accelerate the creation of images. More recently, folks have been looking at GPUs to accelerate other workloads like Database analytics and transaction processing (OLTP). Although GPUs have little or no use for OLTP style workloads, they have been shown to accelerate analytics.
 
 - Vector Databases
+    - Large language models such as GPT-3/4, LLaMA and PaLM work in terms of tokens. They take text, convert it into tokens (integers), then predict which tokens should come next.
     - Need from Generative AI perspective,
       - Embeddings - High dimensional Vector representation of Words, sentences, images and audio.Embeddings capture the “relatedness” of text, images, video, or other types of information. This relatedness is most commonly used for:
                  -   Search: how similar is a search term to a body of text?
