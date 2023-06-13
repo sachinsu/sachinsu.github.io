@@ -546,7 +546,16 @@
 
 - Pulak prasad's book
     - Aim is for Permanent ownership
+    - We don’t invest in businesses run by crooks, we detest turn-arounds, we stay as far away from leverage as possible, we refuse to engage with M&A addicts, we can’t figure out fast-changing industries, and we don’t align ourselves with unaligned owners.
+    - Majority of Mergers and acquisitions fail
     - Typical selection criteria
         - Promoter's integrity - Forensic due diligence and also studying past history
         - Excess cash 
         - Maximum Debt/Equity Ratio not exceeding 0.3 (Debt diminishes strategic flexibility and hence long-term value creation.) 
+        - If a business is a serial acquirer, we stay away.
+        - we will not invest in
+            -  a government-owned enterprise at any price
+            - listed subsidiaries of global giants
+            - Indian conglomerates (Tata, birla, ambani ....). This is because value creation is possible only thorough sustained focus 
+        - Historically deliverd ROCE. ROCE is simply the operating profit of the business as a percentage of total capital employed. As defined earlier, operating profit is earnings before interest and taxes, or EBIT. ROCE = EBIT ÷ (net working capital + net fixed assets)
+            - What does a high ROCE of, say, 20 percent tell us? A simple fact: This business earns $20 for every $100 it invests.
