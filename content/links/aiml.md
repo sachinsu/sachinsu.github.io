@@ -15,6 +15,7 @@ Useful links related from AI, ML space
 
 - [Fast AI by Jeremy Howard](https://www.fast.ai/)
 - [AI Canon - List of resources around GPT](https://a16z.com/2023/05/25/ai-canon/)
+
 ## Articles
 
 - [Machine learning is still too hard - Year 2022](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/)
@@ -38,3 +39,7 @@ Useful links related from AI, ML space
 ## Vector Embeddings, Vector Databases 
 
 - [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
+
+## ChatGPT
+
+- [LocalGPT - Chat with your documents on your local device using GPT models](https://github.com/PromtEngineer/localGPT)

@@ -409,7 +409,7 @@
 
 - Notes from Last letter of Prashant jain 
 	- As is often the case in investing, herd behaviour and majority opinion is more often wrong than right
-	-  ESG has noble objectives but the answer to solving these issues is not in mechanical scores (at times deficient) and in exclusion investing, rather in encouraging /incentivising companies to adopt more ESG friendly technologies, processes and mechanisms via market forces and other means
+	-  ESG has noble objectives but the answer to solving these issues is not in mechanical scores (at times deficient) and in exclusion investing, rather in encouraging / incentivising companies to adopt more ESG friendly technologies, processes and mechanisms via market forces and other means
 	- efficient markets hypothesis does not hold true, especially over short to medium periods. 
 	-Equities are a generous asset class. The tailwind of a growing economy and growing companies overshadows mistakes of timing and security selection in diversified portfolios in most cases over long periods. The key is patience to stay invested for long periods.
 	- Active vs. Passive - While outperforming benchmarks is not easy and will probably get tougher, especially net of expenses, some managers should be able to outperform over time. In most cases, this out performance is however unlikely to be linear or consistent. Significant divergence of portfolios from benchmarks and consequently a higher tracking error (that many equate to risk, though there are strong arguments to the contrary) will be needed in many cases to overcome the hurdle of costs and to generate alpha over long periods in my judgement
@@ -548,6 +548,18 @@
     - Aim is for Permanent ownership
     - We don’t invest in businesses run by crooks, we detest turn-arounds, we stay as far away from leverage as possible, we refuse to engage with M&A addicts, we can’t figure out fast-changing industries, and we don’t align ourselves with unaligned owners.
     - Majority of Mergers and acquisitions fail
+    - Investors can reimagine investing by studying and understanding the history of a business and an industry instead of constantly obsessing over the future.
+    - The median trailing price/earnings (PE) ratio for our portfolio at the time of our investment is less than 15 when the Indian market has been about 19 to 20. We have rarely ever paid more than twenty times trailing PE.
+    - Most of our portfolio comprises businesses with only one product or service or a small set of related products and services. We refuse to invest in diversified companies or conglomerates
+    - Darwin, the founder of modern evolutionary theory, understood better than anyone before him that the present was the result of the cumulative effect of the past.
+    - characteristics of Robust business, 
+        - Has delivered high historical ROCE over a long period
+        - Has a fragmented customer base
+        - Has no debt and has excess cashIs highly leveraged
+        - Has built high competitive barriers
+        - Has a fragmented supplier baseIs dependent on a few suppliers
+        - Has a stable management team
+        - Industry is slow changing
     - Typical selection criteria
         - Promoter's integrity - Forensic due diligence and also studying past history
         - Excess cash 
@@ -559,3 +571,5 @@
             - Indian conglomerates (Tata, birla, ambani ....). This is because value creation is possible only thorough sustained focus 
         - Historically deliverd ROCE. ROCE is simply the operating profit of the business as a percentage of total capital employed. As defined earlier, operating profit is earnings before interest and taxes, or EBIT. ROCE = EBIT ÷ (net working capital + net fixed assets)
             - What does a high ROCE of, say, 20 percent tell us? A simple fact: This business earns $20 for every $100 it invests.
+
+- Naked short - Shorting the stock before borrowing it. (Shorting a stock requires that shares be borrowed from someone)
