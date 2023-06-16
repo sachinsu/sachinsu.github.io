@@ -548,10 +548,14 @@
     - Aim is for Permanent ownership
     - We don’t invest in businesses run by crooks, we detest turn-arounds, we stay as far away from leverage as possible, we refuse to engage with M&A addicts, we can’t figure out fast-changing industries, and we don’t align ourselves with unaligned owners.
     - Majority of Mergers and acquisitions fail
-    - Investors can reimagine investing by studying and understanding the history of a business and an industry instead of constantly obsessing over the future.
+    - Investors can re-imagine investing by studying and understanding the history of a business and an industry instead of constantly obsessing over the future.
     - The median trailing price/earnings (PE) ratio for our portfolio at the time of our investment is less than 15 when the Indian market has been about 19 to 20. We have rarely ever paid more than twenty times trailing PE.
     - Most of our portfolio comprises businesses with only one product or service or a small set of related products and services. We refuse to invest in diversified companies or conglomerates
     - Darwin, the founder of modern evolutionary theory, understood better than anyone before him that the present was the result of the cumulative effect of the past.
+    - Zahavi’s handicap principle contends that a signal that is costly to produce is honest and can thus be relied upon by the receiver. The “cost” may be in the form of additional resources required to produce the signal or an increased risk of mortality.
+    - In nature, the “sender” of a signal attempts to influence the behavior of the “receiver.” For the receiver, differentiating between an honest and a dishonest signal can be the difference between life and death. Dishonest signals include press releases, management meetings, investor conferences and earnings guidance. Honest signals include past operating and financial performance and scuttlebutt signals from suppliers, customers, competitors, ex-employees and industry experts.
+    - Stasis is the default in the business world, too. Great businesses generally stay great, and bad businesses generally remain bad. This is evident not only from my personal experience of investing in India over a few decades but also from empirical data from the United States on the longevity of high-quality businesses.
+    - short-term changes do not usually impact the long-term character of an exceptional enterprise.
     - characteristics of Robust business, 
         - Has delivered high historical ROCE over a long period
         - Has a fragmented customer base
@@ -569,7 +573,8 @@
             -  a government-owned enterprise at any price
             - listed subsidiaries of global giants
             - Indian conglomerates (Tata, birla, ambani ....). This is because value creation is possible only thorough sustained focus 
-        - Historically deliverd ROCE. ROCE is simply the operating profit of the business as a percentage of total capital employed. As defined earlier, operating profit is earnings before interest and taxes, or EBIT. ROCE = EBIT ÷ (net working capital + net fixed assets)
+        - Historically delivered ROCE. ROCE is simply the operating profit of the business as a percentage of total capital employed. As defined earlier, operating profit is earnings before interest and taxes, or EBIT. ROCE = EBIT ÷ (net working capital + net fixed assets)
             - What does a high ROCE of, say, 20 percent tell us? A simple fact: This business earns $20 for every $100 it invests.
+        - Buy when the price is right.
 
 - Naked short - Shorting the stock before borrowing it. (Shorting a stock requires that shares be borrowed from someone)
