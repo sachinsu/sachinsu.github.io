@@ -2036,3 +2036,16 @@
             - Gateway Load Balancer - helps you to deploy, scale, and manage your third-party appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems. It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
     - EC2 auto scaling 
         - The Amazon EC2 Auto Scaling service adds and removes capacity to keep a steady and predictable performance at the lowest possible cost. By adjusting the capacity to exactly what your application uses, you only pay for what your application needs. This means Amazon EC2 Auto Scaling helps scale your infrastructure and ensure high availability. the ELB service integrates seamlessly with Amazon EC2 Auto Scaling. As soon as a new EC2 instance is added to or removed from the Amazon EC2 Auto Scaling group, ELB is notified.
+
+
+- Key Architectural Considerations, 
+    - Ability to Scale 
+    - Fault Tolerance 
+    - Latency  (Includes Internet Latency)
+        - WebRTC vs. WebSocket 
+            - WebRTC - UDP based. UDP offers no delivery or ordering guarantees.
+            - WebSockets - TCP based 
+            - MQTT - Offers three levels of message delivery guarantee, 
+                - Once, not guaranteed
+                - At least once
+                - Only once.

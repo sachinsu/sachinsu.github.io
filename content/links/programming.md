@@ -74,6 +74,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Teach yourself Computer Science](https://teachyourselfcs.com/)
 - [Collection of Video Courses on Computer Science](https://github.com/Developer-Y/cs-video-courses)
+- [Learn by doing - You don't need another MOOC](https://eugeneyan.com/writing/you-dont-need-another-mooc/)
 
 ## Distributed Systems
 
