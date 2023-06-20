@@ -2049,3 +2049,17 @@
                 - Once, not guaranteed
                 - At least once
                 - Only once.
+
+
+- Hardware Sizing using Ratio Modelling
+    - Used for quick, low-precision forecast.
+    - These ratios can be gathered using Oracle Instrumentation (e.g. v$Session etc.)
+    - Determine OLTP to CPU ratio  (R1) - 100 (i.e. 100 Users for every CPU)
+    - Determine Concurrent users/requests (C)
+    - Determine Batch to CPU Ratio (R2) - 1 (i.e. 1 batchjob to 1 CPU)
+    - Determine max concurrent batch jobs (c2)
+
+    - Formula,
+        - CPU Count at Peak (!00%) Utilization (P) = (C / R1) + (C2/R2)
+        - To arrive at CPU Count at lower utilization (say 50%) P50 = P/0.5
+        - R1 of 400 and R2 of 4.00 could be considered as highly optimistic
