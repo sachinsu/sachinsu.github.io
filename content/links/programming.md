@@ -63,7 +63,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
 - [Google's API Design Guidelines](https://google.aip.dev/100)
 - [API Design for Serverless Apps](https://www.readysetcloud.io/blog/allen.helton/the-importance-of-proper-serverless-api-design/)
-- [OWASP API Security Top 10](https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm)
+- [OWASP - Top Ten Vulnerabilities](https://owasp.org/www-project-top-ten/)
 - [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
 - [libsodium - Easy to use cryptography](https://github.com/jedisct1/libsodium)
 - [Schannel in Windows for Strong Ciphers/Cryptography](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233)

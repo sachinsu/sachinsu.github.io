@@ -40,6 +40,7 @@ Useful links related from AI, ML space
 
 - [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
 
-## ChatGPT
+## ChatGPT, LLMs
 
+- [Emerging Architecture for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/)
 - [LocalGPT - Chat with your documents on your local device using GPT models](https://github.com/PromtEngineer/localGPT)

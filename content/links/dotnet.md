@@ -108,6 +108,7 @@ Platform where i have spent most time till now.
 
 ## Security
 
+- [OWASP - Top Ten Vulnerabilities](https://owasp.org/www-project-top-ten/)
 - [Microsoft RESTler-Security testing using Automated Fuzzing](https://www.microsoft.com/en-us/research/blog/restler-finds-security-and-reliability-bugs-through-automated-fuzzing/)
 - [Security Code Scan in .NET](https://security-code-scan.github.io/)
 
