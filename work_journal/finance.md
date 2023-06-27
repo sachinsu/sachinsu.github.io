@@ -578,3 +578,11 @@
         - Buy when the price is right.
 
 - Naked short - Shorting the stock before borrowing it. (Shorting a stock requires that shares be borrowed from someone)
+
+
+- Mutual fund portfolio Suggestions
+    - Avoid thematic funds at all cost
+    - US Exposure - NASDAQ or S&P 500 index fund
+    - Large/Midcap - one each of Nifty 100 and Nifty Midcap 150 based index funds
+    - Smallcap - Active Smallcap fund
+    - Debt - 2 each of short term and corporate bond fund.
