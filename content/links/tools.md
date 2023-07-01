@@ -105,4 +105,5 @@ Section covering useful tools for every day activities, Online learning etc.
 
 ## Guidance and Templates for Resume Building 
 
-- [Harward Uni.](https://hwpi.harvard.edu/files/ocs/files/undergrad_resumes_and_cover_letters.pdf)
+- [Harward Uni. guidance on Resume building](https://hwpi.harvard.edu/files/ocs/files/undergrad_resumes_and_cover_letters.pdf)
+- [OpenResume - Professional, Free resume builder ](https://github.com/xitanggg/open-resume)
