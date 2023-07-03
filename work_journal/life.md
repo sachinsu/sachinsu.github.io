@@ -577,7 +577,6 @@
     - Turn on "RAW" mode 
     - Turn off all AI suggestions 
 
-
 - Urbanization 
     - Mumbai is transforming itself by being Data Center Capital (concentrated around Navi Mumbai Belt) and logistics hub at Bhiwandi.
     - Urbanization - Resistance from rural locals as they feel it would add to more taxes, more scrutiny. 
@@ -588,3 +587,25 @@
         - 70-75% of Maharashtra's GDP is concentrated in Mumbai-Pune belt
         - "What is a village but a sink of localism, a den of ignorance, narrow mindedness, caste and communalism" - Ambedkar
         - Poverty digestors - Take in poor people and provide them income/jobs etc.
+
+- Life lessons from Munger, 
+
+    1. Wisdom is prevention.
+
+    2. The fundamental algorithm of life: repeat what works.
+
+    3. Everything that needs to be said has already been said. But since no one was listening, everything must be said again.
+
+    4. The difference between successful people and very successful people is that very successful people say 'no' to almost everything.
+
+    5. I did not succeed in life by intelligence. I succeeded because I have a long attention span.
+
+    6. Have maximum financial flexibility to face both hazards *and* opportunities.
+
+    7. We schedule time to think. Most people schedule themselves like a dentist.
+
+    8. History enables you to keep things in perspective.
+
+    9. It's an inversion process. Start out with failure, and then engineer its removal.
+
+    10. Life tends to snap you at your weakest link.
