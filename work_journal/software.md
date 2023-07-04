@@ -2063,3 +2063,24 @@
         - CPU Count at Peak (!00%) Utilization (P) = (C / R1) + (C2/R2)
         - To arrive at CPU Count at lower utilization (say 50%) P50 = P/0.5
         - R1 of 400 and R2 of 4.00 could be considered as highly optimistic
+
+    - Capacity Planning notes
+        - Compute
+            - Throughput calculation
+                 - Peak QPS
+                    - Event driven Peaks
+                    - Time-driven Peaks
+                 - Daily Active users + Pageviews/User
+            - Per instance QPS capacity  (e.g. Each worker can handle 5 queries per second)
+        - Network 
+            - Bandwidth and data in transit 
+                - Request size + Added size due to encryption 
+            - Client to server (ingress) 
+            - Server to Client (egress)
+        - Storage and data at rest
+            - Understanding Request sizes 
+        - Caching 
+            - Caching needs to alleviate write bottlenecks
+        - Operating Capacity 
+            - Alerts & Monitoring 
+            

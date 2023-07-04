@@ -155,6 +155,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Devops/Monitoring
 
+- [Open source Alerts Management](https://www.keephq.dev/)
 - [Trivy - Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues and hard-coded secrets](https://github.com/aquasecurity/trivy?ref=unzip.dev)
 - [Impact of Architecture on DevOps](https://cloud.google.com/solutions/devops/devops-tech-architecture)
 - [Run CI/CD pipeline locally with Dagger](https://dagger.io)
