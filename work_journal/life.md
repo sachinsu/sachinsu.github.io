@@ -609,3 +609,18 @@
     9. It's an inversion process. Start out with failure, and then engineer its removal.
 
     10. Life tends to snap you at your weakest link.
+
+
+--- Diet Regimen recommendations from BMJ, 
+    - Sugar – cut it out altogether, although it will be in the blueberries, strawberries and raspberries you are allowed to eat. Cakes and biscuits are a mixture of sugar and starch that make it almost impossible to avoid food cravings; they just make you hungrier!!
+    - Reduce starchy carbs a lot -  Remember they digest down into surprising amounts of sugar. If possible just cut out the ‘White Stuff’ like bread, rice, pasta, potato , crackers and cereals.
+    - All green veg/salads are fine…Eat as much of these as you can –turn the white stuff green
+    So that you still eat a good big dinner try substituting veg such as broccoli, courgettes or green beans for your mash, pasta or rice – still covering them with your gravy, Bolognese or curry! Cauliflower rice is now widely available
+    - Fruit is trickier… Some tropical fruits like bananas, oranges, grapes, mangoes or pineapple have too much sugar in and can set those carb cravings off. Berries are better and can be eaten; blueberries, raspberries, strawberries apples and pears too.
+    - Eat healthy proteins… Try basing your meals on non-processed meat like chicken or red meat, eggs (three eggs a day is not too much), fish – particularly oily fish such as salmon, mackerel or tuna –are fine and can be eaten freely. Plain full fat yoghurt makes a good breakfast with the berries. Processed meats such as bacon, ham, sausages or salami are not as healthy and should only be eaten in moderation.
+    - Healthy fats are fine in moderation… Yes, fats can be fine in moderation: olive oil is very useful, butter may be tastier than margarine and coulde better for you! Coconut oil is great for stir fries. Four essential vitamins A, D, E and K are only found in some fats or oils. Please avoid margarine, corn oil and vegetable oil.
+    -  Beware ‘low fat’ foods. They often have sugar or sweeteners added to make them palatable. Full fat mayonnaise and pesto are definitely on!!
+    - Cheese only in moderation… It’s a very calorific mixture of fat, and protein.
+    - Snacks: avoid, as habit forming. But un-salted nuts such as almonds or walnuts are OK to stave off hunger. The occasional treat of strong dark chocolate 70% or more in small quantity is allowed
+    - Alcohol is full of carbs… Sadly many alcoholic drinks are full of carbohydrate – for example, beer is almost ‘liquid toast’ hence the beer belly!! The odd glass of dry white, red wine or spirits is not too bad if it doesn’t make you hungry afterwards – or just plain water with a slice of lemon.
+    - Sweeteners can trick you…  Finally, about sweeteners and what to drink – sweeteners have been proven to tease your brain into being even hungrier, making weight loss more difficult – drink tea, coffee, and water or herb teas. (100ml milk is 1 teaspoon of sugar)

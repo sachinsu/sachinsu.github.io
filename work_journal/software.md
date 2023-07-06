@@ -2083,4 +2083,10 @@
             - Caching needs to alleviate write bottlenecks
         - Operating Capacity 
             - Alerts & Monitoring 
-            
+
+- General database Guidelines
+    - Prefer bare metal over VM (as it provides ~ 10-15% performance boost)
+    - Analyze tables periodically
+    - Clean database for ROT ( Redundant, out-of-date, Trivial content ) tables.
+    - Have Archive/purge policy in place. This is must for tables that store activity log. 
+    - Partition any table with more than 2 million rows. 
