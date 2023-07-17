@@ -90,3 +90,7 @@ Section covering Business, project/programming perspectives
 
 - [Capacity planning for Web Application](https://kirshatrov.com/posts/capacity-planning-for-web-apps/)
 - [Scaling MySQL](https://kirshatrov.com/posts/scaling-mysql-stack-part-1-timeouts/)
+
+## Web Hosting 
+
+- [How i run my Servers?](https://blog.wesleyac.com/posts/how-i-run-my-servers)

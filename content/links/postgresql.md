@@ -29,6 +29,7 @@ draft: false
 - [Using pg_cron to roll up for Analytics](https://www.citusdata.com/blog/2017/12/27/real-time-analytics-dashboards-with-citus/)
 - [PG Database Configuration Helper](https://postgresqlco.nf/)
 - [Full text search in PostgreSQL](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
+- [Postgres full text search capabilities](https://xata.io/blog/postgres-full-text-search-engine)
 - [Full text search (Crunchydata)](https://blog.crunchydata.com/blog/postgres-full-text-search-a-search-engine-in-a-database)
 - [PostgreSQL - Best practices(Azure)](https://docs.microsoft.com/en-us/azure/postgresql/application-best-practices)
 - [Designing high performance time series data table in (RDS) postgresql while using BRIN Index](https://aws.amazon.com/blogs/database/designing-high-performance-time-series-data-tables-on-amazon-rds-for-postgresql/)

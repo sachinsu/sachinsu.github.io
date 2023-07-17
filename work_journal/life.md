@@ -624,3 +624,6 @@
     - Snacks: avoid, as habit forming. But un-salted nuts such as almonds or walnuts are OK to stave off hunger. The occasional treat of strong dark chocolate 70% or more in small quantity is allowed
     - Alcohol is full of carbs… Sadly many alcoholic drinks are full of carbohydrate – for example, beer is almost ‘liquid toast’ hence the beer belly!! The odd glass of dry white, red wine or spirits is not too bad if it doesn’t make you hungry afterwards – or just plain water with a slice of lemon.
     - Sweeteners can trick you…  Finally, about sweeteners and what to drink – sweeteners have been proven to tease your brain into being even hungrier, making weight loss more difficult – drink tea, coffee, and water or herb teas. (100ml milk is 1 teaspoon of sugar)
+
+
+    - Pascal's Wager - Pascal thought that evidence cannot settle the question of whether God exists, so he proposes that you should bet, or wager, on God because of what's at stake: you have lots to gain and not much to lose.
