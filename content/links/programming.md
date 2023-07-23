@@ -13,7 +13,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Temenos Serverless banking at Scale @ AWS using CQRS leveraging RDS and DynamoDB](https://www.youtube.com/watch?v=mtZvA7ARepM)
 - [Temenos @ AWS Architecture Diagrams](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/Temenos-on-aws.pdf?did=wp_card&trk=wp_card)
 - [Architecture for Generations](https://increment.com/software-architecture/architecture-for-generations/)
-- [Uber's Domain-Oriented Microservice Architecture](https://eng.uber.com/microservice-architecture/)
+- [Ubers Domain-Oriented Microservice Architecture](https://eng.uber.com/microservice-architecture/)
 
 ## Books on Architecture,Design
 
@@ -23,7 +23,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Strategies/Approaches
 
-- [Rob Pike's 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
+- [Rob Pikes 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
 - [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)
 - [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
 - [Break Monolith into Microservices](https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half)
@@ -35,7 +35,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Reliable Microservices Data Exchange With the Outbox Pattern](https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/)
 - [Scaling to 100k Users](https://alexpareto.com/scalability/systems/2020/02/03/scaling-100k.html#fnref:1)
 - [Monolith - Modular Approach](https://speakerd.s3.amazonaws.com/presentations/7590b86ae80649c19cbbbb27ad89d798/2018-02-22_Microservices_Meetup_Munich_-_Monoliths.pdf)
-- [You don't need Microservices](https://medium.com/swlh/stop-you-dont-need-microservices-dc732d70b3e0)
+- [You dont need Microservices](https://medium.com/swlh/stop-you-dont-need-microservices-dc732d70b3e0)
 - [Event Modelling - Approach](https://eventmodeling.org/posts/what-is-event-modeling/)
 - [Ready for changes with Hexagonal Architecture](https://netflixtechblog.com/ready-for-changes-with-hexagonal-architecture-b315ec967749)
 - [How to fix Overloaded Web server](https://web.dev/overloaded-server/)
@@ -57,11 +57,11 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [REST API Guidelines from Microsoft](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning)
 - [Open Source Vulnerability Management](https://fossa.com/product/open-source-vulnerability-management?ref=unzip.dev)
-- [Equinor's API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
+- [Equinors API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
 - [Checklist of Web APIs](https://mathieu.fenniak.net/the-api-checklist/)
 - [Guidelines for designing better APIs](https://r.bluethl.net/how-to-design-better-apis)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
-- [Google's API Design Guidelines](https://google.aip.dev/100)
+- [Googles API Design Guidelines](https://google.aip.dev/100)
 - [API Design for Serverless Apps](https://www.readysetcloud.io/blog/allen.helton/the-importance-of-proper-serverless-api-design/)
 - [OWASP - Top Ten Vulnerabilities](https://owasp.org/www-project-top-ten/)
 - [API Security Checklist](https://curity.medium.com/api-security-checklist-a-guide-to-protecting-your-apis-c8fb5d385605)
@@ -74,19 +74,19 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [Teach yourself Computer Science](https://teachyourselfcs.com/)
 - [Collection of Video Courses on Computer Science](https://github.com/Developer-Y/cs-video-courses)
-- [Learn by doing - You don't need another MOOC](https://eugeneyan.com/writing/you-dont-need-another-mooc/)
+- [Learn by doing - You dont need another MOOC](https://eugeneyan.com/writing/you-dont-need-another-mooc/)
 
 ## Distributed Systems
 
 - [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
-- [The Service Mesh: What Every Software Engineer Needs to Know about the World's Most Over-Hyped Technology](https://servicemesh.io/)
+- [The Service Mesh: What Every Software Engineer Needs to Know about the Worlds Most Over-Hyped Technology](https://servicemesh.io/)
 - [Very Brief intro to Container Orchestrators](https://lwn.net/SubscriberLink/905164/e1f4d4c1ce35f8b9/)
 - [E-book kubernetes Up & Running](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
 - [Class materials for a distributed systems lecture series](https://github.com/aphyr/distsys-class)
 - [Containers - Training resources](https://container.training/)
 - [Distributed Systems Cheat Sheet](http://dimafeng.com/2016/12/04/distributed-systems/)
-- [Microservices — architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
-- [Microservices, pl. don't](https://riak.com/posts/technical/microservices-please-dont/)
+- [Microservices — architecture nihilism in minimalisms clothes](https://vlfig.me/posts/microservices)
+- [Microservices, pl. dont](https://riak.com/posts/technical/microservices-please-dont/)
 - [Disasters from Microservices world](https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51)
 
 

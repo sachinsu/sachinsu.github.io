@@ -627,3 +627,13 @@
 
 
     - Pascal's Wager - Pascal thought that evidence cannot settle the question of whether God exists, so he proposes that you should bet, or wager, on God because of what's at stake: you have lots to gain and not much to lose.
+
+
+    - What does the “performance” of work look like?
+        - Presentations of your work
+        - Hallway chats
+        - 1:1 conversations to build alignment
+        - Crafting the wrapper and positioning of your work
+        - Changing the language of your work to match others
+        - Including wider contexts of the organization, the industry and the market in your work
+        - Reformatting your presentations to fit other team’s strategies

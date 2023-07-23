@@ -24,7 +24,7 @@ draft: false
   - [PostgreSQL](/links/postgresql/)
   - [NoSQL](/links/nosql/)
 - [Cloud Tech](/links/cloud/)
-- AI, Machine Learning
+- AI/Machine Learning
   - [Machine Learning](/links/aiml/)
 - [General Purpose tools](/links/tools/)
   
