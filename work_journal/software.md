@@ -2090,3 +2090,47 @@
     - Clean database for ROT ( Redundant, out-of-date, Trivial content ) tables.
     - Have Archive/purge policy in place. This is must for tables that store activity log. 
     - Partition any table with more than 2 million rows. 
+
+
+- Solution Architecture 
+    - Solution architecture is not just about providing a software solution. It covers all
+    aspects of a system, which includes, but is not limited to, system infrastructure,
+    networking, security, compliance requirement, system operation, cost, and reliability.
+
+    - Business Requirement and Vision: A solution architect works with business stakeholders to understand their vision.
+    - Requirement Analysis and Technical Vision: Analysis of the requirements, defining a technical vision in order to execute the business strategy.
+    - Prototyping and Recommendation: Makes a technology selection by developing POC and showcasing prototypes.
+    - Solution Design: A solution architect develops solution designs in line with an organization's standards and in collaboration with other impacted groups.
+    - Development: Works with the development team on solution development,and as a bridge between the business and technical team.
+    - Integration and Testing: Makes sure that the final solution is working as expected with all functional and non-functional requirements.
+    - Implementation: Works with the development and deployment team for smooth implementation and guides them through any issues.
+    - Operation and Maintenance: Ensures logging and monitoring are in place and guides the team on scaling and disaster recovery as required.
+
+
+- Cloud Architect 
+    - Plan and design cloud environment 
+    - Responsible for deploying and managing Cloud computing Strategy
+    - Provide depth and breadth of Cloud Services
+    - be able to define cloud-native design 
+    - Advise how on-premises applications will connect to the cloud and how different traditional offerings fit into a cloud environment.
+
+- Data Architect
+    - Selection of database technology
+    - Structured and unstructured data store choice
+    - Streaming and batch data processing
+    - A data lake as the centralized datastore
+    - A relational database schema for application development
+    - Data warehousing for data analysis and BI tools
+    - Datamart design
+    - Data security and encryption
+    - Data compliance
+
+- Enterprise Architect Role 
+    - works closely with stakeholders, subject matter experts, and management to identify
+organizational strategies for information technology and make sure that their
+knowledge aligns with company business rul
+    - Enterprise architects handle solution design across the organization; they create
+long-term plans and solutions with stakeholders and leadership.
+    - Finalize the technologies that should be used by the company. 
+    - Fill the gap between organizational strategy and its successful execution 
+    - 

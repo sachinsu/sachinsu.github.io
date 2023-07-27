@@ -8,6 +8,7 @@ draft: false
 
 Section covering Business, project/programming perspectives
 
+- [Stick to boring Architecture](https://addyosmani.com/blog/boring-architecture/)
 - [Your tech stack is not the product](https://hoho.com/posts/your-stack-is-not-the-product/)
 - [Architecture anti-patterns](https://charity.wtf/2023/03/09/architects-anti-patterns-and-organizational-fuckery/?ref=architecturenotes.co)
 - [Don't call yourself a programmer](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/)
@@ -56,6 +57,7 @@ Section covering Business, project/programming perspectives
 - [The best engineers think like Investors not Builders](https://levelup.gitconnected.com/the-best-engineers-think-like-investors-not-builders-cf005e75ab80)
 - [CUPID principles](https://dannorth.net/2022/02/10/cupid-for-joyful-coding/)
 - [Links for Aspiring CTO](https://github.com/kuchin/awesome-cto)
+- [First principles thinking](https://addyosmani.com/blog/first-principles-thinking-software-engineers/)
 
 ## Legacy Modernization 
 
