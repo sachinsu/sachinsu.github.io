@@ -2133,4 +2133,15 @@ knowledge aligns with company business rul
 long-term plans and solutions with stakeholders and leadership.
     - Finalize the technologies that should be used by the company. 
     - Fill the gap between organizational strategy and its successful execution 
-    - 
+
+- Cloud migration types 
+    - Refactor - Re-architect application into more modularized such as monolithic to microservice
+    - Replatform - Migrate application to upgraded platform without changing core architecture, such
+    traditional database to cloud or higher operating system version
+    - Repurchase -  Replacing your current enviroment by purchasing a cloud-based solution
+    - Rehost -  Quickly lift and shift your applications to the cloud without architecture changes
+    - Retain-  Leaving the application on-premises for now at least
+    - Relocate - Quickly relocate applications to the cloud without changing them, such as container- based applications
+
+
+- Kalman filter - A Kalman Filter is a funnel which takes two or more imperfect and unreliable information sources and generates a more accurate estimate of what you want to know.  trust based weighted averaging is the heart of the Kalman filter.

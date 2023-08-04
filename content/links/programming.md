@@ -235,6 +235,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Distributed messaging, Streams
 
+- [Comparison - BlazingMQ, RabbitMQ and Kafka](https://bloomberg.github.io/blazingmq/docs/introduction/comparison/)
 - [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
 - [VerneMQ - A distributed MQTT message broker based on Erlang/OTP](https://github.com/vernemq/vernemq)
 - [Kafka - Capacity Planning](https://www.slideshare.net/slideshow/embed_code/key/EYwSnTsR6GxuyG)
