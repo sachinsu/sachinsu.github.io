@@ -637,3 +637,19 @@
         - Changing the language of your work to match others
         - Including wider contexts of the organization, the industry and the market in your work
         - Reformatting your presentations to fit other team’s strategies
+
+
+- Life Lessons from Morgan housel
+    - Limit number of tribes you belong to 
+    - Identify the behaviors never change over time and using those to your advantage
+    - Multi-disciplinary learnings (looking at your field from lense of another field) 
+    - Self-interest can lead to justify anything. 
+    - You can not believe in risk until you believe in Luck
+    - Room for Error in underappreciated and misunderstood.
+    - Sustainable sources of competitive advantages 
+        - Learn faster than competition 
+        - Empathize with customers 
+        - Be better communicator than competition 
+        - Wait longer than competition
+    - Personal experience extrapolated to how world works
+

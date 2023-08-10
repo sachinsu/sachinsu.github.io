@@ -45,6 +45,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [Partitioning as Query Optimization Strategy](https://ashutoshpg.blogspot.com/2023/08/partitioning-as-query-optimization.html)
 - [Database Configuration Builder](https://www.pgconfig.org)
 - [Configuration for Diagnosing Performance issues](https://www.crunchydata.com/blog/exposing-postgres-performance-secrets)
 - [OrioleDB- Solving Wicked problems of PostgreSQL](https://www.slideshare.net/AlexanderKorotkov/solving-postgresql-wicked-problems)
@@ -93,6 +94,7 @@ draft: false
 
 ## Interesting Extensions/Products
 
+- [PostgreSql based Message queue](https://github.com/tembo-io/pgmq)
 - [End-to-end machine learning solution](https://postgresml.org/)
 - [Incrementally update Materialized Views in real-time using Materialize](https://materialize.io/)
 - [Artificial Intelligence with PostgreSQL](https://momjian.us/main/writings/pgsql/AI.pdf)
