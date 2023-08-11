@@ -1368,6 +1368,13 @@
         - Queue individually manages lifecycle of each message
         - Each mesage is exclusively acquired by one consumer
         - The queue length can be queried
+        - Queues do not improve end-to-end latency
+        - Queues do not improve mean throughput
+        - Queues do not provide total event ordering
+        - Queues can offer at-most-once or at-least-once delivery
+        - Queues do improve burst throughput
+        - Distributed queues also improve fault tolerance (if they don’t lose data)
+        - Every queue is a place for things to go horribly, horribly wrong
     - Kafka is not a "message queue"
         - Messages are acquired by consumer groups 
         - consumer groups can query topic back and forth.
@@ -2145,3 +2152,20 @@ long-term plans and solutions with stakeholders and leadership.
 
 
 - Kalman filter - A Kalman Filter is a funnel which takes two or more imperfect and unreliable information sources and generates a more accurate estimate of what you want to know.  trust based weighted averaging is the heart of the Kalman filter.
+
+
+- How CPU works, 
+    - RAM - computer’s main memory bank, a large multi-purpose space which stores all the data used by programs running on your computer. That includes the program code itself as well as the code at the core of the operating system. The CPU always reads machine code directly from RAM, and code can’t be run if it isn’t loaded into RAM.
+    - The CPU stores an instruction pointer which points to the location in RAM where it’s going to fetch the next instruction. After executing each instruction, the CPU moves the pointer and repeats. This is the fetch-execute cycle
+    - This instruction pointer is stored in a register. Registers are small storage buckets that are extremely fast for the CPU to read and write to. Each CPU architecture has a xed set of registers, used for everything from storing temporary values during computations to conguring the processor.
+    - The kernel, however, is the core of the operating system. When you boot up your computer, the instruction pointer starts at a program somewhere. That program is the kernel. The kernel has near-full access to your computer’s memory, peripherals, and other resources, and is in charge of running software installed on your computer (known as userland  programs).
+    - Processors execute instructions in an innite fetch-execute loop and don’t have any concept of operating systems or programs. The processor’s mode, usually stored in a register, determines what instructions may be executed. Operating system code runs in kernel mode and switches to user mode to run programs. 
+    - To run a binary, the operating system switches to user mode and points the processor to
+    the code’s entry point in RAM. Because they only have the privileges of user mode,
+    programs that want to interact with the world need to jump to OS code for help. System
+    calls are a standardized way for programs to switch from user mode to kernel mode and
+    into OS code.
+    - Programs typically use these syscalls by calling shared library functions. These wrap
+    machine code for either software interrupts or architecture-specic syscall instructions
+    that transfer control to the OS kernel and switch rings. The kernel does its business and
+    switches back to user mode and returns to the program code.

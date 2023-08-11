@@ -58,6 +58,7 @@ Section covering Business, project/programming perspectives
 - [CUPID principles](https://dannorth.net/2022/02/10/cupid-for-joyful-coding/)
 - [Links for Aspiring CTO](https://github.com/kuchin/awesome-cto)
 - [First principles thinking](https://addyosmani.com/blog/first-principles-thinking-software-engineers/)
+- [How Computer CPUs work](https://cpu.land/editions/one-pager)
 
 ## Legacy Modernization 
 
