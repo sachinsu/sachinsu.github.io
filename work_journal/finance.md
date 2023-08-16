@@ -586,3 +586,5 @@
     - Large/Midcap - one each of Nifty 100 and Nifty Midcap 150 based index funds
     - Smallcap - Active Smallcap fund
     - Debt - 2 each of short term and corporate bond fund.
+
+- Rakesh Jhunjhnwala - Trading is to earn capital while investing is to grow capital.

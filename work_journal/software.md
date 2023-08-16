@@ -2169,3 +2169,6 @@ long-term plans and solutions with stakeholders and leadership.
     machine code for either software interrupts or architecture-specic syscall instructions
     that transfer control to the OS kernel and switch rings. The kernel does its business and
     switches back to user mode and returns to the program code.
+
+- Differences in type of Testing 
+  - Regression vs Mutation - Regression tests check if new code is buggy while mutation tests check whether test themselves are reliable by twicking the code. 
