@@ -576,7 +576,7 @@
         
     - This is where Concept of "Data lake" started getting adopted, 
         - Basically, its cheap storage area where data is just dumped from sources like OLTP systems, Other Applications, logs etc. 
-        - Alternate Explaination : A data lake is a storage system with an underlying Data Lake File Format and its different Data Lake Table Formats that store vast amounts of unstructured and semi-structured data, stored as-is, without a specific purpose. Its the primary destination for growing volumes and varieties of exploratory and operational data next to data warehouse destinations. 
+        - Alternate Explanation : A data lake is a storage system with an underlying Data Lake File Format and its different Data Lake Table Formats that store vast amounts of unstructured and semi-structured data, stored as-is, without a specific purpose. Its the primary destination for growing volumes and varieties of exploratory and operational data next to data warehouse destinations. 
         - From here, Subset of the data is moved to classical data warehouse (typically on cloud) for analytics or gaining insights  
         - Reasons are, 
             - In the Sources to DWH approach, one has to have schema up-front which is hard to get right at the beginning. Data lake to DWH provides flexibility in this.
@@ -634,6 +634,22 @@
             - Dimension, fact, and mart tables are not to contain references to operational systems. We abstract the name away from the source system the data is produced into a name that describes the business entity or semantic significance of the data. For example, data from Salesforce is described as crm in the dimensional model and not sfdc or salesforce
 
     - Data Lineage allows one to track data flow from its source to the consumers, by also tracking all its transformations in between. It helps understand how data flows within our warehouse and through to consumption surfaces
+
+    - Operational Workload vs. Analytics Workload 
+      - Operational
+        - Needs fresh data 
+        - Typically uses canned queries (instead of Ad-hoc)
+        - Uptime is important
+        - Internal/External Alerts and Notifications
+        - Customer Segmentation
+        - Dynamic pricing & recommendations
+        - Business Automation and Workflows
+        - Online feature serving for ML and AI 
+      - Analytical
+        - Business Intelligence exploration
+        - Ad-Hoc Exploratory Analysis of metrics
+        - KPI Dashboards
+        - Prototyping and exploring hypothetical scenarios
 
     - A data lake is a file store, usually on a distributed file system for high performance data access. Technologies like Spark or Hadoop are often used to process queries on the stored files and return data for reporting and analytics. These systems often apply a schema-on-read approach to define tabular schemas on semi-structured data files at the point where the data is read for analysis, without applying constraints when it's stored. Data lakes are great for supporting a mix of structured, semi-structured, and even unstructured data that you want to analyze without the need for schema enforcement when the data is written to the store.
 

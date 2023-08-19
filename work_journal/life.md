@@ -653,3 +653,4 @@
         - Wait longer than competition
     - Personal experience extrapolated to how world works
 
+- The solution architect needs to have a holistic view of each component regarding performance, scaling, high availability, disaster recovery, fault tolerance, security, and automation.
