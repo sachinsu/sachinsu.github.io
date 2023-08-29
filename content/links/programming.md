@@ -79,6 +79,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## Distributed Systems
 
 - [Build your own (insert technology here)](https://github.com/danistefanovic/build-your-own-x#build-your-own-network-stack)
+- [Kubernetes for Everyone](https://docs.google.com/document/d/1p4ZYQYM2VrMCR8K3T68JOMzWHlV-C8Jogrl9Ces77OA/edit?utm_sq=gjkgbut0r7)
 - [The Service Mesh: What Every Software Engineer Needs to Know about the Worlds Most Over-Hyped Technology](https://servicemesh.io/)
 - [Very Brief intro to Container Orchestrators](https://lwn.net/SubscriberLink/905164/e1f4d4c1ce35f8b9/)
 - [E-book kubernetes Up & Running](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
@@ -196,7 +197,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Dashboard design best practices](https://www.influxdata.com/blog/5-dashboard-design-best-practices/)
 - [Infrastructure Monitoring with Postgres](https://archive.fosdem.org/2017/schedule/event/postgresql_infrastructure_monitoring/)
 - [Tracing, Fast and Slow – roguelynn](https://www.roguelynn.com/words/tracing-fast-and-slow/)
-- [What is OpenTelemetry?](https://otel.lightstep.com)
+- [OpenTelemetry in 2023](https://bit.kevinslin.com/p/opentelemetry-in-2023)
 - [Course on using Opentelemetry](https://www.youtube.com/watch?v=r8UvWSX3KA8)
 - [Opentelemetry Overview](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/logs/overview.md)
 - [Techniques for Monitoring Web services](https://jvns.ca/blog/2022/07/09/monitoring-small-web-services/)

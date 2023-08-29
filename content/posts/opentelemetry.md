@@ -168,7 +168,7 @@ Hope this provides overview of instrumentation as provided by OpenTelemetry. Let
 Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder `Opentelemetry` in repository [here](https://github.com/sachinsu/opentelemetrydotnet)
 
 ### Useful References,
-- [What is OpenTelemetry?](https://otel.lightstep.com)
+- [OpenTelemetry in 2023](https://bit.kevinslin.com/p/opentelemetry-in-2023)
 - [OpenTelemetry in .NET](https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/)
 - [Short course on OpenTelemetry](https://www.youtube.com/watch?v=r8UvWSX3KA8))
 

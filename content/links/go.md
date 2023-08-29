@@ -118,6 +118,7 @@ b.com/hoanhan101/ultimate-go)
 
 ### Code snippets
 
+- [Web Service in Go - Code with Best practices](https://github.com/ardanlabs/service/)
 - [Remote service with Retries](https://play.golang.org/p/3mNhCTl01bX)
 - [Curated list of design patterns implemented in Go](https://github.com/tmrts/go-patterns)
 - [Gophercises - Exercises for Go Developers](https://gophercises.com/)
