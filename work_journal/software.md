@@ -45,7 +45,7 @@
 
 - [Architectural thinking][Architecture]
     - Don’t even start considering solutions until you Understand the problem. Your goal should be to “solve” the problem mostly within the problem domain, not the solution domain.
-    - eNumerate multiple candidate solutions. Don’t just start prodding at your favorite!
+    - enumerate multiple candidate solutions. Don’t just start prodding at your favorite!
     - Consider a candidate solution, then read the Paper if there is one.
     - Determine the Historical context in which the candidate solution was designed or developed.
     - Weigh Advantages against disadvantages. Determine what was de-prioritized to achieve what was prioritized.
@@ -80,7 +80,7 @@
                 - API REST-based topology
                 - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
                 - Centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
-                - t ypically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
+                - Typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
 
     - An architecture style describes the way your overall system is structured (such as microservices, layered monolith, and so on), whereas architecture patterns are ways of describing certain and specific architectural aspects of that overall structure. 
 
@@ -171,7 +171,7 @@
         - ERROR: Parts of the flow failed, we want to send alerts to our on-call for this failures.
         - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
         - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
-        - DEBUG: Like INFO but more detailed, including inspection into obcts, data structures, etc.
+        - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
 
 - [Memory Management][SystemArchitecture]
     - OS has Virtual memory manager (VMM) that allocates VM to processes
@@ -209,7 +209,7 @@
             - Software that is single-threaded will not run faster on a machine with multiple processors.
             - Software that is written to spread across all processors may not see much performance improvement beyond a certain number of CPUs due to bottlenecks such as lock contention.
     - Some Scaling techniques, 
-        - Segment plus Replicas: Segments that are being accessed more frequently can be replicated at a greater depth. This enables scaling to larger datasets (moresegments) and better performance (more replicas of a segment). 
+        - Segment plus Replicas: Segments that are being accessed more frequently can be replicated at a greater depth. This enables scaling to larger datasets (more segments) and better performance (more replicas of a segment). 
         - Dynamic Replicas: Replicas are added and removed dynamically to achieve required performance. If latency is too high, add replicas. If utilization is too low, remove replicas.
         -  Architectural Change: Replicas are moved to faster or slower technology based on need. Infrequently accessed shards are moved to slower, less expensive technology such as disk. Shards in higher demand are moved to faster technology such as solid-state drives (SSD). Extremely old segments might be archived to tape or optical disk.
     - Cache 
@@ -1440,13 +1440,18 @@
     - estimation is valuable when it helps you make a significant decision.
     - Estimation is useful when it helps with coordination within teams
 
-- Cypress.io - End to end test platform
-    - Cypress takes screenshots as tests run 
-    - automatically reloads when tests are changed
-    - Waits for commands and assertions 
-    - is not a general purpose tool like for indexing the web.
-    - Only JS is supported for test cases
-    - Each test is bound to single domain.
+- Web Testing 
+   - Unit testing - Unit testing is a testing type in which minor testable parts or units of an application are individually and independently tested for proper operation. These units can vary in scope from functions, classes, or interfaces, to services or complete components. Their primary attributes are execution speed, isolation, and comfortable maintainability.  Tools: Vitest/JEST
+   - Integration Testing - Integration testing focuses on interactions between components or systems. In other words, on how well they work together. Typical examples of integration tests are API or component tests. Tools: WebDriverIO, Cypress
+  - End to End Testing - These tests are often called UI tests and this name explains their function even better. These tests interact with your application's UI, including the complete application stack, and test your application from one end to the other. Tools: WebDriveIO, Cypress, PlayWright, 
+
+  - Cypress.io - End to end test platform 
+      - Cypress takes screenshots as tests run 
+      - automatically reloads when tests are changed
+      - Waits for commands and assertions 
+      - is not a general purpose tool like for indexing the web.
+      - Only JS is supported for test cases
+      - Each test is bound to single domain.
 
 - Vaccum in PostgreSQL
     - Postgres uses Multiversion Concurrency Control (MVCC) to guarantee isolation while providing concurrent access to data. This means multiple versions of a row can exist in the database simultaneously. So, when rows are deleted, older versions are still kept around, since older transactions may still be accessing those versions. Once all transactions which require a row version are complete, those row versions can be removed. This can be done by the VACUUM command. 

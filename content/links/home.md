@@ -34,8 +34,10 @@ draft: false
 - [Lobsters](https://lobste.rs)
 - [A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev](https://free-for.dev/)
 
+
 #### Miscellaneous
 
+- [OSS alternatives to Popular tools/Systems](https://github.com/Runacapital/awesome-oss-alternatives)
 - [Open Source alternative tools](https://degoogle.jmoore.dev/)
 - [Attention is all Manager need  - Techniques and processes](https://philcalcado.com/2023/07/21/attention_is_all_a_manager_needs.html)
 - [Gokey - Derived random passwords based on Master password](https://github.com/cloudflare/gokey)
