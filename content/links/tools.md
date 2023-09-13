@@ -8,6 +8,7 @@ draft: false
 
 Section covering useful tools for every day activities, Online learning etc.
 
+- [Nginx Unit - Web Server with Native support for Languages](https://github.com/nginx/unit)
 - [Plane - Open source alternative to JIRA](https://github.com/makeplane/plane)
 - [ShareX - Screen capture, file sharing and productivity tools (Windows only)](https://getsharex.com)
 - [Dark Lang - Declarative platform to build serverless backend](https://darklang.com/)
