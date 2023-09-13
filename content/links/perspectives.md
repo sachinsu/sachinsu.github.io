@@ -97,3 +97,7 @@ Section covering Business, project/programming perspectives
 ## Web Hosting 
 
 - [How i run my Servers?](https://blog.wesleyac.com/posts/how-i-run-my-servers)
+
+## Career
+
+- [Checklist for Senior Engineer](https://littleblah.com/post/2019-09-01-senior-engineer-checklist/)
