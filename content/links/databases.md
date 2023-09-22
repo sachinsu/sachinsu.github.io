@@ -56,6 +56,7 @@ Knowledge base around general database related topics.
 
 ## Data Analytics 
 
+- [Simple data pipeline Powertools](https://csvbase.com/blog/5)
 - [Cube.dev - Open source Headless BI platform](https://cube.dev/)
 - [Evidence.dev - BI as Code - SQL + Markdown to generate Reports](https://evidence.dev/)
 - [Apache spark defined](https://www.infoworld.com/article/3236869/what-is-apache-spark-the-big-data-platform-that-crushed-hadoop.html)

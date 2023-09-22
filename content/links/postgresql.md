@@ -134,6 +134,7 @@ draft: false
 
 ## Change Data Capture, Asynchronous change processing etc. 
 
+- [Electric SQL - Mobile Local first sync layer with PostgreSQL](https://electric-sql.com/)
 - [PGQ - Queueing Solution](https://wiki.postgresql.org/wiki/PGQ_Tutorial)
 - [PGQ - as used by Skype](https://www.pgcon.org/2009/schedule/attachments/91_pgq.pdf)
 - [Bucardo - Asynchronous replication for PostgreSQL using Triggers](https://bucardo.org/Bucardo/)

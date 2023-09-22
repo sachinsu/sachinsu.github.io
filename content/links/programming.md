@@ -241,6 +241,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [VerneMQ - A distributed MQTT message broker based on Erlang/OTP](https://github.com/vernemq/vernemq)
 - [Kafka - Capacity Planning](https://www.slideshare.net/slideshow/embed_code/key/EYwSnTsR6GxuyG)
 - [Why Kafka Is so Fast](https://medium.com/swlh/why-kafka-is-so-fast-bde0d987cd03)
+- [RabbitMQ vs Kafka - architectural perspsective](https://eranstiller.com/rabbitmq-vs-kafka-an-architects-dilemma-part-1)
 - [RabbitMQ vs Kafka](https://arxiv.org/pdf/1709.00333.pdf)
 - [A comparison between RabbitMQ and Apache Kafka](https://tarunbatra.com/blog/comparison/How-to-choose-between-Kafka-and-RabbitMQ/)
 - [Comparing RabbitMQ and Kafka](https://www.cloudamqp.com/blog/2019-12-12-when-to-use-rabbitmq-or-apache-kafka.html)
