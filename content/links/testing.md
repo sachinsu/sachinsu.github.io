@@ -13,7 +13,7 @@ draft: false
 - [Toxiproxy - A TCP proxy to simulate network and system conditions for chaos and resiliency testing](https://toxiproxy.io)
 - [Papercut SMTP - Test Email delivery during development](https://github.com/ChangemakerStudios/Papercut-SMTP)
 - [Malabi -Trace based testing in JavaScript](https://github.com/aspecto-io/malabi)
-
+- [AB Testing 101](https://medium.com/jonathans-musings/ab-testing-101-5576de6466b)
 ## Load Testing
 
 - [K6 - Load testing tool](https://k6.io/open-source/)
