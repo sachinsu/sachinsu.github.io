@@ -18,6 +18,7 @@ Useful links related from AI, ML space
 
 ## Articles
 
+- [How a Machine Learns](https://janav.wordpress.com/2023/10/10/how-a-machine-learns/)
 - [Machine learning is still too hard - Year 2022](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/)
 - [Neural Networks from Scratch](https://sirupsen.com/napkin/neural-net)
 - [History of AI](https://spectrum.ieee.org/history-of-ai)
@@ -44,3 +45,8 @@ Useful links related from AI, ML space
 
 - [Emerging Architecture for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/)
 - [LocalGPT - Chat with your documents on your local device using GPT models](https://github.com/PromtEngineer/localGPT)
+
+
+## AI based Translation 
+
+- [Lokalize - AI based translation of file](https://lokalise.com/)
