@@ -2088,7 +2088,7 @@
     - Determine max concurrent batch jobs (c2)
 
     - Formula,
-        - CPU Count at Peak (!00%) Utilization (P) = (C / R1) + (C2/R2)
+        - CPU Count at Peak (100%) Utilization (P) = (C / R1) + (C2/R2)
         - To arrive at CPU Count at lower utilization (say 50%) P50 = P/0.5
         - R1 of 400 and R2 of 4.00 could be considered as highly optimistic
 
@@ -2193,3 +2193,83 @@ long-term plans and solutions with stakeholders and leadership.
 
 - Differences in type of Testing 
   - Regression vs Mutation - Regression tests check if new code is buggy while mutation tests check whether test themselves are reliable by twicking the code. 
+  
+- Learning for Database Performance from ScyllaDB, 
+- As much as possible, choose official driver for your environment
+    - Checklist for driver selection
+        - Clear documentation
+        - Long term support and being active maintained
+        - Asynchonous API
+        - Decent test coverage
+        - Database specific optimzations
+
+- Wireshark is a great open-source tool for interpreting network packets
+
+- Make the client-side timeouts around twice as long as server-side ones, unless you have an extremely good reason to do otherwise.
+
+- Inspecting logs and dashboards is helpful in investigating such cases, so make sure that observability tools are available.
+
+- Estimate the characteristics of your workload,
+    - Is it likely to be a predictable, steady flow of requests (e.g., updates being
+fetched from other systems periodically)? 
+    - Is the variance high and hard to predict, with the system being idle for
+    - Cloud platforms offering of provisioned throughput is cost efficient and it incurs certain cost regardless of To database activity while on demand pricing is per request.
+
+- Always expect spikes. Even if your workload is absolutely steady, a temporary hardware failure or a surprworkise DDoS attack can cause a sharp increase in incoming requests
+
+- Whenever possible, schedule maintenance options for times with expected low pressure on the system.
+
+- Infrastructure 
+  - Storage
+    - When latency is critical - Locally attached NVMe SSDs provide standard performance, prefer Serial AT over PCI Interface. Avoid network attached disks.
+    - When latency is not super critical - use Disks with SATA Interface. 
+    - RAID - General recommendation for creating a RAID-0 setup is to use all disks of the same type and capacity to avoid variable performance during your daily workload. For best performance, recommendation is local NVMe SSD with RAID 0.  The recommended file system is XFS.
+    - Disk size - be sure to account for your existing data—replicated—plus your anticipated near-term data growth, and also leave sufficient room for the overhead of internal operations (like compactions [for LSM-tree-based databases], the commit log, backups, etc.).
+    - Start with replication factor of 3 over raw/base data size and then account for,
+        - Data Growth Rate
+        - Data retention requirements
+
+  - Cores - More cores will generally mean better performance. This is important for achieving optimal performance from databases that are architected to benefit from multithreading,and it’s absolutely essential for databases that are architected with a shard-per-core architecture—running a separate shard on each core in each server. In this case, themore cores the CPU has, the more shards—and the better data distribution—the database will have. Hyper threaded cores/virtual cores are not same as Physical CPUs and s that's the case then double the number of physical CPU will be needed.  Scylla has published benchmark of QPS (Queries per second) for a payload on a single physical CPU, this can be used for further apportion. Scylla's max recommended ratio of Storage/memory is  30:1.  So for a system having 128GB of  memory, recommenced upper bound is 3.8TB. For production purposes, scylladb recommends 8GB of RAM per CPU Core.
+
+   - Every database has an ideal memory-to-storage ratio—for example, a certain amount of TB or GB per node that it can support with optimal performance.
+
+  - Write-heavy  workloads ->     a database that stores data in immutable files (e.g., Cassandra, ScyllaDB, and others that use LSM trees).But be prepared for higher storage requirements and the potential for slower reads
+
+  - Hot Data - Data that's accessed and likely cached.
+
+  - To determine where reads are from Hot or Cold data, check ratio of cache misses.
+
+  - Delete heavy workloads - example is using database as durable queue. Avoid database that works on immutable files as deleting is expensive
+
+  - Competing Workloads  (i.e. OLTP and OLAP) - Identify which workload is more important for use case and prioritize for it.  Important aspects are,
+
+  - Item size - Size of items being stored will dictate whether workload is CPU or Storage bound. Higher payloads require more processing, I/O and network traffic. Larger the payload, higher cache utilization will be required. Write-optimized databases cache writes before flushing it to stores.  This also requires more disk I/O.  On the other hand, smaller the payload, greater chances of introducing memory fragmentation which results in database unable to fully utilize the available memory.
+
+ - Item type - Choose the data type thats the minimum needed to store the type of data you need and choose database thats optimized for that data type (.e.g. JSON for MongoDB)
+
+ - Factoring in your growth is critical for avoiding unpleasant surprises in production, from an operational as well as a budget perspective.
+
+ - To understand latency, always prefer 99th percentile latency over median or average latency
+
+- Autoscaling - is not instantaneous. This is not ideal for unexpected or extreme spikes.  Its best when,
+    - Load changes have high amplitude
+    -  The rate of change is in magnitude of hours
+
+ - When ACID properties are important for workload, For cluster setup, pay attention to master node.    
+- LSM tree based databases are optimized for heavy write workloads while b-tree are optimized for heavy read workloads
+
+-  Banchmarking - always take iterative approach i.e. start with small target, optimize and repeat.
+    - Throughput focus: You measure the maximum throughput by sending a new request as soon as the previous request completes. This helps you understand the highest number of IOPS that the database can sustain. Throughput-focused benchmarks are often the focus for analytics use cases (fraud detection, cybersecurity, etc.)
+    - Latency focus: You assess how many IOPS the database can handle without compromising latency. This is usually the focus for most user-facing and real-time applications.   
+     - Some questions to ask while performing benchmarking  per database connection,
+        - average latency
+        - P99 percentile latency
+        - Maximum latency experienced in recent time frame
+
+- CPU vs GPU 
+  - CPUs are designed for sequential processing while GPUs have been designed for massive levels of parallelism and high throughput, at the cost of medium to high instruction latency.
+  - GPU's design direction has been influenced by their use in video games, graphics, numerical computing, and now deep learning
+    - A GPU consists of several streaming multiprocessors (SM), where each SM has several processing cores.
+    - There is an off chip global memory, which is a HBM or DRAM. It is far from the SMs on the chip and has high latency.
+    - There is an off chip L2 cache and an on chip L1 cache. These L1 and L2 caches operate similarly to how L1/L2 caches operate in CPUs.
+    - There is a small amount of configurable shared memory on each SM. This is shared between the cores. Typically, threads within a thread block load a piece of data into the shared memory and then reuse it instead of loading it again from global memory.
