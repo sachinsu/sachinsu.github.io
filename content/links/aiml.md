@@ -15,6 +15,7 @@ Useful links related from AI, ML space
 
 - [Fast AI by Jeremy Howard](https://www.fast.ai/)
 - [AI Canon - List of resources around GPT](https://a16z.com/2023/05/25/ai-canon/)
+- [Free Deep learning course](https://fleuret.org/dlc)
 
 ## Articles
 
