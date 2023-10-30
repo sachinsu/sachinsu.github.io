@@ -1863,11 +1863,11 @@
     - Large language models such as GPT-3/4, LLaMA and PaLM work in terms of tokens. They take text, convert it into tokens (integers), then predict which tokens should come next.
     - Need from Generative AI perspective,
       - Embeddings - High dimensional Vector representation of Words, sentences, images and audio.Embeddings capture the “relatedness” of text, images, video, or other types of information. This relatedness is most commonly used for:
-                 -   Search: how similar is a search term to a body of text?
+                 -   Search: how similar is a search term to a body of text? Cosine Similarity can be used for this purpose. 
                  -   Recommendations: how similar are two products?
                  -   Classifications: how do we categorize a body of text?
                  -   Clustering: how do we identify trends?
- 
+            - Embeddings represent any content into array of floating point numbers which are always of same length irrespective of the length/size of the original content. 
 
         - Because of advancements in LLMs the embeddings we get have a better “understanding” of your text. This means that querying for the similarity between those vectors produces much better semantic results than before
         - Vector databases use algorithms like ANN (Approximate Nearest Neighbours) so they can facilitate efficient storage, retrieval, and similarity search operations, rather than relying on exact match or range queries. This is especially important for recommendation systems or semantic search, where the nearest or most similar items are as valuable as exact matches.
