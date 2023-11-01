@@ -25,6 +25,7 @@ Knowledge base around general database related topics.
 - [Why you should pick strong consistency, whenever possible](https://cloud.google.com/blog/products/gcp/why-you-should-pick-strong-consistency-whenever-possible)
 - [Change Data Capture, Outbox and Event Sourcing](https://debezium.io/blog/2020/02/10/event-sourcing-vs-cdc/)
 - [Debezium Engine - setup without Apache Kafka](https://debezium.io/documentation/reference/stable/development/engine.html)
+- [Debezium without kafka connect](https://medium.com/@kestra-io/debezium-change-data-capture-without-kafka-connect-18f43cf095d2)
 - [Using Streamsets for CDC From Oracle to Other destinations](https://streamsets.com/blog/replicating-oracle-to-mysql-and-json/)
 - [Transactions in Google Spanner](https://spanner.fyi/transactions/)
 - [Things I Wished More Developers Knew About Databases](https://medium.com/@rakyll/things-i-wished-more-developers-knew-about-databases-2d0178464f78)
