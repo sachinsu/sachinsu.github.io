@@ -2201,7 +2201,7 @@ long-term plans and solutions with stakeholders and leadership.
         - Long term support and being active maintained
         - Asynchonous API
         - Decent test coverage
-        - Database specific optimzations
+        - Database specific optimizations
 
 - Wireshark is a great open-source tool for interpreting network packets
 

@@ -24,6 +24,7 @@ Knowledge base around general database related topics.
 - [Streaming Database Changes with Debezium](https://www.youtube.com/watch?v=Qvrhh0sHCrc)
 - [Why you should pick strong consistency, whenever possible](https://cloud.google.com/blog/products/gcp/why-you-should-pick-strong-consistency-whenever-possible)
 - [Change Data Capture, Outbox and Event Sourcing](https://debezium.io/blog/2020/02/10/event-sourcing-vs-cdc/)
+- [Debezium Engine - setup without Apache Kafka](https://debezium.io/documentation/reference/stable/development/engine.html)
 - [Using Streamsets for CDC From Oracle to Other destinations](https://streamsets.com/blog/replicating-oracle-to-mysql-and-json/)
 - [Transactions in Google Spanner](https://spanner.fyi/transactions/)
 - [Things I Wished More Developers Knew About Databases](https://medium.com/@rakyll/things-i-wished-more-developers-knew-about-databases-2d0178464f78)
@@ -119,9 +120,11 @@ Knowledge base around general database related topics.
 
 ## Database scaling
 
+- [Scaling TIDB to 1 million QPS](https://blog.flipkart.tech/scaling-tidb-to-1-million-qps-d556aa6a16ef)
 - [Sharding a database](https://stackoverflow.blog/2022/03/14/how-sharding-a-database-can-make-it-faster/)
 - [MySQL Sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1)
 - [CUID-Collision-resistant ids optimized for horizontal scaling and performance.](https://github.com/ericelliott/cuid)
+
 
 
 ## Data Discovery
