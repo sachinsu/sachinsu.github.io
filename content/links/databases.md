@@ -58,6 +58,7 @@ Knowledge base around general database related topics.
 
 ## Data Analytics 
 
+- [Guidance on Data Visualizations](https://github.com/cxli233/FriendsDontLetFriends)
 - [Simple data pipeline Powertools](https://csvbase.com/blog/5)
 - [Cube.dev - Open source Headless BI platform](https://cube.dev/)
 - [Evidence.dev - BI as Code - SQL + Markdown to generate Reports](https://evidence.dev/)

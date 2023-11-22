@@ -46,7 +46,7 @@ Useful links related from AI, ML space
 
 - [Emerging Architecture for LLM Applications](https://a16z.com/2023/06/20/emerging-architectures-for-llm-applications/)
 - [LocalGPT - Chat with your documents on your local device using GPT models](https://github.com/PromtEngineer/localGPT)
-
+- [Run LLMs from command line](https://github.com/simonw/llm)
 
 ## AI based Translation 
 
