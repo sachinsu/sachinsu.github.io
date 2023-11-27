@@ -2203,6 +2203,18 @@ long-term plans and solutions with stakeholders and leadership.
   - UI Testing - This tests the UI interactions with the APIs to make sure the data can be displayed properly.
   - Fuzz Testing - This injects invalid or unexpected input data into the API and tries to crash the API. In this way, it identifies the API vulnerabilities.
 
+- from google blog, 
+  -     Performance testing - Measuring the latency or throughput of your application or service.
+  -    Load and scalability testing - Testing your application or service under higher and higher load.
+  -    Fault-tolerance testing - Testing your application’s behavior as different dependencies either fail or go down entirely.
+  -    Security testing - Testing for known vulnerabilities in your service or application.
+  -    Accessibility testing - Making sure the product is accessible and usable for everyone, including people with a wide range of disabilities.
+  -    Localization testing - Making sure the product can be used in a particular language or region.
+  -    Globalization testing - Making sure the product can be used by people all over the world.
+  -    Privacy testing - Assessing and mitigating privacy risks in the product.
+  -    Usability testing - Testing for user friendliness.
+
+
 
 - Learning for Database Performance from ScyllaDB, 
 - As much as possible, choose official driver for your environment
