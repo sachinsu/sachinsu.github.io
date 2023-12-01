@@ -667,3 +667,7 @@
   -  Due to the deskilling of the bank branch, the people at a bank branch, including the branch manager in many firms, can only offer solutions to relatively straightforward problems. For the other ones, they also have to call into a support phone tree. 
   -  Paper Letter to VP of Retail Banking, Office of the president or investor relations will often cause bank to swing into action.  These folks are professionals who are capable of keeping paper notes and having day-to-day recollection of things they have done in complex cases. They are managed and incentivize in a way which allows them to have agency. The formal customer support organization is very, very bad at this, at every tier. 
   -  As a sophisticated user of the banking system, a useful skill to have is understanding whether the ultimate solution to an issue facing you is probably available to Tier Two or probably only available to a professional earning six figures a year. You can then route your queries to the bank to get in front of the appropriate person with the minimal amount of effort expended on making this happen.
+
+- Psychology, 
+  - Contrast principle - affects the way we see the difference between two things that are presented one after another.
+  - The rule for reciprocation. The rule says that we should try to repay, in kind, what another person has provided us.

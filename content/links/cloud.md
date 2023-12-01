@@ -9,7 +9,7 @@ Useful links for deep diving in various Cloud Ecosystems
 ### Articles
 
 - [Cost of Cloud - Paradox](https://a16z.com/the-cost-of-cloud-a-trillion-dollar-paradox/)
-- [Cloud vs. On-premise Computing](https://www.scirp.org/journal/paperinformation.aspx?paperid=87661)
+- [Cloud vs. On-premise Computing](https://www.scirp.org/journal/paperinfexormation.aspx?paperid=87661)
 - [Zero dollar Infrastructure stack](https://medium.com/better-programming/the-zero-dollar-infrastructure-stack-7c840a8b555b)
 - [Cloud Server Performance, Prices, Specs and Features](https://www.vpsbenchmarks.com/)
 - [The Cost of Cloud, a Trillion Dollar Paradox](https://a16z.com/2021/05/27/cost-of-cloud-paradox-market-cap-cloud-lifecycle-scale-growth-repatriation-optimization/)
