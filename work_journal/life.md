@@ -273,6 +273,11 @@
     - The least productive people are usually the ones who are most in favor of holding meetings.
     - There are few talents more richly rewarded with both wealth and power, in countries around the world, than the ability to convince backward people that their problems are caused by other people who are more advanced.
 
+
+- Taleb 
+    - The perception of safety is highest the instant before the black swan materializes
+    - Great leadership requires eternal vigilance
+
 - If I spend somebody else’s money on somebody else, I’m not concerned about how much it is, and I’m not concerned about what I get. And that’s government.
 
 
@@ -390,7 +395,7 @@
     - What people will bid for bonds depends on how much they could get for the same money by putting it somewhere else. That is why bond prices go down when interest rate goes up and vice-versa. A Bond with 105 a year from now is not worth buying for 100 today if the current interest rate is 6 percent.
 	- For a period of year, bonds are likely to be much safer than stocks. For a period of 20 or 30 years, the risk of inflation threatens the value of bonds or other assets with fixed amounts.Even in the absense of inflation, stock prices can generally be relied on to rise over a period of decades while bond prices and the prices of other fixed assets do not. 
 	- "It is wrong for people to be penalized for things that are not their fault" - This implicitly changes subject from risk to morality.
-	- Politics and economics differ radilly in a way they deal with time. 
+	- Politics and economics differ readily in a way they deal with time. 
 	- In economics, future consequences are anticipated in concept of "present value". 
 	- In the context of National Economy, Avoid "Fallacy of composition" - What applies to part applies to the whole. 
 	- GDP - sum total of everything produced within a nation's borders. Over the period of generations, the goods and services which constitute national output change so much that statistical comparisons become practically meaningless.
@@ -485,6 +490,10 @@
     - Hsun Tzu (Chinese philosopher)
         - Man is born with a love of gain. If he indulges this love, he will be quarrelsome and greedy, shedding all sense of courtesy or humility. He is born with feelings of envy and hatred, and if he indulges these, they will lead him into violence and villainy and all sense of loyalty and good faith will disappear. Man is born with desires of the senses, and if he indulges these, he will be licentious and wanton and will observe neither propriety nor principles. If he is clever, he will surely be a robber; if he is brave, he will be a bandit; if he is able, he will cause trouble; if he is a debater, his arguments will make nonsense.
 
+- Three Languages of Politics by Arnold Kling
+  - Liberals see the world as a battle between victims and oppressors.
+  - Conservatives see the world as a battle between civilization and barbarism.
+  - Libertarians see the world as a battle between freedom and coercion.
 
 - Food 
 	- When making noodles (instant or otherwise), a pinch of soda to the boiling water will add a springy, Kollywood stunt actor texture to the noodles. And finally, if you add a pinch when parboiling peeled potatoes, baking soda will break down the pectin in the cell walls of the potato, which will help you get the most astonishingly crispy, golden brown colour and texture when frying them.
@@ -669,5 +678,11 @@
   -  As a sophisticated user of the banking system, a useful skill to have is understanding whether the ultimate solution to an issue facing you is probably available to Tier Two or probably only available to a professional earning six figures a year. You can then route your queries to the bank to get in front of the appropriate person with the minimal amount of effort expended on making this happen.
 
 - Psychology, 
-  - Contrast principle - affects the way we see the difference between two things that are presented one after another.
+  - Contrast principle - There is a principle in human perception, the contrast principle, that affects the way we see the difference between two things that are presented one after another. Simply put, if the second item is fairly different from the first, we will tend to see it as more difttferent than it actually is.
   - The rule for reciprocation. The rule says that we should try to repay, in kind, what another person has provided us.
+  - the strategy of starting with an extreme demand and then retreating to the more moderate one
+produced the most money for the person using it.
+  -  What the Freedman and Fraser findings tell us, then, is to be very careful about agreeing to trivial requests. Such an agreement can not only increase our compliance with very similar, much larger re-quests, it can also make us more willing to perform a variety of larger favors that are only remotely connected to the little one we did earlier. It’s this  second, general kind of influence concealed within small commitments that scares me. Even a small action has the potential  influence not only my future behavior but also my self-image in ways I may not want. And once a person’s self-image is altered, all sorts of subtle advantages become available to someone who wants to exploit that new image. 
+  - commitments are most effective in changing a person’s self-image and future behavior when they are active, public, and effortful.
+  - Lowballing - An advantage is offered that induces a favorable purchase decision; then, sometime after the decision has been made but before the bargain is sealed, the original purchase advantage is deftly removed.
+  - In general, then, your best strategy when in need of emergency help is to reduce the uncertainties of those around you concerning your condition and their responsibilities. Be as precise as possible about your need for aid. Do not allow bystanders to come to their own conclusions because, especially in a crowd, the principle of social proof and the consequent pluralistic ignorance effect might well cause them to view your situation as a nonemergency. And request assistance of a single individual from the group of on-lookers. Fight the natural tendency to make a general request for help.Pick out one person and assign task to individual.
