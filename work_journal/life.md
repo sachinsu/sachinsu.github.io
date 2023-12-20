@@ -686,3 +686,17 @@ produced the most money for the person using it.
   - commitments are most effective in changing a person’s self-image and future behavior when they are active, public, and effortful.
   - Lowballing - An advantage is offered that induces a favorable purchase decision; then, sometime after the decision has been made but before the bargain is sealed, the original purchase advantage is deftly removed.
   - In general, then, your best strategy when in need of emergency help is to reduce the uncertainties of those around you concerning your condition and their responsibilities. Be as precise as possible about your need for aid. Do not allow bystanders to come to their own conclusions because, especially in a crowd, the principle of social proof and the consequent pluralistic ignorance effect might well cause them to view your situation as a nonemergency. And request assistance of a single individual from the group of on-lookers. Fight the natural tendency to make a general request for help.Pick out one person and assign task to individual.
+  - The principle of social proof states that we use information about how others have behaved to help
+us determine proper conduct for ourselves.
+  - A halo effect occurs when one positive characteristic of a person dominates the way that person is viewed by other.
+  - Humans are phenomenal suckers for flattery
+  - it is not when we have a strong feeling of recognized personal accomplishment that we will seek to
+bask in reflected glory. Instead, it will be when prestige (both public and private) is low that we will be intent upon using the successes of associated others to help restore image.
+
+ - Deep inside is a sense of low personal worth that directs them to seek prestige not from the generation or promotion of their own attainments, but from the generation or promotion of their
+associations with others of attainment.
+
+- when we are confronted with what appears to be an authority figure’s influence attempt, “Is this authority truly an expert?”.The question impels us to distinguish between relevant authorities and irrelevant authorities. Before submitting to authority influence, it would be wise to ask a second simple question: “How truthful can we expect the expert to be here?” Authorities, even the best informed, may not present their information honestly to us
+
+- scarcity principle—that opportunities seem more valuable to us when their availability is limited. As soon as we feel the tide of emotional arousal that flows from scarcity influences, we should use that rise in arousal as a signal to stop short. Panicky, feverish reactions have no place in wise compliance decisions. We need to calm ourselves and regain a rational perspective. Once that
+is done, we can move to the second stage by asking ourselves why we want the item under consideration. If the answer is that we want it primarily for the purpose of owning it, then we should use its availability to help gauge how much we want to spend for it.However, if the answer is that we want it primarily for its function (that is, we want something good to drive, drink, eat, etc.), then we must remember that the item under consideration will function equally well whether scarce or plentiful. Quite simply, we need to recall that the scarce cookies didn’t taste any better.

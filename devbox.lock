@@ -2,7 +2,7 @@
   "lockfile_version": "1",
   "packages": {
     "python310": {
-      "plugin_version": "0.0.1",
+      "plugin_version": "0.0.3",
       "resolved": "github:NixOS/nixpkgs/f80ac848e3d6f0c12c52758c0f25c10c97ca3b62#python310",
       "source": "nixpkg"
     }

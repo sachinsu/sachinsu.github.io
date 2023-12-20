@@ -83,6 +83,7 @@ draft: false
 - [Text (DSL) to diagrams](https://d2lang.com)
 - [Interactive guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 - [End to end encryption in browser](https://blog.excalidraw.com/end-to-end-encryption/)
+- [Collection of SVG logos](https://svgl.vercel.app/)
 
 ## Desktop App frameworks 
 
