@@ -131,6 +131,7 @@ draft: false
 ## High Availability 
 
 - [Tools for Multi-Master Replication](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
+- [PostgreSQL Replication](https://www.youtube.com/watch?v=jPp4XIY4XRw)
 
 ## Change Data Capture, Asynchronous change processing etc. 
 
@@ -156,3 +157,4 @@ draft: false
 ## Vector Embeddings 
 
 - [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
+- [Overview of pgVector](https://jkatz05.com/post/postgres/pgvector-overview-0.5.0/)

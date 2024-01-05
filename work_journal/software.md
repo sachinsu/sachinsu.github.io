@@ -2318,3 +2318,16 @@ fetched from other systems periodically)?
   - D - The amount of text we train on.
 - LLMs currently only have system 1 level features..i.e. no thinking on its part.  
 - LLM security aspects are still evolving. few areas are jailbreak, prompt injectiom, data poisoning etc. 
+
+- PostgreSQL 
+  - Logical replication allows the real-time streaming of changes from a database into any system that can understand the PostgreSQL logical replication protocol.
+  - One advantage this has over physical (or binary) replication is that you can use logical replication to stream changes from a PostgreSQL 15 to a PostgreSQL 16 system as part of a major version upgrade. 
+  - Active-active -  managing an active-active system is extremely complicated: it impacts application design, requires you to have a write-conflict management and resolution strategy, and requires careful fault tolerance monitoring to help ensure data integrity (e.g. a “conflict storm”) and replication health (e.g. what happens if an instance can’t replicate changes for several hours?).
+    - One or more primaries replicating with each other 
+    - Requires conflict detection/resolution
+    - Application needs to be designed for multiple primaries.
+    - No failver required
+    - Postgresql 16 supports bi-directional replication
+  - Active-standby - One primary (Active) , one or more replicas (standby). Used for High availability, read load balancing. 
+  - Physical replication- Copies data exactly as it appears on disk 
+  - Logical replication - copies data in a format that can be interpreted by other systems. Uses publisher/subscriber model. Possible to replicate between heterogenous systems.
