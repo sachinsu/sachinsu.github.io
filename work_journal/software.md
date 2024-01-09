@@ -2331,3 +2331,9 @@ fetched from other systems periodically)?
   - Active-standby - One primary (Active) , one or more replicas (standby). Used for High availability, read load balancing. 
   - Physical replication- Copies data exactly as it appears on disk 
   - Logical replication - copies data in a format that can be interpreted by other systems. Uses publisher/subscriber model. Possible to replicate between heterogenous systems.
+
+
+- LLMs at the end of 2023, 
+  - LLMs help when high level reasoning is not needed, task involves regurgitating same stuff again in slightly different forms. They are limited by maximum size of their context 
+  - what sense does it make today not to use LLMs for programming? Asking LLMs the right questions is a fundamental skill. The less it is practiced, the less one will be able to improve their work thanks to AI. And then, developing a descriptive ability of problems is also useful when talking to other human beings.
+  - LLMs can not be trained at much lower cost (in thousands of $) and can be run locally or on Mobile devices. 
