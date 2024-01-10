@@ -51,3 +51,4 @@ Useful links related from AI, ML space
 ## AI based Translation 
 
 - [Lokalize - AI based translation of file](https://lokalise.com/)
+- [Vibery - Semantic Search using embeddings and KNN](https://github.com/veekaybee/viberary/)

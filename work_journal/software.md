@@ -2337,3 +2337,9 @@ fetched from other systems periodically)?
   - LLMs help when high level reasoning is not needed, task involves regurgitating same stuff again in slightly different forms. They are limited by maximum size of their context 
   - what sense does it make today not to use LLMs for programming? Asking LLMs the right questions is a fundamental skill. The less it is practiced, the less one will be able to improve their work thanks to AI. And then, developing a descriptive ability of problems is also useful when talking to other human beings.
   - LLMs can not be trained at much lower cost (in thousands of $) and can be run locally or on Mobile devices. 
+
+
+- Search, Semantic Search 
+  - Traditional search engines, including Elasticsearch/OpenSearch do this lookup efficiently by building an inverted index, a data structure that creates a key/value pair where the key is the term and the value is a collection of all the documents that match the term and performing retrieval from the inverted index. Retrieval performance from an inverted index can vary depending on how it’s implemented, but it is O(1) in the best case, making it an efficient data structure.  A common classic retrieval method from an inverted index is BM25, which is based on TF-IDF and calculates a relevance score for each element in the inverted index. The retrieval mechanism first selects all the documents with the keyword from the index, the calculates a relevance score, then ranks the documents based on the relevance score.
+  - Semantic search looks for near-meanings instead of exact match.
+  - search engines will implement a number of both keyword-based and semantic approaches in a solution known as hybrid search
