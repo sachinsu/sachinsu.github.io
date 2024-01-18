@@ -132,6 +132,7 @@ draft: false
 
 - [Tools for Multi-Master Replication](https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling)
 - [PostgreSQL Replication](https://www.youtube.com/watch?v=jPp4XIY4XRw)
+- [Distributed PostgreSQL](https://www.crunchydata.com/blog/an-overview-of-distributed-postgresql-architectures)
 
 ## Change Data Capture, Asynchronous change processing etc. 
 

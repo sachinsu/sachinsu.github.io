@@ -189,6 +189,7 @@
             - GC only gets told by others if an object is live
             - In this case JIT tells the GC that object is still live 
             - JIT is free to lengthen the object lifetime till the end of method and has always been
+
 - [Technology Arch - How much spare capacity][Architecture][Sizing]
     - Suppose it takes a week (168 hours) to repair the capacity and the MTBF is 100,000 hours. There is a 168/1; 000; 000 * 100 = 1.7 percent, or 1 in 60, chance of a second failure. Now suppose the MTBF is two weeks (336 hours). In this case, there is a 168/336  100 = 50 percent, or 1 in 2, chance of a second failure—the same as a coin flip. Adding an additional replica becomes prudent. MTTR is a function of a number of factors. A process that dies and needs to be restarted has a very fast MTTR.If all this math makes your head spin, here is a simple rule of thumb: N+1 is a minimum for a service; N+2 is needed if a second outage is likely while you are fixing the first one.
 
@@ -811,8 +812,6 @@
             - What guidelines are needed to ensure that projects are easily rebuilt?
             - What processes are needed to keep images up to date?
             - What are you going to do to scan your images before build and deployment?
-
-
 
 - Data Lake pattern 
     - Response to complexity, expense and failures of datawarehouse pattern.
@@ -1860,22 +1859,52 @@
 - GPU - Graphics processing units or GPUs are dedicated highly parallel hardware accelerators that were originally design to accelerate the creation of images. More recently, folks have been looking at GPUs to accelerate other workloads like Database analytics and transaction processing (OLTP). Although GPUs have little or no use for OLTP style workloads, they have been shown to accelerate analytics.
 
 - Vector Databases
+    - Vectors are mathematical objects , represented as arrays of numbers, where each element corresponds to a specific dimension or component.
+    - Vectors are primarily used for semantic search like similarity, clustering and classification 
+    - Each vector represents mathematical arrays of numbers that represent the characteristics or attributes of data points.
+    - They are ideal for pattern detection, predictive analytics. 
     - Large language models such as GPT-3/4, LLaMA and PaLM work in terms of tokens. They take text, convert it into tokens (integers), then predict which tokens should come next.
     - Need from Generative AI perspective,
-      - Embeddings - High dimensional Vector representation of Words, sentences, images and audio.Embeddings capture the “relatedness” of text, images, video, or other types of information. This relatedness is most commonly used for:
-                 -   Search: how similar is a search term to a body of text? Cosine Similarity can be used for this purpose. 
-                 -   Recommendations: how similar are two products?
-                 -   Classifications: how do we categorize a body of text?
-                 -   Clustering: how do we identify trends?
-            - Embeddings represent any content into array of floating point numbers which are always of same length irrespective of the length/size of the original content. 
-
+      - Embeddings 
+        - Embeddings are vector representations of data points that capture their semantic meaning or relationships.Embeddings represent any content into array of floating point numbers which are always of same length irrespective of the length/size of the original content. 
+        - Data embeddings convert objects like users, products, documents, and more into dense numerical vectors. 
+          -   Image transformer for image to vector 
+          -   NLP transformer for document to vector 
+          -   Audio transformer for Audio to vector
         - Because of advancements in LLMs the embeddings we get have a better “understanding” of your text. This means that querying for the similarity between those vectors produces much better semantic results than before
         - Vector databases use algorithms like ANN (Approximate Nearest Neighbours) so they can facilitate efficient storage, retrieval, and similarity search operations, rather than relying on exact match or range queries. This is especially important for recommendation systems or semantic search, where the nearest or most similar items are as valuable as exact matches.
+        - Popular use cases 
+          - Personalized recommendations 
+          - Fraud detection
+          - Scientific research 
+          - Content Moderation  
 
     - Why not RDBMS
             RDBMS excel at handling structured data with a fixed schema, they often struggle with unstructured or high-dimensional data, such as images, audio, and text. Traditional databases have not been designed to efficiently handle the task of searching for similar items in a large dataset, specifically high-dimensional vector data which makes them perform worse at scale.
             There are extensions being made available (e.g. pgvector, RediSearch ) that extend RDBMS to support Vector storage/search functionality
 
+    - Dimensionality reduction - techniques aim to reduce the number of dimensions in a vector representation while preserving the essential information. This can help alleviate the challenges associated with high-dimensional data.
+        - Feature selection - Selecting subset of features appropriate for task 
+        - Hashing - lower dimensional representation using hash
+        - Principal Component Analysis (PCA): A statistical technique that identifies the principal components or directions of greatest variance in the data
+    - Distance metrics are mathematical tools used to define and measure the way we compute the
+        similarity (or dissimilarity) between vectors. They are crucial for operations in vector databases
+          - Euclidean distance - Measures the straight-line distance between two points in a vector space.Very sensitive to the magnitude of vectors 
+          - Manhattan Distance - Use Manhattan distance when you want to focus on how much each feature is different, not just how different they all are together. Useful for financial analysis, image retrieval
+          - Cosine distance - Measures the cosine of the angle between two vectors where a higher cosine value indicates greater similarity. Useful for text similarity where the frequency of words (term frequency) is less important than the angle or "direction" of the overall word
+          - Jaccard Similarity - used to compute the similarity between two objects, such as two text documents
+    - Similarity search involves locating the closest vectors to the query vector as per a chosen distance metric.
+    - Algorithms
+      - KNN - algorithm used in both classification and regression tasks which
+      operates on the principle that similar items exist close to each other. It calculates the distance between points using methods like Euclidean, Manhattan, or Hamming distance. The choice of distance metric depends on the type of data.
+      - ANN - technique used to efficiently find points in a large dataset that are similar,
+      but not necessarily identical, to a given query point. Useful in high-dimensional spaces, where traditional search methods become intractable due to the curse of dimensionality.
+    - Indexes for Vectors 
+      -  Flat index - Use Flat for small datasets where precision is critical. 
+      -  Inverted file index - Use IVF for medium to large datasets where there's a balance between precision and speed.
+      -  ANNOY - Use HNSW or Annoy for very large datasets where query speed is more important than precision
+      -  Product quantization - Use PQ when storage or memory is limited, as it provides a compressed representation.
+      - Hierarchical Navigable Small World (HNSW) -  algorithm is based on the concept of small world  networks, where most nodes can be reached from every other by a small number of steps despite the network's large size.
     - Advantages
             Embeddings generation is relatively cheaper than invoking a full LLM API call (OpenAI offers an API to generate embeddings for a string of text using its language model. You feed it any text information (blog articles, documentation, your company's knowledge base), and it will output a vector of floating point numbers that represents the “meaning” of that text.). Querying our embeddings against our DB is much cheaper. Embeddings still retain some semantic information about the text, so we could get the best of both worlds.
 
@@ -2343,3 +2372,14 @@ fetched from other systems periodically)?
   - Traditional search engines, including Elasticsearch/OpenSearch do this lookup efficiently by building an inverted index, a data structure that creates a key/value pair where the key is the term and the value is a collection of all the documents that match the term and performing retrieval from the inverted index. Retrieval performance from an inverted index can vary depending on how it’s implemented, but it is O(1) in the best case, making it an efficient data structure.  A common classic retrieval method from an inverted index is BM25, which is based on TF-IDF and calculates a relevance score for each element in the inverted index. The retrieval mechanism first selects all the documents with the keyword from the index, the calculates a relevance score, then ranks the documents based on the relevance score.
   - Semantic search looks for near-meanings instead of exact match.
   - search engines will implement a number of both keyword-based and semantic approaches in a solution known as hybrid search
+
+- Distributed Postgresql and use cases, 
+- Network attached storage ->	the durability and availability benefits of network-attached storage usually outweigh the performance downsides, but it’s worth keeping in mind that PostgreSQL can be much faster.
+- read replicas	-> Consider using read replicas when you need >100k reads/sec or observe a CPU bottleneck due to reads, best avoided for dependent transactions and large working sets.
+
+-DBMS optimized cloud storage ->	Can be beneficial for complex workloads, but important to measure whether price-performance under load is actually better than using a bigger machine.
+active-active	Consider only for very simple workloads (e.g. queues) and only if you really need the benefits.
+
+-Transparent sharding  -> Use for multi-tenant apps, otherwise use for large working set (>100GB) or compute heavy queries
+
+-Distributed key-value storage with SQL ->	Just use PostgreSQL 😉 For simple applications, the availability and scalability benefits can be usefu

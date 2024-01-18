@@ -68,7 +68,7 @@ Section covering Business, project/programming perspectives
 ## Documenting the Architecture 
 
 - [Arc42 - Open source Template for documenting the Software Architecture](https://arc42.org/)
-- [Arc42 + C4 - Example](https://github.com/bitsmuggler/arc42-c4-software-architecture-documentation-example)
+- [Arc42 + C4 - Example](https://githdub.com/bitsmuggler/arc42-c4-software-architecture-documentation-example)
 - [Structurizr - C4 Diagrams as Code](https://structurizr.com/)
 
 
