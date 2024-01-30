@@ -1918,6 +1918,10 @@
     - Each region has Availability zones (AZ) and each AZ has one or more data centers.
     - Each AWS Service is scoped at Global or Region or AZ (With these services, you are often responsible for increasing the data durability and high availability of these resources) level.
     - For high availability and resiliency, At a minimum, you should use two Availability Zones.
+       - 99.5% ( Two and half-nines) uptime which means weekly downtime of 50 minutes is reasonably achievable without excessive costs.    
+       - AWS guarantees 99.99% uptime for application deployed in redundancy mode across availability zones. Single Machine instances on EC2 only have 99.5% guarantee 
+       -  Each layer of the system needs to have  a higher reliability, in isolation, than the final uptime you're aiming for, because error rates are cumulative.
+
     - Security - Shared Responsibility. AWS is responsible for securing base layer (i.e. upto virtualization layer.). Customer is responsible for securing Operating System (for EC2 VMs), Encrypting data in transit and at rest,Configuring firewall, User Access Management, Customer Data.
     - AWS Root user 
         - Has two sets of credentials 
@@ -2359,7 +2363,7 @@ fetched from other systems periodically)?
     - Postgresql 16 supports bi-directional replication
   - Active-standby - One primary (Active) , one or more replicas (standby). Used for High availability, read load balancing. 
   - Physical replication- Copies data exactly as it appears on disk 
-  - Logical replication - copies data in a format that can be interpreted by other systems. Uses publisher/subscriber model. Possible to replicate between heterogenous systems.
+  - Logical replication - copies data in a format that can be interpreted by other systems. Uses publisher/subscriber model. Possible to replicate between heterogenous systems. It doesnt support DDL and foreign keys. 
 
 
 - LLMs at the end of 2023, 

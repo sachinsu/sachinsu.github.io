@@ -24,6 +24,7 @@ Useful links for deep diving in various Cloud Ecosystems
 ### Articles (AWS)
 
 - [Preparation Guidelines and courses for AWS Certification](https://aws.amazon.com/blogs/training-and-certification/prepare-simultaneously-for-aws-certified-cloud-practitioner-and-aws-certified-solutions-architect-associate/)
+- [Saving egress costs on AWS using S3](https://www.bitsand.cloud/posts/slashing-data-transfer-costs/?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
 - [Reducing AWS Costs](https://www.maxcountryman.com/articles/taming-aws-costs)
 - [Choosing between EC2 and RDS](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-sql-server/comparison.html)
 - [What a typical 100% Serverless Architecture looks like in AWS!](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb)
