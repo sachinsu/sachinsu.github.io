@@ -707,4 +707,11 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - https://archive.is/RZLl4
 
 
+- The trick in any field—from finance to careers to relationships—is being able to survive the short-run problems so you can stick around long enough to enjoy the long-term growth.
+
+- People follow incentives, not advice
+- incentives lean heavily toward not rocking the boat. So everyone keeps paddling long after the market becomes unsustainable.
+- One of the strongest pulls of incentives is the desire for people to hear only what they want to hear and see only what they want to see.
+- It’s just so hard to be purely objective when incentives push you toward one direction
+- When good and honest people can be incentivized into crazy behavior, it’s easy to underestimate the odds of the world going off the rails.
 

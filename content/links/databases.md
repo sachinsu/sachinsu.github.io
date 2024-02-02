@@ -58,6 +58,7 @@ Knowledge base around general database related topics.
 
 ## Data Analytics 
 
+- [Understanding avro, parquet and ORC](https://www.vladsiv.com/big-data-file-formats/?ref=davidgomes.com#final-words)
 - [Guidance on Data Visualizations](https://github.com/cxli233/FriendsDontLetFriends)
 - [Simple data pipeline Powertools](https://csvbase.com/blog/5)
 - [Cube.dev - Open source Headless BI platform](https://cube.dev/)
@@ -82,6 +83,7 @@ Knowledge base around general database related topics.
 - [Chart types and its usage](https://looker.com/blog/different-types-graphs-charts-uses)
 - [Rudder - Open source Customer Data Infrastructure](https://rudderstack.com/)
 - [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
+- [DuckDB - Connect and join on external databases](https://duckdb.org/2024/01/26/multi-database-support-in-duckdb.html)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
 - [Modern Data stack guide by Castor](https://notion.castordoc.com/)
