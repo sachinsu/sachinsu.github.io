@@ -714,4 +714,5 @@ is done, we can move to the second stage by asking ourselves why we want the ite
 - One of the strongest pulls of incentives is the desire for people to hear only what they want to hear and see only what they want to see.
 - It’s just so hard to be purely objective when incentives push you toward one direction
 - When good and honest people can be incentivized into crazy behavior, it’s easy to underestimate the odds of the world going off the rails.
-
+- The sore truth is that complexity sells better.
+- Complexity gives a comforting impression of control, while simplicity is hard to distinguish from cluelessness.

@@ -2387,3 +2387,14 @@ active-active	Consider only for very simple workloads (e.g. queues) and only if 
 -Transparent sharding  -> Use for multi-tenant apps, otherwise use for large working set (>100GB) or compute heavy queries
 
 -Distributed key-value storage with SQL ->	Just use PostgreSQL 😉 For simple applications, the availability and scalability benefits can be usefu
+
+
+- Using command line tools , with parallel processing, for data processing jobs, 
+-- This problem of unused cores can be fixed with the wonderful xargs command, which will allow us to parallelize the grep. Since xargs expects input in a certain way, it is safer and easier to use find with the -print0 argument in order to make sure that each file name being passed to xargs is null-terminated. The corresponding -0 tells xargs to expected null-terminated input. Additionally, the -n how many inputs to give each process and the -P indicates the number of processes to run in parallel. Also important to be aware of is that such a parallel pipeline doesn’t guarantee delivery order, but this isn’t a problem if you are used to dealing with distributed processing systems. The -F for grep indicates that we are only matching on fixed strings and not doing any fancy regex.
+
+```
+
+find . -type f -name '*.pgn' -print0 | xargs -0 -n1 -P4 grep -F "Result" | gawk '{ split($0, a, "-"); res = substr(a[1], length(a[1]), 1); if (res == 1) white++; if (res == 0) black++; if (res == 2) draw++;} END { print NR, white, black, draw }'
+
+
+```
