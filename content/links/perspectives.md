@@ -59,6 +59,8 @@ Section covering Business, project/programming perspectives
 - [Links for Aspiring CTO](https://github.com/kuchin/awesome-cto)
 - [First principles thinking](https://addyosmani.com/blog/first-principles-thinking-software-engineers/)
 - [How Computer CPUs work](https://cpu.land/editions/one-pager)
+- [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
+
 
 ## Legacy Modernization 
 

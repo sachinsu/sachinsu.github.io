@@ -38,7 +38,7 @@ My current Favorite Language
 - [Go for Cloud - Tips and Techniques](https://rakyll.org/go-cloud/)
 - [Why and what to instrument in Go Web Apps](https://alex.dzyoba.com/blog/go-prometheus-service/)
 - [Continuous Profiling of Go programs](https://medium.com/google-cloud/continuous-profiling-of-go-programs-96d4416af77b)
-- [How I write HTTP services after eight years](https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years)
+- [How I write HTTP services in 2024](https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years/)
 - [Go Concurrency - Singleflight, Bounded concurrency, Weighted bounded concurrency](https://encore.dev/blog/advanced-go-concurrency)
 - [Why you should be using errgroup withcontext in Golang](https://bionic.fullstory.com/why-you-should-be-using-errgroup-withcontext-in-golang-server-handlers/)
 - [WebAssembly in Go](https://dstoiko.github.io/posts/go-pong-wasm/)
@@ -84,6 +84,10 @@ My current Favorite Language
 - [Excelsize - pure Go library providing a set of functions that allow you to write to and read from XLSX / XLSM / XLTM / XLTX files](https://github.com/qax-os/excelize)
 - [Benthos - Simplified stream processing with built-in connectors](https://github.com/Jeffail/benthos)
 
+
+### Learning 
+
+- [Learn go with tests](https://github.com/quii/learn-go-with-tests)
 
 ### Task queues
 
