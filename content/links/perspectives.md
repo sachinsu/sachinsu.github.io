@@ -62,6 +62,7 @@ Section covering Business, project/programming perspectives
 - [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
 
 
+
 ## Legacy Modernization 
 
 - [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
@@ -103,3 +104,4 @@ Section covering Business, project/programming perspectives
 ## Career
 
 - [Checklist for Senior Engineer](https://littleblah.com/post/2019-09-01-senior-engineer-checklist/)
+- [Power of Negative Thinking](https://archive.is/O5Xcn)

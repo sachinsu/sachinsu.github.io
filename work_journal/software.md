@@ -2398,3 +2398,7 @@ find . -type f -name '*.pgn' -print0 | xargs -0 -n1 -P4 grep -F "Result" | gawk 
 
 
 ```
+
+- Laws of consulting as per Jerry weinberg, 
+- The First Law of Consulting states that consultants will never admit that they are sick. To get clients to hire you, you must agree that the client is competent, and then ask if there are any areas that need improvement.
+- "The Second Law of Consulting: No matter how it looks at first, it's always a people problem.

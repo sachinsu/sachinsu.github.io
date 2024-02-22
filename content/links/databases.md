@@ -10,6 +10,7 @@ Knowledge base around general database related topics.
 
 ## General Links
 
+- [Query optimization guide](https://aiven.co/developers/sql-query-optimization-guide)
 - [Database performance for Developers](https://www.crunchydata.com/blog/demystifying-database-performance-for-developers)
 - [Heimdall data -Database scale-out without Application changes](https://www.heimdalldata.com/)
 - [Database of databases](https://dbdb.io)

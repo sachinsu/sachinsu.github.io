@@ -47,6 +47,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [Observable - A static site generator for data apps, dashboards, reports](https://github.com/observablehq/framework)
 - [Nginx Unit - Web Server with Native support for Languages](https://github.com/nginx/unit)
 - [GoatCounter - Open source Web site Analytics](https://github.com/arp242/goatcounter)
 - [RedwoodJS - App framework](https://github.com/redwoodjs/redwood )
