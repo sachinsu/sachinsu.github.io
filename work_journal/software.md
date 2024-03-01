@@ -939,6 +939,9 @@
 
 
 - [PostgreSQL Connection Pool size][Databases]
+  - If a server is provisioned with 128 cores. With hyperthreading on, it can handle 256 processes. EDB expects factor of 4 to be acceptable while setting max_connections parameter. (ref: https://richyen.com/postgres/2021/09/03/less-is-more-max-connections.html) 
+  - Connection pooler (e.g. pgbouncer) allows thousands of clients/application connections to share a relatively small pool of database sessions
+  - A connection pooler is a vital part of any high-throughput database system, as it elimiates connection overhead and reserves larger portions of memory and CPU time to a smaller set of database connection, preventing unwanted resource contention and performace degradation.
     - Formula
         pool size = min(num_cores, max_parallel_ios)/active_Factor*Parallelism 
     - Determining Active Factor 

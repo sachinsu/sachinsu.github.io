@@ -716,3 +716,24 @@ is done, we can move to the second stage by asking ourselves why we want the ite
 - When good and honest people can be incentivized into crazy behavior, it’s easy to underestimate the odds of the world going off the rails.
 - The sore truth is that complexity sells better.
 - Complexity gives a comforting impression of control, while simplicity is hard to distinguish from cluelessness.
+
+
+
+- Geopolitics, country's life cycle
+  - Re-alignment/Regime change (roughly every 4th generation) happens every 80 to 100 years.
+  - There are no permanent enemies or friends. 
+
+
+- How to be super communicator?
+ - every discussion is made of up different kind of conversations, 
+    - practical - solve problems
+    - emotional - expectation is to emphathize 
+    - social - how relate to us/society 
+
+    if you are not having same kind of conversation at the same time then that mismatch will result both not able to hear each other. Super communication is about knowing kind of conversation happening and responding accordingly. 
+
+  - in conflict, humans have instinct to try to control the things. but it is better do opposite, let other person have their say in the way they want to have it and they will more listen what you have to say. 
+
+  - if you listen to others it is more likely they will listen to you. Ask "tell me about it?" "What do you like about it?" 
+
+  - you are likely to enjoy longevity, happiness and success and reliable predictor of that is if you have deep, meaningful connections at age 45. we form connections through conversations.
