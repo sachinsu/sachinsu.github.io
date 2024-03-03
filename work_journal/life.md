@@ -737,3 +737,20 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - if you listen to others it is more likely they will listen to you. Ask "tell me about it?" "What do you like about it?" 
 
   - you are likely to enjoy longevity, happiness and success and reliable predictor of that is if you have deep, meaningful connections at age 45. we form connections through conversations.
+
+- Interesting Principles (ref: https://effectiviology.com/shirky-principle/)
+  - Shirky principle
+    - Entities often promote problems that they benefit from
+   - I Institutions will try to preserve the problem to which they are the solution
+   - Complex solutions (like a company, or an industry) can become so dedicated to the problem they are the solution to, that often they inadvertently perpetuate the problem
+   - ”Every entity tends to prolong the problem it is solving”
+   - Accounting for the Shirky principle can be beneficial when it comes to several things:
+        -     Understanding past and current behavior. For example, it can help you understand why certain institutions are seemingly so bad at solving certain problems, despite all the resources—like time, effort, and money—that they dedicate to those problems.
+        - Predicting future behavior. For example, it can help you predict that an executive will keep perpetuating a certain problem, in order to improve their own status within a company, even though this leads to worse outcomes for the company itself.
+        - Modifying behavior. For example, if this makes you aware of someone’s incentive to prolong a problem, that could lead you to either eliminate the perverse incentive or create a stronger disincentive. Similarly, this could lead you to point out the issue to the entity in question, in order to encourage them to try and change their behavior themselves if doing so can benefit them in the long term.
+  - Peter Principle
+    - a person in an organization will be promoted to the level of their incompetence. At which point their past achievements will prevent them from being fired, but their incompetence at this new level will prevent them from being promoted again, so they stagnate in their incompetence.
+  - Cuo bono? -> who benefits?
+  - Hanlon's Razor ->never attribute to malice that which is adequately explained by stupidity”
+  - Parkinson’s law ->work expands to consume the resources available for its completion
+  - Bikeshedding (also referred to as the law of triviality) describes a phenomenon where people spend excessive resources—especially time and energy—dealing with relatively minor issues.
