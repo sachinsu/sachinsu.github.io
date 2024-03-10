@@ -105,3 +105,7 @@ Section covering Business, project/programming perspectives
 
 - [Checklist for Senior Engineer](https://littleblah.com/post/2019-09-01-senior-engineer-checklist/)
 - [Power of Negative Thinking](https://archive.is/O5Xcn)
+
+## Curated Lists
+
+- [Learning resources for curious programmer](https://github.com/charlax/professional-programming)

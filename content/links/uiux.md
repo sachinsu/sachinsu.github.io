@@ -47,6 +47,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [Perspective.js - A data visualization and analytics component, especially well-suited for large and/or streaming datasets.](https://github.com/finos/perspective?tab=readme-ov-file)
 - [Observable - A static site generator for data apps, dashboards, reports](https://github.com/observablehq/framework)
 - [Nginx Unit - Web Server with Native support for Languages](https://github.com/nginx/unit)
 - [GoatCounter - Open source Web site Analytics](https://github.com/arp242/goatcounter)

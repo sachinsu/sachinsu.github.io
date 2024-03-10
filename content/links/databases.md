@@ -83,8 +83,6 @@ Knowledge base around general database related topics.
 - [A Beginner's Guide to Data Engineering - 3-part series](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7)
 - [Chart types and its usage](https://looker.com/blog/different-types-graphs-charts-uses)
 - [Rudder - Open source Customer Data Infrastructure](https://rudderstack.com/)
-- [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
-- [DuckDB - Connect and join on external databases](https://duckdb.org/2024/01/26/multi-database-support-in-duckdb.html)
 - [Catalog of Widgets for Data Visualization](https://datavizcatalogue.com/search/time.html)
 - [Open source OLAP Database](https://clickhouse.tech/)
 - [Modern Data stack guide by Castor](https://notion.castordoc.com/)
@@ -103,6 +101,14 @@ Knowledge base around general database related topics.
 - [Noria - Caching and updating Relational query results](https://github.com/mit-pdos/noria)
 - [Differential Datalog - Language for incremental computation](https://github.com/vmware/differential-datalog)
 - [Using NanoIDs (not longer UUID) for public APis](https://planetscale.com/blog/why-we-chose-nanoids-for-planetscales-api)
+
+## Duck DB
+
+- [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
+- [SQL Workbench - run Duckdb on WASM](https://sql-workbench.com/)
+- [DuckDB - Connect and join on external databases](https://duckdb.org/2024/01/26/multi-database-support-in-duckdb.html)
+
+
 
 ## ETL,ELT, Database-as-a-queue, Evolutionary Practices 
 

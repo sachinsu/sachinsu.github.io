@@ -589,3 +589,6 @@
 
 
 - Rakesh Jhunjhnwala - Trading is to earn capital while investing is to grow capital.
+
+
+- Stay the course -- by owning broad market index funds - https://janav.wordpress.com/2024/03/04/stay-the-course/
