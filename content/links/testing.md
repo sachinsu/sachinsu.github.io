@@ -14,6 +14,12 @@ draft: false
 - [Papercut SMTP - Test Email delivery during development](https://github.com/ChangemakerStudios/Papercut-SMTP)
 - [Malabi -Trace based testing in JavaScript](https://github.com/aspecto-io/malabi)
 - [AB Testing 101](https://medium.com/jonathans-musings/ab-testing-101-5576de6466b)
+
+
+## API Test Client 
+
+- [Bruno](https://github.com/usebruno/bruno)
+
 ## Load Testing
 
 - [K6 - Load testing tool](https://k6.io/open-source/)

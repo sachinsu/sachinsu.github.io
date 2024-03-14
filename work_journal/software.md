@@ -2417,3 +2417,11 @@ find . -type f -name '*.pgn' -print0 | xargs -0 -n1 -P4 grep -F "Result" | gawk 
     
     - Examples
              With Service Weaver framework (https://github.com/ServiceWeaver/weaver), you write your application as a modular monolith and compile it into a single binary. The Service Weaver runtime then splits the binary and deploys it as a set of distributed services. This programming model enables you to focus on what your code does without worrying so much about where it runs. You can deploy your application across multiple execution environments, locally on your laptop, across a pool of machines via SSH, or in any cloud! Additionally, the Service Weaver runtime can reduce infrastructure costs and improve application latency by several orders of magnitude compared to the status quo.
+
+
+- RDBMS Database connection pooling (Ref: https://aws.amazon.com/blogs/database/resources-consumed-by-idle-postgresql-connections/) 
+  - PostgreSQL connections consume memory and CPU resources even when idle. As queries are run on a connection, memory gets allocated. This memory isn’t completely freed up even when the connection goes idle. In all the scenarios described in this post, idle connections result in memory consumption irrespective of DISCARD ALL.The amount of memory consumed by each connection varies based on factors such as the type and count of queries run by the connection, and the usage of temporary tables. As per the test results shown in this post, the memory utilization ranged from around 1.5–14.5 MB per connection.
+ - As you increase the number of database connections, the context switching and resource contention also increases, which impacts performance.
+- PostgreSQL connections consume resources even when they’re idle, so the common assumption that idle connections don’t have any performance impact is not correct. (Around 1.5-14.5 MB per idle connection) 
+- If your application is configured in a way that results in idle connections, it’s recommended to use a connection pooler so your memory and CPU resources aren’t wasted just to manage the idle connections. 
+
