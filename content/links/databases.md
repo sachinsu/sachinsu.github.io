@@ -10,6 +10,7 @@ Knowledge base around general database related topics.
 
 ## General Links
 
+- [Prisma's Data Guide - A growing library of articles focused on making databases more approachable. ](https://github.com/prisma/dataguide)
 - [Query optimization guide](https://aiven.co/developers/sql-query-optimization-guide)
 - [Database performance for Developers](https://www.crunchydata.com/blog/demystifying-database-performance-for-developers)
 - [Heimdall data -Database scale-out without Application changes](https://www.heimdalldata.com/)

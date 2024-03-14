@@ -160,3 +160,8 @@ draft: false
 
 - [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
 - [Overview of pgVector](https://jkatz05.com/post/postgres/pgvector-overview-0.5.0/)
+
+## Scalability and performance
+
+- [Operations cheat sheet](https://wiki.postgresql.org/wiki/Operations_cheat_sheet#Scalability_and_performance)
+- [Don't do this](https://wiki.postgresql.org/wiki/Don't_Do_This)
