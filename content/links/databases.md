@@ -148,6 +148,7 @@ Knowledge base around general database related topics.
 
 ## Database Migration Practices
 
+- [Zero downtime database migrations](https://www.rainforestqa.com/blog/2014-06-27-zero-downtime-database-migrations)
 - [Stripe - Database Online migration at scale using dual writes](https://stripe.com/blog/online-migrations)
 - [How big companies migrate from one database to another without losing data i.e database independent?](https://www.quora.com/How-big-companies-migrate-from-one-database-to-another-without-losing-data-i-e-database-independent/answer/Siddharth-Anand)
 - [Efficiently diff rows across two different databases.](https://github.com/datafold/data-diff)

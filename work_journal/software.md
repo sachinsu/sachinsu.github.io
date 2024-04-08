@@ -122,7 +122,7 @@
         - One unfortunate side effect of enthusiasm for technology is evangelism, which should be a luxury reserved for tech leads and developers but tends to get architects in trouble.
         - Trouble comes because, when someone evangelizes a tool, technique, approach, or anything else people build enthusiasm for, they start enhancing the good parts and diminishing the bad parts. Unfortunately, in software architecture, the trade-offs always eventually return to complicate thin
         - An architect should also be wary of any tool or technique that promises any shocking new capabilities, which come and go on a regular basis.
-        - Always force evangelists for the tool or technique to provide an honest assessment of the good and bad—nothing in software architecture is all good—which allows a more balanced decision
+        - Always force evangelists for the tool or technique to provide an honest assessment of the good and bad. Nothing in software architecture is all good—which allows a more balanced decision
         - solutions in architecture rarely scale outside narrow confines of a particular problem space
         - Don’t allow others to force you into evangelizing something; bring it back to trade-offs.
         - We advise architects to avoid evangelizing and to try to become the objective arbiter of trade-offs. An architect adds real value to an organization not by chasing silver bullet after silver bullet but rather by honing their skills at analyzing the trade-offs as they appear.
@@ -160,6 +160,10 @@
     - If an organization has high confidence in the capacity of internal IT resources and high confidence in their ability to deliver necessary results, then the On-Premise cost structure can be expected to save money over the longer term when compared to Cloud. If, instead, the convenience and flexibility of Cloud is sought, with the extra hand-holding for upgrades and guidance services, and the operating budget can afford an ongoing multi-year Cloud subscription, then relying on the external centralized hosted solution could be more compelling. 
 
 - [Logging rules][Architecture](https://tuhrig.de/my-logging-best-practices/)
+    - ERROR: "your code is really broken"
+    - WARNING: "your code is broken, but only in a subtle way that will bite you later"
+    - INFO: "irrelevant trivia"
+    - DEBUG: "information that would help you understand what's going on if you had enabled debug logging in production which you didn't"
     - INFO Level is for business while DEBUG is for developers
     - Log INFO after the operation is over and not before 
     - Distinguish between WARNING (Typically can be retried) and error
