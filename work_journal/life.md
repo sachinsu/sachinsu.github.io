@@ -763,9 +763,9 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - When we come across some piece of information that confirms our priors, we generally assume it’s true. If we question it, it’s only to ask if it can be true. If a piece of information dis-confirms our priors, we often miss or ignore it. If we pay attention to it at all, it’s merely to consider whether it must be true, a far different and more forgiving standard. “the stubborn persistence of challenged beliefs.”
   - What we “find” is often what we wanted or expected to find all along
   - “The premise of this book is that it is easier to recognize other people’s mistakes than our own.”
-  - “What the human being is best at doing is interpreting all new information so that their prior conclusions remain intact
-  - our inherent biases is for us to ask the best and smartest people we know to tear our ideas apart.
-  -   “The power of reasons is an illusion. The belief will not change when the reasons are defeated. The causality is reversed. People believe the reasons because they believe in the conclusion.”
+  - “What the human being is best at doing is interpreting all new information so that their prior conclusions remain intact"
+  - To overcome our inherent biases is for us to ask the best and smartest people we know to tear our ideas apart.
+  - “The power of reasons is an illusion. The belief will not change when the reasons are defeated. The causality is reversed. People believe the reasons because they believe in the conclusion.”
   - Internet businesses are financially incentivized not for truth, but for keeping their users engaged. You do that by giving the people what they want.
 
  

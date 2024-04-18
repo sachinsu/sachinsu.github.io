@@ -2429,3 +2429,17 @@ find . -type f -name '*.pgn' -print0 | xargs -0 -n1 -P4 grep -F "Result" | gawk 
 - PostgreSQL connections consume resources even when they’re idle, so the common assumption that idle connections don’t have any performance impact is not correct. (Around 1.5-14.5 MB per idle connection) 
 - If your application is configured in a way that results in idle connections, it’s recommended to use a connection pooler so your memory and CPU resources aren’t wasted just to manage the idle connections. 
 
+
+- What is Retrieval Augmented Generation (RAG)? 
+  - RAG is a technique that enhances text generation by supplementing it with information from private or proprietary data sources. 
+  - Use cases for RAG, 
+      - We want the LLM to "ingest" a large body of text it wasn't trained on, and then chat to it about it
+      - Even if the full body of text fits the LLM's context window, this may be too expensive for each query
+      - Therefore, we'll run a separate information retrieval stage, finding the most relevant information for our query
+      - Finally, we'll add this information as the context for our query and chat with the LLM about it
+  - Typically, LLM models are pre-trained on generic text. To add specific context to the result obtained from it as well as to keep it updated with any additional private text reposiory, RAG is used. 
+  - It typically involves injesting additional custom text store, calculating embeddings for it and using these embeddings for answering the question. 
+
+ 
+
+
