@@ -4,30 +4,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Trobleshooting TLS handshake issue - Learnings in IT</title>
+	<title>Troubleshooting TLS handshake issue - Learnings in IT</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Trobleshooting TLS handshake issue" />
+		<meta property="og:title" content="Troubleshooting TLS handshake issue" />
 <meta property="og:description" content="Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
 The requirement is as simple as consuming REST API from a Application over TLS.
 Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
 During Development, Windows 10 is used to develop and test the code." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://sachinsu.github.io/posts/tlshandsharefailure/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-22T10:25:04+05:30" />
-<meta property="article:modified_time" content="2022-02-22T10:25:04+05:30" />
+<meta property="article:published_time" content="2023-02-25T10:25:04+05:30" />
+<meta property="article:modified_time" content="2023-02-25T10:25:04+05:30" />
 
 
-		<meta itemprop="name" content="Trobleshooting TLS handshake issue">
+		<meta itemprop="name" content="Troubleshooting TLS handshake issue">
 <meta itemprop="description" content="Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
 The requirement is as simple as consuming REST API from a Application over TLS.
 Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
-During Development, Windows 10 is used to develop and test the code."><meta itemprop="datePublished" content="2022-02-22T10:25:04+05:30" />
-<meta itemprop="dateModified" content="2022-02-22T10:25:04+05:30" />
-<meta itemprop="wordCount" content="480">
-<meta itemprop="keywords" content="Wireshark,TCP,TLS,.NET,Schannel," />
+During Development, Windows 10 is used to develop and test the code."><meta itemprop="datePublished" content="2023-02-25T10:25:04+05:30" />
+<meta itemprop="dateModified" content="2023-02-25T10:25:04+05:30" />
+<meta itemprop="wordCount" content="484">
+<meta itemprop="keywords" content="Wireshark,TCP,TLS,.NET,Schannel,SSPI,Bouncy Castle," />
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Trobleshooting TLS handshake issue"/>
+<meta name="twitter:title" content="Troubleshooting TLS handshake issue"/>
 <meta name="twitter:description" content="Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
 The requirement is as simple as consuming REST API from a Application over TLS.
 Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
@@ -120,12 +120,12 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Trobleshooting TLS handshake issue</h1>
+			<h1 class="post__title">Troubleshooting TLS handshake issue</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-02-22T10:25:04&#43;05:30">Feb 22 2022</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-25T10:25:04&#43;05:30">Feb 25 2023</time></div></div>
 		</header>
 <div class="post__toc toc">
 	<div class="toc__title">Page content</div>
@@ -134,7 +134,12 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#background">Background</a></li>
     <li><a href="#problem-statement">Problem Statement</a></li>
-    <li><a href="#causal-analysis">Causal Analysis</a></li>
+    <li><a href="#causal-analysis">Causal Analysis</a>
+      <ul>
+        <li><a href="#using-curl">Using CURL</a></li>
+        <li><a href="#via-application">Via Application</a></li>
+      </ul>
+    </li>
     <li><a href="#wrap-up">Wrap up</a>
       <ul>
         <li><a href="#useful-references">Useful References,</a></li>
@@ -159,7 +164,7 @@ if (!doNotTrack) {
 </figure>
 
 <h2 id="causal-analysis">Causal Analysis</h2>
-<p>Given that this error was related TLS/SSL and it is standard across platforms. What could be the reason for this behaviour? With not much luck with Application level trace, its time to take help of <a href=https://www.wireshark.org/
+<p>Given that this error was related TLS/SSL and it is standard across platforms. What could be the reason for this behavior? With not much luck with Application level trace, its time to take help of <a href=https://www.wireshark.org/
     
     target=_blank rel="noopener noreferrer"
 >Wireshark</a>. If you are new to Wireshark then refer to <a href=https://jvns.ca/blog/2018/06/19/what-i-use-wireshark-for/
@@ -167,51 +172,56 @@ if (!doNotTrack) {
     target=_blank rel="noopener noreferrer"
 >this</a> excellent write-up by Julia Evans.</p>
 <p>So, i used wireshark during test from CURL as well as from the Application and below is what is shows,</p>
-<pre><code>- Using CURL 
-
-        <figure><img src="/images/wireshark-curl-1.png"/><figcaption>
+<h3 id="using-curl">Using CURL</h3>
+<figure><img src="/images/wireshark-curl-1.png"/><figcaption>
             <h4>List of Ciphers Exchanged during &#39;Client Hello&#39;</h4>
         </figcaption>
 </figure>
 
-
-        <figure><img src="/images/wireshark-curl-2.png"/><figcaption>
+<figure><img src="/images/wireshark-curl-2.png"/><figcaption>
             <h4>Cipher returned by Server during &#39;Server Hello&#39;</h4>
         </figcaption>
 </figure>
 
-
-        With CURl, TLS handshare happens as intended and API works as expected.
-
-- Via Application
-    - Below is list of ciphers exchanged and list is considerably short compared to earlier. 
-
-        <figure><img src="/images/wireshark-app-1.png"/><figcaption>
+<p>With CURl, TLS handshare happens as intended and API works as expected.</p>
+<h3 id="via-application">Via Application</h3>
+<ul>
+<li>
+<p>Below is list of ciphers exchanged and list is considerably short compared to earlier.</p>
+<figure><img src="/images/wireshark-app-1.png"/><figcaption>
             <h4>List of Ciphers Exchanged during &#39;Client Hello&#39;</h4>
         </figcaption>
 </figure>
 
-
-    - Below is error logged 
-        <figure><img src="/images/wireshark-app-2.png"/><figcaption>
-            <h4>List of Ciphers Exchanged during &#39;Client Hello&#39;</h4>
+</li>
+<li>
+<p>Below is error logged</p>
+<figure><img src="/images/wireshark-app-2.png"/><figcaption>
+            <h4>TLS handshake Error</h4>
         </figcaption>
 </figure>
 
-</code></pre>
-<p>To understand this behaviour, Let&rsquo;s do a quick primer.</p>
-<p>There are many implementations of TLS/SSL (a.k.a. Security service providers) available across platforms. Notably,
-- <a href=https://en.wikipedia.org/wiki/Network_Security_Services
+</li>
+</ul>
+<p>To understand this behavior, Let&rsquo;s do a quick primer.</p>
+<p>There are many implementations of TLS/SSL (a.k.a. Security service providers) available across platforms. Notably,</p>
+<ul>
+<li>
+<p><a href=https://en.wikipedia.org/wiki/Network_Security_Services
     
     target=_blank rel="noopener noreferrer"
->Network Security Services</a> - This is used by browsers like Firefox
-- <a href=https://en.wikipedia.org/wiki/LibreSSL
+>Network Security Services</a> This is used by browsers like Firefox</p>
+</li>
+<li>
+<p><a href=https://en.wikipedia.org/wiki/LibreSSL
     
     target=_blank rel="noopener noreferrer"
 >LibreSSL</a> - Used by Chrome, curl (in ready-to-use build, refer <a href=https://everything.curl.dev/build/tls
     
     target=_blank rel="noopener noreferrer"
 >here</a>)</p>
+</li>
+</ul>
 <p>Refer <a href=https://en.wikipedia.org/wiki/Comparison_of_TLS_implementations
     
     target=_blank rel="noopener noreferrer"
@@ -220,16 +230,31 @@ if (!doNotTrack) {
     
     target=_blank rel="noopener noreferrer"
 >TLS/SSL Overview</a>,</p>
-<pre><code>``` 
+<pre tabindex="0"><code>
 Schannel is a Security Support Provider (SSP) that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) Internet standard authentication protocols.
-```
-</code></pre>
-<p>Microsoft Windows and development platforms like .NET use this implementation by default. Via this provider it is possible for Administrators to enforce policies like restrict version of TLS, usage of ciphers and so on. Note that, as part of Security/Compliance requirements, It is often necessary to have these policies enforced and this is exactly what was done.</p>
+
+</code></pre><p>Microsoft Windows and development platforms like .NET use this implementation by default. Via this provider it is possible for Administrators to enforce policies like restrict version of TLS, usage of ciphers and so on. Note that, as part of Security/Compliance requirements, It is often necessary to have these policies enforced and this is exactly what was done.</p>
+<p>Below is Sample C# code using <a href=https://github.com/bcgit/bc-csharp
+    
+    target=_blank rel="noopener noreferrer"
+>BouncyCastle</a> (alternate library for cryptography)</p>
+
+<iframe src="//carbon.now.sh/embed/22bb5e70334101dba1880de3a6c0e504"
+    style="transform:scale(0.9); width:1024px; height:473px; border:0; overflow:hidden;"
+    sandbox="allow-scripts allow-same-origin">
+</iframe>
+
 <h2 id="wrap-up">Wrap up</h2>
-<p>Hence, the resolution for this could be,
-- Make sure that Server hosting the API complies with any of the ciphers allowed on the client.
-- In case if this is not possible then , Cipher restrictions on the client will have to be modified (assuming its within the requirement for Compliance).</p>
+<p>Hence, the resolution for this could be,</p>
+<ul>
+<li>Make sure that Server hosting the API complies with any of the ciphers allowed on the client.</li>
+<li>In case if this is not possible then , Cipher restrictions on the client will have to be modified (assuming its within the requirement for Compliance).</li>
+</ul>
 <h3 id="useful-references">Useful References,</h3>
+<p>1 - <a href=https://github.com/jeroen/curl/issues/100
+    
+    target=_blank rel="noopener noreferrer"
+>CURL using OpenSSL in default build</a></p>
 <p>Happy Troubleshooting !!</p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
@@ -256,6 +281,12 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/schannel/" rel="tag">Schannel</a>
 		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sspi/" rel="tag">SSPI</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/bouncy-castle/" rel="tag">Bouncy Castle</a>
+		</li>
 	</ul>
 </div>
 		</footer>
@@ -273,15 +304,9 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/is_sqlite_production_ready/" rel="prev">
+		<a class="pager__link" href="/posts/shortidgeneration/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Can SQLite be considered for Server Applications?</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/nukebuildautomation/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Nuke as Build Automation tool for .NET projects</p>
+			<p class="pager__title">URL Shortener in High Throughput Service</p>
 		</a>
 	</div>
 </nav>
@@ -294,7 +319,7 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Sachin Sunkle.
+			&copy; 2024 Sachin Sunkle.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

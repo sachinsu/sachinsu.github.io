@@ -3,11 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sachinsu.github.io/</loc>
-    <lastmod>2022-05-15T01:00:00+05:30</lastmod>
+    <lastmod>2024-03-03T14:13:27+05:30</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://sachinsu.github.io/links/</loc>
+    <lastmod>2024-03-03T14:13:27+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/links/java/</loc>
+    <lastmod>2024-03-03T14:13:27+05:30</lastmod>
+  </url><url>
     <loc>https://sachinsu.github.io/tags/.net/</loc>
-    <lastmod>2022-05-15T01:00:00+05:30</lastmod>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/bouncy-castle/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/schannel/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/sspi/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/tcp/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/tls/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/tlshandsharefailure/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/wireshark/</loc>
+    <lastmod>2023-02-25T10:25:04+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/c#/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
@@ -24,16 +57,10 @@
     <loc>https://sachinsu.github.io/tags/oracle/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/posts/</loc>
-    <lastmod>2022-05-15T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/rest/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/sms/</loc>
-    <lastmod>2022-05-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/url/</loc>
@@ -44,9 +71,6 @@
   </url><url>
     <loc>https://sachinsu.github.io/tags/uuid/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/links/</loc>
-    <lastmod>2022-01-10T15:08:50+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/links/postgresql/</loc>
     <lastmod>2022-01-10T15:08:50+05:30</lastmod>
@@ -271,9 +295,6 @@
     <lastmod>2020-08-25T10:25:04+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/polly/</loc>
-    <lastmod>2020-08-25T10:25:04+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/tcp/</loc>
     <lastmod>2020-08-25T10:25:04+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/posts/connectiontimeouts/</loc>

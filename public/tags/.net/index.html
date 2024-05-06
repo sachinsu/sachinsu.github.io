@@ -110,6 +110,25 @@ if (!doNotTrack) {
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/tlshandsharefailure/" rel="bookmark">
+			Troubleshooting TLS handshake issue
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-25T10:25:04&#43;05:30">Feb 25 2023</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
+The requirement is as simple as consuming REST API from a Application over TLS.
+Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
+During Development, Windows 10 is used to develop and test the code.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/shortidgeneration/" rel="bookmark">
 			URL Shortener in High Throughput Service
 			</a>
@@ -194,11 +213,11 @@ Simplified deployment Architecture is as below,
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/shortidgeneration/">URL Shortener in High Throughput Service</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/is_sqlite_production_ready/">Can SQLite be considered for Server Applications?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/profiling_n_benchmarking/">Profiling and benchmarking tools for Applications</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dbre/">Database Reliability Engineering - My Notes</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/nrtanalysispostgresql/">Near real time API Monitoring with Grafana and PostgreSQL</a></li>
 		</ul>
 	</div>
 </div>
@@ -215,6 +234,7 @@ Simplified deployment Architecture is as below,
 		<a class="widget-taglist__link widget__link btn" href="/tags/azure/" title="Azure">Azure</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bash/" title="bash">bash</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bombardier/" title="bombardier">bombardier</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bouncy-castle/" title="Bouncy Castle">Bouncy Castle</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/c#/" title="C#">C#</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cadence/" title="Cadence">Cadence</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cassandra/" title="Cassandra">Cassandra</a>
@@ -262,16 +282,19 @@ Simplified deployment Architecture is as below,
 		<a class="widget-taglist__link widget__link btn" href="/tags/real-time/" title="real-time">real-time</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rest/" title="REST">REST</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rqlite/" title="rqlite">rqlite</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="sed">sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="shopify">shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/soap/" title="SOAP">SOAP</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sql/" title="sql">sql</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sqlite/" title="SQLite">SQLite</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sspi/" title="SSPI">SSPI</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/tcp/" title="TCP">TCP</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/temporal.io/" title="temporal.io">temporal.io</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/time-series/" title="time series">time series</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/timescaledb/" title="timescaledb">timescaledb</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tls/" title="TLS">TLS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/toxiproxy/" title="toxiproxy">toxiproxy</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/trino/" title="Trino">Trino</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/twitter/" title="Twitter">Twitter</a>
@@ -280,6 +303,7 @@ Simplified deployment Architecture is as below,
 		<a class="widget-taglist__link widget__link btn" href="/tags/uuid/" title="UUID">UUID</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wcf/" title="WCF">WCF</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/webassembly/" title="WebAssembly">WebAssembly</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wireshark/" title="Wireshark">Wireshark</a>
 	</div>
 </div>
 </aside>
@@ -288,7 +312,7 @@ Simplified deployment Architecture is as below,
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Sachin Sunkle.
+			&copy; 2024 Sachin Sunkle.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

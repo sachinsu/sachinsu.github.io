@@ -20,7 +20,7 @@ This application is developed in .NET Framework &#43; .NET Core and primarily us
 <meta itemprop="description" content="Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100&#43; transactions per second.
 This application is developed in .NET Framework &#43; .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s)."><meta itemprop="datePublished" content="2020-02-12T10:25:04+05:30" />
 <meta itemprop="dateModified" content="2020-02-12T10:25:04+05:30" />
-<meta itemprop="wordCount" content="475">
+<meta itemprop="wordCount" content="586">
 <meta itemprop="keywords" content=".net core,channels," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using Channels for High performance Producer consumer implementation"/>
@@ -206,6 +206,19 @@ if (!doNotTrack) {
     
     target=_blank rel="noopener noreferrer"
 >here</a></p>
+<p>Additionally, one may want to process requests out of order or asynchronously without using message queues. One such use case could be service to send Notifications where this service is exposed as Web API and it uses external service to dispatch notifications. For such scenarios, one can use back ground job in conjunction with Channels to process requests.</p>
+<p>Below code shows a Web API that handles HTTP Requests and delegates actual task to background worker which is deployed as hosted service.</p>
+
+<iframe src="//carbon.now.sh/embed/d0d2672d002be670366d58394c1d6031"
+    style="transform:scale(0.9); width:1024px; height:473px; border:0; overflow:hidden;"
+    sandbox="allow-scripts allow-same-origin">
+</iframe>
+
+<p>Refer Gist <a href=https://gist.github.com/sachinsu/d0d2672d002be670366d58394c1d6031
+    
+    target=_blank rel="noopener noreferrer"
+>here</a></p>
+<p>However, note that there are trade-offs vis-a-vis message queues with this approach. Notably, in case of Web server crash, the pending jobs in queue will be lost.</p>
 <h2 id="summary">Summary</h2>
 <p>Other languages (notably <a href=https://tour.golang.org/concurrency/2
     
@@ -277,7 +290,7 @@ if (!doNotTrack) {
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Sachin Sunkle.
+			&copy; 2024 Sachin Sunkle.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
