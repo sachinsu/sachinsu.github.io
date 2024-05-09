@@ -1,8 +1,8 @@
 ---
 title: "Using local LLM with Ollama and Semantic Kernel"
-date: 2024-05-12T10:25:04+05:30
-draft: true
-tags: [.net core, llm, ollama, phi-3,semantickernel,gpt]
+date: 2024-05-11T10:25:04+05:30
+draft: false
+tags: [localai, golang, .net core, llm, ollama, phi-3,semantickernel,gpt]
 ---
 
 
@@ -384,7 +384,7 @@ After this, it is time to use it as client of SemanticKernel SDK. Below is the t
 
 ```
 
-Full Source code of this post is available [here](https://github.com/sachinsu/ollamsmk).
+Full Source code of this post is available [here](https://github.com/sachinsu/ollamaskernel).
 
 
 ## Summary
