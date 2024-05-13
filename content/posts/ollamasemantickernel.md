@@ -30,7 +30,8 @@ Install Ollama by following instructions [here](https://github.com/ollama/ollama
 
 Now Ollama API can be easily accessed. Below is the gateway class.
 
-```
+{{< highlight go "linenos=table,hl_lines=8 15-17" >}}
+
 public class OllamaApiClient 
 {
 
@@ -219,7 +220,7 @@ public class OllamaApiClient
 		}
 }
 
-```
+{{< / highlight >}}
 
 With this class in place, now it can be integrated with SemanticKernel.
 
@@ -232,7 +233,8 @@ Below are implementations of these interfaces that use Ollama API,
 
 - Text Generation 
 
-```
+{{< highlight go "linenos=table,hl_lines=8 15-17" >}}
+
 public class TextGenerationService : ITextGenerationService
 {
     
@@ -273,11 +275,11 @@ public class TextGenerationService : ITextGenerationService
     }
 }
 
-```
+{{</ highlight>}}
 
 - Chat Completion 
 
-```
+{{< highlight go "linenos=table,hl_lines=8 15-17" >}}
 
 public class OllamaChatCompletionService : IChatCompletionService
 {
@@ -348,13 +350,14 @@ public class OllamaChatCompletionService : IChatCompletionService
 }
 
 
-```
+{{</ highlight>}}
 
 Above implementation is for demonstration purposes only. I am sure further optimization is certainly possible.  
 
 After this, it is time to use it as client of SemanticKernel SDK. Below is the test case for chat completion service, 
 
-```
+{{< highlight go "linenos=table,hl_lines=8 15-17" >}}
+
 
     [Fact]
     public async void TestChatGenerationviaSK() 
@@ -382,7 +385,7 @@ After this, it is time to use it as client of SemanticKernel SDK. Below is the t
     }
 
 
-```
+{{</ highlight>}}
 
 Full Source code of this post is available [here](https://github.com/sachinsu/ollamaskernel).
 
