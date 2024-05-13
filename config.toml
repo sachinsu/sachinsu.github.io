@@ -4,6 +4,9 @@ languageCode = "en-us"
 paginate = "5" # Number of posts per page
 theme = "mainroad"
 
+[services.googleAnalytics]
+  ID = "UA-169012216-1" # Enable Google Analytics by entering your tracking ID
+
 [Author] # Used in authorbox
   name = "Sachin Sunkle"
   bio = "A Coder in IT"
