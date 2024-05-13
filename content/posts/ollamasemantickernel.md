@@ -2,7 +2,7 @@
 title: "Using local LLM with Ollama and Semantic Kernel"
 date: 2024-05-11T10:25:04+05:30
 draft: false
-tags: [localai, golang, .net core, llm, ollama, phi-3,semantickernel,gpt]
+tags: [localai, golang, .net core, llm, ollama, phi-3,semantickernel,gpt, gemini]
 ---
 
 
