@@ -6,7 +6,88 @@
     <description>Recent content in Tags on Learnings in IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Feb 2023 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.net core</title>
+      <link>https://sachinsu.github.io/tags/.net-core/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gemini</title>
+      <link>https://sachinsu.github.io/tags/gemini/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/gemini/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://sachinsu.github.io/tags/golang/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpt</title>
+      <link>https://sachinsu.github.io/tags/gpt/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/gpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>llm</title>
+      <link>https://sachinsu.github.io/tags/llm/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>localai</title>
+      <link>https://sachinsu.github.io/tags/localai/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/localai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ollama</title>
+      <link>https://sachinsu.github.io/tags/ollama/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/ollama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phi-3</title>
+      <link>https://sachinsu.github.io/tags/phi-3/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/phi-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>semantickernel</title>
+      <link>https://sachinsu.github.io/tags/semantickernel/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/tags/semantickernel/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>.NET</title>
       <link>https://sachinsu.github.io/tags/.net/</link>
@@ -521,15 +602,6 @@
     </item>
     
     <item>
-      <title>golang</title>
-      <link>https://sachinsu.github.io/tags/golang/</link>
-      <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>shopify</title>
       <link>https://sachinsu.github.io/tags/shopify/</link>
       <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
@@ -589,15 +661,6 @@
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
       
       <guid>https://sachinsu.github.io/tags/uber/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>.net core</title>
-      <link>https://sachinsu.github.io/tags/.net-core/</link>
-      <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
       <description></description>
     </item>
     

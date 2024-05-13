@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Troubleshooting TLS handshake issue - Learnings in IT</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
@@ -43,17 +42,6 @@ During Development, Windows 10 is used to develop and test the code."/>
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-169012216-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -122,11 +110,12 @@ if (!doNotTrack) {
 		<header class="post__header">
 			<h1 class="post__title">Troubleshooting TLS handshake issue</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Sachin Sunkle</span>
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sachin Sunkle</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-25T10:25:04&#43;05:30">Feb 25 2023</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-02-25T10:25:04&#43;05:30">Feb 25 2023</time></div></div>
 		</header>
+		
 <div class="post__toc toc">
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
@@ -264,7 +253,7 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 		<footer class="post__footer">
 			
 <div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/wireshark/" rel="tag">Wireshark</a>
@@ -307,6 +296,12 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 		<a class="pager__link" href="/posts/shortidgeneration/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
 			<p class="pager__title">URL Shortener in High Throughput Service</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/ollamasemantickernel/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Using local LLM with Ollama and Semantic Kernel</p>
 		</a>
 	</div>
 </nav>
