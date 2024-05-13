@@ -3,15 +3,15 @@ title = "Learnings in IT"
 languageCode = "en-us"
 paginate = "5" # Number of posts per page
 theme = "mainroad"
-disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
-googleAnalytics = "UA-169012216-1"
+
+[services.googleAnalytics]
+  ID = "UA-169012216-1" # Enable Google Analytics by entering your tracking ID
 
 [Author] # Used in authorbox
   name = "Sachin Sunkle"
   bio = "A Coder in IT"
 
 [Params]
-  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
   description = "A technical blog " # Site description. Used in meta description
   copyright = "Sachin Sunkle" # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
