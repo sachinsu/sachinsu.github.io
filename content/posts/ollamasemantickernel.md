@@ -385,7 +385,7 @@ After this, it is time to use it as client of SemanticKernel SDK. Below is the t
     }
 
 
-{{</ highlight go "linenos=table" >}}
+{{</ highlight>}}
 
 Full Source code of this post is available [here](https://github.com/sachinsu/ollamaskernel).
 

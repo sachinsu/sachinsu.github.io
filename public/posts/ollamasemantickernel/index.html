@@ -17,7 +17,7 @@
 		<meta itemprop="name" content="Using local LLM with Ollama and Semantic Kernel">
 <meta itemprop="description" content="Introduction Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines."><meta itemprop="datePublished" content="2024-05-11T10:25:04+05:30" />
 <meta itemprop="dateModified" content="2024-05-11T10:25:04+05:30" />
-<meta itemprop="wordCount" content="1411">
+<meta itemprop="wordCount" content="1728">
 <meta itemprop="keywords" content="localai,golang,.net core,llm,ollama,phi-3,semantickernel,gpt,gemini," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using local LLM with Ollama and Semantic Kernel"/>
@@ -33,6 +33,18 @@
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-169012216-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -156,195 +168,387 @@
     target=_blank rel="noopener noreferrer"
 >here</a>. It provides range of functions like get response for Prompt, get Chat response. for Specific operations, it supports streaming and non-streaming response. First step is to download/pull  using <code>ollama run phi3</code>. This will pull, if required, the model and set it up locally. In the end, it will show prompt where user can interact with model.</p>
 <p>Now Ollama API can be easily accessed. Below is the gateway class.</p>
-<pre tabindex="0"><code>public class OllamaApiClient 
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">167
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">168
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">169
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">170
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">171
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">172
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">173
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">174
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">175
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">176
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">177
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">178
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">179
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">180
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">181
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">182
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">183
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">184
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">185
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">186
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">187
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">OllamaApiClient</span> 
 {
 
-    private HttpClient _client = new();
+    <span style="color:#a6e22e">private</span> <span style="color:#a6e22e">HttpClient</span> <span style="color:#a6e22e">_client</span> = new();
 
-	public Configuration Config { get; }
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">Configuration</span> <span style="color:#a6e22e">Config</span> { <span style="color:#a6e22e">get</span>; }
 
-	public interface IResponseStreamer&lt;T&gt;
+	<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IResponseStreamer</span>&lt;<span style="color:#a6e22e">T</span>&gt;
 	{
-		void Stream(T stream);
+		<span style="color:#a6e22e">void</span> <span style="color:#a6e22e">Stream</span>(<span style="color:#a6e22e">T</span> <span style="color:#a6e22e">stream</span>);
 	}
-	public class ChatMessage { 
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">ChatMessage</span> { 
 
-			[JsonPropertyName(&quot;role&quot;)]
-			public string Role { get; set;}
+			[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;role&#34;</span>)]
+			<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Role</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>;}
 			
-			[JsonPropertyName(&quot;content&quot;)]
-			public string Content {get;set;}
+			[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;content&#34;</span>)]
+			<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Content</span> {<span style="color:#a6e22e">get</span>;<span style="color:#a6e22e">set</span>;}
 
 	}
 
-	public class ChatResponse
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">ChatResponse</span>
 	{
-		[JsonPropertyName(&quot;model&quot;)]
-		public string Model { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;model&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Model</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
-		[JsonPropertyName(&quot;created_at&quot;)]
-		public string CreatedAt { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;created_at&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">CreatedAt</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
-		[JsonPropertyName(&quot;response&quot;)]
-		public string Response { get; set; }
-
-
-		[JsonPropertyName(&quot;message&quot;)]
-		public ChatMessage? Message { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;response&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Response</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
 
-		[JsonPropertyName(&quot;messages&quot;)]
-		public List&lt;ChatMessage&gt; Messages { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;message&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">ChatMessage</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">Message</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
 
-		[JsonPropertyName(&quot;embedding&quot;)]
-		public List&lt;Double&gt; Embeddings { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;messages&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">ChatMessage</span>&gt; <span style="color:#a6e22e">Messages</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
 
-		[JsonPropertyName(&quot;done&quot;)]
-		public bool Done { get; set; }
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;embedding&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">Double</span>&gt; <span style="color:#a6e22e">Embeddings</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
+
+
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;done&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">Done</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 	}
 
-	public class ChatRequest { 
-		[JsonPropertyName(&quot;model&quot;)]
-		public string Model { get;set;}
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">ChatRequest</span> { 
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;model&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Model</span> { <span style="color:#a6e22e">get</span>;<span style="color:#a6e22e">set</span>;}
 
-		[JsonPropertyName(&quot;prompt&quot;)]
-		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public string Prompt {get; set;}
-
-
-		[JsonPropertyName(&quot;format&quot;)]
-		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public string Format {get; set;}
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;prompt&#34;</span>)]
+		[<span style="color:#a6e22e">JsonIgnore</span>(<span style="color:#a6e22e">Condition</span> = <span style="color:#a6e22e">JsonIgnoreCondition</span>.<span style="color:#a6e22e">WhenWritingNull</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Prompt</span> {<span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>;}
 
 
-		[JsonPropertyName(&quot;messages&quot;)]
-		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-		public IList&lt;ChatMessage&gt; Messages {get; set;}
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;format&#34;</span>)]
+		[<span style="color:#a6e22e">JsonIgnore</span>(<span style="color:#a6e22e">Condition</span> = <span style="color:#a6e22e">JsonIgnoreCondition</span>.<span style="color:#a6e22e">WhenWritingNull</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Format</span> {<span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>;}
 
-		[JsonPropertyName(&quot;stream&quot;)]
-		public bool Stream {get; set;} = false;
+
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;messages&#34;</span>)]
+		[<span style="color:#a6e22e">JsonIgnore</span>(<span style="color:#a6e22e">Condition</span> = <span style="color:#a6e22e">JsonIgnoreCondition</span>.<span style="color:#a6e22e">WhenWritingNull</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">IList</span>&lt;<span style="color:#a6e22e">ChatMessage</span>&gt; <span style="color:#a6e22e">Messages</span> {<span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>;}
+
+		[<span style="color:#a6e22e">JsonPropertyName</span>(<span style="color:#e6db74">&#34;stream&#34;</span>)]
+		<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">Stream</span> {<span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>;} = <span style="color:#66d9ef">false</span>;
 	}
 
 
-    public class Configuration
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">Configuration</span>
 		{
-			public Uri Uri { get; set; }
+			<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">Uri</span> <span style="color:#a6e22e">Uri</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
-			public string Model { get; set; }
+			<span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">Model</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 		}
 
 
-    public OllamaApiClient(string uriString, string defaultModel = &quot;&quot;)
-        : this(new Uri(uriString), defaultModel)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">uriString</span>, <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">defaultModel</span> = <span style="color:#e6db74">&#34;&#34;</span>)
+        : <span style="color:#a6e22e">this</span>(<span style="color:#a6e22e">new</span> <span style="color:#a6e22e">Uri</span>(<span style="color:#a6e22e">uriString</span>), <span style="color:#a6e22e">defaultModel</span>)
 		{
 		}
 
-    public OllamaApiClient(Uri uri, string defaultModel = &quot;&quot;)
-			: this(new Configuration { Uri = uri, Model = defaultModel })
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">Uri</span> <span style="color:#a6e22e">uri</span>, <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">defaultModel</span> = <span style="color:#e6db74">&#34;&#34;</span>)
+			: <span style="color:#a6e22e">this</span>(<span style="color:#a6e22e">new</span> <span style="color:#a6e22e">Configuration</span> { <span style="color:#a6e22e">Uri</span> = <span style="color:#a6e22e">uri</span>, <span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">defaultModel</span> })
 		{
 		}
 
-    public OllamaApiClient(Configuration config)
-			: this(new HttpClient() { BaseAddress = config.Uri }, config.Model)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">Configuration</span> <span style="color:#a6e22e">config</span>)
+			: <span style="color:#a6e22e">this</span>(<span style="color:#a6e22e">new</span> <span style="color:#a6e22e">HttpClient</span>() { <span style="color:#a6e22e">BaseAddress</span> = <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Uri</span> }, <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Model</span>)
 		{
-    		Config = config;
+    		<span style="color:#a6e22e">Config</span> = <span style="color:#a6e22e">config</span>;
 
 			}
 
-    public OllamaApiClient(HttpClient client, string defaultModel = &quot;&quot;)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">HttpClient</span> <span style="color:#a6e22e">client</span>, <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">defaultModel</span> = <span style="color:#e6db74">&#34;&#34;</span>)
 		{
-			_client = client ?? throw new ArgumentNullException(nameof(client));
-			_client.Timeout = TimeSpan.FromMinutes(10);
+			<span style="color:#a6e22e">_client</span> = <span style="color:#a6e22e">client</span> <span style="color:#960050;background-color:#1e0010">??</span> <span style="color:#a6e22e">throw</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">ArgumentNullException</span>(<span style="color:#a6e22e">nameof</span>(<span style="color:#a6e22e">client</span>));
+			<span style="color:#a6e22e">_client</span>.<span style="color:#a6e22e">Timeout</span> = <span style="color:#a6e22e">TimeSpan</span>.<span style="color:#a6e22e">FromMinutes</span>(<span style="color:#ae81ff">10</span>);
 
-			(Config ??=  new Configuration()).Model = defaultModel;
+			(<span style="color:#a6e22e">Config</span> <span style="color:#960050;background-color:#1e0010">??</span>=  <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">Configuration</span>()).<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">defaultModel</span>;
 			
 		}
 
-	public async Task&lt;ChatResponse&gt; GetEmbeddingsAsync(ChatRequest message, CancellationToken token) {
-		message.Model = this.Config.Model;
-		return await PostAsync&lt;ChatRequest,ChatResponse&gt;(&quot;/api/embeddings&quot;,message,token);
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">ChatResponse</span>&gt; <span style="color:#a6e22e">GetEmbeddingsAsync</span>(<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span>) {
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">this</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Model</span>;
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">PostAsync</span>&lt;<span style="color:#a6e22e">ChatRequest</span>,<span style="color:#a6e22e">ChatResponse</span>&gt;(<span style="color:#e6db74">&#34;/api/embeddings&#34;</span>,<span style="color:#a6e22e">message</span>,<span style="color:#a6e22e">token</span>);
 	}
 
 
-	public async Task&lt;ChatResponse&gt; GetResponseForChatAsync(ChatRequest message, CancellationToken token) {
-		message.Model = this.Config.Model;
-		return await PostAsync&lt;ChatRequest,ChatResponse&gt;(&quot;/api/chat&quot;,message,token);
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">ChatResponse</span>&gt; <span style="color:#a6e22e">GetResponseForChatAsync</span>(<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span>) {
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">this</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Model</span>;
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">PostAsync</span>&lt;<span style="color:#a6e22e">ChatRequest</span>,<span style="color:#a6e22e">ChatResponse</span>&gt;(<span style="color:#e6db74">&#34;/api/chat&#34;</span>,<span style="color:#a6e22e">message</span>,<span style="color:#a6e22e">token</span>);
 	}
 
 
-	public async Task&lt;ChatResponse&gt; GetResponseForPromptAsync(ChatRequest message, CancellationToken token) {
-		message.Model = this.Config.Model;
-		return await PostAsync&lt;ChatRequest,ChatResponse&gt;(&quot;/api/generate&quot;,message,token);
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">ChatResponse</span>&gt; <span style="color:#a6e22e">GetResponseForPromptAsync</span>(<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span>) {
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">this</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Model</span>;
+		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">PostAsync</span>&lt;<span style="color:#a6e22e">ChatRequest</span>,<span style="color:#a6e22e">ChatResponse</span>&gt;(<span style="color:#e6db74">&#34;/api/generate&#34;</span>,<span style="color:#a6e22e">message</span>,<span style="color:#a6e22e">token</span>);
 	}
 
-	public async IAsyncEnumerable&lt;ChatResponse&gt; GetStreamForPromptAsync(ChatRequest message, CancellationToken token) {
-		message.Model = this.Config.Model;
-		message.Stream = true;
-		await foreach(ChatResponse resp in  StreamPostAsync&lt;ChatRequest,ChatResponse&gt;(&quot;/api/generate&quot;,message,token)) {
-			yield return resp;
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">IAsyncEnumerable</span>&lt;<span style="color:#a6e22e">ChatResponse</span>&gt; <span style="color:#a6e22e">GetStreamForPromptAsync</span>(<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span>) {
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">this</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Model</span>;
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Stream</span> = <span style="color:#66d9ef">true</span>;
+		<span style="color:#a6e22e">await</span> <span style="color:#a6e22e">foreach</span>(<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> <span style="color:#a6e22e">in</span>  <span style="color:#a6e22e">StreamPostAsync</span>&lt;<span style="color:#a6e22e">ChatRequest</span>,<span style="color:#a6e22e">ChatResponse</span>&gt;(<span style="color:#e6db74">&#34;/api/generate&#34;</span>,<span style="color:#a6e22e">message</span>,<span style="color:#a6e22e">token</span>)) {
+			<span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">resp</span>;
 		}
 	}
 
-	public async IAsyncEnumerable&lt;ChatResponse&gt; GetStreamForChatAsync(ChatRequest message, CancellationToken token) {
-		message.Model = this.Config.Model;
-		message.Stream = true;
-		await foreach(ChatResponse resp in  StreamPostAsync&lt;ChatRequest,ChatResponse&gt;(&quot;/api/chat&quot;,message,token)) {
-			yield return resp;
+	<span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">IAsyncEnumerable</span>&lt;<span style="color:#a6e22e">ChatResponse</span>&gt; <span style="color:#a6e22e">GetStreamForChatAsync</span>(<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span>) {
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Model</span> = <span style="color:#a6e22e">this</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Model</span>;
+		<span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">Stream</span> = <span style="color:#66d9ef">true</span>;
+		<span style="color:#a6e22e">await</span> <span style="color:#a6e22e">foreach</span>(<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> <span style="color:#a6e22e">in</span>  <span style="color:#a6e22e">StreamPostAsync</span>&lt;<span style="color:#a6e22e">ChatRequest</span>,<span style="color:#a6e22e">ChatResponse</span>&gt;(<span style="color:#e6db74">&#34;/api/chat&#34;</span>,<span style="color:#a6e22e">message</span>,<span style="color:#a6e22e">token</span>)) {
+			<span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">resp</span>;
 		}
 	}
 
-    private async Task&lt;TResponse&gt; GetAsync&lt;TResponse&gt;(string endpoint, CancellationToken cancellationToken)
+    <span style="color:#a6e22e">private</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt; <span style="color:#a6e22e">GetAsync</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span>)
 		{
-			var response = await _client.GetAsync(endpoint, cancellationToken);
-			response.EnsureSuccessStatusCode();
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">_client</span>.<span style="color:#a6e22e">GetAsync</span>(<span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">cancellationToken</span>);
+			<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">EnsureSuccessStatusCode</span>();
 
-			var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
-			return JsonSerializer.Deserialize&lt;TResponse&gt;(responseBody);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">responseBody</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">Content</span>.<span style="color:#a6e22e">ReadAsStringAsync</span>(<span style="color:#a6e22e">cancellationToken</span>);
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Deserialize</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#a6e22e">responseBody</span>);
 		}
 
-    private async Task PostAsync&lt;TRequest&gt;(string endpoint, TRequest request, CancellationToken cancellationToken)
+    <span style="color:#a6e22e">private</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span> <span style="color:#a6e22e">PostAsync</span>&lt;<span style="color:#a6e22e">TRequest</span>&gt;(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">TRequest</span> <span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span>)
 		{
-			var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, &quot;application/json&quot;);
-			var response = await _client.PostAsync(endpoint, content, cancellationToken);
-			response.EnsureSuccessStatusCode();
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">content</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">StringContent</span>(<span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Serialize</span>(<span style="color:#a6e22e">request</span>), <span style="color:#a6e22e">Encoding</span>.<span style="color:#a6e22e">UTF8</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">_client</span>.<span style="color:#a6e22e">PostAsync</span>(<span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">cancellationToken</span>);
+			<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">EnsureSuccessStatusCode</span>();
 		}
 
 
 
-    private async IAsyncEnumerable&lt;TResponse&gt; StreamPostAsync&lt;TRequest,TResponse&gt;(string endpoint, TRequest request, CancellationToken cancellationToken)
+    <span style="color:#a6e22e">private</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">IAsyncEnumerable</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt; <span style="color:#a6e22e">StreamPostAsync</span>&lt;<span style="color:#a6e22e">TRequest</span>,<span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">TRequest</span> <span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span>)
 		{
-			var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, &quot;application/json&quot;);
-			var response = await _client.PostAsync(endpoint, content, cancellationToken);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">content</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">StringContent</span>(<span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Serialize</span>(<span style="color:#a6e22e">request</span>), <span style="color:#a6e22e">Encoding</span>.<span style="color:#a6e22e">UTF8</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">_client</span>.<span style="color:#a6e22e">PostAsync</span>(<span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">cancellationToken</span>);
 
- 			using Stream stream = await response.Content.ReadAsStreamAsync();
+ 			<span style="color:#a6e22e">using</span> <span style="color:#a6e22e">Stream</span> <span style="color:#a6e22e">stream</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">Content</span>.<span style="color:#a6e22e">ReadAsStreamAsync</span>();
 
-			using StreamReader reader = new StreamReader(stream);
+			<span style="color:#a6e22e">using</span> <span style="color:#a6e22e">StreamReader</span> <span style="color:#a6e22e">reader</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">StreamReader</span>(<span style="color:#a6e22e">stream</span>);
 
-			while (!reader.EndOfStream) {
-				var jsonString = await reader.ReadLineAsync(cancellationToken);
-				TResponse  result =  JsonSerializer.Deserialize&lt;TResponse&gt;(jsonString);
-				yield return result;
+			<span style="color:#a6e22e">while</span> (!<span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">EndOfStream</span>) {
+				<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsonString</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">ReadLineAsync</span>(<span style="color:#a6e22e">cancellationToken</span>);
+				<span style="color:#a6e22e">TResponse</span>  <span style="color:#a6e22e">result</span> =  <span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Deserialize</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#a6e22e">jsonString</span>);
+				<span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
 			}
 
-			yield break;
+			<span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">break</span>;
 	}
 
 
-    private async Task&lt;TResponse&gt; PostAsync&lt;TRequest, TResponse&gt;(string endpoint, TRequest request, CancellationToken cancellationToken)
+    <span style="color:#a6e22e">private</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt; <span style="color:#a6e22e">PostAsync</span>&lt;<span style="color:#a6e22e">TRequest</span>, <span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">TRequest</span> <span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span>)
 		{
-			var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, &quot;application/json&quot;);
-			var response = await _client.PostAsync(endpoint, content, cancellationToken);
-			response.EnsureSuccessStatusCode();
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">content</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">StringContent</span>(<span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Serialize</span>(<span style="color:#a6e22e">request</span>), <span style="color:#a6e22e">Encoding</span>.<span style="color:#a6e22e">UTF8</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">_client</span>.<span style="color:#a6e22e">PostAsync</span>(<span style="color:#a6e22e">endpoint</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">cancellationToken</span>);
+			<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">EnsureSuccessStatusCode</span>();
 
-			var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">responseBody</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">Content</span>.<span style="color:#a6e22e">ReadAsStringAsync</span>(<span style="color:#a6e22e">cancellationToken</span>);
 
-			return JsonSerializer.Deserialize&lt;TResponse&gt;(responseBody);
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JsonSerializer</span>.<span style="color:#a6e22e">Deserialize</span>&lt;<span style="color:#a6e22e">TResponse</span>&gt;(<span style="color:#a6e22e">responseBody</span>);
 		}
-}
-
-</code></pre><p>With this class in place, now it can be integrated with SemanticKernel.</p>
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>With this class in place, now it can be integrated with SemanticKernel.</p>
 <h2 id="integrating-with-semantickernel">Integrating with SemanticKernel</h2>
 <p>Semantickernel SDK operates on a plug-in system, where developers can use pre-built plugins or create their own. These plugins consist of prompts that the AI model should respond to, as well as functions that can complete specialized tasks. Accordingly, it provides interfaces for (Chat completion)[https://learn.microsoft.com/en-us/dotnet/api/microsoft.semantickernel.chatcompletion.ichatcompletionservice?view=semantic-kernel-dotnet] and <a href=https://learn.microsoft.com/en-us/dotnet/api/microsoft.semantickernel.textgeneration.itextgenerationservice?view&#61;semantic-kernel-dotnet
     
@@ -355,149 +559,290 @@ d to integrate with external implementation like Ollama.</p>
 <ul>
 <li>Text Generation</li>
 </ul>
-<pre tabindex="0"><code>public class TextGenerationService : ITextGenerationService
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">TextGenerationService</span> : <span style="color:#a6e22e">ITextGenerationService</span>
 {
     
-    public string ModelApiEndPoint { get; set; }
-    public string ModelName { get; set; }
+    <span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">ModelApiEndPoint</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
+    <span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">ModelName</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
-    public IReadOnlyDictionary&lt;string, object?&gt; Attributes =&gt; throw new NotImplementedException();
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">IReadOnlyDictionary</span>&lt;<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">object</span><span style="color:#960050;background-color:#1e0010">?</span>&gt; <span style="color:#a6e22e">Attributes</span> =&gt; <span style="color:#a6e22e">throw</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">NotImplementedException</span>();
 
-    public async Task&lt;IReadOnlyList&lt;TextContent&gt;&gt; GetTextContentsAsync(string prompt, PromptExecutionSettings? executionSettings = null, Kernel? kernel = null, CancellationToken cancellationToken = default)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">IReadOnlyList</span>&lt;<span style="color:#a6e22e">TextContent</span><span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">GetTextContentsAsync</span>(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">prompt</span>, <span style="color:#a6e22e">PromptExecutionSettings</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">executionSettings</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">Kernel</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">kernel</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span> = <span style="color:#66d9ef">default</span>)
     {
           
-        var client = new OllamaApiClient(ModelApiEndPoint, ModelName);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">ModelApiEndPoint</span>, <span style="color:#a6e22e">ModelName</span>);
 
-        OllamaApiClient.ChatRequest req = new OllamaApiClient.ChatRequest() {
-                Model=ModelName,
-                Prompt=prompt,
+        <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">req</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span>() {
+                <span style="color:#a6e22e">Model</span>=<span style="color:#a6e22e">ModelName</span>,
+                <span style="color:#a6e22e">Prompt</span>=<span style="color:#a6e22e">prompt</span>,
         };
 
-        OllamaApiClient.ChatResponse resp = await client.GetResponseForPromptAsync(req
-            , cancellationToken);
+        <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">GetResponseForPromptAsync</span>(<span style="color:#a6e22e">req</span>
+            , <span style="color:#a6e22e">cancellationToken</span>);
 
-        return new List&lt;TextContent&gt;() { new TextContent(resp.Response) };
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">TextContent</span>&gt;() { <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">TextContent</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Response</span>) };
     }
 
-    public async IAsyncEnumerable&lt;StreamingTextContent&gt; GetStreamingTextContentsAsync(string prompt, PromptExecutionSettings? executionSettings = null, Kernel? kernel = null, CancellationToken cancellationToken = default)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">IAsyncEnumerable</span>&lt;<span style="color:#a6e22e">StreamingTextContent</span>&gt; <span style="color:#a6e22e">GetStreamingTextContentsAsync</span>(<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">prompt</span>, <span style="color:#a6e22e">PromptExecutionSettings</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">executionSettings</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">Kernel</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">kernel</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span> = <span style="color:#66d9ef">default</span>)
     {
-            var ollama = new OllamaApiClient(ModelApiEndPoint, ModelName);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ollama</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">ModelApiEndPoint</span>, <span style="color:#a6e22e">ModelName</span>);
 
-            OllamaApiClient.ChatRequest req = new OllamaApiClient.ChatRequest() {
-                    Prompt=prompt,
-                    Stream=true
+            <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">req</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span>() {
+                    <span style="color:#a6e22e">Prompt</span>=<span style="color:#a6e22e">prompt</span>,
+                    <span style="color:#a6e22e">Stream</span>=<span style="color:#66d9ef">true</span>
             };
 
-            await foreach( OllamaApiClient.ChatResponse resp in ollama.GetStreamForPromptAsync(req, cancellationToken)) {
-                    yield return new StreamingTextContent( text:  resp.Response) ;
+            <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">foreach</span>( <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">ollama</span>.<span style="color:#a6e22e">GetStreamForPromptAsync</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">cancellationToken</span>)) {
+                    <span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">StreamingTextContent</span>( <span style="color:#a6e22e">text</span>:  <span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Response</span>) ;
             } 
 
     }
-}
-
-</code></pre><ul>
+}</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
 <li>Chat Completion</li>
 </ul>
-<pre tabindex="0"><code>
-public class OllamaChatCompletionService : IChatCompletionService
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">public</span> <span style="color:#a6e22e">class</span> <span style="color:#a6e22e">OllamaChatCompletionService</span> : <span style="color:#a6e22e">IChatCompletionService</span>
 {
-    public string ModelApiEndPoint { get; set; }
-    public string ModelName { get; set; }
+    <span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">ModelApiEndPoint</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
+    <span style="color:#a6e22e">public</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">ModelName</span> { <span style="color:#a6e22e">get</span>; <span style="color:#a6e22e">set</span>; }
 
-    public IReadOnlyDictionary&lt;string, object?&gt; Attributes =&gt; throw new NotImplementedException();
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">IReadOnlyDictionary</span>&lt;<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">object</span><span style="color:#960050;background-color:#1e0010">?</span>&gt; <span style="color:#a6e22e">Attributes</span> =&gt; <span style="color:#a6e22e">throw</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">NotImplementedException</span>();
     
-    public async Task&lt;IReadOnlyList&lt;ChatMessageContent&gt;&gt; GetChatMessageContentsAsync(ChatHistory chatHistory, PromptExecutionSettings? executionSettings = null, Kernel? kernel = null, CancellationToken cancellationToken = default)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">Task</span>&lt;<span style="color:#a6e22e">IReadOnlyList</span>&lt;<span style="color:#a6e22e">ChatMessageContent</span><span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">GetChatMessageContentsAsync</span>(<span style="color:#a6e22e">ChatHistory</span> <span style="color:#a6e22e">chatHistory</span>, <span style="color:#a6e22e">PromptExecutionSettings</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">executionSettings</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">Kernel</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">kernel</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span> = <span style="color:#66d9ef">default</span>)
    {
 
 
-        var client = new OllamaApiClient(ModelApiEndPoint, ModelName);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">ModelApiEndPoint</span>, <span style="color:#a6e22e">ModelName</span>);
 
-        OllamaApiClient.ChatRequest req = new OllamaApiClient.ChatRequest() {
-                Model=ModelName
+        <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">req</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span>() {
+                <span style="color:#a6e22e">Model</span>=<span style="color:#a6e22e">ModelName</span>
         };
 
-        req.Messages = new List&lt;OllamaApiClient.ChatMessage&gt;();
+        <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Messages</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatMessage</span>&gt;();
 
-        // iterate though chatHistory Messages
-        foreach (var history in chatHistory)
+        <span style="color:#75715e">// iterate though chatHistory Messages
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">foreach</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">chatHistory</span>)
         {
-            req.Messages.Add(new OllamaApiClient.ChatMessage{
-                Role=history.Role.ToString(),
-                Content=history.Content
+            <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Messages</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatMessage</span>{
+                <span style="color:#a6e22e">Role</span>=<span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">Role</span>.<span style="color:#a6e22e">ToString</span>(),
+                <span style="color:#a6e22e">Content</span>=<span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">Content</span>
             });
         }
 
-        OllamaApiClient.ChatResponse resp = await client.GetResponseForChatAsync(req
-            , cancellationToken);
+        <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">GetResponseForChatAsync</span>(<span style="color:#a6e22e">req</span>
+            , <span style="color:#a6e22e">cancellationToken</span>);
 
-        List&lt;ChatMessageContent&gt; content = new();
-        content.Add( new(role:resp.Message.Role.Equals(&quot;system&quot;,StringComparison.InvariantCultureIgnoreCase)?AuthorRole.System:AuthorRole.User,content:resp.Message.Content));
+        <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">ChatMessageContent</span>&gt; <span style="color:#a6e22e">content</span> = new();
+        <span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">Add</span>( new(<span style="color:#a6e22e">role</span>:<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Message</span>.<span style="color:#a6e22e">Role</span>.<span style="color:#a6e22e">Equals</span>(<span style="color:#e6db74">&#34;system&#34;</span>,<span style="color:#a6e22e">StringComparison</span>.<span style="color:#a6e22e">InvariantCultureIgnoreCase</span>)<span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">AuthorRole</span>.<span style="color:#a6e22e">System</span>:<span style="color:#a6e22e">AuthorRole</span>.<span style="color:#a6e22e">User</span>,<span style="color:#a6e22e">content</span>:<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Message</span>.<span style="color:#a6e22e">Content</span>));
 
-        return content;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">content</span>;
     }
 
-    public async IAsyncEnumerable&lt;StreamingChatMessageContent&gt; GetStreamingChatMessageContentsAsync(ChatHistory chatHistory, PromptExecutionSettings? executionSettings = null, Kernel? kernel = null, CancellationToken cancellationToken = default)
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">IAsyncEnumerable</span>&lt;<span style="color:#a6e22e">StreamingChatMessageContent</span>&gt; <span style="color:#a6e22e">GetStreamingChatMessageContentsAsync</span>(<span style="color:#a6e22e">ChatHistory</span> <span style="color:#a6e22e">chatHistory</span>, <span style="color:#a6e22e">PromptExecutionSettings</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">executionSettings</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">Kernel</span><span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#a6e22e">kernel</span> = <span style="color:#a6e22e">null</span>, <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">cancellationToken</span> = <span style="color:#66d9ef">default</span>)
     {
 
-        var client = new OllamaApiClient(ModelApiEndPoint, ModelName);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>(<span style="color:#a6e22e">ModelApiEndPoint</span>, <span style="color:#a6e22e">ModelName</span>);
 
-        OllamaApiClient.ChatRequest req = new OllamaApiClient.ChatRequest() {
-                Model=ModelName
+        <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span> <span style="color:#a6e22e">req</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatRequest</span>() {
+                <span style="color:#a6e22e">Model</span>=<span style="color:#a6e22e">ModelName</span>
         };
 
-        req.Messages = new List&lt;OllamaApiClient.ChatMessage&gt;();
+        <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Messages</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">List</span>&lt;<span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatMessage</span>&gt;();
 
-        // iterate though chatHistory Messages
-        foreach (var history in chatHistory)
+        <span style="color:#75715e">// iterate though chatHistory Messages
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">foreach</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">history</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">chatHistory</span>)
         {
-            req.Messages.Add(new OllamaApiClient.ChatMessage{
-                Role=history.Role.ToString(),
-                Content=history.Content
+            <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Messages</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">new</span> <span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatMessage</span>{
+                <span style="color:#a6e22e">Role</span>=<span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">Role</span>.<span style="color:#a6e22e">ToString</span>(),
+                <span style="color:#a6e22e">Content</span>=<span style="color:#a6e22e">history</span>.<span style="color:#a6e22e">Content</span>
             });
         }
 
-        CancellationTokenSource source = new CancellationTokenSource();
-        CancellationToken token = source.Token;
+        <span style="color:#a6e22e">CancellationTokenSource</span> <span style="color:#a6e22e">source</span> = <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">CancellationTokenSource</span>();
+        <span style="color:#a6e22e">CancellationToken</span> <span style="color:#a6e22e">token</span> = <span style="color:#a6e22e">source</span>.<span style="color:#a6e22e">Token</span>;
 
-        await foreach (OllamaApiClient.ChatResponse resp in  client.GetStreamForChatAsync(req,token)) { 
-            yield return new(role:resp.Message.Role.Equals(&quot;system&quot;,StringComparison.InvariantCultureIgnoreCase)?AuthorRole.System:AuthorRole.User,
-            content:resp.Message.Content ?? string.Empty); 
+        <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">OllamaApiClient</span>.<span style="color:#a6e22e">ChatResponse</span> <span style="color:#a6e22e">resp</span> <span style="color:#a6e22e">in</span>  <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">GetStreamForChatAsync</span>(<span style="color:#a6e22e">req</span>,<span style="color:#a6e22e">token</span>)) { 
+            <span style="color:#a6e22e">yield</span> <span style="color:#66d9ef">return</span> new(<span style="color:#a6e22e">role</span>:<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Message</span>.<span style="color:#a6e22e">Role</span>.<span style="color:#a6e22e">Equals</span>(<span style="color:#e6db74">&#34;system&#34;</span>,<span style="color:#a6e22e">StringComparison</span>.<span style="color:#a6e22e">InvariantCultureIgnoreCase</span>)<span style="color:#960050;background-color:#1e0010">?</span><span style="color:#a6e22e">AuthorRole</span>.<span style="color:#a6e22e">System</span>:<span style="color:#a6e22e">AuthorRole</span>.<span style="color:#a6e22e">User</span>,
+            <span style="color:#a6e22e">content</span>:<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">Message</span>.<span style="color:#a6e22e">Content</span> <span style="color:#960050;background-color:#1e0010">??</span> <span style="color:#66d9ef">string</span>.<span style="color:#a6e22e">Empty</span>); 
         }
 
      }
-}
-
-
-</code></pre><p>Above implementation is for demonstration purposes only. I am sure further optimization is certainly possible.</p>
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>Above implementation is for demonstration purposes only. I am sure further optimization is certainly possible.</p>
 <p>After this, it is time to use it as client of SemanticKernel SDK. Below is the test case for chat completion service,</p>
-<pre tabindex="0"><code>
-    [Fact]
-    public async void TestChatGenerationviaSK() 
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    [<span style="color:#a6e22e">Fact</span>]
+    <span style="color:#a6e22e">public</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">void</span> <span style="color:#a6e22e">TestChatGenerationviaSK</span>() 
     {
-        var ollamachat = ServiceProvider.GetChatCompletionService();
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ollamachat</span> = <span style="color:#a6e22e">ServiceProvider</span>.<span style="color:#a6e22e">GetChatCompletionService</span>();
 
 
-        // semantic kernel builder
-        var builder = Kernel.CreateBuilder();
-        builder.Services.AddKeyedSingleton&lt;IChatCompletionService&gt;(&quot;ollamaChat&quot;, ollamachat);
-        // builder.Services.AddKeyedSingleton&lt;ITextGenerationService&gt;(&quot;ollamaText&quot;, ollamaText);
-        var kernel = builder.Build();
+        <span style="color:#75715e">// semantic kernel builder
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">builder</span> = <span style="color:#a6e22e">Kernel</span>.<span style="color:#a6e22e">CreateBuilder</span>();
+        <span style="color:#a6e22e">builder</span>.<span style="color:#a6e22e">Services</span>.<span style="color:#a6e22e">AddKeyedSingleton</span>&lt;<span style="color:#a6e22e">IChatCompletionService</span>&gt;(<span style="color:#e6db74">&#34;ollamaChat&#34;</span>, <span style="color:#a6e22e">ollamachat</span>);
+        <span style="color:#75715e">// builder.Services.AddKeyedSingleton&lt;ITextGenerationService&gt;(&#34;ollamaText&#34;, ollamaText);
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">kernel</span> = <span style="color:#a6e22e">builder</span>.<span style="color:#a6e22e">Build</span>();
 
 
-        // chat generation
-        var chatGen = kernel.GetRequiredService&lt;IChatCompletionService&gt;();
-        ChatHistory chat = new(&quot;You are an AI assistant that helps people find information.&quot;);
-        chat.AddUserMessage(&quot;What is Sixth Sense?&quot;);
-        var answer = await chatGen.GetChatMessageContentAsync(chat);
-        Assert.NotNull(answer);
-        Assert.NotEmpty(answer.Content!);
-        System.Diagnostics.Debug.WriteLine(answer.Content!);
+        <span style="color:#75715e">// chat generation
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">chatGen</span> = <span style="color:#a6e22e">kernel</span>.<span style="color:#a6e22e">GetRequiredService</span>&lt;<span style="color:#a6e22e">IChatCompletionService</span>&gt;();
+        <span style="color:#a6e22e">ChatHistory</span> <span style="color:#a6e22e">chat</span> = new(<span style="color:#e6db74">&#34;You are an AI assistant that helps people find information.&#34;</span>);
+        <span style="color:#a6e22e">chat</span>.<span style="color:#a6e22e">AddUserMessage</span>(<span style="color:#e6db74">&#34;What is Sixth Sense?&#34;</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">chatGen</span>.<span style="color:#a6e22e">GetChatMessageContentAsync</span>(<span style="color:#a6e22e">chat</span>);
+        <span style="color:#a6e22e">Assert</span>.<span style="color:#a6e22e">NotNull</span>(<span style="color:#a6e22e">answer</span>);
+        <span style="color:#a6e22e">Assert</span>.<span style="color:#a6e22e">NotEmpty</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">Content</span>!);
+        <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">Diagnostics</span>.<span style="color:#a6e22e">Debug</span>.<span style="color:#a6e22e">WriteLine</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">Content</span>!);
 
 
-    }
-
-
-</code></pre><p>Full Source code of this post is available <a href=https://github.com/sachinsu/ollamaskernel
+    }</code></pre></td></tr></table>
+</div>
+</div>
+<p>Full Source code of this post is available <a href=https://github.com/sachinsu/ollamaskernel
     
     target=_blank rel="noopener noreferrer"
 >here</a>.</p>
