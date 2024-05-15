@@ -2450,3 +2450,9 @@ find . -type f -name '*.pgn' -print0 | xargs -0 -n1 -P4 grep -F "Result" | gawk 
  
 
 
+- REDIS 
+  - Employs asynchronous replication for high availability and read scaling and an on-disk transaction log for local durability 
+  - Does not offer replication solution that can tolerate loss of nodes without data loss or can offer scalable strongly-consistent reads. This limites its ability to be leveraged for use cases beyond caching 
+  - Supports server-side execution of lua scripts which also execute atomically. it allows to implement complex logic wholly within cluster 
+  - Supports point-in-time snapshots and on disk transaction log. It can also persist mutations to disk using an append-only file (AOF) feature that appends all mutating commands to a file. In a single node configuration, AOF could provide durability at the expense of availability. 
+  - Single threaded and sequentially executes all commands it receives. however, it may lose committed writes across failovers due to asychronous propagation.
