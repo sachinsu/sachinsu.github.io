@@ -379,9 +379,7 @@ After this, it is time to use it as client of SemanticKernel SDK. Below is the t
         var answer = await chatGen.GetChatMessageContentAsync(chat);
         Assert.NotNull(answer);
         Assert.NotEmpty(answer.Content!);
-        System.Diagnostics.Debug.WriteLine(answer.Content!);
-
-
+        System.Diagnostics.Debug.WriteLine(answer.Content!
     }
 
 

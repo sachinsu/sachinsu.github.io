@@ -17,6 +17,7 @@ draft: false
 - [33 JavaScript concepts every Developer should know](https://github.com/leonardomso/33-js-concepts#8-iife-modules-and-namespaces)
 - [Server side Events for Real-time streaming Updates](https://shopifyengineering.myshopify.com/blogs/engineering/server-sent-events-data-streaming)
 - [Four ways to build Web Apps](https://tomhummel.com/posts/four-web-apps/)
+- [Parallel Data Fetching in SPA...has Good Primer on React](https://www.martinfowler.com/articles/data-fetch-spa.html)
 
 ## Articles
 
