@@ -20,6 +20,7 @@ Useful links related from AI, ML space
 
 ## Articles
 
+- [How to build your own perplexity for any dataset](https://jnnnthnn.com/how-to-build-your-own-perplexity-for-any-dataset)
 - [How a Machine Learns](https://janav.wordpress.com/2023/10/10/how-a-machine-learns/)
 - [Machine learning is still too hard - Year 2022](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/)
 - [Neural Networks from Scratch](https://sirupsen.com/napkin/neural-net)
