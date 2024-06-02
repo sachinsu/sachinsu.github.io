@@ -768,4 +768,20 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - “The power of reasons is an illusion. The belief will not change when the reasons are defeated. The causality is reversed. People believe the reasons because they believe in the conclusion.”
   - Internet businesses are financially incentivized not for truth, but for keeping their users engaged. You do that by giving the people what they want.
 
- 
+
+- Thomas Sowell's quotes 
+  - “Intellect is not wisdom.  Most modern intellect is the ability to memorize information.Intellects worship access to information rather than the application of the lessons"
+  - “When you want to help people, you tell them the truth. When you want to help yourself, you tell them what they want to hear.”
+  -  "The truth is often not complicated. What gets complex is evading the truth.”
+  - “Bailing out people who made ill-advised mortgages makes no more sense than...Bailing out people who lost their life savings in Las Vegas casinos”
+  - "Inflation is a hidden tax.The money people have saved is robbed of part of its purchasing power,  Which is quietly transferred to the government that issues new money.It is a way to take people's wealth without having to openly raise taxes"
+  - "The problem is that Johnny doesn't know what thinking is. He confuses it with feeling”
+  - “It takes considerable knowledge just to realize the extent of your own ignorance.”
+  - “There are no solutions, only trade-offs.”
+  - “Income distribution: The cold fact is most income is not distributed. It is earned.”
+  - “The great escape of our times is escape from personal responsibility for the consequences of one’s own behavior.”
+  - “When people get used to preferential treatment, equal treatment seems like discrimination.”
+  - “Too much of what is called 'education' is little more than an expensive isolation from reality.”
+  -  "There's now a world in which the success of others is a grievance, rather than an example"
+  -  “Since this is an era of 'fairness' & 'social justice...What is your 'fair share' of what someone else has worked for?”
+- 

@@ -23,6 +23,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Strategies/Approaches
 
+- [Professional programming resources](https://github.com/charlax/professional-programming)
 - [Rob Pikes 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
 - [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)
 - [The macro problem with Microservices](https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/)
