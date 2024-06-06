@@ -1,7 +1,7 @@
 - Concepts
 
   - Asynchronicity, Queues
-       - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for   an outcome.
+       - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for an outcome.
        - asynchronous messaging infrastructure does,
            * Decoupling: A system handling work behind a messaging infrastructure can be running at capacity and yet not be overwhelmed and   can even be down while the messaging infrastructure still accepts   messages on its behalf.
            * Delivery: You can entrust over your messages and the   messaging system will try its best not lose them. It will then attempt   to deliver them to the right parties and will retry as often as necessary.
@@ -84,28 +84,28 @@
      - Async state machines in .NET form linked list.
 
 
-- TCP Protocol
+  - TCP Protocol
      - Runs on top of IP.any data you send via TCP gets converted into one or more datagrams, then sent over the networking using IP, then is reassembled into a stream of data on the other end.
      - Created to ensure that all packets sent arrive at the destination. That too in same sequence and without duplication
      - In UDP, data is sent one datagram at a time unlike TCP.
      - Socket is a endpoint for network communication. Its a virtual device exposed on a computer.
 
-- Websockets
+  - Websockets
      -  web socket server starts off by being an HTTP server, accepting TCP conections and handling the HTTP requests on the TCP connection. When a request comes in that switches that connection to a being a web socket connection, the protocol handler is changed from an HTTP handler to a WebSocket handler. So it is only that TCP connection that gets its role changed: the server continues to be an HTTP server for other requests, while the TCP socket underlying that one connection is used as a web socket.
 
-- EBPF
-     - small snippets of code that run in linux kernel
-     - It can hook into events
-     - Can be attached to network socket
-     - It an listen to events and make changes to albeit with restrictions
-     - Written in stripped down 'C' language
-     - Available in all linux distributions and has some support on window but not MacOS yet
-     - Allows to run code in kernel space
-     -Typically the way it works is user space program loads eBPF in kernel
-     - LLVM dictates specification ofor EBPF
-     - Use cases are,
-         - Security - Analyzing trace events to correlate & Detect intrusion
-         - Observability /SRE
+  - EBPF
+       - small snippets of code that run in linux kernel
+       - It can hook into events
+       - Can be attached to network socket
+       - It an listen to events and make changes to albeit with restrictions
+       - Written in stripped down 'C' language
+       - Available in all linux distributions and has some support on window but not MacOS yet
+       - Allows to run code in kernel space
+       -Typically the way it works is user space program loads eBPF in kernel
+       - LLVM dictates specification ofor EBPF
+       - Use cases are,
+           - Security - Analyzing trace events to correlate & Detect intrusion
+           - Observability /SRE
 
   - Backpressure 
      - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens. Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
@@ -453,7 +453,9 @@
              - Individuals’ behaviors are guided (implicitly or explicitly) by underlying structures. Adoption must start with a purpose, whether that is a service or part of a larger project. Investment is needed during spin up to ensure proper experience is gained by project members. The chosen project must also have a clearly defined success metric.
 
 
-    - Observability - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
+    - Observability 
+        - Observability means gaining visibility into the internal state of a system. It’s used to give users the tools to figure out what’s happening, where it’s happening, and why. Observability has three core components: monitoring, analytics, and forensics. Monitoring measures the health of a system - it tells you when something is going wrong. Analytics give you the tools to visualize data to identify patterns and insights. Forensics helps you answer very specific questions about an event.
+          - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
          - Structured log events with rich context specific details (often maintained as key-value pair) are highly useful where aim of observability  is for swiftly identifying where in your system the error or problem is coming from, so you can debug it — by reproducing it, or seeing what it has in common with other erroring requests.
          - The rule is to have one observability event per request per service hop (example, if your request hit the edge, API, four internal services, two databases … but ran 1 query on one db and 10 queries on the second db … you would generate a total of *19 observability events* for this request where all of them are linked by randomly generated "Request ID".)
          - Structure events are richer than metrics due to its payload.
@@ -814,7 +816,7 @@
                          _ Create helper class to hold parameters
 
 
-- API Gateway
+  - API Gateway
         - Implementing security and cross-cutting concerns like security and authorization on every internal service can require significant development effort. A possible approach is to have those services within the Docker host or internal cluster to restrict direct access to them from the outside, and to implement those cross-cutting concerns in a centralized place, like an API Gateway.
         - Coupling - Without API Gateway, Client apps are coupled to the internal services. Any changes in internal services directly impact clients.
         - Security - Api Gateway can handle security aspects required for endpoints exposed to outside world
@@ -1069,70 +1071,30 @@
 
 
 - [PostgreSQL Replication][Databases]
-     - PostgreSQL supports block-based (physical) replication as well as
-the row-based (logical) replication. Physical replication is
-traditionally used to create read-only replicas of a primary instance,
-and utilized in both self-managed and managed deployments of PostgreSQL.
-Uses for physical read replicas can include high availability, disaster
-recovery, and scaling out the reader nodes.
+     - PostgreSQL supports block-based (physical) replication as well as the row-based (logical) replication. Physical replication is traditionally used to create read-only replicas of a primary instance, and utilized in both self-managed and managed deployments of PostgreSQL. Uses for physical read replicas can include high availability, disaster recovery, and scaling out the reader nodes.
      -   High availability
-         - Recovery Point Objective (RPO) -  the time span within which
-transactions may be lost after recovery
-         - Recovery Time Objective (RTO) - the time it takes from
-failure to successful recovery
+         - Recovery Point Objective (RPO) -  the time span within which transactions may be lost after recovery
+         - Recovery Time Objective (RTO) - the time it takes from failure to successful recovery
 
 - [Data storage][Databases][Architecture]
-     - Row oriented - Because data on a persistent medium such as a disk
-is typically accessed block-wise (in other words, a minimal unit of disk
-access is a block), a single block will contain data for all
-columns.This is great for cases when we’d like to access an entire user
-record, but makes queries accessing individual fields of multiple user
-records (for example, queries fetching only the phone numbers) more
-expensive, since data for the other fields will be paged in as well
-     - Column-oriented - Store values by vertical partitioning ie. by
-column against storing values by horizontal partitioning (as in RDBMS).
-         - In column-oriented layout, values of same column are stored
-contiguously on disk.For example, if we store historical stock market
-prices, price quotes are stored together. Storing values for different
-columns in separate files or file segments allows efficient queries by
-column, since they can be read in one pass rather than consuming entire
-rows and discarding data for columns that weren’t queried.
-         - Column-oriented stores are a good fit for analytical
-workloads that compute aggregates, such as finding trends, computing
-average values, etc. Processing complex aggregates can be used in cases
-when logical records have multiple fields, but some of them (in this
-case, price quotes) have different importance and are often consumed
-together.
+     - Row oriented - Because data on a persistent medium such as a disk is typically accessed block-wise (in other words, a minimal unit of disk access is a block), a single block will contain data for all columns.This is great for cases when we’d like to access an entire user record, but makes queries accessing individual fields of multiple user records (for example, queries fetching only the phone numbers) more expensive, since data for the other fields will be paged in as well
+     - Column-oriented - Store values by vertical partitioning ie. by column against storing values by horizontal partitioning (as in RDBMS).
+         - In column-oriented layout, values of same column are stored contiguously on disk.For example, if we store historical stock market prices, price quotes are stored together. Storing values for different columns in separate files or file segments allows efficient queries by column, since they can be read in one pass rather than consuming entire rows and discarding data for columns that weren’t queried.
+         - Column-oriented stores are a good fit for analytic workloads that compute aggregates, such as finding trends, computing average values, etc. Processing complex aggregates can be used in cases when logical records have multiple fields, but some of them (in this case, price quotes) have different importance and are often consumed together.
          - Apache Parquet, Apache ORC are column-oriented file formats.
              - Parquet
-                 - They use hybrid (row & colum) approach for storage.
-Values of each column for set of rows (rowgroups) are stored contiguously.
+                 - They use hybrid (row & colum) approach for storage. Values of each column for set of rows (rowgroups) are stored contiguously.
                  - Usually not stored as single file.
-                 - Supports Compression using techniques like RLE (Run
-length encoding). Stores repeated value only once and associated encoded
-data.
+                 - Supports Compression using techniques like RLE (Run length encoding). Stores repeated value only once and associated encoded data.
                  - Smaller files results in lesser I/O
                  - Can be inspected using Parquet-tools
-                 - Uses optimization techniques like predicate pushdown
-(which stores range of column value per row. This is then used during
-querying)
-         - Reading multiple values for the same column in one run
-significantly improves cache utilization and computational efficiency.
-         - If the read data is consumed in records (i.e., most or all of
-the columns are requested) and the workload consists mostly of point
-queries and range scans, the row-oriented approach is likely to yield
-better results. If scans span many rows, or compute aggregate over a
-subset of columns, it is worth considering a column-oriented approach.
+                 - Uses optimization techniques like predicate pushdown (which stores range of column value per row. This is then used during querying)
+         - Reading multiple values for the same column in one run significantly improves cache utilization and computational efficiency.
+         - If the read data is consumed in records (i.e., most or all of the columns are requested) and the workload consists mostly of point queries and range scans, the row-oriented approach is likely to yield better results. If scans span many rows, or compute aggregate over a subset of columns, it is worth considering a column-oriented approach.
          - Wide column stores
-             - data is represented as a multidimensional map, columns
-are grouped into column families (usually storing data of the same
-type), and inside each column family, data is stored row-wise. This
-layout is best for storing data retrieved by a key or a sequence of keys.
-             -Each row is indexed by its row key. Related columns are
-grouped together in column families.
-             - Each column inside a column family is identified by the
-column key, which is a combination of the column family name and a
-qualifier.
+             - data is represented as a multidimensional map, columns are grouped into column families (usually storing data of the same type), and inside each column family, data is stored row-wise. This layout is best for storing data retrieved by a key or a sequence of keys.
+             -Each row is indexed by its row key. Related columns are grouped together in column families.
+             - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
              - Column families store multiple versions of data by timestamp.
 
 
@@ -1192,28 +1154,14 @@ table has been swapped under their feet.
      - datahub - Data catalog/lineage
 
 - Quantum computing and 3d printing.
-     - Quantum computing  has the potential to break the encryption used
-to protect sensitive data in the digital world of today and
-tomorrow.Powerful countries, companies, and universities are pouring
-money into the task of building a quantum computer powerful enough to
-perform exponentially faster than the computers of today.Google and IBM
-use the same basic building block in their machines to create quantum
-behavior, known as transmon qubits which were invented by NSA.
-     - Monitoring 5G successfully requires a deep understanding of what
-makes it fundamentally different from its predecessors: higher speed,
-lower range, more distribution nodes, different data protocols.
-     - NSA says "In the future, superpowers will be made or broken based
-on the strength of their cryptanalytic programs"
+     - Quantum computing  has the potential to break the encryption used to protect sensitive data in the digital world of today and tomorrow.Powerful countries, companies, and universities are pouring money into the task of building a quantum computer powerful enough to perform exponentially faster than the computers of today.Google and IBM use the same basic building block in their machines to create quantum behavior, known as transmon qubits which were invented by NSA.
+     - Monitoring 5G successfully requires a deep understanding of what makes it fundamentally different from its predecessors: higher speed, lower range, more distribution nodes, different data protocols.
+     - NSA says "In the future, superpowers will be made or broken based on the strength of their cryptanalytic programs"
 
 - Quantum Computing's impact
-     -  the most important security and privacy properties to protect in
-the face of a quantum computer are confidentiality and authentication.
-         - quantum computers will not only be able to decrypt on-going
-traffic, but also any traffic that was recorded and stored prior to
-their arrival.
-         - The threat model for authentication is a little more complex:
-a quantum computer could be used to impersonate a party in a connection
-or conversation.
+     -  the most important security and privacy properties to protect in the face of a quantum computer are confidentiality and authentication.
+         - quantum computers will not only be able to decrypt on-going traffic, but also any traffic that was recorded and stored prior to their arrival.
+         - The threat model for authentication is a little more complex: a quantum computer could be used to impersonate a party in a connection or conversation.
 
 - [Database Record Access][Databases]
      - Why indexes,
@@ -1225,7 +1173,7 @@ pointer to the location of the next node (or block), and both need not
 be stored contiguously. Due to the fact that a number of records can
 only be sorted on one field, we can state that searching on a field that
 isn’t sorted requires a Linear Search which requires (N+1)/2 block
-accesses (on average), where N is the number of blocks that the table
+accesses (on average), where N is the number  of blocks that the table
 spans. If that field is a non-key field (i.e. doesn’t contain unique
 entries) then the entire tablespace must be searched at N block
 accesses. Whereas with a sorted field, a Binary Search may be used,
@@ -1235,15 +1183,7 @@ duplicate values, once a higher value is found. Thus the performance
 increase is substantial.
 
      - What is indexing?
-         - Indexing is a way of sorting a number of records on multiple
-fields. Creating an index on a field in a table creates another data
-structure which holds the field value, and a pointer to the record it
-relates to. This index structure is then sorted, allowing Binary
-Searches to be performed on it. The downside to indexing is that these
-indices require additional space on the disk since the indices are
-stored together in a table using the MyISAM engine, this file can
-quickly reach the size limits of the underlying file system if many
-fields within the same table are indexed.
+         - Indexing is a way of sorting a number of records on multiple fields. Creating an index on a field in a table creates another data structure which holds the field value, and a pointer to the record it relates to. This index structure is then sorted, allowing Binary Searches to be performed on it. The downside to indexing is that these indices require additional space on the disk since the indices are stored together in a table using the MyISAM engine, this file can quickly reach the size limits of the underlying file system if many fields within the same table are indexed.
      - When should it be used?
          - Given that creating an index requires additional disk space
 (277,778 blocks extra from the above example, a ~28% increase), and that
@@ -1254,7 +1194,7 @@ limits, careful thought must be used to select the correct fields to index.
      - LEFT JOIN in place of an INNER JOIN helps the planner make more
 accurate row count predictions. Adding redundant ON clauses improves
 Hash Joins.
-     -  ANY(VALUES ...) instead of IN can enforce a Hash Aggregate with
+     -  ANY(VALUES ...) instead  of IN can enforce a Hash Aggregate with
 many elements.
      - It’s a bad idea to make the table primary key a varchar.
      - CLUSTER rocks when the query returns many related rows.
@@ -1270,15 +1210,9 @@ provide
      - Unstructured duplicate data that greatly benefits from column
 compression
      - Tradeoff vis-a-vis relational,
-         - Basically Available – The system can guarantee availability,
-as defined by the CAP theorem, but by potentially trading off consistency.
-         - Soft State – The database doesn’t enforce data consistency,
-and values may change without interaction, due to eventual consistency.
-         - Eventual Consistency – When data is written, it isn’t
-guaranteed to be immediately consistent to all database consumers.
-Generally speaking, it has to be replicated across all nodes in the
-database, which means that any reads occurring during that time could be
-inconsistent.
+         - Basically Available – The system can guarantee availability, as defined by the CAP theorem, but by potentially trading off consistency.
+         - Soft State – The database doesn’t enforce data consistency, and values may change without interaction, due to eventual consistency.
+         - Eventual Consistency – When data is written, it isn’t guaranteed to be immediately consistent to all database consumers. Generally speaking, it has to be replicated across all nodes in the database, which means that any reads occurring during that time could be inconsistent.
 
 - When relational storage be used?
      - Variable workloads and reporting
@@ -1322,55 +1256,21 @@ file to be filled.
              - is asynchronous by default.
 
 - [Database Query performance analysis (MySQL)][Databases]
-     -  lock time greater than 50% of query time is a problem because
-MySQL should spend the vast majority of its time doing work, not waiting.
-     - Locks are primarily used for writes (INSERT, UPDATE, DELETE,
-REPLACE) because rows must be locked before they can be written.
-Response time for writes depends, in part, on lock time
-     - For reads (SELECT), there are nonlocking and locking reads. The
-distinction is easy because there are only two locking reads: SELECT…FOR
-UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is
-nonlocking, which is the normal case.
-     - Locking reads should be avoided, especially SELECT…FOR UPDATE,
-because they don’t scale, they tend to cause problems, and there is
-usually a nonlocking solution to achieve the same result
-     - Rows examined is the number of rows that MySQL accessed to find
-matching rows. It indicates the selectivity of the query and the
-indexes. The more selective both are, the less time MySQL wastes
-examining nonmatching rows.
+     -  lock time greater than 50% of query time is a problem because MySQL should spend the vast majority of its time doing work, not waiting.
+     - Locks are primarily used for writes (INSERT, UPDATE, DELETE, REPLACE) because rows must be locked before they can be written. Response time for writes depends, in part, on lock time
+     - For reads (SELECT), there are nonlocking and locking reads. The distinction is easy because there are only two locking reads: SELECT…FOR UPDATE and SELECT…FOR SHARE. If not one of those two, the SELECT is nonlocking, which is the normal case.
+     - Locking reads should be avoided, especially SELECT…FOR UPDATE, because they don’t scale, they tend to cause problems, and there is usually a nonlocking solution to achieve the same result
+     - Rows examined is the number of rows that MySQL accessed to find matching rows. It indicates the selectivity of the query and the indexes. The more selective both are, the less time MySQL wastes examining nonmatching rows.
 
 
 - [How postgre stores rows][Databases]
-     - PostgreSQL stores the actual data into segment files (more
-generally called heap files). Typically its fixed to 1GB size but you
-can configure that at compile time using --with-segsize. When a table or
-index exceeds 1 GB, it is divided into gigabyte-sized segments. This
-arrangement avoids problems on platforms that have file size limitations
-but 1GB is very conservative choice for any modern platform. These
-segment files contain data in fixed size pages which is usually 8Kb,
-although a different page size can be selected when compiling the server
-with --with-blocksize option but this size usually falls in ideal size
-when considering performance and reliability tradeoffs. If the page size
-is too small, rows won’t fit inside the page and if it’s too large there
-is risk of write failure because hardware generally can only guarantee
-atomicity for a fixed size blocks which can vary disk to disk (usually
-ranges from 512 bytes to 4096 bytes).
-     - Internally PostgreSQL maintains a unique row id for our data
-which is usually opaque to users. We can query it explicitly to see its
-value.in ctid First digit stand for the page number and the second digit
-stands for the tuple number. PostgreSQL moves around these tuples when
-VACUUM is run to defragment the page.
+     - PostgreSQL stores the actual data into segment files (more generally called heap files). Typically its fixed to 1GB size but you can configure that at compile time using --with-segsize. When a table or index exceeds 1 GB, it is divided into gigabyte-sized segments. This arrangement avoids problems on platforms that have file size limitations but 1GB is very conservative choice for any modern platform. These segment files contain data in fixed size pages which is usually 8Kb, although a different page size can be selected when compiling the server with --with-blocksize option but this size usually falls in ideal size when considering performance and reliability tradeoffs. If the page size is too small, rows won’t fit inside the page and if it’s too large there is risk of write failure because hardware generally can only guarantee atomicity for a fixed size blocks which can vary disk to disk (usually ranges from 512 bytes to 4096 bytes).
+     - Internally PostgreSQL maintains a unique row id for our data which is usually opaque to users. We can query it explicitly to see its value.in ctid First digit stand for the page number and the second digit stands for the tuple number. PostgreSQL moves around these tuples when VACUUM is run to defragment the page.
 
 
 - Code Obfuscation types
-     - Name obfuscation - replaces the names of packages, classes,
-methods, and fields with meaningless sequences of characters. Sometimes
-the package structure is also modified, which further obscures the names
-of packages and classes.
-     - Flow obfuscation -  modifies code order or the control flow
-graph, and string encryption, whic encrypts the constant strings in the
-code. Some tools may go further and obfuscate the XML files in the
-resource part of the APK
+     - Name obfuscation - replaces the names of packages, classes, methods, and fields with meaningless sequences of characters. Sometimes the package structure is also modified, which further obscures the names of packages and classes.
+     - Flow obfuscation -  modifies code order or the control flow graph, and string encryption, whic encrypts the constant strings in the code. Some tools may go further and obfuscate the XML files in the resource part of the APK
 
 - MySQL
      - frequently dredging up old data is problematic for performance.
@@ -1440,16 +1340,6 @@ sharding is necessary.
 that the other transaction needs
 
 
-
-- What is Observability?
-     - Observability means gaining visibility into the internal state of
-a system. It’s used to give users the tools to figure out what’s
-happening, where it’s happening, and why. At Cloudflare, we believe that
-observability has three core components: monitoring, analytics, and
-forensics. Monitoring measures the health of a system - it tells you
-when something is going wrong. Analytics give you the tools to visualize
-data to identify patterns and insights. Forensics helps you answer very
-specific questions about an event.
 
 - [MySQL Replication][Databases]
      - Typical issues
