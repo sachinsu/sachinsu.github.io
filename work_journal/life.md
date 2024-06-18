@@ -784,4 +784,12 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - “Too much of what is called 'education' is little more than an expensive isolation from reality.”
   -  "There's now a world in which the success of others is a grievance, rather than an example"
   -  “Since this is an era of 'fairness' & 'social justice...What is your 'fair share' of what someone else has worked for?”
-- 
+
+- Basic Economics of Credit card,
+    - Banks that issue credit cards generally make money from the fees that merchants pay to accept cards. Say those fees are 2%: If you buy a thing for $100 with a credit card, you pay $100, the seller gets $98, and your bank keeps $2. [6]
+    - Banks attract customers by rebating them a portion of those fees as “rewards” or “cash back.” Perhaps your bank gives you back $1 on that transaction, and keeps the other $1 itself.
+    - In a competitive market, banks attract customers by rebating them more than all of the fees, on certain types of transactions, with the hope that the customers will like that offer but mostly use the cards for other transactions. “Rebating interchange to earn share of wallet,” Patrick McKenzie calls it: “Say, for example, the card rebates 1.5%, but only for … bookstores. Any bookstore. For all other transactions, it is 1%. The thing you would love with this offering is to preferentially attract people who are very emotionally invested in being readers and who spends very little of [their] on-this-card wallet on books. The emotional investment in the story the card offers brings the customer in; the blended cost to acquire the customer is closer to [the] 1% industry standard and not to the 1.5% headline number.”
+    - So a bank might offer, like, “3% cash back on books, 1% on everything else,” and you say “ooh that sounds good,” get the card, and buy $40 worth of books and $40,000 of everything else. Then the bank is making money from you: It makes 1% (its 2% fee minus 1% cash back) on most of your transactions, and loses 1% (its 2% fee minus 3% cash back) on a small but emotionally salient minority of them.
+    - Also of course if you carry a balance, by not paying off your card every month, the bank makes a lot of money by charging you interest. [7]
+    - Conversely, if you get this card, buy $40,000 worth of books, and do all of your other spending on other cards, the bank is losing a lot of money on you: It loses 1% on every transaction. This is called “adverse selection.”
+

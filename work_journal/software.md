@@ -345,6 +345,7 @@
            - Scalability issues (because you don't know the system well)
            - Complexity may lead to more downtime
          - Stop thinking about technologies, and start thinking in first-principle requirements (the idea is to break down complicated problems into basic elements and then reassemble them from the ground up),
+         - How you choose to develop, deploy, and manage services will always be driven by the product you’re designing, the skillset of the team building it, and the experience you want to deliver to customers (and of course things like cost, speed, and resiliency).
          - In case of databases, it could be,
              - You need faster inserts/updates (i.e. Not Synching every write to disk immediately which can be done in Mysql using  flush log settings and in postgresql using Asynchronous commits
              - You need terabytes of storage to have runway for the next ~5 years
@@ -361,6 +362,10 @@
                      - Possibility of breaking off a Module and convert it in Micro-service, if needed
                      - being purposeful - Architecture that satisfies business needs.
          - Micro-services (independent deployability)
+               - Use Tech stacks that meet the requirement
+               - shorter time for deployment
+               - New components can be deployed without impacting entire system
+               - Outage could be limited to a Service 
              - Common topologies
                  - API REST-based topology
                  - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small
