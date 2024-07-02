@@ -84,6 +84,7 @@ My current Favorite Language
 - [Excelsize - pure Go library providing a set of functions that allow you to write to and read from XLSX / XLSM / XLTM / XLTX files](https://github.com/qax-os/excelize)
 - [Benthos - Simplified stream processing with built-in connectors](https://github.com/Jeffail/benthos)
 - [Service weaver - Write Modular Monolith Apps](https://github.com/ServiceWeaver/weaver)
+- [Xo - Tool to Generate DB Specific Go Code](https://github.com/xo/xo)
 
 ### Learning 
 

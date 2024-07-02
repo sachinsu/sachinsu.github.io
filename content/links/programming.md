@@ -23,6 +23,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Strategies/Approaches
 
+
+- [Serving a billion web requests with boring code](https://notes.billmill.org/blog/2024/06/Serving_a_billion_web_requests_with_boring_code.html)
 - [Professional programming resources](https://github.com/charlax/professional-programming)
 - [Rob Pikes 5 Rules of Programming](http://users.ece.utexas.edu/~adnan/pike.html)
 - [Modules, monoliths, and microservices](https://tailscale.com/blog/modules-monoliths-and-microservices/)

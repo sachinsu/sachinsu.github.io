@@ -793,3 +793,31 @@ is done, we can move to the second stage by asking ourselves why we want the ite
     - Also of course if you carry a balance, by not paying off your card every month, the bank makes a lot of money by charging you interest. [7]
     - Conversely, if you get this card, buy $40,000 worth of books, and do all of your other spending on other cards, the bank is losing a lot of money on you: It loses 1% on every transaction. This is called “adverse selection.”
 
+
+-    Some powerful ideas can be brought to bear in support of good critical and scientific thinking, including the following.
+        Analyze your situation carefully and fully (observation – paying mindful attention).
+
+        Do the necessary research (assure sufficient domain knowledge to be able to apply critical thinking).
+
+        Practice skepticism, beginning with yourself (and be sure you have plenty of inputs that don’t share your ideas, views, beliefs, and commitments).
+
+        Challenge all assumptions.
+
+        Withhold judgment as long as possible.
+
+        Revise your conclusions based upon new evidence. For Christians, Hell is having your own way and being stuck with it. That concept works for science too. Ideally, it is like living in a world with constant auto-correct. It’s sometimes (and sometimes hilariously or tragically) wrong, but it’s usually an efficient improvement.
+
+        Remember that errors and mistakes are evidence too.
+
+        Keep looking for new evidence.
+
+        Keep testing your ideas and hypotheses.
+
+        Check with relevant subject matter experts.
+
+        Emphasize data over belief and process over outcomes.
+
+        Consider that with which you disagree as generously as possible using the philosophical “principle of charity.”
+
+        Keep looking for what you (and others) might have missed.
+
