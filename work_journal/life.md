@@ -794,7 +794,7 @@ is done, we can move to the second stage by asking ourselves why we want the ite
     - Conversely, if you get this card, buy $40,000 worth of books, and do all of your other spending on other cards, the bank is losing a lot of money on you: It loses 1% on every transaction. This is called “adverse selection.”
 
 
--    Some powerful ideas can be brought to bear in support of good critical and scientific thinking, including the following.
+-    Some powerful ideas can be brought to bear in support of good critical and scientific thinking,    including the following.
         Analyze your situation carefully and fully (observation – paying mindful attention).
 
         Do the necessary research (assure sufficient domain knowledge to be able to apply critical thinking).
