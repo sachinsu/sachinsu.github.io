@@ -592,3 +592,9 @@
 
 
 - Stay the course -- by owning broad market index funds - https://janav.wordpress.com/2024/03/04/stay-the-course/
+
+
+- Contrarian EPS - 
+  - Selection Criteria 
+    - Active funds - (50% in Index funds). Funds with less than 50 stocks and turnover less than 25%. 
+    - Stocks - 10year ROCE > 15% and Ev/EBIT < 14x

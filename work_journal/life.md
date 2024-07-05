@@ -821,3 +821,33 @@ is done, we can move to the second stage by asking ourselves why we want the ite
 
         Keep looking for what you (and others) might have missed.
 
+
+- Conversation Rules
+- - The Mom Test
+    - Talk about their life instead of your idea
+    - Ask about specifics in the past instead of generics or opinions about the future
+    - Talk less and listen more
+  - Compliments are the fool’s gold of customer learning: shiny, distracting, and entirely worthless.
+  - Start broad and don't zoom in until you’ve found a strong signal, both with your whole business and with every conversation
+  - Anything involving the future is an over-optimistic lie.
+  - Opinions are worthless
+  - People will lie to you if they think it’s what you want to hear.
+  - People know what their problems are, but they don’t know how to solve those problems.
+  - You're shooting blind until you understand their goals.
+  - Watching someone do a task will show you where the problems and inefficiencies really are, not where the customer thinks they are.
+  - If they haven't looked for ways of solving it already, they're not going to look for (or buy) yours.
+  - People want to help you, but will rarely do so unless you give them an excuse to do so.
+  - Ideas and feature requests should be understood, but not obeyed.
+  - If you’ve mentioned your idea, people will try to protect your feelings.
+  - Anyone will say your idea is great if you’re annoying enough about it.
+  - The more you’re talking, the worse you’re doing.
+  - There’s more reliable information in a “meh” than a “Wow!” 
+  - Learning about a customer and their problems works better as a quick and casual chat than a long, formal meeting
+  - Give as little information as possible about your idea while still nudging the discussion in a useful direction
+  - “Customers” who keep being friendly but aren’t ever going to buy are a particularly dangerous source of mixed signals.
+  - If you don’t know what happens next after a product or sales meeting, the meeting was pointless.
+  - The more they’re giving up, the more seriously you can take their kind words.
+  - It’s not a real lead until you’ve given them a concrete chance to reject you.
+  - If it’s not a formal meeting, you don’t need to make excuses about why you’re there or even mention that you’re starting a business. Just have a good conversation.
+  - You can find anyone you need if you ask for it a couple times.
+  - Keep having conversations until you stop hearing new stuff.
