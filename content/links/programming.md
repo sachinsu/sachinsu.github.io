@@ -240,6 +240,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Distributed messaging, Streams
 
+- [SmoothMQ - Drop-in replacement for SQS With SQlite backend](https://github.com/poundifdef/SmoothMQ)
 - [Comparison - BlazingMQ, RabbitMQ and Kafka](https://bloomberg.github.io/blazingmq/docs/introduction/comparison/)
 - [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
 - [VerneMQ - A distributed MQTT message broker based on Erlang/OTP](https://github.com/vernemq/vernemq)
