@@ -17,7 +17,7 @@
 		<meta itemprop="name" content="Using local LLM with Ollama and Semantic Kernel">
 <meta itemprop="description" content="Introduction Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines."><meta itemprop="datePublished" content="2024-05-11T10:25:04+05:30" />
 <meta itemprop="dateModified" content="2024-05-11T10:25:04+05:30" />
-<meta itemprop="wordCount" content="1728">
+<meta itemprop="wordCount" content="1726">
 <meta itemprop="keywords" content="localai,golang,.net core,llm,ollama,phi-3,semantickernel,gpt,gemini," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using local LLM with Ollama and Semantic Kernel"/>
@@ -812,8 +812,6 @@ d to integrate with external implementation like Ollama.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    [<span style="color:#a6e22e">Fact</span>]
@@ -836,9 +834,7 @@ d to integrate with external implementation like Ollama.</p>
         <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> = <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">chatGen</span>.<span style="color:#a6e22e">GetChatMessageContentAsync</span>(<span style="color:#a6e22e">chat</span>);
         <span style="color:#a6e22e">Assert</span>.<span style="color:#a6e22e">NotNull</span>(<span style="color:#a6e22e">answer</span>);
         <span style="color:#a6e22e">Assert</span>.<span style="color:#a6e22e">NotEmpty</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">Content</span>!);
-        <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">Diagnostics</span>.<span style="color:#a6e22e">Debug</span>.<span style="color:#a6e22e">WriteLine</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">Content</span>!);
-
-
+        <span style="color:#a6e22e">System</span>.<span style="color:#a6e22e">Diagnostics</span>.<span style="color:#a6e22e">Debug</span>.<span style="color:#a6e22e">WriteLine</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">Content</span>!
     }</code></pre></td></tr></table>
 </div>
 </div>

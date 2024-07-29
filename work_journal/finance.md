@@ -598,3 +598,4 @@
   - Selection Criteria 
     - Active funds - (50% in Index funds). Funds with less than 50 stocks and turnover less than 25%. 
     - Stocks - 10year ROCE > 15% and Ev/EBIT < 14x
+  - high switching costs. To totally abandon something and replace it with something new takes a lot of courage on the part of decision maker. If it bombs there is a career risk. 
