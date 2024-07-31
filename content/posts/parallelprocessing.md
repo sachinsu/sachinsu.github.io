@@ -14,30 +14,30 @@ So Lets Start.
 
 Lets assume that this typical use case requires,
 
-    - fetching data from database for the purpose of merging placeholders in a Template and perform mail merge 
+- fetching data from database for the purpose of merging placeholders in a Template and perform mail merge 
 
-    - Generate PDF file from mail-merged output of last step (say HTML to PDF)
+- Generate PDF file from mail-merged output of last step (say HTML to PDF)
 
-    - send notification to users via third party API. 
+- send notification to users via third party API. 
 
 --- 
 
 The requirement is to perform these steps in such a way that 50 or more notifications (with file) are sent per minute. 
 
-For the purpose of simplicity, lets assume,
+For the purpose of simplicity, lets assume that,
 
-- Assume that Database read operation and HTML generation basis template, takes upto 2 seconds per iteration 
+- Database read operation and HTML generation basis template, takes upto 2 seconds per iteration 
 - We will use [Puppeteer Sharp](https://www.puppeteersharp.com/) library for PDF Generation 
 - External API Integration takes up to 2 seconds per call
 
 Since current approach of sequential execution is not helpful, lets try below (both the methods process 5 requests[i.e. generate 5 pdf files] per iteration), 
 
-    - Using  [Task asynchronous programming model](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model)  - This uses Task library to start tasks in parallel and subsequently process them as each completes.   
+- Using  [Task asynchronous programming model](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model)  - This uses Task library to start tasks in parallel and subsequently process them as each completes.   
         
 {{< figure src="/images/pl-taskasync.png" title="Using Task Async. Library" >}}
 
 
-    - Using [Dataflow - Task Parallel Library](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library)  - This uses Dataflow Library to orchestrate each step in the process and use parallelism for performance. 
+- Using [Dataflow - Task Parallel Library](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library)  - This uses Dataflow Library to orchestrate each step in the process and use parallelism for performance. 
 
 
 {{< figure src="/images/pl-dataflow.png" title="Using DataFlow Library" >}}
