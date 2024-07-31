@@ -1,5 +1,5 @@
 ---
-title: "Using Asynchronous programming for better throughput"
+title: "Using Asynchronous programming to manage parallel processing "
 date: 2024-07-30T10:25:04+05:30
 draft: false
 ---
