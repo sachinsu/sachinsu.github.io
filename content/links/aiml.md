@@ -55,3 +55,8 @@ Useful links related from AI, ML space
 
 - [Lokalize - AI based translation of file](https://lokalise.com/)
 - [Vibery - Semantic Search using embeddings and KNN](https://github.com/veekaybee/viberary/)
+
+
+## Tools 
+
+- [Aider - AI pair programming in your terminal ](https://github.com/paul-gauthier/aider)
