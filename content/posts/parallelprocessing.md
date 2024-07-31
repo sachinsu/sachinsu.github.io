@@ -26,9 +26,9 @@ The requirement is to perform these steps in such a way that 50 or more notifica
 
 For the purpose of simplicity, lets assume,
 
-    - Assume that Database read operation and HTML generation basis template, takes upto 2 seconds per iteration 
-    - We will use [Puppeteer Sharp](https://www.puppeteersharp.com/) library for PDF Generation 
-    - External API Integration takes up to 2 seconds per call
+- Assume that Database read operation and HTML generation basis template, takes upto 2 seconds per iteration 
+- We will use [Puppeteer Sharp](https://www.puppeteersharp.com/) library for PDF Generation 
+- External API Integration takes up to 2 seconds per call
 
 Since current approach of sequential execution is not helpful, lets try below (both the methods process 5 requests[i.e. generate 5 pdf files] per iteration), 
 
