@@ -91,6 +91,8 @@ draft: false
 - [Asynchronous Commits for faster data loading](https://www.percona.com/blog/2020/08/21/postgresql-synchronous_commit-options-and-synchronous-standby-replication/)
 - [Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked](https://www.enterprisedb.com/blog/listening-postgres-how-listen-and-notify-syntax-promote-high-availability-application-layer)
 - [Queues in PostgreSQL](https://www.youtube.com/watch?v=WIRy1Ws47ic&list=PLlrxD0HtieHjSzUZYCMvqffEU5jykfPTd)
+- [How postgresql stores data on disk](https://drew.silcock.dev/blog/how-postgres-stores-data-on-disk/)
+
 
 ## Interesting Extensions/Products
 

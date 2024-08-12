@@ -851,3 +851,10 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - If it’s not a formal meeting, you don’t need to make excuses about why you’re there or even mention that you’re starting a business. Just have a good conversation.
   - You can find anyone you need if you ask for it a couple times.
   - Keep having conversations until you stop hearing new stuff.
+
+- 4s framework 
+  - Simplify: Break large projects into manageable chunks. Completing each chunk builds motivation, propelling you towards project completion.
+  - Small: Keep tasks small to maintain focus and simplify your approach.
+  - Short: Work in brief intervals, like 30-minute sessions. This Pomodoro technique makes tasks less daunting than facing hours of unbroken work.
+  - Slow: Do the task slowly by working at a pace that allows full attention to the task at hand.
+
