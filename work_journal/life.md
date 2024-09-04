@@ -858,3 +858,57 @@ is done, we can move to the second stage by asking ourselves why we want the ite
   - Short: Work in brief intervals, like 30-minute sessions. This Pomodoro technique makes tasks less daunting than facing hours of unbroken work.
   - Slow: Do the task slowly by working at a pace that allows full attention to the task at hand.
 
+- Dr. Sarin - Life saving tips
+  - Resolve not to take any medicine unless it is absolutely essential.
+  - If you are overweight or diabetic, or are born in a family with metabolic disorders, avoid alcohol.
+  - Get up and see the front, sides and back of your neck in the mirror. Look for skin tags, moles and black velvety lines, and remember them as well.
+  - Get SGPT test done and must be < 20 
+  - If you are born into a family with diabetic parents, indulge in vigorous physical activity and avoid drinking to prevent diabetes.
+  - If there is a history of any cancer in your family, get all the members to undergo liver and metabolic health check-ups. If possible, genetic testing for cancers should be undertaken.
+  - If you have hypothyroidism, get tests for liver and metabolic health. Know your numbers: BMI, BP, LFT and lipids.
+  - Thyroid hormones contribute to and govern metabolic pathways and body composition.In obese people, good muscle mass indicates good thyroid function,especially in men.
+  - If you have hypothyroidism and are overweight, lose 10 per cent of body weight and check the likelihood of reducing the thyroxine dose.
+  - Sit up and shed excess weight to regain fertility and manliness. Remember, a broader waist may decrease your masculinity.
+  - Take gallstones seriously. Their occurrence portends metabolic diseases. All family members of patients with gallstones should get screened for liver health.
+  - Reduce the capacity of your stomach by avoiding to pack it to full. Also, try to consume low-calorie food.
+  - If you have acid reflux, get your routine health check-up done for reversible factors
+  - Get your body fat content checked. Maintain body fat content lower than 20 per cent if you are male and 28 per cent if you are female.
+  - Use stairs to remain healthy and fit and delay exit from life. Develop a habit of parking your car 500–1,000 metres away from your workplace.
+  - Learn about the fructose content of carbohydrates that you take. Choose the ones with low fructose content. Make these choices today.
+  - f you have high uric acid, get liver and metabolic health check-up. Calculate your sugar intake and reduce fructose intake. Try to keep uric acid normal through diet.
+  - Start practising fasting in any form. Short spells of starvation may rejuvenate you.
+  - Practise good dinacharya—early to bed and early to rise—practice fasting, light and early dinner. Work to achieve adequate and quality natural sleep.
+  - If you carry a red flag, try to achieve and maintain 5 per cent less body weight than the ideal body weight for your height.
+  
+
+By Casey Means, I believe the United States would be a healthier, happier, more prosperous place if we replaced all those studies with these simple guidelines that will transform anyone’s health. Eat the following:
+    - Organic (ideally regenerative) unrefined or minimally refined fruits
+    - Organic (ideally regenerative) unrefined or minimally refined vegetables
+    - Organic (ideally regenerative) unrefined or minimally refined nuts and seeds
+    - Organic (ideally regenerative) unrefined or minimally refined legumes and beans
+    - Pasture-raised, organic, 100 percent grass-fed meats and organs, including elk, venison, bison, lamb, beef, pork, goat
+    - Pasture-raised, organic, 100 percent foraging poultry and eggs
+    -Pasture-raised, organic, 100 percent grass-fed, ideally A2-strain dairy products like milk, cheese, yogurt, and kefir
+    - Wild, line-caught, small omega-3 fish, including mackerel, sardines, anchovies, and salmon
+    - Organic unrefined or minimally refined herbs and spices
+    - Organic minimally refined condiments, like vinegar, mustard, and hot sauce
+    - Organic (ideally regenerative) minimally refined fermented foods like sauerkraut, kimchi, yogurt, natto, tempeh, tofu, and kefir
+    - Reverse osmosis or charcoal-filtered water
+
+    - Cut processed and ultra-processed foods from your diet—particularly those that contain the following:
+        - Refined sugars of any kind
+        - Refined grains of any kind
+        - Refined industrial vegetable or seed oils of any kind
+
+    - Meal Sequencing 
+      - Always order a salad filled with greens and some protein (egg, chicken, cheese) before eating a starchy entrée. Make sure the dressing has no sugar.
+      - Ask the waiter not to bring bread or chips before a meal.
+      - If your plate includes a starch (e.g., potato or pasta), protein (e.g., chicken or fish), and vegetable, start with the vegetable, then eat the protein, and then end with the starch.
+      - Eat a handful of nuts, a hard-boiled egg, or some chopped veggies about a half hour before sitting down to a meal or going to an event.
+      - Eat Earlier: Amazingly, the exact same meal will likely cause a lower glucose spike if it’s eaten in the morning instead of late at night. Our bodies are naturally more insulin resistant at night, so in a sense we get “more bang for the buck” by eating carbohydrates earlier in the day, when we can process them better. A study in the British Journal of Nutrition with healthy, normal-weight participants wearing CGMs showed that eating high-glycemic food later in the evening will cause a significant increase in both insulin and glucose levels compared with eating the exact same meal earlier in the day. In this study, evening meals were consumed at 8:30 p.m., and morning meals were consumed at 9:30 a.m. Avoid high-glycemic meals and desserts at night.
+      - Tighten the Eating Window: Eating in a narrower window during the day leads to lower glucose and insulin spikes compared to eating the exact same amount of food spread out over a longer period of the day. Time-restricted feeding (TRF) involves eating all your food and calories for the day in a limited window. To put TRF into practice, start by trying to limit the time when you eat to twelve hours (e.g., 8:00 a.m. to 8:00 p.m.), and then tighten the window to ten hours (e.g., 8:00 a.m. to 6:00 p.m.) and eventually to eight hours (e.g., 10:00 a.m. to 6:00 p.m.). As your body becomes more metabolically efficient through Good Energy living, TRF becomes easier because your body becomes more adept at processing stored fat for energy.
+      - Add Fiber to All Meals: Fiber slows digestion, promotes microbiome health, and lowers post-meal glucose rises.fiber sources included legumes, vegetables, fruit, and whole grains. Other good sources of fiber include chia seeds, flaxseeds, other nuts or seeds, avocados, beans, high-fiber fruits or vegetables, lentils, and tahini. Aim for at least 50 grams of fiber per day.
+      - Walk for at Least Fifteen Minutes After Meals: This simple step can reduce the glucose impact of your meal by up to 30 percent and is an unbelievably high-yield habit to incorporate after as many meals as you can.
+      - Human circadian biology primes us to be more insulin sensitive and generate more heat from metabolizing food in the morning instead of the evening. Overall, research suggests that we do much better by frontloading the day with food—especially higher carbohydrate foods—and stopping eating as early as possible in the evening. One study showed that eating food later in the evening (at 8:30 p.m.) caused a significant increase in both insulin and glucose levels compared with eating the exact same meal consumed in the morning (at 9:30 a.m.).
+
+

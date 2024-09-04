@@ -599,3 +599,10 @@
     - Active funds - (50% in Index funds). Funds with less than 50 stocks and turnover less than 25%. 
     - Stocks - 10year ROCE > 15% and Ev/EBIT < 14x
   - high switching costs. To totally abandon something and replace it with something new takes a lot of courage on the part of decision maker. If it bombs there is a career risk. 
+
+- Types of Analysts
+  - The main differences between buy-side and sell-side analysts are the type of firm that employs them and the people to whom they make recommendations.
+  - Sell-side firms include broker-dealers, investment banks, and market makers that give investment services to the rest of the market.
+  - Buy-side firms include asset managers, hedge funds, and other companies that trade securities for their clients.
+  - Buy-side analysts evaluate an investment's potential and whether it aligns with a fund's investment strategy.
+  - Sell-side analysts are known for issuing recommendations such as "strong buy," "outperform," "neutral," or "sell." These analysts typically have more time to learn the ins and outs of an industry

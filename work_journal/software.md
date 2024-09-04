@@ -3235,6 +3235,8 @@ new request as soon as the previous request completes. This helps you
 understand the highest number of IOPS that the database can sustain.
 Throughput-focused benchmarks are often the focus for analytics use
 cases (fraud detection, cybersecurity, etc.)
+          - The number of requests per second, or the data volume per second, that the system is processing. For a given a particular allocation of hardware resources, there is a maximum throughput that can be handled. The unit of measurement is “somethings per second”
+          - 
      - Latency focus: You assess how many IOPS the database can handle
 without compromising latency. This is usually the focus for most
 user-facing and real-time applications.
@@ -3243,6 +3245,15 @@ database connection,
          - average latency
          - P99 percentile latency
          - Maximum latency experienced in recent time frame
+
+     -     The response time is what the client sees; it includes all delays incurred anywhere in the system.
+
+    -     The service time is the duration for which the service is actively processing the user request.
+
+    -     Queueing delays can occur at several points in the flow: for example, after a request is received, it might need to wait until a CPU is available before it can be processed; a response packet might need to be buffered before it is sent over the network if other tasks on the same machine are sending a lot of data via the outbound network interface.
+
+    -     Latency is a catch-all term for time during which a request is not being actively processed, i.e., during which it is latent. In particular, network latency or network delay refers to the time that request and response spend traveling through the network.
+
 
 - CPU vs GPU
    - CPUs are designed for sequential processing while GPUs have been
