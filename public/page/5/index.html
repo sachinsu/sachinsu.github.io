@@ -110,6 +110,23 @@ if (!doNotTrack) {
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/webassembly/" rel="bookmark">
+			Is WebAssembly future of Web Development
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-06-02T10:25:04&#43;05:30">Jun 2 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&rsquo;s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others.
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/usinggithubactions/" rel="bookmark">
 			Using Github Actions for Automated Testing and Deployment
 			</a>
@@ -180,24 +197,6 @@ At a High level, Tracfee&rsquo;s Architecture involves,
 		Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
 During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine.
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/channelsforproducerconsumer/" rel="bookmark">
-			Using Channels for High performance Producer consumer implementation
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-02-12T10:25:04&#43;05:30">Feb 12 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.
-This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).
-	</div>
 </article>
 </main>
 
@@ -238,11 +237,11 @@ This application is developed in .NET Framework + .NET Core and primarily uses R
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/shortidgeneration/">URL Shortener in High Throughput Service</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/is_sqlite_production_ready/">Can SQLite be considered for Server Applications?</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/profiling_n_benchmarking/">Profiling and benchmarking tools for Applications</a></li>
 		</ul>
 	</div>
 </div>

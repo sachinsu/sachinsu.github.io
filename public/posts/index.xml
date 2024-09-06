@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Learnings in IT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Asynchronous programming to manage parallel processing </title>
+      <link>https://sachinsu.github.io/posts/parallelprocessing/</link>
+      <pubDate>Tue, 30 Jul 2024 10:25:04 +0530</pubDate>
+      
+      <guid>https://sachinsu.github.io/posts/parallelprocessing/</guid>
+      <description>Background There was a requirement to perform series of tasks, involving generation of output files, such that the required throughput is achieved. These tasks involve database read operation, external API invocation and file i/o. Generally, benchmarking showed that executing them in sequential way was not helpful. What if asynchronous programming be used to perform this task.
+So Lets Start.
+Approach Lets assume that this typical use case requires,
+  fetching data from database for the purpose of merging placeholders in a Template and perform mail merge</description>
+    </item>
+    
     <item>
       <title>Using local LLM with Ollama and Semantic Kernel</title>
       <link>https://sachinsu.github.io/posts/ollamasemantickernel/</link>

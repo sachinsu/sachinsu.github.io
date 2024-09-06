@@ -110,6 +110,26 @@ if (!doNotTrack) {
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/parallelprocessing/" rel="bookmark">
+			Using Asynchronous programming to manage parallel processing 
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sachin Sunkle</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-07-30T10:25:04&#43;05:30">Jul 30 2024</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Background There was a requirement to perform series of tasks, involving generation of output files, such that the required throughput is achieved. These tasks involve database read operation, external API invocation and file i/o. Generally, benchmarking showed that executing them in sequential way was not helpful. What if asynchronous programming be used to perform this task.
+So Lets Start.
+Approach Lets assume that this typical use case requires,
+  fetching data from database for the purpose of merging placeholders in a Template and perform mail merge
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/ollamasemantickernel/" rel="bookmark">
 			Using local LLM with Ollama and Semantic Kernel
 			</a>
@@ -177,25 +197,6 @@ During Development, Windows 10 is used to develop and test the code.
 	<div class="content list__excerpt post__content clearfix">
 		Introduction While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&rsquo;s familiarity, Costs, Tech. support availability and so on. In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server.
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/profiling_n_benchmarking/" rel="bookmark">
-			Profiling and benchmarking tools for Applications
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sachin Sunkle</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-12-12T01:00:00&#43;05:30">Dec 12 2021</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&rsquo;s objectives.
-Lets look at what they mean,
- Profiling is defined as process aimed at understanding the behavior of a program.
-	</div>
 </article>
 </main>
 
@@ -235,11 +236,11 @@ Lets look at what they mean,
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/shortidgeneration/">URL Shortener in High Throughput Service</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/is_sqlite_production_ready/">Can SQLite be considered for Server Applications?</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/profiling_n_benchmarking/">Profiling and benchmarking tools for Applications</a></li>
 		</ul>
 	</div>
 </div>
