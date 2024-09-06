@@ -361,6 +361,37 @@
                      - Rapid development if going with Modular Monolith
                      - Possibility of breaking off a Module and convert it in Micro-service, if needed
                      - being purposeful - Architecture that satisfies business needs.
+
+            - Notes on Microservices Integration/Disinteegration or Granularity, 
+                - Micro-service Granularity/Disintegration Drivers
+                  - Rate of Change
+                  - Operational characteristics 
+                      - Metrics 
+                      - fault tolerance  -  remove that faulty piece from the service, extract it, break that service apart to be able to isolate our not-so-reliable functions inside that service, now we've isolated those errors, 
+                      - disintegrating microservice  around scalability or some other operational characteristic, and those are particularly important because that's really the benefit of microservices, that ability for each service to have its own set of characteristics around those operational capabilities within architecture.
+                  - Highly volatile things make terrible reuse candidates in software architecture.  domain concepts make terrible reuse candidates because domain concepts by their definition are the most volatile things
+              
+                - Integration Drivers 
+                  - Atomicity of Transactions ( a database transaction, single unit of work, commit rollback).
+                   - Data dependencies is a very common integrator.
+
+                - Observability really is about the ability of a particular service to expose or export its information, its telemetry. It could be about response time, error rates, amount of messages processed in one hour.
+
+                -the role of an architect is to measure and analyze these trade-offs but not necessarily make the decision, but to bring these trade-offs to a product partner, somebody on the product team, to be able to understand these particular forces and which is more important, that we are able to better scale or have better data consistency
+
+                - Fallacies of Distributed computing, 
+                      The network is reliable;
+                      Latency is zero;
+                      Bandwidth is infinite;
+                      The network is secure;
+                      Topology doesn't change;
+                      There is one administrator;
+                      Transport cost is zero;
+                      The network is homogeneous;
+                      observability is optional
+                      compensating updates always work 
+
+
          - Micro-services (independent deployability)
                - Use Tech stacks that meet the requirement
                - shorter time for deployment
@@ -3530,3 +3561,4 @@ configuration, AOF could provide durability at the expense of availability.
    - Single threaded and sequentially executes all commands it receives.
 however, it may lose committed writes across failovers due to
 asychronous propagation.
+
