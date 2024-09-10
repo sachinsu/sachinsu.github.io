@@ -1280,6 +1280,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul>
 &lt;h2 id="libraries-and-tools">Libraries and Tools&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/plotly/dash
+ 
+ target=_blank rel="noopener noreferrer"
+>Dash - Python based framework for Visualization with no javascript&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/t3-oss/create-t3-app
  
  target=_blank rel="noopener noreferrer"
@@ -1695,6 +1699,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >A Distributed Systems Reading List&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/97-things/97-things-every-programmer-should-know
+ 
+ target=_blank rel="noopener noreferrer"
+>97 things, Pearls of wisdom for programmers collected from leading practitioners&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="legacy-modernization">Legacy Modernization&lt;/h2>
 &lt;ul>
