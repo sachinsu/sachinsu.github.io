@@ -3562,3 +3562,17 @@ configuration, AOF could provide durability at the expense of availability.
 however, it may lose committed writes across failovers due to
 asychronous propagation.
 
+
+- Service based Architecture 
+  - Terms and their defintions
+    - Service - is a cohesive collection of functionality deployed as
+an independent executable.
+     - Coupling - Two artifacts (including services) are coupled if a change in one might require a change in the other to maintain proper functionality.Static coupling refers to
+     the way architectural parts (classes, components, services, and so on) are wired
+     together: dependencies, coupling degree, connection points, and so on.Dynamic coupling refers to how architecture parts call one another: what kind of communication, what information is passed, strictness of contracts, and so on.
+
+     - Component - An architectural building block of the application that does some sort of business or infrastructure function, usually manifested through a package structure (Java), namespace (C#), or a physical grouping of source code files within some sort of directory structure.
+     - Synchronous communication - Two artifacts communicate synchronously if the caller must wait for the response before proceeding
+     - Asynchronous communication - Two artifacts communicate asynchronously if the caller does not wait for the response before proceeding. Optionally, the caller can be notified by the receiver through a separate channel when the request has completed.
+     - Choreographed coordination - A workflow is choreographed when it lacks an orchestrator; rather, the services in the workflow share the coordination responsibilities of the workflow.
+     - 

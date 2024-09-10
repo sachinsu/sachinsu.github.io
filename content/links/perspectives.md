@@ -60,7 +60,7 @@ Section covering Business, project/programming perspectives
 - [First principles thinking](https://addyosmani.com/blog/first-principles-thinking-software-engineers/)
 - [How Computer CPUs work](https://cpu.land/editions/one-pager)
 - [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
-
+- [97 things, Pearls of wisdom for programmers collected from leading practitioners](https://github.com/97-things/97-things-every-programmer-should-know)
 
 
 ## Legacy Modernization 

@@ -48,6 +48,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [Dash - Python based framework for Visualization with no javascript](https://github.com/plotly/dash)
 - [T3 - full-stack, typesafe Next.js app](https://github.com/t3-oss/create-t3-app)
 - [Perspective.js - A data visualization and analytics component, especially well-suited for large and/or streaming datasets.](https://github.com/finos/perspective?tab=readme-ov-file)
 - [Observable - A static site generator for data apps, dashboards, reports](https://github.com/observablehq/framework)
