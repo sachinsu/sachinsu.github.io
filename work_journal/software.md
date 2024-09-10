@@ -43,6 +43,7 @@
             the server in message form. For example, EventSource is a useful   approach for handling things like social media status updates, news   feeds, or delivering data into a client-side storage mechanism like   IndexedDB or web storage.
 
   - UI
+      - Micro frontend - the user interface elements that interact on behalf of the servicesare  emitted  from  the  services  themselves.
      - Server side web app or SPA
          - Use traditional web applications when:
              - Your application’s client-side requirements are simple or even read-only.
@@ -146,6 +147,171 @@
              - JIT is free to lengthen the object lifetime till the end of method and has always been
 
 - General Architecture
+     - Approach for Architecture building (Monolith to Service based Migration)
+        - There must be business drivers to go for Service based Architecture
+          - Availability
+          - Scalability
+          - Separation of Concerns (Reporting functionality , reporting load)
+          - Agility (faster implementation of changes)
+          - Testability
+          - Better and faster deployability
+
+        - Architectural  quantum  is  defined  as  an  independently deployable artifact with high functional cohesion, high static coupling, and synchro‐nous  dynamic  coupling
+
+        - Application 
+          - logically  group  components  together (those performing some sort of related functionality)  so  that  more  coarse-grained domain services can be created when breaking up an application.
+
+          - a component  as   a   building   block   of   the   application   that   has   a   well-defined   role   and responsibility  in  the  system  and  a  well-defined  set  of  operations.
+          - Typical Namespace composition  can be "Application.Domain.SubDomain.Component.Class".
+
+          - Infrastructure Cross-cutting functionality is operational in nature and common to all processes (like logging, metrics, security)  but there may exist some domain functionality that can be shared across some processes.Examples of Infrastructure related Cross cutting/common functions are logging, security, utilities, formatters, converters, extractors, auditing, monitoring. 
+
+          - Identify and Size Components 
+            - analyze  the incoming  and  outgoing  dependencies  (coupling)  between  components  to  determine what  the  resulting  service  dependency  graph  might  look  like  after  breaking  up  the monolithic application. This is not individual class dependencies within a component(i i.e. across namespace). A component dependency is formed when a class from one component (namespace) interacts with a class from another component (namespace). A monolithic application with too many component dependencies is not feasible to break apart. component  coupling  is  one  of  the  most  significant factors in determining the overall success (and feasibility) of a monolithic migration effort. Both afferent (incoming) and efferent (Outgoing) coupling should summed up.
+
+            - One metric that could be used is calculating  the  total  number  of  statements  within  a given  component  (the  sum  of  statements  within  all  source  files  contained  within  a namespace  or  directory). 
+                -  A  statement  is  a  single  complete  action  performed  in  thesource  code,  usually  terminated  by  a  special  character  (such  as  a  semicolon  in  lan‐guages such as Java, C, C++, C#, Go, and JavaScript. Having  a  relatively  consistent  component  size  within  an  application  is  important.Generally speaking, the size of components in an application should fall between one to two standard deviations from the average (or mean) component size.
+            - Additional factors for Service Scoping  
+                - Service scope and function - Is the service doing too many unrelated things?
+                - Code volatility - Are changes isolated to only one part of the service?
+                - Scalability and throughput - Do parts of the service need to scale differently?
+                - Fault tolerance - Are there errors that cause critical functions to fail within the service?
+                - Security - Do some parts of the service need higher security levels than others?
+                - Extensibility -  Is the service always expanding to add new contexts?
+                - Cohesion - the degree and manner in which the operations correlate.
+                - Over performance and responsiveness - if  the  functionalities  are  tightly      coupled  and  dependent  on  one another then its better to keep service together. A good rule of thumb is to take into consideration  the  number  of  requests  that  require  multiple  services  to  communicate with  one  another,  also  taking  into  account  the  criticality  of  those  requests  requiring interservice  communication.  For  example,  if  30%  of  the  requests  require  a  workflow between  services  to  complete  the  request  and  70%  are  purely  atomic  (dedicated  to only  one  service  without  the  need  for  any  additional  communication),  then  it  might be  OK  to  keep  the  services  separate.
+                - Code volatility - the rate at which the source code changes—is another good driver for breaking a service into smaller ones.
+                - Scalability and throughput - The  scalability  demands  of  different  functions  of  a  service  can  be  objec‐tively  measured  to  qualify  whether  a  service  should  be  broken  apart.
+                - Fault Tolerance - describes the ability of an application or functionality within a particular domain to continue to operate, even though a fatal crash occurs (such as an out-of-memory   condition).
+                - Security - Separation of Service based on Security needs of parts.
+                - Extensibility - the  ability to add additional functionality as the service context grows.
+                - Database Transactions - Is an ACID transaction required between separate services? if  having  a  single-unit-of-work  ACID  transaction  is required from a business perspective, these services should be consolidated into a single service.If data integrity and data consistency are important or critical to an operation, it might be wise to consider putting those services back together.
+                - Workflow and Choreography - Do services need to talk to one another? Shared code: Do services need to share code among one another? Database relationships: Although a service can be bro‐ken apart, can the data it uses be broken apart as well? Too much workflow (Service to service communication) impacts overall performance and responsiveness
+    
+
+
+
+
+          - Functional Decomposition Approach - Identify % Codebase dedicated to a specific component or business task (e.g. Trouble  Ticket  component  containing  22%  of  the  codebase  that  is  responsible  for ticket creation, assignment, routing, and completion). If  no  clear  subdomains  exist  within  a  large  component,  then  leave  the component as is.
+
+       - Data/Database
+           - Aggregate  orientation  is  the  preference  to  operate  on  data  that  is  related  and  has  a complex  data  structure.
+          - Identify Data Domains - Data domain is logical/physical segregation of database objects related to a particular domain e.g. customer, Survey and so on.
+          - Why Disintegrate Operational Data? 
+            - Change control - How many services are impacted by a database table change?
+            - Connection Mgmt - Can my database handle the connections needed from multiple distributed services?
+              - Connection quota per service approach or using connection pooler like pgBouncer. It is recommended to start out with the even distribution approach and creating fitness  functions  to  measure  the  concurrent  connection  usage  for  each  service.  We also  recommend  keeping  the  connection  quota  values  in  an  external  configuration server  (or  service)  so  that  the  values  can  be  easily  adjusted  either  manually  or  pro‐grammatically through simple machine learning algorithms. This technique not only helps  mitigate  connection  saturation  risk,  but  also  properly  balances  available  data‐base connections between distributed services to ensure that no idle connections are wasted.
+           - Scalability - Can the database scale to meet the demands of the services accessing it?
+           - Fault Tolerance - How many services are impacted by a database crash or maintenance downtime?
+           - when sharing a sin‐gle  database,  overall  fault  tolerance  is  low  because  if  the  database  goes  down,  all services become nonoperational.
+           - Architectural Quanta - Is  a  single  shared  database  forcing  me  into  an  undesirable  single  architecture quantum?
+           - Database type Optimization - Can I optimize my data by using multiple database types?
+          - Drivers for integrating the data 
+            - Data relationships - Are  there  foreign  keys,  triggers,  or  views  that  form  close  relationships  between the tables?
+            - Database transactions - Is a single transactional unit of work necessary to ensure data integrity and consistency?
+
+
+
+       - Fitness functions 
+          - All namespaces under <root namespace node> should be restricted to <listof domains>
+
+          - All components in <some domain service> should start with the same namespace
+
+          - Maintain component inventory - It’s used to alert  architect of components that might have been added or removed by the development team. Identifying new or removed components is not only critical for this pattern, but for the other decomposition patterns as well
+
+          - No component shall exceed <some percent> of the overall codebase - identifies  components  that  exceed  a  given  threshold  in  terms  of  the percentage  of  overall  source  code  represented  by  that  component,  and  raise alert.
+
+          - No component shall exceed <some number of standard deviations> from the mean component size - identifies  components  that  exceed  a  given  threshold  in  terms  of  the number  of  standard  deviations  from  the  mean  of  all  component  sizes  (based  on  the total number of statements in the component), and raises alert.
+
+          -make sure no  component  has  “too  many”  dependencies,  and  to  restrict  certain  components from  being  coupled  to  other  components
+
+          - No component shall have more than <some number> of total dependencies
+
+          - <some component> should not have a dependency on <anothercomponent>
+
+
+     - Three basic Architecture Styles
+       -  modern trade-off analysis in software architecture:
+           - Find what parts are entangled together.
+
+           - Analyze how they are coupled to one another.
+
+           - Assess   trade-offs   by   determining   the   impact   of   change   on   inter dependent systems
+
+           - Trappings  of  microservices  (such  as  data decomposition,  distributed  workflows,  distributed  transactions,  operational  automation,  containerization)
+
+           - Architects  shouldn’t  break  a  system  into  smaller  parts  unless  clear  business  drivers exist.  The  primary  business  drivers  for  breaking  applications  into  smaller  parts include  speed-to-market  (sometimes  called  time-to-market)  and  achieving  a  level  of competitive advantage in the marketplace. Speed-to-market  is  achieved  through  architectural  agility—the  ability  to  respond quickly  to  change.  Agility  is  a  compound  architectural  characteristic  made  up  of many  other  architecture  characteristics,  including  maintainability,  testability,  and deployability.
+     
+          - Fallacies of Distributed computing, 
+            - The network is reliable;
+            - Latency is zero;
+            - Bandwidth is infinite;
+            - The network is secure;
+            - Topology doesn't change;
+            - There is one administrator;
+            - Transport cost is zero;
+            - The network is homogeneous;
+            - Observability is optional
+            - Compensating updates always work 
+
+
+         - Monolith (Single Deployment)
+           - Big ball of Mud
+        
+         - Modular Monolith or Service based Architecture 
+           - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
+           - Enforce boundaries adhering to Domain driven perspective,
+               - Think of Module (or Micro-service) as bounded context
+               - It helps with ,
+                   - No price to be paid for Network and potential associated failures
+                   - Rapid development if going with Modular Monolith
+                   - Possibility of breaking off a Module and convert it in Micro-service, if needed
+                   - being purposeful - Architecture that satisfies business needs.
+
+            - Moving  to  a  service-based  architecture  is  suitable  as  a  final  target  or  as  a  stepping-stone to microservices
+              - Allows to determine needed granularity for services
+              - Does not require database to be broken apart
+              - Does not require operational automation or containerization
+              - Technical in nature with no or minimal impact on business stakeholders or IT department
+
+           - Service-based Architecture,  a  distributed  macro-layered  structure  consisting  of   
+                 - a  separately  deployed  user  interface
+                 - separately  deployed  remote  coarse-grained  services
+                 - a  monolithic  database.
+           - Services  in  a  service-based  architecture  follow  the  same  principles  as microservices (based on domain-driven design’s bounded context) but rely on a single relational  database  because  the  architects  didn’t  see  value  in  separation  (or  saw  too many negative trade-offs). 
+           - services in a  service-based architecture are coarse grained and usually contain the entire domain in  one  deployment  unit  (such  as  order  processing  or  warehouse  management),  and generally have too long of a mean time to startup (MTTS) to respond fast enough to immediate  demand  for  elasticity  due  to  their  large  size  (domain-level  scalability  and fair  MTTS). 
+           - Service-based architecture is a hybrid of the microservices architecture style where an application is broken  into  domain  services,  which  are  coarse-grained,  separately  deployed  services containing all of the business logic for a particular domain.
+          -  Modular Monolith is a software architecture pattern that strategically combines the simplicity of a monolithic structure with the advantages of microservices. In this approach, the system is organized into loosely coupled modules, each delineating well-defined boundaries and explicit dependencies on other modules.
+                -   Characteristics
+                   - Segregation of modules. Each module is independent with its own layers such as Domain, Infrastructure and API. Modules are autonomously developed, tested, and deployed, affording the flexibility to employ diverse database solutions
+                   - Modularity with loose coupling and high cohesion. Modules exhibit loose interdependence and strong internal cohesion. Communication between modules occurs through APIs, preferably adopting loosely coupled asynchronous communication patterns
+                   - Unified Database Schema. The system adheres to a singular database schema, in contrast to microservices, where each microservice necessitates an individual schema
+                   - Monolithic Deployment Structure. All modules within the modular monolith operate within the same Virtual Machine (VM), or each module may run on dedicated VMs. The scale of modules renders them impractical to be encapsulated within containers
+                   - General Structure - structure that exposes module interfaces in two ways: Externally, the module offers an API via REST HTTP or GRPC, with API calls managed by a proxy or gateway. Internally, services access the module through an abstracted interface, enabling information retrieval without direct access to the implementation. This upholds a clear separation of concerns, preserving application processes
+
+                   - Examples are Service Weaver framework where you write your application as a modular monolith and compile it into a single binary. The Service Weaver runtime then splits the binary and deploys it as a set of distributed services. This programming model enables you to focus on what your code does without worrying so much about where it runs. You can deploy your application across multiple execution environments, locally on your laptop, across a pool of machines via SSH, or in any cloud! Additionally, the Service Weaver runtime can reduce infrastructure costs and improve application latency by several orders of magnitude compared to the status quo.
+
+
+
+         - Micro-services (independent deployability)
+               - with  microservices,  both  scalability  and  elasticity  are  maximized  because  of  the  small,  single-purpose,  fine-grained  nature  of  each  separately deployed service (function-level scalability and excellent MTTS)
+  
+               - Use Tech stacks that meet the requirement
+               - shorter time for deployment
+               - New components can be deployed without impacting entire system
+               - Outage could be limited to a Service 
+             - Common topologies
+                 - API REST-based topology
+                 - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small
+                portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
+                 - Centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
+                 - Typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
+
+         - An architecture style describes the way your overall system is structured (such as microservices, layered monolith, and so on), whereas architecture patterns are ways of describing certain and specific architectural aspects of that overall structure.
+
+         - Deriving the required architecture characteristics from business needs is the key. Identify "ilities" that are important for org like Scalability, Performance, data integrity, system availability, fault tolerance, Security.
+
+
     - Web Application Monitoring
          - Metrics to observe for Web Applications
              - Response Time p50, p90, p99, sum, avg
@@ -281,24 +447,10 @@
       error process and requirements that led to the current status can be
       productive with it. An undocumented feature is a non-existing feature. A
       non-existing feature shouldn’t have code.
-           -    Avoid overriding, inheritance and implicit smartness as much
-      as possible. Write pure functions. They are easier to test and reason
-      about. Any function that’s not pure should be a class. Any code
-      construct that has a different function, should have a different name.
-           -    Never start coding (making a solution) unless you fully
-      understand the problem. It’s very normal to spend more time listening
-      and reading than typing code. Understand the domain before starting to
-      code. A problem is like a maze. You need to progressively go through the
-      code-test-improve cycle and explore the problem space till you reach the
-      end.
-           -    Don’t solve a problem that doesn’t exist. Don’t do
-      speculative programming. Only make the code extensible if it is a
-      validated assumption that it’ll be extended. Chances are by the time it
-      gets extended, the problem definition looks different from when you
-      wrote the code. Don’t overengineer: focus on solving the problem at hand
-      and an effective solution implemented in an efficient manner.
-           -    Software is more fun when it’s made together. Build a
-      sustainable community. Listen. Inspire. Learn. Share.
+           -    Avoid overriding, inheritance and implicit smartness as much as possible. Write pure functions. They are easier to test and reason about. Any function that’s not pure should be a class. Any code construct that has a different function, should have a different name.
+           -    Never start coding (making a solution) unless you fully understand the problem. It’s very normal to spend more time listening and reading than typing code. Understand the domain before starting to code. A problem is like a maze. You need to progressively go through the code-test-improve cycle and explore the problem space till you reach the end.
+           -    Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t overengineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
+           -    Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
 
      - Software Architecture cannot be created in a vacuum and solid technical foundation is not enough.
      - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
@@ -330,6 +482,8 @@
      - The top 3 soft skills for any software architect are negotiation, facilitation, and leadership. Negotiation is a required skill as an architect because almost every decision you make as an architect will be challenged. Your decisions will be challenged by other architects who think they have a better approach than you do; your decisions will be challenged by business stakeholders because they think your decision takes too long to implement or is too expensive or is not aligned with the business goals; and finally, your decisions will be challenged by development teams who believe they have a better solution. All of this requires an architect to understand the political climate of the enterprise and how to navigate the politics to get your decisions approved and accepted.
      - Facilitation is another necessary soft skill as a software architect. Architects not only collaborate with development teams, but also collaborate closely with various business stakeholders to understand business drivers, explain important architecture characteristics, describe architectural solutions, and so on. All of these gatherings and meetings require a keen sense of facilitation and leadership within these meetings to keep things on track.
      - Finally, leadership is another important soft skill because an architect is responsible for leading and guiding a development team through the implementation of an architecture. They are there as a guide, mentor, coach, and facilitator to make sure the team is on track and is running as smooth as a well-oiled machine, and to be there when the team needs clarification or has questions and concerns about the architecture.
+     - the role of an architect is to measure and analyze these trade-offs but not necessarily make the decision, but to bring these trade-offs to a product partner, somebody on the product team, to be able to understand these particular forces and which is more important, that we are able to better scale or have better data consistency
+
      - Avoiding Snake Oil and Evangelism
          - One unfortunate side effect of enthusiasm for technology is evangelism, which should be a luxury reserved for tech leads and developers but tends to get architects in trouble.
          - Trouble comes because, when someone evangelizes a tool,technique, approach, or anything else people build enthusiasm for, they start enhancing the good parts and diminishing the bad parts. Unfortunately, in software architecture, the trade-offs always eventually return to complicate thin
@@ -350,63 +504,6 @@
              - You need faster inserts/updates (i.e. Not Synching every write to disk immediately which can be done in Mysql using  flush log settings and in postgresql using Asynchronous commits
              - You need terabytes of storage to have runway for the next ~5 years
              - You need more read capacity (i.e. use Read Replicas)
-
-     - Three basic Architecture Styles
-         - Monolith (Single Deployment)
-             - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
-             - Enforce boundaries adhering to Domain driven perspective,
-                 - Think of Module (or Micro-service) as bounded context
-                 - It helps with ,
-                     - No price to be paid for Network and potential associated failures
-                     - Rapid development if going with Modular Monolith
-                     - Possibility of breaking off a Module and convert it in Micro-service, if needed
-                     - being purposeful - Architecture that satisfies business needs.
-
-            - Notes on Microservices Integration/Disinteegration or Granularity, 
-                - Micro-service Granularity/Disintegration Drivers
-                  - Rate of Change
-                  - Operational characteristics 
-                      - Metrics 
-                      - fault tolerance  -  remove that faulty piece from the service, extract it, break that service apart to be able to isolate our not-so-reliable functions inside that service, now we've isolated those errors, 
-                      - disintegrating microservice  around scalability or some other operational characteristic, and those are particularly important because that's really the benefit of microservices, that ability for each service to have its own set of characteristics around those operational capabilities within architecture.
-                  - Highly volatile things make terrible reuse candidates in software architecture.  domain concepts make terrible reuse candidates because domain concepts by their definition are the most volatile things
-              
-                - Integration Drivers 
-                  - Atomicity of Transactions ( a database transaction, single unit of work, commit rollback).
-                   - Data dependencies is a very common integrator.
-
-                - Observability really is about the ability of a particular service to expose or export its information, its telemetry. It could be about response time, error rates, amount of messages processed in one hour.
-
-                -the role of an architect is to measure and analyze these trade-offs but not necessarily make the decision, but to bring these trade-offs to a product partner, somebody on the product team, to be able to understand these particular forces and which is more important, that we are able to better scale or have better data consistency
-
-                - Fallacies of Distributed computing, 
-                      The network is reliable;
-                      Latency is zero;
-                      Bandwidth is infinite;
-                      The network is secure;
-                      Topology doesn't change;
-                      There is one administrator;
-                      Transport cost is zero;
-                      The network is homogeneous;
-                      observability is optional
-                      compensating updates always work 
-
-
-         - Micro-services (independent deployability)
-               - Use Tech stacks that meet the requirement
-               - shorter time for deployment
-               - New components can be deployed without impacting entire system
-               - Outage could be limited to a Service 
-             - Common topologies
-                 - API REST-based topology
-                 - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small
-                portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
-                 - Centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
-                 - Typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
-
-         - An architecture style describes the way your overall system is structured (such as microservices, layered monolith, and so on), whereas architecture patterns are ways of describing certain and specific architectural aspects of that overall structure.
-
-         - Deriving the required architecture characteristics from business needs is the key. Identify "ilities" that are important for org like Scalability, Performance, data integrity, system availability, fault tolerance, Security.
 
       - Cloud Computing
          - Cloud computing is the on-demand delivery of IT resources with    primarily pay-as-you-go pricing.
@@ -489,7 +586,9 @@
              - Individuals’ behaviors are guided (implicitly or explicitly) by underlying structures. Adoption must start with a purpose, whether that is a service or part of a larger project. Investment is needed during spin up to ensure proper experience is gained by project members. The chosen project must also have a clearly defined success metric.
 
 
-    - Observability 
+    - Observability
+        - Observability really is about the ability of a particular service to expose or export its information, its telemetry. It could be about response time, error rates, amount of messages processed in one hour.
+ 
         - Observability means gaining visibility into the internal state of a system. It’s used to give users the tools to figure out what’s happening, where it’s happening, and why. Observability has three core components: monitoring, analytics, and forensics. Monitoring measures the health of a system - it tells you when something is going wrong. Analytics give you the tools to visualize data to identify patterns and insights. Forensics helps you answer very specific questions about an event.
           - Higher the SLA/SLO requirements for Service, Higher the Need for Observability
          - Structured log events with rich context specific details (often maintained as key-value pair) are highly useful where aim of observability  is for swiftly identifying where in your system the error or problem is coming from, so you can debug it — by reproducing it, or seeing what it has in common with other erroring requests.
@@ -649,6 +748,10 @@
          - Support (Slack communities, dedicated support agents, etc.)
 
      - Data Lake,
+        - Operational data - Data  used  for  the  operation  of  the  business,  including  sales,  transactional  data,inventory, and so on. This data is what the company runs on—if something inter‐rupts this data, the organization cannot function for very long. This type of data is  defined  as  Online  Transactional  Processing  (OLTP),  which  typically  involves inserting, updating, and deleting data in a database.
+
+        - Analytical data - Data used by data scientists and other business analysts for predictions, trending,and other business intelligence. This data is typically not transactional and often not  relational—it  may  be  in  a  graph  database  or  snapshots  in  a  different  format than  its  original  transactional  form.  This  data  isn’t  critical  for  the  day-to-day operation but rather for the long-term strategic direction and decisions
+
          - Basically, its cheap storage area where data is just dumped from sources like OLTP systems, Other Applications, logs etc.
          - Alternate Explanation : A data lake is a storage system with an underlying Data Lake File Format and its different Data Lake Table Formats that store vast amounts of unstructured and semi-structured data, stored as-is, without a specific purpose. Its the primary destination for growing volumes and varieties of exploratory and operational data next to data warehouse destinations.
          - From here, Subset of the data is moved to classical data warehouse (typically on cloud) for analytics or gaining insights
@@ -3476,47 +3579,6 @@ improvement.
 always a people problem.
 
 
--  Modular Monolith is a software architecture pattern that
-strategically combines the simplicity of a monolithic structure with the
-advantages of microservices. In this approach, the system is organized
-into loosely coupled modules, each delineating well-defined boundaries
-and explicit dependencies on other modules.
-     -   Characteristics
-         -Segregation of modules. Each module is independent with its
-own layers such as Domain, Infrastructure and API. Modules are
-autonomously developed, tested, and deployed, affording the flexibility
-to employ diverse database solutions
-         -Modularity with loose coupling and high cohesion. Modules
-exhibit loose interdependence and strong internal cohesion.
-Communication between modules occurs through APIs, preferably adopting
-loosely coupled asynchronous communication patterns
-         -Unified Database Schema. The system adheres to a singular
-database schema, in contrast to microservices, where each microservice
-necessitates an individual schema
-         -Monolithic Deployment Structure. All modules within the
-modular monolith operate within the same Virtual Machine (VM), or each
-module may run on dedicated VMs. The scale of modules renders them
-impractical to be encapsulated within containers
-     - General Structure -         structure that exposes module
-interfaces in two ways: Externally, the module offers an API via REST
-HTTP or GRPC, with API calls managed by a proxy or gateway. Internally,
-services access the module through an abstracted interface, enabling
-information retrieval without direct access to the implementation. This
-upholds a clear separation of concerns, preserving application processes
-
-     - Examples
-              With Service Weaver framework
-(https://fra01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FServiceWeaver%2Fweaver&data=05%7C02%7Csachin.sunkle%40worldline.com%7C5334ba96d3714ed8a98e08dc84a1e981%7Cfda9decfe89243ac9d9f1a493f9f98d0%7C0%7C0%7C638531080925843912%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C60000%7C%7C%7C&sdata=433%2BjIrHKdAS2aNz1Zro6uFZ4%2FVIIUwpnufjov5%2Fq3o%3D&reserved=0), you write your application as
-a modular monolith and compile it into a single binary. The Service
-Weaver runtime then splits the binary and deploys it as a set of
-distributed services. This programming model enables you to focus on
-what your code does without worrying so much about where it runs. You
-can deploy your application across multiple execution environments,
-locally on your laptop, across a pool of machines via SSH, or in any
-cloud! Additionally, the Service Weaver runtime can reduce
-infrastructure costs and improve application latency by several orders
-of magnitude compared to the status quo.
-
 
 - RDBMS Database connection pooling (Ref:
 https://aws.amazon.com/blogs/database/resources-consumed-by-idle-postgresql-connections/)
@@ -3575,4 +3637,4 @@ an independent executable.
      - Synchronous communication - Two artifacts communicate synchronously if the caller must wait for the response before proceeding
      - Asynchronous communication - Two artifacts communicate asynchronously if the caller does not wait for the response before proceeding. Optionally, the caller can be notified by the receiver through a separate channel when the request has completed.
      - Choreographed coordination - A workflow is choreographed when it lacks an orchestrator; rather, the services in the workflow share the coordination responsibilities of the workflow.
-     - 
+  
