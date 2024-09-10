@@ -11,7 +11,10 @@
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>Important System Characteristics&lt;/p></description></item><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>Important System Characteristics&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>Latency&lt;/em>, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system&lt;/p></description></item><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>In a typical business Application, there are often requirements for,&lt;/p>
 &lt;ul>
 &lt;li>Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.&lt;/li>

@@ -6,7 +6,8 @@
 &lt;p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=https://sachinsu.github.io/posts/restapiversioning/
  
  
->here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p></description></item><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>https://sachinsu.github.io/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/restapiversioning/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+>here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p>
+&lt;p>This means that upgrade must be done keeping in mind,&lt;/p></description></item><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>https://sachinsu.github.io/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/restapiversioning/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>Recently, i went through excellent video series on &lt;code>Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code> presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
  
  target=_blank rel="noopener noreferrer"

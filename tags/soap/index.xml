@@ -2,4 +2,5 @@
 &lt;p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=https://sachinsu.github.io/posts/restapiversioning/
  
  
->here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p></description></item></channel></rss>
+>here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p>
+&lt;p>This means that upgrade must be done keeping in mind,&lt;/p></description></item></channel></rss>

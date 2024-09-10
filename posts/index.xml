@@ -2,7 +2,10 @@
 &lt;p>There was a requirement to perform series of tasks, involving generation of output files, such that the required throughput is achieved. These tasks involve database read operation, external API invocation and file i/o. Generally, benchmarking showed that executing them in sequential way was not helpful. What if asynchronous programming be used to perform this task.&lt;/p>
 &lt;p>So Lets Start.&lt;/p>
 &lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>Lets assume that this typical use case requires,&lt;/p></description></item><item><title>Using local LLM with Ollama and Semantic Kernel</title><link>https://sachinsu.github.io/posts/ollamasemantickernel/</link><pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/ollamasemantickernel/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Lets assume that this typical use case requires,&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>fetching data from database for the purpose of merging placeholders in a Template and perform mail merge&lt;/p></description></item><item><title>Using local LLM with Ollama and Semantic Kernel</title><link>https://sachinsu.github.io/posts/ollamasemantickernel/</link><pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/ollamasemantickernel/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines. Few examples are &lt;a href=https://ollama.com/
  
  target=_blank rel="noopener noreferrer"
@@ -19,7 +22,8 @@
 >curl&lt;/a>, Web Browser but not from Application. Lets dive in.&lt;/p>
 &lt;p>The requirement is as simple as consuming REST API from a Application over TLS.&lt;/p>
 &lt;h2 id="problem-statement">Problem Statement&lt;/h2>
-&lt;p>The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.&lt;/p></description></item><item><title>URL Shortener in High Throughput Service</title><link>https://sachinsu.github.io/posts/shortidgeneration/</link><pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/shortidgeneration/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.&lt;/p>
+&lt;p>During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error &amp;ldquo;The request was aborted: Could not create SSL/TLS secure channel&amp;rdquo;. But it works fine with other tools like curl, PostMan or even from a Web Browser.&lt;/p></description></item><item><title>URL Shortener in High Throughput Service</title><link>https://sachinsu.github.io/posts/shortidgeneration/</link><pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/shortidgeneration/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS
  
  target=_blank rel="noopener noreferrer"
@@ -66,13 +70,17 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>Important System Characteristics&lt;/p></description></item><item><title>Near real time API Monitoring with Grafana and PostgreSQL</title><link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link><pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Important System Characteristics&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>Latency&lt;/em>, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system&lt;/p></description></item><item><title>Near real time API Monitoring with Grafana and PostgreSQL</title><link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link><pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p>
 &lt;p>What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p></description></item><item><title>Upgrading API: Learnings</title><link>https://sachinsu.github.io/posts/apiupgrade/</link><pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/apiupgrade/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=https://sachinsu.github.io/posts/restapiversioning/
  
  
->here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p></description></item><item><title>Presto - A distributed SQL Engine for variety of data stores</title><link>https://sachinsu.github.io/posts/presto/</link><pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/presto/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+>here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p>
+&lt;p>This means that upgrade must be done keeping in mind,&lt;/p></description></item><item><title>Presto - A distributed SQL Engine for variety of data stores</title><link>https://sachinsu.github.io/posts/presto/</link><pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/presto/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>In a company/enterprise, typically there are multiple sources of data. This could be result of M&amp;amp;A (where each of those add in a new data store) or result of multi year process of using data stores that are in vogue at that time. Result is combination of various types of relational databases, flat file systems, queues and so on. This results in Data Silos. This scenario is typically observed in companies who are running workloads On-prem (i.e. Pre-cloud, Companies who started on Cloud or have moved to it, typically tend to organize data platform better. This could be because of ease of migrating data on cloud. Typically, they centralize it around cheaper object storage (say AWS S3)).&lt;/p></description></item><item><title>ELT approach for Data Pipelines</title><link>https://sachinsu.github.io/posts/elt/</link><pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/elt/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,&lt;/p>
 &lt;ul>
@@ -116,7 +124,8 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >https://sachinsu.github.io&lt;/a> few months back .&lt;/p>
 &lt;p>In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.&lt;/p>
-&lt;p>As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.&lt;/p></description></item><item><title>Trobleshooting TCP Connection request time outs</title><link>https://sachinsu.github.io/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.&lt;/p>
+&lt;p>So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.&lt;/p></description></item><item><title>Trobleshooting TCP Connection request time outs</title><link>https://sachinsu.github.io/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.&lt;/p>
 &lt;p>Simplified deployment Architecture is as below,&lt;/p>
 &lt;figure>&lt;img src="https://sachinsu.github.io/images/conntimeoutarch.png">&lt;figcaption>
@@ -132,13 +141,54 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;p>This is an attempt to write CLI tool in &lt;a href=https://golang.org
  
  target=_blank rel="noopener noreferrer"
->Golang&lt;/a> in response to it.&lt;/p></description></item><item><title>Web Security Measures in ASP.NET Applications</title><link>https://sachinsu.github.io/posts/websecurity/</link><pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/websecurity/</guid><description>&lt;p>At my current workplace, All Applications are expected to adhere to &lt;a href=https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard
+>Golang&lt;/a> in response to it.&lt;/p>
+&lt;p>For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
+ 
+ target=_blank rel="noopener noreferrer"
+>here&lt;/a>&lt;/p>
+&lt;h2 id="approach">Approach&lt;/h2>
+&lt;p>In Brief,&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>CLI should,&lt;/p>
+&lt;ul>
+&lt;li>accept arguments like Twitter API Key,Auth token, DM Message&lt;/li>
+&lt;li>Download all followers (with profile details)&lt;/li>
+&lt;li>Rank them by Criteria (e.g. Location)&lt;/li>
+&lt;li>Send each follower a DM with provided message (upto daily DM Limit)&lt;/li>
+&lt;li>be easy to use and maintain&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Notes,&lt;/p></description></item><item><title>Web Security Measures in ASP.NET Applications</title><link>https://sachinsu.github.io/posts/websecurity/</link><pubDate>Thu, 04 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/websecurity/</guid><description>&lt;p>At my current workplace, All Applications are expected to adhere to &lt;a href=https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard
  
  target=_blank rel="noopener noreferrer"
 >PCI DSS standards&lt;/a> meant for Data protection, Access Regulation and so on. Dedicated &lt;a href=https://en.wikipedia.org/wiki/Information_security_operations_center
  
  target=_blank rel="noopener noreferrer"
->SOC&lt;/a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.&lt;/p></description></item><item><title>Is WebAssembly future of Web Development</title><link>https://sachinsu.github.io/posts/webassembly/</link><pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/webassembly/</guid><description>&lt;p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org
+>SOC&lt;/a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.&lt;/p>
+&lt;p>While all our .NET applications adhere to below guidelines,&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href=https://support.microsoft.com/en-in/help/891028/asp-net-security-overview
+ 
+ target=_blank rel="noopener noreferrer"
+>ASP.NET Security Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://docs.microsoft.com/en-us/dotnet/standard/security/secure-coding-guidelines
+ 
+ target=_blank rel="noopener noreferrer"
+>Secure Coding Guidelines&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html
+ 
+ target=_blank rel="noopener noreferrer"
+>Security Guidelines by OWASP&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>We also use tools like &lt;a href=https://www.snyk.io/
+ 
+ target=_blank rel="noopener noreferrer"
+>Snyk&lt;/a> to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline. In spite of above, we do come across vulnerabilities identified by SOC Team which we needs to be addressed quickly. SOC team uses tools such as &lt;a href=https://portswigger.net/burp
+ 
+ target=_blank rel="noopener noreferrer"
+>Burp Suite&lt;/a>.&lt;/p></description></item><item><title>Is WebAssembly future of Web Development</title><link>https://sachinsu.github.io/posts/webassembly/</link><pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/webassembly/</guid><description>&lt;p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org
  
  target=_blank rel="noopener noreferrer"
 >React&lt;/a> and &lt;a href=https://vuejs.org
@@ -200,7 +250,21 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>Visual Studio Diagnostics Tools Or&lt;/li>
 &lt;li>Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks&lt;/li>
 &lt;/ul>
-&lt;p>What if it is possible to Benchmark code for,&lt;/p></description></item><item><title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title><link>https://sachinsu.github.io/posts/samesitecookies/</link><pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/samesitecookies/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>What if it is possible to Benchmark code for,&lt;/p>
+&lt;ul>
+&lt;li>Set of varying parameter(s)&lt;/li>
+&lt;li>Different runtimes (.NET Framework versions, .NET core, Mono etc.) with option to Benchmark it&lt;/li>
+&lt;li>Observe Memory Allocations for diagnostics&lt;/li>
+&lt;li>Get Detailed report on execution timeline&lt;/li>
+&lt;li>Have it as part of test suite so that it can be easily executed with every iteration involving optimized code to get immediate feedback&lt;/li>
+&lt;/ul>
+&lt;p>Enter &lt;a href=https://benchmarkdotnet.org/
+ 
+ target=_blank rel="noopener noreferrer"
+>BenchmarkDotNet&lt;/a>, a Powerful .NET library for benchmarking. It is used by &lt;a href=https://github.com/dotnet/performance
+ 
+ target=_blank rel="noopener noreferrer"
+>DotNET&lt;/a> Team, Roslyn, ASP.NET Core and many other projects.&lt;/p></description></item><item><title>ASP.NET Core - Mind the SameSite HTTP Cookie settings</title><link>https://sachinsu.github.io/posts/samesitecookies/</link><pubDate>Thu, 09 Apr 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/samesitecookies/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.&lt;/p>
 &lt;p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&amp;hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,&lt;/p></description></item><item><title>Using Channels for High performance Producer consumer implementation</title><link>https://sachinsu.github.io/posts/channelsforproducerconsumer/</link><pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/channelsforproducerconsumer/</guid><description>&lt;h2 id="background">Background&lt;/h2>
 &lt;p>Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.&lt;/p>

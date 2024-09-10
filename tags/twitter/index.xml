@@ -6,4 +6,23 @@
 &lt;p>This is an attempt to write CLI tool in &lt;a href=https://golang.org
  
  target=_blank rel="noopener noreferrer"
->Golang&lt;/a> in response to it.&lt;/p></description></item></channel></rss>
+>Golang&lt;/a> in response to it.&lt;/p>
+&lt;p>For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
+ 
+ target=_blank rel="noopener noreferrer"
+>here&lt;/a>&lt;/p>
+&lt;h2 id="approach">Approach&lt;/h2>
+&lt;p>In Brief,&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>CLI should,&lt;/p>
+&lt;ul>
+&lt;li>accept arguments like Twitter API Key,Auth token, DM Message&lt;/li>
+&lt;li>Download all followers (with profile details)&lt;/li>
+&lt;li>Rank them by Criteria (e.g. Location)&lt;/li>
+&lt;li>Send each follower a DM with provided message (upto daily DM Limit)&lt;/li>
+&lt;li>be easy to use and maintain&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Notes,&lt;/p></description></item></channel></rss>

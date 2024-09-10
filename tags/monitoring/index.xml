@@ -11,4 +11,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>Important System Characteristics&lt;/p></description></item></channel></rss>
+&lt;p>Important System Characteristics&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;em>Latency&lt;/em>, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system&lt;/p></description></item></channel></rss>
