@@ -1,5 +1,4 @@
 - Concepts
-
   - Asynchronicity, Queues
        - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for an outcome.
        - asynchronous messaging infrastructure does,
@@ -147,6 +146,50 @@
              - JIT is free to lengthen the object lifetime till the end of method and has always been
 
 - General Architecture
+      - An architect can seek to understand a team’s engineering culture by asking questions like:
+          - Does everyone on the team know what fitness functions are and consider the impact of new tool or product choices on the ability to evolve new fitness functions?
+         - Are teams measuring how well their system meets their defined fitness functions?
+         - Do engineers understand cohesion and coupling? What about connascence [is a software quality metric that provides a taxonomy for different types of coupling in code]?
+         - Are there conversations about what domain and technical concepts belong together?
+         - Do teams choose solutions not based on what technology they want to learn but based on its ability to make changes?
+         - How are teams responding to business changes? Do they struggle to incorporate small business changes, or are they spending too much time on them?  
+
+
+     - Evolvable Architecture 
+       - Guidelines
+            - Reduce needless variability  - Immutable Infrastructure (including Development environment), Pair Programming,
+            - Make Decisions Reversible - Blue/green deployments, Feature Toggles
+            - Prefer evolvable over predictable - Use incidental plumbing like message queues, search engines etc.  Avoid "wiring" too much to external dependencies by isolating them behind interfaces  .
+                   - Controlling the coupling points in an application, especially to external resources, is one of an architect’s key responsibilities.  As an architect, remember that dependencies provide benefits but also impose constraints
+            - Make sacrificial Architecture -
+                - If developers have a project they want to test, building the initial version in the cloud greatly reduces the resources required to release the software. If the project is successful, architects can take the time to build a more suitable architecture. If developers are careful about anticorruption layers and other evolutionary architecture practices, they can mitigate some of the pains of the migration.
+            - Mitigate External Change
+                - A good start on dependency management models external dependencies using a pull model. For example, set up an internal version-control repository to act as a third-party component store, and treat changes from the outside world as pull requests to that repository. If a beneficial change occurs, allow it into the ecosystem
+            - Updating libraries versus frameworks
+                -  Libraries are preferred because they introduce less coupling to your application, making them easier to swap out when the technical architecture needs to evolve.
+                -  One reason to treat libraries and frameworks differently comes down to engineering practices. Frameworks include capabilities such as UI, object-relational mapper, scaffolding like model-view-controller, and so on. Because the framework forms the scaffolding for the remainder of the application, all the code in the application is subject to impact by changes to the framework. Many of us have felt this pain viscerally—​any time a team allows a fundamental framework to become outdated by more than two major versions, the effort (and pain) to finally update it is excruciating.
+               -  Update framework dependencies aggressively; update libraries passively.
+
+            -  Version Services internally
+                -  Patterns used,
+                    -  Version Numbering - developers create a new endpoint name, often including the version number, when a breaking change occurs
+                    -  Internal Resolution - callers never change the endpoint—​instead, developers build logic into the endpoint to determine the context of the caller, returning the correct version. The advantage of retaining the name forever is less coupling to specific version numbers in calling applications.
+
+           -  Fitness function driven Architecture,
+                 -  Building a fitness function that governs critical (like Response time, throughput that determine success) capability to help drive design ensures that it stays top of mind as the architect designs other parts.
+
+                     - Fitness function to measure real performance in production system,
+                         - Calculates the number of incoming calls in production to verify the maximum number of requests that the service needs to support and what would be the auto-scaling factor to guarantee availability with horizontal scaling
+                         - Make new load and concurrency tests using the new number of requests per second
+                         - Monitor the memory and CPU, and define the stress point
+
+       - Anti patterns
+           -  Low code/No code Environments - typically fall short to cover 100% of user's requirements
+           -  Vendor driven - an architecture built entirely around a vendor’s product that pathologically couples the organization to a tool.To escape this antipattern, treat all software as just another integration point, even if it initially has broad responsibilities. By assuming integration at the outset, developers can more easily replace behavior that isn’t useful with other integration points, dethroning the king.
+          -  Understand the fragile places within your complex technology stack and automate protections via fitness functions.
+          - Governance -   pick three technology stacks for standardization—​simple, intermediate, and complex—​and allow individual service requirements to drive stack requirements. This gives teams the flexibility to choose a suitable technology stack while still providing the company some benefits of standards.
+         
+
      - Approach for Architecture building (Monolith to Service based Migration)
         - There must be business drivers to go for Service based Architecture
           - Availability
@@ -170,8 +213,14 @@
             - analyze  the incoming  and  outgoing  dependencies  (coupling)  between  components  to  determine what  the  resulting  service  dependency  graph  might  look  like  after  breaking  up  the monolithic application. This is not individual class dependencies within a component(i i.e. across namespace). A component dependency is formed when a class from one component (namespace) interacts with a class from another component (namespace). A monolithic application with too many component dependencies is not feasible to break apart. component  coupling  is  one  of  the  most  significant factors in determining the overall success (and feasibility) of a monolithic migration effort. Both afferent (incoming) and efferent (Outgoing) coupling should summed up.
 
             - One metric that could be used is calculating  the  total  number  of  statements  within  a given  component  (the  sum  of  statements  within  all  source  files  contained  within  a namespace  or  directory). 
-                -  A  statement  is  a  single  complete  action  performed  in  thesource  code,  usually  terminated  by  a  special  character  (such  as  a  semicolon  in  lan‐guages such as Java, C, C++, C#, Go, and JavaScript. Having  a  relatively  consistent  component  size  within  an  application  is  important.Generally speaking, the size of components in an application should fall between one to two standard deviations from the average (or mean) component size.
+                -  A  statement  is  a  single  complete  action  performed  in  the source  code,  usually  terminated  by  a  special  character  (such  as  a  semicolon  in  languages such as Java, C, C++, C#, Go, and JavaScript. Having  a  relatively  consistent  component  size  within  an  application  is  important.Generally speaking, the size of components in an application should fall between one to two standard deviations from the average (or mean) component size.
             - Additional factors for Service Scoping  
+                - Aspects to identify service boundaries 
+                  - Business functionality groups - Mimicking existing business communication hierarchy
+                  - Transactional Boundaries - Check for transactional boundaries adhered to by Business 
+                  - Deployment goals - Partition on the basis of, 
+                    - Release frequency
+                    - Operational Characteristics (e.g. Scalability)
                 - Service scope and function - Is the service doing too many unrelated things?
                 - Code volatility - Are changes isolated to only one part of the service?
                 - Scalability and throughput - Do parts of the service need to scale differently?
