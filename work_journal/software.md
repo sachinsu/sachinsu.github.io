@@ -42,7 +42,7 @@
             the server in message form. For example, EventSource is a useful   approach for handling things like social media status updates, news   feeds, or delivering data into a client-side storage mechanism like   IndexedDB or web storage.
 
   - UI
-      - Micro frontend - the user interface elements that interact on behalf of the servicesare  emitted  from  the  services  themselves.
+      - Micro frontend - the user interface elements that interact on behalf of the services are  emitted  from  the  services  themselves.
      - Server side web app or SPA
          - Use traditional web applications when:
              - Your application’s client-side requirements are simple or even read-only.
@@ -236,11 +236,6 @@
                 - Extensibility - the  ability to add additional functionality as the service context grows.
                 - Database Transactions - Is an ACID transaction required between separate services? if  having  a  single-unit-of-work  ACID  transaction  is required from a business perspective, these services should be consolidated into a single service.If data integrity and data consistency are important or critical to an operation, it might be wise to consider putting those services back together.
                 - Workflow and Choreography - Do services need to talk to one another? Shared code: Do services need to share code among one another? Database relationships: Although a service can be bro‐ken apart, can the data it uses be broken apart as well? Too much workflow (Service to service communication) impacts overall performance and responsiveness
-    
-
-
-
-
           - Functional Decomposition Approach - Identify % Codebase dedicated to a specific component or business task (e.g. Trouble  Ticket  component  containing  22%  of  the  codebase  that  is  responsible  for ticket creation, assignment, routing, and completion). If  no  clear  subdomains  exist  within  a  large  component,  then  leave  the component as is.
 
        - Data/Database
@@ -327,7 +322,7 @@
                  - a  separately  deployed  user  interface
                  - separately  deployed  remote  coarse-grained  services
                  - a  monolithic  database.
-           - Services  in  a  service-based  architecture  follow  the  same  principles  as microservices (based on domain-driven design’s bounded context) but rely on a single relational  database  because  the  architects  didn’t  see  value  in  separation  (or  saw  too many negative trade-offs). 
+           - Services  in  a  service-based  architecture  follow  the  same  principles  a microservices (based on domain-driven design’s bounded context) but rely on a single relational  database  because  the  architects  didn’t  see  value  in  separation  (or  saw  too many negative trade-offs). 
            - services in a  service-based architecture are coarse grained and usually contain the entire domain in  one  deployment  unit  (such  as  order  processing  or  warehouse  management),  and generally have too long of a mean time to startup (MTTS) to respond fast enough to immediate  demand  for  elasticity  due  to  their  large  size  (domain-level  scalability  and fair  MTTS). 
            - Service-based architecture is a hybrid of the microservices architecture style where an application is broken  into  domain  services,  which  are  coarse-grained,  separately  deployed  services containing all of the business logic for a particular domain.
           -  Modular Monolith is a software architecture pattern that strategically combines the simplicity of a monolithic structure with the advantages of microservices. In this approach, the system is organized into loosely coupled modules, each delineating well-defined boundaries and explicit dependencies on other modules.
@@ -339,8 +334,6 @@
                    - General Structure - structure that exposes module interfaces in two ways: Externally, the module offers an API via REST HTTP or GRPC, with API calls managed by a proxy or gateway. Internally, services access the module through an abstracted interface, enabling information retrieval without direct access to the implementation. This upholds a clear separation of concerns, preserving application processes
 
                    - Examples are Service Weaver framework where you write your application as a modular monolith and compile it into a single binary. The Service Weaver runtime then splits the binary and deploys it as a set of distributed services. This programming model enables you to focus on what your code does without worrying so much about where it runs. You can deploy your application across multiple execution environments, locally on your laptop, across a pool of machines via SSH, or in any cloud! Additionally, the Service Weaver runtime can reduce infrastructure costs and improve application latency by several orders of magnitude compared to the status quo.
-
-
 
          - Micro-services (independent deployability)
                - with  microservices,  both  scalability  and  elasticity  are  maximized  because  of  the  small,  single-purpose,  fine-grained  nature  of  each  separately deployed service (function-level scalability and excellent MTTS)

@@ -109,7 +109,7 @@ draft: false
 - [Connection pooler - PGBouncer](https://www.pgbouncer.org/)
 - [Setting up Multiple pgBouncer Instances](https://www.2ndquadrant.com/en/blog/running-multiple-pgbouncer-instances-with-systemd/)
 - [Connection pooler and much more - Pgpool-II](https://www.pgpool.net/)
-- [Change data capture in PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421)
+- [Change data capture in PostgreSQL](https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/change-data-capture-in-postgres-how-to-use-logical-decoding-and/ba-p/1396421e)
 - [Swarm64 DA -20x faster PostgreSQL query performance](https://swarm64.com/swarm64-da/)
 - [Greenplum - data warehouse, based on PostgreSQL](https://github.com/greenplum-db/gpdb)
 - [Apache Age - graph database functionality for PostgreSQL](https://age.apache.org/)
@@ -167,3 +167,7 @@ draft: false
 
 - [Operations cheat sheet](https://wiki.postgresql.org/wiki/Operations_cheat_sheet#Scalability_and_performance)
 - [Don't do this](https://wiki.postgresql.org/wiki/Don't_Do_This)
+
+## Data Analysis
+
+- [Window functions for Data Analysis](https://www.crunchydata.com/blog/window-functions-for-data-analysis-with-postgres)

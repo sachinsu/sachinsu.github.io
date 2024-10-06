@@ -144,7 +144,8 @@ Knowledge base around general database related topics.
 - [OpenMetadata - Data Discovery, Lineage, Data Quality](https://open-metadata.org/)
 - [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
 - [Data Discovery at Shopify](https://engineering.shopify.com/blogs/engineering/solving-data-discovery-challenges-shopify)
-- [Great Expectations - Data Documentation and Profiling tool](https://github.com/great-expectations/great_expectations)
+- [Great Expectat
+- ions - Data Documentation and Profiling tool](https://github.com/great-expectations/great_expectations)
 
 ## Database Migration Practices
 
@@ -159,6 +160,7 @@ Knowledge base around general database related topics.
 
 ## SQLite 
 
+- [Query against multiple SQLite databases using ATTACH Command](https://simonwillison.net/2021/Feb/21/cross-database-queries/)
 - [Online SQLite Fiddle](https://sqlite.org/fiddle/)
 - [Why you should be using SQLITE(2023)](https://www.epicweb.dev/why-you-should-probably-be-using-sqlite)
 - [Performance tuning settings](https://phiresky.github.io/blog/2020/sqlite-performance-tuning)
