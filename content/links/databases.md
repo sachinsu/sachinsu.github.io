@@ -194,6 +194,10 @@ Knowledge base around general database related topics.
 - [About Oracle Capacity Planning](http://www.dba-oracle.com/concepts/database_administration.htm)
 - [Guidelines for SQL Server Capacity Planning](https://docs.microsoft.com/en-us/sharepoint/administration/storage-and-sql-server-capacity-planning-and-configuration)
 
+## Database Documentation 
+
+- [Schema spy - ER Diagram, Metadata Reports][https://github.com/schemaspy/schemaspy]
+
 ## Data Engineering
 
 - [Concepts](https://glossary.airbyte.com/term/data-engineering-concepts/)
