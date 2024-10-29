@@ -61,3 +61,7 @@ Useful links related from AI, ML space
 ## Tools 
 
 - [Aider - AI pair programming in your terminal ](https://github.com/paul-gauthier/aider)
+- [An open platform for training, serving, and evaluating large language models. Release repo for Vicuna and Chatbot Arena](https://github.com/lm-sys/FastChat)
+- [Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with LlamaIndex, Langchain, OpenAI SDK, LiteLLM, and more.](https://github.com/langfuse/langfuse)
+- [Vespa is an open-source search engine and big data processing platform. It’s particularly well[1]suited for applications that require low latency and high throughput. Our teams like Vespa’s ability to implement hybrid search using multiple retrieval techniques, to efficiently filter and sort many types  of metadata, to implement multi-phased ranking, to index multiple vectors (e.g., for each chunk) per document without duplicating all the metadata into separately indexed documents and to retrieve data from multiple indexed fields at once.](https://github.com/vespa-engine/vespa)
+- [Kotaemon - An open-source RAG-based tool for chatting with your documents. ](https://github.com/Cinnamon/kotaemon)

@@ -48,8 +48,14 @@ draft: false
 - [Puppeteer - Testing using Headless Chrome Nodejs API](https://pptr.dev)
 - [Playwright - Nodejs library to automate Chromium, WebKit and Firefox](https://playwright.dev/)
 
+
+## Platforms 
+
+- [Medusa - Flexible ECommerce Platform](https://github.com/medusajs/medusa)
+
 ## Libraries and Tools
 
+- [RsPack - Fast web bundler like webpack](https://github.com/web-infra-dev/rspack)
 - [Dash - Python based framework for Visualization with no javascript](https://github.com/plotly/dash)
 - [T3 - full-stack, typesafe Next.js app](https://github.com/t3-oss/create-t3-app)
 - [Perspective.js - A data visualization and analytics component, especially well-suited for large and/or streaming datasets.](https://github.com/finos/perspective?tab=readme-ov-file)
@@ -89,6 +95,7 @@ draft: false
 - [Interactive guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 - [End to end encryption in browser](https://blog.excalidraw.com/end-to-end-encryption/)
 - [Collection of SVG logos](https://svgl.vercel.app/)
+
 
 ## Desktop App frameworks 
 

@@ -59,6 +59,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API Development, Security, Cryptography
 
+- [Mockoon - Run Mock APIs locally](https://github.com/mockoon/mockoon)
+- [Bruno - Opensource IDE For Exploring and Testing Api's ](https://github.com/usebruno/bruno)
 - [REST API Guidelines from Microsoft](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning)
 - [Open Source Vulnerability Management](https://fossa.com/product/open-source-vulnerability-management?ref=unzip.dev)
 - [Equinors API Strategy and Guidelines](https://github.com/equinor/api-strategy/blob/master/docs/strategy.md)
@@ -241,6 +243,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## Distributed messaging, Streams
 
+- [Iggy-persistent message streaming platform written in Rust, supporting QUIC, TCP and HTTP transport protocols, capable of processing millions of messages per second.](https://github.com/iggy-rs/iggy)
 - [SmoothMQ - Drop-in replacement for SQS With SQlite backend](https://github.com/poundifdef/SmoothMQ)
 - [Comparison - BlazingMQ, RabbitMQ and Kafka](https://bloomberg.github.io/blazingmq/docs/introduction/comparison/)
 - [Redpanda - Alternative to Kafka, Streaming Platform](https://github.com/vectorizedio/redpanda)
