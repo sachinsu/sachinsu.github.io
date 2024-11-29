@@ -145,8 +145,7 @@ Knowledge base around general database related topics.
 - [OpenMetadata - Data Discovery, Lineage, Data Quality](https://open-metadata.org/)
 - [Evaluation of Data Discovery Platforms](https://eugeneyan.com/writing/data-discovery-platforms/)
 - [Data Discovery at Shopify](https://engineering.shopify.com/blogs/engineering/solving-data-discovery-challenges-shopify)
-- [Great Expectat
-- ions - Data Documentation and Profiling tool](https://github.com/great-expectations/great_expectations)
+- [Great Expectations - Data Documentation and Profiling tool](https://github.com/great-expectations/great_expectations)
 
 ## Database Migration Practices
 
