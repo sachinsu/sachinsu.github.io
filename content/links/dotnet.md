@@ -46,6 +46,10 @@ Platform where i have spent most time till now.
 - [Using max number of worker threads using Semaphore](https://www.codeproject.com/Articles/859108/Writing-a-Web-Server-from-Scratch)
 - [Performance tuning for .NET Core](https://reubenbond.github.io/posts/dotnet-perf-tuning)
 
+## API 
+
+- [A light-weight REST API development framework for ASP.NET 6 and newer. ](https://github.com/FastEndpoints/FastEndpoints)
+
 
 ## ASP.NET Web forms
 
