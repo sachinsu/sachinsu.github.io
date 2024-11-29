@@ -51,6 +51,11 @@ Platform where i have spent most time till now.
 - [A light-weight REST API development framework for ASP.NET 6 and newer. ](https://github.com/FastEndpoints/FastEndpoints)
 
 
+## Starter kit
+
+- [.NET Core Starter kit](https://github.com/fullstackhero/dotnet-starter-kit)
+
+
 ## ASP.NET Web forms
 
 - [What not to do in ASP.NET, and what to do instead](https://docs.microsoft.com/en-us/aspnet/aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead#standards)
