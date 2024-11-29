@@ -1,7 +1,6 @@
 baseurl = "https://sachinsu.github.io"
 title = "Learnings in IT"
 languageCode = "en-us"
-paginate = "5" # Number of posts per page
 theme = "mainroad"
 
 [services.googleAnalytics]
