@@ -65,7 +65,7 @@
 &lt;li>&lt;a href=https://wiki.postgresql.org/wiki/Don%27t_Do_This#Database_Encoding
  
  target=_blank rel="noopener noreferrer"
->PostgreSQL - Don&amp;amp;amp;rsquo;t do this&lt;/a>&lt;/li>
+>PostgreSQL - Dont do this&lt;/a>&lt;/li>
 &lt;li>&lt;a href=http://renesd.blogspot.com/2017/02/is-postgresql-good-enough.html
  
  target=_blank rel="noopener noreferrer"
@@ -101,7 +101,7 @@
 &lt;li>&lt;a href=https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database
  
  target=_blank rel="noopener noreferrer"
->Adyen&amp;amp;amp;rsquo;s Use of PostgreSQL&lt;/a>&lt;/li>
+>Adyens Use of PostgreSQL&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://about.gitlab.com/blog/2020/09/11/gitlab-pg-upgrade/
  
  target=_blank rel="noopener noreferrer"
@@ -544,7 +544,7 @@
 &lt;li>&lt;a href=https://www.postgresql.eu/events/pgconfeu2019/sessions/session/2651/slides/237/Deploy%20your%20own%20replication%20system%20with%20Wal2json.pdf
  
  target=_blank rel="noopener noreferrer"
->Webedia&amp;amp;amp;rsquo;s approach of using Customer processor (walparser) to read from Wal2JSON and CDC between PG and Elasticsearch&lt;/a>&lt;/li>
+>Webedias approach of using Customer processor (walparser) to read from Wal2JSON and CDC between PG and Elasticsearch&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://blog.crunchydata.com/blog/message-queuing-using-native-postgresql
  
  target=_blank rel="noopener noreferrer"
@@ -605,7 +605,7 @@
 &lt;li>&lt;a href=https://wiki.postgresql.org/wiki/Don%27t_Do_This
  
  target=_blank rel="noopener noreferrer"
->Don&amp;amp;amp;rsquo;t do this&lt;/a>&lt;/li>
+>Dont do this&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="data-analysis">Data Analysis&lt;/h2>
 &lt;ul>
@@ -809,7 +809,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://pythonspeed.com/articles/data-doesnt-fit-in-memory/
  
  target=_blank rel="noopener noreferrer"
->What to do when data doesn&amp;amp;amp;rsquo;t fit in memory&lt;/a>&lt;/li>
+>What to do when data doesnt fit in memory&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://architecturenotes.co/datasette-simon-willison/
  
  target=_blank rel="noopener noreferrer"
@@ -1054,6 +1054,22 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >Aider - AI pair programming in your terminal &lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/lm-sys/FastChat
+ 
+ target=_blank rel="noopener noreferrer"
+>An open platform for training, serving, and evaluating large language models. Release repo for Vicuna and Chatbot Arena&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/langfuse/langfuse
+ 
+ target=_blank rel="noopener noreferrer"
+>Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with LlamaIndex, Langchain, OpenAI SDK, LiteLLM, and more.&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/vespa-engine/vespa
+ 
+ target=_blank rel="noopener noreferrer"
+>Vespa is an open-source search engine and big data processing platform. It’s particularly well[1]suited for applications that require low latency and high throughput. Our teams like Vespa’s ability to implement hybrid search using multiple retrieval techniques, to efficiently filter and sort many types of metadata, to implement multi-phased ranking, to index multiple vectors (e.g., for each chunk) per document without duplicating all the metadata into separately indexed documents and to retrieve data from multiple indexed fields at once.&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/Cinnamon/kotaemon
+ 
+ target=_blank rel="noopener noreferrer"
+>Kotaemon - An open-source RAG-based tool for chatting with your documents. &lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Cloud Tech</title><link>https://sachinsu.github.io/links/cloud/</link><pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate><guid>https://sachinsu.github.io/links/cloud/</guid><description>&lt;p>Useful links for deep diving in various Cloud Ecosystems&lt;/p>
 &lt;h3 id="articles">Articles&lt;/h3>
 &lt;ul>
@@ -1095,7 +1111,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://cloud.google.com/spanner/docs/emulator
  
  target=_blank rel="noopener noreferrer"
->Using Google Cloud Spanner locally &amp;amp;amp;hellip;using Emulator&lt;/a>&lt;/li>
+>Using Google Cloud Spanner locally using Emulator&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="articles-aws">Articles (AWS)&lt;/h3>
 &lt;ul>
@@ -1243,7 +1259,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://www.martinfowler.com/articles/data-fetch-spa.html
  
  target=_blank rel="noopener noreferrer"
->Parallel Data Fetching in SPA&amp;amp;amp;hellip;has Good Primer on React&lt;/a>&lt;/li>
+>Parallel Data Fetching in SPAhas Good Primer on React&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="articles">Articles&lt;/h2>
 &lt;ul>
@@ -1298,11 +1314,11 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://welearncode.com/beginners-guide-nextjs/
  
  target=_blank rel="noopener noreferrer"
->Beginner&amp;amp;amp;rsquo;s guide to Next.js&lt;/a>&lt;/li>
+>Beginners guide to Next.js&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://www.notion.so/blog/data-model-behind-notion
  
  target=_blank rel="noopener noreferrer"
->Data Model behind Notion&amp;amp;amp;rsquo;s flexibility&lt;/a>&lt;/li>
+>Data Model behind Notions flexibility&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://sirupsen.com/napkin/problem-15/
  
  target=_blank rel="noopener noreferrer"
@@ -1322,7 +1338,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://www.epicweb.dev/the-webs-next-transition
  
  target=_blank rel="noopener noreferrer"
->The Web&amp;amp;amp;rsquo;s Next Transition&lt;/a>&lt;/li>
+>The Webs Next Transition&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://hypermedia.systems
  
  target=_blank rel="noopener noreferrer"
@@ -1343,8 +1359,19 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >Playwright - Nodejs library to automate Chromium, WebKit and Firefox&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="platforms">Platforms&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://github.com/medusajs/medusa
+ 
+ target=_blank rel="noopener noreferrer"
+>Medusa - Flexible ECommerce Platform&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;h2 id="libraries-and-tools">Libraries and Tools&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/web-infra-dev/rspack
+ 
+ target=_blank rel="noopener noreferrer"
+>RsPack - Fast web bundler like webpack&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/plotly/dash
  
  target=_blank rel="noopener noreferrer"
@@ -1509,21 +1536,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >Tauri - smaller, faster, and more secure desktop applications with a web frontend (Native Webviews and no chromium)&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="pwa">PWA&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href=https://www.pwabuilder.com/
- 
- target=_blank rel="noopener noreferrer"
->PWABuilder - Publish Progressive Web App as Mobile App&lt;/a>&lt;/li>
-&lt;li>&lt;a href=https://whatpwacando.today/
- 
- target=_blank rel="noopener noreferrer"
->What a PWA can do today&lt;/a>&lt;/li>
-&lt;li>&lt;a href=https://devblogs.microsoft.com/ifdef-windows/get-started-building-a-progressive-web-app/
- 
- target=_blank rel="noopener noreferrer"
->Step by Step using PWABuilder&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>&lt;h3 id="background">Background&lt;/h3>
+&lt;p>le&lt;/p></description></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>&lt;h3 id="background">Background&lt;/h3>
 &lt;p>Recently, we had requirement wherein a process should,&lt;/p>
 &lt;ul>
 &lt;li>Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running.&lt;/li>
@@ -1570,6 +1583,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&amp;hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,&lt;/p></description></item><item><title>Perspectives</title><link>https://sachinsu.github.io/links/perspectives/</link><pubDate>Tue, 18 Feb 2020 12:33:07 +0530</pubDate><guid>https://sachinsu.github.io/links/perspectives/</guid><description>&lt;h1 id="perspectives">Perspectives&lt;/h1>
 &lt;p>Section covering Business, project/programming perspectives&lt;/p>
 &lt;ul>
+&lt;li>&lt;a href=https://thefrugalarchitect.com/laws/
+ 
+ target=_blank rel="noopener noreferrer"
+>Laws of Frugal Architecture&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://addyosmani.com/blog/boring-architecture/
  
  target=_blank rel="noopener noreferrer"
@@ -1585,7 +1602,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/
  
  target=_blank rel="noopener noreferrer"
->Don&amp;amp;amp;rsquo;t call yourself a programmer&lt;/a>&lt;/li>
+>Dont call yourself a programmer&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://en.wikipedia.org/wiki/GRASP_%28object-oriented_design%29
  
  target=_blank rel="noopener noreferrer"
@@ -1617,7 +1634,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://dfrieds.com/articles/data-science-reality-vs-expectations.html
  
  target=_blank rel="noopener noreferrer"
->Data Science: Reality Doesn&amp;amp;amp;rsquo;t Meet Expectations&lt;/a>&lt;/li>
+>Data Science: Reality Doesnt Meet Expectations&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://quantum.country/qcvc#part-I
  
  target=_blank rel="noopener noreferrer"
@@ -1665,11 +1682,11 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://github.com/sirupsen/napkin-math
  
  target=_blank rel="noopener noreferrer"
->Techniques and numbers for estimating system&amp;amp;amp;rsquo;s performance from first-principles&lt;/a>&lt;/li>
+>Techniques and numbers for estimating systems performance from first-principles&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://aws.amazon.com/builders-library/?cards-body.sort-by&amp;#61;item.additionalFields.customSort&amp;amp;cards-body.sort-order&amp;#61;asc&amp;amp;awsf.filter-content-type&amp;#61;*all
  
  target=_blank rel="noopener noreferrer"
->The Amazon Builder&amp;amp;amp;rsquo;s library&lt;/a>&lt;/li>
+>The Amazon Builders library&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/donnemartin/system-design-primer
  
  target=_blank rel="noopener noreferrer"
@@ -1681,7 +1698,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://thisistheway.us/
  
  target=_blank rel="noopener noreferrer"
->Advice to Young kids by Stephen O&amp;amp;amp;rsquo;Grady&lt;/a>&lt;/li>
+>Advice to Young kids by Stephen OGrady&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://dancres.github.io/Pages/
  
  target=_blank rel="noopener noreferrer"
@@ -1881,6 +1898,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul>
 &lt;h2 id="curated-lists">Curated Lists&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/mehdihadeli/awesome-software-architecture
+ 
+ target=_blank rel="noopener noreferrer"
+>Awesome Software Architecture&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/charlax/professional-programming
  
  target=_blank rel="noopener noreferrer"
@@ -1951,7 +1972,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://github.com/jhuangtw/xg2xg
  
  target=_blank rel="noopener noreferrer"
->Ex-googler&amp;amp;amp;rsquo;s list similar tools/techniques&lt;/a>&lt;/li>
+>Ex-googlers list similar tools/techniques&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://www.lesbonscomptes.com/recoll/index.html
  
  target=_blank rel="noopener noreferrer"
@@ -1964,9 +1985,17 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >Briar - Secure peer to peer messaging on Android&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/hcengineering/platform
+ 
+ target=_blank rel="noopener noreferrer"
+>Open source alternative to Jira, slack,notion&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="useful-command-line-tools">Useful Command line tools&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/jdx/mise
+ 
+ target=_blank rel="noopener noreferrer"
+>Mise - version manager for multiple languages&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://mywiki.wooledge.org/BashGuide
  
  target=_blank rel="noopener noreferrer"
@@ -2291,7 +2320,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://speakerdeck.com/sqlmaria/sql-tuning-tips-you-cant-do-withou
  
  target=_blank rel="noopener noreferrer"
->SQL Tips you can&amp;amp;amp;rsquo;t do without&lt;/a>&lt;/li>
+>SQL Tips you cant do without&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="change-data-capture">Change Data Capture&lt;/h3>
 &lt;ul>
@@ -2511,7 +2540,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://blog.koehntopp.info/2020/09/07/mysql-from-a-developers-perspective.html
  
  target=_blank rel="noopener noreferrer"
->MySQL from Developer&amp;amp;amp;rsquo;s perspective&lt;/a>&lt;/li>
+>MySQL from Developers perspective&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://www.slideshare.net/JeanFranoisGagn/mysql-scalability-and-reliability-for-replicated-environment
  
  target=_blank rel="noopener noreferrer"
@@ -2545,7 +2574,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://github.com/prisma/dataguide
  
  target=_blank rel="noopener noreferrer"
->Prisma&amp;amp;amp;rsquo;s Data Guide - A growing library of articles focused on making databases more approachable. &lt;/a>&lt;/li>
+>Prismas Data Guide - A growing library of articles focused on making databases more approachable. &lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://aiven.co/developers/sql-query-optimization-guide
  
  target=_blank rel="noopener noreferrer"
@@ -2721,6 +2750,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >Soda core - Data schema checks, for Quality, as code&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/readysettech/readyset
+ 
+ target=_blank rel="noopener noreferrer"
+>Readyset - MySQL and Postgres wire-compatible caching layer that sits in front of existing databases to speed up queries and horizontally scale read throughput.&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="data-analytics">Data Analytics&lt;/h2>
 &lt;ul>
@@ -2811,7 +2844,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-i-4227c5c457d7
  
  target=_blank rel="noopener noreferrer"
->A Beginner&amp;amp;amp;rsquo;s Guide to Data Engineering - 3-part series&lt;/a>&lt;/li>
+>A Beginners Guide to Data Engineering - 3-part series&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://looker.com/blog/different-types-graphs-charts-uses
  
  target=_blank rel="noopener noreferrer"
@@ -3008,11 +3041,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >Data Discovery at Shopify&lt;/a>&lt;/li>
-&lt;li>[Great Expectat&lt;/li>
-&lt;li>ions - Data Documentation and Profiling tool](&lt;a href=https://github.com/great-expectations/great_expectations
+&lt;li>&lt;a href=https://github.com/great-expectations/great_expectations
  
  target=_blank rel="noopener noreferrer"
->https://github.com/great-expectations/great_expectations&lt;/a>)&lt;/li>
+>Great Expectations - Data Documentation and Profiling tool&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="database-migration-practices">Database Migration Practices&lt;/h2>
 &lt;ul>
@@ -3148,6 +3180,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >Guidelines for SQL Server Capacity Planning&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="database-documentation">Database Documentation&lt;/h2>
+&lt;ul>
+&lt;li>[Schema spy - ER Diagram, Metadata Reports][https://github.com/schemaspy/schemaspy]&lt;/li>
+&lt;/ul>
 &lt;h2 id="data-engineering">Data Engineering&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href=https://glossary.airbyte.com/term/data-engineering-concepts/
@@ -3185,7 +3221,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://dagster.io/blog/duckdb-data-lake
  
  target=_blank rel="noopener noreferrer"
->Poor man&amp;amp;amp;rsquo;s Data lake with Duckdb&lt;/a>&lt;/li>
+>Poor mans Data lake with Duckdb&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://www.hytradboi.com/2022/viewing-collaborative-editing-through-a-databases-lens
  
  target=_blank rel="noopener noreferrer"
@@ -3360,6 +3396,20 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >Performance tuning for .NET Core&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="api">API&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://github.com/FastEndpoints/FastEndpoints
+ 
+ target=_blank rel="noopener noreferrer"
+>A light-weight REST API development framework for ASP.NET 6 and newer. &lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="starter-kit">Starter kit&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://github.com/fullstackhero/dotnet-starter-kit
+ 
+ target=_blank rel="noopener noreferrer"
+>.NET Core Starter kit&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;h2 id="aspnet-web-forms">ASP.NET Web forms&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href=https://docs.microsoft.com/en-us/aspnet/aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead#standards
@@ -3428,6 +3478,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  
  target=_blank rel="noopener noreferrer"
 >Event sourcing using variety of stores like AMQP, database&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/Unleash/unleash
+ 
+ target=_blank rel="noopener noreferrer"
+>&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/microsoft/FeatureManagement-Dotnet
  
  target=_blank rel="noopener noreferrer"
@@ -3633,7 +3687,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://talks.golang.org/2012/10things.slide#1
  
  target=_blank rel="noopener noreferrer"
->10 things you (probably) don&amp;amp;amp;rsquo;t know about Go&lt;/a>&lt;/li>
+>10 things you (probably) dont know about Go&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://blogtitle.github.io/
  
  target=_blank rel="noopener noreferrer"
@@ -3681,7 +3735,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;li>&lt;a href=https://talks.golang.org/2012/10things.slide
  
  target=_blank rel="noopener noreferrer"
->10 things you probably don&amp;amp;amp;rsquo;t know about Go&lt;/a>&lt;/li>
+>10 things you probably dont know about Go&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/quii/learn-go-with-tests
  
  target=_blank rel="noopener noreferrer"
@@ -3769,6 +3823,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul>
 &lt;h3 id="libraries-tools">Libraries, Tools&lt;/h3>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/maddalax/htmgo
+ 
+ target=_blank rel="noopener noreferrer"
+>HTMX &amp;#43; Go in single binary&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/dominikh/go-tools
  
  target=_blank rel="noopener noreferrer"
@@ -4316,9 +4374,21 @@ b.com/hoanhan101/ultimate-go)&lt;/li>
  
  target=_blank rel="noopener noreferrer"
 >Why refactoring?&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://openfeature.dev/
+ 
+ target=_blank rel="noopener noreferrer"
+>OpenFeature - Standardizing Feature Flagging for Everyone&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="api-development-security-cryptography">API Development, Security, Cryptography&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/mockoon/mockoon
+ 
+ target=_blank rel="noopener noreferrer"
+>Mockoon - Run Mock APIs locally&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/usebruno/bruno
+ 
+ target=_blank rel="noopener noreferrer"
+>Bruno - Opensource IDE For Exploring and Testing Apis &lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning
  
  target=_blank rel="noopener noreferrer"
