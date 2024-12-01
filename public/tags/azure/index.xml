@@ -1,20 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Azure on Learnings in IT</title>
-    <link>https://sachinsu.github.io/tags/azure/</link>
-    <description>Recent content in Azure on Learnings in IT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/azure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course</title>
-      <link>https://sachinsu.github.io/posts/restapiversioning/</link>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/restapiversioning/</guid>
-      <description>Background Recently, i went through excellent video series on Designing &amp;amp; Versioning HTTP_REST APIs presented by Jeffrey Richter. It is available here. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure on Learnings in IT</title><link>http://localhost:1313/tags/azure/</link><description>Recent content in Azure on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml"/><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>http://localhost:1313/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>http://localhost:1313/posts/restapiversioning/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>Recently, i went through excellent video series on &lt;code>Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code> presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
+ 
+ target=_blank rel="noopener noreferrer"
+>Jeffrey Richter&lt;/a>. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw
+ 
+ target=_blank rel="noopener noreferrer"
+>here&lt;/a>. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p></description></item></channel></rss>

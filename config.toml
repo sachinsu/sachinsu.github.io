@@ -3,12 +3,13 @@ title = "Learnings in IT"
 languageCode = "en-us"
 theme = "mainroad"
 
-[services.googleAnalytics]
-  ID = "UA-169012216-1" # Enable Google Analytics by entering your tracking ID
+[services]
+  [services.googleAnalytics]
+    ID = 'UA-169012216-1'  
 
-[Author] # Used in authorbox
-  name = "Sachin Sunkle"
-  bio = "A Coder in IT"
+# [Author] # Used in authorbox
+#  name = "Sachin Sunkle"
+#  bio = "A Coder in IT"
 
 [Params]
   description = "A technical blog " # Site description. Used in meta description
@@ -17,7 +18,7 @@ theme = "mainroad"
   schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
   readmore = false # Show "Read more" button in list if true
-  authorbox = true # Show authorbox at bottom of pages if true
+  authorbox = false # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["author", "date"] # Order of post meta information
@@ -25,7 +26,8 @@ theme = "mainroad"
   dateformat = "Jan 2 2006" # Change the format of dates
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
-
+  author.name = "Sachin Sunkle"
+ 
 [Params.style.vars]
   highlightColor = "#ff9933" # Override highlight color
 

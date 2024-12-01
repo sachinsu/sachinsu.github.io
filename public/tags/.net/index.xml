@@ -1,53 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>.NET on Learnings in IT</title>
-    <link>https://sachinsu.github.io/tags/.net/</link>
-    <description>Recent content in .NET on Learnings in IT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 25 Feb 2023 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Troubleshooting TLS handshake issue</title>
-      <link>https://sachinsu.github.io/posts/tlshandsharefailure/</link>
-      <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/tlshandsharefailure/</guid>
-      <description>Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
-The requirement is as simple as consuming REST API from a Application over TLS.
-Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
-During Development, Windows 10 is used to develop and test the code.</description>
-    </item>
-    
-    <item>
-      <title>URL Shortener in High Throughput Service</title>
-      <link>https://sachinsu.github.io/posts/shortidgeneration/</link>
-      <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/shortidgeneration/</guid>
-      <description>Background A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends SMS to Customer&amp;rsquo;s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it.</description>
-    </item>
-    
-    <item>
-      <title>Upgrading API: Learnings</title>
-      <link>https://sachinsu.github.io/posts/apiupgrade/</link>
-      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/apiupgrade/</guid>
-      <description>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
-This means that upgrade must be done keeping in mind,</description>
-    </item>
-    
-    <item>
-      <title>Trobleshooting TCP Connection request time outs</title>
-      <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
-      <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
-      <description>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
-Simplified deployment Architecture is as below,
- High Level Architecture   Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>.NET on Learnings in IT</title><link>http://localhost:1313/tags/.net/</link><description>Recent content in .NET on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 25 Feb 2023 10:25:04 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Troubleshooting TLS handshake issue</title><link>http://localhost:1313/posts/tlshandsharefailure/</link><pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/tlshandsharefailure/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>Ever encountered a scenario where REST API consumption works from tools like &lt;a href=https://github.com/jeroen/curl
+ 
+ target=_blank rel="noopener noreferrer"
+>curl&lt;/a>, Web Browser but not from Application. Lets dive in.&lt;/p>
+&lt;p>The requirement is as simple as consuming REST API from a Application over TLS.&lt;/p>
+&lt;h2 id="problem-statement">Problem Statement&lt;/h2>
+&lt;p>The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.&lt;/p></description></item><item><title>URL Shortener in High Throughput Service</title><link>http://localhost:1313/posts/shortidgeneration/</link><pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/shortidgeneration/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS
+ 
+ target=_blank rel="noopener noreferrer"
+>SMS&lt;/a> to Customer&amp;rsquo;s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p></description></item><item><title>Upgrading API: Learnings</title><link>http://localhost:1313/posts/apiupgrade/</link><pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/apiupgrade/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=http://localhost:1313/posts/restapiversioning/
+ 
+ 
+>here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p></description></item><item><title>Trobleshooting TCP Connection request time outs</title><link>http://localhost:1313/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/connectiontimeouts/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.&lt;/p>
+&lt;p>Simplified deployment Architecture is as below,&lt;/p>
+&lt;figure>&lt;img src="http://localhost:1313/images/conntimeoutarch.png">&lt;figcaption>
+ &lt;h4>High Level Architecture&lt;/h4>
+ &lt;/figcaption>
+&lt;/figure>
+
+&lt;p>Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.&lt;/p></description></item></channel></rss>

@@ -32,6 +32,8 @@ Now Ollama API can be easily accessed. Below is the gateway class.
 
 {{< highlight go "linenos=table" >}}
 
+``` 
+
 public class OllamaApiClient 
 {
 

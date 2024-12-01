@@ -1,33 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MySQL on Learnings in IT</title>
-    <link>https://sachinsu.github.io/tags/mysql/</link>
-    <description>Recent content in MySQL on Learnings in IT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Database Reliability Engineering - My Notes</title>
-      <link>https://sachinsu.github.io/posts/dbre/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/dbre/</guid>
-      <description>Introduction I have been reading excellent Database Reliability Engineering book and below are my notes from it.
-  Key Incentive(s) for Automation
- Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.    Important System Characteristics
-  Latency, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request.</description>
-    </item>
-    
-    <item>
-      <title>Using Temporal.io to build Long running Workflows</title>
-      <link>https://sachinsu.github.io/posts/temporalworkflow/</link>
-      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/temporalworkflow/</guid>
-      <description>Background In a typical business Application, there are often requirements for,
- Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.  Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MySQL on Learnings in IT</title><link>http://localhost:1313/tags/mysql/</link><description>Recent content in MySQL on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 05 Sep 2021 01:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml"/><item><title>Database Reliability Engineering - My Notes</title><link>http://localhost:1313/posts/dbre/</link><pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/dbre/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>I have been reading excellent &lt;a href=https://www.oreilly.com/library/view/database-reliability-engineering/9781491925935/
+ 
+ target=_blank rel="noopener noreferrer"
+>Database Reliability Engineering&lt;/a> book and below are my notes from it.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Key Incentive(s) for Automation&lt;/p>
+&lt;ul>
+&lt;li>Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Important System Characteristics&lt;/p></description></item><item><title>Using Temporal.io to build Long running Workflows</title><link>http://localhost:1313/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>http://localhost:1313/posts/temporalworkflow/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>In a typical business Application, there are often requirements for,&lt;/p>
+&lt;ul>
+&lt;li>Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.&lt;/li>
+&lt;li>Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.&lt;/li>
+&lt;/ul>
+&lt;p>Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.&lt;/p></description></item></channel></rss>
