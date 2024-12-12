@@ -613,6 +613,17 @@
  
  target=_blank rel="noopener noreferrer"
 >Window functions for Data Analysis&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="data-synchronization-cdc">Data Synchronization, CDC&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://electric-sql.com
+ 
+ target=_blank rel="noopener noreferrer"
+>Electric - Sync data from PostgreSQL&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://debezium.io
+ 
+ target=_blank rel="noopener noreferrer"
+>Debezium - Stream changes from database&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Can SQLite be considered for Server Applications?</title><link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link><pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
 In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org
