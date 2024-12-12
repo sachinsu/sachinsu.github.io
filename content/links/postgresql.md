@@ -171,3 +171,8 @@ draft: false
 ## Data Analysis
 
 - [Window functions for Data Analysis](https://www.crunchydata.com/blog/window-functions-for-data-analysis-with-postgres)
+
+## Data Synchronization, CDC 
+
+- [Electric - Sync data from PostgreSQL](https://electric-sql.com)
+- [Debezium - Stream changes from database](https://debezium.io)
