@@ -31,6 +31,7 @@ Section covering useful tools for every day activities, Online learning etc.
 
 ## Useful Command line tools
 
+- [iperf -A TCP, UDP, and SCTP network bandwidth measurement tool](https://github.com/esnet/iperf)
 - [Mise - version manager for multiple languages](https://github.com/jdx/mise)
 - [Guide to Linux Bash script](https://mywiki.wooledge.org/BashGuide)
 - [Devbox - Quick  shell with runtime environment without polluting laptop/desktop](https://github.com/jetpack-io/devbox)
