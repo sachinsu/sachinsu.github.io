@@ -130,6 +130,8 @@ draft: false
 - [Lessons while migrating from Oracle to PostgreSQL](https://www.cybertec-postgresql.com/en/building-an-oracle-to-postgresql-migrator-lessons-learned/)
 - [Reshape - easy-to-use, zero-downtime schema migration tool](https://github.com/fabianlindfors/reshape)
 - [Migra - diff tool for PostgreSQL Schema](https://github.com/djrobstep/migra)
+- [pgroll: PostgreSQL zero-downtime migrations made easy](https://github.com/xataio/pgroll)
+- [reshape: An easy-to-use, zero-downtime schema migration tool for Postgres](https://github.com/fabianlindfors/reshape)
 
 ## High Availability 
 
