@@ -469,6 +469,14 @@
  
  target=_blank rel="noopener noreferrer"
 >Migra - diff tool for PostgreSQL Schema&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/xataio/pgroll
+ 
+ target=_blank rel="noopener noreferrer"
+>pgroll: PostgreSQL zero-downtime migrations made easy&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/fabianlindfors/reshape
+ 
+ target=_blank rel="noopener noreferrer"
+>reshape: An easy-to-use, zero-downtime schema migration tool for Postgres&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="high-availability">High Availability&lt;/h2>
 &lt;ul>
@@ -832,6 +840,10 @@
 &lt;/ul>
 &lt;h2 id="tools">Tools&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/microsoft/markitdown
+ 
+ target=_blank rel="noopener noreferrer"
+>Markitdown - Convert PDF and Office documents to markdown to feed into LLM&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/paul-gauthier/aider
  
  target=_blank rel="noopener noreferrer"
