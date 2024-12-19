@@ -60,6 +60,7 @@ Useful links related from AI, ML space
 
 ## Tools 
 
+- [Markitdown - Convert PDF and Office documents to markdown to feed into LLM](https://github.com/microsoft/markitdown )
 - [Aider - AI pair programming in your terminal ](https://github.com/paul-gauthier/aider)
 - [An open platform for training, serving, and evaluating large language models. Release repo for Vicuna and Chatbot Arena](https://github.com/lm-sys/FastChat)
 - [Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with LlamaIndex, Langchain, OpenAI SDK, LiteLLM, and more.](https://github.com/langfuse/langfuse)
