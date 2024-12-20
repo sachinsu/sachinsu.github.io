@@ -3107,7 +3107,7 @@
 &lt;li>&lt;a href=https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs&amp;#61;windows
  
  target=_blank rel="noopener noreferrer"
->.NET Core debug memory leak, High CPU Usage, Deadlock&lt;/a>&lt;/li>
+>.NET Core debug memory leak, High CPU Usaege, Deadlock&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/
  
  target=_blank rel="noopener noreferrer"
@@ -3254,6 +3254,17 @@
  
  target=_blank rel="noopener noreferrer"
 >Rebus - Smart end-points, dumb pipes service bus for .net&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="rules-workflow">Rules, workflow&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://github.com/danielgerlag/workflow-core
+ 
+ target=_blank rel="noopener noreferrer"
+>Workflow-core-Lightweight workflow engine for .NET Standard&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/microsoft/RulesEngine
+ 
+ target=_blank rel="noopener noreferrer"
+>Rules Engine - A Json based Rules Engine with extensive Dynamic expression support from Microsoft&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="net-core">.NET Core&lt;/h2>
 &lt;ul>
