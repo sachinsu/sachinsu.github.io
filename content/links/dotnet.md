@@ -41,7 +41,7 @@ Platform where i have spent most time till now.
 - [.NET GC - Memory fundamentals](https://github.com/Maoni0/mem-doc/blob/master/doc/.NETMemoryPerformanceAnalysis.md#Memory-Fundamentals)
 - [Debug high CPU usage in .NET Core](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?WT.mc_id=-blog-scottha&tabs=windows)
 - [Measure performance of High frequency events in .NET Core App](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counter-perf)
-- [.NET Core debug memory leak, High CPU Usage, Deadlock](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs=windows)
+- [.NET Core debug memory leak, High CPU Usaege, Deadlock](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/debug-highcpu?tabs=windows)
 - [TCP Connection Pool and how it works in .NET Framework/.NET Core](https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/)
 - [Using max number of worker threads using Semaphore](https://www.codeproject.com/Articles/859108/Writing-a-Web-Server-from-Scratch)
 - [Performance tuning for .NET Core](https://reubenbond.github.io/posts/dotnet-perf-tuning)
@@ -94,6 +94,12 @@ Platform where i have spent most time till now.
 - [Tempus](https://github.com/Workshell/tempus)
 - [Background tasks with hosted services in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-5.0&tabs=visual-studio)
 - [Rebus - Smart end-points, dumb pipes service bus for .net](https://github.com/rebus-org/Rebus/wiki)
+
+
+## Rules, workflow 
+
+- [Workflow-core-Lightweight workflow engine for .NET Standard](https://github.com/danielgerlag/workflow-core)
+- [Rules Engine - A Json based Rules Engine with extensive Dynamic expression support from Microsoft](https://github.com/microsoft/RulesEngine)
 
 
 ## .NET Core
