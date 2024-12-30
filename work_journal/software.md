@@ -302,7 +302,15 @@
          - Monolith (Single Deployment)
            - Big ball of Mud
         
-         - Modular Monolith or Service based Architecture 
+         - Modular Monolith or Service based Architecture   
+           - is a software architecture pattern that combines the advantages of monolith with microservices architecture. In this, Systems are organized into loosely coupled modules, each delineating well-defined boundaries and explicit dependencies on other modules. 
+             - Each module is independent (or minimally dependant) with its own layers such as Domain, Infrastructure and API. 
+             - Each module is autonomously developed, tested and deployed
+             - Loose coupling and cohesion
+             - Communication between modules happen through APIs , preferably in asynchonous manner 
+             - Unified database schema 
+             - All modules operate within same virtual machine or have dedicated VMs. May not use Containers 
+             -  modules expose interface in two ways: Externally, the module offers an API via REST HTTP/GRPC, with API calls managed by a proxy/gateway. internally, services access the module through abstracted interface, without direct access to implementation.
            - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
            - Enforce boundaries adhering to Domain driven perspective,
                - Think of Module (or Micro-service) as bounded context
