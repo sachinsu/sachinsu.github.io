@@ -309,8 +309,15 @@
              - Loose coupling and cohesion
              - Communication between modules happen through APIs , preferably in asynchonous manner 
              - Unified database schema 
-             - All modules operate within same virtual machine or have dedicated VMs. May not use Containers 
+             - All modules operate within same virtual machine or have dedicated VMs. May not use Containers
+             - High cohesion, low coupling - "Things that change togerther should stay together" 
              -  modules expose interface in two ways: Externally, the module offers an API via REST HTTP/GRPC, with API calls managed by a proxy/gateway. internally, services access the module through abstracted interface, without direct access to implementation.
+             -  Process of identifying modules, 
+                -  Analyze the business problem 
+                -  identify subdomains (e.g. for library system, it wud be "book borrowing", "inventory of books"). 
+                -  Each subdomain have actor e.g. patron in case of book borrowing. 
+                -  Subdomain has bounded context which also defines scope for a module
+                -  each bounded context only exposes specific classes to be used by other bounded contexts.  They act as interface of contexts.
            - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
            - Enforce boundaries adhering to Domain driven perspective,
                - Think of Module (or Micro-service) as bounded context
