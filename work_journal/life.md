@@ -909,6 +909,33 @@ By Casey Means, I believe the United States would be a healthier, happier, more 
       - Tighten the Eating Window: Eating in a narrower window during the day leads to lower glucose and insulin spikes compared to eating the exact same amount of food spread out over a longer period of the day. Time-restricted feeding (TRF) involves eating all your food and calories for the day in a limited window. To put TRF into practice, start by trying to limit the time when you eat to twelve hours (e.g., 8:00 a.m. to 8:00 p.m.), and then tighten the window to ten hours (e.g., 8:00 a.m. to 6:00 p.m.) and eventually to eight hours (e.g., 10:00 a.m. to 6:00 p.m.). As your body becomes more metabolically efficient through Good Energy living, TRF becomes easier because your body becomes more adept at processing stored fat for energy.
       - Add Fiber to All Meals: Fiber slows digestion, promotes microbiome health, and lowers post-meal glucose rises.fiber sources included legumes, vegetables, fruit, and whole grains. Other good sources of fiber include chia seeds, flaxseeds, other nuts or seeds, avocados, beans, high-fiber fruits or vegetables, lentils, and tahini. Aim for at least 50 grams of fiber per day.
       - Walk for at Least Fifteen Minutes After Meals: This simple step can reduce the glucose impact of your meal by up to 30 percent and is an unbelievably high-yield habit to incorporate after as many meals as you can.
-      - Human circadian biology primes us to be more insulin sensitive and generate more heat from metabolizing food in the morning instead of the evening. Overall, research suggests that we do much better by frontloading the day with food—especially higher carbohydrate foods—and stopping eating as early as possible in the evening. One study showed that eating food later in the evening (at 8:30 p.m.) caused a significant increase in both insulin and glucose levels compared with eating the exact same meal consumed in the morning (at 9:30 a.m.).
+      - Human circadian biology primes us to be more insulin sensitive and generate more heat from metabolizing food in the morning instead of the evening. Overall, research suggests that we do much better by frontloading the day with food—especially higher carbohydrate foods—and stopping eating as early as possible in the evening. One study showed that eating food later in the evening (at 8:30 p.m.) caused a significant increase in both insulin and glucose levels compared with eating the exact same meal consumed in the morning (at 9:30 a.m.)
+
+- 12 lessons by Krish ashok 
+  - Single ingredient is neither a  hero or villain. Almost everything in Moderation is okay. Whole meal matters more than single item.
+
+  - Choice of cookware/appliances has little or no effect on nutritional value of food.
+
+  - Eating more protein and strength training (Preserves muscle mass) are best investment one can make. E.g. Complete protein - Dal+Rice+Curd
+
+  - Eating more vegetables, fruits and legumes is fantastic. Aim for different colours. Local alternatives are much more nutritious than continental fad. Prefer less sweet fruits like guava.
+
+  - Amount of fat is more important than choice of fat. 1 tsp oil per day is recommended by doctors.
+
+  - Traditional food cooked @ home with focus on proteins is best.
+
+  - Jaggery is same a Sugar.
+
+  - Avoid ultra-processed foods. Quantity of UPF is problem and not additives in them.
+
+  - Quantity matters
+
+  - No single thing causes or cures cancer. focus on evidence based risks
+
+  - Detox is a scam. Best detox is adequate sleep + water + balanced diet.
+
+  - Best diet is one you can sustain. Long term consistency always short term intensity. (Amla has more micronutrients than blueberries). Dal+Rice+Veggies+1 egg is far better
+
+  - Content is not knowledge. Good nutrition advice is boring.
 
 
