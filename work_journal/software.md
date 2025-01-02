@@ -318,7 +318,7 @@
                 -  Each subdomain have actor e.g. patron in case of book borrowing. 
                 -  Subdomain has bounded context which also defines scope for a module
                 -  each bounded context only exposes specific classes to be used by other bounded contexts.  They act as interface of contexts.
-           - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
+           - A modular monolith irs a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
            - Enforce boundaries adhering to Domain driven perspective,
                - Think of Module (or Micro-service) as bounded context
                - It helps with ,
