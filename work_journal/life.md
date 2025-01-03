@@ -938,4 +938,212 @@ By Casey Means, I believe the United States would be a healthier, happier, more 
 
   - Content is not knowledge. Good nutrition advice is boring.
 
+- 25 psychological tendencies by charlie munger, 
+- 
 
+1. Reward and Punishment Super-Response Tendency
+
+    Key Statement: "Never, ever, think about something else when you should be thinking about the power of incentives."
+    Example: Munger emphasizes how incentives drive behavior, often more powerfully than we realize. For instance, sales commissions can lead to aggressive selling tactics, sometimes at the expense of customer satisfaction.
+    Example: The FedEx delivery system. Munger explains how FedEx achieved operational efficiency by incentivizing its night-shift workers. Instead of paying them hourly, FedEx offered a fixed payment for finishing all work in a night. This motivated workers to finish faster without sacrificing quality.
+    Lesson: Aligning incentives with desired outcomes can drastically change behavior.
+
+
+2. Liking/Loving Tendency
+
+    Key Statement: "We ignore the faults of other people, products, or companies that we admire."
+    Example: Munger illustrates this with brand loyalty, where consumers overlook flaws in products they love, such as Apple fans who continue to buy new iPhones despite minor issues.
+    Example: Warren Buffett’s Coca-Cola investment. Buffett's love for Coca-Cola goes beyond financial reasoning; he genuinely enjoys the product. Munger acknowledges that this fondness may influence decisions, even though Coca-Cola was still a strong investment.
+    Lesson: Personal affection can skew judgment, even in highly rational decision-making.
+
+ 
+
+3. Disliking/Hating Tendency
+
+    Key Statement: "We ignore virtues in the objects of our dislike."
+    Example: Politics and polarization. Munger highlights how strong dislike for a political opponent can make people dismiss even their valid points. This tendency reinforces division and hinders balanced decision-making.
+    Lesson: Dislike blinds us to virtues and distorts our evaluation of ideas.
+
+ 
+
+4. Doubt-Avoidance Tendency
+
+    Key Statement: "The brain of man is programmed with a tendency to quickly remove doubt by reaching some decision."
+    Example: In high-pressure situations, like emergency decision-making, people often make quick decisions to avoid the discomfort of doubt, sometimes leading to suboptimal outcomes.
+    Example: Financial scams. In Ponzi schemes, victims often ignore red flags to resolve the cognitive dissonance of doubting their decision to invest. This allows fraudsters to exploit them further.
+    Lesson: People often prefer immediate closure over grappling with uncertainty.
+
+ 
+
+5. Inconsistency-Avoidance Tendency
+
+    Key Statement: "The brain resists change."
+    Example: Munger points out how people stick to their initial beliefs and decisions, even in the face of new evidence. This is evident in the reluctance to change investment strategies despite market shifts.
+    Example: Weight Watchers vs. diet fads. Munger notes that once people commit to a diet plan (or any approach), they’re reluctant to admit it’s failing, even when evidence suggests otherwise.
+    Lesson: People resist changing their minds to avoid seeming inconsistent or "wrong."
+
+ 
+
+6. Curiosity Tendency
+
+    Key Statement: "Curiosity, enhanced by the best of modern education, has enormous power to help us."
+    Example: Munger’s own life philosophy. Munger attributes much of his success to insatiable curiosity and a commitment to lifelong learning. He emphasizes reading widely across disciplines to synthesize new ideas.
+    Lesson: Curiosity fuels innovation and better decision-making.
+
+ 
+
+7. Kantian Fairness Tendency
+
+    Key Statement: "We are programmed to reciprocate."
+    Example: This is seen in business negotiations where fair treatment often leads to better deals and long-term partnerships.
+    Lesson: Perceived fairness is essential for maintaining harmony and motivation.
+
+ 
+
+8. Envy/Jealousy Tendency
+
+    Key Statement: "Envy/jealousy is extreme in its effects."
+    Example: Munger notes how envy can drive irrational behaviour, such as overspending to keep up with peers, leading to financial distress.
+    Example: The housing bubble. During the real estate boom, envy played a role in people overextending themselves to "keep up with the Joneses." This fuelled unsustainable housing purchases and eventual economic collapse.
+    Lesson: Envy drives irrational behavior, often to one’s detriment.
+
+ 
+
+9. Reciprocation Tendency
+
+    Key Statement: "The automatic tendency of humans to return favors."
+    Example: This is commonly used in marketing, where free samples lead to increased sales as customers feel compelled to reciprocate by purchasing the product. Charitable donations after free gifts. Charities often send small gifts (like pens or address labels) to potential donors. Many feel compelled to reciprocate by donating, even if they wouldn’t have otherwise.
+    Lesson: Even small gestures can trigger a sense of obligation.
+
+ 
+
+10. Influence-from-Mere-Association Tendency
+
+    Key Statement: "We are conditioned to associate ideas and emotions with objects and people."
+    Example: Celebrity endorsements. Munger explains how companies associate their products with admired figures, like athletes or movie stars, to increase sales. For example, Nike's success is partly linked to its association with Michael Jordan.
+    Lesson: Associations, even superficial ones, influence preferences and decisions.
+
+ 
+
+11. Simple, Pain-Avoiding Psychological Denial
+
+    Key Statement: "The reality is too painful to bear, so we distort it until it's bearable."
+    Example: Refusal to confront poor investments. Investors may deny losses and hold onto failing stocks, hoping for a turnaround, rather than admitting their mistake and moving on.
+    Lesson: Denial delays necessary corrective actions.
+
+ 
+
+12. Excessive Self-Regard Tendency
+
+    Key Statement: "We all commonly observe the excessive self-regard of man."
+    Example: Overconfidence in CEOs. Munger critiques CEOs who overestimate their competence, leading to poor acquisitions or ventures. For example, he points to corporate executives who assume they can succeed in any industry without sufficient expertise.
+    Lesson: Overconfidence often leads to preventable mistakes.
+
+ 
+Recommended by LinkedIn
+13 Questions That Will Change Your Life
+Dr. Travis Bradberry 7 years ago
+Realizing That The Fear Of Judgment Can Be Overcome…
+Vijay Singh 1 month ago
+Is overthinking holding you back?
+Madhuri Roy 1 year ago
+
+13. Overoptimism Tendency
+
+    Key Statement: "What a man wishes, that also will he believe."
+    Example: Entrepreneurs often exhibit overoptimism, underestimating the challenges and overestimating the potential success of their ventures. During the late 1990s, overoptimism about internet companies led to massive overvaluations, ignoring business fundamentals.
+    Lesson: Optimism, while necessary, can blind people to risks.
+
+ 
+
+14. Deprival-Superreaction Tendency
+
+    Key Statement: "Losses loom larger than gains."
+    Example: This is evident in gambling, where the pain of losing money often leads to irrational attempts to recover losses, resulting in even greater losses. Casinos exploit this by offering gamblers "free" chips after losses, minimizing the sting of losing and enticing them to keep playing.
+    Lesson: Loss aversion drives emotional responses and poor decisions.
+
+ 
+
+15. Social-Proof Tendency
+
+    Key Statement: "We are influenced by what others do."
+    Example: Herd behaviour in financial markets, where investors follow the crowd, can lead to bubbles and crashes. During bubbles, people invest simply because "everyone else is doing it," often ignoring fundamentals. Munger mentions the South Sea Bubble as a classic case.
+    Lesson: Herd behaviour can lead to irrational outcomes.
+
+ 
+
+16. Contrast-Misreaction Tendency
+
+    Key Statement: "We misjudge the difference between things."
+    Example: Retailers use this by placing expensive items next to standard ones, making the latter seem like a better deal. Realtors often show overpriced homes first to make subsequent houses seem like bargains, manipulating buyers’ perception of value.
+    Lesson: Contrast can skew perception and decision-making.
+
+ 
+
+17. Stress-Influence Tendency
+
+    Key Statement: "Stress can change cognition and behavior."
+    Example: Emergency situations. In stressful environments, such as during military conflicts, soldiers’ decisions reflect their training. Poor preparation under stress leads to mistakes.
+    Lesson: Preparation and habits matter most under pressure.
+
+ 
+
+18. Availability-Misweighing Tendency
+
+    Key Statement: "We overweigh what is easily available to us."
+    Example: Media and fear, Media coverage can skew perception, such as overestimating the likelihood of rare events like plane crashes due to their dramatic coverage. Munger explains how vivid, widely publicized events (e.g., plane crashes) make people fear flying more than driving, even though statistics prove driving is riskier.
+    Lesson: Readily available information can distort judgment.
+
+ 
+
+19. Use-It-or-Lose-It Tendency
+
+    Key Statement: "Skills degrade if not used."
+    Example: Munger emphasizes continuous learning and practice to maintain and improve skills. Munger notes how unused skills, like foreign languages, fade over time without practice.
+    Lesson: Continuous application is critical for retention.
+
+ 
+
+20. Drug-Misinfluence Tendency
+
+    Key Statement: "Substances can alter cognition and behavior."
+    Example: Addiction in decision-makers. Munger highlights examples of business leaders whose substance abuse led to poor decision-making and ruined companies impacting personal and professional life.
+    Lesson: Impairments reduce rationality.
+
+
+21. Senescence-Misinfluence Tendency
+
+    Key Statement: "Aging changes cognition and behavior."
+    Example: Awareness of cognitive decline with age can help in planning for future decision-making and delegating responsibilities. Munger warns about older leaders clinging to power despite declining cognitive abilities, harming organizations.
+    Lesson: Recognizing personal limits is crucial.
+
+ 
+
+22. Authority-Misinfluence Tendency
+
+    Key Statement: "We follow authority figures."
+    Example: This is seen in corporate settings where employees may follow directives from superiors without question, even if they are flawed. Munger refers to Stanley Milgram's experiments, where participants obeyed authority figures to administer shocks, even when it conflicted with their morals.
+    Lesson: Blind obedience can lead to disastrous outcomes.
+
+ 
+
+23. Twaddle Tendency
+
+    Key Statement: "We talk more than we think."
+    Example: Munger advises focusing on substance over style, avoiding unnecessary chatter that can cloud judgment.
+    Lesson: Focus on clear, valuable communication.
+
+ 
+
+24. Reason-Respecting Tendency
+
+    Key Statement: "We are more likely to comply with requests if given a reason."
+    Example: Simply adding a reason to a request, even if it's not compelling, increases compliance, as shown in studies on human behavior.
+    Lesson: People want reasons to justify decisions.
+
+ 
+
+25. Lollapalooza Tendency
+
+    Key Statement: "Multiple biases acting together can create extreme outcomes."
+    Example: Munger describes how combining several cognitive biases can lead to significant misjudgements, such as in financial crises where multiple factors converge to create a market collapse.
