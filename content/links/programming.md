@@ -56,6 +56,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Gateway pattern to encapsulate integration with external systems](https://martinfowler.com/articles/refactoring-external-service.html#SeparatingTheRemoteCallIntoAConnectionObject)
 - [Why refactoring?](https://xp123.com/articles/refactoring-whole-team-guide/)
 - [OpenFeature - Standardizing Feature Flagging for Everyone](https://openfeature.dev/)
+- [featbit: Enterprise-level feature flag platform that you can self-host. Get started - free.](https://github.com/featbit)
+- [Unleash - Open-source feature management platform](https://gUnleash/unleash)
 
 ## API Development, Security, Cryptography
 

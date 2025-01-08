@@ -104,6 +104,10 @@ Knowledge base around general database related topics.
 - [Differential Datalog - Language for incremental computation](https://github.com/vmware/differential-datalog)
 - [Using NanoIDs (not longer UUID) for public APis](https://planetscale.com/blog/why-we-chose-nanoids-for-planetscales-api)
 
+## In-memory Databases 
+
+- [Dragonfly - Compatible with REDIS](https://github.com/dragonflydb/dragonfly)
+
 ## Duck DB
 
 - [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
