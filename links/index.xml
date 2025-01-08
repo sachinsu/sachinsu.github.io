@@ -2678,6 +2678,13 @@
  target=_blank rel="noopener noreferrer"
 >Using NanoIDs (not longer UUID) for public APis&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="in-memory-databases">In-memory Databases&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://github.com/dragonflydb/dragonfly
+ 
+ target=_blank rel="noopener noreferrer"
+>Dragonfly - Compatible with REDIS&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;h2 id="duck-db">Duck DB&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href=https://duckdb.org/
@@ -4114,6 +4121,14 @@ b.com/hoanhan101/ultimate-go)&lt;/li>
  
  target=_blank rel="noopener noreferrer"
 >OpenFeature - Standardizing Feature Flagging for Everyone&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://github.com/featbit
+ 
+ target=_blank rel="noopener noreferrer"
+>featbit: Enterprise-level feature flag platform that you can self-host. Get started - free.&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://gUnleash/unleash
+ 
+ target=_blank rel="noopener noreferrer"
+>Unleash - Open-source feature management platform&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="api-development-security-cryptography">API Development, Security, Cryptography&lt;/h2>
 &lt;ul>
