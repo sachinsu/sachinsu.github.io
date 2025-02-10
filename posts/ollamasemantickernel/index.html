@@ -541,8 +541,8 @@ d to integrate with external implementation like Ollama.</p><p>Below are impleme
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Messages</span> = <span style=color:#a6e22e>new</span> <span style=color:#a6e22e>List</span>&lt;<span style=color:#a6e22e>OllamaApiClient</span>.<span style=color:#a6e22e>ChatMessage</span>&gt;();
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// iterate though chatHistory Messages
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>foreach</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>history</span> <span style=color:#a6e22e>in</span> <span style=color:#a6e22e>chatHistory</span>)
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// iterate though chatHistory Messages</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>foreach</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>history</span> <span style=color:#a6e22e>in</span> <span style=color:#a6e22e>chatHistory</span>)
 </span></span><span style=display:flex><span>        {
 </span></span><span style=display:flex><span>            <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Messages</span>.<span style=color:#a6e22e>Add</span>(<span style=color:#a6e22e>new</span> <span style=color:#a6e22e>OllamaApiClient</span>.<span style=color:#a6e22e>ChatMessage</span>{
 </span></span><span style=display:flex><span>                <span style=color:#a6e22e>Role</span>=<span style=color:#a6e22e>history</span>.<span style=color:#a6e22e>Role</span>.<span style=color:#a6e22e>ToString</span>(),
@@ -570,8 +570,8 @@ d to integrate with external implementation like Ollama.</p><p>Below are impleme
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Messages</span> = <span style=color:#a6e22e>new</span> <span style=color:#a6e22e>List</span>&lt;<span style=color:#a6e22e>OllamaApiClient</span>.<span style=color:#a6e22e>ChatMessage</span>&gt;();
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// iterate though chatHistory Messages
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#a6e22e>foreach</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>history</span> <span style=color:#a6e22e>in</span> <span style=color:#a6e22e>chatHistory</span>)
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// iterate though chatHistory Messages</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>foreach</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>history</span> <span style=color:#a6e22e>in</span> <span style=color:#a6e22e>chatHistory</span>)
 </span></span><span style=display:flex><span>        {
 </span></span><span style=display:flex><span>            <span style=color:#a6e22e>req</span>.<span style=color:#a6e22e>Messages</span>.<span style=color:#a6e22e>Add</span>(<span style=color:#a6e22e>new</span> <span style=color:#a6e22e>OllamaApiClient</span>.<span style=color:#a6e22e>ChatMessage</span>{
 </span></span><span style=display:flex><span>                <span style=color:#a6e22e>Role</span>=<span style=color:#a6e22e>history</span>.<span style=color:#a6e22e>Role</span>.<span style=color:#a6e22e>ToString</span>(),
@@ -616,15 +616,15 @@ d to integrate with external implementation like Ollama.</p><p>Below are impleme
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>ollamachat</span> = <span style=color:#a6e22e>ServiceProvider</span>.<span style=color:#a6e22e>GetChatCompletionService</span>();
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// semantic kernel builder
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>builder</span> = <span style=color:#a6e22e>Kernel</span>.<span style=color:#a6e22e>CreateBuilder</span>();
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// semantic kernel builder</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>builder</span> = <span style=color:#a6e22e>Kernel</span>.<span style=color:#a6e22e>CreateBuilder</span>();
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>builder</span>.<span style=color:#a6e22e>Services</span>.<span style=color:#a6e22e>AddKeyedSingleton</span>&lt;<span style=color:#a6e22e>IChatCompletionService</span>&gt;(<span style=color:#e6db74>&#34;ollamaChat&#34;</span>, <span style=color:#a6e22e>ollamachat</span>);
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// builder.Services.AddKeyedSingleton&lt;ITextGenerationService&gt;(&#34;ollamaText&#34;, ollamaText);
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>kernel</span> = <span style=color:#a6e22e>builder</span>.<span style=color:#a6e22e>Build</span>();
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// builder.Services.AddKeyedSingleton&lt;ITextGenerationService&gt;(&#34;ollamaText&#34;, ollamaText);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>kernel</span> = <span style=color:#a6e22e>builder</span>.<span style=color:#a6e22e>Build</span>();
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// chat generation
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>chatGen</span> = <span style=color:#a6e22e>kernel</span>.<span style=color:#a6e22e>GetRequiredService</span>&lt;<span style=color:#a6e22e>IChatCompletionService</span>&gt;();
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// chat generation</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>chatGen</span> = <span style=color:#a6e22e>kernel</span>.<span style=color:#a6e22e>GetRequiredService</span>&lt;<span style=color:#a6e22e>IChatCompletionService</span>&gt;();
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>ChatHistory</span> <span style=color:#a6e22e>chat</span> = new(<span style=color:#e6db74>&#34;You are an AI assistant that helps people find information.&#34;</span>);
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>chat</span>.<span style=color:#a6e22e>AddUserMessage</span>(<span style=color:#e6db74>&#34;What is Sixth Sense?&#34;</span>);
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>answer</span> = <span style=color:#a6e22e>await</span> <span style=color:#a6e22e>chatGen</span>.<span style=color:#a6e22e>GetChatMessageContentAsync</span>(<span style=color:#a6e22e>chat</span>);
