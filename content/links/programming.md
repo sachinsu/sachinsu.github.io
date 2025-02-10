@@ -95,7 +95,9 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Microservices — architecture nihilism in minimalisms clothes](https://vlfig.me/posts/microservices)
 - [Microservices, pl. dont](https://riak.com/posts/technical/microservices-please-dont/)
 - [Disasters from Microservices world](https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51)
-
+- [Saga: How to implement complex business transactions without two phase commit.](https://blog.bernd-ruecker.com/saga-how-to-implement-complex-business-transactions-without-two-phase-commit-e00aa41a1b1b)
+- [Sagas by clement Vasters](https://vasters.com/archive/Sagas.html)
+- [Ref. implementation of cloud design patterns](https://github.com/mspnp/cloud-design-patterns)
 
 ## Automation 
 
