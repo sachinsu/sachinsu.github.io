@@ -55,6 +55,7 @@ draft: false
 
 ## Libraries and Tools
 
+- [Bootstrap based Admin theme - Volt](https://github.com/themesberg/volt-bootstrap-5-dashboard)
 - [RsPack - Fast web bundler like webpack](https://github.com/web-infra-dev/rspack)
 - [Dash - Python based framework for Visualization with no javascript](https://github.com/plotly/dash)
 - [T3 - full-stack, typesafe Next.js app](https://github.com/t3-oss/create-t3-app)
@@ -101,7 +102,7 @@ draft: false
 
 - [Tauri - smaller, faster, and more secure desktop applications with a web frontend (Native Webviews and no chromium)](https://github.com/tauri-apps/tauri)
 
-le
+
 ## PWA 
 
 - [PWABuilder - Publish Progressive Web App as Mobile App](https://www.pwabuilder.com/)

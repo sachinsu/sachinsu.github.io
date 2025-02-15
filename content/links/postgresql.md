@@ -45,6 +45,7 @@ draft: false
 
 ## Performance tuning, configuration etc.
 
+- [pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them](https://github.com/nexsol-technologies/pgassistant)
 - [Partitioning as Query Optimization Strategy](https://ashutoshpg.blogspot.com/2023/08/partitioning-as-query-optimization.html)
 - [Database Configuration Builder](https://www.pgconfig.org)
 - [Configuration for Diagnosing Performance issues](https://www.crunchydata.com/blog/exposing-postgres-performance-secrets)
