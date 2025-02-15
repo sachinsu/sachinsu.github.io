@@ -185,6 +185,10 @@
 &lt;/ul>
 &lt;h2 id="performance-tuning-configuration-etc">Performance tuning, configuration etc.&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/nexsol-technologies/pgassistant
+ 
+ target=_blank rel="noopener noreferrer"
+>pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://ashutoshpg.blogspot.com/2023/08/partitioning-as-query-optimization.html
  
  target=_blank rel="noopener noreferrer"
@@ -1391,6 +1395,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul>
 &lt;h2 id="libraries-and-tools">Libraries and Tools&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://github.com/themesberg/volt-bootstrap-5-dashboard
+ 
+ target=_blank rel="noopener noreferrer"
+>Bootstrap based Admin theme - Volt&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://github.com/web-infra-dev/rspack
  
  target=_blank rel="noopener noreferrer"
@@ -1559,7 +1567,28 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
  target=_blank rel="noopener noreferrer"
 >Tauri - smaller, faster, and more secure desktop applications with a web frontend (Native Webviews and no chromium)&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>le&lt;/p></description></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>&lt;h3 id="background">Background&lt;/h3>
+&lt;h2 id="pwa">PWA&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://www.pwabuilder.com/
+ 
+ target=_blank rel="noopener noreferrer"
+>PWABuilder - Publish Progressive Web App as Mobile App&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://whatpwacando.today/
+ 
+ target=_blank rel="noopener noreferrer"
+>What a PWA can do today&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://devblogs.microsoft.com/ifdef-windows/get-started-building-a-progressive-web-app/
+ 
+ target=_blank rel="noopener noreferrer"
+>Step by Step using PWABuilder&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="mobile-app-development">Mobile App Development&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href=https://GitHub.com/expo/expo
+ 
+ target=_blank rel="noopener noreferrer"
+>Expo - universal native apps with React&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Windows Service with Cancelable Task</title><link>https://sachinsu.github.io/posts/windowsservicecancellabletask/</link><pubDate>Tue, 05 May 2020 12:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/windowsservicecancellabletask/</guid><description>&lt;h3 id="background">Background&lt;/h3>
 &lt;p>Recently, we had requirement wherein a process should,&lt;/p>
 &lt;ul>
 &lt;li>Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running.&lt;/li>
