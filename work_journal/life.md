@@ -1147,3 +1147,20 @@ Madhuri Roy 1 year ago
 
     Key Statement: "Multiple biases acting together can create extreme outcomes."
     Example: Munger describes how combining several cognitive biases can lead to significant misjudgements, such as in financial crises where multiple factors converge to create a market collapse.
+
+
+- Qualities of attorney
+  - Not in favour of accomodation, collegiality and collaboration to conflict 
+  - Minute details over big picture trends and goals
+  - Zero-sum game over adding value 
+  - Longer attention span 
+  - Thinking probabilistically 
+  - Learn to argue the other side
+  -  Understanding the opposition’s best evidence and seeking support for its best arguments is a powerful learning tool and one investors and their advisors should emulate. 
+  -  Its all about evidence 
+  -  The evidence must be evaluated and presented analytically. 
+  - Check and re-check your work 
+  - 
+- A remarkable universe of discoveries in psychology and neuroscience demonstrate that our preexisting beliefs skew our thoughts and even color what we consider our most dispassionate and reasoned conclusions. Expecting people (including ourselves) to be convinced by the facts is contrary to, well, the facts
+- Our tendency is to look for and consider only those views that correspond to our own
+- Some exemplary unpleasant facts are these: that life is short and almost always ends messily; that if you live in the actual world you can’t have your own way; that if you do get what you want, it turns out not to be the thing you wanted; that no one thinks as well of you as you do yourself; and that one or two generations from now you will be forgotten entirely and the world will go on as if you had never existed. Another is that to survive and prosper in this world you have to do so at someone else’s expense or do and undergo things it’s not pleasant to face: like, for example, purchasing your life at the cost of the innocents murdered in the aerial bombing of Europe and the final bombings of Hiroshima and Nagasaki. And not just the bombings. It’s also an unpleasant fact that you are alive and well because you or your representatives killed someone with bullets, shells, bayonets or knives, if not in Germany, Italy or Japan, then Korea or Vietnam. You have connived at murder, and you thrive on it, and that fact is too unpleasant to face except rarely
