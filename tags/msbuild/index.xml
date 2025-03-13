@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>msbuild on Learnings in IT</title>
-    <link>https://sachinsu.github.io/tags/msbuild/</link>
-    <description>Recent content in msbuild on Learnings in IT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
+    <title>Msbuild on Learnings in IT</title>
+    <link>http://localhost:1313/tags/msbuild/</link>
+    <description>Recent content in Msbuild on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Apr 2022 10:25:04 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/msbuild/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nuke as Build Automation tool for .NET projects</title>
-      <link>https://sachinsu.github.io/posts/nukebuildautomation/</link>
+      <link>http://localhost:1313/posts/nukebuildautomation/</link>
       <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      
-      <guid>https://sachinsu.github.io/posts/nukebuildautomation/</guid>
-      <description>Background How Nuke Helps Summary Key Advantages of Nuke are,
- C# based DSL to compose build pipeline Build pipeline is part of solution (i.e. actual code) display a dependency graph logging support for lot of CI/CD helper tools  Useful References,  Nuke - Documentation Cake Fake  Happy Code building !!
-  </description>
+      <guid>http://localhost:1313/posts/nukebuildautomation/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;h2 id=&#34;how-nuke-helps&#34;&gt;How Nuke Helps&lt;/h2&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Key Advantages of Nuke are,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;C# based DSL to compose build pipeline&lt;/li&gt;&#xA;&lt;li&gt;Build pipeline is part of solution (i.e. actual code)&lt;/li&gt;&#xA;&lt;li&gt;display a dependency graph&lt;/li&gt;&#xA;&lt;li&gt;logging&lt;/li&gt;&#xA;&lt;li&gt;support for lot of CI/CD helper tools&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;useful-references&#34;&gt;Useful References,&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=https://www.nuke.build/docs/getting-started/philosophy.html&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Nuke - Documentation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=https://github.com/cake-build/cake&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Cake&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=https://fake.build/&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Fake&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Happy Code building !!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
