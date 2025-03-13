@@ -1149,7 +1149,7 @@ Madhuri Roy 1 year ago
     Example: Munger describes how combining several cognitive biases can lead to significant misjudgements, such as in financial crises where multiple factors converge to create a market collapse.
 
 
-- Qualities of attorney
+- Qualities of attorney (https://betterletter.substack.com/p/not-totally-worthless)
   - Not in favour of accomodation, collegiality and collaboration to conflict 
   - Minute details over big picture trends and goals
   - Zero-sum game over adding value 

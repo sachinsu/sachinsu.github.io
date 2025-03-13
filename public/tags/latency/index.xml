@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latency on Learnings in IT</title><link>http://localhost:1313/tags/latency/</link><description>Recent content in Latency on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/latency/index.xml" rel="self" type="application/rss+xml"/><item><title>URL Shortener in High Throughput Service</title><link>http://localhost:1313/posts/shortidgeneration/</link><pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/shortidgeneration/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS
- 
- target=_blank rel="noopener noreferrer"
->SMS&lt;/a> to Customer&amp;rsquo;s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latency on Learnings in IT</title>
+    <link>http://localhost:1313/tags/latency/</link>
+    <description>Recent content in Latency on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/latency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>URL Shortener in High Throughput Service</title>
+      <link>http://localhost:1313/posts/shortidgeneration/</link>
+      <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/shortidgeneration/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For  Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;SMS&lt;/a&gt; to Customer&amp;rsquo;s  Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

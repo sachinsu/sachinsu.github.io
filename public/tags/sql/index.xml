@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQL on Learnings in IT</title><link>http://localhost:1313/tags/sql/</link><description>Recent content in SQL on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 15 Jul 2021 10:25:04 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/sql/index.xml" rel="self" type="application/rss+xml"/><item><title>Near real time API Monitoring with Grafana and PostgreSQL</title><link>http://localhost:1313/posts/nrtanalysispostgresql/</link><pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/nrtanalysispostgresql/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p>
-&lt;p>What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p></description></item><item><title>Presto - A distributed SQL Engine for variety of data stores</title><link>http://localhost:1313/posts/presto/</link><pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/presto/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>In a company/enterprise, typically there are multiple sources of data. This could be result of M&amp;amp;A (where each of those add in a new data store) or result of multi year process of using data stores that are in vogue at that time. Result is combination of various types of relational databases, flat file systems, queues and so on. This results in Data Silos. This scenario is typically observed in companies who are running workloads On-prem (i.e. Pre-cloud, Companies who started on Cloud or have moved to it, typically tend to organize data platform better. This could be because of ease of migrating data on cloud. Typically, they centralize it around cheaper object storage (say AWS S3)).&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on Learnings in IT</title>
+    <link>http://localhost:1313/tags/sql/</link>
+    <description>Recent content in SQL on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Jul 2021 10:25:04 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Near real time API Monitoring with Grafana and PostgreSQL</title>
+      <link>http://localhost:1313/posts/nrtanalysispostgresql/</link>
+      <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/nrtanalysispostgresql/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p&gt;&#xA;&lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Presto - A distributed SQL Engine for variety of data stores</title>
+      <link>http://localhost:1313/posts/presto/</link>
+      <pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/presto/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a company/enterprise, typically there are multiple sources of data. This could be result of M&amp;amp;A (where each of those add in a new data store) or result of multi year process of using data stores that are in vogue at that time. Result is combination of various types of relational databases, flat file systems, queues and so on. This results in Data Silos. This scenario is typically observed in companies who are running workloads On-prem (i.e. Pre-cloud, Companies who started on Cloud or have moved to it, typically tend to organize data platform better. This could be because of ease of migrating data on cloud. Typically, they centralize it around cheaper object storage (say AWS S3)).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

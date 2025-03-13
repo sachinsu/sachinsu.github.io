@@ -1,24 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Learnings in IT</title><link>http://localhost:1313/tags/c%23/</link><description>Recent content in C# on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/c%23/index.xml" rel="self" type="application/rss+xml"/><item><title>URL Shortener in High Throughput Service</title><link>http://localhost:1313/posts/shortidgeneration/</link><pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/shortidgeneration/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS
- 
- target=_blank rel="noopener noreferrer"
->SMS&lt;/a> to Customer&amp;rsquo;s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p></description></item><item><title>Upgrading API: Learnings</title><link>http://localhost:1313/posts/apiupgrade/</link><pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate><guid>http://localhost:1313/posts/apiupgrade/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=http://localhost:1313/posts/restapiversioning/
- 
- 
->here&lt;/a>) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p></description></item><item><title>Is WebAssembly future of Web Development</title><link>http://localhost:1313/posts/webassembly/</link><pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/webassembly/</guid><description>&lt;p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org
- 
- target=_blank rel="noopener noreferrer"
->React&lt;/a> and &lt;a href=https://vuejs.org
- 
- target=_blank rel="noopener noreferrer"
->Vue&lt;/a> among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp;amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. &lt;a href=https://getbootstrap.com
- 
- target=_blank rel="noopener noreferrer"
->Bootstrap&lt;/a>. Offline Support soon came in ref: &lt;a href=https://electronjs.org
- 
- target=_blank rel="noopener noreferrer"
->Electron&lt;/a> and &lt;a href=https://web.dev/progressive-web-apps/
- 
- target=_blank rel="noopener noreferrer"
->Progressive Web Applications&lt;/a>.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on Learnings in IT</title>
+    <link>http://localhost:1313/tags/c%23/</link>
+    <description>Recent content in C# on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>URL Shortener in High Throughput Service</title>
+      <link>http://localhost:1313/posts/shortidgeneration/</link>
+      <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/shortidgeneration/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For  Authentication, this service sends &lt;a href=https://en.wikipedia.org/wiki/SMS&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;SMS&lt;/a&gt; to Customer&amp;rsquo;s  Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Domain driven Design: Learnings</title>
+      <link>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</guid>
+      <description>&lt;p&gt;Course Overview&#xA;Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we&amp;rsquo;d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design. DDD has proven to be a very effective approach for managing complex requirements. The original version of this course has helped many thousands of learners leverage domain‑driven design, and they have shared amazing feedback. Now, we&amp;rsquo;ve updated the course and its sample application to reflect ideas and tools that have emerged since that first version. Some of the major topics that we&amp;rsquo;ll cover include what are the essential ideas of domain‑driven design? What are the main patterns used in domain models? We&amp;rsquo;ll also talk about how to break up concepts into smaller parts and how these smaller aggregates and contexts communicate with one another. By the end of this course, you&amp;rsquo;ll know how to break down customer requirements into a maintainable domain model and structure a solution using domain‑driven design. Before beginning the course, you should at least be familiar with software development, ideally using C#. From here, you should feel comfortable diving into DDD and design patterns with courses on the DDD learning path and the design patterns learning path. We hope you&amp;rsquo;ll join us on this journey to learn domain‑driven design with the Domain‑Driven Design Fundamentals course, at Pluralsight.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upgrading API: Learnings</title>
+      <link>http://localhost:1313/posts/apiupgrade/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/apiupgrade/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=http://localhost:1313/posts/restapiversioning/&#xA;    &#xA;    &#xA;&gt;here&lt;/a&gt;) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is WebAssembly future of Web Development</title>
+      <link>http://localhost:1313/posts/webassembly/</link>
+      <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/webassembly/</guid>
+      <description>&lt;p&gt;Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;React&lt;/a&gt; and &lt;a href=https://vuejs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Vue&lt;/a&gt; among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp;amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. &lt;a href=https://getbootstrap.com&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Bootstrap&lt;/a&gt;. Offline Support soon came in ref: &lt;a href=https://electronjs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Electron&lt;/a&gt; and &lt;a href=https://web.dev/progressive-web-apps/&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Progressive Web Applications&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

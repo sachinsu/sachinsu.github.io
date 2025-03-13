@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Twitter on Learnings in IT</title><link>http://localhost:1313/tags/twitter/</link><description>Recent content in Twitter on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 25 Jul 2020 10:25:04 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/twitter/index.xml" rel="self" type="application/rss+xml"/><item><title>Tool to mass DM followers on Twitter in Go</title><link>http://localhost:1313/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>http://localhost:1313/posts/massdmgolang/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
- 
- target=_blank rel="noopener noreferrer"
->Balaji Srinivasan&lt;/a> to send Direct Message to all twitter followers. &lt;em>Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em>&lt;/p>
-&lt;p>This is an attempt to write CLI tool in &lt;a href=https://golang.org
- 
- target=_blank rel="noopener noreferrer"
->Golang&lt;/a> in response to it.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on Learnings in IT</title>
+    <link>http://localhost:1313/tags/twitter/</link>
+    <description>Recent content in Twitter on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 25 Jul 2020 10:25:04 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tool to mass DM followers on Twitter in Go</title>
+      <link>http://localhost:1313/posts/massdmgolang/</link>
+      <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/massdmgolang/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Balaji Srinivasan&lt;/a&gt; to send Direct Message to all twitter followers. &lt;em&gt;Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is an attempt to write CLI tool in &lt;a href=https://golang.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Golang&lt;/a&gt; in response to it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

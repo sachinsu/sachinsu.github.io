@@ -1,7 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Temporal.io on Learnings in IT</title><link>http://localhost:1313/tags/temporal.io/</link><description>Recent content in Temporal.io on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/temporal.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Temporal.io to build Long running Workflows</title><link>http://localhost:1313/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>http://localhost:1313/posts/temporalworkflow/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>In a typical business Application, there are often requirements for,&lt;/p>
-&lt;ul>
-&lt;li>Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.&lt;/li>
-&lt;li>Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.&lt;/li>
-&lt;/ul>
-&lt;p>Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Temporal.io on Learnings in IT</title>
+    <link>http://localhost:1313/tags/temporal.io/</link>
+    <description>Recent content in Temporal.io on Learnings in IT</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/temporal.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Temporal.io to build Long running Workflows</title>
+      <link>http://localhost:1313/posts/temporalworkflow/</link>
+      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/temporalworkflow/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;In a typical business Application, there are often requirements for,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.&lt;/li&gt;&#xA;&lt;li&gt;Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
