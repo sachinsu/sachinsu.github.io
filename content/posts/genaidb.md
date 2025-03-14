@@ -125,8 +125,7 @@ Users can interact with the database in real-time, making it possible to get ins
 ### 5. Privacy and Security
 
  
-Users can only interact with the database via the queries specified in tools configuration for Toolbox. This is useful if database owner wants fine-grained control or restrict access to data. Use of local LLM for inference. Possibility of using Local LLMs can be beneficial for use cases where privacy and security are paramount.  
-
+Users can only interact with the database via the queries specified in tools configuration for Toolbox. This is useful if database owner wants fine-grained control or restrict access to data. Use of local LLM for inference caters to cases where privacy is critical and expenses are sensitive topic and somewhat delayed response time is acceptable. 
  
 
 ## Conclusion
