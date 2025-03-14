@@ -150,6 +150,7 @@ For more information, check out the official documentation and the [GitHub repos
 
 - [LangChain Announcement](https://www.timesofai.com/news/google-langchain-gen-ai-toolbox-for-databases/)
 
+- [Running Local LLMs](https://spin.atomicobject.com/running-local-llms/)
 
 ---
 
