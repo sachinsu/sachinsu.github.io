@@ -1,6 +1,6 @@
 ---
 title: "Exploring Google's Gen AI Toolbox for Databases: A New Era of Database Querying"
-date: 2025-03-20T01:00:00+05:30
+date: 2025-03-19T01:00:00+05:30
 draft: false
 tags: [Ollama, Gemini, MCP, LLM, Prompt,Database]
 ---
