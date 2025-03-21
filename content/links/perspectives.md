@@ -64,7 +64,8 @@ Section covering Business, project/programming perspectives
 - [97 things, Pearls of wisdom for programmers collected from leading practitioners](https://github.com/97-things/97-things-every-programmer-should-know)
 - [Evolutionary Architecture by Example](https://github.com/evolutionary-architecture/evolutionary-architecture-by-example)
 - [Domain driven design - tools](https://github.com/ddd-crew)
-
+- [IO Devices and latency](https://planetscale.com/blog/io-devices-and-latency)
+- 
 ## Legacy Modernization 
 
 - [Patterns of Legacy Modernization](https://martinfowler.com/articles/patterns-legacy-displacement/#WeWantToBeLikeNetflix)
