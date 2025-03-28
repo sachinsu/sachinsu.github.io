@@ -152,6 +152,8 @@ For more information, check out the official documentation and the [GitHub repos
 
 - [Running Local LLMs](https://spin.atomicobject.com/running-local-llms/)
 
+- [MCP- What is it?](https://addyo.substack.com/p/mcp-what-it-is-and-why-it-matters)
+
 ---
 
 {{< comments >}}
