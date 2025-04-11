@@ -137,6 +137,7 @@ Knowledge base around general database related topics.
 
 ## Database scaling
 
+- [Database Hardware Selection](https://momjian.us/main/writings/pgsql/hw_selection.pdf)
 - [Scaling TIDB to 1 million QPS](https://blog.flipkart.tech/scaling-tidb-to-1-million-qps-d556aa6a16ef)
 - [Sharding a database](https://stackoverflow.blog/2022/03/14/how-sharding-a-database-can-make-it-faster/)
 - [MySQL Sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1)

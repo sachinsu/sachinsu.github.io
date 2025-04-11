@@ -168,11 +168,10 @@ draft: false
 
 ## Scalability and performance
 
-- [Operations cheat sheet](https://wiki.postgresql.org/wiki/Operations_cheat_sheet#Scalability_and_performance)
-- [Don't do this](https://wiki.postgresql.org/wiki/Don't_Do_This)
+- [Scaling in PG](https://www.postgresql.org/docs/current/populate.html)
+- [Bulk import performance aspects](https://www.postgresql.org/docs/current/populate.html)
 
 ## Data Analysis
-
 - [Window functions for Data Analysis](https://www.crunchydata.com/blog/window-functions-for-data-analysis-with-postgres)
 
 ## Data Synchronization, CDC 
