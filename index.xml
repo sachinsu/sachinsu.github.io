@@ -614,14 +614,14 @@
 &lt;/ul>
 &lt;h2 id="scalability-and-performance">Scalability and performance&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href=https://wiki.postgresql.org/wiki/Operations_cheat_sheet#Scalability_and_performance
+&lt;li>&lt;a href=https://www.postgresql.org/docs/current/populate.html
  
  target=_blank rel="noopener noreferrer"
->Operations cheat sheet&lt;/a>&lt;/li>
-&lt;li>&lt;a href=https://wiki.postgresql.org/wiki/Don%27t_Do_This
+>Scaling in PG&lt;/a>&lt;/li>
+&lt;li>&lt;a href=https://www.postgresql.org/docs/current/populate.html
  
  target=_blank rel="noopener noreferrer"
->Don’t do this&lt;/a>&lt;/li>
+>Bulk import performance aspects&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="data-analysis">Data Analysis&lt;/h2>
 &lt;ul>
@@ -3094,6 +3094,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul>
 &lt;h2 id="database-scaling">Database scaling&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href=https://momjian.us/main/writings/pgsql/hw_selection.pdf
+ 
+ target=_blank rel="noopener noreferrer"
+>Database Hardware Selection&lt;/a>&lt;/li>
 &lt;li>&lt;a href=https://blog.flipkart.tech/scaling-tidb-to-1-million-qps-d556aa6a16ef
  
  target=_blank rel="noopener noreferrer"
