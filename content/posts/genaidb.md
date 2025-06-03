@@ -1,8 +1,8 @@
 ---
-title: "Exploring Google's Gen AI Toolbox for Databases: A New Era of Database Querying"
-date: 2025-03-19T01:00:00+05:30
+title: "Exploring MCP Toolbox for Databases: A New Era of Database Querying"
+date: 2025-06-01T01:00:00+05:30
 draft: false
-tags: [Ollama, Gemini, MCP, LLM, Prompt,Database]
+tags: [Ollama, Gemini, MCP, LLM, Prompt,Databases, postgresql, genai, ]
 ---
 
 
