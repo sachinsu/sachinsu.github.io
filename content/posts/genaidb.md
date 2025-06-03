@@ -10,7 +10,7 @@ tags: [Ollama, Gemini, MCP, LLM, Prompt,Databases, postgresql, genai, ]
 ## Introduction
  
 
-In the ever-evolving landscape of AI and machine learning, Google's [Gen AI Toolbox for Databases](https://googleapis.github.io/genai-toolbox) stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you're setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.
+In the ever-evolving landscape of AI and machine learning, Google's [MCP Toolbox for Databases](https://googleapis.github.io/genai-toolbox) stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you're setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.
 
  
 
