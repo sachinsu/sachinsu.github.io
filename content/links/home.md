@@ -25,7 +25,7 @@ draft: false
   - [NoSQL](/links/nosql/)
 - [Cloud Tech](/links/cloud/)
 - AI/Machine Learning
-  - [Machine Learning](/links/aiml/)
+  - [Generative AI](/links/aiml/)
 - [General Purpose tools](/links/tools/)
   
 #### Must follow Community Sites

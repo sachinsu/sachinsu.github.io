@@ -1,16 +1,17 @@
 ---
-title: "Artificial Intellgence, Machine Learning"
+title: "Generative AI, Machine Learning"
 date: 2020-05-26T14:13:27+05:30
 draft: false
 ---
 
-Useful links related from AI, ML space
+Useful links related from Generative AI, ML space
 
 ## Collections
 
 - [AI Guide by Mozilla](https://ai-guide.future.mozilla.org/)
 - [Collection of resources related to Applied ML](https://github.com/eugeneyan/applied-ml)
 - [List of  for MLOps](https://docs.google.com/spreadsheets/d/1i8BzE4puGQ3dmQueu4LQCcwaqrulgK1Vb-xeFwhy6gY/edit#gid=0)
+- [Prompt Engineering Playbook for Programmers](https://addyo.substack.com/p/the-prompt-engineering-playbook-for)
 
 ## Free courses
 

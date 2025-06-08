@@ -118,4 +118,4 @@ Section covering Business, project/programming perspectives
 
 ## Documentation 
 
-- [Adopting Doc as Code](https://medium.com/pinterest-engineering/adopting-docs-as-code-at-pinterest-4f18ad169c25)
+- [Adopting Doc as Code](https://medium.com/pinterest-engineering/adopting-docs-as-code-at-pinterest-4f18ad1)
