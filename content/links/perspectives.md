@@ -115,3 +115,7 @@ Section covering Business, project/programming perspectives
 
 - [Awesome Software Architecture](https://github.com/mehdihadeli/awesome-software-architecture)
 - [Learning resources for curious programmer](https://github.com/charlax/professional-programming)
+
+## Documentation 
+
+- [Adopting Doc as Code](https://medium.com/pinterest-engineering/adopting-docs-as-code-at-pinterest-4f18ad169c25)
