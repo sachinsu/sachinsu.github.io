@@ -10,6 +10,7 @@ Knowledge base around general database related topics.
 
 ## General Links
 
+- [Which Data Architecture to choose](https://medium.com/academy-team/which-data-architecture-should-i-choose-for-my-workplace-a-data-engineers-approach-f913b71d8ee6)
 - [Prisma's Data Guide - A growing library of articles focused on making databases more approachable. ](https://github.com/prisma/dataguide)
 - [Query optimization guide](https://aiven.co/developers/sql-query-optimization-guide)
 - [Database performance for Developers](https://www.crunchydata.com/blog/demystifying-database-performance-for-developers)
@@ -215,6 +216,7 @@ Knowledge base around general database related topics.
 - [What is delta lake house?](https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html)
 - [Poor man's Data lake with Duckdb](https://dagster.io/blog/duckdb-data-lake)
 - [Data Model for Managing Collaborative Editing of Data](https://www.hytradboi.com/2022/viewing-collaborative-editing-through-a-databases-lens)
+- [Data platform playbook](https://playbook.hackney.gov.uk/Data-Platform-Playbook/architecture-decisions)
 
 ## Dictionary of databases
 

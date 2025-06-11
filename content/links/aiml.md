@@ -8,6 +8,7 @@ Useful links related from Generative AI, ML space
 
 ## Collections
 
+- [Gen AI- Collection of Articles on AI Code Generation and its pros and cons](https://addyo.substack.com)
 - [AI Guide by Mozilla](https://ai-guide.future.mozilla.org/)
 - [Collection of resources related to Applied ML](https://github.com/eugeneyan/applied-ml)
 - [List of  for MLOps](https://docs.google.com/spreadsheets/d/1i8BzE4puGQ3dmQueu4LQCcwaqrulgK1Vb-xeFwhy6gY/edit#gid=0)
