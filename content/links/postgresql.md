@@ -97,6 +97,7 @@ draft: false
 
 ## Interesting Extensions/Products
 
+- [Using duckdb and postgres together](https://motherduck.com/blog/postgres-duckdb-options)
 - [Collection of Postgresql related tools](https://gist.github.com/cpursley/c8fb81fe8a7e5df038158bdfe0f06dbb)
 - [PostgreSql based Message queue](https://github.com/tembo-io/pgmq)
 - [End-to-end machine learning solution](https://postgresml.org/)

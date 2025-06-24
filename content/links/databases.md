@@ -114,6 +114,8 @@ Knowledge base around general database related topics.
 - [DuckDB - Embeddable OLAP DBMS](https://duckdb.org/)
 - [SQL Workbench - run Duckdb on WASM](https://sql-workbench.com/)
 - [DuckDB - Connect and join on external databases](https://duckdb.org/2024/01/26/multi-database-support-in-duckdb.html)
+- [Using duckdb and postgres together](https://motherduck.com/blog/postgres-duckdb-options)
+
 
 
 

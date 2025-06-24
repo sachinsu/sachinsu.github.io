@@ -110,6 +110,7 @@ Section covering Business, project/programming perspectives
 
 - [Checklist for Senior Engineer](https://littleblah.com/post/2019-09-01-senior-engineer-checklist/)
 - [Power of Negative Thinking](https://archive.is/O5Xcn)
+- [How to negotiate your salary package and much more](https://www.complexsystemspodcast.com/episodes/how-to-negotiate-your-salary-package/ )
 
 ## Curated Lists
 
