@@ -1,8 +1,8 @@
-- Architecture and System design decisioning
-        Not the "best possible"  but "least worst"
-        Good Architecture makes it possible to defer the technical decision(s). Maximizes the number of decisions not made.
-        Architects need to adopt lateral thinking. 
-        Architect needs to have a holistic view of each component regarding performance, scaling, high availability,
+- Architecture and System design decisions
+     - Not the "best possible"  but "least worst"
+     - Good Architecture makes it possible to defer the technical decision(s). Maximizes the number of decisions not made.
+     - Architects need to adopt lateral thinking. 
+     - Architect needs to have a holistic view of each component regarding performance, scaling, high availability,
 
 -  Architecture Roadmap,
 
@@ -92,26 +92,26 @@
     - is the delicate art and science of filling the context window with just the right information for the next step. Science because doing this right involves task descriptions and explanations, few shot examples, RAG, related (possibly multimodal) data, tools, state and history, compacting
 
 - Microservices Architecture
-        Why
-            Greater flexibility (Adopt new features fast)
-            Fast  dev cycles , smaller teams and code base
-            Fault isolation
-            Cloud ready
-            Platform and language agnostics
-            Better scalability 
-        Costs/Challenges
-            A major challenge of microservices is the complexity that's caused because the application is a distributed system. Developers need to choose and implement an inter-services communication mechanism. The services must also handle partial failures and unavailability of upstream services.
-            Need to manage transactions across different microservices (also referred to as a distributed transaction). Business operations that update multiple business entities are fairly common.
-            More complexity in comprehensive testing
-            Complex deployment
-            Operations overhead in terms of monitoring. Microservice architecture also has more points of failure due to the increased points of service-to-service communication.
-            Latency due to isolated deployment and additional network overhead
-            Check whether per-service databases fit your application
-            must instrument and monitor the environment so that you can identify bottlenecks, detect and prevent failures, and support diagnostics
-            need to secure access to each service both within the environment and from external applications that consume its APIs
-            asynchronous, message-based communication. Synchronous interservice communication typically reduces the availability of an application. 
+  - Why
+      - Greater flexibility (Adopt new features fast)
+      - Fast  dev cycles , smaller teams and code base
+      - Fault isolation
+      - Cloud ready
+      - Platform and language agnostics
+      - Better scalability 
+  - Costs/Challenges
+       -    A major challenge of microservices is the complexity that's caused because the application is a distributed system. Developers need to choose and implement an inter-services communication mechanism. The services must also handle partial failures and unavailability of upstream services.
+       -    Need to manage transactions across different microservices (also referred to as a distributed transaction). Business operations that update multiple business entities are fairly common.
+       -    More complexity in comprehensive testing
+       -    Complex deployment
+       -    Operations overhead in terms of monitoring. Microservice architecture also has more points of failure due to the increased points of service-to-service communication.
+       -    Latency due to isolated deployment and additional network overhead
+       -    Check whether per-service databases fit your application
+       -    must instrument and monitor the environment so that you can identify bottlenecks, detect and prevent failures, and support diagnostics
+       -    need to secure access to each service both within the environment and from external applications that consume its APIs
+       -    asynchronous, message-based communication. Synchronous interservice communication typically reduces the availability of an application. 
 
-    Services based architecture (Modular Monolith)
+   -  Services based architecture (Modular Monolith)
         Deconstructing a system into a set of complementary services decouples the operation of those pieces from one another. This abstraction helps establish clear relationships between the service, its underlying environment, and the consumers of that service. Creating these clear delineations can help isolate problems, but also allows each piece to scale independently of one another. This sort of service-oriented design for systems is very similar to object-oriented design for programming.
         Identifying services
             One of the criteria could be read vs. write -
@@ -125,12 +125,12 @@
      - Important points while Architecting as per Randy Shoup
        - Application Summary 
             -Who
-                 - Who are the users?
-                 - Who are the developers?
-                 - Who are the stakeholders?
+             - Who are the users?
+             - Who are the developers?
+             - Who are the stakeholders?
            - What     
-               - What does the system do?
-               - What are it's main features?
+             - What does the system do?
+             - What are it's main features?
            - Why
              -  Why is the system needed?
           -  When
@@ -140,7 +140,6 @@
              -  How will the system work?
              -  How many users will there be?
              -  How much data will there be?
-
        - Engineering is about solving problems
        - May not want to start with microservices
        - Prototype the Architecture
@@ -165,7 +164,7 @@
           ▪ Application throughput & response time
           ▪ Warnings & errors
           ▪ Memory use, CPU load, Storage I/O & network I/O, including a way to distinguish platform from network latency
-          -    Common mistakes with observability
+          Common mistakes with observability
           -        Introducing it too late.
           -        Dashboards, unless they are dynamic and allow you to ask questions, are a poor view into software.
           -        SLOs (Service Level Objectives) should be the entry point, not dashboards. 

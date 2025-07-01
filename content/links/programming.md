@@ -61,6 +61,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 ## API Development, Security, Cryptography
 
+- [The Web API Checklist**](https://mathieu.fenniak.net/the-api-checklist/)
 - [Mockoon - Run Mock APIs locally](https://github.com/mockoon/mockoon)
 - [Bruno - Opensource IDE For Exploring and Testing Api's ](https://github.com/usebruno/bruno)
 - [REST API Guidelines from Microsoft](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning)
