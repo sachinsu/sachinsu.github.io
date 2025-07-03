@@ -1,10 +1,65 @@
-- Architecture and System design decisions
-     - Not the "best possible"  but "least worst"
-     - Good Architecture makes it possible to defer the technical decision(s). Maximizes the number of decisions not made.
-     - Architects need to adopt lateral thinking. 
-     - Architect needs to have a holistic view of each component regarding performance, scaling, high availability,
+- Current Experience 
+  - Closed loop EMI Cards Issuance and transaction processing Platform for Large NBFC in India
+       - Implemented Architecture based on Service based, Clean Architecture paradigm on  Microsoft platform.  Oracle 21c RAC (Active-Active) is used as  OLTP data store while EDB PostgreSQL is used for MIS Reporting. REDIS is used for caching and Talend/Airbyte for ETL. Integration with Azure IAM for single sign-on for internal users. 
+       - Infrastructure sizing for on-prem implementation based on load testing for critical services and volume  projections from business.
+       - Worked on improving the throughput of hot Path (e.g. Payment Authorisation for E-commerce Merchants during flash sale) by,
+         - Optimizing SQL Queries
+         - Out of order processing for those tasks (like SMS ec.) that can be delayed or performed in near real time. 
+         - API first driven approach for EMI transaction management..
+         - Industry standard tools and libraries are used for cross-cutting concerns like logging, tracing,  monitoring etc Load testing based validation and verification for fulfilling specific non-functional objectives related to response time and throughput
+  - Data Hub
+    - Platform to offload reporting requirements both near real time and batch from OLTP applications.
+    - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
+  - Multi-tenant EMI Platform
+     - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
+     - Led Technical Architecture discussions with Teams with the aim of addressing critical requirements
+     - Conducted Technology Proof of concepts to validate assumptions
+   - Enterprise level Responsibilities
+     - Technical SME for all platforms built on various tech. stacks like .NET, Java, PHP and databases like   Oracle, PostgreSQL. Evaluation and roll out of automated CI/CD processes across projects.
+     - Creation and Maintenance of Technical Capability Model in terms of Reference Architectures, Best practices,Tools, Assets,Standards, Security Aspects (PCI-DSS Compliance). Leveraging Threat modelling tools for early identification and mitigation.
+     - Overall Ownership of non-functional aspects like scalability, high availability, Maintainability, for all technology platforms. Evaluation of COTS and Open source products, libraries and tools.
+     - Infrastructure Sizing for New Opportunities and customer demos and workshops
+
+- Cloud
+  - Typical Flow (GCP)
+    - User -> Launches web app -> Cloud DNS -> Cloud CDN -> Global Load Balancer -> Cloud Armour -> On-prem or another cloud (If applicable) -> Compute Engine (Managed instance group)(Web server etc.) -> Internal L.B. -> Compute Engine (Managed instance group)(App server etc.) -> Cloud SQL / Fire store / Cloud Storage
+
+  - Cloud vs. on-prem
+    - If your load is quite predictable (i.e., the number of machines you need does not fluctuate wildly), then it’s often cheaper to buy your own machines and run the software on them yourself
+    - If you need a system that you don’t already know how to deploy and operate, then adopting a cloud service is often easier and quicker than learning to manage the system yourself. If you have to hire and train staff specifically to maintain and operate the system, that can get very expensive. You still need an operations team when you’re using the cloud,  but outsourcing the basic system administration can free up your team to focus on higher-level concern
+    - Other salient aspects
+      - Separation of compute and storage (Virtual disk storage)
+      - Specialized services like Object storage (S3/Filestore)
+      - Multi-tenancy - rather than having a separate machine for each customer, data and computation from several different customers are handled on the same shared hardware by the same service 
+    - Some downsides are,
+       -    Lack of specific feature
+       -    Cloud provider's down time
+       -    Change of terms for Service that makes it expensive,
+       -    Data privacy, security concerns
+       -    Operational task are still required like, maintaining the security of an application and the libraries it uses, managing the interactions between your own services, monitoring the load on your services, and tracking down the cause of problems such as performance degradations or outages. 
+     - Cloud migration advantages,
+       - Specific cloud migration principles
+         - Use before reuse
+           -    Design from front-to-back (build consumer-driven APIs that provide the services in a format that the front-ends prefer.)
+           -    Best tool is the one that suits your level
+           -    Understand pricing models and how they fit your usage patterns
+           -    Use automation to reduce cost
+           -    Use transparency to understand and manage cost
+           -    Spend time understanding your own usage patterns
+           -    Read price reduction case studies carefully to see what impacted the price and whether that applies to you
+           -    Acquire resources as needed (compute, storage, networks and databases)
+           -    Convert upfront capital expenditure to operational expenditure (pay as you go)
+           -  Other reasons
+              - Uptime
+              - Velocity - Accelerated Software Delivery via fully managed CI/CD pipelines
+              - Security - Via custom built hardware and offerings like software defined networks, firewalls, Web Application firewalls.
+              - Transparency w.r.t. infra inventory
+      - Some relevant workloads
+        - Data Analytics
+        - Data backup and Archiving 
 
 -  Architecture Roadmap,
+     - **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
 
      | Objective | Notes | Existing Infrastructure | Business Requirement | Technical Requirement | solution Component |
 
@@ -14,9 +69,9 @@
        - Security - Emphasizes maximizing data and workload security, designing for privacy, and aligning with regulatory requirements. Principles include applying security at all layers, automating controls, and protecting data in transit and at rest.
        - Reliability - Principles include testing recovery procedures, automating recovery, and scaling horizontally.
        - Performance Efficiency - Principles include leveraging advanced technologies (e.g., serverless), using data-driven approaches, and promoting experimentation.
-       - Cost Optimization - Concentrates on designing with cost efficiency in mind. Principles include adopting a consumption model, implementing automated controls and alerts, measuring efficiency, and using managed services.
+       - Cost Optimization - Concentrates on designing with cost efficiency in mind. Principles include  adopting a consumption model, implementing automated controls and alerts, measuring efficiency, and using managed services.
        - Documentation - Crucial for cross-functional team communication, alignment, and future decision-making.
-       - Simplicity and Managed Services: Design should be simple. Where feasible, use fully managed GCP services to minimize management overhead, risks, and effort.
+       - Simplicity and Managed Services -  Design should be simple. Where feasible, use fully managed GCP services to minimize management overhead, risks, and effort.
        - Decoupled Architecture: Break down applications and services into smaller, independent components for increased flexibility, independent upgrades, specific security controls, and granular monitoring.
        - Stateless Architecture: Preferred for increased reliability and scalability, as applications can scale quickly with minimal dependencies.
        - Phased Approach/Migration Frameworks: For existing infrastructure, GCP advocates for a phased migration approach (e.g., Assess, Plan, Migrate, Optimize, Govern). This involves detailed discovery and analysis.
@@ -87,518 +142,636 @@
        - Roadmap and Phasing: Defining a migration or implementation roadmap, including pilot projects and iterative deployments.
        - Cost Estimation: Using relevant tools to estimate costs based on the proposed solution.
 
-- Generative AI
-  - Context Engineering 
-    - is the delicate art and science of filling the context window with just the right information for the next step. Science because doing this right involves task descriptions and explanations, few shot examples, RAG, related (possibly multimodal) data, tools, state and history, compacting
+- Architecture, design learnings, 
+  - Design for change
+      - Enforce high cohesion and loose coupling
+      - Encapsulate Domain knowledge
+      - Use asynchronous messaging
+      - Don’t build domain knowledge in gateway
+      - Expose open interfaces
+      - Design and test against service contracts
+         - Contract testing is a technique for testing an integration point by checking each application in isolation to ensure the messages it sends or receives conform to a shared understanding that is documented in a "contract". Contract testing is immediately applicable anywhere where you have two services that need to communicate - such as an API client and a web front-end.
+      - Use fitness functions - a particular type of objective function that is used to summarize…how close a given design solution is to achieving the set aims
+      - Abstract infrastructure (messaging, persistence) away from domain logic
+      - Offload cross-cutting
+      - Deploy services independently
+        - Integrations are #1 risk to stability
+          - Every out of process call can kill system including database calls
+            - Useful patterns - timeouts, circuit breakers, decoupling middleware, test harness
+            - Hunt for resource leaks
+            - Handle traffic surges
+            - Degrade automatically
+            - Shed load
+            - Don’t wait forever
+            - Test with realistic data volumes
+            - Put limits in your APIs
+              - Throttling - Not only about abuse prevention but also resource allocation under constraints (could be financial/technical or business related). Some tenets of throttling systems are,
+                - Clearly distinguish between customer protection and system protection use cases
+                - Integrate closely with auto-scaling infrastructure
+                - Use capacity-based limits rather than static ones where possible
+                - Prioritize established usage patterns over new spikes
+                - Treat throttling as a resource allocation problem, not just an abuse prevention one
+                - Test harnesses to emulate the remote system on the other end of each integration point. Consider building a test harness that substitutes for the remote end of every web services call.
 
-- Microservices Architecture
-  - Why
-      - Greater flexibility (Adopt new features fast)
-      - Fast  dev cycles , smaller teams and code base
-      - Fault isolation
-      - Cloud ready
-      - Platform and language agnostics
-      - Better scalability 
-  - Costs/Challenges
-       -    A major challenge of microservices is the complexity that's caused because the application is a distributed system. Developers need to choose and implement an inter-services communication mechanism. The services must also handle partial failures and unavailability of upstream services.
-       -    Need to manage transactions across different microservices (also referred to as a distributed transaction). Business operations that update multiple business entities are fairly common.
-       -    More complexity in comprehensive testing
-       -    Complex deployment
-       -    Operations overhead in terms of monitoring. Microservice architecture also has more points of failure due to the increased points of service-to-service communication.
-       -    Latency due to isolated deployment and additional network overhead
-       -    Check whether per-service databases fit your application
-       -    must instrument and monitor the environment so that you can identify bottlenecks, detect and prevent failures, and support diagnostics
-       -    need to secure access to each service both within the environment and from external applications that consume its APIs
-       -    asynchronous, message-based communication. Synchronous interservice communication typically reduces the availability of an application. 
+     - Architecture and System design decisions
+       - Not the "best possible" but "least worst"
+       - Good Architecture makes it possible to defer the technical decision(s). Maximizes the number of decisions not made.
+       - Architects need to adopt lateral thinking. 
+       - Architect needs to have a holistic view of each component regarding performance, scaling, high availability.
+ 
+  - Evolvable Architecture 
+       - Guidelines
+          - Reduce needless variability  - Immutable Infrastructure (including Development environment), Pair Programming
+          - Make Decisions Reversible - Blue/green deployments, Feature Toggles
+          - Prefer evolvable over predictable - Use incidental plumbing like message queues, search engines etc. Avoid "wiring" too much to external dependencies by isolating them behind interfaces  .
+            - Controlling the coupling points in an application, especially to external resources, is one of an architect’s key responsibilities.  As an architect, remember that dependencies provide benefits but also impose constraints
+          - Make sacrificial Architecture -
+              - If developers have a project they want to test, building the initial version in the cloud greatly reduces the resources required to release the software. If the project is successful, architects can take the time to build a more suitable architecture. If developers are careful about anti-corruption layers and other evolutionary architecture practices, they can mitigate some of the pains of the migration.
+          - Mitigate External Change
+              - A good start on dependency management models external dependencies using a pull model. For example, set up an internal version-control repository to act as a third-party component store, and treat changes from the outside world as pull requests to that repository. If a beneficial change occurs, allow it into the ecosystem.
+          - Updating libraries versus frameworks
+              -  Libraries are preferred because they introduce less coupling to your application, making them easier to swap out when the technical architecture needs to evolve.
+              -  One reason to treat libraries and frameworks differently comes down to engineering practices. Frameworks include capabilities such as UI, object-relational mapper, scaffolding like model-view-controller, and so on. Because the framework forms the scaffolding for the reminder of the application, all the code in the application is subject to impact by changes to the framework. Many of us have felt this pain viscerally—​any time a team allows a fundamental framework to become outdated by more than two major versions, the effort (and pain) to finally update it is excruciating.
+             -  Update framework dependencies aggressively; update libraries passively.
+          - Version Services internally
+                -  Patterns used,
+                    -  Version Numbering - developers create a new endpoint name, often including the version number, when a breaking change occurs
+                    -  Internal Resolution - callers never change the endpoint—​instead, developers build logic into the endpoint to determine the context of the caller, returning the correct version. The advantage of retaining the name forever is less coupling to specific version numbers in calling applications.
+
+           -  Fitness function driven Architecture,
+                 -  Building a fitness function that governs critical (like Response time, throughput that determine success) capability to help drive design ensures that it stays top of mind as the architect designs other parts.
+                     - Fitness function to measure real performance in production system,
+                       - Calculates the number of incoming calls in production to verify the maximum number of requests that the service needs to support and what would be the auto-scaling factor to guarantee availability with horizontal scaling
+                       - Make new load and concurrency tests using the new number of requests per second
+                       - Monitor the memory and CPU, and define the stress point
+
+
+  - Generative AI
+    - Context Engineering 
+      - is the delicate art and science of filling the context window with just the right information for the next step. Science because doing this right involves task descriptions and explanations, few shot examples, RAG, related (possibly multi-modal) data, tools, state and history, compacting
+
+  - Microservices Architecture
+    - Why
+        - Greater flexibility (Adopt new features fast)
+        - Fast dev cycles, smaller teams and code base
+        - Fault isolation
+        - Cloud ready
+        - Platform and language agnostics
+        - Better scalability 
+    - Costs/Challenges
+         - A major challenge of microservices is the complexity that's caused because the application is a distributed system. Developers need to choose and implement an inter-services communication mechanism. The services must also handle partial failures and unavailability of upstream services.
+         - Need to manage transactions across different microservices (also referred to as a distributed transaction). Business operations that update multiple business entities are fairly common.
+         - More complexity in comprehensive testing
+         - Complex deployment
+         - Operations overhead in terms of monitoring. Microservice architecture also has more points of failure due to the increased points of service-to-service communication.
+         - Latency due to isolated deployment and additional network overhead
+         - Check whether per-service databases fit your application
+         - must instrument and monitor the environment so that you can identify bottlenecks, detect and prevent failures, and support diagnostics
+         - need to secure access to each service both within the environment and from external applications that consume its APIs
+         - asynchronous, message-based communication. Synchronous interservice communication typically reduces the availability of an application. 
 
    -  Services based architecture (Modular Monolith)
-        Deconstructing a system into a set of complementary services decouples the operation of those pieces from one another. This abstraction helps establish clear relationships between the service, its underlying environment, and the consumers of that service. Creating these clear delineations can help isolate problems, but also allows each piece to scale independently of one another. This sort of service-oriented design for systems is very similar to object-oriented design for programming.
-        Identifying services
-            One of the criteria could be read vs. write -
-                Writes are generally expensive than Reads.
-                From Web Server perspective,  Apache or lighttpd typically has an upper limit on the number of simultaneous connections it can maintain (defaults are around 500, but can go much higher) and in high traffic, writes can quickly consume all of those. Since reads can be asynchronous, or take advantage of other performance optimizations like gzip compression or chunked transfer encoding, the web server can switch serve reads faster and switch between clients quickly serving many more requests per second than the max number of connections (with Apache and max connections set to 500, it is not uncommon to serve several thousand read requests per second). Writes, on the other hand, tend to maintain an open connection for the duration for the upload, so uploading a 1MB file could take more than 1 second on most home networks, so that web server could only handle 500 such simultaneous writes.
-                Planning for this sort of bottleneck makes a good case to split out reads and writes of images into their own services. This allows us to scale each of them independently .Finally, this separates future concerns, which would make it easier to troubleshoot and scale a problem like slow reads.
-        DB Rules for Modular monolith services, Modular Monolith Data Isolation (milanjovanovic.tech)
+       -  Deconstructing a system into a set of complementary services decouples the operation of those pieces from one another. This abstraction helps establish clear relationships between the service, its underlying environment, and the consumers of that service. Creating these clear delineations can help isolate problems, but also allows each piece to scale independently of one another. This sort of service-oriented design for systems is very similar to object-oriented design for programming.
+       -  Identifying services
+          -  One of the criteria could be read vs. write 
+             - Writes are generally expensive than Reads.
+             - Web Server perspective, Apache or lighttpd typically has an upper limit on the number of simultaneous connections it can maintain (defaults are around 500, but can go much higher) and in high traffic, writes can quickly consume all of those. Since reads can be asynchronous, or take advantage of other performance optimizations like gzip compression or chunked transfer encoding, the web server can switch serve reads faster and switch between clients quickly serving many more requests per second than the max number of connections (with Apache and max connections set to 500, it is not uncommon to serve several thousand read requests per second). Writes, on the other hand, tend to maintain an open connection for the duration for the upload, so uploading a 1MB file could take more than 1 second on most home networks, so that web server could only handle 500 such simultaneous writes.
+             - Planning for this sort of bottleneck makes a good case to split out reads and writes of images into their own services. This allows us to scale each of them independently .Finally, this separates future concerns, which would make it easier to troubleshoot and scale a problem like slow reads.
+       -   DB Rules for Modular monolith services, Modular Monolith Data Isolation (milanjovanovic.tech)
 
- 
-- Architectural Quantum:  the smallest independently deployable unit containing all necessary components (often including a  database). Decisions about separation often define the boundaries of these quanta.
-     - Important points while Architecting as per Randy Shoup
-       - Application Summary 
-            -Who
-             - Who are the users?
-             - Who are the developers?
-             - Who are the stakeholders?
-           - What     
-             - What does the system do?
-             - What are it's main features?
-           - Why
-             -  Why is the system needed?
-          -  When
-             -  When do the users need and/or want the solution?
-             -  When can the developers be done?
-          -  How
-             -  How will the system work?
-             -  How many users will there be?
-             -  How much data will there be?
-       - Engineering is about solving problems
-       - May not want to start with microservices
-       - Prototype the Architecture
-       - "Just enough" Architecture (Simple, familiar technology)
-       - Focus on core competency and leverage Third party services for Logging/Monitoring/alerting,Authentication, Payments/billing/fraud detection
-       - Modularity Discipline (Use "shared libraries")
-         - Service boundaries match the problem domain
-         - All interactions through published service interface (interface hides implementation detail)
-         - Separate domain logic from I/O
-       - Detailed logging and instrumentation (Understand behaviour, enable diagnosis and recovery)
-       - Continuous delivery (Automated deployment)
-       - Feature flags
-       - A/B Testing
-     - When to re-architect (and if it's Monolith)?
-       - Reduced feature velocity (slow time to market, team can not work independently)
-       - Scalability (Limits of vertical scaling reached)
-       - Need for partial deployment 
-     - Scalability approaches
-       -Technology that scales (Asynchrony, independent systems/services, Events Queue, horizontally scalable persistence) 
-     - Observability
-       - Infrastructure-level metrics
-          ▪ Application throughput & response time
-          ▪ Warnings & errors
-          ▪ Memory use, CPU load, Storage I/O & network I/O, including a way to distinguish platform from network latency
-          Common mistakes with observability
-          -        Introducing it too late.
-          -        Dashboards, unless they are dynamic and allow you to ask questions, are a poor view into software.
-          -        SLOs (Service Level Objectives) should be the entry point, not dashboards. 
-      - App-level metrics
-        - GC, Exceptions, Network Latency
-        - Request tracing using correlation ID , both for incoming and outgoing requests.
-        - Consider an agent as an operations adapter
+    - Architectural Quantum:  the smallest independently deployable unit containing all necessary components (often including a  database). Decisions about separation often define the boundaries of these quanta.
+         - Important points while Architecting as per Randy Shoup
+           - Application Summary 
+                -Who
+                 - Who are the users?
+                 - Who are the developers?
+                 - Who are the stakeholders?
+               - What     
+                 - What does the system do?
+                 - What are it's main features?
+               - Why
+                 -  Why is the system needed?
+              -  When
+                 -  When do the users need and/or want the solution?
+                 -  When can the developers be done?
+              -  How
+                 -  How will the system work?
+                 -  How many users will there be?
+                 -  How much data will there be?
+           - Engineering is about solving problems
+           - May not want to start with microservices
+           - Prototype the Architecture
+           - "Just enough" Architecture (Simple, familiar technology)
+           - Focus on core competency and leverage Third party services for Logging/Monitoring/alerting,Authentication, Payments/billing/fraud detection
+           - Modularity Discipline (Use "shared libraries")
+             - Service boundaries match the problem domain
+             - All interactions through published service interface (interface hides implementation detail)
+             - Separate domain logic from I/O
+           - Detailed logging and instrumentation (Understand behaviour, enable diagnosis and recovery)
+           - Continuous delivery (Automated deployment)
+           - Feature flags
+           - A/B Testing
+         - When to re-architect (and if it's Monolith)?
+           - Reduced feature velocity (slow time to market, team can not work independently)
+           - Scalability (Limits of vertical scaling reached)
+           - Need for partial deployment 
+         - Scalability approaches
+           -Technology that scales (Asynchrony, independent systems/services, Events Queue, horizontally scalable persistence) 
+         - Observability
+           - Infrastructure-level metrics
+              ▪ Application throughput & response time
+              ▪ Warnings & errors
+              ▪ Memory use, CPU load, Storage I/O & network I/O, including a way to distinguish platform from network latency
+              - Common mistakes with observability
+                - Introducing it too late.
+                - Dashboards, unless they are dynamic and allow you to ask questions, are a poor view into software.
+                - SLOs (Service Level Objectives) should be the entry point, not dashboards. 
+            - App-level metrics
+              - GC, Exceptions, Network Latency
+              - Request tracing using correlation ID , both for incoming and outgoing requests.
+              - Consider an agent as an operations adapter
+        - Security
+            Threat modelling is a technique that applies framework (e.g. STRIDE) to a system basis data-flow within it to find potential security issues. It is a iterative to process to find and fix issues that begins along with design of the application. Excellent Criteria for Identification of Learn 
 
-    - Security
-        Threat modelling is a technique that applies framework (e.g. STRIDE) to a system basis data-flow within it to find potential security issues. It is a iterative to process to find and fix issues that begins along with design of the application. Excellent source at Threat Modeling Phases - Training | Microsoft Learn 
+      - Criteria for Identification of component/service:
+         - Cohesion / Single Responsibility Principle (SRP):
+            - Criterion: Does the logic represent a singe, well-defined responsibility or concept? Does it all relate to one primary purpose?
+            - Evaluation: Highly cohesive logic (focused on one task) is a strong candidate for separation. If a potential component does many unrelated things, it might need further decomposition. Group things together that change together for the same reasons.
+            - Goal: Improve clarity, maintainability, and testability by ensuring components have a clear focus.
+         - Volatility / Rate and Reason for Change:
+           -  Criterion: Is this logic expected to change frequently? Does it change for different reasons or at a different cadence than the surrounding logic?
+           -  Evaluation: Logic that changes often, especially independently of other parts, benefits from separation. This isolates the impact of changes, reducing the risk of breaking unrelated functionality.
+           -  Goal: Increase system stability, reduce regression risks, facilitate faster updates to volatile parts.
+          - Reusability:
+           -  Criterion: Is this logic needed in multiple places within the current system, or potentially by other systems in the future?
+           -  Evaluation: If the logic has clear potential for reuse, separating it into a well-defined component (like a library or service) avoids duplication (DRY - Don't Repeat Yourself).
+           -  Goal: Promote code reuse, consistency, and reduce maintenance overhead.
+         - Scalability Requirements:
+           -  Criterion: Does this specific piece of logic have significantly different scaling needs (e.g., much higher throughput, different load patterns) compared to the rest of the system?
+           -  Evaluation: If a specific activity is a performance bottleneck or needs to scale independently, separating it (often as a distinct service) allows targeted scaling (e.g., adding more instances just for that component).
+           -  Goal: Optimize resource utilization, improve performance and responsiveness under load.
+         - Fault Isolation / Availability Requirements:
+           -  Criterion: If this logic fails, should it impact the availability of the entire system? Is it critical, or can the system function in a degraded state without it?
+           -  Evaluation: Separating logic into components (especially services) can create fault isolation boundaries. The failure of one component is less likely to cascade and bring down others.
+           -  Goal: Improve overall system resilience and availability.
+         - Security Boundaries:
+              Criterion: Does this logic handle sensitive data or operations that require different or stricter security controls than other parts of the system?
+              Evaluation: Separation allows you to create a distinct security perimeter around the component, applying specific authentication, authorization, and auditing rules.
+              Goal: Reduce the attack surface, enforce security policies more effectively, aid compliance.
+         - Independent Deployability:
+              Criterion: Is there a business or operational need to deploy updates to this logic independently of the rest of the system?
+              Evaluation: Separation (particularly into independently deployable units like microservices) allows for faster release cycles and reduces the scope and risk of deployments.
+              Goal: Increase deployment frequency, reduce lead time for changes, enable CI/CD practices.
+         - Team Autonomy / Organizational Structure (Conway's Law):
+              Criterion: Can a dedicated team reasonably own the development, testing, deployment, and operation of this logic?
+              Evaluation: Aligning component boundaries with team structures can improve focus, ownership, and parallel development speed. (Conway's Law suggests systems often mirror the communication structures of the organizations that build them).
+              Goal: Enable parallel development, foster ownership, improve team efficiency.
+         - Technology or Infrastructure Affinity:
+              Criterion: Does this logic have specific technology dependencies (e.g., a particular library, framework, database type, hardware like GPUs) that you don't want to impose on the entire system?
+              Evaluation: Separation allows isolating these specific dependencies, giving more flexibility in choosing technologies for different parts of the system.
+              Goal: Prevent technology lock-in, allow use of best-fit technology for specific tasks, simplify dependency management.
+         - Bounded Context (Domain-Driven Design):
+              Criterion: Does the logic belong to a distinct subdomain within the overall business domain, potentially with its own ubiquitous language and model?
+              Evaluation: Aligning component boundaries with DDD Bounded Contexts helps maintain conceptual integrity and clarity within complex domains.
+              Goal: Create clearer domain models, reduce ambiguity, align software structure with business structure.
+         - Complexity Management:
+          -   Criterion: Is the logic itself complex? Would separating it make both the new component and the remaining system easier to understand and reason about?
+          -   Evaluation: Sometimes separation is justified simply to break down a large, complex problem into smaller, more manageable pieces.
+          -   Goal: Reduce cognitive load for developers, improve understandability.
+
+         - Important Considerations:
+          -  Trade-offs: Separation is not free. It can introduce new complexities like network latency (for services), data consistency challenges, more complex deployment orchestration, and the need for inter-component communication protocols.
+          -  Granularity: The "size" of the component matters. The criteria apply differently when deciding between classes versus microservices. The cost/benefit ratio changes with granularity.
+          -  Start Simple: Don't over-decompose initially. It's often easier to combine components later than to split them prematurely.
+
+      Evaluate these criteria based on the specific context, priorities, and constraints of your project. The decision often involves balancing several of these factors
+
+        -  Factors to decide on communication style i.e. synchronous or asynchronous
+          -  Synchronous Communication (e.g., REST API calls, gRPC):
+                Characteristics: The caller sends a request and blocks (waits) until it receives a response (or timeout/error).
+                Pros:
+                    Simpler programming model for request-response interactions.
+                    Immediate feedback to the caller (success, failure, data).
+                    Easier to reason about the immediate flow of control.
+                Cons:
+                    Temporal Coupling: The caller and receiver must both be available simultaneously. If the receiver is down or slow, the caller is blocked or fails.
+                    Reduced Resilience: Failures can cascade easily. A slow downstream service can exhaust resources (threads, connections) in upstream services.
+                    Potential Performance Bottlenecks: Long-running synchronous calls can hold up callers.
+                When to Consider:
+                    Queries (read operations) where the user/caller needs an immediate answer.
+                    Commands where immediate confirmation of acceptance/initial validation is required.
+                    Interactions within a single architectural quantum where high consistency and immediate feedback are needed, and components are deployed together.
+          -  Asynchronous Communication (e.g., Message Queues, Event Streams):
+                Characteristics: The caller sends a message/event to an intermediary (like a queue or broker) and does not wait for it to be processed.5 The receiver processes the message independently when it's ready.
+                Pros:
+                    Temporal Decoupling: Sender and receiver don't need to be available simultaneously. Improves system resilience and availability.
+                    Increased Scalability: Receivers can process messages at their own pace; load spikes can be absorbed by the queue. Senders aren't blocked.
+                    Enhanced Resilience: Failure of a receiver doesn't immediately impact the sender. Messages can often be retried.
+                    Flexibility: Easy to add new consumers for the same message/event later.
+                Cons:
+                    Increased Complexity: Requires message broker infrastructure. Error handling, monitoring, and debugging become more complex (e.g., handling poison messages, ensuring idempotency, distributed tracing).
+                    Eventual Consistency: The caller doesn't get immediate confirmation that the action is fully complete, only that the request was accepted. Data consistency across services takes time.
+                    Different programming model (event-driven).
+                When to Consider:
+                    Commands or events where immediate processing isn't strictly required.
+                    Workflows spanning multiple services/domains.
+                    Notifications or triggering side effects.
+                    Improving system resilience and decoupling critical pathways.
+                    Situations where eventual consistency is acceptable./
+
+        - Non-functional aspects
+          -  Performance - using response time percentiles, using throughput metrics
+                Response time - The elapsed time from the moment when a user makes a request until they receive the requested answer.
+                    The response time is what the client sees; it includes all delays incurred anywhere in the system.
+                    The service time is the duration for which the service is actively processing the user request.
+                    Percentiles are often used in service level objectives (SLOs) and service level agreements (SLAs) as ways of defining the expected performance and availability of a service 
+          -     Throughput - The number of requests per second, or the data volume per second, that the system is processing. For a given allocation of hardware resources, there is a maximum throughput that can be handled.
+          -  Scalability is a closely related concept to performance i.e. ensuring performance stays the same when the load grows. Involves breaking a task down into smaller parts that can operate independently
+          -  Reliability - Using fault tolerance techniques, which allows a system to continue providing its service even if some component (e.g., a disk, a machine, or another service) is faulty. Another aspect of achieving reliability is to build resilience against humans making mistakes, and we saw blameless postmortems as a technique for learning from incidents.
+          -  Maintainability - Making it easy to evolve an application’s functionality over time.
+          -  Operability - Make it easy for the organization to keep the system running smoothly.
+                Allowing monitoring tools to check the system’s key metrics, and supporting observability tools
+                Avoiding dependency on individual machines
+                Good documentation and easy-to-understand operations model
+                Self-healing, good default behaviour
+         -   Evolvability - Make it easy for engineers to make changes to the system in the future, adapting it and extending it for unanticipated use cases as requirements change.
+         -   Simplicity
+                Abstraction -  A good abstraction can hide a great deal of implementation detail behind a clean, simple-to-understand façade. A good abstraction can also be used for a wide range of different applications. 
+
+    - Distributed Systems 
+          ○ What is a Distributed System?
+               · It runs on multiple processes/servers
+               · The number of servers in a cluster can vary from as few as three servers to a few thousand servers
+               · It manages data. So these are inherently 'stateful' systems
+               · Process communicate by message passing
+               · It tolerates partial failures.
+          ○ Gist of 12 factors 
+               · Services should be simple to build, test and deploy
+               · Lightweight (run fast, use less RAM) 
+               · Reproducible results on all environments like dev, test, prod etc.
+          ○ Stability patterns for distributed Architecture 
+               ○ Application Resilience 
+                    § RPO	How much data can you afford to lose and recreate?
+                    RTO	How quickly must you recover? What is the cost of downtime?
+               ○ Integrations are #1 risk to stability 
+                    § Every out of process call can kill system including database calls
+                    § Useful patterns - timeouts, circuit breakers, decoupling middleware, test harness
+               ○ Hunt for resource leaks 
+               ○ Handle traffic surges 
+                    § Degrade automatically
+                    § Shed load
+                    § Don’t wait forever 
+               ○ Test with realistic data volumes
+               ○ Put limits in your APIs
+               ○ Throttling - Not only about abuse prevention but also resource allocation under constraints (could be financial/technical or business related). Some tenets of throttling systems are,
+                    · Clearly distinguish between customer protection and system protection use cases
+                    · Integrate closely with auto-scaling infrastructure
+                    · Use capacity-based limits rather than static ones where possible
+                    · Prioritize established usage patterns over new spikes
+                    · Treat throttling as a resource allocation problem, not just an abuse prevention one
+               ○ Test harnesses to emulate the remote system on the other end of each integration point. 
+               Consider building a test harness that substitutes for the remote end of every web services call. 
+               A test harnesses runs as a separate server, so it is not obliged to conform to any interface. It
+               can provoke network errors, protocol errors, or application-level errors.
+          ○ Disaster recovery 
+               - Design according to your recovery goals (RPO and RTO)
+               - DR Patterns 
+                    ○ Cold - DR Site needs to be brought up. Typically, DR Site only has cheap storage as target for data backup and nothing else.
+                    ○ Warm - DR Site is ready but not automatically up. e.g. Batch processing workloads (i.e. short pause before  processing can be continued)
+                    ○ Hot - Switch to DR is almost immediate when needed. e.g. E-commerce (transactional part). Typically involves Hot HA across primary and DR site. 
+          ○ Capacity management is an ongoing process of monitoring and optimization. It involves many dimensions and opposing dynamics. Software changes, traffic changes, and even marketing campaigns can all cause different forces to dominate your capacity. Working with capacity requires a big-picture view of the system as a whole. Capacity is fundamentally a measure of how much revenue the system can generate during a given period of time.
+               - Place safety limits on everything: timeouts, maximum memory consumption, maximum number of connections, and so on.
+               - Try to do the most work when nobody is waiting for it
+               - Monitor capacity continuously. Each application release can affect scalability and performance. Changes in user demand or traffic patterns change the system’s workload
+          ○ Fallacies of Distributed Computing
+               · Effects of Fallacies of distributed computing 
+                    □ App needs error handling/retries 
+                    □ App should minimize # of requests 
+                    □ App should send small payloads
+                    □ Must secure data and authenticate requests 
+                    □ Changes affect latency, bandwidth and endpoints 
+                    □ Changes affect ability to reach destination 
+                    □ Network affects reliability , latency and bandwidth
+               · In-process call vs. network request
+                    □ Performance: Worse, increases network congestion, unpredictable timing
+                    □ Unreliable: Requires retries, timeouts, & circuit breakers
+                    □ Server code must be idempotent
+                    □ Security: Requires authentication, authorization, & encryption
+                    □ Required in VNET for compliance or running 3rd-party (untrusted) code
+                    □ Diagnostics: network issues, perf counters/events/logs, causality/call stacks. NOTE: Servers’ clocks are not absolutely synchronized
+          ○ Understanding distributed systems through patterns 
+               · Write-ahead log - to sync multiple data stores while performing update one at a time in atomic way. 
+               · Leaders and followers - To achieve fault tolerance in systems that manage data, the data needs to be replicated on multiple servers. In this context , one of the nodes is marked as the leader, and the others are considered followers. The leader is responsible for taking decisions on behalf of the entire cluster and propagating the decisions to all the other servers. It deals with situation of leader failing by means of heartbeat (a regular message sent between nodes).
+                    □ Generational clock - number that increments with each leadership election.a simple technique used to determine ordering of events across a set of processes, without depending on a system clock. Each process maintains an integer counter, which is incremented after every action the process performs. Each process also sends this integer to other processes along with the messages processes exchange. The process receiving the message sets its integer counter by choosing the maximum between its own counter and the integer value of the message.
+                    □ High water mark - Maintained by the leader and is equal to index of latest update to be committed.
+              - Singular update queue - Allowing client threads to write entries onto  a queue. A separate  processing thread reads entries from this queue and carries out the processing in order. 
+              - Segmented log - Single log is split into multiple segments. Log files are rolled after a specified size limit. This is to avoid issues with single log file getting too large.
+              - Low water mark -  A mechanism to tell logging machinery which portion of the log can be safely discarded. Different types include snapshot based , time based
+              - Heartbeat - Timely detection of server failures is important for taking corrective actions. Heartbeat involves periodically sending a request to all other nodes to check liveness. Typically duration is set at higher value than time for network round trip between servers. -Other messages between servers can also serve the purpose of heartbeats.
+                - Consensus based systems (Raft/Zookeeper) - Leader server sends heartbeats to all follower nodes.
+                - Large clusters, gossip based  
+              - Majority Quorum -  Need to ensure that in the event of crash , results of operations are available to all clients. In a cluster, how many servers are needed to confirm to leader that  operation was successful. To balance overall system performance and integrity ,cluster agrees that operation is deemed successful if majority of nodes acknowledge it. For a cluster of n nodes, the quorum is n / 2 + 1.The need for a quorum indicates how many failures can be tolerated—which is the size of the cluster minus the quorum. A cluster of five nodes can tolerate two of them failing. In general, if we want to tolerate f failures we need a cluster size of 2f + 1.Quoram size is adjusted as per proportion of expected read vs. write volumes etc.
+              - Paxos - phases
+                   □ Prepare phase: Establish the latest Generation Clock and gather any already accepted values
+                   □ Accept phase: Propose a value for this generation for replicas to accept
+                   □ Commit phase: Let all the replicas know that a value has been chosen. 
+              - Idempotent receiver - Identify requests from clients uniquely so you can ignore duplicate requests when client retries.
+
+    - Asynchronicity, Queues
+         - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for an outcome.
+         - asynchronous messaging infrastructure does,
+             * Decoupling: A system handling work behind a messaging infrastructure can be running at capacity and yet not be overwhelmed and   can even be down while the messaging infrastructure still accepts   messages on its behalf.
+             * Delivery: You can entrust over your messages and the   messaging system will try its best not lose them. It will then attempt   to deliver them to the right parties and will retry as often as necessary.
+             * Buffering: A messaging infrastructure is generally great at   accepting bursts of messages at once and organizing them for later   retrieval. The retrieval can then occur at the pace that your   application can handle. That is also called load-leveling.
+             * Network-Bridging: Messaging infrastructures can often be   attached to multiple networks, allowing information to pass between   applications in those networks without there being IP-level connectivity   between them.
+         - Queues are One of the most fundamental and most important data  structures in computing
+             - Sequence of records , commonly ordered by moment of arrival
+             - Write/add at the bottom , read/consume at the top
+             - Consumed records are removed
+             - Length of queue can always be read
+         - Characteristics of Message queues
+             - Accepts, stores and makes message available for consumption
+             - Queue individually manages lifecycle of each message
+             - Each message is exclusively acquired by one consumer
+             - The queue length can be queried
+             - Queues do not improve end-to-end latency
+             - Queues do not improve mean throughput
+             - Queues do not provide total event ordering
+             - Queues can offer at-most-once or at-least-once delivery
+             - Queues do improve burst throughput
+             - Distributed queues also improve fault tolerance (if they don’t lose data)
+             - Every queue is a place for things to go horribly, horribly wrong
+         - Kafka is not a "message queue"
+             - Messages are acquired by consumer groups
+             - consumer groups can query topic back and forth.
+             - Its event streaming engine
+             - Use cases
+               - Load leveling - allows a business process to handle   transactions at optimal capacity use and without getting overwhelmed.Spiky loads are buffered by the queue until the processor   can handle them .
+               - Discrete event router - Push style distribution of   discrete events to serverless workloads or other messaging infrastructures (Azure event grid)
+               - Queue pub/sub broker - Pull-style, queue based transfer   of  jobs (RabbitMQ)
+               - Event Stream engine - Partitioned, high volume,   sequential recording and unlimited pull style re-reads of event streams.   (kafka, pulsar)
+               - Event stream aggregator - Stateful processing of event   streams yielding event streams (Apache Samza, Apache Flink)
+
+- Data Architecture
+  - FLAIR data principles
+         -  Findable - The ability to view which data assets are available, access metadata and other attributes related to governance and compliance
+         -  Lineage - The ability to find data origin, trace data back, understand and visualize data as it flows through data sources
+         -  Accessibility - Ask for Security credentials while accessing data asset. Networking infrastructure to facilitate efficient access
+         -  Interoperability - Using format acceptable to most internal processing systems
+         -  Reusability - Data  is part of known schema.
+  - Aspects
+    - Property                 OLTP                                             OLAP 
+     Main read pattern        Point queries (fetch individual records by key)   Aggregate over large number of records
+
+     Main write pattern       Create, update, and delete individual records     Bulk import (ETL) or event stream
+     
+     Human user example       End user of web/mobile application                Internal analyst, for decision support
+     
+     Machine use example      Checking if an action is authorized               Detecting fraud/abuse patterns
+     
+     Type of queries          Fixed set of queries, predefined by application   arbitrary queries by analyst
+
+     State of data            Latest state of data (current point in time)      History of events that happened over time
+
+     - Data/Database
+        - Aggregate  orientation  is  the  preference  to  operate  on  data  that  is  related  and  has  a complex  data  structure.
+        - Identify Data Domains - Data domain is logical/physical segregation of database objects related to a particular domain e.g. customer, Survey and so on.
+        - Why Disintegrate Operational Data? 
+          - Change control - How many services are impacted by a database table change?
+          - Connection Mgmt. - Can my database handle the connections needed from multiple distributed services?
+            - Connection quota per service approach or using connection pooler like pgBouncer. It is recommended to start out with the even distribution approach and creating fitness  functions  to  measure  the  concurrent  connection  usage  for  each  service.  We also  recommend  keeping  the  connection  quota  values  in  an  external  configuration server  (or  service)  so  that  the  values  can  be  easily  adjusted  either  manually  or  pro‐grammatically through simple machine learning algorithms. This technique not only helps  mitigate  connection  saturation  risk,  but  also  properly  balances  available  data‐base connections between distributed services to ensure that no idle connections are wasted.
+         - Scalability - Can the database scale to meet the demands of the services accessing it?
+         - Fault Tolerance - How many services are impacted by a database crash or maintenance downtime?
+         - when sharing a sin‐gle  database,  overall  fault  tolerance  is  low  because  if  the  database  goes  down,  all services become nonoperational.
+         - Architectural Quanta - Is  a  single  shared  database  forcing  me  into  an  undesirable  single  architecture quantum?
+         - Database type Optimization - Can I optimize my data by using multiple database types?
+        - Drivers for integrating the data 
+          - Data relationships - Are  there  foreign  keys,  triggers,  or  views  that  form  close  relationships  between the tables?
+          - Database transactions - Is a single transactional unit of work necessary to ensure data integrity and consistency?
+
+  - Data Architecture best practices
+    -   Understanding Actual data access patterns of the Application
+        - Partitioning of the tables
+        - Routine archival and purging
+        - OLTP schema is not good for data warehousing
+        - Decouple pipeline between ingestion, storage, processing and insights for increased fault tolerance
+    -   Things to consider while determining tools
+        - Structure of data
+        - Maximum acceptable latency
+        - Minimum acceptable throughput
+        - Typical access patterns of end-users
+    -   Things to consider for Data Ingestion
+        - Structure of Data
+        - How quickly does new data needs to be available for querying?
+        - What is the size of data ingest?
+        - What is total volume and growth rate?
+        - What the cost will be to store and query the data in any particular location
+
+  - Questionnaire for Architecture Design Session  for Data Warehouse project,
+     -  Is your business using the cloud?
+     -  Is the data architecture you’re considering a new solution or a /ration?
+     -  What are the skill sets of the engineers?
+     -  Will you use nonrelational data?
+     -  How much data do you need to store?
+     -  Will you have streaming data?
+     -  Will you use dashboards and/or ad-hoc queries?
+     -  Will you use batch or interactive queries?
+     -  Are their service level agreements (SLA) for performance of reports?
+     -  Will the data be used for predictive analytics or ML Models?
+     -  HA and DR Requirements
+     -  Is MDM needed? (Master  data  management  (MDM)  involves  creating  a  single  master  record  foreach  person,  place,  or  thing  in  a  business,  gathered  from  across  internal  and external data sources and applications. These master records can then be used to build more accurate reports, dashboards, queries, and machine learning models.)
+     -  Are there any security limitations with storing data in the cloud
+     -  Does this solution require 24/7 client access?
+     -  How many concurrent users will be accessing the solution at peak times? And how many on average?
+     -  Skill level of end user?
+     -  Budget?
+     -  Planned time line
+     -  Is the source data on cloud or on-prem?
+     -  Volume of data to be imported every day
+     -  Current pain points
+     -  Third-party or Open source tools?
+     -  Security requirements? Data Sovereignty?
+
+    - Operational systems consist of the backend services and data infrastructure where data is created, for example by serving external users. Here, the application code both reads and modifies the data in its databases, based on the actions performed by the users.
+    - Analytical systems serve the needs of business analysts and data scientists. They contain a read-only copy of the data from the operational systems, and they are optimized for the types of data processing that are needed for analytics.
+          data lake: a centralized data repository that holds a copy of any data that might be useful for analysis, obtained from operational systems via ETL processes
+          DevOps
+              Automation—preferring repeatable processes over manual one-off jobs,
+              preferring ephemeral virtual machines and services over long running servers,
+              enabling frequent application updates,
+              learning from incidents, and
+              preserving the organization’s knowledge about the system, even as individual people come and go
+
+- General Architecture build Guidelines
+  - Logging rules
+     - ERROR: "your code is really broken"
+     - WARNING: "your code is broken, but only in a subtle way that will bite you later"
+     - INFO: "irrelevant trivia"
+     - DEBUG: "information that would help you understand what's going on if you had enabled debug logging in production which you didn't"
+     - INFO Level is for business while DEBUG is for developers
+     - Log INFO after the operation is over and not before
+     - Distinguish between WARNING (Typically can be retried) and error
+     - While Logging, ask questions like,
+         - Is this log really needed? does it rely important information I couldn’t get from the other logs in the same flow?
+         - Am I going to log an object that can be huge on production? If so, can I just log a few metrics of that objects instead? for example, it’s length, or handpick a few important attribute to log.
+         - Does the information I am about to log will help me to debug/understand the flow?
+     - Alternative use of Log levels
+         - ERROR: Parts of the flow failed, we want to send alerts to our on-call for this failures.
+         - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
+         - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
+         - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
+
+    - Web Application Monitoring
+         - Metrics to observe for Web Applications
+             - Response Time p50, p90, p99, sum, avg
+             - Throughput by HTTP status
+             - Worker Utilization
+             - Request Queuing Time
+             - Service calls
+             - Database(s), caches, internal services, third-party APIs, ..
+             - Enqueued jobs are important!
+             - Circuit Breaker tripping
+             - Errors, throughput, latency p50, p90, p99
+             - Throttling
+             - Cache hits and misses %
+             - CPU and Memory Utilization
+             - Exception counts
+
+         - Metrics to observe for Web Applications
+             - Job Backend (e.g. Sidekiq, Celery, Bull, ..)
+             - Job Execution Time p50, p90, p99, sum, avg
+             - Throughput by Job Status {error, success, retry}
+             - Worker Utilization
+             - Time in Queue
+             - Queue Sizes
+             - Don’t forget scheduled jobs and retries!
+             - Service calls p50, p90, p99, count, by type
+             - Throttling
+             - CPU and Memory Utilization
+             - Exception counts
+         - Relevant Metrics should be available to slice by endpoint or job,
+    tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
+         - In absense of observability setup, start with logs.
+         - Key Non-functional aspects of a Payments System
+             - Reliability and fauly tolerance
+             - Reconciliation
+         - Non relational databases are good for below requirements,
+             - Application requires super-low latency
+             - Data is unstructured or no relational data
+             - Only need to serialize/de-serialize data
+             - Store massive amount of data
+
+   - Approach for Architecture building (Monolith to Service based Migration)
+        - There must be business drivers to go for Service based Architecture
+          - Availability
+          - Scalability
+          - Separation of Concerns (Reporting functionality , reporting load)
+          - Agility (faster implementation of changes)
+          - Testability
+          - Better and faster deployability
+
+        - Architectural  quantum  is  defined  as  an  independently deployable artifact with high functional cohesion, high static coupling, and synchro‐nous  dynamic  coupling
+
+        - Application 
+          - High cohesion, low coupling - "Things that change together should stay together" 
+          - logically  group  components  together (those performing some sort of related functionality)  so  that  more  coarse-grained domain services can be created when breaking up an application.
+          - a component  as   a   building   block   of   the   application   that   has   a   well-defined   role   and responsibility  in  the  system  and  a  well-defined  set  of  operations.
+          - Typical Namespace composition  can be "Application.Domain.SubDomain.Component.Class".
+          - Infrastructure Cross-cutting functionality is operational in nature and common to all processes (like logging, metrics, security)  but there may exist some domain functionality that can be shared across some processes.Examples of Infrastructure related Cross cutting/common functions are logging, security, utilities, formatters, converters, extractors, auditing, monitoring. 
+          - Identify and Size Components 
+            - analyze  the incoming  and  outgoing  dependencies  (coupling)  between  components  to  determine what  the  resulting  service  dependency  graph  might  look  like  after  breaking  up  the monolithic application. This is not individual class dependencies within a component(i.e. across namespaces). A component dependency is formed when a class from one component (namespace) interacts with a class from another component (namespace). A monolithic application with too many component dependencies is not feasible to break apart. component  coupling  is  one  of  the  most  significant factors in determining the overall success (and feasibility) of a monolithic migration effort. Both afferent (incoming) and efferent (Outgoing) coupling should summed up.
+
+            - One metric that could be used is calculating  the  total  number  of  statements  within  a given  component  (the  sum  of  statements  within  all  source  files  contained  within  a namespace  or  directory). 
+                -  A  statement  is  a  single  complete  action  performed  in  the source  code,  usually  terminated  by  a  special  character  (such  as  a  semicolon  in  languages such as Java, C, C++, C#, Go, and JavaScript. Having  a  relatively  consistent  component  size  within  an  application  is  important.Generally speaking, the size of components in an application should fall between one to two standard deviations from the average (or mean) component size.
+            - Additional factors for Service Scoping  
+                - Aspects to identify service boundaries 
+                  - Business functionality groups - Mimicking existing business communication hierarchy
+                  - Transactional Boundaries - Check for transactional boundaries adhered to by Business 
+                  - Deployment goals - Partition on the basis of, 
+                    - Release frequency
+                    - Operational Characteristics (e.g. Scalability)
+                - Service scope and function - Is the service doing too many unrelated things?
+                - Code volatility - Are changes isolated to only one part of the service?
+                - Scalability and throughput - Do parts of the service need to scale differently?
+                - Fault tolerance - Are there errors that cause critical functions to fail within the service?
+                - Security - Do some parts of the service need higher security levels than others?
+                - Extensibility -  Is the service always expanding to add new contexts?
+                - Cohesion - the degree and manner in which the operations correlate.
+                - Over performance and responsiveness - if  the  functionalities  are  tightly      coupled  and  dependent  on  one another then its better to keep service together. A good rule of thumb is to take into consideration  the  number  of  requests  that  require  multiple  services  to  communicate with  one  another,  also  taking  into  account  the  criticality  of  those  requests  requiring interservice  communication.  For  example,  if  30%  of  the  requests  require  a  workflow between  services  to  complete  the  request  and  70%  are  purely  atomic  (dedicated  to only  one  service  without  the  need  for  any  additional  communication),  then  it  might be  OK  to  keep  the  services  separate.
+                - Code volatility - the rate at which the source code changes—is another good driver for breaking a service into smaller ones.
+                - Scalability and throughput - The  scalability  demands  of  different  functions  of  a  service  can  be  objectively  measured  to  qualify  whether  a  service  should  be  broken  apart.
+                - Fault Tolerance - describes the ability of an application or functionality within a particular domain to continue to operate, even though a fatal crash occurs (such as an out-of-memory   condition).
+                - Security - Separation of Service based on Security needs of parts.
+                - Extensibility - the  ability to add additional functionality as the service context grows.
+                - Database Transactions - Is an ACID transaction required between separate services? if  having  a  single-unit-of-work  ACID  transaction  is required from a business perspective, these services should be consolidated into a single service.If data integrity and data consistency are important or critical to an operation, it might be wise to consider putting those services back together.
+                - Workflow and Choreography - Do services need to talk to one another? Shared code: Do services need to share code among one another? Database relationships: Although a service can be bro‐ken apart, can the data it uses be broken apart as well? Too much workflow (Service to service communication) impacts overall performance and responsiveness
+          - Functional Decomposition Approach - Identify % Codebase dedicated to a specific component or business task (e.g. Trouble Ticket component  containing  22%  of  the  codebase  that  is  responsible  for ticket creation, assignment, routing, and completion). If  no  clear  subdomains  exist within a large component, then leave the component as is.
+  - Fitness functions 
+      - All namespaces under <root namespace node> should be restricted to <listof domains>
+      - All components in <some domain service> should start with the same namespace
+      - Maintain component inventory - It’s used to alert  architect of components that might have been added or removed by the development team. Identifying new or removed components is not only critical for this pattern, but for the other decomposition patterns as well
+      - No component shall exceed <some percent> of the overall codebase - identifies  components  that  exceed  a  given  threshold  in  terms  of  the percentage  of  overall  source  code  represented  by  that  component,  and  raise alert.
+      - No component shall exceed <some number of standard deviations> from the mean component size - identifies  components  that  exceed  a  given  threshold  in  terms  of  the number  of  standard  deviations  from  the  mean  of  all  component  sizes  (based  on  the total number of statements in the component), and raises alert.
+      -make sure no  component  has  “too  many”  dependencies,  and  to  restrict  certain  components from  being  coupled  to  other  components
+      - No component shall have more than <some number> of total dependencies
+      - <some component> should not have a dependency on <anothercomponent>
 
 
-• Reasons to Separate (Create a distinct component/service):
+  - Template for "Design Document"
+       - Title : Title of the document
+       - Date: Date of last revision
+       - Author(s)/Reviewer(s)/Approver(s)
+       - Revision Number
+       - Status - In draft/in review/approved/in progress.
+       - Executive Summary - brief summary of the project that contains the major goal of the project and how it is achieved.
+       - Goals ("In Scope") - What is to be achieved by the project, typically represented as a bullet list. Include non-tangible, process goals such as standardization or metrics requirements.
+       - Non-goals ("Out of scope") - A list of non-goals should explicitly identify what is not included in the scope for this project.
+       - Background - brief history. Identify any acronyms or unusual terminology used. Document any previous decisions made that resulted in limitations or constraints.
+       - High-level Design - How design works at a high level.
+       - Detailed Design - The full design, including diagrams, sample configuration files, algorithms, and so on. This will be your full and detailed description of what you plan to accomplish on this project
+       - Alternatives Considered - A list of alternatives that were rejected, along with why they were rejected.
+       - Special Constraints - A list of special constraints regarding things like security, auditing controls, privacy, and so on.
 
-    Cohesion / Single Responsibility Principle (SRP):
-        Criterion: Does the logic represent a single, well-defined responsibility or concept? Does it all relate to one primary purpose?
-        Evaluation: Highly cohesive logic (focused on one task) is a strong candidate for separation. If a potential component does many unrelated things, it might need further decomposition. Group things together that change together for the same reasons.
-        Goal: Improve clarity, maintainability, and testability by ensuring components have a clear focus.
-    Volatility / Rate and Reason for Change:
-        Criterion: Is this logic expected to change frequently? Does it change for different reasons or at a different cadence than the surrounding logic?
-        Evaluation: Logic that changes often, especially independently of other parts, benefits from separation. This isolates the impact of changes, reducing the risk of breaking unrelated functionality.
-        Goal: Increase system stability, reduce regression risks, facilitate faster updates to volatile parts.
-    Reusability:
-        Criterion: Is this logic needed in multiple places within the current system, or potentially by other systems in the future?
-        Evaluation: If the logic has clear potential for reuse, separating it into a well-defined component (like a library or service) avoids duplication (DRY - Don't Repeat Yourself).
-        Goal: Promote code reuse, consistency, and reduce maintenance overhead.
-    Scalability Requirements:
-        Criterion: Does this specific piece of logic have significantly different scaling needs (e.g., much higher throughput, different load patterns) compared to the rest of the system?
-        Evaluation: If a specific activity is a performance bottleneck or needs to scale independently, separating it (often as a distinct service) allows targeted scaling (e.g., adding more instances just for that component).
-        Goal: Optimize resource utilization, improve performance and responsiveness under load.
-    Fault Isolation / Availability Requirements:
-        Criterion: If this logic fails, should it impact the availability of the entire system? Is it critical, or can the system function in a degraded state without it?
-        Evaluation: Separating logic into components (especially services) can create fault isolation boundaries. The failure of one component is less likely to cascade and bring down others.
-        Goal: Improve overall system resilience and availability.
-    Security Boundaries:
-        Criterion: Does this logic handle sensitive data or operations that require different or stricter security controls than other parts of the system?
-        Evaluation: Separation allows you to create a distinct security perimeter around the component, applying specific authentication, authorization, and auditing rules.
-        Goal: Reduce the attack surface, enforce security policies more effectively, aid compliance.
-    Independent Deploy-ability:
-        Criterion: Is there a business or operational need to deploy updates to this logic independently of the rest of the system?
-        Evaluation: Separation (particularly into independently deployable units like microservices) allows for faster release cycles and reduces the scope and risk of deployments.
-        Goal: Increase deployment frequency, reduce lead time for changes, enable CI/CD practices.
-    Team Autonomy / Organizational Structure (Conway's Law):
-        Criterion: Can a dedicated team reasonably own the development, testing, deployment, and operation of this logic?
-        Evaluation: Aligning component boundaries with team structures can improve focus, ownership, and parallel development speed. (Conway's Law suggests systems often mirror the communication structures of the organizations that build them).
-        Goal: Enable parallel development, foster ownership, improve team efficiency.
-    Technology or Infrastructure Affinity:
-        Criterion: Does this logic have specific technology dependencies (e.g., a particular library, framework, database type, hardware like GPUs) that you don't want to impose on the entire system?
-        Evaluation: Separation allows isolating these specific dependencies, giving more flexibility in choosing technologies for different parts of the system.
-        Goal: Prevent technology lock-in, allow use of best-fit technology for specific tasks, simplify dependency management.
-    Bounded Context (Domain-Driven Design):
-        Criterion: Does the logic belong to a distinct subdomain within the overall business domain, potentially with its own ubiquitous language and model?
-        Evaluation: Aligning component boundaries with DDD Bounded Contexts helps maintain conceptual integrity and clarity within complex domains.
-        Goal: Create clearer domain models, reduce ambiguity, align software structure with business structure.
-    Complexity Management:
-        Criterion: Is the logic itself complex? Would separating it make both the new component and the remaining system easier to understand and reason about?
-        Evaluation: Sometimes separation is justified simply to break down a large, complex problem into smaller, more manageable pieces.
-        Goal: Reduce cognitive load for developers, improve understandability.
+       Below are not mandatory but could be useful,
 
-    Important Considerations:
-        Trade-offs: Separation is not free. It can introduce new complexities like network latency (for services), data consistency challenges, more complex deployment orchestration, and the need for inter-component communication protocols.
-        Granularity: The "size" of the component matters. The criteria apply differently when deciding between classes versus microservices. The cost/benefit ratio changes with granularity.
-        Start Simple: Don't over-decompose initially. It's often easier to combine components later than to split them prematurely.
+       - Cost Projections: The cost of the project—both initial capital and operational costs, plus a forecast of the costs to keep the systems running.
+       - Support Requirements: Operational maintenance requirements. This ties into Cost Projections, as support staff have salary and benefit costs, hardware and licensing have costs, and so on.
+       - Schedule: Timeline of which project events happen when, in relation to each other.
+       - Security Concerns: Special mention of issues regarding security related to the project, such as protection of data.
+       - Privacy and PII Concerns: Special mention of issues regarding user privacy or anonymity, including plans for handling personally identifiable information (PII) in accordance with applicable rules and regulations.
+       - Compliance Details: Compliance and audit plans for meeting regulatory obligations under SOX, HIPPA, PCI, FISMA, or similar laws.
+       - Launch Details: Roll-out or launch operational details and requirements.
 
-Evaluate these criteria based on the specific context, priorities, and constraints of your project. The decision often involves balancing several of these factors
 
-     Factors to decide on communication style i.e. synchronous or asynchronous
-        Synchronous Communication (e.g., REST API calls, gRPC):
-            Characteristics: The caller sends a request and blocks (waits) until it receives a response (or timeout/error).
-            Pros:
-                Simpler programming model for request-response interactions.
-                Immediate feedback to the caller (success, failure, data).
-                Easier to reason about the immediate flow of control.
-            Cons:
-                Temporal Coupling: The caller and receiver must both be available simultaneously. If the receiver is down or slow, the caller is blocked or fails.
-                Reduced Resilience: Failures can cascade easily. A slow downstream service can exhaust resources (threads, connections) in upstream services.
-                Potential Performance Bottlenecks: Long-running synchronous calls can hold up callers.
-            When to Consider:
-                Queries (read operations) where the user/caller needs an immediate answer.
-                Commands where immediate confirmation of acceptance/initial validation is required.
-                Interactions within a single architectural quantum where high consistency and immediate feedback are needed, and components are deployed together.
-        Asynchronous Communication (e.g., Message Queues, Event Streams):
-            Characteristics: The caller sends a message/event to an intermediary (like a queue or broker) and does not wait for it to be processed.5 The receiver processes the message independently when it's ready.
-            Pros:
-                Temporal Decoupling: Sender and receiver don't need to be available simultaneously. Improves system resilience and availability.
-                Increased Scalability: Receivers can process messages at their own pace; load spikes can be absorbed by the queue. Senders aren't blocked.
-                Enhanced Resilience: Failure of a receiver doesn't immediately impact the sender. Messages can often be retried.
-                Flexibility: Easy to add new consumers for the same message/event later.
-            Cons:
-                Increased Complexity: Requires message broker infrastructure. Error handling, monitoring, and debugging become more complex (e.g., handling poison messages, ensuring idempotency, distributed tracing).
-                Eventual Consistency: The caller doesn't get immediate confirmation that the action is fully complete, only that the request was accepted. Data consistency across services takes time.
-                Different programming model (event-driven).
-            When to Consider:
-                Commands or events where immediate processing isn't strictly required.
-                Workflows spanning multiple services/domains.
-                Notifications or triggering side effects.
-                Improving system resilience and decoupling critical pathways.
-                Situations where eventual consistency is acceptable./
 
-    Non-functional aspects
-        Performance - using response time percentiles, using throughput metrics
-            Response time - The elapsed time from the moment when a user makes a request until they receive the requested answer.
-                The response time is what the client sees; it includes all delays incurred anywhere in the system.
-                The service time is the duration for which the service is actively processing the user request.
-                Percentiles are often used in service level objectives (SLOs) and service level agreements (SLAs) as ways of defining the expected performance and availability of a service 
-            Throughput - The number of requests per second, or the data volume per second, that the system is processing. For a given allocation of hardware resources, there is a maximum throughput that can be handled.
-        Scalability is a closely related concept to performance i.e. ensuring performance stays the same when the load grows. Involves breaking a task down into smaller parts that can operate independently
-        Reliability - Using fault tolerance techniques, which allows a system to continue providing its service even if some component (e.g., a disk, a machine, or another service) is faulty. Another aspect of achieving reliability is to build resilience against humans making mistakes, and we saw blameless postmortems as a technique for learning from incidents.
-        Maintainability - Making it easy to evolve an application’s functionality over time.
-        Operability - Make it easy for the organization to keep the system running smoothly.
-            Allowing monitoring tools to check the system’s key metrics, and supporting observability tools
-            Avoiding dependency on individual machines
-            Good documentation and easy-to-understand operations model
-            Self-healing, good default behaviour
-        Evolvability - Make it easy for engineers to make changes to the system in the future, adapting it and extending it for unanticipated use cases as requirements change.
-        Simplicity
-            Abstraction -  A good abstraction can hide a great deal of implementation detail behind a clean, simple-to-understand façade. A good abstraction can also be used for a wide range of different applications. 
 
-    Data Architecture
-        Aspects
+=========================================================================================================
 
-Property
-	
 
-Operational systems (OLTP)
-	
-
-Analytical systems (OLAP)
-
-Main read pattern
-	
-
-Point queries (fetch individual records by key)
-	
-
-Aggregate over large number of records
-
-Main write pattern
-	
-
-Create, update, and delete individual records
-	
-
-Bulk import (ETL) or event stream
-
-Human user example
-	
-
-End user of web/mobile application
-	
-
-Internal analyst, for decision support
-
-Machine use example
-	
-
-Checking if an action is authorized
-	
-
-Detecting fraud/abuse patterns
-
-Type of queries
-	
-
-Fixed set of queries, predefined by application
-	
-
-Analyst can make arbitrary queries
-
-Data represents
-	
-
-Latest state of data (current point in time)
-	
-
-History of events that happened over time
-
-    Questionnaire for Architecture Design Session  for Data Warehouse project,
-        Is your business using the cloud?
-        Is the data architecture you’re considering a new solution or a /ration?
-        What are the skill sets of the engineers?
-        Will you use nonrelational data?
-        How much data do you need to store?
-        Will you have streaming data?
-        Will you use dashboards and/or ad-hoc queries?
-        Will you use batch or interactive queries?
-        Are their service level agreements (SLA) for performance of reports?
-        Will the data be used for predictive analytics or ML Models?
-        HA and DR Requirements
-        Is MDM needed? (Master  data  management  (MDM)  involves  creating  a  single  master  record  foreach  person,  place,  or  thing  in  a  business,  gathered  from  across  internal  and external data sources and applications. These master records can then be used to build more accurate reports, dashboards, queries, and machine learning models.)
-        Are there any security limitations with storing data in the cloud
-        Does this solution require 24/7 client access?
-        How many concurrent users will be accessing the solution at peak times? And how many on average?
-        Skill level of end user?
-        Budget?
-        Planned time line
-        Is the source data on cloud or on-prem?
-        Volume of data to be imported every day
-        Current pain points
-        Third-party or Open source tools?
-        Security requirements? Data Sovereignty?
-
- 
-
-    Operational systems consist of the backend services and data infrastructure where data is created, for example by serving external users. Here, the application code both reads and modifies the data in its databases, based on the actions performed by the users.
-        Analytical systems serve the needs of business analysts and data scientists. They contain a read-only copy of the data from the operational systems, and they are optimized for the types of data processing that are needed for analytics.
-        data lake: a centralized data repository that holds a copy of any data that might be useful for analysis, obtained from operational systems via ETL processes
-        DevOps
-            Automation—preferring repeatable processes over manual one-off jobs,
-            preferring ephemeral virtual machines and services over long running servers,
-            enabling frequent application updates,
-            learning from incidents, and
-            preserving the organization’s knowledge about the system, even as individual people come and go
-
- 
-
-    Data Architecture best practices
-        Understanding Actual data access patterns of the Application
-            Partitioning of the tables
-            Routine archival and purging
-            OLTP schema is not good for data warehousing
-        Decouple pipeline between ingestion, storage, processing and insights for increased fault tolerance
-        Things to consider while determining tools
-            Structure of data
-            Maximum acceptable latency
-            Minimum acceptable throughput
-            Typical access patterns of end-users
-        Things to consider for Data Ingestion
-            Structure of Data
-            How quickly does new data needs to be available for querying?
-            What is the size of data ingest?
-            What is total volume and growth rate?
-            What the cost will be to store and query the data in any particular location
-
- 
-
-    Cloud
-        Google Cloud - Typical Message flow
-
- 
-
-    Cloud vs. on-prem
-        If your load is quite predictable (i.e., the number of machines you need does not fluctuate wildly), then it’s often cheaper to buy your own machines and run the software on them yourself
-         If you need a system that you don’t already know how to deploy and operate, then adopting a cloud service is often easier and quicker than learning to manage the system yourself. If you have to hire and train staff specifically to maintain and operate the system, that can get very expensive. You still need an operations team when you’re using the cloud,  but outsourcing the basic system administration can free up your team to focus on higher-level concern
-        Other salient aspects
-            Separation of compute and storage (Virtual disk storage)
-            Specialized services like Object storage (S3/Filestore)
-            Multitenancy - rather than having a separate machine for each customer, data and computation from several different customers are handled on the same shared hardware by the same service 
-        Some downsides are,
-            Lack of specific feature
-            Cloud provider's down time
-            Change of terms for Service that makes it expensive,
-            Data privacy, security concerns
-            Operational task are still required like, maintaining the security of an application and the libraries it uses, managing the interactions between your own services, monitoring the load on your services, and tracking down the cause of problems such as performance degradations or outages. 
-        Cloud migration advantages,
-            Specific cloud migration principles
-                Use before reuse
-                Design from front-to-back (build consumer-driven APIs that provide the services in a format that the front-ends prefer.)
-                Best tool is the one that suits your level
-                Understand pricing models and how they fit your usage patterns
-                Use automation to reduce cost
-                Use transparency to understand and manage cost
-                Spend time understanding your own usage patterns
-                Read price reduction case studies carefully to see what impacted the price and whether that applies to you
-            Acquire resources as needed (compute, storage, networks and databases)
-            Convert upfront capital expenditure to operational expenditure (pay as you go)
-            Other reasons
-                Uptime
-                Velocity - Accelerated Software Delivery via fully managed CI/CD pipelines
-                Security - Via custom built hardware and offerings like software defined networks, firewalls, Web Application firewalls.
-                Insight
-                Transparency w.r.t. infra inventory
-            Some relevant workloads
-                Data Analytics
-                Data backup and Archiving 
-        Design for change
-            Enforce high cohesion and loose coupling
-            Encapsulate Domain knowledge
-            Use asynchronous messaging
-            Don’t build domain knowledge in gateway
-            Expose open interfaces
-            Design and test against service contracts
-                Contract testing is a technique for testing an integration point by checking each application in isolation to ensure the messages it sends or receives conform to a shared understanding that is documented in a "contract". Contract testing is immediately applicable anywhere where you have two services that need to communicate - such as an API client and a web front-end.
-            Use fitness functions - a particular type of objective function that is used to summarize…how close a given design solution is to achieving the set aims
-            Abstract infrastructure (messaging, persistence) away from domain logic
-            Offload cross-cutting
-            Deploy services independently
-        FLAIR data principles
-            Findable - The ability to view which data assets are available, access metadata and other attributes related to governance and compliance
-            Lineage - The ability to find data origin, trace data back, understand and visualize data as it flows through data sources
-            Accessibility - Ask for Security credentials while accessing data asset. Networking infrastructure to facilitate efficient access
-            Interoperability - Using format acceptable to most internal processing systems
-            Reusability - Data  is part of known schema.
-
- 
-
-    Distributed Systems
-        What is a Distributed System?
-            It runs on multiple processes/servers
-            The number of servers in a cluster can vary from as few as three servers to a few thousand servers
-            It manages data. So these are inherently 'stateful' systems
-            Process communicate by message passing
-            It tolerates partial failures.
-        Gist of 12 factors
-            Services should be simple to build, test and deploy
-            Lightweight (run fast, use less RAM)
-            Reproducible results on all environments like dev, test, prod etc.
-        Stability patterns for distributed Architecture 
-
-            Application Resilience
-                 
-
-RPO
-	
-
-How much data can you afford to lose and recreate?
-
-RTO
-	
-
-How quickly must you recover? What is the cost of downtime?
-
-            Integrations are #1 risk to stability
-                Every out of process call can kill system including database calls
-                Useful patterns - timeouts, circuit breakers, decoupling middleware, test harness
-            Hunt for resource leaks
-            Handle traffic surges
-                Degrade automatically
-                Shed load
-                Don’t wait forever 
-            Test with realistic data volumes
-            Put limits in your APIs
-            Throttling - Not only about abuse prevention but also resource allocation under constraints (could be financial/technical or business related). Some tenets of throttling systems are,
-                Clearly distinguish between customer protection and system protection use cases
-                Integrate closely with auto-scaling infrastructure
-                Use capacity-based limits rather than static ones where possible
-                Prioritize established usage patterns over new spikes
-                Treat throttling as a resource allocation problem, not just an abuse prevention one
-            Test harnesses to emulate the remote system on the other end of each integration point. 
-
-Consider building a test harness that substitutes for the remote end of every web services call.
-
-A test harnesses runs as a separate server, so it is not obliged to conform to any interface. It
-
-can provoke network errors, protocol errors, or application-level errors.
-
-    Disaster recovery
-        Design according to your recovery goals (RPO and RTO)
-        DR Patterns
-            Cold - DR Site needs to be brought up. Typically, DR Site only has cheap storage as target for data backup and nothing else.
-            Warm - DR Site is ready but not automatically up. e.g. Batch processing workloads (i.e. short pause before  processing can be continued)
-            Hot - Switch to DR is almost immediate when needed. e.g. E-commerce (transactional part). Typically involves Hot HA across primary and DR site. 
-    Capacity management is an ongoing process of monitoring and optimization. It involves many dimensions and opposing dynamics. Software changes, traffic changes, and even marketing campaigns can all cause different forces to dominate your capacity. Working with capacity requires a big-picture view of the system as a whole. Capacity is fundamentally a measure of how much revenue the system can generate during a given period of time.
-        Place safety limits on everything: timeouts, maximum memory consumption, maximum number of connections, and so on.
-        Try to do the most work when nobody is waiting for it
-        Monitor capacity continuously. Each application release can affect scalability and performance. Changes in user demand or traffic patterns change the system’s workload
-
-    Fallacies of Distributed Computing
-        Effects of Fallacies of distributed computing
-            App needs error handling/retries
-            App should minimize # of requests
-            App should send small payloads
-            Must secure data and authenticate requests
-            Changes affect latency, bandwidth and endpoints
-            Changes affect ability to reach destination
-            Network affects reliability , latency and bandwidth
-        In-process call vs. network request
-            Performance: Worse, increases network congestion, unpredictable timing
-            Unreliable: Requires retries, timeouts, & circuit breakers
-            Server code must be idempotent
-            Security: Requires authentication, authorization, & encryption
-            Required in VNET for compliance or running 3rd-party (untrusted) code
-            Diagnostics: network issues, perf counters/events/logs, causality/call stacks. NOTE: Servers’ clocks are not absolutely synchronized
-    Understanding distributed systems through patterns
-        Write-ahead log - to sync multiple data stores while performing update one at a time in atomic way.
-        Leaders and followers - To achieve fault tolerance in systems that manage data, the data needs to be replicated on multiple servers. In this context , one of the nodes is marked as the leader, and the others are considered followers. The leader is responsible for taking decisions on behalf of the entire cluster and propagating the decisions to all the other servers. It deals with situation of leader failing by means of heartbeat (a regular message sent between nodes).
-            Generational clock - number that increments with each leadership election.a simple technique used to determine ordering of events across a set of processes, without depending on a system clock. Each process maintains an integer counter, which is incremented after every action the process performs. Each process also sends this integer to other processes along with the messages processes exchange. The process receiving the message sets its integer counter by choosing the maximum between its own counter and the integer value of the message.
-            High water mark - Maintained by the leader and is equal to index of latest update to be committed.
-        Singular update queue - Allowing client threads to write entries onto  a queue. A separate processing thread reads entries from this queue and carries out the processing in order.
-        Segmented log - Single log is split into multiple segments. Log files are rolled after a specified size limit. This is to avoid issues with single log file getting too large.
-        Low water mark -  A mechanism to tell logging machinery which portion of the log can be safely discarded. Different types include snapshot based , time based
-        Heartbeat - Timely detection of server failures is important for taking corrective actions. Heartbeat involves periodically sending a request to all other nodes to check liveness. Typically duration is set at higher value than time for network round trip between servers. Other messages between servers can also serve the purpose of heartbeats.
-            Consensus based systems (Raft/Zookeeper) - Leader server sends heartbeats to all follower nodes.
-            Large clusters, gossip based  
-        Majority Quorum -  Need to ensure that in the event of crash , results of operations are available to all clients. In a cluster, how many servers are needed to confirm to leader that operation was successful. To balance overall system performance and integrity ,cluster agrees that operation is deemed successful if majority of nodes acknowledge it. For a cluster of n nodes, the quorum is n / 2 + 1.The need for a quorum indicates how many failures can be tolerated—which is the size of the cluster minus the quorum. A cluster of five nodes can tolerate two of them failing. In general, if we want to tolerate f failures we need a cluster size of 2f + 1.Quoram size is adjusted as per proportion of expected read vs. write volumes etc.
-        Paxos - phases
-            Prepare phase: Establish the latest Generation Clock and gather any already accepted values
-            Accept phase: Propose a value for this generation for replicas to accept
-            Commit phase: Let all the replicas know that a value has been chosen. 
-        Idempotent receiver - Identify requests from clients uniquely so you can ignore duplicate requests when client retries.
+  - Understanding distributed systems through patterns
+    -     Write-ahead log - to sync multiple data stores while performing update one at a time in atomic way.
+    -     Leaders and followers - To achieve fault tolerance in systems that manage data, the data needs to be replicated on multiple servers. In this context , one of the nodes is marked as the leader, and the others are considered followers. The leader is responsible for taking decisions on behalf of the entire cluster and propagating the decisions to all the other servers. It deals with situation of leader failing by means of heartbeat (a regular message sent between nodes).
+    -         Generational clock - number that increments with each leadership election.a simple technique used to determine ordering of events across a set of processes, without depending on a system clock. Each process maintains an integer counter, which is incremented after every action the process performs. Each process also sends this integer to other processes along with the messages processes exchange. The process receiving the message sets its integer counter by choosing the maximum between its own counter and the integer value of the message.
+    -         High water mark - Maintained by the leader and is equal to index of latest update to be committed.
+    -     Singular update queue - Allowing client threads to write entries onto  a queue. A separate processing thread reads entries from this queue and carries out the processing in order.
+    -     Segmented log - Single log is split into multiple segments. Log files are rolled after a specified size limit. This is to avoid issues with single log file getting too large.
+    -     Low water mark -  A mechanism to tell logging machinery which portion of the log can be safely discarded. Different types include snapshot based , time based
+    -     Heartbeat - Timely detection of server failures is important for taking corrective actions. Heartbeat involves periodically sending a request to all other nodes to check liveness. Typically duration is set at higher value than time for network round trip between servers. Other messages between servers can also serve the purpose of heartbeats.
+    -         Consensus based systems (Raft/Zookeeper) - Leader server sends heartbeats to all follower nodes.
+    -         Large clusters, gossip based  
+    -     Majority Quorum -  Need to ensure that in the event of crash , results of operations are available to all clients. In a cluster, how many servers are needed to confirm to leader that operation was successful. To balance overall system performance and integrity ,cluster agrees that operation is deemed successful if majority of nodes acknowledge it. For a cluster of n nodes, the quorum is n / 2 + 1.The need for a quorum indicates how many failures can be tolerated—which is the size of the cluster minus the quorum. A cluster of five nodes can tolerate two of them failing. In general, if we want to tolerate f failures we need a cluster size of 2f + 1.Quoram size is adjusted as per proportion of expected read vs. write volumes etc.
+    -     Paxos - phases
+          - Prepare phase: Establish the latest Generation Clock and gather any already accepted values
+          - Accept phase: Propose a value for this generation for replicas to accept
+          - Commit phase: Let all the replicas know that a value has been chosen. 
+    -     Idempotent receiver - Identify requests from clients uniquely so you can ignore duplicate requests when client retries.
 
 
 - Concepts
-  - Asynchronicity, Queues
-       - "Asynchronous" - Your application sends a message or event and then carries on doing something else. It does not sit around waiting for an outcome.
-       - asynchronous messaging infrastructure does,
-           * Decoupling: A system handling work behind a messaging infrastructure can be running at capacity and yet not be overwhelmed and   can even be down while the messaging infrastructure still accepts   messages on its behalf.
-           * Delivery: You can entrust over your messages and the   messaging system will try its best not lose them. It will then attempt   to deliver them to the right parties and will retry as often as necessary.
-           * Buffering: A messaging infrastructure is generally great at   accepting bursts of messages at once and organizing them for later   retrieval. The retrieval can then occur at the pace that your   application can handle. That is also called load-leveling.
-           * Network-Bridging: Messaging infrastructures can often be   attached to multiple networks, allowing information to pass between   applications in those networks without there being IP-level connectivity   between them.
-       - Queues are One of the most fundamental and most important data  structures in computing
-           - Sequence of records , commonly ordered by moment of arrival
-           - Write/add at the bottom , read/consume at the top
-           - Consumed records are removed
-           - Length of queue can always be read
-       - Characteristics of Message queues
-           - Accepts, stores and makes message available for consumption
-           - Queue individually manages lifecycle of each message
-           - Each message is exclusively acquired by one consumer
-           - The queue length can be queried
-           - Queues do not improve end-to-end latency
-           - Queues do not improve mean throughput
-           - Queues do not provide total event ordering
-           - Queues can offer at-most-once or at-least-once delivery
-           - Queues do improve burst throughput
-           - Distributed queues also improve fault tolerance (if they   don’t lose data)
-           - Every queue is a place for things to go horribly, horribly wrong
-       - Kafka is not a "message queue"
-           - Messages are acquired by consumer groups
-           - consumer groups can query topic back and forth.
-           - Its event streaming engine
-           - Use cases
-               - Load leveling - allows a business process to handle   transactions at optimal capacity use and without getting   overwhelmed.Spiky loads are buffered by the queue until the processor   can handle them .
-               - Discrete event router - Push style distribution of   discrete events to serverless workloads or other messaging   infrastructures (Azure event grid)
-               - Queue pub/sub broker - Pull-style, queue based transfer   of  jobs (RabbitMQ)
-               - Event Stream engine - Partitioned, high volume,   sequential recording and unlimited pull style re-reads of event streams.   (kafka, pulsar)
-               - Event stream aggregator - Stateful processing of event   streams yielding event streams (Apache samza, apache flink)
-
   - New Techniques in Browser,
        - For Server-sent events,
-           - The EventSource interface is web content's interface to   server-sent events. An EventSource instance opens a persistent   connection to an HTTP server, which sends events in text/event-stream   format. The connection remains open until closed by calling
-            EventSource.close().
-           - Unlike WebSockets, server-sent events are unidirectional;   that is, data messages are delivered in one direction, from the server   to the client (such as a user's web browser). That makes them an   excellent choice when there's no need to send data from the client to
-            the server in message form. For example, EventSource is a useful   approach for handling things like social media status updates, news   feeds, or delivering data into a client-side storage mechanism like   IndexedDB or web storage.
+           - The EventSource interface is web content's interface to   server-sent events. An EventSource instance opens a persistent   connection to an HTTP server, which sends events in text/event-stream  format. The connection remains open until closed by calling EventSource.close().
+           - Unlike WebSockets, server-sent events are unidirectional;   that is, data messages are delivered in one direction, from the server   to the client (such as a user's web browser). That makes them an  excellent choice when there's no need to send data from the client to the server in message form. For example, EventSource is a useful   approach for handling things like social media status updates, news feeds, or delivering data into a client-side storage mechanism like   IndexedDB or web storage.
 
   - UI
       - Micro frontend - the user interface elements that interact on behalf of the services are  emitted  from  the  services  themselves.
@@ -626,7 +799,7 @@ can provoke network errors, protocol errors, or application-level errors.
   - Process vs Threads
      - Processes have their own address space, memory and open file tables
      - Processes are self isolating i.e. corrupt process cannot hurt other processes
-     - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Prefork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
+     - Existing processes can execute task much faster. (An example of queueing implemented with processes is the Pre-fork processing module for the Apache web server. On startup, Apache forks off a certain number of subprocesses. Requests are distributed to subprocesses by a master process.)
      - So how do we decide between multiprocessing and multithreading?
          - Multithreading for I/O intensive tasks
          - Multiprocessing for CPU intensive tasks (if you have multiple cores available)   
@@ -641,7 +814,6 @@ can provoke network errors, protocol errors, or application-level errors.
      - The other difficulty .NET has is that it allows pinning memory. Maybe you pinned some object to get the address or pass it to another function. This is problematic, when you want you want to grow the stack dynamically in your user mode thread implementation.
      - The inability to copy the stack means you need to do a linked list instead. This is a complex and inefficient implementation. Java and go can both copy because there’s no way to get the underlying address of anything (without really unsafe code).
      - Async state machines in .NET form linked list.
-
 
   - TCP Protocol
      - Runs on top of IP.any data you send via TCP gets converted into one or more datagrams, then sent over the networking using IP, then is reassembled into a stream of data on the other end.
@@ -666,26 +838,9 @@ can provoke network errors, protocol errors, or application-level errors.
            - Security - Analyzing trace events to correlate & Detect intrusion
            - Observability /SRE
 
-  - Backpressure 
-     - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens. Backpressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
+  - Back-pressure 
+     - In a producer-consumer system, there could be mismatch between rates at which production and consumption happens. Back-pressure is the ability of the consumer to say “Yo, hang on a minute!” to the producer, causing the producer to stop until the consumer catches up.
 
-  - Logging rules
-     - ERROR: "your code is really broken"
-     - WARNING: "your code is broken, but only in a subtle way that will bite you later"
-     - INFO: "irrelevant trivia"
-     - DEBUG: "information that would help you understand what's going on if you had enabled debug logging in production which you didn't"
-     - INFO Level is for business while DEBUG is for developers
-     - Log INFO after the operation is over and not before
-     - Distinguish between WARNING (Typically can be retried) and error
-     - While Logging, ask questions like,
-         - Is this log really needed? does it rely important information I couldn’t get from the other logs in the same flow?
-         - Am I going to log an object that can be huge on production? If so, can I just log a few metrics of that objects instead? for example, it’s length, or handpick a few important attribute to log.
-         - Does the information I am about to log will help me to debug/understand the flow?
-     - Alternative use of Log levels
-         - ERROR: Parts of the flow failed, we want to send alerts to our on-call for this failures.
-         - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
-         - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
-         - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
 
     - Memory Management
      - OS has Virtual memory manager (VMM) that allocates VM to processes
@@ -697,155 +852,34 @@ can provoke network errors, protocol errors, or application-level errors.
          - When a virtual page doesn’t have a valid corresponding physical page, a page fault occurs
          - Control is transferred to the OS to provide a physical page (or an AV) Demand paging
 
-     - How does Garbage collector (GC) decides if it should collect out object?
+    - How does Garbage collector (GC) decides if it should collect out object?
          - GC.Collect() collects the whole heap
              - This means GC does NOT decide the objects’ lifetime
              - GC only gets told by others if an object is live
              - In this case JIT tells the GC that object is still live
              - JIT is free to lengthen the object lifetime till the end of method and has always been
 
-- General Architecture
-      - An architect can seek to understand a team’s engineering culture by asking questions like:
-          - Does everyone on the team know what fitness functions are and consider the impact of new tool or product choices on the ability to evolve new fitness functions?
-         - Are teams measuring how well their system meets their defined fitness functions?
-         - Do engineers understand cohesion and coupling? What about connascence [is a software quality metric that provides a taxonomy for different types of coupling in code]?
-         - Are there conversations about what domain and technical concepts belong together?
-         - Do teams choose solutions not based on what technology they want to learn but based on its ability to make changes?
-         - How are teams responding to business changes? Do they struggle to incorporate small business changes, or are they spending too much time on them?  
-
-
-     - Evolvable Architecture 
-       - Guidelines
-            - Reduce needless variability  - Immutable Infrastructure (including Development environment), Pair Programming,
-            - Make Decisions Reversible - Blue/green deployments, Feature Toggles
-            - Prefer evolvable over predictable - Use incidental plumbing like message queues, search engines etc.  Avoid "wiring" too much to external dependencies by isolating them behind interfaces  .
-                   - Controlling the coupling points in an application, especially to external resources, is one of an architect’s key responsibilities.  As an architect, remember that dependencies provide benefits but also impose constraints
-            - Make sacrificial Architecture -
-                - If developers have a project they want to test, building the initial version in the cloud greatly reduces the resources required to release the software. If the project is successful, architects can take the time to build a more suitable architecture. If developers are careful about anticorruption layers and other evolutionary architecture practices, they can mitigate some of the pains of the migration.
-            - Mitigate External Change
-                - A good start on dependency management models external dependencies using a pull model. For example, set up an internal version-control repository to act as a third-party component store, and treat changes from the outside world as pull requests to that repository. If a beneficial change occurs, allow it into the ecosystem
-            - Updating libraries versus frameworks
-                -  Libraries are preferred because they introduce less coupling to your application, making them easier to swap out when the technical architecture needs to evolve.
-                -  One reason to treat libraries and frameworks differently comes down to engineering practices. Frameworks include capabilities such as UI, object-relational mapper, scaffolding like model-view-controller, and so on. Because the framework forms the scaffolding for the remainder of the application, all the code in the application is subject to impact by changes to the framework. Many of us have felt this pain viscerally—​any time a team allows a fundamental framework to become outdated by more than two major versions, the effort (and pain) to finally update it is excruciating.
-               -  Update framework dependencies aggressively; update libraries passively.
-
-            -  Version Services internally
-                -  Patterns used,
-                    -  Version Numbering - developers create a new endpoint name, often including the version number, when a breaking change occurs
-                    -  Internal Resolution - callers never change the endpoint—​instead, developers build logic into the endpoint to determine the context of the caller, returning the correct version. The advantage of retaining the name forever is less coupling to specific version numbers in calling applications.
-
-           -  Fitness function driven Architecture,
-                 -  Building a fitness function that governs critical (like Response time, throughput that determine success) capability to help drive design ensures that it stays top of mind as the architect designs other parts.
-
-                     - Fitness function to measure real performance in production system,
-                         - Calculates the number of incoming calls in production to verify the maximum number of requests that the service needs to support and what would be the auto-scaling factor to guarantee availability with horizontal scaling
-                         - Make new load and concurrency tests using the new number of requests per second
-                         - Monitor the memory and CPU, and define the stress point
-
+- General Architecture Guidelines 
+    - An architect can seek to understand a team’s engineering culture by asking questions like:
+       - Does everyone on the team know what fitness functions are and consider the impact of new tool or product choices on the ability to evolve new fitness functions?
+       - Are teams measuring how well their system meets their defined fitness functions?
+       - Do engineers understand cohesion and coupling? What about connascence [is a software quality metric that provides a taxonomy for different types of coupling in code]?
+       - Are there conversations about what domain and technical concepts belong together?
+       - Do teams choose solutions not based on what technology they want to learn but based on its ability to make changes?
+       - How are teams responding to business changes? Do they struggle to incorporate small business changes, or are they spending too much time on them?  
        - Anti patterns
            -  Low code/No code Environments - typically fall short to cover 100% of user's requirements
-           -  Vendor driven - an architecture built entirely around a vendor’s product that pathologically couples the organization to a tool.To escape this antipattern, treat all software as just another integration point, even if it initially has broad responsibilities. By assuming integration at the outset, developers can more easily replace behavior that isn’t useful with other integration points, dethroning the king.
+           -  Vendor driven - an architecture built entirely around a vendor’s product that pathologically couples the organization to a tool.To escape this anti-pattern, treat all software as just another integration point, even if it initially has broad responsibilities. By assuming integration at the outset, developers can more easily replace behavior that isn’t useful with other integration points, dethroning the king.
           -  Understand the fragile places within your complex technology stack and automate protections via fitness functions.
-          - Governance -   pick three technology stacks for standardization—​simple, intermediate, and complex—​and allow individual service requirements to drive stack requirements. This gives teams the flexibility to choose a suitable technology stack while still providing the company some benefits of standards.
-         
-
-     - Approach for Architecture building (Monolith to Service based Migration)
-        - There must be business drivers to go for Service based Architecture
-          - Availability
-          - Scalability
-          - Separation of Concerns (Reporting functionality , reporting load)
-          - Agility (faster implementation of changes)
-          - Testability
-          - Better and faster deployability
-
-        - Architectural  quantum  is  defined  as  an  independently deployable artifact with high functional cohesion, high static coupling, and synchro‐nous  dynamic  coupling
-
-
-        - Application 
-          - logically  group  components  together (those performing some sort of related functionality)  so  that  more  coarse-grained domain services can be created when breaking up an application.
-
-          - a component  as   a   building   block   of   the   application   that   has   a   well-defined   role   and responsibility  in  the  system  and  a  well-defined  set  of  operations.
-          - Typical Namespace composition  can be "Application.Domain.SubDomain.Component.Class".
-
-          - Infrastructure Cross-cutting functionality is operational in nature and common to all processes (like logging, metrics, security)  but there may exist some domain functionality that can be shared across some processes.Examples of Infrastructure related Cross cutting/common functions are logging, security, utilities, formatters, converters, extractors, auditing, monitoring. 
-
-          - Identify and Size Components 
-            - analyze  the incoming  and  outgoing  dependencies  (coupling)  between  components  to  determine what  the  resulting  service  dependency  graph  might  look  like  after  breaking  up  the monolithic application. This is not individual class dependencies within a component(i i.e. across namespace). A component dependency is formed when a class from one component (namespace) interacts with a class from another component (namespace). A monolithic application with too many component dependencies is not feasible to break apart. component  coupling  is  one  of  the  most  significant factors in determining the overall success (and feasibility) of a monolithic migration effort. Both afferent (incoming) and efferent (Outgoing) coupling should summed up.
-
-            - One metric that could be used is calculating  the  total  number  of  statements  within  a given  component  (the  sum  of  statements  within  all  source  files  contained  within  a namespace  or  directory). 
-                -  A  statement  is  a  single  complete  action  performed  in  the source  code,  usually  terminated  by  a  special  character  (such  as  a  semicolon  in  languages such as Java, C, C++, C#, Go, and JavaScript. Having  a  relatively  consistent  component  size  within  an  application  is  important.Generally speaking, the size of components in an application should fall between one to two standard deviations from the average (or mean) component size.
-            - Additional factors for Service Scoping  
-                - Aspects to identify service boundaries 
-                  - Business functionality groups - Mimicking existing business communication hierarchy
-                  - Transactional Boundaries - Check for transactional boundaries adhered to by Business 
-                  - Deployment goals - Partition on the basis of, 
-                    - Release frequency
-                    - Operational Characteristics (e.g. Scalability)
-                - Service scope and function - Is the service doing too many unrelated things?
-                - Code volatility - Are changes isolated to only one part of the service?
-                - Scalability and throughput - Do parts of the service need to scale differently?
-                - Fault tolerance - Are there errors that cause critical functions to fail within the service?
-                - Security - Do some parts of the service need higher security levels than others?
-                - Extensibility -  Is the service always expanding to add new contexts?
-                - Cohesion - the degree and manner in which the operations correlate.
-                - Over performance and responsiveness - if  the  functionalities  are  tightly      coupled  and  dependent  on  one another then its better to keep service together. A good rule of thumb is to take into consideration  the  number  of  requests  that  require  multiple  services  to  communicate with  one  another,  also  taking  into  account  the  criticality  of  those  requests  requiring interservice  communication.  For  example,  if  30%  of  the  requests  require  a  workflow between  services  to  complete  the  request  and  70%  are  purely  atomic  (dedicated  to only  one  service  without  the  need  for  any  additional  communication),  then  it  might be  OK  to  keep  the  services  separate.
-                - Code volatility - the rate at which the source code changes—is another good driver for breaking a service into smaller ones.
-                - Scalability and throughput - The  scalability  demands  of  different  functions  of  a  service  can  be  objec‐tively  measured  to  qualify  whether  a  service  should  be  broken  apart.
-                - Fault Tolerance - describes the ability of an application or functionality within a particular domain to continue to operate, even though a fatal crash occurs (such as an out-of-memory   condition).
-                - Security - Separation of Service based on Security needs of parts.
-                - Extensibility - the  ability to add additional functionality as the service context grows.
-                - Database Transactions - Is an ACID transaction required between separate services? if  having  a  single-unit-of-work  ACID  transaction  is required from a business perspective, these services should be consolidated into a single service.If data integrity and data consistency are important or critical to an operation, it might be wise to consider putting those services back together.
-                - Workflow and Choreography - Do services need to talk to one another? Shared code: Do services need to share code among one another? Database relationships: Although a service can be bro‐ken apart, can the data it uses be broken apart as well? Too much workflow (Service to service communication) impacts overall performance and responsiveness
-          - Functional Decomposition Approach - Identify % Codebase dedicated to a specific component or business task (e.g. Trouble  Ticket  component  containing  22%  of  the  codebase  that  is  responsible  for ticket creation, assignment, routing, and completion). If  no  clear  subdomains  exist  within  a  large  component,  then  leave  the component as is.
-
-       - Data/Database
-           - Aggregate  orientation  is  the  preference  to  operate  on  data  that  is  related  and  has  a complex  data  structure.
-          - Identify Data Domains - Data domain is logical/physical segregation of database objects related to a particular domain e.g. customer, Survey and so on.
-          - Why Disintegrate Operational Data? 
-            - Change control - How many services are impacted by a database table change?
-            - Connection Mgmt - Can my database handle the connections needed from multiple distributed services?
-              - Connection quota per service approach or using connection pooler like pgBouncer. It is recommended to start out with the even distribution approach and creating fitness  functions  to  measure  the  concurrent  connection  usage  for  each  service.  We also  recommend  keeping  the  connection  quota  values  in  an  external  configuration server  (or  service)  so  that  the  values  can  be  easily  adjusted  either  manually  or  pro‐grammatically through simple machine learning algorithms. This technique not only helps  mitigate  connection  saturation  risk,  but  also  properly  balances  available  data‐base connections between distributed services to ensure that no idle connections are wasted.
-           - Scalability - Can the database scale to meet the demands of the services accessing it?
-           - Fault Tolerance - How many services are impacted by a database crash or maintenance downtime?
-           - when sharing a sin‐gle  database,  overall  fault  tolerance  is  low  because  if  the  database  goes  down,  all services become nonoperational.
-           - Architectural Quanta - Is  a  single  shared  database  forcing  me  into  an  undesirable  single  architecture quantum?
-           - Database type Optimization - Can I optimize my data by using multiple database types?
-          - Drivers for integrating the data 
-            - Data relationships - Are  there  foreign  keys,  triggers,  or  views  that  form  close  relationships  between the tables?
-            - Database transactions - Is a single transactional unit of work necessary to ensure data integrity and consistency?
-
-
-
-       - Fitness functions 
-          - All namespaces under <root namespace node> should be restricted to <listof domains>
-
-          - All components in <some domain service> should start with the same namespace
-
-          - Maintain component inventory - It’s used to alert  architect of components that might have been added or removed by the development team. Identifying new or removed components is not only critical for this pattern, but for the other decomposition patterns as well
-
-          - No component shall exceed <some percent> of the overall codebase - identifies  components  that  exceed  a  given  threshold  in  terms  of  the percentage  of  overall  source  code  represented  by  that  component,  and  raise alert.
-
-          - No component shall exceed <some number of standard deviations> from the mean component size - identifies  components  that  exceed  a  given  threshold  in  terms  of  the number  of  standard  deviations  from  the  mean  of  all  component  sizes  (based  on  the total number of statements in the component), and raises alert.
-
-          -make sure no  component  has  “too  many”  dependencies,  and  to  restrict  certain  components from  being  coupled  to  other  components
-
-          - No component shall have more than <some number> of total dependencies
-
-          - <some component> should not have a dependency on <anothercomponent>
-
+          - Governance - pick three technology stacks for standardization—​simple, intermediate, and complex ​and allow individual service requirements to drive stack requirements. This gives teams the flexibility to choose a suitable technology stack while still providing the company some benefits of standards.        
 
      - Three basic Architecture Styles
        -  modern trade-off analysis in software architecture:
            - Find what parts are entangled together.
-
            - Analyze how they are coupled to one another.
-
            - Assess   trade-offs   by   determining   the   impact   of   change   on   inter dependent systems
-
            - Trappings  of  microservices  (such  as  data decomposition,  distributed  workflows,  distributed  transactions,  operational  automation,  containerization)
-
-           - Architects  shouldn’t  break  a  system  into  smaller  parts  unless  clear  business  drivers exist.  The  primary  business  drivers  for  breaking  applications  into  smaller  parts include  speed-to-market  (sometimes  called  time-to-market)  and  achieving  a  level  of competitive advantage in the marketplace. Speed-to-market  is  achieved  through  architectural  agility—the  ability  to  respond quickly  to  change.  Agility  is  a  compound  architectural  characteristic  made  up  of many  other  architecture  characteristics,  including  maintainability,  testability,  and deployability.
-     
+           - Architects  shouldn’t  break  a  system  into  smaller  parts  unless  clear  business  drivers exist.  The  primary  business  drivers  for  breaking  applications  into  smaller  parts include  speed-to-market  (sometimes  called  time-to-market)  and  achieving  a  level  of competitive advantage in the marketplace. Speed-to-market  is  achieved  through  architectural  agility—the  ability  to  respond quickly  to  change.  Agility  is  a  compound  architectural  characteristic  made  up  of many  other  architecture  characteristics,  including  maintainability,  testability,  and deployability.     
           - Fallacies of Distributed computing, 
             - The network is reliable;
             - Latency is zero;
@@ -858,7 +892,6 @@ can provoke network errors, protocol errors, or application-level errors.
             - Observability is optional
             - Compensating updates always work 
 
-
          - Monolith (Single Deployment)
            - Big ball of Mud
         
@@ -870,7 +903,7 @@ can provoke network errors, protocol errors, or application-level errors.
              - Communication between modules happen through APIs , preferably in asynchonous manner 
              - Unified database schema 
              - All modules operate within same virtual machine or have dedicated VMs. May not use Containers
-             - High cohesion, low coupling - "Things that change togerther should stay together" 
+             - High cohesion, low coupling - "Things that change together should stay together" 
              -  modules expose interface in two ways: Externally, the module offers an API via REST HTTP/GRPC, with API calls managed by a proxy/gateway. internally, services access the module through abstracted interface, without direct access to implementation.
              -  Process of identifying modules, 
                 -  Analyze the business problem 
@@ -878,10 +911,10 @@ can provoke network errors, protocol errors, or application-level errors.
                 -  Each subdomain have actor e.g. patron in case of book borrowing. 
                 -  Subdomain has bounded context which also defines scope for a module
                 -  each bounded context only exposes specific classes to be used by other bounded contexts.  They act as interface of contexts.
-           - A modular monolith irs a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
+           - A modular monolith is a system where all of the code powers a single application and there are strictly enforced boundaries between different domains.
            - Enforce boundaries adhering to Domain driven perspective,
                - Think of Module (or Micro-service) as bounded context
-               - It helps with ,
+               - It helps with,
                    - No price to be paid for Network and potential associated failures
                    - Rapid development if going with Modular Monolith
                    - Possibility of breaking off a Module and convert it in Micro-service, if needed
@@ -901,26 +934,23 @@ can provoke network errors, protocol errors, or application-level errors.
            - services in a  service-based architecture are coarse grained and usually contain the entire domain in  one  deployment  unit  (such  as  order  processing  or  warehouse  management),  and generally have too long of a mean time to startup (MTTS) to respond fast enough to immediate  demand  for  elasticity  due  to  their  large  size  (domain-level  scalability  and fair  MTTS). 
            - Service-based architecture is a hybrid of the microservices architecture style where an application is broken  into  domain  services,  which  are  coarse-grained,  separately  deployed  services containing all of the business logic for a particular domain.
           -  Modular Monolith is a software architecture pattern that strategically combines the simplicity of a monolithic structure with the advantages of microservices. In this approach, the system is organized into loosely coupled modules, each delineating well-defined boundaries and explicit dependencies on other modules.
-                -   Characteristics
-                   - Segregation of modules. Each module is independent with its own layers such as Domain, Infrastructure and API. Modules are autonomously developed, tested, and deployed, affording the flexibility to employ diverse database solutions
-                   - Modularity with loose coupling and high cohesion. Modules exhibit loose interdependence and strong internal cohesion. Communication between modules occurs through APIs, preferably adopting loosely coupled asynchronous communication patterns
-                   - Unified Database Schema. The system adheres to a singular database schema, in contrast to microservices, where each microservice necessitates an individual schema
-                   - Monolithic Deployment Structure. All modules within the modular monolith operate within the same Virtual Machine (VM), or each module may run on dedicated VMs. The scale of modules renders them impractical to be encapsulated within containers
-                   - General Structure - structure that exposes module interfaces in two ways: Externally, the module offers an API via REST HTTP or GRPC, with API calls managed by a proxy or gateway. Internally, services access the module through an abstracted interface, enabling information retrieval without direct access to the implementation. This upholds a clear separation of concerns, preserving application processes
-
-                   - Examples are Service Weaver framework where you write your application as a modular monolith and compile it into a single binary. The Service Weaver runtime then splits the binary and deploys it as a set of distributed services. This programming model enables you to focus on what your code does without worrying so much about where it runs. You can deploy your application across multiple execution environments, locally on your laptop, across a pool of machines via SSH, or in any cloud! Additionally, the Service Weaver runtime can reduce infrastructure costs and improve application latency by several orders of magnitude compared to the status quo.
+          -   Characteristics
+               - Segregation of modules. Each module is independent with its own layers such as Domain, Infrastructure and API. Modules are autonomously developed, tested, and deployed, affording the flexibility to employ diverse database solutions
+               - Modularity with loose coupling and high cohesion. Modules exhibit loose interdependence and strong internal cohesion. Communication between modules occurs through APIs, preferably adopting loosely coupled asynchronous communication patterns
+               - Unified Database Schema. The system adheres to a singular database schema, in contrast to microservices, where each microservice necessitates an individual schema
+               - Monolithic Deployment Structure. All modules within the modular monolith operate within the same Virtual Machine (VM), or each module may run on dedicated VMs. The scale of modules renders them impractical to be encapsulated within containers
+               - General Structure - structure that exposes module interfaces in two ways: Externally, the module offers an API via REST HTTP or GRPC, with API calls managed by a proxy or gateway. Internally, services access the module through an abstracted interface, enabling information retrieval without direct access to the implementation. This upholds a clear separation of concerns, preserving application processes
+               - Examples are Service Weaver framework where you write your application as a modular monolith and compile it into a single binary. The Service Weaver runtime then splits the binary and deploys it as a set of distributed services. This programming model enables you to focus on what your code does without worrying so much about where it runs. You can deploy your application across multiple execution environments, locally on your laptop, across a pool of machines via SSH, or in any cloud! Additionally, the Service Weaver runtime can reduce infrastructure costs and improve application latency by several orders of magnitude compared to the status quo.
 
          - Micro-services (independent deployability)
                - with  microservices,  both  scalability  and  elasticity  are  maximized  because  of  the  small,  single-purpose,  fine-grained  nature  of  each  separately deployed service (function-level scalability and excellent MTTS)
-  
                - Use Tech stacks that meet the requirement
                - shorter time for deployment
                - New components can be deployed without impacting entire system
                - Outage could be limited to a Service 
              - Common topologies
                  - API REST-based topology
-                 - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small
-                portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
+                 - Application REST-based topology - client requests are received through traditional web-based or fat-client business application screens rather than through a simple API layer. service components tend to be larger, more coarse-grained, and represent a small portion of the overall business application rather than fine-grained, single-action services. This topology is common for small to medium-sized business applications that have a relatively low degree of complexity.
                  - Centralized messaging topology - instead of using REST for remote access, this topology uses a lightweight centralized message broker.message broker found in this topology does not perform any orchestration, transformation, or complex routing; rather, it is just a lightweight transport to access remote service components.
                  - Typically found in larger business applications or applications requiring more sophisticated control over the transport layer between the user interface and the service components. The benefits of this topology over the simple REST-based topology discussed previously are advanced queuing mechanisms, asynchronous messaging, monitoring, error handling, and better overall load balancing and scalability.
 
@@ -1004,42 +1034,35 @@ can provoke network errors, protocol errors, or application-level errors.
 
     - Things to consider in software engineering 
          - I don't know - The reason many of us love software is because we   are lifelong learners, and in software no matter which direction you   look, there are wide vistas of knowledge going off in every direction     and expanding by the day. This means that you can spend decades in your     career, and still have a huge knowledge gap compared to someone who has also spent decades in a seemingly similar role. The sooner you realize     this, the sooner you can start to shed your imposter syndrome and     instead delight in learning from and teaching others.
-         - The hardest part is building the right thing - Due to Complexity     and irrationality of the environments. Designing software is mostly a     listening activity, and we often have to be part software engineer, part     psychic, and part anthropologist. Investing in this design process,     whether through dedicated UX team members or by simply educating yourself, will deliver enormous dividends.
-         - Think like Designers - Concentrate on User experience of the     Code. Be it API, UI ; consider who will be using it , why and how it     will be used and what is important to the users.
+         - The hardest part is building the right thing - Due to Complexity and irrationality of the environments. Designing software is mostly a     listening activity, and we often have to be part software engineer, part     psychic, and part anthropologist. Investing in this design process,     whether through dedicated UX team members or by simply educating yourself, will deliver enormous dividends.
+         - Think like Designers - Concentrate on User experience of the Code. Be it API, UI ; consider who will be using it , why and how it     will be used and what is important to the users.
          - the best code is no code or the one you don't have to maintain
          - The primary job of software engineer is delivering value
          - Maintain balance between research and getting started with     implementation
          - be wary of people designing systems who haven't written code in     long time. keep up with developer ecosystem.
-         - Worry less about elegance and perfection; instead strive for     continuous improvement and creating a livable system that your team     enjoys working in and sustainably delivers value.
-         - keep asking questions about assumptions and approaches even if     they sound dumb.
-         - Avoid programmers who wastes time, doesn’t ask for feedback,     doesn’t test their code, doesn’t consider edge cases.
-         - As a senior, you must have opinion about way things should be.     Best way to levelling up for this is explore other languages, libraries,     and paradigms
-         - People expect cheap wins and novelty under the pretext of     "Innovation"
-         - Strive to keep data in clean and orderly fashion as it is likely    to outlive code
-         - Dont bet against older technologies and replace them only if    there is good reason for it (e.g. inherent Limitations)
-         -  Never assume that just because someone isn’t throwing their    opinions in your face that they don’t have anything to add.
+         - Worry less about elegance and perfection; instead strive for continuous improvement and creating a livable system that your team enjoys working in and sustainably delivers value.
+         - keep asking questions about assumptions and approaches even if they sound dumb.
+         - Avoid programmers who wastes time, doesn’t ask for feedback, doesn’t test their code, doesn’t consider edge cases.
+         - As a senior, you must have opinion about way things should be. Best way to levelling up for this is explore other languages, libraries, and paradigms
+         - People expect cheap wins and novelty under the pretext of "Innovation"
+         - Strive to keep data in clean and orderly fashion as it is likely to outlive code
+         - Dont bet against older technologies and replace them only if there is good reason for it (e.g. inherent Limitations)
+         -  Never assume that just because someone isn’t throwing their opinions in your face that they don’t have anything to add.
          -  regularly blog, journal, write documentation and in general do    anything that requires them to keep their written communication skills sharp
          - Stay lean on process until you know you need more
          - Remember team need to feel ownership for them to deliver
          - Always strive to build a smaller system
-           -    Don’t fight the tools: libraries, language, platform, etc. Use as much native constructs as possible. Don’t bend the technology,   but don’t bend the problem either. Pick the right tool for the job or   you’ll have to find the right job for the tool you got.
-           -    You don’t write the code for the machines, you write it for your colleagues and your future self (unless it’s a throw away project   or you’re writing assembly). Write it for the junior ones as a reference.
-           -    Any significant and rewarding piece of software is the result   of collaboration. Communicate effectively and collaborate openly. Trust   others and earn their trust. Respect people more than code. Lead by   example. Convert your followers to leaders.
-           -    Divide and conquer. Write isolated modules with separate   concerns which are loosely coupled. Test each part separately and   together. Keep the tests close to reality but test the edge cases too.        
-           -   Deprecate yourself. Don’t be the go-to person for the code. Optimize it for people to find their way fixing bugs and adding features   to the code. Free yourself to move on to the next project/company. Don’t   own the code or you’ll never grow beyond that.
+           - Don’t fight the tools: libraries, language, platform, etc. Use as much native constructs as possible. Don’t bend the technology,   but don’t bend the problem either. Pick the right tool for the job or   you’ll have to find the right job for the tool you got.
+           - You don’t write the code for the machines, you write it for your colleagues and your future self (unless it’s a throw away project   or you’re writing assembly). Write it for the junior ones as a reference.
+           - Any significant and rewarding piece of software is the result   of collaboration. Communicate effectively and collaborate openly. Trust   others and earn their trust. Respect people more than code. Lead by   example. Convert your followers to leaders.
+           - Divide and conquer. Write isolated modules with separate   concerns which are loosely coupled. Test each part separately and   together. Keep the tests close to reality but test the edge cases too.        
+           - Deprecate yourself. Don’t be the go-to person for the code. Optimize it for people to find their way fixing bugs and adding features   to the code. Free yourself to move on to the next project/company. Don’t   own the code or you’ll never grow beyond that.
            -    Security comes in layers: each layer needs to be assessed   individually but also in relation to the whole. Risk is a business   decision and has direct relation to vulnerability and probability. Each   product/organization has a different risk appetite (the risk they are willing to take for a bigger win). Often these 3 concerns fight with each other: UX, Security, Performance.
            -    Realize that every code has a life cycle and will die.   Sometimes it dies in its infancy before seeing the light of production.  Be OK with letting go. Know the difference between 4 categories of   features and where to put your time and energy: Core: like an engine in      a car. The product is meaningless without it. Necessary: like a car’s   spare wheel. It’s rarely used but when needed, its function decides the   success of the system. Added value: like a car’s cup-holder. It’s nice   to have but the product is perfectly usable without it. Unique Selling   Point: the main reason people should buy your product instead of your   rivals. For example, your car is the best off-road vehicle.
            -    Don’t attach your identity to your code. Don’t attach   anyone’s identity to their code. Realize that people are separate from   the artifacts they produce. Don’t take code criticism personally but be   very careful when criticizing others’ code.
            -    Tech debt is like fast food. Occasionally it’s acceptable but   if you get used to it, it’ll kill the product faster than you think (and   in a painful way).
-           -    When making decisions about the solution all things equal,  go for this priority:
-           **Security > Reliability > Usability (Accessibility & UX) >
-      Maintainability > Simplicity (Developer experience/DX) > Brevity (code
-      length) > Finance > Performance**
-           But don’t follow that blindly because it is dependent on the nature
-      of the product. Like any career, the more experience you earn, the more
-      you can find the right balance for each given situation. For example,
-      when designing a game engine, performance has the highest priority, but
-      when creating a banking app, security is the most important factor.
+           -    When making decisions about the solution all things equal,  go for this priority:But don’t follow that blindly because it is dependent on the nature of the product. Like any career, the more experience you earn, the more you can find the right balance for each given situation. For example,
+      when designing a game engine, performance has the highest priority, but when creating a banking app, security is the most important factor.
            -    Bugs’ genitals are called copy & paste. That’s how they
       reproduce. Always read what you copy, always audit what you import. Bugs
       take shelter in complexity. “Magic” is fine in my dependency but not in
@@ -4164,18 +4187,10 @@ simple applications, the availability and scalability benefits can be usefu
 
 - Using command line tools , with parallel processing, for data
 processing jobs,
--- This problem of unused cores can be fixed with the wonderful xargs
-command, which will allow us to parallelize the grep. Since xargs
-expects input in a certain way, it is safer and easier to use find with
-the -print0 argument in order to make sure that each file name being
-passed to xargs is null-terminated. The corresponding -0 tells xargs to
-expected null-terminated input. Additionally, the -n how many inputs to
-give each process and the -P indicates the number of processes to run in
-parallel. Also important to be aware of is that such a parallel pipeline
-doesn’t guarantee delivery order, but this isn’t a problem if you are
-used to dealing with distributed processing systems. The -F for grep
-indicates that we are only matching on fixed strings and not doing any
-fancy regex.
+-- This problem of unused cores can be fixed with the wonderful xargs command, which will allow us to parallelize the grep. Since xargs expects input in a certain way, it is safer and easier to use find with
+the -print0 argument in order to make sure that each file name being passed to xargs is null-terminated. The corresponding -0 tells xargs to expected null-terminated input. Additionally, the -n how many inputs to
+give each process and the -P indicates the number of processes to run in parallel. Also important to be aware of is that such a parallel pipeline doesn’t guarantee delivery order, but this isn’t a problem if you are
+used to dealing with distributed processing systems. The -F for grep indicates that we are only matching on fixed strings and not doing any fancy regex.
 
 ```
 
@@ -4188,12 +4203,9 @@ print NR, white, black, draw }'
 ```
 
 - Laws of consulting as per Jerry weinberg,
-- The First Law of Consulting states that consultants will never admit
-that they are sick. To get clients to hire you, you must agree that the
-client is competent, and then ask if there are any areas that need
+- The First Law of Consulting states that consultants will never admit that they are sick. To get clients to hire you, you must agree that the client is competent, and then ask if there are any areas that need
 improvement.
-- "The Second Law of Consulting: No matter how it looks at first, it's
-always a people problem.
+- "The Second Law of Consulting: No matter how it looks at first, it's always a people problem.
 
 
 
