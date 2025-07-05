@@ -7,11 +7,19 @@
          - Out of order processing for those tasks (like SMS ec.) that can be delayed or performed in near real time. 
          - API first driven approach for EMI transaction management..
          - Industry standard tools and libraries are used for cross-cutting concerns like logging, tracing,  monitoring etc Load testing based validation and verification for fulfilling specific non-functional objectives related to response time and throughput
+         - Google Cloud Migration 
+           - Phased Migration approach
+             - Assess (App dependencies, Data volume and growth, Traffic patterns, Network topology)
+             - Systems being prioritized with least integration dependencies to highest. Redundant parner interconnect between on-prem DC and Google cloud.
+             - Plan (Hybrid approach with Managed instance group for App servers and Oracle@Gooogle cloud with data syncing using oracle data guard)
+             - Test  (Parallel run with on-premise being primary and GCP standby and then vice-versa)
+             - Future roadmap - Move to containarization (Cloud Run), move from oracle to Cloud SQL. 
+                 
   - Data Hub
     - Platform to offload reporting requirements both near real time and batch from OLTP applications.
-    - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
+    - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as n well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
   - Multi-tenant EMI Platform
-     - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
+approach     - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
      - Led Technical Architecture discussions with Teams with the aim of addressing critical requirements
      - Conducted Technology Proof of concepts to validate assumptions
    - Enterprise level Responsibilities
