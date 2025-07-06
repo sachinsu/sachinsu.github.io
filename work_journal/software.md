@@ -19,7 +19,7 @@
     - Platform to offload reporting requirements both near real time and batch from OLTP applications.
     - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as n well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
   - Multi-tenant EMI Platform
-approach     - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
+    - approach - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
      - Led Technical Architecture discussions with Teams with the aim of addressing critical requirements
      - Conducted Technology Proof of concepts to validate assumptions
    - Enterprise level Responsibilities
@@ -521,6 +521,7 @@ approach     - Ideated and developed Architecture for EMI Platform for Credit Ca
                - Event stream aggregator - Stateful processing of event   streams yielding event streams (Apache Samza, Apache Flink)
 
 - Data Architecture
+  - Tiered Storage -Tiered storage is a method for assigning different categories of data to various types of storage media to reduce overall storage costs and improve the performance and availability of mission-critical applications. A tiered storage architecture categorizes data hierarchically based on its business value, with data ranked by how often it's accessed by users and applications. The data is then assigned to specific storage tiers that are defined by their performance, availability and media costs.
   - FLAIR data principles
          -  Findable - The ability to view which data assets are available, access metadata and other attributes related to governance and compliance
          -  Lineage - The ability to find data origin, trace data back, understand and visualize data as it flows through data sources
@@ -1739,8 +1740,28 @@ approach     - Ideated and developed Architecture for EMI Platform for Credit Ca
 
 
 - Interview Tips 
-       - If the interviewer interrupts you, it's probably because you’re
-  going off track.
+      - important design aspects
+        - Resiliency
+        - Spike mitigation
+        - Simplicity
+        - Customer centricity
+        - Rate limiting
+        - Retries, timeouts, idempotancy   
+      - Technology choice criteria, 
+        - Maintainability 
+        - Team proficiency
+        - Company polic
+        - Cost 
+        - Maturity, support system for Open source code
+      - During interviews
+        -   define data structure before talking capacity planning 
+        - Talk about authentication, API Versioning 
+        - Talk about database design 
+        - components diagram - Does System need API Gateway?
+        - Talk about core functionality of the system and deep dive into it. 
+        - do not disconnect interview from real world 
+        - do not talk about pre-conceived /assumed warchitectures during interviews
+       - If the interviewer interrupts you, it's probably because you’re  going off track.
        - It's more important to cover everything broadly than it is to
   explain every small thing in detail.Interviewers are not looking for
   specific answers with ironclad certainty. They want to see
