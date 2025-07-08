@@ -13,7 +13,7 @@
              - Systems being prioritized with least integration dependencies to highest. Redundant parner interconnect between on-prem DC and Google cloud.
              - Plan (Hybrid approach with Managed instance group for App servers and Oracle@Gooogle cloud with data syncing using oracle data guard)
              - Test  (Parallel run with on-premise being primary and GCP standby and then vice-versa)
-             - Future roadmap - Move to containarization (Cloud Run), move from oracle to Cloud SQL. 
+             - Future roadmap - Move to containerization (Cloud Run), move from oracle to Cloud SQL. 
                  
   - Data Hub
     - Platform to offload reporting requirements both near real time and batch from OLTP applications.

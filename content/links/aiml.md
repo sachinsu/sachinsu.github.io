@@ -22,6 +22,7 @@ Useful links related from Generative AI, ML space
 
 ## Articles
 
+- [AI native software Engineer in 2025](https://addyo.substack.com/p/tbe-ai-native-software-engineer)
 - [My LLM codegen workflow atm](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
 - [How to build your own perplexity for any dataset](https://jnnnthnn.com/how-to-build-your-own-perplexity-for-any-dataset)
 - [How a Machine Learns](https://janav.wordpress.com/2023/10/10/how-a-machine-learns/)
