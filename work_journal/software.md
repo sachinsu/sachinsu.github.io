@@ -1,3 +1,38 @@
+- Interview Tips 
+      - important design pillars/aspects
+        - Resiliency
+        - Spike mitigation
+        - Simplicity
+        - Customer centricity
+        - Rate limiting
+        - Retries, timeouts
+        - idempotancy   
+      - Technology choice criteria, 
+        - Maintainability 
+        - Team proficiency
+        - Company policy
+        - Cost 
+        - for Open source code - Maturity, support system 
+      - During interviews
+        - define data structure before talking about capacity planning 
+        - Talk about authentication, API Versioning 
+        - Talk about database design 
+        - components diagram - Does System need API Gateway?
+        - Talk about core functionality of the system and deep dive into it. 
+        - do not disconnect interview from real world 
+        - do not talk about pre-conceived /assumed architectures during interviews
+       - If the interviewer interrupts you, it's probably because you’re  going off track.
+       - It's more important to cover everything broadly than it is to  explain every small thing in detail.Interviewers are not looking for specific answers with ironclad certainty. They want to see   well-reasoned, qualified decisions based on engineering trade-offs.
+       - Whatever decision you make, explain why. In a system design  interview, why is more important than what. For anything you say, be  prepared to explain why.
+       - Your interviewer cares less about whether your design is good in itself, and more about whether you are able to talk about the trade-offs   (positives and negatives) of your decisions.
+       - For a System design interview, Interviewer looks for,
+               - a broad, base-level understanding of system design fundamentals.
+               - back-and-forth about problem constraints and parameters.
+               - well-reasoned, qualified decisions based on engineering trade-offs.
+               - the unique direction your experience and decisions taken.
+               - a holistic view of a system and its users.
+               - Not interested in deep expertise in the given problem  domain.
+
 - Current Experience 
   - Closed loop EMI Cards Issuance and transaction processing Platform for Large NBFC in India
        - Implemented Architecture based on Service based, Clean Architecture paradigm on  Microsoft platform.  Oracle 21c RAC (Active-Active) is used as  OLTP data store while EDB PostgreSQL is used for MIS Reporting. REDIS is used for caching and Talend/Airbyte for ETL. Integration with Azure IAM for single sign-on for internal users. 
@@ -23,7 +58,7 @@
      - Led Technical Architecture discussions with Teams with the aim of addressing critical requirements
      - Conducted Technology Proof of concepts to validate assumptions
    - Enterprise level Responsibilities
-     - Technical SME for all platforms built on various tech. stacks like .NET, Java, PHP and databases like   Oracle, PostgreSQL. Evaluation and roll out of automated CI/CD processes across projects.
+     - Technical SME for all platforms built on various tech. stacks like .NET, Java, PHP and databases like  Oracle, PostgreSQL. Evaluation and roll out of automated CI/CD processes across projects.
      - Creation and Maintenance of Technical Capability Model in terms of Reference Architectures, Best practices,Tools, Assets,Standards, Security Aspects (PCI-DSS Compliance). Leveraging Threat modelling tools for early identification and mitigation.
      - Overall Ownership of non-functional aspects like scalability, high availability, Maintainability, for all technology platforms. Evaluation of COTS and Open source products, libraries and tools.
      - Infrastructure Sizing for New Opportunities and customer demos and workshops
@@ -67,7 +102,7 @@
         - Data backup and Archiving 
 
 -  Architecture Roadmap,
-     - **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
+     - **Security > Reliability > Usability (AcFcessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
 
      | Objective | Notes | Existing Infrastructure | Business Requirement | Technical Requirement | solution Component |
 
@@ -213,6 +248,14 @@
                        - Make new load and concurrency tests using the new number of requests per second
                        - Monitor the memory and CPU, and define the stress point
 
+  - Decision-making framework
+     - A key aspect of design is using a consistent process to make decisions. An architect should approach both initial and incremental design with rigor.
+     - Identify expected decisions. Use learned experiences to help with decision identification. Log all decisions that you plan to make.
+     - Make informed decisions. Consider limitations, constraints, tradeoffs, effort, reversibility, and risk. Consult resources such as product feature comparisons, decision trees, and benchmarks when narrowing technology choices. Inputs from tools like decision trees and feature matrices are purely directional; they do not replace your role in decision making. Combine documented characteristics with evidence from your proofs of concept and testing.
+     - Document decisions in an architecture decision record (ADR). Document the justification along with each decision.
+     - Follow up on implementation. Communicate and implement all decisions. Learn from the implementation to help guide future decisions. Look for areas where a failure to identify decisions introduced risk.
+
+  - Architect's checklist, https://learn.microsoft.com/en-us/azure/well-architected/architect-role/checklist
 
   - Generative AI
     - Context Engineering 
@@ -1338,17 +1381,18 @@
         performance can usually be achieved when critical production features
         have been disabled. Things like backups, High Availability (HA) or
         security features (like TLS) can all impact performance.
-                 - How big is the dataset that was used? Does it fit in RAM or
-        not? Reading from disk is much slower than reading from RAM. So, it
-        matters a lot for the results of a benchmark if all the data fits in RAM.
-                 - Is the hardware excessively expensive? Obviously a database
-        that costs $500 per month is expected to perform worse than one that
-        costs $50,000 per month.
-                 - What benchmark implementation was used? Many vendors publish
-        results of a TPC benchmark specification, where the benchmark was run
-        using a custom implementation of the spec. These implementations have
-        often not been validated and thus might not implement the specification
-        correctly.
+                 - How big is the dataset that was used? Does it fit in RAM or not? Reading from disk is much slower than reading from RAM. So, it matters a lot for the results of a benchmark if all the data fits in RAM.
+                 - Is the hardware excessively expensive? Obviously a database that costs $500 per month is expected to perform worse than one that costs $50,000 per month.
+                 - What benchmark implementation was used? Many vendors publish results of a TPC benchmark specification, where the benchmark was run using a custom implementation of the spec. These implementations have often not been validated and thus might not implement the specification correctly.
+
+     - Postgresql Learnings for scalable system (OpenAI)
+       - Issues inherent to postgresql due to MVCC 
+         - Tuning automatic garbage collection (vacuuming) can be complex, as each write operation generates a complete new version, and index access may require additional visibility checks.
+         - Using lazy writes to smooth out write burts 
+         - set idle_in_transaction_session_timeout  to avoid blocking on long running transactions 
+         - set statement_timeout 
+         - set client-side timeout 
+         - When a NOTIFY query is issued during a transaction, it acquires a global lock on the entire database (ref) during the commit phase of the transaction, effectively serializing all commits. Under many concurrent writers, this results in immense load and major downtime. Don’t use LISTEN/NOTIFY if you want your database to scale to many writers.
 
       - PostgreSQL Connection Pool size 
          - If a server is provisioned with 128 cores. With hyperthreading on, it can handle 256 processes. EDB expects factor of 4 to be acceptable while setting max_connections parameter. 
@@ -1551,6 +1595,14 @@
 
 
 - API 
+    - HATEOAS - Fundamental principal of REST, requiring that the client dynamically discover actions and interactions through hypermedia links embedded in server responses, rathen than relying on out-of-band knowledge. e.g. 
+      - {
+          "orderid":123, 
+          "_links": { 
+               "self": {"href":"/orders/123"},
+               "cancel": {"href":"/orders/123/cancel","method":"post"}
+          }
+          }
      - Idempotency in API,
                - idempotency key is usually a unique value that is generated by the client and expires after a certain period of time. A UUID is commonly used as an idempotency key and it is recommended
                - To perform an idempotent payment request, an idempotency keyis added to the HTTP header <idempotency-key: key_value>
@@ -1738,50 +1790,6 @@
                     - Simplicity is more important (No need for parallelism)
                     - Primarily CPU based instead of I/o (Network, Disk etc.)
 
-
-- Interview Tips 
-      - important design aspects
-        - Resiliency
-        - Spike mitigation
-        - Simplicity
-        - Customer centricity
-        - Rate limiting
-        - Retries, timeouts, idempotancy   
-      - Technology choice criteria, 
-        - Maintainability 
-        - Team proficiency
-        - Company polic
-        - Cost 
-        - Maturity, support system for Open source code
-      - During interviews
-        -   define data structure before talking capacity planning 
-        - Talk about authentication, API Versioning 
-        - Talk about database design 
-        - components diagram - Does System need API Gateway?
-        - Talk about core functionality of the system and deep dive into it. 
-        - do not disconnect interview from real world 
-        - do not talk about pre-conceived /assumed warchitectures during interviews
-       - If the interviewer interrupts you, it's probably because you’re  going off track.
-       - It's more important to cover everything broadly than it is to
-  explain every small thing in detail.Interviewers are not looking for
-  specific answers with ironclad certainty. They want to see
-  well-reasoned, qualified decisions based on engineering trade-offs.
-       - Whatever decision you make, explain why. In a system design
-  interview, why is more important than what. For anything you say, be
-  prepared to explain why.
-       - Your interviewer cares less about whether your design is good in
-  itself, and more about whether you are able to talk about the trade-offs
-  (positives and negatives) of your decisions.
-       - For a System design interview, Interviewer looks for,
-               - a broad, base-level understanding of system design
-  fundamentals.
-               - back-and-forth about problem constraints and parameters.
-               - well-reasoned, qualified decisions based on engineering
-  trade-offs.
-               - the unique direction your experience and decisions take them.
-               - a holistic view of a system and its users.
-               - Not interested in deep expertise in the given problem
-  domain.
 
     -  STAR (Situation, Task, Action, Result):
          - “What was the situation?”
