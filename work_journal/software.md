@@ -1,38 +1,3 @@
-- Interview Tips 
-      - important design pillars/aspects
-        - Resiliency
-        - Spike mitigation
-        - Simplicity
-        - Customer centricity
-        - Rate limiting
-        - Retries, timeouts
-        - idempotancy   
-      - Technology choice criteria, 
-        - Maintainability 
-        - Team proficiency
-        - Company policy
-        - Cost 
-        - for Open source code - Maturity, support system 
-      - During interviews
-        - define data structure before talking about capacity planning 
-        - Talk about authentication, API Versioning 
-        - Talk about database design 
-        - components diagram - Does System need API Gateway?
-        - Talk about core functionality of the system and deep dive into it. 
-        - do not disconnect interview from real world 
-        - do not talk about pre-conceived /assumed architectures during interviews
-       - If the interviewer interrupts you, it's probably because you’re  going off track.
-       - It's more important to cover everything broadly than it is to  explain every small thing in detail.Interviewers are not looking for specific answers with ironclad certainty. They want to see   well-reasoned, qualified decisions based on engineering trade-offs.
-       - Whatever decision you make, explain why. In a system design  interview, why is more important than what. For anything you say, be  prepared to explain why.
-       - Your interviewer cares less about whether your design is good in itself, and more about whether you are able to talk about the trade-offs   (positives and negatives) of your decisions.
-       - For a System design interview, Interviewer looks for,
-               - a broad, base-level understanding of system design fundamentals.
-               - back-and-forth about problem constraints and parameters.
-               - well-reasoned, qualified decisions based on engineering trade-offs.
-               - the unique direction your experience and decisions taken.
-               - a holistic view of a system and its users.
-               - Not interested in deep expertise in the given problem  domain.
-
 - Current Experience 
   - Closed loop EMI Cards Issuance and transaction processing Platform for Large NBFC in India
        - Implemented Architecture based on Service based, Clean Architecture paradigm on  Microsoft platform.  Oracle 21c RAC (Active-Active) is used as  OLTP data store while EDB PostgreSQL is used for MIS Reporting. REDIS is used for caching and Talend/Airbyte for ETL. Integration with Azure IAM for single sign-on for internal users. 
@@ -42,23 +7,15 @@
          - Out of order processing for those tasks (like SMS ec.) that can be delayed or performed in near real time. 
          - API first driven approach for EMI transaction management..
          - Industry standard tools and libraries are used for cross-cutting concerns like logging, tracing,  monitoring etc Load testing based validation and verification for fulfilling specific non-functional objectives related to response time and throughput
-         - Google Cloud Migration 
-           - Phased Migration approach
-             - Assess (App dependencies, Data volume and growth, Traffic patterns, Network topology)
-             - Systems being prioritized with least integration dependencies to highest. Redundant parner interconnect between on-prem DC and Google cloud.
-             - Plan (Hybrid approach with Managed instance group for App servers and Oracle@Gooogle cloud with data syncing using oracle data guard)
-             - Test  (Parallel run with on-premise being primary and GCP standby and then vice-versa)
-             - Future roadmap - Move to containerization (Cloud Run), move from oracle to Cloud SQL. 
-                 
   - Data Hub
     - Platform to offload reporting requirements both near real time and batch from OLTP applications.
-    - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as n well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
+    - Architecture is based on using Message queue (RabbitMQ) and API based integration between source systems  and Data Warehousing platform as well as batch approach for bulk data transfer using Talend/Airbyte. PostgreSQL is used as a data store with Data Vault Methodology for modelling and rich Analysis provided using Metabase and Custom Developed Visualization App based on SPA Paradigm.
   - Multi-tenant EMI Platform
-    - approach - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
+     - Ideated and developed Architecture for EMI Platform for Credit Cards, UPI involving onboarding of various entities like Issuers, Acquirers, Brand/OEMs using Services based scalable Architecture
      - Led Technical Architecture discussions with Teams with the aim of addressing critical requirements
      - Conducted Technology Proof of concepts to validate assumptions
    - Enterprise level Responsibilities
-     - Technical SME for all platforms built on various tech. stacks like .NET, Java, PHP and databases like  Oracle, PostgreSQL. Evaluation and roll out of automated CI/CD processes across projects.
+     - Technical SME for all platforms built on various tech. stacks like .NET, Java, PHP and databases like   Oracle, PostgreSQL. Evaluation and roll out of automated CI/CD processes across projects.
      - Creation and Maintenance of Technical Capability Model in terms of Reference Architectures, Best practices,Tools, Assets,Standards, Security Aspects (PCI-DSS Compliance). Leveraging Threat modelling tools for early identification and mitigation.
      - Overall Ownership of non-functional aspects like scalability, high availability, Maintainability, for all technology platforms. Evaluation of COTS and Open source products, libraries and tools.
      - Infrastructure Sizing for New Opportunities and customer demos and workshops
@@ -102,7 +59,7 @@
         - Data backup and Archiving 
 
 -  Architecture Roadmap,
-     - **Security > Reliability > Usability (AcFcessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
+     - **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
 
      | Objective | Notes | Existing Infrastructure | Business Requirement | Technical Requirement | solution Component |
 
@@ -248,14 +205,6 @@
                        - Make new load and concurrency tests using the new number of requests per second
                        - Monitor the memory and CPU, and define the stress point
 
-  - Decision-making framework
-     - A key aspect of design is using a consistent process to make decisions. An architect should approach both initial and incremental design with rigor.
-     - Identify expected decisions. Use learned experiences to help with decision identification. Log all decisions that you plan to make.
-     - Make informed decisions. Consider limitations, constraints, tradeoffs, effort, reversibility, and risk. Consult resources such as product feature comparisons, decision trees, and benchmarks when narrowing technology choices. Inputs from tools like decision trees and feature matrices are purely directional; they do not replace your role in decision making. Combine documented characteristics with evidence from your proofs of concept and testing.
-     - Document decisions in an architecture decision record (ADR). Document the justification along with each decision.
-     - Follow up on implementation. Communicate and implement all decisions. Learn from the implementation to help guide future decisions. Look for areas where a failure to identify decisions introduced risk.
-
-  - Architect's checklist, https://learn.microsoft.com/en-us/azure/well-architected/architect-role/checklist
 
   - Generative AI
     - Context Engineering 
@@ -564,7 +513,6 @@
                - Event stream aggregator - Stateful processing of event   streams yielding event streams (Apache Samza, Apache Flink)
 
 - Data Architecture
-  - Tiered Storage -Tiered storage is a method for assigning different categories of data to various types of storage media to reduce overall storage costs and improve the performance and availability of mission-critical applications. A tiered storage architecture categorizes data hierarchically based on its business value, with data ranked by how often it's accessed by users and applications. The data is then assigned to specific storage tiers that are defined by their performance, availability and media costs.
   - FLAIR data principles
          -  Findable - The ability to view which data assets are available, access metadata and other attributes related to governance and compliance
          -  Lineage - The ability to find data origin, trace data back, understand and visualize data as it flows through data sources
@@ -672,6 +620,11 @@
          - WARNING: Doesn’t necessarily point to a failure, but an unexpected behavior that should be investigated.
          - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
          - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
+    - scenario based 
+	- The requirement is An online retailer runs a flash sale with 500 units of a hot product. Within minutes, they've processed 742 orders. Their inventory shows -242 units. You are 		using postgresql and thinking about using locks on inventory table to overcome this issue however it impacts throughput. What are different approaches to handle this?
+		- Use optimistic locking - Have version being maintained in inventory table and check version every time stock level is to be updated. Retry if stock level update fails due 		to retries.  It offers a good balance of performance and data consistency, pushing the complexity to the application for retries, which is often manageable.
+		- Queue-Based Order Processing (Where all updates are queued and processed by separate worker(s)) is a strong contender, especially if the volume of orders during the flash sale is truly enormous. It provides excellent scalability and resilience, but at the cost of increased architectural complexity and eventual consistency.
+		- Avoid pessimistic locking using 'For update'  as its not scalable 
 
     - Web Application Monitoring
          - Metrics to observe for Web Applications
@@ -793,8 +746,6 @@
        - Privacy and PII Concerns: Special mention of issues regarding user privacy or anonymity, including plans for handling personally identifiable information (PII) in accordance with applicable rules and regulations.
        - Compliance Details: Compliance and audit plans for meeting regulatory obligations under SOX, HIPPA, PCI, FISMA, or similar laws.
        - Launch Details: Roll-out or launch operational details and requirements.
-
-
 
 
 =========================================================================================================
@@ -1381,18 +1332,17 @@
         performance can usually be achieved when critical production features
         have been disabled. Things like backups, High Availability (HA) or
         security features (like TLS) can all impact performance.
-                 - How big is the dataset that was used? Does it fit in RAM or not? Reading from disk is much slower than reading from RAM. So, it matters a lot for the results of a benchmark if all the data fits in RAM.
-                 - Is the hardware excessively expensive? Obviously a database that costs $500 per month is expected to perform worse than one that costs $50,000 per month.
-                 - What benchmark implementation was used? Many vendors publish results of a TPC benchmark specification, where the benchmark was run using a custom implementation of the spec. These implementations have often not been validated and thus might not implement the specification correctly.
-
-     - Postgresql Learnings for scalable system (OpenAI)
-       - Issues inherent to postgresql due to MVCC 
-         - Tuning automatic garbage collection (vacuuming) can be complex, as each write operation generates a complete new version, and index access may require additional visibility checks.
-         - Using lazy writes to smooth out write burts 
-         - set idle_in_transaction_session_timeout  to avoid blocking on long running transactions 
-         - set statement_timeout 
-         - set client-side timeout 
-         - When a NOTIFY query is issued during a transaction, it acquires a global lock on the entire database (ref) during the commit phase of the transaction, effectively serializing all commits. Under many concurrent writers, this results in immense load and major downtime. Don’t use LISTEN/NOTIFY if you want your database to scale to many writers.
+                 - How big is the dataset that was used? Does it fit in RAM or
+        not? Reading from disk is much slower than reading from RAM. So, it
+        matters a lot for the results of a benchmark if all the data fits in RAM.
+                 - Is the hardware excessively expensive? Obviously a database
+        that costs $500 per month is expected to perform worse than one that
+        costs $50,000 per month.
+                 - What benchmark implementation was used? Many vendors publish
+        results of a TPC benchmark specification, where the benchmark was run
+        using a custom implementation of the spec. These implementations have
+        often not been validated and thus might not implement the specification
+        correctly.
 
       - PostgreSQL Connection Pool size 
          - If a server is provisioned with 128 cores. With hyperthreading on, it can handle 256 processes. EDB expects factor of 4 to be acceptable while setting max_connections parameter. 
@@ -1595,14 +1545,6 @@
 
 
 - API 
-    - HATEOAS - Fundamental principal of REST, requiring that the client dynamically discover actions and interactions through hypermedia links embedded in server responses, rathen than relying on out-of-band knowledge. e.g. 
-      - {
-          "orderid":123, 
-          "_links": { 
-               "self": {"href":"/orders/123"},
-               "cancel": {"href":"/orders/123/cancel","method":"post"}
-          }
-          }
      - Idempotency in API,
                - idempotency key is usually a unique value that is generated by the client and expires after a certain period of time. A UUID is commonly used as an idempotency key and it is recommended
                - To perform an idempotent payment request, an idempotency keyis added to the HTTP header <idempotency-key: key_value>
@@ -1790,6 +1732,30 @@
                     - Simplicity is more important (No need for parallelism)
                     - Primarily CPU based instead of I/o (Network, Disk etc.)
 
+
+- Interview Tips 
+       - If the interviewer interrupts you, it's probably because you’re
+  going off track.
+       - It's more important to cover everything broadly than it is to
+  explain every small thing in detail.Interviewers are not looking for
+  specific answers with ironclad certainty. They want to see
+  well-reasoned, qualified decisions based on engineering trade-offs.
+       - Whatever decision you make, explain why. In a system design
+  interview, why is more important than what. For anything you say, be
+  prepared to explain why.
+       - Your interviewer cares less about whether your design is good in
+  itself, and more about whether you are able to talk about the trade-offs
+  (positives and negatives) of your decisions.
+       - For a System design interview, Interviewer looks for,
+               - a broad, base-level understanding of system design
+  fundamentals.
+               - back-and-forth about problem constraints and parameters.
+               - well-reasoned, qualified decisions based on engineering
+  trade-offs.
+               - the unique direction your experience and decisions take them.
+               - a holistic view of a system and its users.
+               - Not interested in deep expertise in the given problem
+  domain.
 
     -  STAR (Situation, Task, Action, Result):
          - “What was the situation?”
