@@ -143,6 +143,23 @@
        - Cost Estimation: Using relevant tools to estimate costs based on the proposed solution.
 
 - Architecture, design learnings, 
+    - Design is about behavior whereas Architecture is about capabilities (Scalability, performance)
+     - Tips for Evolvable architecture (Notes on Building Evolutionary Architectures. | Irrational Exuberance)
+      - “Remove needless variability” through adoption of immutable infrastructure, long-lived -feature flags, and so on.
+      - “Make decisions reversible” by making it easy to undo deploys and such. Prefer immediately shifting traffic off a broken new version to slowly deploying a previous revision. Prefer  flipping flags to disable new features over deployment, etc.
+      - “Prefer evolvable over predictable.” If you optimize for the known challenges for an architecture, you’ll get stuck because there are at least as many unknown challenges as known challenges. It’s better to be able to respond to problems quickly than to cleanly address -what you’re currently aware of.
+      - “Build anticorruption layers.” Mostly this means building good interfaces so you can shift -out the implementation underneath. The act of adding interfaces can be expensive as well, so -balance this with finding the last responsible moment to make the decision.
+      - “Build sacrificial architectures.” Assume that you’ll make tradeoffs that won’t last forever, and be okay with occasionally throwing away your implementations. Uses example of Ebray rewriting from Perl to C++ to Java over course of seven years.
+     -   “Mitigate external change.” For example, don’t rely on global package repositories, but instead pull in copies of packages you need locally. Then you can manage your upgrade timing in addition to owning your build pipeline reliability.
+     -    “Libraries versus frameworks.” Argues against frameworks, since you write code that integrates with frameworks, as opposed to writing code that calls out to libraries. Consequently, there is tighter coupling in frameworks.
+     -     “Version services internally.” Discussed earlier in these notes, don’t leak version identifiers to users, instead inspect the incoming requests and handle them appropriately. Easier for service to manage that complexity than all clients to handle it.
+     -     “Product over project.” Structure your teams, and consequently your architecture, around long-lived products, not to short-lived projects.
+     -     “Dealing with external change.” Your clients (as in, software generating requests to your service) will change their needs over time, define explicit contracts to state these agreements, perhaps as Service Level Objectives.
+     -     “Culture of experimentation.” Evolution is built on structured, measured experimentation, which requires a structured, thoughtful approach.
+     -     Start with low-hanging fruit. Easy wins beget larger wins, start where it’s easy. (I also had a chat earlier this week with Keith Adams who described a power function for which files/systems are frequently changes, so perhaps start where most changes happen.)
+     -     Use fitness functions - a particular type of objective integrity assessment of some architectural characteristics
+          - Atomic - run against a singular context and exercise one particular aspect of the architecture. Eg. asserting valid types on a codebase, check that no incompatible dependencies exists
+          -    Holistic - run against a shared context and exercise a combination of architectural aspects such as security and scalability. e.g. ensuring that no PII Data is published in logs; Monitoring latency due to code change.
   - Design for change
       - Enforce high cohesion and loose coupling
       - Encapsulate Domain knowledge
