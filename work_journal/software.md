@@ -142,9 +142,9 @@
        - Roadmap and Phasing: Defining a migration or implementation roadmap, including pilot projects and iterative deployments.
        - Cost Estimation: Using relevant tools to estimate costs based on the proposed solution.
 
-- Architecture, design learnings, 
-    - Design is about behavior whereas Architecture is about capabilities (Scalability, performance)
-     - Tips for Evolvable architecture (Notes on Building Evolutionary Architectures. | Irrational Exuberance)
+    - Architecture, design learnings,
+      - Design is about behavior whereas Architecture is about capabilities (Scalability, performance)
+       - Tips for Evolvable architecture (Notes on Building Evolutionary Architectures. | Irrational Exuberance)
       - “Remove needless variability” through adoption of immutable infrastructure, long-lived -feature flags, and so on.
       - “Make decisions reversible” by making it easy to undo deploys and such. Prefer immediately shifting traffic off a broken new version to slowly deploying a previous revision. Prefer  flipping flags to disable new features over deployment, etc.
       - “Prefer evolvable over predictable.” If you optimize for the known challenges for an architecture, you’ll get stuck because there are at least as many unknown challenges as known challenges. It’s better to be able to respond to problems quickly than to cleanly address -what you’re currently aware of.
@@ -198,6 +198,11 @@
  
   - Evolvable Architecture 
        - Guidelines
+           - Understand the fragile places within your complex technology stack and automate protections via fitness functions. fitness functions should be used to ensure integrity of integration points.
+           - When coupling points impede evolution or other importance architectural characteristics, break the coupling by forking or duplication.
+           - Don’t become irrationally attached to handcrafted artifacts. 
+           - Reporting in Microservices Architecture  - Many microservices architectures solve the reporting problem by separating behavior, where the isolation of services benefits separation but not consolidation. Architects commonly build these architectures using event streaming or message queues to populate domain “system of record” databases, each embedded within the architectural quantum of the service, using eventual consistency rather than transactional behavior. A set of reporting services also listens to the event stream, populating a denormalized reporting database optimized for reporting. Using eventual consistency frees architects from coordination—a form of coupling from an architectural standpoint—allowing different abstractions for different uses of the application.
+         
           - Reduce needless variability  - Immutable Infrastructure (including Development environment), Pair Programming
           - Make Decisions Reversible - Blue/green deployments, Feature Toggles
           - Prefer evolvable over predictable - Use incidental plumbing like message queues, search engines etc. Avoid "wiring" too much to external dependencies by isolating them behind interfaces  .
