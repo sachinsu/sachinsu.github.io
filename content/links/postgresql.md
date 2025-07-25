@@ -93,12 +93,13 @@ draft: false
 - [Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked](https://www.enterprisedb.com/blog/listening-postgres-how-listen-and-notify-syntax-promote-high-availability-application-layer)
 - [Queues in PostgreSQL](https://www.youtube.com/watch?v=WIRy1Ws47ic&list=PLlrxD0HtieHjSzUZYCMvqffEU5jykfPTd)
 - [How postgresql stores data on disk](https://drew.silcock.dev/blog/how-postgres-stores-data-on-disk/)
-
+- [Using Postgresql for job queueing and lessons learned](https://www.rudderstack.com/blog/scaling-postgres-queue/)
 
 ## Interesting Extensions/Products
 
 - [Using duckdb and postgres together](https://motherduck.com/blog/postgres-duckdb-options)
 - [Collection of Postgresql related tools](https://gist.github.com/cpursley/c8fb81fe8a7e5df038158bdfe0f06dbb)
+- 
 - [PostgreSql based Message queue](https://github.com/tembo-io/pgmq)
 - [End-to-end machine learning solution](https://postgresml.org/)
 - [Incrementally update Materialized Views in real-time using Materialize](https://materialize.io/)

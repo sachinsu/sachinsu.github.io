@@ -1627,6 +1627,10 @@
         - Cross cutting concerns - Authorisation, TLS/SSL can be handled at API Gateway layer.
 
          - Features of API Gateway,
+           - Microservices or services based architecture with need for single point of entry  for all APIs
+           - Authentication and Authorization using Tokens (JWT/OAuth2) , key management
+           - Rate limiting
+           - Aggregate responses from services  
              - Reverse proxy or gateway routing. The API Gateway offers a reverse proxy to redirect or route requests (layer 7 routing, usually HTTP requests) to the endpoints of the internal microservices.
              - Requests aggregation. As part of the gateway pattern you can aggregate multiple client requests (usually HTTP requests) targeting multiple internal microservices into a single client request.
              - Cross-cutting concerns or gateway offloading. like
