@@ -53,7 +53,8 @@ My current Favorite Language
 - [TLS and Go](https://eli.thegreenplace.net/2021/go-https-servers-with-tls/#id8)
 - [Effectively using Systemd for setting up HTTP Server](https://mgdm.net/weblog/systemd/)
 - [Useful Code patterns](https://betterprogramming.pub/7-code-patterns-in-go-i-cant-live-without-f46f72f58c4b)
-
+- [Streams onboarding plan for using Go in 10 weeks](https://stream-wiki.notion.site/Stream-Go-10-Week-Backend-Eng-Onboarding-625363c8c3684753b7f2b7d829bcd67a)
+  
 ### Libraries, Tools
 
 - [HTMX + Go in single binary](https://github.com/maddalax/htmgo)

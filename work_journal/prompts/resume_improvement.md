@@ -13,25 +13,30 @@ Instructions:
 
 Job Description:
 ```md
-Key Responsibilities
-Leadership: Provide strategic leadership for the India Solutions Architecture team, overseeing operations in the region
-Business Strategy: Develop and execute comprehensive strategies to drive business growth, expand the customer base, and increase revenue in the India region
-Market Expansion: Identify and evaluate opportunities to enter new markets and expand MongoDB's presence in the India region
-Customer Engagement: Lead efforts to engage with new customers and partners through effective solution architecture collaborating closely with sales and marketing teams
-Revenue Growth: Drive initiatives to increase revenue and achieve business objectives through effective solution consulting
-Cross-functional Collaboration: Collaborate with cross-functional teams, including sales, marketing, and product development, to align business strategies and ensure successful execution
-Team Leadership: Build and develop a high-performing Solutions Architecture team, fostering personal and professional growth within the team worldwide
-Candidate Profile
-20+ years of experience, with 7-10 years of experience in leading presales teams, including first-line managers, with a strong track record of driving growth and achieving business objectives on a global scale
-Demonstrated success in developing and executing business strategies that result in increased revenue and market expansion
-Goal-oriented with a history of achieving and exceeding business targets
-Driven and passionate about driving success in the Solution Architecture role within the India region
-Excellent strategic thinking and problem-solving skills
-Strong communication and leadership abilities
-Willingness to travel internationally, as needed
-A Bachelor’s degree or equivalent work experience
-To drive the personal growth and business impact of our employees, we’re committed to developing a supportive and enriching culture for everyone. From employee affinity groups, to fertility assistance and a generous parental leave policy, we value our employees’ wellbeing and want to support them along every step of their professional and personal journeys. Learn more about what it’s like to work at MongoDB, and help us make an impact on the world!
+What You'll Do:
 
+ Architect and design highly scalable and robust application solutions to support Global Business Consulting (GBC)'s data-driven consulting offerings
+ Evaluate and integrate new technologies into GBC's technology stack to drive innovation
+ Provide technical guidance and mentorship to the development teams across the full lifecycle
+ Collaborate with cross-functional teams to understand business requirements and propose optimal technical solutions
+ Establish best practices, standards, and governance for application development and data management
+
+
+What We're Looking For:
+
+10+ years of software development experience on full-stack enterprise systems with high availability and performance requirements.
+
+ Solid background in React, REST APIs, .NET Core, Python, CI/CD, and SQL
+ Hands-on experience with foundational AWS services
+ Understanding of serverless technologies, services, and container technologies (Docker, Kubernetes, etc.)
+ Mandatory 5+ years of expertise in BI/Data platforms, data modelling, ETL processes, and data visualization tools like Tableau, Alteryx
+ AI/ML experience a plus
+ Experience with agile development methodologies and DevOps practices
+ Excellent problem-solving, analytical, and communication abilities
+ Bachelor's degree in Computer Science, Engineering or a related technical field
+ Self-starter team player, with experience and ability to work with geographically dispersed teams
+ 
+```
 
 Original Resume:
 ```md
