@@ -9,19 +9,19 @@
 		<meta property="og:url" content="http://localhost:1313/posts/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content="Posts">
-  <meta property="og:description" content="A technical blog ">
+  <meta property="og:description" content="A technical blog">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 		
   <meta itemprop="name" content="Posts">
-  <meta itemprop="description" content="A technical blog ">
+  <meta itemprop="description" content="A technical blog">
   <meta itemprop="datePublished" content="2025-06-01T01:00:00+05:30">
   <meta itemprop="dateModified" content="2025-09-15T01:00:00+05:30">
 		
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
-  <meta name="twitter:description" content="A technical blog ">
+  <meta name="twitter:description" content="A technical blog">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -104,6 +104,23 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/ninjabuildsystem/" rel="bookmark">
+			Ninja - Using lightweight build system for Go projects 
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-10-27T10:25:04&#43;05:30">Oct 27 2020</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h2 id="background">Background</h2>
+<p>I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.</p>
+<p>Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/urlhealthchecks/" rel="bookmark">
 			Validating urls from &#39;Useful Links&#39; section using bash / command line tools
 			</a>
@@ -120,6 +137,7 @@
 >https://sachinsu.github.io</a> few months back .</p>
 <p>In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.</p>
 <p>As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.</p>
+<p>So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -166,6 +184,25 @@
     
     target=_blank rel="noopener noreferrer"
 >Golang</a> in response to it.</p>
+<p>For detailed requirements, refer <a href=https://github.com/balajis/twitter-export
+    
+    target=_blank rel="noopener noreferrer"
+>here</a></p>
+<h2 id="approach">Approach</h2>
+<p>In Brief,</p>
+<ul>
+<li>
+<p>CLI should,</p>
+<ul>
+<li>accept arguments like Twitter API Key,Auth token, DM Message</li>
+<li>Download all followers (with profile details)</li>
+<li>Rank them by Criteria (e.g. Location)</li>
+<li>Send each follower a DM with provided message (upto daily DM Limit)</li>
+<li>be easy to use and maintain</li>
+</ul>
+</li>
+<li>
+<p>Notes,</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -187,6 +224,28 @@
     
     target=_blank rel="noopener noreferrer"
 >SOC</a> Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.</p>
+<p>While all our .NET applications adhere to below guidelines,</p>
+<ul>
+<li><a href=https://support.microsoft.com/en-in/help/891028/asp-net-security-overview
+    
+    target=_blank rel="noopener noreferrer"
+>ASP.NET Security Overview</a></li>
+<li><a href=https://docs.microsoft.com/en-us/dotnet/standard/security/secure-coding-guidelines
+    
+    target=_blank rel="noopener noreferrer"
+>Secure Coding Guidelines</a></li>
+<li><a href=https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html
+    
+    target=_blank rel="noopener noreferrer"
+>Security Guidelines by OWASP</a></li>
+</ul>
+<p>We also use tools like <a href=https://www.snyk.io/
+    
+    target=_blank rel="noopener noreferrer"
+>Snyk</a> to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline. In spite of above, we do come across  vulnerabilities identified by SOC Team which we needs to be addressed quickly. SOC team uses tools such as <a href=https://portswigger.net/burp
+    
+    target=_blank rel="noopener noreferrer"
+>Burp Suite</a>.</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -309,6 +368,20 @@
 <li>Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks</li>
 </ul>
 <p>What if it is possible to Benchmark code for,</p>
+<ul>
+<li>Set of varying parameter(s)</li>
+<li>Different runtimes (.NET Framework versions, .NET core, Mono etc.) with option to Benchmark it</li>
+<li>Observe Memory Allocations for diagnostics</li>
+<li>Get Detailed report on execution timeline</li>
+<li>Have it as part of test suite so that it can be easily executed with every iteration involving optimized code to get immediate feedback</li>
+</ul>
+<p>Enter <a href=https://benchmarkdotnet.org/
+    
+    target=_blank rel="noopener noreferrer"
+>BenchmarkDotNet</a>, a Powerful .NET library for benchmarking. It is used by <a href=https://github.com/dotnet/performance
+    
+    target=_blank rel="noopener noreferrer"
+>DotNET</a> Team, Roslyn, ASP.NET Core and many other projects.</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -326,23 +399,6 @@
 		<h2 id="background">Background</h2>
 <p>A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.</p>
 <p>During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom&hellip;. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/channelsforproducerconsumer/" rel="bookmark">
-			Using Channels for High performance Producer consumer implementation
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-02-12T10:25:04&#43;05:30">Feb 12 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<h2 id="background">Background</h2>
-<p>Recently, i got involved in assignment where in  an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100+ transactions per second.</p>
-<p>This application is developed in .NET Framework + .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).</p>
 	</div>
 </article>
 </main>
@@ -385,11 +441,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/comparearchitecturestyles/">Clean Architecture, Modular Monolith and Vertical Slice Architecture </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/genaidb/">Exploring MCP Toolbox for Databases: A New Era of Database Querying</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/outoforder/">Taming Time: Strategies for Out-of-Order and Delayed Processing</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 		</ul>
 	</div>
 </div>
@@ -401,6 +457,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/.net-framework/" title=".Net Framework">.Net Framework</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="Analytics">Analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/api/" title="API">API</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/architecture/" title="Architecture">Architecture</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asmx/" title="ASMX">ASMX</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asynchronous/" title="Asynchronous">Asynchronous</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation</a>
@@ -450,6 +507,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/message-broker/" title="Message-Broker">Message-Broker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microservices/" title="MicroServices">MicroServices</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft/" title="Microsoft">Microsoft</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/modularity/" title="Modularity">Modularity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/msbuild/" title="Msbuild">Msbuild</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
@@ -477,6 +535,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="Sed">Sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/semantickernel/" title="Semantickernel">Semantickernel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/services/" title="Services">Services</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="Shopify">Shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/soap/" title="SOAP">SOAP</a>

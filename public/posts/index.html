@@ -9,19 +9,19 @@
 		<meta property="og:url" content="http://localhost:1313/posts/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content="Posts">
-  <meta property="og:description" content="A technical blog ">
+  <meta property="og:description" content="A technical blog">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 		
   <meta itemprop="name" content="Posts">
-  <meta itemprop="description" content="A technical blog ">
+  <meta itemprop="description" content="A technical blog">
   <meta itemprop="datePublished" content="2025-06-01T01:00:00+05:30">
   <meta itemprop="dateModified" content="2025-09-15T01:00:00+05:30">
 		
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
-  <meta name="twitter:description" content="A technical blog ">
+  <meta name="twitter:description" content="A technical blog">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -104,6 +104,30 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/comparearchitecturestyles/" rel="bookmark">
+			Clean Architecture, Modular Monolith and Vertical Slice Architecture 
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-09-15T01:00:00&#43;05:30">Sep 15 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h2 id="introduction">Introduction</h2>
+<p>Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,</p>
+<ul>
+<li>Functional requirements</li>
+<li>Quality attributes (performance, scalability, availability etc.)</li>
+<li>Agility (Need to respond fluently to changes)</li>
+<li>Constraints (Deployment platform)</li>
+<li>Principles (Automated testing, Automated deployment etc.)</li>
+</ul>
+<p>In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant,</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/genaidb/" rel="bookmark">
 			Exploring MCP Toolbox for Databases: A New Era of Database Querying
 			</a>
@@ -155,6 +179,9 @@
 <p>So Lets Start.</p>
 <h2 id="approach">Approach</h2>
 <p>Lets assume that this typical use case requires,</p>
+<ul>
+<li>
+<p>fetching data from database for the purpose of merging placeholders in a Template and perform mail merge</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -202,6 +229,7 @@
 <p>The requirement is as simple as consuming REST API from a Application over TLS.</p>
 <h2 id="problem-statement">Problem Statement</h2>
 <p>The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.</p>
+<p>During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error &ldquo;The request was aborted: Could not create SSL/TLS secure channel&rdquo;. But it works fine with other tools like curl, PostMan or even from a Web Browser.</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -262,6 +290,9 @@
 >Fake</a></li>
 </ul>
 <p>Happy Code building !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
 	</div>
 </article><article class="list__item post">
 	
@@ -323,34 +354,6 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
     target=_blank rel="noopener noreferrer"
 >Go</a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.</p>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/dbre/" rel="bookmark">
-			Database Reliability Engineering - My Notes
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-09-05T01:00:00&#43;05:30">Sep 5 2021</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<h2 id="introduction">Introduction</h2>
-<p>I have been reading excellent <a href=https://www.oreilly.com/library/view/database-reliability-engineering/9781491925935/
-    
-    target=_blank rel="noopener noreferrer"
->Database Reliability Engineering</a> book and below are my notes from it.</p>
-<ul>
-<li>
-<p>Key Incentive(s) for Automation</p>
-<ul>
-<li>Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.</li>
-</ul>
-</li>
-<li>
-<p>Important System Characteristics</p>
-	</div>
 </article>
 </main>
 
@@ -391,11 +394,11 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/comparearchitecturestyles/">Clean Architecture, Modular Monolith and Vertical Slice Architecture </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/genaidb/">Exploring MCP Toolbox for Databases: A New Era of Database Querying</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/outoforder/">Taming Time: Strategies for Out-of-Order and Delayed Processing</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 		</ul>
 	</div>
 </div>
@@ -407,6 +410,7 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 		<a class="widget-taglist__link widget__link btn" href="/tags/.net-framework/" title=".Net Framework">.Net Framework</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="Analytics">Analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/api/" title="API">API</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/architecture/" title="Architecture">Architecture</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asmx/" title="ASMX">ASMX</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asynchronous/" title="Asynchronous">Asynchronous</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation</a>
@@ -456,6 +460,7 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 		<a class="widget-taglist__link widget__link btn" href="/tags/message-broker/" title="Message-Broker">Message-Broker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microservices/" title="MicroServices">MicroServices</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft/" title="Microsoft">Microsoft</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/modularity/" title="Modularity">Modularity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/msbuild/" title="Msbuild">Msbuild</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
@@ -483,6 +488,7 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="Sed">Sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/semantickernel/" title="Semantickernel">Semantickernel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/services/" title="Services">Services</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="Shopify">Shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/soap/" title="SOAP">SOAP</a>

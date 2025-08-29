@@ -380,31 +380,31 @@ Statistics        Avg      Stdev        Max
 <table>
   <thead>
       <tr>
-          <th style="text-align: left">Criteria</th>
-          <th style="text-align: left">Description</th>
-          <th style="text-align: left">SQLite</th>
+          <th>Criteria</th>
+          <th>Description</th>
+          <th>SQLite</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">ACID Guarantees</td>
-          <td style="text-align: left">Is Database expected to provide Strong Consistency guarantees? <!-- raw HTML omitted --> (<em>this may not be required for every use case</em>)</td>
-          <td style="text-align: left">Yes.<!-- raw HTML omitted -->Note that, there is no isolation between operations that occur within the same database connection.</td>
+          <td>ACID Guarantees</td>
+          <td>Is Database expected to provide Strong Consistency guarantees? <!-- raw HTML omitted --> (<em>this may not be required for every use case</em>)</td>
+          <td>Yes.<!-- raw HTML omitted -->Note that, there is no isolation between operations that occur within the same database connection.</td>
       </tr>
       <tr>
-          <td style="text-align: left">Data Durability</td>
-          <td style="text-align: left">Does Database maintain data in durable ,consistent way?</td>
-          <td style="text-align: left">Yes</td>
+          <td>Data Durability</td>
+          <td>Does Database maintain data in durable ,consistent way?</td>
+          <td>Yes</td>
       </tr>
       <tr>
-          <td style="text-align: left">Reliability</td>
-          <td style="text-align: left">Does it provide reliable storage ? (Although storage reliability is not limited only to software and often depends on other factors like type of storage, associated hardware.)</td>
-          <td style="text-align: left">Yes</td>
+          <td>Reliability</td>
+          <td>Does it provide reliable storage ? (Although storage reliability is not limited only to software and often depends on other factors like type of storage, associated hardware.)</td>
+          <td>Yes</td>
       </tr>
       <tr>
-          <td style="text-align: left">Availability</td>
-          <td style="text-align: left">Is database highly available?</td>
-          <td style="text-align: left">SQLite being file based, availability is confined to the Node/VM on which it is running. It can be further enhanced using tools like, <a href=https://litestream.io
+          <td>Availability</td>
+          <td>Is database highly available?</td>
+          <td>SQLite being file based, availability is confined to the Node/VM on which it is running. It can be further enhanced using tools like, <a href=https://litestream.io
     
     target=_blank rel="noopener noreferrer"
 >Litestream</a> (which implements change data capture and syncs it with remote storage like AWS S3 or SFTP among others). <a href=https://github.com/rqlite/rqlite
@@ -413,22 +413,22 @@ Statistics        Avg      Stdev        Max
 >rqlite</a> is clustered database based on SQLite.</td>
       </tr>
       <tr>
-          <td style="text-align: left">network partition support</td>
-          <td style="text-align: left">Does database support partitioning of data?</td>
-          <td style="text-align: left">No. Being a file based data storage system, it is constrained on single node i.e. it can be scaled vertically. However, it can be setup in active + Stand-by backup mode using specific tools. Additionally, other databases (files on same node) can be attached to and accessed by application as one database.</td>
+          <td>network partition support</td>
+          <td>Does database support partitioning of data?</td>
+          <td>No. Being a file based data storage system, it is constrained on single node i.e. it can be scaled vertically. However, it can be setup in active + Stand-by backup mode using specific tools. Additionally, other databases (files on same node) can be attached to and accessed by application as one database.</td>
       </tr>
       <tr>
-          <td style="text-align: left">Tech. Support</td>
-          <td style="text-align: left">In case of <a href=https://g.co/kgs/P4FWMh
+          <td>Tech. Support</td>
+          <td>In case of <a href=https://g.co/kgs/P4FWMh
     
     target=_blank rel="noopener noreferrer"
 >FOSS</a> software, is Community active in terms of releases/bug fixes as well as on discussion forums? <!-- raw HTML omitted --> Are their any providers who provide paid support?</td>
-          <td style="text-align: left">SQLite is mature database. Though, it is open source, it does not accept pull requests from anyone out side of core committers. Having said that, one has to check for availability of  support in case things go north (corrupted database and so on.)</td>
+          <td>SQLite is mature database. Though, it is open source, it does not accept pull requests from anyone out side of core committers. Having said that, one has to check for availability of  support in case things go north (corrupted database and so on.)</td>
       </tr>
       <tr>
-          <td style="text-align: left">Database features</td>
-          <td style="text-align: left">Support for Typical RDBMS features like Data types, User Management &amp; Security, Stored procedures (but not triggers) etc.</td>
-          <td style="text-align: left">Refer <a href=https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems
+          <td>Database features</td>
+          <td>Support for Typical RDBMS features like Data types, User Management &amp; Security, Stored procedures (but not triggers) etc.</td>
+          <td>Refer <a href=https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems
     
     target=_blank rel="noopener noreferrer"
 >here</a> for detailed comparison of features across SQLite and populate RDBMSs.</td>

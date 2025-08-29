@@ -271,9 +271,9 @@ Introduction In the world of software development, we often encounter tasks that
 <li><strong>Considerations:</strong> Message durability, delivery guarantees, message serialization.</li>
 <li><strong>Go (using RabbitMQ):</strong> (Requires RabbitMQ client library)</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Example using amqp library. Add error handling.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
-</span></span></span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Example using amqp library. Add error handling.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...</span>
+</span></span></code></pre></div><ul>
 <li><strong>C# (using RabbitMQ):</strong> (Requires RabbitMQ client library)</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// Example using RabbitMQ.Client library. Add error handling.</span>
@@ -418,55 +418,55 @@ Notice the use of `SELECT .... FOR UPDATE ..... SKIP LOCKED`. This is useful in 
 <table>
   <thead>
       <tr>
-          <th style="text-align: left">Approach</th>
-          <th style="text-align: left">Scalability</th>
-          <th style="text-align: left">Complexity</th>
-          <th style="text-align: left">Fault Tolerance</th>
-          <th style="text-align: left">Use Cases</th>
+          <th>Approach</th>
+          <th>Scalability</th>
+          <th>Complexity</th>
+          <th>Fault Tolerance</th>
+          <th>Use Cases</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">Thread Pools</td>
-          <td style="text-align: left">Low</td>
-          <td style="text-align: left">Low</td>
-          <td style="text-align: left">Low</td>
-          <td style="text-align: left">Simple, in-process tasks</td>
+          <td>Thread Pools</td>
+          <td>Low</td>
+          <td>Low</td>
+          <td>Low</td>
+          <td>Simple, in-process tasks</td>
       </tr>
       <tr>
-          <td style="text-align: left">Message Queues</td>
-          <td style="text-align: left">High</td>
-          <td style="text-align: left">High</td>
-          <td style="text-align: left">High</td>
-          <td style="text-align: left">Distributed systems, decoupling, asynchronous communication</td>
+          <td>Message Queues</td>
+          <td>High</td>
+          <td>High</td>
+          <td>High</td>
+          <td>Distributed systems, decoupling, asynchronous communication</td>
       </tr>
       <tr>
-          <td style="text-align: left">Background Workers</td>
-          <td style="text-align: left">High</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Long-running tasks, dedicated processing</td>
+          <td>Background Workers</td>
+          <td>High</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Long-running tasks, dedicated processing</td>
       </tr>
       <tr>
-          <td style="text-align: left">Scheduled Tasks</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Low</td>
-          <td style="text-align: left">Low</td>
-          <td style="text-align: left">Recurring tasks, scheduled operations</td>
+          <td>Scheduled Tasks</td>
+          <td>Medium</td>
+          <td>Low</td>
+          <td>Low</td>
+          <td>Recurring tasks, scheduled operations</td>
       </tr>
       <tr>
-          <td style="text-align: left">Asynchronous APIs</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Medium</td>
-          <td style="text-align: left">Web applications, non-blocking client interactions, improved responsiveness</td>
+          <td>Asynchronous APIs</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Web applications, non-blocking client interactions, improved responsiveness</td>
       </tr>
       <tr>
-          <td style="text-align: left">&mdash;&mdash;&mdash;&ndash;</td>
-          <td style="text-align: left">&mdash;&mdash;&mdash;&mdash;&mdash;</td>
-          <td style="text-align: left">&mdash;&mdash;&mdash;&ndash;</td>
-          <td style="text-align: left">&mdash;&mdash;&mdash;&mdash;&mdash;</td>
-          <td style="text-align: left">&mdash;&mdash;&mdash;&mdash;</td>
+          <td>&mdash;&mdash;&mdash;&ndash;</td>
+          <td>&mdash;&mdash;&mdash;&mdash;&mdash;</td>
+          <td>&mdash;&mdash;&mdash;&ndash;</td>
+          <td>&mdash;&mdash;&mdash;&mdash;&mdash;</td>
+          <td>&mdash;&mdash;&mdash;&mdash;</td>
       </tr>
   </tbody>
 </table>

@@ -237,6 +237,14 @@
       - Tools - Uses to execute code or produce a side effect (Similar to HTTP Post)
       - Prompts - Allows defining interaction patterns
 
+  - API Practices 
+    - One the API is public, avoid making changes that will break existing integrations. Changes like addition of field to a response is acceptable
+    - Use versioning only when breaking change is absolutely necessary, as far as possible manage versioning internally within API instead of expecting changes in Userspace.
+    - For Authentication - Use long lived keys (Easier for non technical users) or OAuth 
+    - Idempotency and retries (mainly for write requests) - Support Idempotency keys - Unique, user-defined string in request header or body that allows API to decide action to be taken (like ignore duplicate keys). Maintain such keys in fast store like in-memory cache with expiry
+    - Rate limiting - Implement rate limiting metadata in API Responses e.g. X-Limit-Remaining. 
+    - Pagination - Prefer cursor based pagination like `where id > [Last value] Order by id limit 10` instead of `?page=2` as it helps in translating it to SQL queries as well. This is because relational databases have to count through your offset every time, so each page you serve gets slower than last page. 
+
   - Microservices Architecture
     - Why
         - Greater flexibility (Adopt new features fast)

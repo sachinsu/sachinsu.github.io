@@ -9,19 +9,19 @@
 		<meta property="og:url" content="http://localhost:1313/tags/.net/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content=".NET">
-  <meta property="og:description" content="A technical blog ">
+  <meta property="og:description" content="A technical blog">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 		
   <meta itemprop="name" content=".NET">
-  <meta itemprop="description" content="A technical blog ">
+  <meta itemprop="description" content="A technical blog">
   <meta itemprop="datePublished" content="2023-02-25T10:25:04+05:30">
   <meta itemprop="dateModified" content="2023-02-25T10:25:04+05:30">
 		
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content=".NET">
-  <meta name="twitter:description" content="A technical blog ">
+  <meta name="twitter:description" content="A technical blog">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -121,6 +121,7 @@
 <p>The requirement is as simple as consuming REST API from a Application over TLS.</p>
 <h2 id="problem-statement">Problem Statement</h2>
 <p>The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.</p>
+<p>During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error &ldquo;The request was aborted: Could not create SSL/TLS secure channel&rdquo;. But it works fine with other tools like curl, PostMan or even from a Web Browser.</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -181,6 +182,9 @@
 >Fake</a></li>
 </ul>
 <p>Happy Code building !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
 	</div>
 </article><article class="list__item post">
 	
@@ -216,6 +220,7 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
     
     
 >here</a>) is that &ldquo;API is expected to be stable over long period of time&rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.</p>
+<p>This means that upgrade must be done keeping in mind,</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -276,11 +281,11 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/comparearchitecturestyles/">Clean Architecture, Modular Monolith and Vertical Slice Architecture </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/genaidb/">Exploring MCP Toolbox for Databases: A New Era of Database Querying</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/outoforder/">Taming Time: Strategies for Out-of-Order and Delayed Processing</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 		</ul>
 	</div>
 </div>
@@ -292,6 +297,7 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
 		<a class="widget-taglist__link widget__link btn" href="/tags/.net-framework/" title=".Net Framework">.Net Framework</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="Analytics">Analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/api/" title="API">API</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/architecture/" title="Architecture">Architecture</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asmx/" title="ASMX">ASMX</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asynchronous/" title="Asynchronous">Asynchronous</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation</a>
@@ -341,6 +347,7 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
 		<a class="widget-taglist__link widget__link btn" href="/tags/message-broker/" title="Message-Broker">Message-Broker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microservices/" title="MicroServices">MicroServices</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft/" title="Microsoft">Microsoft</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/modularity/" title="Modularity">Modularity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/msbuild/" title="Msbuild">Msbuild</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
@@ -368,6 +375,7 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
 		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="Sed">Sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/semantickernel/" title="Semantickernel">Semantickernel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/services/" title="Services">Services</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="Shopify">Shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/soap/" title="SOAP">SOAP</a>

@@ -27,7 +27,7 @@
       <link>http://localhost:1313/posts/apiupgrade/</link>
       <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/apiupgrade/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=http://localhost:1313/posts/restapiversioning/&#xA;    &#xA;    &#xA;&gt;here&lt;/a&gt;) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;One of the design considerations stressed upon by Jeffrey richter about APIs (Read more &lt;a href=http://localhost:1313/posts/restapiversioning/&#xA;    &#xA;    &#xA;&gt;here&lt;/a&gt;) is that &amp;ldquo;API is expected to be stable over long period of time&amp;rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.&lt;/p&gt;&#xA;&lt;p&gt;This means that upgrade must be done keeping in mind,&lt;/p&gt;</description>
     </item>
     <item>
       <title>Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course</title>

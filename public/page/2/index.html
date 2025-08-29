@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.134.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.149.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Learnings in IT</title>
@@ -10,19 +10,19 @@
 		<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content="Learnings in IT">
-  <meta property="og:description" content="A technical blog ">
+  <meta property="og:description" content="A technical blog">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
 		
   <meta itemprop="name" content="Learnings in IT">
-  <meta itemprop="description" content="A technical blog ">
+  <meta itemprop="description" content="A technical blog">
   <meta itemprop="datePublished" content="2025-06-01T01:00:00+05:30">
   <meta itemprop="dateModified" content="2025-09-15T01:00:00+05:30">
 		
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Learnings in IT">
-  <meta name="twitter:description" content="A technical blog ">
+  <meta name="twitter:description" content="A technical blog">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -103,6 +103,37 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/dbre/" rel="bookmark">
+			Database Reliability Engineering - My Notes
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-09-05T01:00:00&#43;05:30">Sep 5 2021</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h2 id="introduction">Introduction</h2>
+<p>I have been reading excellent <a href=https://www.oreilly.com/library/view/database-reliability-engineering/9781491925935/
+    
+    target=_blank rel="noopener noreferrer"
+>Database Reliability Engineering</a> book and below are my notes from it.</p>
+<ul>
+<li>
+<p>Key Incentive(s) for Automation</p>
+<ul>
+<li>Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows.</li>
+</ul>
+</li>
+<li>
+<p>Important System Characteristics</p>
+<ul>
+<li>
+<p><em>Latency</em>, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/nrtanalysispostgresql/" rel="bookmark">
 			Near real time API Monitoring with Grafana and PostgreSQL
 			</a>
@@ -150,6 +181,7 @@ Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Togeth
     
     
 >here</a>) is that &ldquo;API is expected to be stable over long period of time&rdquo;. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.</p>
+<p>This means that upgrade must be done keeping in mind,</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -277,23 +309,6 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 		<h2 id="background">Background</h2>
 <p>How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with  trace/logs that are available from O/S, databases etc. and trying to figure out &ldquo;Root cause&rdquo; of the issue.</p>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/ninjabuildsystem/" rel="bookmark">
-			Ninja - Using lightweight build system for Go projects 
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-10-27T10:25:04&#43;05:30">Oct 27 2020</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<h2 id="background">Background</h2>
-<p>I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.</p>
-<p>Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).</p>
-	</div>
 </article>
 </main>
 
@@ -334,11 +349,11 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/comparearchitecturestyles/">Clean Architecture, Modular Monolith and Vertical Slice Architecture </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/genaidb/">Exploring MCP Toolbox for Databases: A New Era of Database Querying</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/outoforder/">Taming Time: Strategies for Out-of-Order and Delayed Processing</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/parallelprocessing/">Using Asynchronous programming to manage parallel processing </a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/ollamasemantickernel/">Using local LLM with Ollama and Semantic Kernel</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/tlshandsharefailure/">Troubleshooting TLS handshake issue</a></li>
 		</ul>
 	</div>
 </div>
@@ -350,6 +365,7 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 		<a class="widget-taglist__link widget__link btn" href="/tags/.net-framework/" title=".Net Framework">.Net Framework</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="Analytics">Analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/api/" title="API">API</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/architecture/" title="Architecture">Architecture</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asmx/" title="ASMX">ASMX</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/asynchronous/" title="Asynchronous">Asynchronous</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/automation/" title="Automation">Automation</a>
@@ -399,6 +415,7 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 		<a class="widget-taglist__link widget__link btn" href="/tags/message-broker/" title="Message-Broker">Message-Broker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microservices/" title="MicroServices">MicroServices</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft/" title="Microsoft">Microsoft</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/modularity/" title="Modularity">Modularity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/monitoring/" title="Monitoring">Monitoring</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/msbuild/" title="Msbuild">Msbuild</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
@@ -426,6 +443,7 @@ Refer <a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.htm
 		<a class="widget-taglist__link widget__link btn" href="/tags/schannel/" title="Schannel">Schannel</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sed/" title="Sed">Sed</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/semantickernel/" title="Semantickernel">Semantickernel</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/services/" title="Services">Services</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shopify/" title="Shopify">Shopify</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sms/" title="SMS">SMS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/soap/" title="SOAP">SOAP</a>
