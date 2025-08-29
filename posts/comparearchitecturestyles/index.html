@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clean Architecture, Modular Monolith and Vertical Slice Architecture  - Learnings in IT</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:url" content="http://localhost:1313/posts/comparearchitecturestyles/">
+  <meta property="og:site_name" content="Learnings in IT">
+  <meta property="og:title" content="Clean Architecture, Modular Monolith and Vertical Slice Architecture ">
+  <meta property="og:description" content="Introduction Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are, - Functional requirements - Quality attributes (performance, scalability, availability etc.) - Agility (Need to respond fluently to changes) - Constraints (Deployment platform) - Principles (Automated testing, Automated deployment etc.) In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant, - Monolith - Traditional approach involving tiering or layering by means of separation of concerns like UI, business logic and Data into layers/tiers. Each layer is &#34;horizontally&#34; sliced (Packaged by Layer). Promotes rules like UI/Controller must talk to Service which should only talk to Repository/Data Access layer. Typical observation is that changes to any one of the layers usually results in changes across all layers. Any change typically involves re-deployment of entire or most parts of Application. - Microservices - an approach for developing a single application as a suite of small services, each running in it&#39;s own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility , its often requires change in Organization&#39;s approach and found to be suitable for large use cases where benefits outweigh related concerns like Eventual consistency, Operational Complexity and Distributed nature (Remote calls/(Fallacies of Distributed computing)[https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing]). Given this, are their tailored approaches aimed at specific requirements ? Let&#39;s look at them , - Modular Monolith - Approach that tries to have golden mean between Monolith and Microservices by structuring the application into independent modules or components with well-defined boundaries with future possibilities of carving out microservices. - Vertical Slice Architecture (VSA)- Architecture is built around distinct requests, encapsulating and grouping all concerns from front-end to back-end. - Clean Architecture - Paradigm originally proposed by Robert Martin that isolates interfaces (user interfaces, databases, external systems, devices) from business logic. ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-15T01:00:00+05:30">
+    <meta property="article:modified_time" content="2025-08-15T01:00:00+05:30">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Services">
+    <meta property="article:tag" content="Modularity">
+
+		
+  <meta itemprop="name" content="Clean Architecture, Modular Monolith and Vertical Slice Architecture ">
+  <meta itemprop="description" content="Introduction Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are, - Functional requirements - Quality attributes (performance, scalability, availability etc.) - Agility (Need to respond fluently to changes) - Constraints (Deployment platform) - Principles (Automated testing, Automated deployment etc.) In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant, - Monolith - Traditional approach involving tiering or layering by means of separation of concerns like UI, business logic and Data into layers/tiers. Each layer is &#34;horizontally&#34; sliced (Packaged by Layer). Promotes rules like UI/Controller must talk to Service which should only talk to Repository/Data Access layer. Typical observation is that changes to any one of the layers usually results in changes across all layers. Any change typically involves re-deployment of entire or most parts of Application. - Microservices - an approach for developing a single application as a suite of small services, each running in it&#39;s own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility , its often requires change in Organization&#39;s approach and found to be suitable for large use cases where benefits outweigh related concerns like Eventual consistency, Operational Complexity and Distributed nature (Remote calls/(Fallacies of Distributed computing)[https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing]). Given this, are their tailored approaches aimed at specific requirements ? Let&#39;s look at them , - Modular Monolith - Approach that tries to have golden mean between Monolith and Microservices by structuring the application into independent modules or components with well-defined boundaries with future possibilities of carving out microservices. - Vertical Slice Architecture (VSA)- Architecture is built around distinct requests, encapsulating and grouping all concerns from front-end to back-end. - Clean Architecture - Paradigm originally proposed by Robert Martin that isolates interfaces (user interfaces, databases, external systems, devices) from business logic. ">
+  <meta itemprop="datePublished" content="2025-08-15T01:00:00+05:30">
+  <meta itemprop="dateModified" content="2025-08-15T01:00:00+05:30">
+  <meta itemprop="wordCount" content="1209">
+  <meta itemprop="keywords" content="Architecture,Services,Modularity">
+		
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Clean Architecture, Modular Monolith and Vertical Slice Architecture ">
+  <meta name="twitter:description" content="Introduction Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are, - Functional requirements - Quality attributes (performance, scalability, availability etc.) - Agility (Need to respond fluently to changes) - Constraints (Deployment platform) - Principles (Automated testing, Automated deployment etc.) In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant, - Monolith - Traditional approach involving tiering or layering by means of separation of concerns like UI, business logic and Data into layers/tiers. Each layer is &#34;horizontally&#34; sliced (Packaged by Layer). Promotes rules like UI/Controller must talk to Service which should only talk to Repository/Data Access layer. Typical observation is that changes to any one of the layers usually results in changes across all layers. Any change typically involves re-deployment of entire or most parts of Application. - Microservices - an approach for developing a single application as a suite of small services, each running in it&#39;s own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility , its often requires change in Organization&#39;s approach and found to be suitable for large use cases where benefits outweigh related concerns like Eventual consistency, Operational Complexity and Distributed nature (Remote calls/(Fallacies of Distributed computing)[https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing]). Given this, are their tailored approaches aimed at specific requirements ? Let&#39;s look at them , - Modular Monolith - Approach that tries to have golden mean between Monolith and Microservices by structuring the application into independent modules or components with well-defined boundaries with future possibilities of carving out microservices. - Vertical Slice Architecture (VSA)- Architecture is built around distinct requests, encapsulating and grouping all concerns from front-end to back-end. - Clean Architecture - Paradigm originally proposed by Robert Martin that isolates interfaces (user interfaces, databases, external systems, devices) from business logic. ">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Learnings in IT</div>
+					<div class="logo__tagline">A Simple Technical Blog</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/projects/">
+				
+				<span class="menu__text">Projects</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://gist.github.com/sachinsu">
+				
+				<span class="menu__text">Gists</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/links/home">
+				
+				<span class="menu__text">Useful Links</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Clean Architecture, Modular Monolith and Vertical Slice Architecture </h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-08-15T01:00:00&#43;05:30">Aug 15 2025</time></div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#understanding-each-architecture-individually">Understanding Each Architecture Individually:</a>
+      <ul>
+        <li><a href="#modular-monolith">Modular Monolith</a></li>
+        <li><a href="#vertical-slice-architecture-vsa">Vertical Slice Architecture (VSA)</a></li>
+        <li><a href="#clean-architecture-or-similar-layeredhexagonal-approaches">Clean Architecture (or similar layered/hexagonal approaches):</a></li>
+      </ul>
+    </li>
+    <li><a href="#comparative-analysis">Comparative Analysis:</a></li>
+    <li><a href="#synergies-and-overlaps">Synergies and Overlaps:</a></li>
+    <li><a href="#choosing-the-right-architecture">Choosing the Right Architecture:</a></li>
+    <li><a href="#conclusion">Conclusion:</a>
+      <ul>
+        <li><a href="#useful-references">Useful References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="introduction">Introduction</h2>
+<pre><code>Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are, 
+    - Functional requirements 
+    - Quality attributes (performance, scalability, availability etc.)
+    - Agility (Need to respond fluently to changes) 
+    - Constraints (Deployment platform)
+    - Principles (Automated testing, Automated deployment etc.) 
+
+ In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant, 
+
+  - Monolith - Traditional approach involving tiering or layering by means of separation of concerns like UI, business logic and Data into layers/tiers. Each layer is &quot;horizontally&quot; sliced (Packaged by Layer). Promotes rules like UI/Controller must talk to Service which should only talk to Repository/Data Access layer. Typical observation is that changes to any one of the layers usually results in changes across all layers. Any change typically involves re-deployment of entire or most parts of Application.
+
+  - Microservices - an approach for developing a single application as a suite of small services, each running in it's own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. 
+
+At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility , its often requires change in Organization's approach and found to be suitable for large use cases where benefits outweigh  related concerns like Eventual consistency, Operational Complexity and Distributed nature (Remote calls/(Fallacies of Distributed computing)[https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing]).
+
+Given this, are their tailored approaches aimed at specific requirements ?   Let's look at them , 
+    - Modular Monolith - Approach that tries to have golden mean between Monolith and Microservices by structuring the application into independent modules or components with well-defined boundaries with future possibilities of carving out microservices.
+    - Vertical Slice Architecture (VSA)- Architecture is built around distinct requests, encapsulating and grouping all concerns from front-end to back-end.
+    - Clean Architecture - Paradigm originally proposed by Robert Martin that isolates interfaces (user interfaces, databases, external systems, devices) from business logic. 
+</code></pre>
+<p>This article aims to provide general context and aid in decision making about the above architecture styles. Please note <a href=https://martinfowler.com/bliki/LimitationsOfGeneralAdvice.html
+    
+    target=_blank rel="noopener noreferrer"
+>Limitations of General Advice</a></p>
+<h2 id="understanding-each-architecture-individually">Understanding Each Architecture Individually:</h2>
+<h3 id="modular-monolith">Modular Monolith</h3>
+<pre><code>- Core Idea: is a way of organizing a software application into set of well defined, independent, extractable Modules.Modules have ‌specific functionality, which can be independently developed and tested, while the entire application is deployed as a single unit. 
+- Key Characteristics: Encapsulation, clear boundaries between modules, high cohesion within modules, low coupling between modules.
+- Benefits: Easier to start, single deployment, can evolve towards microservices if needed, good for smaller to medium teams. Suitable to manage when significant domain-specific changes are expected.
+- Potential Drawbacks/Concerns: Can become a &quot;big ball of mud&quot; if modularity isn't strictly enforced, deployment unit size. These issues may be addressed using [Fitness functions](https://en.wikipedia.org/wiki/Fitness_function) (e.g. Cyclomatic complexity, coupling) and static code analysis etc. Carries on with some monolith bottlenecks like fault tolerance, scalability, elasticity etc.
+
+<figure><img src="/images/modularmonolith.png"><figcaption>
+          <h4>Modular Monolith</h4>
+        </figcaption>
+    </figure>
+
+</code></pre>
+<h3 id="vertical-slice-architecture-vsa">Vertical Slice Architecture (VSA)</h3>
+<pre><code>- Core Idea: This is in a way evolution of Modular Monolith where focus is on axes of expected change and modelling features end-to-end for it. For every individual request(s), all the code is co-located across layers. Organizing code around business capabilities or &quot;verticals&quot; (e.g., user management, order processing) rather than technical layers (UI, Business Logic, Data Access). A Module may have one or more features. Each feature  is self-contained and can be developed/tested independently. Module boundaries are explicit. Aim is to Minimize coupling between slices and maximize within slice.    
+- Key Characteristics: Code organized by feature/capability, strong encapsulation within slices, minimal dependencies between slices, often involves defining clear boundaries.
+- Benefits: High cohesion within slices, improved team autonomy, easier to understand and modify specific features, good for evolving complexity. 
+- Potential Drawbacks: Can lead to duplication if not managed carefully (e.g., common domain logic), requires a discipline of keeping slices truly independent. 
+
+<figure><img src="/images/vas.png"><figcaption>
+          <h4>Vertical Slice Architecture</h4>
+        </figcaption>
+    </figure>
+
+</code></pre>
+<h3 id="clean-architecture-or-similar-layeredhexagonal-approaches">Clean Architecture (or similar layered/hexagonal approaches):</h3>
+<pre><code>- Core Idea: opinionated way to structure  code and to separate the concerns of the application into layers. Core aim is to separate the business logic from infrastructure (i.e. data Access, external integrations etc.) and presentation layers. Originally popularized by [Robert C Martin](https://www.amazon.in/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164). Crux is to have business logic isolated from less stable external elements.
+- Key Characteristics: 
+  - Domain as the core, use of interfaces for external interactions.
+  - Aim is to achieve maintainability, testability, and extendability 
+  - Ability to change infrastructure and presentation without affecting core business logic
+  - Ideal for complex, medium to large scale applications where maintainability and scalability are key objectives.
+- Benefits: High testability, framework independence, maintainability, clear separation of concerns, easier to swap out external components.
+- Potential Drawbacks: Can be perceived as overly complex for simple projects. Strict adhering to layering and use of interfaces often lead to lot of boilerplate code. Simple Applications may find it as overhead to implement.  
+    
+<figure><img src="/images/clean_architecture.png"><figcaption>
+          <h4>Clean Architecture</h4>
+        </figcaption>
+    </figure>
+
+</code></pre>
+<h2 id="comparative-analysis">Comparative Analysis:</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Aspect</th>
+          <th style="text-align: left">Modular Monolith</th>
+          <th style="text-align: left">Vertical Slice Architecture</th>
+          <th style="text-align: left">Clean Architecture</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Application Size</td>
+          <td style="text-align: left">Suitable for small to medium Sized Applications. Easy to get started and is cost effective.</td>
+          <td style="text-align: left">Agnostic of Application size. But keep watch for refactoring opty.</td>
+          <td style="text-align: left">Larger initial codebase due to abstractions but clean separation helps irrespective of size</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Organization</td>
+          <td style="text-align: left">Modular approach per  Domain functionalities</td>
+          <td style="text-align: left">By feature or use case, with each slice containing all relevant layers.</td>
+          <td style="text-align: left">by layers i.e. Presentation, Domain and Infrastructure</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Maintainability, Testability</td>
+          <td style="text-align: left">Individual slices/use cases can be tested</td>
+          <td style="text-align: left">Easier to maintain and test, as changes are localized to a single feature slice.</td>
+          <td style="text-align: left">Improved testability</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Flexibility</td>
+          <td style="text-align: left">Improved due to modularity but may require complete deployment</td>
+          <td style="text-align: left">High. Different features can use different technical implementations.</td>
+          <td style="text-align: left">High due to isolation of layers</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Scalability</td>
+          <td style="text-align: left">Useful when future scalability requirements are uncertain.</td>
+          <td style="text-align: left">Slices can be deployed independently</td>
+          <td style="text-align: left">Can be achieved by means of isolation of state management and ability to switch implementations</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Testability</td>
+          <td style="text-align: left">better than trad.Monolith</td>
+          <td style="text-align: left">High</td>
+          <td style="text-align: left">Each layer can be tested independently,</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="synergies-and-overlaps">Synergies and Overlaps:</h2>
+<pre><code>As one says there is no &quot;one size fits all&quot;, similarly there is no reason to constrain self to use a specific architectural style for Application and neither of the above styles are mutually exclusive.  A Modular Monolith is where modules are structured but can use Vertical slice Architecture principles. A VSA based implementation can adopt clean Architecture principles with clean separation between domain logic and adapters (UI, Data stores, external integrations etc.) While VSA focuses on what to organize by, Clean Architecture focuses on how to organize within those boundaries.
+</code></pre>
+<h2 id="choosing-the-right-architecture">Choosing the Right Architecture:</h2>
+<pre><code>Provide a decision-making framework or questions to ask.
+Emphasize that there's no single &quot;best&quot; architecture; it's about trade-offs and context.
+Consider team experience, project size, domain complexity, business goals, and future needs.
+</code></pre>
+<h2 id="conclusion">Conclusion:</h2>
+<pre><code>Summarize the key takeaways.
+Reiterate the value of architectural thinking.
+Call to action: encourage discussion, sharing experiences.
+</code></pre>
+<h3 id="useful-references">Useful References</h3>
+<ul>
+<li><a href=https://www.thoughtworks.com/en-in/insights/blog/microservices/modular-monolith-better-way-build-software
+    
+    target=_blank rel="noopener noreferrer"
+>Modular Monolith 1</a></li>
+<li><a href=https://www.youtube.com/watch?v&#61;fc6_NtD9soI
+    
+    target=_blank rel="noopener noreferrer"
+>Modular Monolith 2</a></li>
+<li><a href=https://static.simonbrown.je/modular-monoliths.pdf
+    
+    target=_blank rel="noopener noreferrer"
+>Modular Monolith 3</a></li>
+<li><a href=https://www.jimmybogard.com/vertical-slice-architecture/
+    
+    target=_blank rel="noopener noreferrer"
+>Vertical Slice Architecture 1</a></li>
+<li><a href=https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+    
+    target=_blank rel="noopener noreferrer"
+>Clean Architecture from Robert Martin</a></li>
+<li><a href=https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures
+    
+    target=_blank rel="noopener noreferrer"
+>Clean Architecture 1</a></li>
+<li><a href=https://devblogs.microsoft.com/ise/next-level-clean-architecture-boilerplate/
+    
+    target=_blank rel="noopener noreferrer"
+>Clean Architecture 2</a></li>
+<li><a href=https://jasontaylor.dev/clean-architecture-getting-started/
+    
+    target=_blank rel="noopener noreferrer"
+>Clean Architecture 3</a></li>
+</ul>
+<p>Happy Coding !!</p>
+<hr>
+<script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
+    theme="github-light" crossorigin="anonymous" async></script>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/architecture/" rel="tag">Architecture</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/services/" rel="tag">Services</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/modularity/" rel="tag">Modularity</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/genaidb/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Exploring MCP Toolbox for Databases: A New Era of Database Querying</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Sachin Sunkle.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

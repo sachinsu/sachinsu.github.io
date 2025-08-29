@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API on Learnings in IT</title><link>https://sachinsu.github.io/tags/api/</link><description>Recent content in API on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>https://sachinsu.github.io/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/restapiversioning/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>Recently, i went through excellent video series on &lt;code>Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code> presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API on Learnings in IT</title><link>https://sachinsu.github.io/tags/api/</link><description>Recent content in API on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>https://sachinsu.github.io/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/restapiversioning/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;Recently, i went through excellent video series on &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
  
  target=_blank rel="noopener noreferrer"
->Jeffrey Richter&lt;/a>. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw
+&gt;Jeffrey Richter&lt;/a&gt;. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw
  
  target=_blank rel="noopener noreferrer"
->here&lt;/a>. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p></description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
+&gt;here&lt;/a&gt;. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p&gt;</description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
  
  target=_blank rel="noopener noreferrer"
->Balaji Srinivasan&lt;/a> to send Direct Message to all twitter followers. &lt;em>Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em>&lt;/p>
-&lt;p>This is an attempt to write CLI tool in &lt;a href=https://golang.org
+&gt;Balaji Srinivasan&lt;/a&gt; to send Direct Message to all twitter followers. &lt;em&gt;Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to write CLI tool in &lt;a href=https://golang.org
  
  target=_blank rel="noopener noreferrer"
->Golang&lt;/a> in response to it.&lt;/p>
-&lt;p>For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
+&gt;Golang&lt;/a&gt; in response to it.&lt;/p&gt;
+&lt;p&gt;For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
  
  target=_blank rel="noopener noreferrer"
->here&lt;/a>&lt;/p>
-&lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>In Brief,&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>CLI should,&lt;/p>
-&lt;ul>
-&lt;li>accept arguments like Twitter API Key,Auth token, DM Message&lt;/li>
-&lt;li>Download all followers (with profile details)&lt;/li>
-&lt;li>Rank them by Criteria (e.g. Location)&lt;/li>
-&lt;li>Send each follower a DM with provided message (upto daily DM Limit)&lt;/li>
-&lt;li>be easy to use and maintain&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Notes,&lt;/p></description></item></channel></rss>
+&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="approach"&gt;Approach&lt;/h2&gt;
+&lt;p&gt;In Brief,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CLI should,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;accept arguments like Twitter API Key,Auth token, DM Message&lt;/li&gt;
+&lt;li&gt;Download all followers (with profile details)&lt;/li&gt;
+&lt;li&gt;Rank them by Criteria (e.g. Location)&lt;/li&gt;
+&lt;li&gt;Send each follower a DM with provided message (upto daily DM Limit)&lt;/li&gt;
+&lt;li&gt;be easy to use and maintain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Notes,&lt;/p&gt;</description></item></channel></rss>

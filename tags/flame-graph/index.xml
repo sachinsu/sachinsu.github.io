@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flame Graph on Learnings in IT</title><link>https://sachinsu.github.io/tags/flame-graph/</link><description>Recent content in Flame Graph on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 12 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/flame-graph/index.xml" rel="self" type="application/rss+xml"/><item><title>Profiling and benchmarking tools for Applications</title><link>https://sachinsu.github.io/posts/profiling_n_benchmarking/</link><pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/profiling_n_benchmarking/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&amp;rsquo;s objectives.&lt;/p>
-&lt;p>Lets look at what they mean,&lt;/p>
-&lt;ul>
-&lt;li>Profiling is defined as process &lt;code>aimed at understanding the behavior of a program. A profile result might be a table of time taken per function,&lt;/code> as per &lt;a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flame Graph on Learnings in IT</title><link>https://sachinsu.github.io/tags/flame-graph/</link><description>Recent content in Flame Graph on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 12 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/flame-graph/index.xml" rel="self" type="application/rss+xml"/><item><title>Profiling and benchmarking tools for Applications</title><link>https://sachinsu.github.io/posts/profiling_n_benchmarking/</link><pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/profiling_n_benchmarking/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it&amp;rsquo;s objectives.&lt;/p&gt;
+&lt;p&gt;Lets look at what they mean,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Profiling is defined as process &lt;code&gt;aimed at understanding the behavior of a program. A profile result might be a table of time taken per function,&lt;/code&gt; as per &lt;a href=https://stackoverflow.com/questions/34801622/difference-between-benchmarking-and-profiling
  
  target=_blank rel="noopener noreferrer"
->this&lt;/a> and &lt;a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
+&gt;this&lt;/a&gt; and &lt;a href=https://en.wikipedia.org/wiki/Profiling_%28computer_programming%29
  
  target=_blank rel="noopener noreferrer"
->this&lt;/a>)&lt;/li>
-&lt;li>Benchmarking &lt;code>measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.&lt;/code>. Refer &lt;a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29
+&gt;this&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Benchmarking &lt;code&gt;measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.&lt;/code&gt;. Refer &lt;a href=https://en.wikipedia.org/wiki/Benchmark_%28computing%29
  
  target=_blank rel="noopener noreferrer"
->this&lt;/a> for more information. Also do check &lt;a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/
+&gt;this&lt;/a&gt; for more information. Also do check &lt;a href=https://jvns.ca/blog/2016/07/23/rigorous-benchmarking-in-reasonable-time/
  
  target=_blank rel="noopener noreferrer"
->Benchmarking correctly is hard by Julia Evans&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;p>Typically, Profiling is supported by most of the environments (either via IDEs like &lt;a href=https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view&amp;#61;vs-2022
+&gt;Benchmarking correctly is hard by Julia Evans&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Typically, Profiling is supported by most of the environments (either via IDEs like &lt;a href=https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view&amp;#61;vs-2022
  
  target=_blank rel="noopener noreferrer"
->Visual Studio&lt;/a> or through language itself [Like &lt;a href=https://go.dev/blog/pprof
+&gt;Visual Studio&lt;/a&gt; or through language itself [Like &lt;a href=https://go.dev/blog/pprof
  
  target=_blank rel="noopener noreferrer"
->Go&lt;/a>] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.&lt;/p></description></item></channel></rss>
+&gt;Go&lt;/a&gt;] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.&lt;/p&gt;</description></item></channel></rss>

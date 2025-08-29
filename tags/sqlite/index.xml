@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQLite on Learnings in IT</title><link>https://sachinsu.github.io/tags/sqlite/</link><description>Recent content in SQLite on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/sqlite/index.xml" rel="self" type="application/rss+xml"/><item><title>Can SQLite be considered for Server Applications?</title><link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link><pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQLite on Learnings in IT</title><link>https://sachinsu.github.io/tags/sqlite/</link><description>Recent content in SQLite on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/sqlite/index.xml" rel="self" type="application/rss+xml"/><item><title>Can SQLite be considered for Server Applications?</title><link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link><pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
 In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org
  
  target=_blank rel="noopener noreferrer"
->SQLite&lt;/a> for this purpose.&lt;/p></description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
+&gt;SQLite&lt;/a&gt; for this purpose.&lt;/p&gt;</description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
  
  target=_blank rel="noopener noreferrer"
->Balaji Srinivasan&lt;/a> to send Direct Message to all twitter followers. &lt;em>Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em>&lt;/p>
-&lt;p>This is an attempt to write CLI tool in &lt;a href=https://golang.org
+&gt;Balaji Srinivasan&lt;/a&gt; to send Direct Message to all twitter followers. &lt;em&gt;Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to write CLI tool in &lt;a href=https://golang.org
  
  target=_blank rel="noopener noreferrer"
->Golang&lt;/a> in response to it.&lt;/p>
-&lt;p>For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
+&gt;Golang&lt;/a&gt; in response to it.&lt;/p&gt;
+&lt;p&gt;For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
  
  target=_blank rel="noopener noreferrer"
->here&lt;/a>&lt;/p>
-&lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>In Brief,&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>CLI should,&lt;/p>
-&lt;ul>
-&lt;li>accept arguments like Twitter API Key,Auth token, DM Message&lt;/li>
-&lt;li>Download all followers (with profile details)&lt;/li>
-&lt;li>Rank them by Criteria (e.g. Location)&lt;/li>
-&lt;li>Send each follower a DM with provided message (upto daily DM Limit)&lt;/li>
-&lt;li>be easy to use and maintain&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Notes,&lt;/p></description></item></channel></rss>
+&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="approach"&gt;Approach&lt;/h2&gt;
+&lt;p&gt;In Brief,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CLI should,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;accept arguments like Twitter API Key,Auth token, DM Message&lt;/li&gt;
+&lt;li&gt;Download all followers (with profile details)&lt;/li&gt;
+&lt;li&gt;Rank them by Criteria (e.g. Location)&lt;/li&gt;
+&lt;li&gt;Send each follower a DM with provided message (upto daily DM Limit)&lt;/li&gt;
+&lt;li&gt;be easy to use and maintain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Notes,&lt;/p&gt;</description></item></channel></rss>
