@@ -3,36 +3,36 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Exploring Google&#39;s Gen AI Toolbox for Databases: A New Era of Database Querying - Learnings in IT</title>
+	<title>Exploring MCP Toolbox for Databases: A New Era of Database Querying - Learnings in IT</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:url" content="http://localhost:1313/posts/genaidb/">
   <meta property="og:site_name" content="Learnings in IT">
-  <meta property="og:title" content="Exploring Google&#39;s Gen AI Toolbox for Databases: A New Era of Database Querying">
-  <meta property="og:description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s Gen AI Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
+  <meta property="og:title" content="Exploring MCP Toolbox for Databases: A New Era of Database Querying">
+  <meta property="og:description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s MCP Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-10T01:00:00+05:30">
-    <meta property="article:modified_time" content="2025-03-10T01:00:00+05:30">
+    <meta property="article:published_time" content="2025-06-01T01:00:00+05:30">
+    <meta property="article:modified_time" content="2025-06-01T01:00:00+05:30">
     <meta property="article:tag" content="Ollama">
     <meta property="article:tag" content="Gemini">
     <meta property="article:tag" content="MCP">
     <meta property="article:tag" content="Llm">
     <meta property="article:tag" content="Prompt">
-    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Databases">
 
 		
-  <meta itemprop="name" content="Exploring Google&#39;s Gen AI Toolbox for Databases: A New Era of Database Querying">
-  <meta itemprop="description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s Gen AI Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
-  <meta itemprop="datePublished" content="2025-03-10T01:00:00+05:30">
-  <meta itemprop="dateModified" content="2025-03-10T01:00:00+05:30">
-  <meta itemprop="wordCount" content="643">
-  <meta itemprop="keywords" content="Ollama,Gemini,MCP,Llm,Prompt,Database">
+  <meta itemprop="name" content="Exploring MCP Toolbox for Databases: A New Era of Database Querying">
+  <meta itemprop="description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s MCP Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
+  <meta itemprop="datePublished" content="2025-06-01T01:00:00+05:30">
+  <meta itemprop="dateModified" content="2025-06-01T01:00:00+05:30">
+  <meta itemprop="wordCount" content="651">
+  <meta itemprop="keywords" content="Ollama,Gemini,MCP,Llm,Prompt,Databases,Postgresql,Genai">
 		
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Exploring Google&#39;s Gen AI Toolbox for Databases: A New Era of Database Querying">
-  <meta name="twitter:description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s Gen AI Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
+  <meta name="twitter:title" content="Exploring MCP Toolbox for Databases: A New Era of Database Querying">
+  <meta name="twitter:description" content="Introduction In the ever-evolving landscape of AI and machine learning, Google’s MCP Toolbox for Databases stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you’re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -110,10 +110,10 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Exploring Google&#39;s Gen AI Toolbox for Databases: A New Era of Database Querying</h1>
+			<h1 class="post__title">Exploring MCP Toolbox for Databases: A New Era of Database Querying</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-03-10T01:00:00&#43;05:30">Mar 10 2025</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-06-01T01:00:00&#43;05:30">Jun 1 2025</time></div></div>
 		</header>
 		
 <div class="post__toc toc">
@@ -149,7 +149,7 @@
 <p>In the ever-evolving landscape of AI and machine learning, Google&rsquo;s <a href=https://googleapis.github.io/genai-toolbox
     
     target=_blank rel="noopener noreferrer"
->Gen AI Toolbox for Databases</a> stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.</p>
+>MCP Toolbox for Databases</a> stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.</p>
 <h2 id="quick-start-guide">Quick Start Guide</h2>
 <p>To get started with the Gen AI Toolbox for Databases, follow the official <a href=https://googleapis.github.io/genai-toolbox/getting-started/local_quickstart
     
@@ -255,7 +255,7 @@ def main():
 <h3 id="4-real-time-data-interaction">4. Real-Time Data Interaction</h3>
 <p>Users can interact with the database in real-time, making it possible to get instant responses to their queries. This is particularly useful for applications that require up-to-the-minute data.</p>
 <h3 id="5-privacy-and-security">5. Privacy and Security</h3>
-<p>Users can only interact with the database via the queries specified in tools configuration for Toolbox. This is useful if database owner wants fine-grained control or restrict access to data. Use of local LLM for inference. Possibility of using Local LLMs can be beneficial for use cases where privacy and security are paramount.</p>
+<p>Users can only interact with the database via the queries specified in tools configuration for Toolbox. This is useful if database owner wants fine-grained control or restrict access to data. Use of local LLM for inference caters to cases where privacy is critical and expenses are sensitive topic and somewhat delayed response time is acceptable.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Google&rsquo;s Gen AI Toolbox for Databases is a game-changer in the realm of database management and AI integration. By enabling prompt-based querying and NLP, it democratizes access to data and enhances the capabilities of enterprise applications. Whether you&rsquo;re working with on-premises setups or cloud providers, this toolbox offers a robust and flexible solution.</p>
 <p>For more information, check out the official documentation and the <a href=https://github.com/googleapis/genai-toolbox
@@ -281,6 +281,18 @@ def main():
     
     target=_blank rel="noopener noreferrer"
 >LangChain Announcement</a></p>
+</li>
+<li>
+<p><a href=https://spin.atomicobject.com/running-local-llms/
+    
+    target=_blank rel="noopener noreferrer"
+>Running Local LLMs</a></p>
+</li>
+<li>
+<p><a href=https://addyo.substack.com/p/mcp-what-it-is-and-why-it-matters
+    
+    target=_blank rel="noopener noreferrer"
+>MCP- What is it?</a></p>
 </li>
 </ul>
 <hr>
@@ -309,7 +321,13 @@ def main():
 			<a class="tags__link btn" href="/tags/prompt/" rel="tag">Prompt</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/database/" rel="tag">Database</a>
+			<a class="tags__link btn" href="/tags/databases/" rel="tag">Databases</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/postgresql/" rel="tag">postgresql</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/genai/" rel="tag">genai</a>
 		</li>
 	</ul>
 </div>
@@ -320,9 +338,9 @@ def main():
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/parallelprocessing/" rel="prev">
+		<a class="pager__link" href="/posts/outoforder/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Using Asynchronous programming to manage parallel processing </p>
+			<p class="pager__title">Taming Time: Strategies for Out-of-Order and Delayed Processing</p>
 		</a>
 	</div>
 </nav>

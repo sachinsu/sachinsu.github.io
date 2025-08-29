@@ -6,20 +6,111 @@
     <description>Recent content in Tags on Learnings in IT</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jun 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>.Net Core</title>
-      <link>http://localhost:1313/tags/.net-core/</link>
-      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/.net-core/</guid>
+      <title>Databases</title>
+      <link>http://localhost:1313/tags/databases/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/databases/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
       <link>http://localhost:1313/tags/gemini/</link>
-      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/gemini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Genai</title>
+      <link>http://localhost:1313/tags/genai/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/genai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>http://localhost:1313/tags/mcp/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ollama</title>
+      <link>http://localhost:1313/tags/ollama/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/ollama/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgresql</title>
+      <link>http://localhost:1313/tags/postgresql/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt</title>
+      <link>http://localhost:1313/tags/prompt/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/prompt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asynchronous</title>
+      <link>http://localhost:1313/tags/asynchronous/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/asynchronous/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Background-Jobs</title>
+      <link>http://localhost:1313/tags/background-jobs/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/background-jobs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concurrency</title>
+      <link>http://localhost:1313/tags/concurrency/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed-Systems</title>
+      <link>http://localhost:1313/tags/distributed-systems/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message-Broker</title>
+      <link>http://localhost:1313/tags/message-broker/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/message-broker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Queue</title>
+      <link>http://localhost:1313/tags/queue/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>.Net Core</title>
+      <link>http://localhost:1313/tags/.net-core/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/.net-core/</guid>
       <description></description>
     </item>
     <item>
@@ -37,24 +128,10 @@
       <description></description>
     </item>
     <item>
-      <title>Llm</title>
-      <link>http://localhost:1313/tags/llm/</link>
-      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Localai</title>
       <link>http://localhost:1313/tags/localai/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
       <guid>http://localhost:1313/tags/localai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ollama</title>
-      <link>http://localhost:1313/tags/ollama/</link>
-      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ollama/</guid>
       <description></description>
     </item>
     <item>
@@ -321,13 +398,6 @@
       <link>http://localhost:1313/tags/grafana/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
       <guid>http://localhost:1313/tags/grafana/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Postgresql</title>
-      <link>http://localhost:1313/tags/postgresql/</link>
-      <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>

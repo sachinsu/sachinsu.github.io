@@ -230,7 +230,12 @@
 
   - Generative AI
     - Context Engineering 
-      - is the delicate art and science of filling the context window with just the right information for the next step. Science because doing this right involves task descriptions and explanations, few shot examples, RAG, related (possibly multi-modal) data, tools, state and history, compacting
+      - is the delicate art and science of filling the context window with just the right information for the next step. Science because doing this right involves task descriptions and explanations, few shot examples, RAG, related (possibly multi-modal) data, tools, state and history, compacting 
+    - MCP (Model Context Protocol)
+      - lets you build servers that expose data and functionality to LLM applications in a secure, standardized way. Think of it like a web API, but specifically designed for LLM interactions.
+      - Resources - Allows to expose Data (Similar to HTTP GET) 
+      - Tools - Uses to execute code or produce a side effect (Similar to HTTP Post)
+      - Prompts - Allows defining interaction patterns
 
   - Microservices Architecture
     - Why
