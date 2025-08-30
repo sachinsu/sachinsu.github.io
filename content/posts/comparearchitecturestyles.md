@@ -2,7 +2,7 @@
 title: "Clean Architecture, Modular Monolith and Vertical Slice Architecture "
 date: 2025-09-15T01:00:00+05:30
 draft: true
-tags: [Architecture, Services, Modularity]
+tags: [Architecture, Services, Modularity, Microservices, Monolith]
 ---
 
 ## Introduction
@@ -40,7 +40,7 @@ Given this, are their tailored approaches aimed at specific requirements ?   Let
 - **Benefits**: Easier to start, single deployment, can evolve towards microservices if needed, good for smaller to medium teams. Suitable to manage when significant domain-specific changes are expected.
 - **Potential Drawbacks/Concerns**: Can become a "big ball of mud" if modularity isn't strictly enforced, deployment unit size. These issues may be addressed using [Fitness functions](https://en.wikipedia.org/wiki/Fitness_function) (e.g. Cyclomatic complexity, coupling) and static code analysis etc. Carries on with some monolith bottlenecks like fault tolerance, scalability, elasticity etc.
 
-    {{< figure src="/images/modularmonolith.png" title="Modular Monolith" >}}
+    {{< figure align="center" src="/images/modularmonolith.png" title="Modular Monolith" >}}
 
 ###  Vertical Slice Architecture (VSA)
     
@@ -49,8 +49,9 @@ Given this, are their tailored approaches aimed at specific requirements ?   Let
 - **Benefits**: High cohesion within slices, improved team autonomy, easier to understand and modify specific features, good for evolving complexity. 
 - **Potential Drawbacks**: Can lead to duplication if not managed carefully (e.g., common domain logic), requires a discipline of keeping slices truly independent. 
   
-    {{< figure src="/images/vas.png" title="Vertical Slice Architecture" >}}
+    {{< figure align="center" src="/images/vas.png" title="Vertical Slice Architecture" >}}
 
+    {{< figure align="center" src="/images/vsa-2.png" title="Vertical Slice Architecture" >}}
 
 ###  Clean Architecture (or similar layered/hexagonal approaches):
 
@@ -63,7 +64,7 @@ Given this, are their tailored approaches aimed at specific requirements ?   Let
 - **Benefits**: High testability, framework independence, maintainability, clear separation of concerns, easier to swap out external components.
 - **Potential Drawbacks**: Can be perceived as overly complex for simple projects. Strict adhering to layering and use of interfaces often lead to lot of boilerplate code. Simple Applications may find it as overhead to implement.  
         
-    {{< figure src="/images/clean_architecture.png" title="Clean Architecture" >}}
+    {{< figure align="center" src="/images/clean_architecture.png" title="Clean Architecture" >}}
 
 
 ## Comparative Analysis:

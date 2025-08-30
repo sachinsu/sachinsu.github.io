@@ -1,136 +1,327 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PostgreSQL - Learnings in IT</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:url" content="http://localhost:1313/links/postgresql/">
-  <meta property="og:site_name" content="Learnings in IT">
-  <meta property="og:title" content="PostgreSQL">
-  <meta property="og:description" content="PostgreSQL General Articles Mistakes to avoid while using PostgreSQL Free Postgres database (or SQLite) from fly.io Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don’t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL 10 Things I Hate About PostgreSQL PostgreSQL - Advanced Administration by Bruce Momjian Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration Using PostgreSQL as Cache and Read Optimization tips Adyen’s Use of PostgreSQL PostgreSQL version Upgrade @ Gitlab Zombodb - PostgreSQL and ElasticSearch work together Using pg_timetable for job scheduling Using pg_cron to schedule background tasks Using pg_cron to roll up for Analytics PG Database Configuration Helper Full text search in PostgreSQL Postgres full text search capabilities Full text search (Crunchydata) PostgreSQL - Best practices(Azure) Designing high performance time series data table in (RDS) postgresql while using BRIN Index Informative blog on PostgreSQL Understanding GIN indexes PostgreSQL - Using SQL for Data Analysis Approach to Bulk Import in PostGreSQL Schema updates with zero downtime in PostgreSQL How to JSON in PostgreSQL Grouping, Rollups and Cubes Row level Security Just use postgres Performance tuning, configuration etc. pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them Partitioning as Query Optimization Strategy Database Configuration Builder Configuration for Diagnosing Performance issues OrioleDB- Solving Wicked problems of PostgreSQL 5 Minutes in PostgreSQL - Videos PostgreSQL Tips Optimizing AutoVaccum in Postgresql 10 Things i hate about PostgreSQL Various index types and their usage Few gotchas for Application Developers Five tips for healthy PostgreSQL database Make PostgreSQL healthy and speedy Diagnose Linux related Disk &amp;amp; RAM issues PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer &amp;amp; Generally Good Blog on PostgreSQL Vertically scaling PostgreSQL How PostgreSQL Query Optimizer works A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration Be careful with CTE in PostgreSQL Per core Connection limit guidance for EDB PostgreSQL - Claim unused Index size PgBadger - A fast PostgreSQL Log Analyzer Using CTE to perform binary search on table Top tools to manage PostgreSQL Performance Impact of idle Postgresql connections (usage of Pgbench) How to Manage Connections Efficiently in Postgres, or Any Database How to Audit PostgreSQL Database SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN PostgreSQL Scaling advice in 2021 Security Hardening for PostgreSQL Working with Postgres @ Zerodha Using PostgreSQL for Data warehouse Testing PG High availability with Patroni Comparison of PostgreSQL Monitoring tools Using Timeout feature of PostgreSQL Benchmarking bulk data ingestion in PostgreSQL All about indexes in PostgreSQL Use cases for Partitioning Asynchronous Commits for faster data loading Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked Queues in PostgreSQL How postgresql stores data on disk Using Postgresql for job queueing and lessons learned Interesting Extensions/Products Using duckdb and postgres together Collection of Postgresql related tools PostgreSql based Message queue End-to-end machine learning solution Incrementally update Materialized Views in real-time using Materialize Artificial Intelligence with PostgreSQL Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time. pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL. pgcenter - Command-line admin tool for observing and troubleshooting Postgres. TOTP implementation in PLPGSQL Connection pooler - Odyssey Connection pooler - PGBouncer Setting up Multiple pgBouncer Instances Connection pooler and much more - Pgpool-II Change data capture in PostgreSQL Swarm64 DA -20x faster PostgreSQL query performance Greenplum - data warehouse, based on PostgreSQL Apache Age - graph database functionality for PostgreSQL Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres. Supabase -Listen to PG changes in real time without using Listen/Notify Job queues, Single reader and pub/sub Use cases for scaling out PostgreSQL - Citus Database lab Engine - Fast cloning of Database for dev/QA/staging PGSync - Sync data from one Postgres database to another Neon - Serverless Open source PostgreSQL Push PG Listen/Notify events over Websockets Generate ERD using D2 Diagrams Mathesar - Spreadsheet-like Web interface for PostgreSQL Migration to PostgreSQL Migration Guide from Oracle to PostgreSQL Lessons while migrating from Oracle to PostgreSQL Reshape - easy-to-use, zero-downtime schema migration tool Migra - diff tool for PostgreSQL Schema pgroll: PostgreSQL zero-downtime migrations made easy reshape: An easy-to-use, zero-downtime schema migration tool for Postgres High Availability Tools for Multi-Master Replication PostgreSQL Replication Distributed PostgreSQL Change Data Capture, Asynchronous change processing etc. Electric SQL - Mobile Local first sync layer with PostgreSQL PGQ - Queueing Solution PGQ - as used by Skype Bucardo - Asynchronous replication for PostgreSQL using Triggers Using Logical Decoding, Wal2json for CDC Webedia’s approach of using Customer processor (walparser) to read from Wal2JSON and CDC between PG and Elasticsearch Message queuing using native postgresql Queues in PostgreSQL Message queueing with native postgresql Using PGQ to invalidate caches pgstream- turns your database into an event stream Wal-listener CLI Postgres as Message Queue Data Privacy PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management PostgreSQL Anonymizer - hides or replaces personally identifiable information (PII) Vector Embeddings Storing OpenAI embeddings in Postgres with pgvector Overview of pgVector Scalability and performance Scaling in PG Bulk import performance aspects Data Analysis Window functions for Data Analysis Data Synchronization, CDC Electric - Sync data from PostgreSQL Debezium - Stream changes from database">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="links">
-    <meta property="article:published_time" content="2022-01-10T15:08:50+05:30">
-    <meta property="article:modified_time" content="2022-01-10T15:08:50+05:30">
+<html lang="en" dir="auto">
 
-		
-  <meta itemprop="name" content="PostgreSQL">
-  <meta itemprop="description" content="PostgreSQL General Articles Mistakes to avoid while using PostgreSQL Free Postgres database (or SQLite) from fly.io Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don’t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL 10 Things I Hate About PostgreSQL PostgreSQL - Advanced Administration by Bruce Momjian Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration Using PostgreSQL as Cache and Read Optimization tips Adyen’s Use of PostgreSQL PostgreSQL version Upgrade @ Gitlab Zombodb - PostgreSQL and ElasticSearch work together Using pg_timetable for job scheduling Using pg_cron to schedule background tasks Using pg_cron to roll up for Analytics PG Database Configuration Helper Full text search in PostgreSQL Postgres full text search capabilities Full text search (Crunchydata) PostgreSQL - Best practices(Azure) Designing high performance time series data table in (RDS) postgresql while using BRIN Index Informative blog on PostgreSQL Understanding GIN indexes PostgreSQL - Using SQL for Data Analysis Approach to Bulk Import in PostGreSQL Schema updates with zero downtime in PostgreSQL How to JSON in PostgreSQL Grouping, Rollups and Cubes Row level Security Just use postgres Performance tuning, configuration etc. pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them Partitioning as Query Optimization Strategy Database Configuration Builder Configuration for Diagnosing Performance issues OrioleDB- Solving Wicked problems of PostgreSQL 5 Minutes in PostgreSQL - Videos PostgreSQL Tips Optimizing AutoVaccum in Postgresql 10 Things i hate about PostgreSQL Various index types and their usage Few gotchas for Application Developers Five tips for healthy PostgreSQL database Make PostgreSQL healthy and speedy Diagnose Linux related Disk &amp;amp; RAM issues PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer &amp;amp; Generally Good Blog on PostgreSQL Vertically scaling PostgreSQL How PostgreSQL Query Optimizer works A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration Be careful with CTE in PostgreSQL Per core Connection limit guidance for EDB PostgreSQL - Claim unused Index size PgBadger - A fast PostgreSQL Log Analyzer Using CTE to perform binary search on table Top tools to manage PostgreSQL Performance Impact of idle Postgresql connections (usage of Pgbench) How to Manage Connections Efficiently in Postgres, or Any Database How to Audit PostgreSQL Database SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN PostgreSQL Scaling advice in 2021 Security Hardening for PostgreSQL Working with Postgres @ Zerodha Using PostgreSQL for Data warehouse Testing PG High availability with Patroni Comparison of PostgreSQL Monitoring tools Using Timeout feature of PostgreSQL Benchmarking bulk data ingestion in PostgreSQL All about indexes in PostgreSQL Use cases for Partitioning Asynchronous Commits for faster data loading Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked Queues in PostgreSQL How postgresql stores data on disk Using Postgresql for job queueing and lessons learned Interesting Extensions/Products Using duckdb and postgres together Collection of Postgresql related tools PostgreSql based Message queue End-to-end machine learning solution Incrementally update Materialized Views in real-time using Materialize Artificial Intelligence with PostgreSQL Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time. pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL. pgcenter - Command-line admin tool for observing and troubleshooting Postgres. TOTP implementation in PLPGSQL Connection pooler - Odyssey Connection pooler - PGBouncer Setting up Multiple pgBouncer Instances Connection pooler and much more - Pgpool-II Change data capture in PostgreSQL Swarm64 DA -20x faster PostgreSQL query performance Greenplum - data warehouse, based on PostgreSQL Apache Age - graph database functionality for PostgreSQL Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres. Supabase -Listen to PG changes in real time without using Listen/Notify Job queues, Single reader and pub/sub Use cases for scaling out PostgreSQL - Citus Database lab Engine - Fast cloning of Database for dev/QA/staging PGSync - Sync data from one Postgres database to another Neon - Serverless Open source PostgreSQL Push PG Listen/Notify events over Websockets Generate ERD using D2 Diagrams Mathesar - Spreadsheet-like Web interface for PostgreSQL Migration to PostgreSQL Migration Guide from Oracle to PostgreSQL Lessons while migrating from Oracle to PostgreSQL Reshape - easy-to-use, zero-downtime schema migration tool Migra - diff tool for PostgreSQL Schema pgroll: PostgreSQL zero-downtime migrations made easy reshape: An easy-to-use, zero-downtime schema migration tool for Postgres High Availability Tools for Multi-Master Replication PostgreSQL Replication Distributed PostgreSQL Change Data Capture, Asynchronous change processing etc. Electric SQL - Mobile Local first sync layer with PostgreSQL PGQ - Queueing Solution PGQ - as used by Skype Bucardo - Asynchronous replication for PostgreSQL using Triggers Using Logical Decoding, Wal2json for CDC Webedia’s approach of using Customer processor (walparser) to read from Wal2JSON and CDC between PG and Elasticsearch Message queuing using native postgresql Queues in PostgreSQL Message queueing with native postgresql Using PGQ to invalidate caches pgstream- turns your database into an event stream Wal-listener CLI Postgres as Message Queue Data Privacy PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management PostgreSQL Anonymizer - hides or replaces personally identifiable information (PII) Vector Embeddings Storing OpenAI embeddings in Postgres with pgvector Overview of pgVector Scalability and performance Scaling in PG Bulk import performance aspects Data Analysis Window functions for Data Analysis Data Synchronization, CDC Electric - Sync data from PostgreSQL Debezium - Stream changes from database">
-  <meta itemprop="datePublished" content="2022-01-10T15:08:50+05:30">
-  <meta itemprop="dateModified" content="2022-01-10T15:08:50+05:30">
-  <meta itemprop="wordCount" content="927">
-		
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="PostgreSQL">
-  <meta name="twitter:description" content="PostgreSQL General Articles Mistakes to avoid while using PostgreSQL Free Postgres database (or SQLite) from fly.io Using generate_series feature for reporting When Postgres blocks: 7 tips for dealing with locks PostgreSQL - Don’t do this Is PostgreSQL good enough? Online event processing by Martin Klepmann PostgreSQL rocks, except when it blocks: Understanding locks Connection handling best practice with PostgreSQL 10 Things I Hate About PostgreSQL PostgreSQL - Advanced Administration by Bruce Momjian Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration Using PostgreSQL as Cache and Read Optimization tips Adyen’s Use of PostgreSQL PostgreSQL version Upgrade @ Gitlab Zombodb - PostgreSQL and ElasticSearch work together Using pg_timetable for job scheduling Using pg_cron to schedule background tasks Using pg_cron to roll up for Analytics PG Database Configuration Helper Full text search in PostgreSQL Postgres full text search capabilities Full text search (Crunchydata) PostgreSQL - Best practices(Azure) Designing high performance time series data table in (RDS) postgresql while using BRIN Index Informative blog on PostgreSQL Understanding GIN indexes PostgreSQL - Using SQL for Data Analysis Approach to Bulk Import in PostGreSQL Schema updates with zero downtime in PostgreSQL How to JSON in PostgreSQL Grouping, Rollups and Cubes Row level Security Just use postgres Performance tuning, configuration etc. pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them Partitioning as Query Optimization Strategy Database Configuration Builder Configuration for Diagnosing Performance issues OrioleDB- Solving Wicked problems of PostgreSQL 5 Minutes in PostgreSQL - Videos PostgreSQL Tips Optimizing AutoVaccum in Postgresql 10 Things i hate about PostgreSQL Various index types and their usage Few gotchas for Application Developers Five tips for healthy PostgreSQL database Make PostgreSQL healthy and speedy Diagnose Linux related Disk &amp;amp; RAM issues PostgreSQL database configuration tuning advicer Database configuration for Web Services Online explain analyzer &amp;amp; Generally Good Blog on PostgreSQL Vertically scaling PostgreSQL How PostgreSQL Query Optimizer works A Performance Dashboard Simple script to analyse your PostgreSQL database configuration, and give tuning advice Tuning PostgreSQL for High Write Throughput Postgres is a great pub/sub &amp;amp; job server PostgreSQL - Optimize Configuration Be careful with CTE in PostgreSQL Per core Connection limit guidance for EDB PostgreSQL - Claim unused Index size PgBadger - A fast PostgreSQL Log Analyzer Using CTE to perform binary search on table Top tools to manage PostgreSQL Performance Impact of idle Postgresql connections (usage of Pgbench) How to Manage Connections Efficiently in Postgres, or Any Database How to Audit PostgreSQL Database SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN PostgreSQL Scaling advice in 2021 Security Hardening for PostgreSQL Working with Postgres @ Zerodha Using PostgreSQL for Data warehouse Testing PG High availability with Patroni Comparison of PostgreSQL Monitoring tools Using Timeout feature of PostgreSQL Benchmarking bulk data ingestion in PostgreSQL All about indexes in PostgreSQL Use cases for Partitioning Asynchronous Commits for faster data loading Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked Queues in PostgreSQL How postgresql stores data on disk Using Postgresql for job queueing and lessons learned Interesting Extensions/Products Using duckdb and postgres together Collection of Postgresql related tools PostgreSql based Message queue End-to-end machine learning solution Incrementally update Materialized Views in real-time using Materialize Artificial Intelligence with PostgreSQL Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time. pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL. pgcenter - Command-line admin tool for observing and troubleshooting Postgres. TOTP implementation in PLPGSQL Connection pooler - Odyssey Connection pooler - PGBouncer Setting up Multiple pgBouncer Instances Connection pooler and much more - Pgpool-II Change data capture in PostgreSQL Swarm64 DA -20x faster PostgreSQL query performance Greenplum - data warehouse, based on PostgreSQL Apache Age - graph database functionality for PostgreSQL Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres. Supabase -Listen to PG changes in real time without using Listen/Notify Job queues, Single reader and pub/sub Use cases for scaling out PostgreSQL - Citus Database lab Engine - Fast cloning of Database for dev/QA/staging PGSync - Sync data from one Postgres database to another Neon - Serverless Open source PostgreSQL Push PG Listen/Notify events over Websockets Generate ERD using D2 Diagrams Mathesar - Spreadsheet-like Web interface for PostgreSQL Migration to PostgreSQL Migration Guide from Oracle to PostgreSQL Lessons while migrating from Oracle to PostgreSQL Reshape - easy-to-use, zero-downtime schema migration tool Migra - diff tool for PostgreSQL Schema pgroll: PostgreSQL zero-downtime migrations made easy reshape: An easy-to-use, zero-downtime schema migration tool for Postgres High Availability Tools for Multi-Master Replication PostgreSQL Replication Distributed PostgreSQL Change Data Capture, Asynchronous change processing etc. Electric SQL - Mobile Local first sync layer with PostgreSQL PGQ - Queueing Solution PGQ - as used by Skype Bucardo - Asynchronous replication for PostgreSQL using Triggers Using Logical Decoding, Wal2json for CDC Webedia’s approach of using Customer processor (walparser) to read from Wal2JSON and CDC between PG and Elasticsearch Message queuing using native postgresql Queues in PostgreSQL Message queueing with native postgresql Using PGQ to invalidate caches pgstream- turns your database into an event stream Wal-listener CLI Postgres as Message Queue Data Privacy PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management PostgreSQL Anonymizer - hides or replaces personally identifiable information (PII) Vector Embeddings Storing OpenAI embeddings in Postgres with pgvector Overview of pgVector Scalability and performance Scaling in PG Bulk import performance aspects Data Analysis Window functions for Data Analysis Data Synchronization, CDC Electric - Sync data from PostgreSQL Debezium - Stream changes from database">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>PostgreSQL | Learnings in IT</title>
+<meta name="keywords" content="">
+<meta name="description" content="PostgreSQL
+General Articles
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+Mistakes to avoid while using PostgreSQL
+Free Postgres database (or SQLite) from fly.io
+Using generate_series feature for reporting
+When Postgres blocks: 7 tips for dealing with locks
+PostgreSQL - Don’t do this
+Is PostgreSQL good enough?
+Online event processing by Martin Klepmann
+PostgreSQL rocks, except when it blocks: Understanding locks
+Connection handling best practice with PostgreSQL
+10 Things I Hate About PostgreSQL
+PostgreSQL - Advanced Administration by Bruce Momjian
+Top Tools and Recommendations to Manage Postgres in an Enterprise: Administration, Performance, High Availability, and Migration
+Using PostgreSQL as Cache and Read Optimization tips
+Adyen’s Use of PostgreSQL
+PostgreSQL version Upgrade @ Gitlab
+Zombodb - PostgreSQL and ElasticSearch work together
+Using pg_timetable for job scheduling
+Using pg_cron to schedule background tasks
+Using pg_cron to roll up for Analytics
+PG Database Configuration Helper
+Full text search in PostgreSQL
+Postgres full text search capabilities
+Full text search (Crunchydata)
+PostgreSQL - Best practices(Azure)
+Designing high performance time series data table in (RDS) postgresql while using BRIN Index
+Informative blog on PostgreSQL
+Understanding GIN indexes
+PostgreSQL - Using SQL for Data Analysis
+Approach to Bulk Import in PostGreSQL
+Schema updates with zero downtime in PostgreSQL
+How to  JSON in PostgreSQL
+Grouping, Rollups and Cubes
+Row level Security
+Just use postgres
 
-	<link rel="stylesheet" href="/css/style.css">
-	
+Performance tuning, configuration etc.
 
-	<link rel="shortcut icon" href="/favicon.ico">
-		
+pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them
+Partitioning as Query Optimization Strategy
+Database Configuration Builder
+Configuration for Diagnosing Performance issues
+OrioleDB- Solving Wicked problems of PostgreSQL
+5 Minutes in PostgreSQL - Videos
+PostgreSQL Tips
+Optimizing AutoVaccum in Postgresql
+10 Things i hate about PostgreSQL
+Various index types and their usage
+Few gotchas for Application Developers
+Five tips for healthy PostgreSQL database
+Make PostgreSQL healthy and speedy
+Diagnose Linux related Disk &amp;amp; RAM issues
+PostgreSQL database configuration tuning advicer
+Database configuration for Web Services
+Online explain analyzer &amp;amp; Generally Good Blog on PostgreSQL
+Vertically scaling PostgreSQL
+How PostgreSQL Query Optimizer works
+A Performance Dashboard
+Simple script to analyse your PostgreSQL database configuration, and give tuning advice
+Tuning PostgreSQL for High Write Throughput
+Postgres is a great pub/sub &amp;amp; job server
+PostgreSQL - Optimize Configuration
+Be careful with CTE in PostgreSQL
+Per core Connection limit guidance for EDB
+PostgreSQL - Claim unused Index size
+PgBadger - A fast PostgreSQL Log Analyzer
+Using CTE to perform binary search on table
+Top tools to manage PostgreSQL
+Performance Impact of idle Postgresql connections (usage of Pgbench)
+How to Manage Connections Efficiently in Postgres, or Any Database
+How to Audit PostgreSQL Database
+SQL Optimizations in PostgreSQL: IN vs EXISTS vs ANY/ALL vs JOIN
+PostgreSQL Scaling advice in 2021
+Security Hardening for PostgreSQL
+Working with Postgres @ Zerodha
+Using PostgreSQL for Data warehouse
+Testing PG High availability with Patroni
+Comparison of PostgreSQL Monitoring tools
+Using Timeout feature of PostgreSQL
+Benchmarking bulk data ingestion in PostgreSQL
+All about indexes in PostgreSQL
+Use cases for Partitioning
+Asynchronous Commits for faster data loading
+Push style Notifications and Background Queue Processing using Listen/Notify and skiplocked
+Queues in PostgreSQL
+How postgresql stores data on disk
+Using Postgresql for job queueing and lessons learned
+
+Interesting Extensions/Products
+
+Using duckdb and postgres together
+Collection of Postgresql related tools
+
+PostgreSql based Message queue
+End-to-end machine learning solution
+Incrementally update Materialized Views in real-time using Materialize
+Artificial Intelligence with PostgreSQL
+Materialize - Incrementally-updated materialized views - in ANSI Standard SQL and in real time.
+pg_bulkload - pg_bulkload is a high speed data loading tool for PostgreSQL.
+pgcenter - Command-line admin tool for observing and troubleshooting Postgres.
+TOTP implementation in PLPGSQL
+Connection pooler - Odyssey
+Connection pooler - PGBouncer
+Setting up Multiple pgBouncer Instances
+Connection pooler and much more - Pgpool-II
+Change data capture in PostgreSQL
+Swarm64 DA -20x faster PostgreSQL query performance
+Greenplum - data warehouse, based on PostgreSQL
+Apache Age - graph database functionality for PostgreSQL
+Distributed job-queue built specifically for queuing and executing heavy SQL read jobs asynchronously. Supports MySQL and Postgres.
+Supabase -Listen to PG changes in real time without using Listen/Notify
+Job queues, Single reader and pub/sub
+Use cases for scaling out PostgreSQL - Citus
+Database lab Engine - Fast cloning of Database for dev/QA/staging
+PGSync - Sync data from one Postgres database to another
+Neon - Serverless Open source PostgreSQL
+Push PG Listen/Notify events over Websockets
+Generate ERD using D2 Diagrams
+Mathesar - Spreadsheet-like Web interface for PostgreSQL
+
+Migration to PostgreSQL
+
+Migration Guide from Oracle to PostgreSQL
+Lessons while migrating from Oracle to PostgreSQL
+Reshape - easy-to-use, zero-downtime schema migration tool
+Migra - diff tool for PostgreSQL Schema
+pgroll: PostgreSQL zero-downtime migrations made easy
+reshape: An easy-to-use, zero-downtime schema migration tool for Postgres
+
+High Availability
+
+Tools for Multi-Master Replication
+PostgreSQL Replication
+Distributed PostgreSQL
+
+Change Data Capture, Asynchronous change processing etc.
+
+Electric SQL - Mobile Local first sync layer with PostgreSQL
+PGQ - Queueing Solution
+PGQ - as used by Skype
+Bucardo - Asynchronous replication for PostgreSQL using Triggers
+Using Logical Decoding, Wal2json for CDC
+Webedia’s approach of using Customer processor (walparser) to read from Wal2JSON and  CDC between PG and Elasticsearch
+Message queuing using native postgresql
+Queues in PostgreSQL
+Message queueing with native postgresql
+Using PGQ to invalidate caches
+pgstream- turns your  database into an event stream
+Wal-listener CLI
+Postgres as Message Queue
+
+Data Privacy
+
+PgSodium - Interface to LibSodium from PostgreSQL including Server Key Management
+PostgreSQL Anonymizer -  hides or replaces personally identifiable information (PII)
+
+Vector Embeddings
+
+Storing OpenAI embeddings in Postgres with pgvector
+Overview of pgVector
+
+Scalability and performance
+
+Scaling in PG
+Bulk import performance aspects
+
+Data Analysis
+
+Window functions for Data Analysis
+
+Data Synchronization, CDC
+
+Electric - Sync data from PostgreSQL
+Debezium - Stream changes from database
+">
+<meta name="author" content="map[name:Sachin Sunkle]">
+<link rel="canonical" href="http://localhost:1313/links/postgresql/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/links/postgresql/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
 </head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container header__container">
-		
-	<div class="logo">
-		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">Learnings in IT</div>
-					<div class="logo__tagline">A Simple Technical Blog</div>
-				</div>
-		</a>
-	</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/posts/">
-				
-				<span class="menu__text">Blog</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/projects/">
-				
-				<span class="menu__text">Projects</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="https://gist.github.com/sachinsu">
-				
-				<span class="menu__text">Gists</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/links/home">
-				
-				<span class="menu__text">Useful Links</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
 
-	</div>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Learnings in IT (Alt + H)">Learnings in IT</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gist.github.com/sachinsu" title="Gists">
+                    <span>Gists</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/links/home" title="Useful Links">
+                    <span>Useful Links</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">PostgreSQL</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-01-10T15:08:50&#43;05:30">Jan 10 2022</time></div></div>
-		</header>
-		
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#general-articles">General Articles</a></li>
-    <li><a href="#performance-tuning-configuration-etc">Performance tuning, configuration etc.</a></li>
-    <li><a href="#interesting-extensionsproducts">Interesting Extensions/Products</a></li>
-    <li><a href="#migration-to-postgresql">Migration to PostgreSQL</a></li>
-    <li><a href="#high-availability">High Availability</a></li>
-    <li><a href="#change-data-capture-asynchronous-change-processing-etc">Change Data Capture, Asynchronous change processing etc.</a></li>
-    <li><a href="#data-privacy">Data Privacy</a></li>
-    <li><a href="#vector-embeddings">Vector Embeddings</a></li>
-    <li><a href="#scalability-and-performance">Scalability and performance</a></li>
-    <li><a href="#data-analysis">Data Analysis</a></li>
-    <li><a href="#data-synchronization-cdc">Data Synchronization, CDC</a></li>
-  </ul>
-</nav>
-	</div>
-</div><div class="content post__content clearfix">
-			<h1 id="postgresql">PostgreSQL</h1>
-<h2 id="general-articles">General Articles</h2>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      PostgreSQL
+    </h1>
+    <div class="post-meta"><span title='2022-01-10 15:08:50 +0530 IST'>Jan 10 2022</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="postgresql">PostgreSQL<a hidden class="anchor" aria-hidden="true" href="#postgresql">#</a></h1>
+<h2 id="general-articles">General Articles<a hidden class="anchor" aria-hidden="true" href="#general-articles">#</a></h2>
 <ul>
 <li><a href=https://philbooth.me/blog/nine-ways-to-shoot-yourself-in-the-foot-with-postgresql
     
@@ -269,7 +460,7 @@
     target=_blank rel="noopener noreferrer"
 >Just use postgres</a></li>
 </ul>
-<h2 id="performance-tuning-configuration-etc">Performance tuning, configuration etc.</h2>
+<h2 id="performance-tuning-configuration-etc">Performance tuning, configuration etc.<a hidden class="anchor" aria-hidden="true" href="#performance-tuning-configuration-etc">#</a></h2>
 <ul>
 <li><a href=https://github.com/nexsol-technologies/pgassistant
     
@@ -468,7 +659,7 @@
     target=_blank rel="noopener noreferrer"
 >Using Postgresql for job queueing and lessons learned</a></li>
 </ul>
-<h2 id="interesting-extensionsproducts">Interesting Extensions/Products</h2>
+<h2 id="interesting-extensionsproducts">Interesting Extensions/Products<a hidden class="anchor" aria-hidden="true" href="#interesting-extensionsproducts">#</a></h2>
 <ul>
 <li><a href=https://motherduck.com/blog/postgres-duckdb-options
     
@@ -584,7 +775,7 @@
     target=_blank rel="noopener noreferrer"
 >Mathesar - Spreadsheet-like Web interface for PostgreSQL</a></li>
 </ul>
-<h2 id="migration-to-postgresql">Migration to PostgreSQL</h2>
+<h2 id="migration-to-postgresql">Migration to PostgreSQL<a hidden class="anchor" aria-hidden="true" href="#migration-to-postgresql">#</a></h2>
 <ul>
 <li><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/new-oracle-to-postgres-migration-guide-for-azure/ba-p/2055303
     
@@ -611,7 +802,7 @@
     target=_blank rel="noopener noreferrer"
 >reshape: An easy-to-use, zero-downtime schema migration tool for Postgres</a></li>
 </ul>
-<h2 id="high-availability">High Availability</h2>
+<h2 id="high-availability">High Availability<a hidden class="anchor" aria-hidden="true" href="#high-availability">#</a></h2>
 <ul>
 <li><a href=https://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection_Pooling
     
@@ -626,7 +817,7 @@
     target=_blank rel="noopener noreferrer"
 >Distributed PostgreSQL</a></li>
 </ul>
-<h2 id="change-data-capture-asynchronous-change-processing-etc">Change Data Capture, Asynchronous change processing etc.</h2>
+<h2 id="change-data-capture-asynchronous-change-processing-etc">Change Data Capture, Asynchronous change processing etc.<a hidden class="anchor" aria-hidden="true" href="#change-data-capture-asynchronous-change-processing-etc">#</a></h2>
 <ul>
 <li><a href=https://electric-sql.com/
     
@@ -681,7 +872,7 @@
     target=_blank rel="noopener noreferrer"
 >Postgres as Message Queue</a></li>
 </ul>
-<h2 id="data-privacy">Data Privacy</h2>
+<h2 id="data-privacy">Data Privacy<a hidden class="anchor" aria-hidden="true" href="#data-privacy">#</a></h2>
 <ul>
 <li><a href=https://github.com/michelp/pgsodium
     
@@ -692,7 +883,7 @@
     target=_blank rel="noopener noreferrer"
 >PostgreSQL Anonymizer -  hides or replaces personally identifiable information (PII)</a></li>
 </ul>
-<h2 id="vector-embeddings">Vector Embeddings</h2>
+<h2 id="vector-embeddings">Vector Embeddings<a hidden class="anchor" aria-hidden="true" href="#vector-embeddings">#</a></h2>
 <ul>
 <li><a href=https://supabase.com/blog/openai-embeddings-postgres-vector
     
@@ -703,7 +894,7 @@
     target=_blank rel="noopener noreferrer"
 >Overview of pgVector</a></li>
 </ul>
-<h2 id="scalability-and-performance">Scalability and performance</h2>
+<h2 id="scalability-and-performance">Scalability and performance<a hidden class="anchor" aria-hidden="true" href="#scalability-and-performance">#</a></h2>
 <ul>
 <li><a href=https://www.postgresql.org/docs/current/populate.html
     
@@ -714,14 +905,14 @@
     target=_blank rel="noopener noreferrer"
 >Bulk import performance aspects</a></li>
 </ul>
-<h2 id="data-analysis">Data Analysis</h2>
+<h2 id="data-analysis">Data Analysis<a hidden class="anchor" aria-hidden="true" href="#data-analysis">#</a></h2>
 <ul>
 <li><a href=https://www.crunchydata.com/blog/window-functions-for-data-analysis-with-postgres
     
     target=_blank rel="noopener noreferrer"
 >Window functions for Data Analysis</a></li>
 </ul>
-<h2 id="data-synchronization-cdc">Data Synchronization, CDC</h2>
+<h2 id="data-synchronization-cdc">Data Synchronization, CDC<a hidden class="anchor" aria-hidden="true" href="#data-synchronization-cdc">#</a></h2>
 <ul>
 <li><a href=https://electric-sql.com
     
@@ -733,40 +924,85 @@
 >Debezium - Stream changes from database</a></li>
 </ul>
 
-		</div>
-	</article>
-</main>
 
+  </div>
 
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/links/onlearn/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Resources for Online Learning</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/links/java/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Programming Languages - Java</p>
-		</a>
-	</div>
-</nav>
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Learnings in IT</a></span> · 
 
-
-			</div>
-			
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2025 Sachin Sunkle.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

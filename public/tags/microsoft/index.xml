@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Microsoft on Learnings in IT</title>
     <link>http://localhost:1313/tags/microsoft/</link>
     <description>Recent content in Microsoft on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,14 @@
       <link>http://localhost:1313/posts/restapiversioning/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/restapiversioning/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Recently, i went through excellent video series on  &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Jeffrey Richter&lt;/a&gt;. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;here&lt;/a&gt;. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Recently, i went through excellent video series on  &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Jeffrey Richter&lt;/a&gt;. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt;. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

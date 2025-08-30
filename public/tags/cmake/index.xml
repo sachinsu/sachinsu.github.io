@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cmake on Learnings in IT</title>
     <link>http://localhost:1313/tags/cmake/</link>
     <description>Recent content in Cmake on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,9 @@
       <link>http://localhost:1313/posts/ninjabuildsystem/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
       <guid>http://localhost:1313/posts/ninjabuildsystem/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.&lt;/p&gt;&#xA;&lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.&lt;/p&gt;
+&lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

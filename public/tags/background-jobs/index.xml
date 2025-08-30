@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Background-Jobs on Learnings in IT</title>
     <link>http://localhost:1313/tags/background-jobs/</link>
     <description>Recent content in Background-Jobs on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 01 Apr 2025 10:25:04 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/background-jobs/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,10 @@
       <link>http://localhost:1313/posts/outoforder/</link>
       <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
       <guid>http://localhost:1313/posts/outoforder/</guid>
-      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Explore various approaches to handle out-of-order or delayed processing, addressing scenarios like bulk operations and long-running tasks. Learn about message queues, background workers, and other techniques to improve application responsiveness.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the world of software development, we often encounter tasks that don&amp;rsquo;t need to or (should not) be completed immediately. Whether it&amp;rsquo;s sending mass emails, processing large datasets, or handling complex computations. Blocking the user&amp;rsquo;s main flow (Either on Web App or API) for these operations is rarely a good idea. That&amp;rsquo;s where out-of-order or delayed processing comes in.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Explore various approaches to handle out-of-order or delayed processing, addressing scenarios like bulk operations and long-running tasks. Learn about message queues, background workers, and other techniques to improve application responsiveness.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the world of software development, we often encounter tasks that don&amp;rsquo;t need to or (should not) be completed immediately. Whether it&amp;rsquo;s sending mass emails, processing large datasets, or handling complex computations. Blocking the user&amp;rsquo;s main flow (Either on Web App or API) for these operations is rarely a good idea. That&amp;rsquo;s where out-of-order or delayed processing comes in.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

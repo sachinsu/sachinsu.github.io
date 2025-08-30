@@ -1,148 +1,152 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Near real time API Monitoring with Grafana and PostgreSQL - Learnings in IT</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:url" content="http://localhost:1313/posts/nrtanalysispostgresql/">
-  <meta property="og:site_name" content="Learnings in IT">
-  <meta property="og:title" content="Near real time API Monitoring with Grafana and PostgreSQL">
-  <meta property="og:description" content="Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being “always on” (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Near real time API Monitoring with Grafana and PostgreSQL | Learnings in IT</title>
+<meta name="keywords" content="postgresql, real-time, analytics, sql, time series, timescaledb, grafana">
+<meta name="description" content="Introduction
+Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &ldquo;always on&rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
 What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-07-15T10:25:04+05:30">
-    <meta property="article:modified_time" content="2021-07-15T10:25:04+05:30">
-    <meta property="article:tag" content="Postgresql">
-    <meta property="article:tag" content="Real-Time">
-    <meta property="article:tag" content="Analytics">
-    <meta property="article:tag" content="SQL">
-    <meta property="article:tag" content="Time Series">
-    <meta property="article:tag" content="Timescaledb">
+<meta name="author" content="map[name:Sachin Sunkle]">
+<link rel="canonical" href="http://localhost:1313/posts/nrtanalysispostgresql/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/nrtanalysispostgresql/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-		
-  <meta itemprop="name" content="Near real time API Monitoring with Grafana and PostgreSQL">
-  <meta itemprop="description" content="Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being “always on” (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
-What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?">
-  <meta itemprop="datePublished" content="2021-07-15T10:25:04+05:30">
-  <meta itemprop="dateModified" content="2021-07-15T10:25:04+05:30">
-  <meta itemprop="wordCount" content="1645">
-  <meta itemprop="keywords" content="Postgresql,Real-Time,Analytics,SQL,Time Series,Timescaledb,Grafana">
-		
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Near real time API Monitoring with Grafana and PostgreSQL">
-  <meta name="twitter:description" content="Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being “always on” (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
-What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+            .list {
+                background: var(--theme);
+            }
 
-	<link rel="stylesheet" href="/css/style.css">
-	
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-	<link rel="shortcut icon" href="/favicon.ico">
-		
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
 </head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container header__container">
-		
-	<div class="logo">
-		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">Learnings in IT</div>
-					<div class="logo__tagline">A Simple Technical Blog</div>
-				</div>
-		</a>
-	</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/posts/">
-				
-				<span class="menu__text">Blog</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/projects/">
-				
-				<span class="menu__text">Projects</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="https://gist.github.com/sachinsu">
-				
-				<span class="menu__text">Gists</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/links/home">
-				
-				<span class="menu__text">Useful Links</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
 
-	</div>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Learnings in IT (Alt + H)">Learnings in IT</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gist.github.com/sachinsu" title="Gists">
+                    <span>Gists</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/links/home" title="Useful Links">
+                    <span>Useful Links</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Near real time API Monitoring with Grafana and PostgreSQL</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-07-15T10:25:04&#43;05:30">Jul 15 2021</time></div></div>
-		</header>
-		
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#data-collection-and-storage">Data Collection and Storage</a>
-      <ul>
-        <li><a href="#timescaledb">TimescaleDB</a></li>
-        <li><a href="#fluentbit">FluentBit</a></li>
-      </ul>
-    </li>
-    <li><a href="#visualization">Visualization</a>
-      <ul>
-        <li><a href="#grafana">Grafana</a></li>
-        <li><a href="#useful-links-usefullinks">Useful links (#usefullinks)</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-	</div>
-</div><div class="content post__content clearfix">
-			<h2 id="introduction">Introduction</h2>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Near real time API Monitoring with Grafana and PostgreSQL
+    </h1>
+    <div class="post-meta"><span title='2021-07-15 10:25:04 +0530 IST'>Jul 15 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &ldquo;always on&rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.</p>
 <p>What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?</p>
 <p>Is it even possible to have near real time Monitoring of Application&rsquo;s behaviour using already-in-use technologies (like PostgreSQL) ?</p>
@@ -154,11 +158,12 @@ What if Monitoring is an afterthought (i.e. application is already in production
     
     target=_blank rel="noopener noreferrer"
 >here</a>) that traces (distributed) will eventually replace logging.</p>
-<h2 id="approach">Approach</h2>
+<h2 id="approach">Approach<a hidden class="anchor" aria-hidden="true" href="#approach">#</a></h2>
 <p>The high level architecture looks like below,</p>
-<figure><img src="/images/nrt_architecture.png"><figcaption>
-      <h4>High Level Architecture</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/nrt_architecture.png"/> <figcaption>
+            High Level Architecture
+        </figcaption>
 </figure>
 
 <p>Considering as-is state of Application Architecture and given the constraints (mentioned earlier), this post covers approach that is based upon,</p>
@@ -181,8 +186,8 @@ What if Monitoring is an afterthought (i.e. application is already in production
 >Grafana</a> - Data Visualization and Monitoring platform.</li>
 </ul>
 <p>Lets see how to get this done step by step.</p>
-<h2 id="data-collection-and-storage">Data Collection and Storage</h2>
-<h3 id="timescaledb">TimescaleDB</h3>
+<h2 id="data-collection-and-storage">Data Collection and Storage<a hidden class="anchor" aria-hidden="true" href="#data-collection-and-storage">#</a></h2>
+<h3 id="timescaledb">TimescaleDB<a hidden class="anchor" aria-hidden="true" href="#timescaledb">#</a></h3>
 <p><a href=https://www.timescale.com
     
     target=_blank rel="noopener noreferrer"
@@ -259,7 +264,7 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
     target=_blank rel="noopener noreferrer"
 >Trigger</a> can be used to populate it from current table.</p>
 <p>In real scenario, you may want to consider replicating the data directly to hyper table.</p>
-<h3 id="fluentbit">FluentBit</h3>
+<h3 id="fluentbit">FluentBit<a hidden class="anchor" aria-hidden="true" href="#fluentbit">#</a></h3>
 <p>So far , we have collected Application logs in the database. There is one more source which is of importance in the context of Monitoring and that is infrastructure software. It could be Operating System, Web Servers and so on. They generate lot of logs and metrices that can be ingested and consumed in conjuction with Application log to get better picture. We will look at how Web server logs can  be sourced in data source.</p>
 <p>There are many monitoring tools (refer <a href=#usefullinks
     
@@ -351,7 +356,7 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
     target=_blank rel="noopener noreferrer"
 >plugin</a> provisions the table itself with a structure that stores entire JSON in field as part of row. Either this table can be used as is or use &ldquo;Before insert&rdquo; trigger as suggested by Fluentbit&rsquo;s manual to parse the Json and populate separate table.</p>
 <p>Fluentbit can be easily configured to run as daemon (on Linux) or Service (on windows).</p>
-<h2 id="visualization">Visualization</h2>
+<h2 id="visualization">Visualization<a hidden class="anchor" aria-hidden="true" href="#visualization">#</a></h2>
 <p>With data getting added to timescaledb Hyper table,Lets see how it can be visualized.</p>
 <p>Typically, there are 2 approaches to be considered for Visualization,</p>
 <ul>
@@ -385,7 +390,7 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
 >Apache Superset</a> - open-source application for data exploration and data visualization able to handle data at petabyte scale.</li>
 </ul>
 <p>Lets see how Grafana can be used for visualization (Probably, i may evaluate superset some time and update this post.)</p>
-<h3 id="grafana">Grafana</h3>
+<h3 id="grafana">Grafana<a hidden class="anchor" aria-hidden="true" href="#grafana">#</a></h3>
 <p>Grafana has multiple offerings and one of them being Open source, Self-hosted Application. It has <a href=https://golang.org
     
     target=_blank rel="noopener noreferrer"
@@ -397,34 +402,39 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
 <ul>
 <li>Connectivity to PostgreSQL - One needs to add Data Source in Grafana which in this case is PostgreSQL Database. It can be added from sidebar on Grafana UI, by hovering over  &ldquo;Configuration&rdquo; option. In below screenshot, it shows configuration.</li>
 </ul>
-<figure><img src="/images/grafana1.png"><figcaption>
-      <h4>Grafana: Connect to PostgreSQL</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/grafana1.png"/> <figcaption>
+            Grafana: Connect to PostgreSQL
+        </figcaption>
 </figure>
 
 <ul>
 <li>Add Dashboard - Once the Data source is setup, next step is to add a dashboard. Dashboard essentially is a visualization or a report. It has Query (in this case SQL Query) to fetch the data. Below screenshot shows configuration of simple query for Dashboard,</li>
 </ul>
-<figure><img src="/images/grafana2.png"><figcaption>
-      <h4>Grafana: Query for Dashboard</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/grafana2.png"/> <figcaption>
+            Grafana: Query for Dashboard
+        </figcaption>
 </figure>
 
 <p>Grafana requires certain functions to be included (like <code>$__time(..)</code> and <code>$__timeFilter(..)</code>) in query so as to facilitate filtering/ordering by user through UI, like shown below,</p>
-<figure><img src="/images/grafana3.png"><figcaption>
-      <h4>Grafana: View data and apply Filter</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/grafana3.png"/> <figcaption>
+            Grafana: View data and apply Filter
+        </figcaption>
 </figure>
 
 <p>Grafana provides extensive ways to transform on the data fetched by SQL Query. This feature is more aimed at business and power user who may want to perform additional analysis on it. Alternative is to provide desired SQL and get the visualization like Time series or Graph  as shown below,</p>
-<figure><img src="/images/grafana4.png"><figcaption>
-      <h4>Grafana: Complex SQL Query with minimal transformation</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/grafana4.png"/> <figcaption>
+            Grafana: Complex SQL Query with minimal transformation
+        </figcaption>
 </figure>
 
-<figure><img src="/images/grafana5.png"><figcaption>
-      <h4>Grafana: Time Series Visualization</h4>
-    </figcaption>
+<figure>
+    <img loading="lazy" src="/images/grafana5.png"/> <figcaption>
+            Grafana: Time Series Visualization
+        </figcaption>
 </figure>
 
 <p>Note that there are many more features provided by Grafana (in terms of transformations, Visualization options, Access Control to UI itself and so on.</p>
@@ -438,7 +448,7 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
     
     target=_blank rel="noopener noreferrer"
 >documentation</a> to derive most value out of it.</p>
-<h3 id="useful-links-usefullinks">Useful links (#usefullinks)</h3>
+<h3 id="useful-links-usefullinks">Useful links (#usefullinks)<a hidden class="anchor" aria-hidden="true" href="#useful-links-usefullinks">#</a></h3>
 <ul>
 <li><a href=https://sematext.com/blog/infrastructure-monitoring-tools/
     
@@ -454,69 +464,92 @@ SELECT (current_timestamp - &#39;0 day&#39;::interval), (case when x = 1 then &#
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
     theme="github-light" crossorigin="anonymous" async></script>
 
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/postgresql/" rel="tag">postgresql</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/real-time/" rel="tag">real-time</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/analytics/" rel="tag">analytics</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/sql/" rel="tag">sql</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/time-series/" rel="tag">time series</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/timescaledb/" rel="tag">timescaledb</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/grafana/" rel="tag">grafana</a>
-		</li>
-	</ul>
-</div>
-		</footer>
-	</article>
-</main>
 
+  </div>
 
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/domain_driven_transcript_from_pluralsight/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Domain driven Design: Learnings</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/dbre/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Database Reliability Engineering - My Notes</p>
-		</a>
-	</div>
-</nav>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/postgresql/">Postgresql</a></li>
+      <li><a href="http://localhost:1313/tags/real-time/">Real-Time</a></li>
+      <li><a href="http://localhost:1313/tags/analytics/">Analytics</a></li>
+      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
+      <li><a href="http://localhost:1313/tags/time-series/">Time Series</a></li>
+      <li><a href="http://localhost:1313/tags/timescaledb/">Timescaledb</a></li>
+      <li><a href="http://localhost:1313/tags/grafana/">Grafana</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Learnings in IT</a></span> · 
 
-
-			</div>
-			
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2025 Sachin Sunkle.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

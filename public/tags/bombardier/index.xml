@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Bombardier on Learnings in IT</title>
     <link>http://localhost:1313/tags/bombardier/</link>
     <description>Recent content in Bombardier on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/bombardier/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,12 @@
       <link>http://localhost:1313/posts/is_sqlite_production_ready/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/is_sqlite_production_ready/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.&#xA;In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;SQLite&lt;/a&gt; for this purpose.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
+In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;SQLite&lt;/a&gt; for this purpose.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

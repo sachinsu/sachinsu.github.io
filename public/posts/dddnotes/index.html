@@ -1,109 +1,150 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - Learnings in IT</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:url" content="http://localhost:1313/posts/dddnotes/">
-  <meta property="og:site_name" content="Learnings in IT">
-  <meta property="og:title" content="Learnings in IT">
-  <meta property="og:description" content="Even Eric Evans explicitly states that DDD isn’t suitable for problems when there’s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that’s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
+<html lang="en" dir="auto">
 
-		
-  <meta itemprop="name" content="Learnings in IT">
-  <meta itemprop="description" content="Even Eric Evans explicitly states that DDD isn’t suitable for problems when there’s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that’s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother">
-  <meta itemprop="wordCount" content="1240">
-		
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Learnings in IT">
-  <meta name="twitter:description" content="Even Eric Evans explicitly states that DDD isn’t suitable for problems when there’s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that’s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Learnings in IT</title>
+<meta name="keywords" content="">
+<meta name="description" content="Even Eric Evans explicitly states that DDD isn&rsquo;t suitable for problems when there&rsquo;s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that&rsquo;s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother">
+<meta name="author" content="map[name:Sachin Sunkle]">
+<link rel="canonical" href="http://localhost:1313/posts/dddnotes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/dddnotes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-	<link rel="stylesheet" href="/css/style.css">
-	
+            .list {
+                background: var(--theme);
+            }
 
-	<link rel="shortcut icon" href="/favicon.ico">
-		
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
 </head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container header__container">
-		
-	<div class="logo">
-		<a class="logo__link" href="/" title="Learnings in IT" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">Learnings in IT</div>
-					<div class="logo__tagline">A Simple Technical Blog</div>
-				</div>
-		</a>
-	</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/posts/">
-				
-				<span class="menu__text">Blog</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/projects/">
-				
-				<span class="menu__text">Projects</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="https://gist.github.com/sachinsu">
-				
-				<span class="menu__text">Gists</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/links/home">
-				
-				<span class="menu__text">Useful Links</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
 
-	</div>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Learnings in IT (Alt + H)">Learnings in IT</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://gist.github.com/sachinsu" title="Gists">
+                    <span>Gists</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/links/home" title="Useful Links">
+                    <span>Useful Links</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title"></h1>
-			
-		</header>
-		<div class="content post__content clearfix">
-			<p>Even Eric Evans explicitly states that DDD isn&rsquo;t suitable for problems when there&rsquo;s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that&rsquo;s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother</p>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">map[name:Sachin Sunkle]
+
+</div>
+  </header> 
+  <div class="post-content"><p>Even Eric Evans explicitly states that DDD isn&rsquo;t suitable for problems when there&rsquo;s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that&rsquo;s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother</p>
 <p>Modeling is an intense examination of the problem space. Key to this is working together with the subject matter experts to identify the core domain and other subdomains that you&rsquo;ll be tackling. Another important aspect of modeling is identifying what&rsquo;s called bounded contexts. And within each of these bounded contexts, you focus on modeling a particular subdomain. As a result of modeling a bounded context, you&rsquo;ll identify entities, value objects, aggregates, domain events, repositories, and more and how they interact with each other.</p>
 <p>the ubiquitous language. A simple definition of a ubiquitous language is to come up with terms that&rsquo;ll be commonly used when discussing a particular subdomain. And they will most likely be terms that come from the problem space, not the software world, but they have to be agreed upon so that as discussions move forward, there is no confusion or misunderstanding created by the terminology used by various members of the team</p>
 <p>Projects,</p>
@@ -127,34 +168,85 @@
 <p>Domain events are a type of object that actually represents something that occurred within the domain that other parts of the system may find interesting and want to tie their behavior to.</p>
 <p>anti‑corruption layers, which use a variety of design patterns to insulate our model from the design choices of other applications or bounded contexts.</p>
 
-		</div>
-	</article>
-</main>
 
+  </div>
 
-<nav class="pager flex">
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/dotnetstandard/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Using .NET standard Assembly in .NET core and .NET Framework</p>
-		</a>
-	</div>
-</nav>
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Learnings in IT</a></span> · 
 
-
-			</div>
-			
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2025 Sachin Sunkle.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

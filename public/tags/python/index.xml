@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on Learnings in IT</title>
     <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,24 @@
       <link>http://localhost:1313/posts/elt/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/elt/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Extract&lt;/strong&gt; - typically involves retrieving data from source. This could also be via streaming&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Transform&lt;/strong&gt; - Apply transformation to the extracted data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Load&lt;/strong&gt; -  Loading the data in Operation Data store (ODS) or data warehouse&#xA;Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;here&lt;/a&gt; for more details on ETL. ETL has been made easy by tools like &lt;a href=https://www.talend.com/products/talend-open-studio/&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Talend&lt;/a&gt;, &lt;a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;SSIS&lt;/a&gt; and so on.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;However, there has been shift from above approach due to,&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Extract&lt;/strong&gt; - typically involves retrieving data from source. This could also be via streaming&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transform&lt;/strong&gt; - Apply transformation to the extracted data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Load&lt;/strong&gt; -  Loading the data in Operation Data store (ODS) or data warehouse
+Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt; for more details on ETL. ETL has been made easy by tools like &lt;a href=https://www.talend.com/products/talend-open-studio/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Talend&lt;/a&gt;, &lt;a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;SSIS&lt;/a&gt; and so on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, there has been shift from above approach due to,&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

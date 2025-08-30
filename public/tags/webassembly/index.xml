@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>WebAssembly on Learnings in IT</title>
     <link>http://localhost:1313/tags/webassembly/</link>
     <description>Recent content in WebAssembly on Learnings in IT</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jun 2020 10:25:04 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,22 @@
       <link>http://localhost:1313/posts/webassembly/</link>
       <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
       <guid>http://localhost:1313/posts/webassembly/</guid>
-      <description>&lt;p&gt;Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;React&lt;/a&gt; and &lt;a href=https://vuejs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Vue&lt;/a&gt; among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp;amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. &lt;a href=https://getbootstrap.com&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Bootstrap&lt;/a&gt;. Offline Support soon came in ref: &lt;a href=https://electronjs.org&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Electron&lt;/a&gt; and &lt;a href=https://web.dev/progressive-web-apps/&#xA;    &#xA;    target=_blank rel=&#34;noopener noreferrer&#34;&#xA;&gt;Progressive Web Applications&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;React&lt;/a&gt; and &lt;a href=https://vuejs.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Vue&lt;/a&gt; among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp;amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS+Javascript libraries eg. &lt;a href=https://getbootstrap.com
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Bootstrap&lt;/a&gt;. Offline Support soon came in ref: &lt;a href=https://electronjs.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Electron&lt;/a&gt; and &lt;a href=https://web.dev/progressive-web-apps/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Progressive Web Applications&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
