@@ -273,6 +273,10 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [Comparing Techniques for Communicating Between HTTP Services](https://ardalis.com/comparing-techniques-communicating-between-services/)
 
 
+## Coding Style Guide
+
+- [Google Code Style Guide](https://google.github.io/styleguide/)
+
 ## Rust
 
 - [Getting started with Rust](https://stackoverflow.blog/2021/03/15/getting-started-with-rust/#:~:text=Intro,first%20created%20by%20Graydon%20Hoare.)

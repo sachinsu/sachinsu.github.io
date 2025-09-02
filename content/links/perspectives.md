@@ -9,6 +9,7 @@ draft: false
 Section covering Business, project/programming perspectives
 
 - [Laws of Frugal Architecture](https://thefrugalarchitect.com/laws/)
+- [Cognitive load is all that matters](https://minds.md/zakirullin/cognitive)
 - [Stick to boring Architecture](https://addyosmani.com/blog/boring-architecture/)
 - [Your tech stack is not the product](https://hoho.com/posts/your-stack-is-not-the-product/)
 - [Architecture anti-patterns](https://charity.wtf/2023/03/09/architects-anti-patterns-and-organizational-fuckery/?ref=architecturenotes.co)

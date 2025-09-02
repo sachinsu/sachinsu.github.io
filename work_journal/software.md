@@ -1288,6 +1288,11 @@
          - Event storage - How long and which,
              - Events must be sampled and some rules are,
              -  health checks that return 200 OK usually represent a significant chunk of your traffic and are basically useless, while 500s are almost always interesting
+             -  Types of Health Checks:
+                    Liveness Checks: Basic checks (e.g., listening on a port, responding to HTTP 200) that don't require application-specific knowledge.
+                    Local Health Checks: Go deeper to verify application function, testing resources not shared with peers (e.g., disk I/O, critical process health, missing support processes). Less likely to cause fleet-wide failures.
+                    Dependency Health Checks: Test interaction with adjacent systems. Prone to false positives when the dependency itself has issues.
+                    Anomaly Detection: Compares server behavior to peers (e.g., clock skew, outdated code) to find outliers that individual servers might miss.
              - all requests to /login or /payment endpoints
              -  For database traffic: SELECTs for health checks are useless, DELETEs and all other mutations are rare but you should keep all of them.
              - Latency - The time it takes to service a request. It’s important to distinguish between the latency of successful requests and the latency of failed requests. For example, an HTTP 500 error triggered due to loss of connection to a database or other critical backend might be served very quickly; however, as an HTTP 500 error indicates a failed request, factoring 500s into your overall latency might result in misleading calculations. On the other hand, a slow error is even worse than a fast error! Therefore, it’s important to track error latency, as opposed to just filtering out errors.

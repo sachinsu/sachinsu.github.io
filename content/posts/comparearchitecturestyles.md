@@ -99,6 +99,7 @@ The Architecture styles evolve as they are tested against real-time requirements
 * [Clean Architecture 1](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
 * [Clean Architecture 2](https://devblogs.microsoft.com/ise/next-level-clean-architecture-boilerplate/)
 * [Clean Architecture 3](https://jasontaylor.dev/clean-architecture-getting-started/)
+* [Cognitive load is all that matters](https://minds.md/zakirullin/cognitive)
   
 Happy Coding !!
 
