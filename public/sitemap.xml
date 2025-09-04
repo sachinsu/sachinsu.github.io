@@ -11,7 +11,13 @@
     <loc>http://localhost:1313/posts/comparearchitecturestyles/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/microservices/</loc>
+    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/modularity/</loc>
+    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/monolith/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
@@ -22,6 +28,30 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/bom/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cyclonedx/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/devops/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sbom/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/software/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/sbom/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/spdx/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/syft/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/databases/</loc>
     <lastmod>2025-06-01T01:00:00+05:30</lastmod>
@@ -336,9 +366,6 @@
     <lastmod>2020-12-07T08:25:04+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cassandra/</loc>
-    <lastmod>2020-12-07T08:25:04+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/microservices/</loc>
     <lastmod>2020-12-07T08:25:04+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/temporal.io/</loc>

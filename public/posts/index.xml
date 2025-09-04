@@ -25,6 +25,22 @@
 &lt;p&gt;In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant,&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Software Bill of Material</title>
+      <link>http://localhost:1313/posts/sbom/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/sbom/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
+up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.&lt;/p&gt;
+&lt;h3 id=&#34;why-&#34;&gt;Why ?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Software products are composed of many different components, some of which might come from
+third party sources. These third-party components and dependencies can have vulnerabilities, which
+attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
+malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Exploring MCP Toolbox for Databases: A New Era of Database Querying</title>
       <link>http://localhost:1313/posts/genaidb/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>

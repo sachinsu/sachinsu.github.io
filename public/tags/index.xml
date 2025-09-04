@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>MicroServices</title>
+      <link>http://localhost:1313/tags/microservices/</link>
+      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Modularity</title>
       <link>http://localhost:1313/tags/modularity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -23,10 +30,66 @@
       <description></description>
     </item>
     <item>
+      <title>Monolith</title>
+      <link>http://localhost:1313/tags/monolith/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/monolith/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Services</title>
       <link>http://localhost:1313/tags/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BOM</title>
+      <link>http://localhost:1313/tags/bom/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/bom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CycloneDX</title>
+      <link>http://localhost:1313/tags/cyclonedx/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/cyclonedx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SBOM</title>
+      <link>http://localhost:1313/tags/sbom/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/sbom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/tags/software/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPDX</title>
+      <link>http://localhost:1313/tags/spdx/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/spdx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Syft</title>
+      <link>http://localhost:1313/tags/syft/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/syft/</guid>
       <description></description>
     </item>
     <item>
@@ -615,13 +678,6 @@
       <link>http://localhost:1313/tags/cassandra/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
       <guid>http://localhost:1313/tags/cassandra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MicroServices</title>
-      <link>http://localhost:1313/tags/microservices/</link>
-      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
