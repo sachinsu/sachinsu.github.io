@@ -4,11 +4,11 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Posts | Learnings in IT</title>
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Learnings in IT">
-<meta name="author" content="map[name:Sachin Sunkle]">
+<meta name="author" content="Sachin Sunkle">
 <link rel="canonical" href="http://localhost:1313/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -56,7 +56,33 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="Learnings in IT">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="A Coder in IT">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+      <meta property="og:image" content="http://localhost:1313/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="A Coder in IT">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -115,6 +141,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/links/home" title="Useful Links">
+                    <span>Useful Links</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://gist.github.com/sachinsu" title="Gists">
                     <span>Gists</span>&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
@@ -125,181 +156,114 @@
                     </svg>
                 </a>
             </li>
-            <li>
-                <a href="http://localhost:1313/links/home" title="Useful Links">
-                    <span>Useful Links</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
   <h1>
     Posts
+    <a href="/posts/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
   </h1>
 </header>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Getting Started with OpenTelemetry
+    <h2 class="entry-hint-parent">Profiling and benchmarking tools for Applications
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with trace/logs that are available from O/S, databases etc. and trying to figure out “Root cause” of the issue.
+    <p>Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it’s objectives.
+Lets look at what they mean,
+Profiling is defined as process aimed at understanding the behavior of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.. Refer this for more information. Also do check Benchmarking correctly is hard by Julia Evans. Typically, Profiling is supported by most of the environments (either via IDEs like Visual Studio or through language itself [Like Go] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-11-07 08:25:04 +0530 IST'>Nov 7 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Getting Started with OpenTelemetry" href="http://localhost:1313/posts/opentelemetry/"></a>
+  <footer class="entry-footer"><span title='2021-12-12 01:00:00 +0530 IST'>December 12, 2021</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Profiling and benchmarking tools for Applications" href="http://localhost:1313/posts/profiling_n_benchmarking/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Ninja - Using lightweight build system for Go projects 
+    <h2 class="entry-hint-parent">Database Reliability Engineering - My Notes
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.
-Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn’t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).
+    <p>Introduction I have been reading excellent Database Reliability Engineering book and below are my notes from it.
+Key Incentive(s) for Automation
+Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows. Important System Characteristics
+Latency, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-10-27 10:25:04 +0530 IST'>Oct 27 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Ninja - Using lightweight build system for Go projects " href="http://localhost:1313/posts/ninjabuildsystem/"></a>
+  <footer class="entry-footer"><span title='2021-09-05 01:00:00 +0530 IST'>September 5, 2021</span>&nbsp;·&nbsp;23 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Database Reliability Engineering - My Notes" href="http://localhost:1313/posts/dbre/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Validating urls from &#39;Useful Links&#39; section using bash / command line tools
+    <h2 class="entry-hint-parent">Near real time API Monitoring with Grafana and PostgreSQL
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background I started this blog, https://sachinsu.github.io few months back .
-In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.
-As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.
-So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.
+    <p>Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being “always on” (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
+What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-10-15 10:25:04 +0530 IST'>Oct 15 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Validating urls from &#39;Useful Links&#39; section using bash / command line tools" href="http://localhost:1313/posts/urlhealthchecks/"></a>
+  <footer class="entry-footer"><span title='2021-07-15 10:25:04 +0530 IST'>July 15, 2021</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Near real time API Monitoring with Grafana and PostgreSQL" href="http://localhost:1313/posts/nrtanalysispostgresql/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Trobleshooting TCP Connection request time outs
+    <h2 class="entry-hint-parent">Domain driven Design: Learnings
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.
-Simplified deployment Architecture is as below,
-High Level Architecture Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.
+    <p>Course Overview Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we’d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design. DDD has proven to be a very effective approach for managing complex requirements. The original version of this course has helped many thousands of learners leverage domain‑driven design, and they have shared amazing feedback. Now, we’ve updated the course and its sample application to reflect ideas and tools that have emerged since that first version. Some of the major topics that we’ll cover include what are the essential ideas of domain‑driven design? What are the main patterns used in domain models? We’ll also talk about how to break up concepts into smaller parts and how these smaller aggregates and contexts communicate with one another. By the end of this course, you’ll know how to break down customer requirements into a maintainable domain model and structure a solution using domain‑driven design. Before beginning the course, you should at least be familiar with software development, ideally using C#. From here, you should feel comfortable diving into DDD and design patterns with courses on the DDD learning path and the design patterns learning path. We hope you’ll join us on this journey to learn domain‑driven design with the Domain‑Driven Design Fundamentals course, at Pluralsight.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-08-25 10:25:04 +0530 IST'>Aug 25 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Trobleshooting TCP Connection request time outs" href="http://localhost:1313/posts/connectiontimeouts/"></a>
+  <footer class="entry-footer"><span title='2021-05-15 01:00:00 +0530 IST'>May 15, 2021</span>&nbsp;·&nbsp;459 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Domain driven Design: Learnings" href="http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Tool to mass DM followers on Twitter in Go
+    <h2 class="entry-hint-parent">Upgrading API: Learnings
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background I recently came across bounty by Balaji Srinivasan to send Direct Message to all twitter followers. Currently, i do not intend to participate in bounty and this is mere exercise.
-This is an attempt to write CLI tool in Golang in response to it.
-For detailed requirements, refer here
-Approach In Brief,
-CLI should,
-accept arguments like Twitter API Key,Auth token, DM Message Download all followers (with profile details) Rank them by Criteria (e.g. Location) Send each follower a DM with provided message (upto daily DM Limit) be easy to use and maintain Notes,
+    <p>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that “API is expected to be stable over long period of time”. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
+This means that upgrade must be done keeping in mind,
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-07-25 10:25:04 +0530 IST'>Jul 25 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Tool to mass DM followers on Twitter in Go" href="http://localhost:1313/posts/massdmgolang/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Web Security Measures in ASP.NET Applications
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
-While all our .NET applications adhere to below guidelines,
-ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline. In spite of above, we do come across vulnerabilities identified by SOC Team which we needs to be addressed quickly. SOC team uses tools such as Burp Suite.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-06-04 10:25:04 +0530 IST'>Jun 4 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Web Security Measures in ASP.NET Applications" href="http://localhost:1313/posts/websecurity/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Is WebAssembly future of Web Development
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML&#43;CSS&#43;Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript’s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS&#43;Javascript libraries eg. Bootstrap. Offline Support soon came in ref: Electron and Progressive Web Applications.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-06-02 10:25:04 +0530 IST'>Jun 2 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Is WebAssembly future of Web Development" href="http://localhost:1313/posts/webassembly/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Using Github Actions for Automated Testing and Deployment
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background The source code of tracfee.com is hosted on Github Private.
-At a High level, Tracfee’s Architecture involves,
-Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM. However, in case of Netlify, it is required to build and then upload the output folder on Netlify.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-28 10:25:04 +0530 IST'>May 28 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Using Github Actions for Automated Testing and Deployment" href="http://localhost:1313/posts/usinggithubactions/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Windows Service with Cancelable Task
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background Recently, we had requirement wherein a process should,
-Periodically (Poll) or Asynchronously (Pub-sub) listen on incoming requests/messages. The whole process is expected to be long running. Should also implement clean disposal of in-flight requests and subsequent cleanup using something similar to Cancelble Context in Go The first of the objective is somewhat dependent on mechanism (Pub/sub, Listener), protocol (TCP, HTTP etc.). For the second one, .NET framework (and .NET Core) offers CancellationToken. It is maint for co-operative cancellation between threads and Task Objects. So Armed with this, is it possible to come up with a template that allows cancellation of long running task while also being deployed as Windows Service (or using systemd in Linux) ?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-05 12:25:04 +0530 IST'>May 5 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Windows Service with Cancelable Task" href="http://localhost:1313/posts/windowsservicecancellabletask/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Optimizing  .NET Code using Benchmarks
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background Oftentimes, we come across situation where code does not perform as per expectation. What is typically approch to address it,
-Performance Testing - Visual Studio Load Tests or Third party tools like Locust, Vegeta, Gatling etc. Visual Studio Diagnostics Tools Or Use tools like Perfview/dotTrace/dotMemory to diagnose bottlenecks What if it is possible to Benchmark code for,
-Set of varying parameter(s) Different runtimes (.NET Framework versions, .NET core, Mono etc.) with option to Benchmark it Observe Memory Allocations for diagnostics Get Detailed report on execution timeline Have it as part of test suite so that it can be easily executed with every iteration involving optimized code to get immediate feedback Enter BenchmarkDotNet, a Powerful .NET library for benchmarking. It is used by DotNET Team, Roslyn, ASP.NET Core and many other projects.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-05 10:25:04 +0530 IST'>May 5 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Optimizing  .NET Code using Benchmarks" href="http://localhost:1313/posts/usingbenchmarkdotnet/"></a>
+  <footer class="entry-footer"><span title='2021-05-15 01:00:00 +0530 IST'>May 15, 2021</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Upgrading API: Learnings" href="http://localhost:1313/posts/apiupgrade/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/posts/page/2/">
-      «&nbsp;Prev&nbsp;
+      «&nbsp;Prev&nbsp;2/7
     </a>
-    <a class="next" href="http://localhost:1313/posts/page/4/">Next&nbsp;&nbsp;»
+    <a class="next" href="http://localhost:1313/posts/page/4/">Next&nbsp;4/7&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Learnings in IT</a></span> · 
+        <span>©</span> · 
 
     <span>
         Powered by

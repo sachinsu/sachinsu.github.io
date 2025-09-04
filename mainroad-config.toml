@@ -1,7 +1,7 @@
 baseurl = "https://sachinsu.github.io"
 title = "Learnings in IT"
 languageCode = "en-us"
-theme = ["mainroad"]
+theme = ["papermod"]
 
 [services]
   [services.googleAnalytics]

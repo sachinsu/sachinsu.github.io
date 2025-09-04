@@ -4,8 +4,14 @@
     <title>REST on Learnings in IT</title>
     <link>http://localhost:1313/tags/rest/</link>
     <description>Recent content in REST on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
+    <copyright>©</copyright>
     <lastBuildDate>Sun, 15 May 2022 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     <item>

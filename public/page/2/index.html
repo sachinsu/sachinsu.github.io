@@ -5,11 +5,11 @@
 	<meta name="generator" content="Hugo 0.149.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Learnings in IT</title>
 
-<meta name="description" content="A technical blog ">
-<meta name="author" content="map[name:Sachin Sunkle]">
+<meta name="description" content="A Coder in IT">
+<meta name="author" content="Sachin Sunkle">
 <link rel="canonical" href="http://localhost:1313/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
 <link rel="alternate" hreflang="en" href="http://localhost:1313/">
 <noscript>
     <style>
@@ -57,7 +58,31 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Learnings in IT">
+  <meta property="og:title" content="Learnings in IT">
+  <meta property="og:description" content="A Coder in IT">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+      <meta property="og:image" content="http://localhost:1313/images/papermod-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="A Coder in IT">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Learnings in IT",
+  "url": "http://localhost:1313/",
+  "description": "A Coder in IT",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      "https://github.com/sachinsu", "https://www.linkedin.com/in/sachinsunkle/"
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -116,6 +141,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/links/home" title="Useful Links">
+                    <span>Useful Links</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://gist.github.com/sachinsu" title="Gists">
                     <span>Gists</span>&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
@@ -126,11 +156,6 @@
                     </svg>
                 </a>
             </li>
-            <li>
-                <a href="http://localhost:1313/links/home" title="Useful Links">
-                    <span>Useful Links</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -138,52 +163,49 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Profiling and benchmarking tools for Applications
+    <h2 class="entry-hint-parent">Using local LLM with Ollama and Semantic Kernel
     </h2>
   </header>
   <div class="entry-content">
-    <p>Introduction We develop a piece of software with aim to fulfil specific business requirements in terms of resource usage, throughput, availability among others. Profiling and benchmarking are approaches that developer has in his/her arsenal to gain continuous feedback on whether a piece of code is behaving optimally and adhering to it’s objectives.
-Lets look at what they mean,
-Profiling is defined as process aimed at understanding the behavior of a program. A profile result might be a table of time taken per function, as per this and this) Benchmarking measures the time for some whole operation. e.g. I/O operations per second under some workload. So the result is typically a single number, in either seconds or operations per second. Or a data set with results for different parameters, so you can graph it.. Refer this for more information. Also do check Benchmarking correctly is hard by Julia Evans. Typically, Profiling is supported by most of the environments (either via IDEs like Visual Studio or through language itself [Like Go] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.
+    <p>Introduction Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines. Few examples are Ollama, Langchain, LocalAI.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-12-12 01:00:00 +0530 IST'>Dec 12 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Profiling and benchmarking tools for Applications" href="http://localhost:1313/posts/profiling_n_benchmarking/"></a>
+  <footer class="entry-footer"><span title='2024-05-11 10:25:04 +0530 IST'>May 11, 2024</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Using local LLM with Ollama and Semantic Kernel" href="http://localhost:1313/posts/ollamasemantickernel/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Database Reliability Engineering - My Notes
+    <h2 class="entry-hint-parent">Troubleshooting TLS handshake issue
     </h2>
   </header>
   <div class="entry-content">
-    <p>Introduction I have been reading excellent Database Reliability Engineering book and below are my notes from it.
-Key Incentive(s) for Automation
-Elimination of Toil - Toil is the kind of work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows. Important System Characteristics
-Latency, also known as response time, is a time-based measurement indicating how long it takes to receive a response from a request. It is best to measure this for end-to-end response from the customer rather than breaking it down component by component. This is customer-centric design and is crucial for any system that has customers, which is any system
+    <p>Background Ever encountered a scenario where REST API consumption works from tools like curl, Web Browser but not from Application. Lets dive in.
+The requirement is as simple as consuming REST API from a Application over TLS.
+Problem Statement The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.
+During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error “The request was aborted: Could not create SSL/TLS secure channel”. But it works fine with other tools like curl, PostMan or even from a Web Browser.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-09-05 01:00:00 +0530 IST'>Sep 5 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Database Reliability Engineering - My Notes" href="http://localhost:1313/posts/dbre/"></a>
+  <footer class="entry-footer"><span title='2023-02-25 10:25:04 +0530 IST'>February 25, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Troubleshooting TLS handshake issue" href="http://localhost:1313/posts/tlshandsharefailure/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Near real time API Monitoring with Grafana and PostgreSQL
+    <h2 class="entry-hint-parent">URL Shortener in High Throughput Service
     </h2>
   </header>
   <div class="entry-content">
-    <p>Introduction Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being “always on” (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.
-What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?
+    <p>Background A Client has E-commerce Application consisting of services aimed at specific domains of business functionality it serves. One of these services is responsible for accepting the order, authenticating it and forwarding it for further processing in terms of inventory checks, payment and so on. For Authentication, this service sends SMS to Customer’s Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-07-15 10:25:04 +0530 IST'>Jul 15 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Near real time API Monitoring with Grafana and PostgreSQL" href="http://localhost:1313/posts/nrtanalysispostgresql/"></a>
+  <footer class="entry-footer"><span title='2022-05-15 01:00:00 +0530 IST'>May 15, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to URL Shortener in High Throughput Service" href="http://localhost:1313/posts/shortidgeneration/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Domain driven Design: Learnings
+    <h2 class="entry-hint-parent">Nuke as Build Automation tool for .NET projects
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
           <path
@@ -193,106 +215,39 @@ What if Monitoring is an afterthought (i.e. application is already in production
     </h2>
   </header>
   <div class="entry-content">
-    <p>Course Overview Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we’d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design. DDD has proven to be a very effective approach for managing complex requirements. The original version of this course has helped many thousands of learners leverage domain‑driven design, and they have shared amazing feedback. Now, we’ve updated the course and its sample application to reflect ideas and tools that have emerged since that first version. Some of the major topics that we’ll cover include what are the essential ideas of domain‑driven design? What are the main patterns used in domain models? We’ll also talk about how to break up concepts into smaller parts and how these smaller aggregates and contexts communicate with one another. By the end of this course, you’ll know how to break down customer requirements into a maintainable domain model and structure a solution using domain‑driven design. Before beginning the course, you should at least be familiar with software development, ideally using C#. From here, you should feel comfortable diving into DDD and design patterns with courses on the DDD learning path and the design patterns learning path. We hope you’ll join us on this journey to learn domain‑driven design with the Domain‑Driven Design Fundamentals course, at Pluralsight.
-...</p>
+    <p>Background How Nuke Helps Summary Key Advantages of Nuke are,
+C# based DSL to compose build pipeline Build pipeline is part of solution (i.e. actual code) display a dependency graph logging support for lot of CI/CD helper tools Useful References, Nuke - Documentation Cake Fake Happy Code building !!
+</p>
   </div>
-  <footer class="entry-footer"><span title='2021-05-15 01:00:00 +0530 IST'>May 15 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Domain driven Design: Learnings" href="http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/"></a>
+  <footer class="entry-footer"><span title='2022-04-02 10:25:04 +0530 IST'>April 2, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Nuke as Build Automation tool for .NET projects" href="http://localhost:1313/posts/nukebuildautomation/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Upgrading API: Learnings
+    <h2 class="entry-hint-parent">Can SQLite be considered for Server Applications?
     </h2>
   </header>
   <div class="entry-content">
-    <p>Introduction One of the design considerations stressed upon by Jeffrey richter about APIs (Read more here) is that “API is expected to be stable over long period of time”. Recently,for a .NET based project, we decided to upgrade some of the ASMX (legacy SOAP based approach) based APIs and were immediately reminded by Customer(s) to avoid any kind of impact on existing users.
-This means that upgrade must be done keeping in mind,
+    <p>Introduction While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application’s Requirement (Tolerance for eventual consistency, High Availability etc.), Team’s familiarity, Costs, Tech. support availability and so on. In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers SQLite for this purpose.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-05-15 01:00:00 +0530 IST'>May 15 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Upgrading API: Learnings" href="http://localhost:1313/posts/apiupgrade/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Presto - A distributed SQL Engine for variety of data stores
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction In a company/enterprise, typically there are multiple sources of data. This could be result of M&amp;A (where each of those add in a new data store) or result of multi year process of using data stores that are in vogue at that time. Result is combination of various types of relational databases, flat file systems, queues and so on. This results in Data Silos. This scenario is typically observed in companies who are running workloads On-prem (i.e. Pre-cloud, Companies who started on Cloud or have moved to it, typically tend to organize data platform better. This could be because of ease of migrating data on cloud. Typically, they centralize it around cheaper object storage (say AWS S3)).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-29 10:25:04 +0530 IST'>Mar 29 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Presto - A distributed SQL Engine for variety of data stores" href="http://localhost:1313/posts/presto/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">ELT approach for Data Pipelines
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,
-Extract - typically involves retrieving data from source. This could also be via streaming Transform - Apply transformation to the extracted data. Load - Loading the data in Operation Data store (ODS) or data warehouse Refer here for more details on ETL. ETL has been made easy by tools like Talend, SSIS and so on. However, there has been shift from above approach due to,
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-03-14 00:00:00 +0530 IST'>Mar 14 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to ELT approach for Data Pipelines" href="http://localhost:1313/posts/elt/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background Recently, i went through excellent video series on Designing &amp; Versioning HTTP_REST APIs presented by Jeffrey Richter. It is available here. In the past, i had read Jeff’s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-20 00:00:00 +0530 IST'>Jan 20 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course" href="http://localhost:1313/posts/restapiversioning/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Resiliency Testing with Toxiproxy
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays, As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment. Often, such behavior is observed in production itself, unless project team is following practices of Chaos engineering.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-01-09 10:25:04 +0530 IST'>Jan 9 2021</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Resiliency Testing with Toxiproxy" href="http://localhost:1313/posts/resiliencytoxiproxy/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Using Temporal.io to build Long running Workflows
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background In a typical business Application, there are often requirements for,
-Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event. Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded. Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-12-07 08:25:04 +0530 IST'>Dec 7 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Using Temporal.io to build Long running Workflows" href="http://localhost:1313/posts/temporalworkflow/"></a>
+  <footer class="entry-footer"><span title='2021-12-30 01:00:00 +0530 IST'>December 30, 2021</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Can SQLite be considered for Server Applications?" href="http://localhost:1313/posts/is_sqlite_production_ready/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/">
-      «&nbsp;Prev&nbsp;
+      «&nbsp;Prev&nbsp;1/7
     </a>
-    <a class="next" href="http://localhost:1313/page/3/">Next&nbsp;&nbsp;»
+    <a class="next" href="http://localhost:1313/page/3/">Next&nbsp;3/7&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Learnings in IT</a></span> · 
+        <span>©</span> · 
 
     <span>
         Powered by

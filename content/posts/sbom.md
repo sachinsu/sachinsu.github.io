@@ -1,7 +1,7 @@
 ---
 title: "What is Software Bill of Material (SBOM)"
 date: 2025-08-15T01:00:00+05:30
-draft: true
+draft: false
 tags: [Software, BOM, SBOM, SPDX, CycloneDX, syft, DevOps]
 ---
 

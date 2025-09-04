@@ -4,8 +4,14 @@
     <title>Learnings in IT</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
+    <copyright>©</copyright>
     <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -3793,7 +3799,7 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 07 Feb 2020 14:28:27 +0530</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I am a software developer, currently working at &lt;a href=https://twitter.com/WorldlineGlobal
+      <description>&lt;p&gt;I am a software architect with more than 2 decades of experience, currently working at &lt;a href=https://twitter.com/WorldlineGlobal
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;@worldlineglobal&lt;/a&gt;. This is my personal site where i share helpful content (gathered or authored) on Technology (and other topics).&lt;/p&gt;

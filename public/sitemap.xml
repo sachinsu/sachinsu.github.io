@@ -44,13 +44,13 @@
     <loc>http://localhost:1313/tags/software/</loc>
     <lastmod>2025-08-15T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sbom/</loc>
-    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/spdx/</loc>
     <lastmod>2025-08-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/syft/</loc>
+    <lastmod>2025-08-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/sbom/</loc>
     <lastmod>2025-08-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/databases/</loc>
@@ -518,5 +518,7 @@
     <loc>http://localhost:1313/posts/dddnotes/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
   </url>
 </urlset>

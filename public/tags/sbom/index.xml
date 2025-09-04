@@ -4,12 +4,18 @@
     <title>SBOM on Learnings in IT</title>
     <link>http://localhost:1313/tags/sbom/</link>
     <description>Recent content in SBOM on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
+    <copyright>©</copyright>
     <lastBuildDate>Fri, 15 Aug 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/sbom/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Software Bill of Material</title>
+      <title>What is Software Bill of Material (SBOM)</title>
       <link>http://localhost:1313/posts/sbom/</link>
       <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/sbom/</guid>
