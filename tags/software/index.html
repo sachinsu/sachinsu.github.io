@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Learnings in IT</title>
+<title>Software | Learnings in IT</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Learnings in IT">
+<meta name="description" content="A technical blog ">
 <meta name="author" content="map[name:Sachin Sunkle]">
-<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="canonical" href="http://localhost:1313/tags/software/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/software/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/software/">
 <noscript>
     <style>
         #theme-toggle,
@@ -106,7 +106,7 @@
             </li>
             <li>
                 <a href="http://localhost:1313/posts/" title="Blog">
-                    <span class="active">Blog</span>
+                    <span>Blog</span>
                 </a>
             </li>
             <li>
@@ -136,71 +136,29 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Posts
+    Software
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">ASP.NET Core - Mind the SameSite HTTP Cookie settings
+    <h2 class="entry-hint-parent">Software Bill of Material
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
     </h2>
   </header>
   <div class="entry-content">
-    <p>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
-During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom…. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,
+    <p>Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.
+Why ? Software products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-04-09 10:25:04 +0530 IST'>Apr 9 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to ASP.NET Core - Mind the SameSite HTTP Cookie settings" href="http://localhost:1313/posts/samesitecookies/"></a>
+  <footer class="entry-footer"><span title='2025-08-15 01:00:00 +0530 IST'>Aug 15 2025</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
+  <a class="entry-link" aria-label="post link to Software Bill of Material" href="http://localhost:1313/posts/sbom/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Using Channels for High performance Producer consumer implementation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100&#43; transactions per second.
-This application is developed in .NET Framework &#43; .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-02-12 10:25:04 +0530 IST'>Feb 12 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Using Channels for High performance Producer consumer implementation" href="http://localhost:1313/posts/channelsforproducerconsumer/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Using .NET standard Assembly in .NET core and .NET Framework
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it’s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
-High availability Lightweight, High throughput (Need to support few thousand(s) active users) Accordingly, we have been exploring developing this Web Application in .NET core 3.1. However, it also means that we will have to use class libraries, targeted at .NET framework 4.6.1, in .NET core and vice-versa. How can this be done?
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-02-07 10:25:04 +0530 IST'>Feb 7 2020</span>&nbsp;·&nbsp;map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to Using .NET standard Assembly in .NET core and .NET Framework" href="http://localhost:1313/posts/dotnetstandard/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Even Eric Evans explicitly states that DDD isn’t suitable for problems when there’s substantial technical complexity, but little business domain complexity. Using DDD is most beneficial when the complexity of the domain makes it challenging for the domain experts to communicate their needs to the software developers. By investing your time and effort into modeling the domain and coming up with a set of terminology that’s understood for each subdomain, the process of understanding and solving the problem becomes much simpler and smoother
-...</p>
-  </div>
-  <footer class="entry-footer">map[name:Sachin Sunkle]</footer>
-  <a class="entry-link" aria-label="post link to " href="http://localhost:1313/posts/dddnotes/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="http://localhost:1313/posts/page/3/">
-      «&nbsp;Prev&nbsp;
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">

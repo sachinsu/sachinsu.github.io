@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BOM on Learnings in IT</title>
+    <link>http://localhost:1313/tags/bom/</link>
+    <description>Recent content in BOM on Learnings in IT</description>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Aug 2025 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Bill of Material</title>
+      <link>http://localhost:1313/posts/sbom/</link>
+      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/sbom/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
+up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.&lt;/p&gt;
+&lt;h3 id=&#34;why-&#34;&gt;Why ?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Software products are composed of many different components, some of which might come from
+third party sources. These third-party components and dependencies can have vulnerabilities, which
+attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
+malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
