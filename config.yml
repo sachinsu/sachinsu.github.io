@@ -46,6 +46,9 @@ languages:
           weight: 10
         - name: Gists
           url: https://gist.github.com/sachinsu
+          weight: 10
+        - name: Tags
+          url: /tags
 
 
 outputs:
@@ -94,8 +97,7 @@ params:
     Content: >
       👋 Welcome to my blog!
 
-      - This is where i share my Learnings as well as useful content found around the web.
-      - Hope you will find it useful. 
+      - This is where i share my Learnings as well as useful content found around the web. 
 
   socialIcons:
     - name: github
