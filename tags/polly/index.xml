@@ -1,9 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Polly on Learnings in IT</title><link>https://sachinsu.github.io/tags/polly/</link><description>Recent content in Polly on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/polly/index.xml" rel="self" type="application/rss+xml"/><item><title>Trobleshooting TCP Connection request time outs</title><link>https://sachinsu.github.io/posts/connectiontimeouts/</link><pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Polly on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/polly/</link>
+    <description>Recent content in Polly on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/polly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trobleshooting TCP Connection request time outs</title>
+      <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
+      <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.&lt;/p&gt;
 &lt;p&gt;Simplified deployment Architecture is as below,&lt;/p&gt;
-&lt;figure&gt;&lt;img src="https://sachinsu.github.io/images/conntimeoutarch.png"&gt;&lt;figcaption&gt;
- &lt;h4&gt;High Level Architecture&lt;/h4&gt;
- &lt;/figcaption&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://sachinsu.github.io/images/conntimeoutarch.png&#34;/&gt; &lt;figcaption&gt;
+            High Level Architecture
+        &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Technology Stack used is Microsoft .NET Framework 4.8 using ODP.NET for Oracle Connectivity (Oracle Server is 8 CPU box). Each of Web Servers in cluster have IIS hosted on it with multiple Applications (Application domains) serving HTTP(s) based traffic. These applications connect to Oracle Database.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

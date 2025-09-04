@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chaosengineering on Learnings in IT</title><link>https://sachinsu.github.io/tags/chaosengineering/</link><description>Recent content in Chaosengineering on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 09 Jan 2021 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/chaosengineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Resiliency Testing with Toxiproxy</title><link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link><pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays, As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment. Often, such behavior is observed in production itself, unless project team is following practices of &lt;a href=https://netflixtechblog.com/tagged/chaos-engineering
- 
- target=_blank rel="noopener noreferrer"
-&gt;Chaos engineering&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chaosengineering on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/chaosengineering/</link>
+    <description>Recent content in Chaosengineering on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sat, 09 Jan 2021 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/chaosengineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resiliency Testing with Toxiproxy</title>
+      <link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link>
+      <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes  the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays,  As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment.  Often, such behavior is observed in production itself, unless project team is following practices of &lt;a href=https://netflixtechblog.com/tagged/chaos-engineering
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Chaos engineering&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

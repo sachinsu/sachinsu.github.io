@@ -1,8 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grep on Learnings in IT</title><link>https://sachinsu.github.io/tags/grep/</link><description>Recent content in Grep on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 15 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/grep/index.xml" rel="self" type="application/rss+xml"/><item><title>Validating urls from 'Useful Links' section using bash / command line tools</title><link>https://sachinsu.github.io/posts/urlhealthchecks/</link><pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Grep on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/grep/</link>
+    <description>Recent content in Grep on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Thu, 15 Oct 2020 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/grep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validating urls from &#39;Useful Links&#39; section using bash / command line tools</title>
+      <link>https://sachinsu.github.io/posts/urlhealthchecks/</link>
+      <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/urlhealthchecks/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I started this blog, &lt;a href=https://sachinsu.github.io
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;https://sachinsu.github.io&lt;/a&gt; few months back .&lt;/p&gt;
 &lt;p&gt;In this relatively short period of time, Blog has sizeable number of useful links across various categories in addition to the detailed blog post like this one.&lt;/p&gt;
 &lt;p&gt;As an ongoing activity, I think that it is necessary to verify links mentioned on this blog.&lt;/p&gt;
-&lt;p&gt;So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;So how can it be done ? obviously one way is to do it manually by visiting each link and updating/removing those that are no longer available. but there is always of better way of doing things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,11 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semantickernel on Learnings in IT</title><link>https://sachinsu.github.io/tags/semantickernel/</link><description>Recent content in Semantickernel on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/semantickernel/index.xml" rel="self" type="application/rss+xml"/><item><title>Using local LLM with Ollama and Semantic Kernel</title><link>https://sachinsu.github.io/posts/ollamasemantickernel/</link><pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/ollamasemantickernel/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines. Few examples are &lt;a href=https://ollama.com/
- 
- target=_blank rel="noopener noreferrer"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Semantickernel on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/semantickernel/</link>
+    <description>Recent content in Semantickernel on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/semantickernel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using local LLM with Ollama and Semantic Kernel</title>
+      <link>https://sachinsu.github.io/posts/ollamasemantickernel/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/ollamasemantickernel/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models  offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines. Few examples are &lt;a href=https://ollama.com/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Ollama&lt;/a&gt;, &lt;a href=https://github.com/hwchase17/langchain
- 
- target=_blank rel="noopener noreferrer"
-&gt;Langchain&lt;/a&gt;, &lt;a href=localai.io
- 
- 
-&gt;LocalAI&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Langchain&lt;/a&gt;,  &lt;a href=localai.io
+    
+    
+&gt;LocalAI&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

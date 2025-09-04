@@ -1,3 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Make on Learnings in IT</title><link>https://sachinsu.github.io/tags/make/</link><description>Recent content in Make on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/make/index.xml" rel="self" type="application/rss+xml"/><item><title>Ninja - Using lightweight build system for Go projects</title><link>https://sachinsu.github.io/posts/ninjabuildsystem/</link><pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Make on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/make/</link>
+    <description>Recent content in Make on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Tue, 27 Oct 2020 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ninja - Using lightweight build system for Go projects </title>
+      <link>https://sachinsu.github.io/posts/ninjabuildsystem/</link>
+      <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.&lt;/p&gt;
-&lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

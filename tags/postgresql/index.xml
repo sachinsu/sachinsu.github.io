@@ -1,28 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Postgresql on Learnings in IT</title><link>https://sachinsu.github.io/tags/postgresql/</link><description>Recent content in Postgresql on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 01 Jun 2025 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml"/><item><title>Exploring MCP Toolbox for Databases: A New Era of Database Querying</title><link>https://sachinsu.github.io/posts/genaidb/</link><pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/genaidb/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Postgresql on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/postgresql/</link>
+    <description>Recent content in Postgresql on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sun, 01 Jun 2025 01:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring MCP Toolbox for Databases: A New Era of Database Querying</title>
+      <link>https://sachinsu.github.io/posts/genaidb/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/genaidb/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In the ever-evolving landscape of AI and machine learning, Google&amp;rsquo;s &lt;a href=https://googleapis.github.io/genai-toolbox
- 
- target=_blank rel="noopener noreferrer"
-&gt;MCP Toolbox for Databases&lt;/a&gt; stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&amp;rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.&lt;/p&gt;</description></item><item><title>Near real time API Monitoring with Grafana and PostgreSQL</title><link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link><pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;MCP Toolbox for Databases&lt;/a&gt; stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&amp;rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Near real time API Monitoring with Grafana and PostgreSQL</title>
+      <link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link>
+      <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p&gt;
-&lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description></item><item><title>ELT approach for Data Pipelines</title><link>https://sachinsu.github.io/posts/elt/</link><pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/elt/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ELT approach for Data Pipelines</title>
+      <link>https://sachinsu.github.io/posts/elt/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/elt/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Extract&lt;/strong&gt; - typically involves retrieving data from source. This could also be via streaming&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Transform&lt;/strong&gt; - Apply transformation to the extracted data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Load&lt;/strong&gt; - Loading the data in Operation Data store (ODS) or data warehouse
+&lt;li&gt;&lt;strong&gt;Load&lt;/strong&gt; -  Loading the data in Operation Data store (ODS) or data warehouse
 Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.html#close
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;here&lt;/a&gt; for more details on ETL. ETL has been made easy by tools like &lt;a href=https://www.talend.com/products/talend-open-studio/
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Talend&lt;/a&gt;, &lt;a href=https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;SSIS&lt;/a&gt; and so on.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;However, there has been shift from above approach due to,&lt;/p&gt;</description></item><item><title>Resiliency Testing with Toxiproxy</title><link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link><pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays, As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment. Often, such behavior is observed in production itself, unless project team is following practices of &lt;a href=https://netflixtechblog.com/tagged/chaos-engineering
- 
- target=_blank rel="noopener noreferrer"
-&gt;Chaos engineering&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;However, there has been shift from above approach due to,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Resiliency Testing with Toxiproxy</title>
+      <link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link>
+      <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes  the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays,  As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment.  Often, such behavior is observed in production itself, unless project team is following practices of &lt;a href=https://netflixtechblog.com/tagged/chaos-engineering
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Chaos engineering&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

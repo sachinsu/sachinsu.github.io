@@ -1,3 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Real-Time on Learnings in IT</title><link>https://sachinsu.github.io/tags/real-time/</link><description>Recent content in Real-Time on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 15 Jul 2021 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/real-time/index.xml" rel="self" type="application/rss+xml"/><item><title>Near real time API Monitoring with Grafana and PostgreSQL</title><link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link><pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Real-Time on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/real-time/</link>
+    <description>Recent content in Real-Time on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Thu, 15 Jul 2021 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/real-time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Near real time API Monitoring with Grafana and PostgreSQL</title>
+      <link>https://sachinsu.github.io/posts/nrtanalysispostgresql/</link>
+      <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/nrtanalysispostgresql/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p&gt;
-&lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

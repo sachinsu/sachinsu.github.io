@@ -1,22 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQLite on Learnings in IT</title><link>https://sachinsu.github.io/tags/sqlite/</link><description>Recent content in SQLite on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/sqlite/index.xml" rel="self" type="application/rss+xml"/><item><title>Can SQLite be considered for Server Applications?</title><link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link><pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SQLite on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/sqlite/</link>
+    <description>Recent content in SQLite on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Can SQLite be considered for Server Applications?</title>
+      <link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link>
+      <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
 In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org
- 
- target=_blank rel="noopener noreferrer"
-&gt;SQLite&lt;/a&gt; for this purpose.&lt;/p&gt;</description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;SQLite&lt;/a&gt; for this purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tool to mass DM followers on Twitter in Go</title>
+      <link>https://sachinsu.github.io/posts/massdmgolang/</link>
+      <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Balaji Srinivasan&lt;/a&gt; to send Direct Message to all twitter followers. &lt;em&gt;Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This is an attempt to write CLI tool in &lt;a href=https://golang.org
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Golang&lt;/a&gt; in response to it.&lt;/p&gt;
 &lt;p&gt;For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="approach"&gt;Approach&lt;/h2&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
 &lt;p&gt;In Brief,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -30,4 +58,7 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Notes,&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Notes,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

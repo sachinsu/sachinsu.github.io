@@ -1,9 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wireshark on Learnings in IT</title><link>https://sachinsu.github.io/tags/wireshark/</link><description>Recent content in Wireshark on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 25 Feb 2023 10:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/wireshark/index.xml" rel="self" type="application/rss+xml"/><item><title>Troubleshooting TLS handshake issue</title><link>https://sachinsu.github.io/posts/tlshandsharefailure/</link><pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/tlshandsharefailure/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wireshark on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/wireshark/</link>
+    <description>Recent content in Wireshark on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sat, 25 Feb 2023 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/wireshark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Troubleshooting TLS handshake issue</title>
+      <link>https://sachinsu.github.io/posts/tlshandsharefailure/</link>
+      <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/tlshandsharefailure/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;Ever encountered a scenario where REST API consumption works from tools like &lt;a href=https://github.com/jeroen/curl
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;curl&lt;/a&gt;, Web Browser but not from Application. Lets dive in.&lt;/p&gt;
 &lt;p&gt;The requirement is as simple as consuming REST API from a Application over TLS.&lt;/p&gt;
-&lt;h2 id="problem-statement"&gt;Problem Statement&lt;/h2&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
 &lt;p&gt;The REST API, to be consumed, is standard API interface which requires access over TLS. The client in this case is Windows 2016 server.&lt;/p&gt;
-&lt;p&gt;During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error &amp;ldquo;The request was aborted: Could not create SSL/TLS secure channel&amp;rdquo;. But it works fine with other tools like curl, PostMan or even from a Web Browser.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;During Development, Windows 10 is used to develop and test the code. Later, the same is tested on a Windows 2016 Server. It is at this stage, it fails with cryptic Error &amp;ldquo;The request was aborted: Could not create SSL/TLS secure channel&amp;rdquo;. But it works fine with other tools like curl, PostMan or even from a Web Browser.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

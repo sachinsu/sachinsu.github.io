@@ -1,7 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cassandra on Learnings in IT</title><link>https://sachinsu.github.io/tags/cassandra/</link><description>Recent content in Cassandra on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/cassandra/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Temporal.io to build Long running Workflows</title><link>https://sachinsu.github.io/posts/temporalworkflow/</link><pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/temporalworkflow/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cassandra on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/cassandra/</link>
+    <description>Recent content in Cassandra on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Mon, 07 Dec 2020 08:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/cassandra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Temporal.io to build Long running Workflows</title>
+      <link>https://sachinsu.github.io/posts/temporalworkflow/</link>
+      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/temporalworkflow/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;In a typical business Application, there are often requirements for,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Batch processing - Often long running Tasks like data import/export, End of day processing etc. These tasks are often scheduled to be executed at pre-defined interval or on occurance of an Event.&lt;/li&gt;
 &lt;li&gt;Asychronous processing - Tasks, often part of business process / workflow, that can be performed asychronously or offloaded.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Such requirements are often fulfilled with custom approaches like batch processing frameworks, ETL Tools or using Queues or specific database features.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

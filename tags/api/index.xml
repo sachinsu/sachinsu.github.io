@@ -1,24 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API on Learnings in IT</title><link>https://sachinsu.github.io/tags/api/</link><description>Recent content in API on Learnings in IT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://sachinsu.github.io/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>Learnings from Jeff Richter's Designing and Versioning HTTP REST APIs Video Course</title><link>https://sachinsu.github.io/posts/restapiversioning/</link><pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate><guid>https://sachinsu.github.io/posts/restapiversioning/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;Recently, i went through excellent video series on &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
- 
- target=_blank rel="noopener noreferrer"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>API on Learnings in IT</title>
+    <link>https://sachinsu.github.io/tags/api/</link>
+    <description>Recent content in API on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course</title>
+      <link>https://sachinsu.github.io/posts/restapiversioning/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/restapiversioning/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Recently, i went through excellent video series on  &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Jeffrey Richter&lt;/a&gt;. It is available &lt;a href=https://www.youtube.com/watch?v&amp;#61;9Ng00IlBCtw
- 
- target=_blank rel="noopener noreferrer"
-&gt;here&lt;/a&gt;. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p&gt;</description></item><item><title>Tool to mass DM followers on Twitter in Go</title><link>https://sachinsu.github.io/posts/massdmgolang/</link><pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate><guid>https://sachinsu.github.io/posts/massdmgolang/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt;. In the past, i had read Jeff&amp;rsquo;s books on CLR and found his writing to be very clear and understandable. So is my experience with this Video Series. Below is summary of learnings from this Video Series. I do not claim that every aspect is covered here so please do check out the videos.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tool to mass DM followers on Twitter in Go</title>
+      <link>https://sachinsu.github.io/posts/massdmgolang/</link>
+      <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Balaji Srinivasan&lt;/a&gt; to send Direct Message to all twitter followers. &lt;em&gt;Currently, i do not intend to participate in bounty and this is mere exercise.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This is an attempt to write CLI tool in &lt;a href=https://golang.org
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Golang&lt;/a&gt; in response to it.&lt;/p&gt;
 &lt;p&gt;For detailed requirements, refer &lt;a href=https://github.com/balajis/twitter-export
- 
- target=_blank rel="noopener noreferrer"
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="approach"&gt;Approach&lt;/h2&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
 &lt;p&gt;In Brief,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -32,4 +60,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Notes,&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Notes,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
