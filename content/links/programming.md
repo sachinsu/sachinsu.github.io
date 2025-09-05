@@ -58,6 +58,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 - [OpenFeature - Standardizing Feature Flagging for Everyone](https://openfeature.dev/)
 - [featbit: Enterprise-level feature flag platform that you can self-host. Get started - free.](https://github.com/featbit)
 - [Unleash - Open-source feature management platform](https://gUnleash/unleash)
+- [Cognitive load matters](https://minds.md/zakirullin/cognitive)
 
 ## API Development, Security, Cryptography
 
@@ -307,6 +308,7 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 
 - [System Design 101 through Diagrams](https://github.com/ByteByteGoHq/system-design-101)
 - [10 API Product Manager Interview Questions](https://dzone.com/articles/10-api-product-manager-interview-questions)
+- [Complexity wins during Interviews](https://idiallo.com/blog/performing-for-the-job-title)
 
 ## API 
 
