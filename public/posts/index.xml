@@ -22,7 +22,7 @@
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Functional requirements&lt;/li&gt;
+&lt;li&gt;Functional/Business requirements&lt;/li&gt;
 &lt;li&gt;Quality attributes (performance, scalability, availability etc.)&lt;/li&gt;
 &lt;li&gt;Agility (Need to respond fluently to changes)&lt;/li&gt;
 &lt;li&gt;Constraints (Deployment platform)&lt;/li&gt;
@@ -38,9 +38,6 @@
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
 up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.&lt;/p&gt;
-&lt;h3 id=&#34;why-&#34;&gt;Why ?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
 &lt;p&gt;Software products are composed of many different components, some of which might come from
 third party sources. These third-party components and dependencies can have vulnerabilities, which
 attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting

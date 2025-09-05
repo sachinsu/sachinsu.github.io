@@ -9,7 +9,7 @@ tags: [Architecture, Services, Modularity, Microservices, Monolith]
 
 Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,
 
-- Functional requirements 
+- Functional/Business requirements 
 - Quality attributes (performance, scalability, availability etc.)
 - Agility (Need to respond fluently to changes) 
 - Constraints (Deployment platform)
@@ -21,17 +21,17 @@ In this pursuit, there are alternate styles to structure software. Lets look at 
 
   - **Microservices** - an approach for developing a single application as a suite of small services, each running in it's own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. 
 
-At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility , its often requires change in Organization's approach and found to be suitable for large use cases where benefits outweigh  related concerns like Eventual consistency, Operational Complexity and Distributed nature (Remote calls/(Fallacies of Distributed computing)[https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing]).
+At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility. However, Micro services  often require change in Organization's approach and found to be appropriate  for use cases where benefits outweigh  related concerns like Eventual consistency, Operational Complexity and Distributed nature. Also refer to [Remote calls/Fallacies of Distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing).
 
-Given this, are their tailored approaches aimed at specific requirements ?   Let's look at them , 
+Given this, are their any  tailored approaches that find middle ground? Let's look at few of them , 
 
 - **Modular Monolith** - Approach that tries to have golden mean between Monolith and Microservices by structuring the application into independent modules or components with well-defined boundaries with future possibilities of carving out microservices.
 - **Vertical Slice Architecture (VSA)**- Architecture is built around distinct requests, encapsulating and grouping all concerns from front-end to back-end.
 - **Clean Architecture** - Paradigm originally proposed by Robert Martin that isolates interfaces (user interfaces, databases, external systems, devices) from business logic. 
 
-   This article aims to provide general context and aid in decision making about the above architecture styles. Please note [Limitations of General Advice](https://martinfowler.com/bliki/LimitationsOfGeneralAdvice.html)
+This article aims to provide general context and aid in decision making about the above architecture styles. Please note [Limitations of General Advice](https://martinfowler.com/bliki/LimitationsOfGeneralAdvice.html).
 
-## Understanding Each Architecture Individually:
+## Understanding Each style:
 
 ### Modular Monolith
 
@@ -86,7 +86,7 @@ As one says there is no "one size fits all", similarly there is no reason to con
 
 ## Conclusion:
 
-The Architecture styles evolve as they are tested against real-time requirements in terms of flexibility, maintainability, scalability and so on. There is no one architecture style that fits many situation but each of the style provides path way to think and analyze fitment for the actual use case. As the First Law of Software Architecture states that **everything in software is a trade-off**, key is to evaluate these styles against requirements and arrive at [tradeoffs](https://www.youtube.com/watch?v=52haYbu80e8) and decide based on it.
+The Architecture styles evolve as they are tested against real-time requirements in terms of flexibility, maintainability, scalability and so on. There is no one architecture style that fits many situation but each of the style provides path way to think and analyze fitment for the actual use case. As the First Law of Software Architecture states that **everything in software is a trade-off**, key is to evaluate these styles against requirements and arrive at acceptable [tradeoffs](https://www.youtube.com/watch?v=52haYbu80e8) and decide based on it.
 
 
 ### Useful References
