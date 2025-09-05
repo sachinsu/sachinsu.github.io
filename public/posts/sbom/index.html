@@ -10,9 +10,6 @@
 <meta name="description" content="Introduction
 A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
 up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.
-Why ?
-
-
 Software products are composed of many different components, some of which might come from
 third party sources. These third-party components and dependencies can have vulnerabilities, which
 attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
@@ -68,7 +65,7 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content="What is Software Bill of Material (SBOM)">
   <meta property="og:description" content="Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.
-Why ? Software products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.">
+Software products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -87,9 +84,6 @@ Why ? Software products are composed of many different components, some of which
 <meta name="twitter:description" content="Introduction
 A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
 up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.
-Why ?
-
-
 Software products are composed of many different components, some of which might come from
 third party sources. These third-party components and dependencies can have vulnerabilities, which
 attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
@@ -122,12 +116,12 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
   "@type": "BlogPosting",
   "headline": "What is Software Bill of Material (SBOM)",
   "name": "What is Software Bill of Material (SBOM)",
-  "description": "Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.\nWhy ? Software products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.\n",
+  "description": "Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.\nSoftware products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.\n",
   "keywords": [
     "Software", "BOM", "SBOM", "SPDX", "CycloneDX", "syft", "DevOps"
   ],
-  "articleBody": "Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.\nWhy ? Software products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.\nEffective Incident Response - SBOM can assist in speeding up by providing detailed information on dependencies.\nVulnerabilities identification and patch management - Using SBOM, organizations can quickly spot and address known vulnerabilities in the software by patching them.\nCompliance - SBOM helps organizations to streamline adherence to security regulations, guidelines and best practices on software security by providing required transparency in software composition.\nMany Governments around that world are now recommending SBOM like,\nNIST CERT-IN Tools and Processes Lets look at ways to generate SBOM.\nThere are standards/specifications available to represent bills of material including SBOM. Important ones are,\nSPDX - An open standard capable of representing systems with software components in as SBOMs (Software Bill of Materials) and other AI, data and security references supporting a range of risk management use cases. CycloneDX - is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. CycloneDX is an Ecma International standard published as ECMA-424. Various tools and libraries typically scan the container images, file systems and generate a Software Bill of Materials as per above specifications. Each tool supports parsing of files for various languages/platforms to extract details on dependencies.\nBelow are some of the open source tools available,\nCycloneDX has repository that contains various tools like, Cyclonedx-CLI - Cli for conversion, analysis, merging cyclonedx-dotnet - for .NET projects cyclonedx-gomod - for Go Modules cyclonedx-core-java - For Core Java Syft - Supports C/C++/Dotnet/Java/JavaScript and many more. Refer here.It can generate BOM in either SPDX or CycloneDX specification. Microsoft SBOM tool - Generates SPDX 2.2 compatible SBOM. The above tools are typically integrated in Build (CI/CD) pipeline for automated SBOM Generation.\nHigh level Adoption approach could be,\nInitiation Identify Critical Assets and Develop a Project Plan. Determine the SBOM format and minimum requirements. Identify security requirements,secure storage and tooling. Plan for Proof of Concept Progress Secure Installation and Operation Guidance Development. Preparation of SBOM Integrate SBOM in each phase of Secure Software Development Lifecycle. On going Analysis and review of existing SBOM periodically and any changes as needed Conclusion: Each of the above tool help generate SBOM for the platform in either the standard Specification format (SPDX/CycloneDX) or tool’s own proprietary format (e.g. syft has its own specification too.). Depending on the requirement, these tools can be effectively used for the projects.\nUseful References HBOM - Inventory hardware components for IoT, ICS, and other types of embedded and connected devices. OWASP AIBOM - AIBOM aims to provide transparency into how AI models are built, trained, and deployed. Happy Coding !!\n",
-  "wordCount" : "543",
+  "articleBody": "Introduction A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.\nSoftware products are composed of many different components, some of which might come from third party sources. These third-party components and dependencies can have vulnerabilities, which attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.\nWhy ? Effective Incident Response - SBOM can assist in speeding up by providing detailed information on dependencies.\nVulnerabilities identification and patch management - Using SBOM, organizations can quickly spot and address known vulnerabilities in the software by patching them.\nCompliance - SBOM helps organizations to streamline adherence to security regulations, guidelines and best practices on software security by providing required transparency in software composition.\nMany Governments around that world are now recommending SBOM like,\nNIST CERT-IN Tools and Processes Lets look at ways to generate SBOM.\nThere are standards/specifications available to represent bills of material including SBOM. When it comes to SBOM, below are widely adopted standards,\nSPDX - An open standard capable of representing systems with software components in as SBOMs (Software Bill of Materials) and other AI, data and security references supporting a range of risk management use cases. CycloneDX - is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. CycloneDX is an Ecma International standard published as ECMA-424. Various tools and libraries typically scan the container images, file systems and generate a Software Bill of Materials as per above specifications. Each tool supports parsing of files for various languages/platforms to extract details on dependencies.\nBelow are some of the open source tools available,\nCycloneDX has repository that contains various tools like, Cyclonedx-CLI - Cli for conversion, analysis, merging cyclonedx-dotnet - for .NET projects cyclonedx-gomod - for Go Modules cyclonedx-core-java - For Core Java Syft - Supports C/C++/Dotnet/Java/JavaScript and many more. Refer here.It can generate BOM in either SPDX or CycloneDX specification. Microsoft SBOM tool - Generates SPDX 2.2 compatible SBOM. The above tools are typically integrated in Build (CI/CD) pipeline for automated SBOM Generation.\nHigh level Adoption approach could be,\nInitiation Identify Critical Assets and Develop a Project Plan. Determine the SBOM format and minimum requirements. Identify security requirements,secure storage and tooling. Plan for Proof of Concept Progress Secure Installation and Operation Guidance Development. Preparation of SBOM Integrate SBOM in each phase of Secure Software Development Lifecycle. On going Analysis and review of existing SBOM periodically and any changes as needed Conclusion: Each of the above tool help generate SBOM for the platform in either the standard Specification format (SPDX/CycloneDX) or tool’s own proprietary format (e.g. syft has its own specification too.). Depending on the requirement, these tools can be effectively used for the projects.\nUseful References HBOM - Inventory hardware components for IoT, ICS, and other types of embedded and connected devices. OWASP AIBOM - AIBOM aims to provide transparency into how AI models are built, trained, and deployed. Happy Coding !!\n",
+  "wordCount" : "550",
   "inLanguage": "en",
   "image": "http://localhost:1313/images/papermod-cover.png","datePublished": "2025-08-15T01:00:00+05:30",
   "dateModified": "2025-08-15T01:00:00+05:30",
@@ -202,6 +196,17 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
                 </a>
             </li>
             <li>
+                <a href="https://gist.github.com/sachinsu" title="Gists">
+                    <span>Gists</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
@@ -212,14 +217,8 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
                 </a>
             </li>
             <li>
-                <a href="https://gist.github.com/sachinsu" title="Gists">
-                    <span>Gists</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
+                <a href="http://localhost:1313/tags" title="Tags">
+                    <span>Tags</span>
                 </a>
             </li>
         </ul>
@@ -267,14 +266,12 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
 up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.</p>
-<h3 id="why-">Why ?<a hidden class="anchor" aria-hidden="true" href="#why-">#</a></h3>
-<ul>
-<li>
 <p>Software products are composed of many different components, some of which might come from
 third party sources. These third-party components and dependencies can have vulnerabilities, which
 attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
 malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.</p>
-</li>
+<h3 id="why-">Why ?<a hidden class="anchor" aria-hidden="true" href="#why-">#</a></h3>
+<ul>
 <li>
 <p><strong>Effective Incident Response</strong> - SBOM can assist in speeding up by providing detailed information on dependencies.</p>
 </li>
@@ -298,7 +295,7 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
 </ul>
 <h2 id="tools-and-processes">Tools and Processes<a hidden class="anchor" aria-hidden="true" href="#tools-and-processes">#</a></h2>
 <p>Lets look at ways to generate SBOM.</p>
-<p>There are standards/specifications available to represent bills of material including SBOM. Important ones are,</p>
+<p>There are standards/specifications available to represent bills of material including SBOM. When it comes to SBOM, below are widely adopted standards,</p>
 <ul>
 <li><a href=https://spdx.dev/
     

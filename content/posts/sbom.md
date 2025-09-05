@@ -10,12 +10,14 @@ tags: [Software, BOM, SBOM, SPDX, CycloneDX, syft, DevOps]
 A Software Bill of Materials (SBOM) is a list of all the components, libraries, and modules that make
 up a software, providing transparency into its composition. It describes various packages and dependencies that go into creating a software artifact.
 
-### Why ?
-
-- Software products are composed of many different components, some of which might come from
+Software products are composed of many different components, some of which might come from
 third party sources. These third-party components and dependencies can have vulnerabilities, which
 attackers can exploit, leading to security incident or breaches. Key threats include attackers inserting
 malicious code, vulnerabilities in outdated components, and breaches by compromised suppliers. These issues can lead to data breaches, operational disruptions, and reputational damage. SBOM can help improve software security and protect against potential threats.
+
+
+### Why ?
+
 
 - **Effective Incident Response** - SBOM can assist in speeding up by providing detailed information on dependencies. 
 
@@ -31,10 +33,10 @@ Many Governments around that world are now recommending SBOM like,
 
 Lets look at ways to generate SBOM. 
 
-There are standards/specifications available to represent bills of material including SBOM. Important ones are, 
+There are standards/specifications available to represent bills of material including SBOM. When it comes to SBOM, below are widely adopted standards, 
 
-- [SPDX](https://spdx.dev/) - An open standard capable of representing systems with software components in as SBOMs (Software Bill of Materials) and other AI, data and security references supporting a range of risk management use cases.
-- [CycloneDX](https://owasp.org/www-project-cyclonedx/) - is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. CycloneDX is an Ecma International standard published as ECMA-424.  
+- [**SPDX**](https://spdx.dev/) - An open standard capable of representing systems with software components in as SBOMs (Software Bill of Materials) and other AI, data and security references supporting a range of risk management use cases.
+- [**CycloneDX**](https://owasp.org/www-project-cyclonedx/) - is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. CycloneDX is an Ecma International standard published as ECMA-424.  
 
 Various tools and libraries typically scan the container images, file systems and generate a Software Bill of Materials as per above specifications. Each tool supports parsing of files for various languages/platforms to extract details on dependencies.  
 
