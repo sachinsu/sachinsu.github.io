@@ -52,7 +52,7 @@ Below are some of the open source tools available,
   
 Once SBOM is generated, one can use below tools to find About  vulnerabilities, misconfigurations, secrets etc. Refer to [Trivy](https://github.com/aquasecurity/trivy?tab=readme-ov-file#quick-start). Trivy can be used to scan Containers, File systems or sbom (SPDX or CycloneDX JSON only as of writing of this article).
 
-The above tools are typically integrated in Build (CI/CD)  pipeline for automated SBOM Generation. 
+The above tools are typically integrated in Build (CI/CD)  pipeline for automated SBOM Generation, vulnerabilities detection and reporting. 
 
 High level Adoption approach could be, 
   - *Initiation*
