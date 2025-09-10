@@ -1,6 +1,6 @@
 ---
 title: "What is Software Bill of Material (SBOM)"
-date: 2025-08-15T01:00:00+05:30
+date: 2025-09-09T01:00:00+05:30
 draft: false
 tags: [Software, BOM, SBOM, SPDX, CycloneDX, syft, DevOps]
 ---
@@ -49,6 +49,8 @@ Below are some of the open source tools available,
   - [cyclonedx-core-java](https://github.com/CycloneDX/cyclonedx-core-java) - For Core Java
 - [Syft](https://github.com/anchore/syft) - Supports C/C++/Dotnet/Java/JavaScript and many more. Refer [here](https://github.com/anchore/syft?tab=readme-ov-file#supported-ecosystems).It can generate BOM in either SPDX or CycloneDX specification.
 - [Microsoft SBOM tool](https://github.com/microsoft/sbom-tool) - Generates SPDX 2.2 compatible SBOM.
+  
+Once SBOM is generated, one can use below tools to find About  vulnerabilities, misconfigurations, secrets etc. Refer to [Trivy](https://github.com/aquasecurity/trivy?tab=readme-ov-file#quick-start). Trivy can be used to scan Containers, File systems or sbom (SPDX or CycloneDX JSON only as of writing of this article).
 
 The above tools are typically integrated in Build (CI/CD)  pipeline for automated SBOM Generation. 
 
@@ -62,6 +64,8 @@ High level Adoption approach could be,
     - Secure Installation and Operation Guidance Development.
     - Preparation of SBOM
     - Integrate SBOM in each phase of Secure Software Development Lifecycle.
+    - Scan for vulnerabilities, secrets, misconfigurations 
+    - Take corrective actions.
   - *On going*
     - Analysis and review of existing SBOM periodically and any changes as needed 
   
