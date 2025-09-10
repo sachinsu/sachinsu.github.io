@@ -72,7 +72,7 @@ High level Adoption approach could be,
 
 ## Conclusion:
 
-Each of the above tool help generate SBOM for the platform in either the standard Specification format (SPDX/CycloneDX) or tool's own proprietary format (e.g. syft has its own specification too.). Depending on the requirement, these tools can be effectively used for the projects. 
+Using above tool(s), one can generate Software bill of Material in standard formats (SPDX/CycloneDX) or tool's own proprietary format (e.g. syft has its own specification too.). Integrating this process of detection and corrective action as part of Continuous build and Deployment process will go long way in being up to date with vulnerabilities detection. 
 
 
 ### Useful References
