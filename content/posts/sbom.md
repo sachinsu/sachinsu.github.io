@@ -50,7 +50,7 @@ Below are some of the open source tools available,
 - [Syft](https://github.com/anchore/syft) - Supports C/C++/Dotnet/Java/JavaScript and many more. Refer [here](https://github.com/anchore/syft?tab=readme-ov-file#supported-ecosystems).It can generate BOM in either SPDX or CycloneDX specification.
 - [Microsoft SBOM tool](https://github.com/microsoft/sbom-tool) - Generates SPDX 2.2 compatible SBOM.
   
-Once SBOM is generated, one can use tools like [Trivy](https://github.com/aquasecurity/trivy?tab=readme-ov-file#quick-start) to assess  vulnerabilities, misconfigurations, secrets etc. Refer to . Trivy can be used to scan Containers, File systems or sbom (SPDX or CycloneDX JSON only as of writing of this article).
+Once SBOM is generated, one can use tools like [Trivy](https://github.com/aquasecurity/trivy?tab=readme-ov-file#quick-start) to assess  vulnerabilities, misconfigurations, secrets etc. Trivy can be used to scan Containers, File systems or sbom (SPDX or CycloneDX JSON only as of writing of this article).
 
     {{< figure align="center" src="/images/trivy_sample.png" title="Sample Report by Trivy" >}}
 
