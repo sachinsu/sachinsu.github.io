@@ -64,6 +64,7 @@ Useful links related from Generative AI, ML space
 
 ## Tools 
 
+- [Genkit - An open-source framework for building AI-powered apps](https://genkit.dev/)
 - [Markitdown - Convert PDF and Office documents to markdown to feed into LLM](https://github.com/microsoft/markitdown )
 - [Aider - AI pair programming in your terminal ](https://github.com/paul-gauthier/aider)
 - [An open platform for training, serving, and evaluating large language models. Release repo for Vicuna and Chatbot Arena](https://github.com/lm-sys/FastChat)
