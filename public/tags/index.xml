@@ -17,84 +17,84 @@
     <item>
       <title>Architecture</title>
       <link>http://localhost:1313/tags/architecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>MicroServices</title>
       <link>http://localhost:1313/tags/microservices/</link>
-      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
       <title>Modularity</title>
       <link>http://localhost:1313/tags/modularity/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/modularity/</guid>
       <description></description>
     </item>
     <item>
       <title>Monolith</title>
       <link>http://localhost:1313/tags/monolith/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/monolith/</guid>
       <description></description>
     </item>
     <item>
       <title>Services</title>
       <link>http://localhost:1313/tags/services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/services/</guid>
       <description></description>
     </item>
     <item>
       <title>BOM</title>
       <link>http://localhost:1313/tags/bom/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/bom/</guid>
       <description></description>
     </item>
     <item>
       <title>CycloneDX</title>
       <link>http://localhost:1313/tags/cyclonedx/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/cyclonedx/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
       <link>http://localhost:1313/tags/devops/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>SBOM</title>
       <link>http://localhost:1313/tags/sbom/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/sbom/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
       <link>http://localhost:1313/tags/software/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>SPDX</title>
       <link>http://localhost:1313/tags/spdx/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/spdx/</guid>
       <description></description>
     </item>
     <item>
       <title>Syft</title>
       <link>http://localhost:1313/tags/syft/</link>
-      <pubDate>Fri, 15 Aug 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/syft/</guid>
       <description></description>
     </item>
@@ -152,48 +152,6 @@
       <link>http://localhost:1313/tags/prompt/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/prompt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Asynchronous</title>
-      <link>http://localhost:1313/tags/asynchronous/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/asynchronous/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Background-Jobs</title>
-      <link>http://localhost:1313/tags/background-jobs/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/background-jobs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Concurrency</title>
-      <link>http://localhost:1313/tags/concurrency/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/concurrency/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Distributed-Systems</title>
-      <link>http://localhost:1313/tags/distributed-systems/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/distributed-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Message-Broker</title>
-      <link>http://localhost:1313/tags/message-broker/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/message-broker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Queue</title>
-      <link>http://localhost:1313/tags/queue/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/queue/</guid>
       <description></description>
     </item>
     <item>
@@ -348,34 +306,6 @@
       <link>http://localhost:1313/tags/uuid/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/uuid/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Msbuild</title>
-      <link>http://localhost:1313/tags/msbuild/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/msbuild/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Net461</title>
-      <link>http://localhost:1313/tags/net461/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/net461/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Netframework</title>
-      <link>http://localhost:1313/tags/netframework/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/netframework/</guid>
       <description></description>
     </item>
     <item>

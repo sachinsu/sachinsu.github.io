@@ -168,49 +168,6 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Web Security Measures in ASP.NET Applications
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>At my current workplace, All Applications are expected to adhere to PCI DSS standards meant for Data protection, Access Regulation and so on. Dedicated SOC Team,consisting of Security analyst who are continously on the prawl to identify breach, conduct periodic auditing of Applications, hardening of Servers.
-While all our .NET applications adhere to below guidelines,
-ASP.NET Security Overview Secure Coding Guidelines Security Guidelines by OWASP We also use tools like Snyk to perform code vulnerability analysis as part of Jenkins driven CI/CD pipeline. In spite of above, we do come across vulnerabilities identified by SOC Team which we needs to be addressed quickly. SOC team uses tools such as Burp Suite.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-06-04 10:25:04 +0530 IST'>June 4, 2020</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sachin Sunkle</footer>
-  <a class="entry-link" aria-label="post link to Web Security Measures in ASP.NET Applications" href="http://localhost:1313/posts/websecurity/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Is WebAssembly future of Web Development
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML&#43;CSS&#43;Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript’s usage in browsers, numerous frameworks and libraries were introduced like React and Vue among others. To begin with, The target used to be browsers on Large Devices like Desktop &amp; Laptops. However, soon all sorts of devices were targetted with advent of Responsive and Progressive CSS&#43;Javascript libraries eg. Bootstrap. Offline Support soon came in ref: Electron and Progressive Web Applications.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-06-02 10:25:04 +0530 IST'>June 2, 2020</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Sachin Sunkle</footer>
-  <a class="entry-link" aria-label="post link to Is WebAssembly future of Web Development" href="http://localhost:1313/posts/webassembly/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Using Github Actions for Automated Testing and Deployment
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Background The source code of tracfee.com is hosted on Github Private.
-At a High level, Tracfee’s Architecture involves,
-Single Page Application using VueJS, deployed on Netlify API in Go, deployed on Oracle Cloud So far, API testing has been automated and we were looking at ways to automate deployment of both UI and API. Steps required to deploy API are less since we are using Docker to run it on VM. However, in case of Netlify, it is required to build and then upload the output folder on Netlify.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-05-28 10:25:04 +0530 IST'>May 28, 2020</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sachin Sunkle</footer>
-  <a class="entry-link" aria-label="post link to Using Github Actions for Automated Testing and Deployment" href="http://localhost:1313/posts/usinggithubactions/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">Windows Service with Cancelable Task
     </h2>
   </header>
@@ -236,6 +193,48 @@ Set of varying parameter(s) Different runtimes (.NET Framework versions, .NET co
   </div>
   <footer class="entry-footer"><span title='2020-05-05 10:25:04 +0530 IST'>May 5, 2020</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sachin Sunkle</footer>
   <a class="entry-link" aria-label="post link to Optimizing  .NET Code using Benchmarks" href="http://localhost:1313/posts/usingbenchmarkdotnet/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ASP.NET Core - Mind the SameSite HTTP Cookie settings
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Background A Web Application, developed in ASP.NET Core (Runtime Version 3.1.100) using Razor Pages and Web API, is expected to be launched from within third-party Web Application in iframe, with complete HTML being rendered.
+During the Development, a mock HTML Page was developed to simulate launching of ASP.NET core based Web Application in iframe. Note that this page as well as Application was hosted on same IIS Server and it worked fine. Subsequently, Web Application was deployed on Test Server and URL was shared for integration with third party Application and then it happened Boom…. i.e. Application when launched in iframe rendered HTML but none of the post request would work (returning HTTP Error 400). Careful inspection showed that,
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-04-09 10:25:04 +0530 IST'>April 9, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to ASP.NET Core - Mind the SameSite HTTP Cookie settings" href="http://localhost:1313/posts/samesitecookies/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Using Channels for High performance Producer consumer implementation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Background Recently, i got involved in assignment where in an application was facing issues with throughput. Expectation is to support more than 500 transactions per second while load testing results were indicating system was experiencing high latency beyond 100&#43; transactions per second.
+This application is developed in .NET Framework &#43; .NET Core and primarily uses Relational Database for persistence and has point to point integration (mainly over HTTP) with internal &amp; external application(s).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-02-12 10:25:04 +0530 IST'>February 12, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Using Channels for High performance Producer consumer implementation" href="http://localhost:1313/posts/channelsforproducerconsumer/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Using .NET standard Assembly in .NET core and .NET Framework
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Background One of the key project(s) at my current organization is developed on .NET 4.6.1. It is developed as Modular Monolith. As part of it’s functionality, it supports different channels like Mobiles, Terminals and Web. For the Web channel, there was need to develop a Web application with,
+High availability Lightweight, High throughput (Need to support few thousand(s) active users) Accordingly, we have been exploring developing this Web Application in .NET core 3.1. However, it also means that we will have to use class libraries, targeted at .NET framework 4.6.1, in .NET core and vice-versa. How can this be done?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-02-07 10:25:04 +0530 IST'>February 7, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sachin Sunkle</footer>
+  <a class="entry-link" aria-label="post link to Using .NET standard Assembly in .NET core and .NET Framework" href="http://localhost:1313/posts/dotnetstandard/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

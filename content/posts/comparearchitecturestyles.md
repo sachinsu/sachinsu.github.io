@@ -1,25 +1,33 @@
 ---
 title: "Clean Architecture, Modular Monolith and Vertical Slice Architecture "
 date: 2025-09-15T01:00:00+05:30
-draft: true
+draft: false
 tags: [Architecture, Services, Modularity, Microservices, Monolith]
 ---
 
 ## Introduction
 
-Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,
+Good software architecture is crucial for a business to reach its goals. It provides a structured way to build software that is easy to maintain, reliable, and performs well.
 
-- Functional/Business requirements 
-- Quality attributes (performance, scalability, availability etc.)
-- Agility (Need to respond fluently to changes) 
-- Constraints (Deployment platform)
-- Principles (Automated testing, Automated deployment etc.) 
+### Key drivers of software architecture
+  Several factors influence a software's architecture:
+  - Business requirements: What the software needs to do.
+  - Quality attributes: How well the software performs, such as its speed, scalability, and availability.
+  - Agility: How quickly the development team can adapt to changes.
+  - Constraints: The limitations of the deployment environment, such as the hardware or operating system.
+  - Principles: Established practices, like automated testing and deployment, that guide the development process.
 
-In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant, 
+### Different Ways to Structure Software
+There are two main ways to build software applications:
 
-  - **Monolith** - Traditional approach involving tiering or layering by means of separation of concerns like UI, business logic and Data into layers/tiers. Each layer is "horizontally" sliced (Packaged by Layer). Promotes rules like UI/Controller must talk to Service which should only talk to Repository/Data Access layer. Typical observation is that changes to any one of the layers usually results in changes across all layers. Any change typically involves re-deployment of entire or most parts of Application.
+ - **Monolith**: This is the traditional way, like building a single, giant house. All the parts of the application—the user interface, the business rules, and the database—are all bundled together in one big piece. This can be simpler to start with, but it has some drawbacks:
+   - Rigid: A change in one part of the application can affect all the other parts.
+   - Slow to update: Even a small change requires you to re-deploy the entire application, which can be time-consuming.
 
-  - **Microservices** - an approach for developing a single application as a suite of small services, each running in it's own processes and communicating with lightweight mechanisms like HTTP based APIs. Services are built around business capabilities and are independently deployable. Key objective is bare minimum of centralized management. Typically suitable for Large, complex software projects. 
+  - **Microservices** : This is a more modern approach, like building a city of small, specialized shops. Instead of one big application, you create many small, independent services. Each service does one specific job and can be updated and deployed on its own.
+    - Flexible: You can update and deploy parts of the application without affecting the rest. This makes it easier to respond to changes quickly.
+    - Complex: This approach is more complicated to manage and is best suited for large, complex projects. You have to deal with challenges like ensuring data is consistent across all the services.
+
 
 At a high level, Monolith approach has shown need for adaptation when it comes of agility expected from Software, while MicroServices provides agility. However, Micro services  often require change in Organization's approach and found to be appropriate  for use cases where benefits outweigh  related concerns like Eventual consistency, Operational Complexity and Distributed nature. Also refer to [Remote calls/Fallacies of Distributed computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing).
 
