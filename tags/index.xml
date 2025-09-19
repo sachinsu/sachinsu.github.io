@@ -12,8 +12,43 @@
     <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Tue, 09 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://sachinsu.github.io/tags/architecture/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MicroServices</title>
+      <link>https://sachinsu.github.io/tags/microservices/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modularity</title>
+      <link>https://sachinsu.github.io/tags/modularity/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/modularity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monolith</title>
+      <link>https://sachinsu.github.io/tags/monolith/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/monolith/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Services</title>
+      <link>https://sachinsu.github.io/tags/services/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/services/</guid>
+      <description></description>
+    </item>
     <item>
       <title>BOM</title>
       <link>https://sachinsu.github.io/tags/bom/</link>
@@ -579,13 +614,6 @@
       <link>https://sachinsu.github.io/tags/cassandra/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/cassandra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MicroServices</title>
-      <link>https://sachinsu.github.io/tags/microservices/</link>
-      <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     <item>

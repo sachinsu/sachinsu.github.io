@@ -2,33 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Services on Learnings in IT</title>
-    <link>http://localhost:1313/tags/services/</link>
+    <link>https://sachinsu.github.io/tags/services/</link>
     <description>Recent content in Services on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.149.0</generator>
+    <generator>Hugo -- 0.150.0</generator>
     <language>en</language>
     <copyright>©</copyright>
     <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/services/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sachinsu.github.io/tags/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clean Architecture, Modular Monolith and Vertical Slice Architecture </title>
-      <link>http://localhost:1313/posts/comparearchitecturestyles/</link>
+      <link>https://sachinsu.github.io/posts/comparearchitecturestyles/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/comparearchitecturestyles/</guid>
+      <guid>https://sachinsu.github.io/posts/comparearchitecturestyles/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,&lt;/p&gt;
+&lt;p&gt;Good software architecture is crucial for a business to reach its goals. It provides a structured way to build software that is easy to maintain, reliable, and performs well.&lt;/p&gt;
+&lt;h3 id=&#34;key-drivers-of-software-architecture&#34;&gt;Key drivers of software architecture&lt;/h3&gt;
+&lt;p&gt;Several factors influence a software&amp;rsquo;s architecture:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Functional/Business requirements&lt;/li&gt;
-&lt;li&gt;Quality attributes (performance, scalability, availability etc.)&lt;/li&gt;
-&lt;li&gt;Agility (Need to respond fluently to changes)&lt;/li&gt;
-&lt;li&gt;Constraints (Deployment platform)&lt;/li&gt;
-&lt;li&gt;Principles (Automated testing, Automated deployment etc.)&lt;/li&gt;
+&lt;li&gt;Business requirements: What the software needs to do.&lt;/li&gt;
+&lt;li&gt;Quality attributes: How well the software performs, such as its speed, scalability, and availability.&lt;/li&gt;
+&lt;li&gt;Agility: How quickly the development team can adapt to changes.&lt;/li&gt;
+&lt;li&gt;Constraints: The limitations of the deployment environment, such as the hardware or operating system.&lt;/li&gt;
+&lt;li&gt;Principles: Established practices, like automated testing and deployment, that guide the development process.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant,&lt;/p&gt;</description>
+&lt;h3 id=&#34;different-ways-to-structure-software&#34;&gt;Different Ways to Structure Software&lt;/h3&gt;
+&lt;p&gt;There are two main ways to build software applications:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
