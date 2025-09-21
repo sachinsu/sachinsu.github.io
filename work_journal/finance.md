@@ -625,3 +625,14 @@
     
 - Jason Zweig on Investing, 
   - Benjamin Graham himself was a vocal advocate of index funds — before they even existed. He helped pioneer the idea that investors should be able to buy the whole stock market in a passive package.I don't believe that index funds undermine your independence as an investor and cause you to "follow everyone else in the market." In fact, they should be able to help you do the opposite. If you're what Graham called a "defensive" investor who doesn't have the time and energy to analyze and monitor individual assets, then an index fund sets you free: You can pay no attention to the market's short-term fluctuations, knowing that you will capture its long-term returns.What if you're what Graham called an "enterprising" investor who's willing to commit the effort to study stocks thoroughly before (and after) you buy them?Then you can put, say, 90% of your stock money in a total-market index fund. Take the other 10% and invest in a small number of individual stocks you analyze meticulously and hold patiently. Treat declines as buying opportunities. Favor companies followed by few analysts, shunned by the crowd, forgotten by the "finfluencers."Having most of your money in an index fund means that even if your individual stock picks stink, your overall portfolio will still do nearly as well as the market. On the other hand, if do you turn out to be a great stock picker, there's no limit to how much your picks can add to your portfolio.This way, an index fund can make you more independent. 
+
+
+- Book: In service of republic, 
+  -  The market economy yields good outcomes for society when, and only when, there are high levels of competition.Competition pushes firms to cut costs, to innovate, and to deliver the best bargains for customers. 
+  -  Creative destruction is the ceaseless process where people try out ideas, build a
+business, and when they find that it does not work, they close it down.
+  - The willingness of entrepreneurs to start a business requires an economic environment of limited liability, where the entrepreneur will be able to give up, put the firm into the bankruptcy process, and walk out of it with nothing more than a bruised ego, reputational damage, and valuable experience. A society that pillories entrepreneurs, and turns business failure into protracted disputes or
+entanglement in agencies, is one which will have less entrepreneurship.
+  - We normally see a few firms or an industry at a time. But actually, all parts of the economy are connected together in ‘general equilibrium’. Every change in one firm or one market induces ripples in every other market. The full general equilibrium effects play out slowly.
+  - It is better to change the incentives of the perpetrator, rather than redress the loss of the victim.
+  - Occam's Razor - When two alternative tools yield the same outcome, we should prefer the one which uses the least coercion/simple explaination.
