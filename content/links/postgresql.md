@@ -172,7 +172,8 @@ draft: false
 
 - [Scaling in PG](https://www.postgresql.org/docs/current/populate.html)
 - [Bulk import performance aspects](https://www.postgresql.org/docs/current/populate.html)
-
+- [UUIDV7 support for distributed databases now in Postgres 18](https://www.thenile.dev/blog/uuidv7)
+  
 ## Data Analysis
 - [Window functions for Data Analysis](https://www.crunchydata.com/blog/window-functions-for-data-analysis-with-postgres)
 
