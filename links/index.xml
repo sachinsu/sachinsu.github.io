@@ -9,7 +9,7 @@
       <url>https://sachinsu.github.io/images/papermod-cover.png</url>
       <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.150.0</generator>
+    <generator>Hugo -- 0.150.1</generator>
     <language>en</language>
     <copyright>©</copyright>
     <lastBuildDate>Sun, 03 Mar 2024 14:13:27 +0530</lastBuildDate>
@@ -621,6 +621,10 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Bulk import performance aspects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.thenile.dev/blog/uuidv7
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;UUIDV7 support for distributed databases now in Postgres 18&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;data-analysis&#34;&gt;Data Analysis&lt;/h2&gt;
 &lt;ul&gt;
