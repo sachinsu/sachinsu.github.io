@@ -635,4 +635,43 @@ business, and when they find that it does not work, they close it down.
 entanglement in agencies, is one which will have less entrepreneurship.
   - We normally see a few firms or an industry at a time. But actually, all parts of the economy are connected together in ‘general equilibrium’. Every change in one firm or one market induces ripples in every other market. The full general equilibrium effects play out slowly.
   - It is better to change the incentives of the perpetrator, rather than redress the loss of the victim.
-  - Occam's Razor - When two alternative tools yield the same outcome, we should prefer the one which uses the least coercion/simple explaination.
+  - Occam's Razor - When two alternative tools yield the same outcome, we should prefer the one which uses the least coercion/simple explaination. 
+  - In every organization, there are front-line producers and then there is an enormous overhead of monitoring, measurement, management and strategy. A low teeth-to-tail ratio is required for the organization to work well.
+  - Private firms keep score using profits or share prices. There is no comparable dashboard in government. Private firms have competitors, and face the threat of going out of business, while the government is a monopolist that will never go out of business.
+  - In all large organizations, there are principal–agent problems. The employees care about their own interests, and not the objective of the organization.Management is about establishing procedures for overcoming this conflict of interest.
+  - Three cross-cutting problems that are found in all organizations are human resource management, the financial process and the procurement process.
+  - The state is the most powerful actor in society.
+  - Only power of a government is a coercive power. A government can force people to do certain things, and a government can force people to pay taxes. State paternalism can then only be in favour of some and not All.
+  - Coercive power gives the state the ability to take from one and give to another, and this will
+    make some people happy at the expense of others. Paternalism by the government is an impossibility
+  - To understand what the state should do, we should first appreciate what free men and women do all by themselves. Most of the great achievements of mankind can be traced to the creativity and drive of free persons
+  - All state activities fall into two categories. In the first case, the state can use force to modify behaviour. In the second case, the state obtains tax revenues and spends this money in certain ways. But obtaining tax revenues is itself done through the threat of violence.
+  - public goods such as clean air are 'non-rival' and 'non-excludable' (No private firm would produce public goods).
+  - Types of Market failure , Externalities, public goods, market power and asymmetric information.
+  - The world of public policy is about these three levers: rules about behaviour, taxation, and spending money
+  - Market power: One party in the negotiation has little power and experiences a loss of choice.
+  - Asymmetric information: The process of negotiation works poorly as there is a lack of information.
+  - Externalities: There are channels of influence between two parties that are not negotiated.
+  - Public goods: The individual is not given the opportunity to negotiate and choose.
+  - Without high-quality fine-grained data, management is impossible.
+  - Without deep roots in knowledge, the policy process degenerates into a contest of political and business special interests that harness the coercive power of the state to their own ends. Where we do not have high intellectualism, we get raw power play. 
+  -  marginal cost of public funds (MCPF). The MCPF tells us the cost to society of Re 1 of public spending. This is typically much larger than Re 1.
+  - In india, We tend to denigrate the knowledge obtained from the analysis of data, from meetings in air-conditioned offices
+  - Public choice theory
+    - we should stop searching for heroes and that we should not concentrate power in any one person.
+    - The capability of an institution lies not in personnel choices but in the arrangement of information, incentives and power.
+    - A sound institution is characterized by checks and balances that create forces of accountability and push leadership to serve people rather than pursue their own self-interest.
+    - teaches us that enforcement personnel are not benign. Strong limitations are required on their behaviour.
+    - encourages us to think that all officials and all politicians are cut from the same cloth.
+    - to construct systems of checks and balances, that will work through rational incentives of all parties, and without assumptions that any one person is a saint.
+    - views every official and every politician as purely self interested.
+    - should design institutions assuming self-interested actors, and we will do better to the extent that some saints are recruited.
+    - People think intelligently about their own self-interest and change their behaviour in response to changed incentives.
+    - In public policy discussions, we are not allowed to ask for a change in the mindset
+    - The puzzle of policy design is that of finding the checks and balances, and the rules of the game, through which politicians and officials will generate good outcomes for society when they pursue their own self interest.
+    - The first thing that we learn in economics is to respect the preferences of others. When we see someone else doing something that appears incomprehensibly wrong, there is generally a good logic in favour of those decisions, based on the preferences and budget constraints of that person. Liberalism—the respect for the values, beliefs and decisions of others—is integral to economics as it is to no other branch of human knowledge
+    - Human behaviour is not fixed; it changes when the incentives change.
+    - arbitrage is the basic human instinct of removing the difference between two different prices for the same thing, and earning a profit while doing this.
+    - We should have greater respect for self-organizing systems that do not require state capacity
+    - Institutionalized application of mind -is a way of ensuring that the right questions are asked, and alternatives evaluated, before a decision is made.
+

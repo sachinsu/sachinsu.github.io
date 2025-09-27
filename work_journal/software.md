@@ -59,6 +59,14 @@
         - Data backup and Archiving 
 
 -  Architecture Roadmap,
+   - 6 Code Quality Areas:
+          - Readability
+          - Flexibility
+          - Reusability
+          - Scalability
+          - Extendibility
+          - Maintainability  
+
      - **Security > Reliability > Usability (Accessibility & UX) > Maintainability > Simplicity (Developer experience/DX) > Brevity (code length) > Finance > Performance**
 
      | Objective | Notes | Existing Infrastructure | Business Requirement | Technical Requirement | solution Component |
