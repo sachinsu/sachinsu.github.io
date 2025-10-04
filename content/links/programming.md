@@ -324,3 +324,8 @@ Links covering concepts and approaches around Distributed Systems, DevOps, Obser
 ## C, C++
 
 - [Learnings from C Lang](https://tmewett.com/c-tips/)
+
+## PDF Generation 
+
+- [Weasyprint](https://weasyprint.org/)
+- [Using Playwright to generate PDF](https://johnh.co/blog/creating-pdfs-from-html-using-csharp)
