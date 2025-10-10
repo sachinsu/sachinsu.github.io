@@ -43,8 +43,10 @@ draft: false
 - [Row level Security](https://www.tangramvision.com/blog/hands-on-with-postgresql-authorization-part-2-row-level-security)
 - [Just use postgres](https://www.amazingcto.com/postgres-for-everything/)
 
-## Performance tuning, configuration etc.
+## Performance tuning, configuration
 
+- [PostgreSQL Toast and why it matters](https://www.crunchydata.com/blog/postgres-toast-the-greatest-thing-since-sliced-bread)
+- [Scaling postgresql - Practical Tips](https://www.shayon.dev/post/2025/40/scaling-with-postgresql-without-boiling-the-ocean/)
 - [pgassistant - insights into database behavior, identifies schema-related issues, and assists in correcting them](https://github.com/nexsol-technologies/pgassistant)
 - [Partitioning as Query Optimization Strategy](https://ashutoshpg.blogspot.com/2023/08/partitioning-as-query-optimization.html)
 - [Database Configuration Builder](https://www.pgconfig.org)
