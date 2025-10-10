@@ -289,8 +289,16 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Just use postgres&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;performance-tuning-configuration-etc&#34;&gt;Performance tuning, configuration etc.&lt;/h2&gt;
+&lt;h2 id=&#34;performance-tuning-configuration&#34;&gt;Performance tuning, configuration&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/postgres-toast-the-greatest-thing-since-sliced-bread
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;PostgreSQL Toast and why it matters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.shayon.dev/post/2025/40/scaling-with-postgresql-without-boiling-the-ocean/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Scaling postgresql - Practical Tips&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://github.com/nexsol-technologies/pgassistant
     
     target=_blank rel=&#34;noopener noreferrer&#34;
