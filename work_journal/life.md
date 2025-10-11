@@ -1164,3 +1164,19 @@ Madhuri Roy 1 year ago
 - A remarkable universe of discoveries in psychology and neuroscience demonstrate that our preexisting beliefs skew our thoughts and even color what we consider our most dispassionate and reasoned conclusions. Expecting people (including ourselves) to be convinced by the facts is contrary to, well, the facts
 - Our tendency is to look for and consider only those views that correspond to our own
 - Some exemplary unpleasant facts are these: that life is short and almost always ends messily; that if you live in the actual world you can’t have your own way; that if you do get what you want, it turns out not to be the thing you wanted; that no one thinks as well of you as you do yourself; and that one or two generations from now you will be forgotten entirely and the world will go on as if you had never existed. Another is that to survive and prosper in this world you have to do so at someone else’s expense or do and undergo things it’s not pleasant to face: like, for example, purchasing your life at the cost of the innocents murdered in the aerial bombing of Europe and the final bombings of Hiroshima and Nagasaki. And not just the bombings. It’s also an unpleasant fact that you are alive and well because you or your representatives killed someone with bullets, shells, bayonets or knives, if not in Germany, Italy or Japan, then Korea or Vietnam. You have connived at murder, and you thrive on it, and that fact is too unpleasant to face except rarely
+
+- Seeing like a state (Book by James C. Scott)
+
+- Legible work - work that is predictable, planned, measurable , has paper trail and well-estimated. Quarterly planning, OKRs, and Jira all exist to make work legible.
+- Iilegible work - Asking for favours, using tacit knowledge that isnt or cant be written down, unsheduled changes, drawing on interpersonal relationships. 
+
+    - Modern organizations exert control by maximising “legibility”: by altering the system so that all parts of it can be measured, reported on, and so on.
+    - However, these organizations are dependent on a huge amount of “illegible” work: work that cannot be tracked or planned for, but is nonetheless essential.
+    - Increasing legibility thus often actually lowers efficiency - but the other benefits are high enough that organizations are typically willing to do so regardless.
+
+  - The processes that slow software engineers down are the same processes that make their work legible to the rest of the company. And that legibility (in dollar terms) is more valuable than being able to produce software more efficiently.
+  - What does legibility mean to a tech company, in practice? It means:
+    - The head of a department knows, to the engineer, all the projects the department is currently working on
+    - That head also knows (or can request) a comprehensive list of all the projects the department has shipped in the last quarter
+    - That head has the ability to plan work at least one quarter ahead (ideally longer)
+    - That head can, in an emergency, direct the entire resources of the department at immediate work
