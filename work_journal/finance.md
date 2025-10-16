@@ -628,14 +628,16 @@
 
 
 - Book: In service of republic, 
+  - A state is a human community that claims the monopoly of the legitimate use of physical force within a given territory.
   -  The market economy yields good outcomes for society when, and only when, there are high levels of competition.Competition pushes firms to cut costs, to innovate, and to deliver the best bargains for customers. 
   -  Creative destruction is the ceaseless process where people try out ideas, build a
-business, and when they find that it does not work, they close it down.
+    business, and when they find that it does not work, they close it down.
   - The willingness of entrepreneurs to start a business requires an economic environment of limited liability, where the entrepreneur will be able to give up, put the firm into the bankruptcy process, and walk out of it with nothing more than a bruised ego, reputational damage, and valuable experience. A society that pillories entrepreneurs, and turns business failure into protracted disputes or
 entanglement in agencies, is one which will have less entrepreneurship.
   - We normally see a few firms or an industry at a time. But actually, all parts of the economy are connected together in ‘general equilibrium’. Every change in one firm or one market induces ripples in every other market. The full general equilibrium effects play out slowly.
   - It is better to change the incentives of the perpetrator, rather than redress the loss of the victim.
   - Occam's Razor - When two alternative tools yield the same outcome, we should prefer the one which uses the least coercion/simple explaination. 
+  - Externalities are the situations in which persons impact upon each other that is not intermediated through voluntary agreements between these persons.
   - In every organization, there are front-line producers and then there is an enormous overhead of monitoring, measurement, management and strategy. A low teeth-to-tail ratio is required for the organization to work well.
   - Private firms keep score using profits or share prices. There is no comparable dashboard in government. Private firms have competitors, and face the threat of going out of business, while the government is a monopolist that will never go out of business.
   - In all large organizations, there are principal–agent problems. The employees care about their own interests, and not the objective of the organization.Management is about establishing procedures for overcoming this conflict of interest.
@@ -673,5 +675,6 @@ entanglement in agencies, is one which will have less entrepreneurship.
     - Human behaviour is not fixed; it changes when the incentives change.
     - arbitrage is the basic human instinct of removing the difference between two different prices for the same thing, and earning a profit while doing this.
     - We should have greater respect for self-organizing systems that do not require state capacity
-    - Institutionalized application of mind -is a way of ensuring that the right questions are asked, and alternatives evaluated, before a decision is made.
+    - Institutionalized application of mind -is a way of ensuring that the right questions are asked, and alternatives evaluated, before a decision is made
+   - Little else is requisite to carry a state to the highest degree of opulence from the lowest barbarism, but peace, easy taxes, and a tolerable administration of justice; all the rest being brought about by the natural course of things. All governments which thwart this natural course, which force things into another channel, or which endeavour to arrest the progress of society at a particular point, are unnatural, and to support themselves are obliged to be oppressive and tyrannical.
 

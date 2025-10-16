@@ -110,7 +110,16 @@
          - Security & Compliance: Continuous compliance, adherence to regulations.
          - Reach & Customer Engagement: Global access, data sovereignty compliance, meeting customer needs faster.
      - Technical Requirements
-       - Performance:
+       - Resiliency. If an infrastructure component fails (a service dies, a network connection becomes unavailable), does the system remain functional? Can it recover without human intervention?
+       - Speed. How fast is the software, compared to the theoretical limit? Is work being done in the hot path that isn’t strictly necessary?
+       - Readability. Is the software easy to take in at a glance and to onboard new engineers to? Are functions relatively short and named well? Is the system well-documented?
+       - Correctness. Is it possible to represent an invalid state in the system? How locked-down is the system with tests, types, and asserts? Do the tests use techniques like fuzzing? In the extreme case, has the program been proven correct by formal methods like Alloy?
+       - Flexibility. Can the system be trivially extended? How easy is it to make a change? If I need to change something, how many different parts of the program do I need to touch in order to do so?
+       - Portability. Is the system tied down to a particular operational environment (say, Microsoft Windows, or AWS)? If the system needs to be redeployed elsewhere, can that happen without a lot of engineering work?
+       - Scalability. If traffic goes up 10x, will the system fall over? What about 100x? Does the system have to be over-provisioned or can it scale automatically? What bottlenecks will require engineering intervention?
+       - Development speed. If I need to extend the system, how fast can it be done? Can most engineers work on it, or does it require a domain expert?
+
+         - Performance:
          - Latency (e.g., sub-millisecond, milliseconds)
          - Throughput (e.g., requests per second, data transfer rates)
          - Scalability (e.g., handle X concurrent users, scale to Y transactions/second)
@@ -495,6 +504,13 @@
                     □ Changes affect latency, bandwidth and endpoints 
                     □ Changes affect ability to reach destination 
                     □ Network affects reliability , latency and bandwidth
+               - Single (Single tenant) vs. distributed systems (Multi tenant) 
+                 - Distributed Systems offer higher availability due to redundancy 
+                 - Multiple copies of data on multiple machines is a way to make online data durable. Single-System approaches like RAID do not offer failure independence
+                 - Multi-tenant systems achieve lower costs and higher utilization by packing multiple diverse workloads onto same resources. Also allows systems with unpredictable load spikes to share spare burst resources. 
+                 - Better latency management due to spread of short-term spikes of load over a larger pool of resources. 
+                 - Segregation/isolation of specialized workload like latency-sensitive, throughput-sensitive, locality-sensitive, compute-sensitive, memory-sensitive etc. 
+                 - changes can be managed by taking advantage of high availability mechanisms of the system to allow for safe zero-impact patching and deployment.
                · In-process call vs. network request
                     □ Performance: Worse, increases network congestion, unpredictable timing
                     □ Unreliable: Requires retries, timeouts, & circuit breakers
@@ -942,6 +958,7 @@
            - Big ball of Mud
         
          - Modular Monolith or Service based Architecture   
+           - Allows technical organizations to avoid coordinating (the more the organization needs different pieces to coordinate with one another to work, the less its going to be able to grow) on things like data models, implementation choices , fleet management, tool choices and such things that aren't core to their business. APIs are fundamentally contracts that move coordination from human-to-human to system-to-system and constrain that coordination in ways that allow systems to handle it efficiently.
            - is a software architecture pattern that combines the advantages of monolith with microservices architecture. In this, Systems are organized into loosely coupled modules, each delineating well-defined boundaries and explicit dependencies on other modules. 
              - Each module is independent (or minimally dependant) with its own layers such as Domain, Infrastructure and API. 
              - Each module is autonomously developed, tested and deployed
