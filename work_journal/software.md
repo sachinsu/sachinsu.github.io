@@ -213,6 +213,17 @@
        - Architects need to adopt lateral thinking. 
        - Architect needs to have a holistic view of each component regarding performance, scaling, high availability.
  
+   - Scalability
+     - The first principle of successful scalability is to batter the consistency mechanisms down to a minimum, move them off the critical path, hide them in a rarely visited corner of the system, and then make it as hard as possible for application developers to get permission to use them
+       - Traditional methods to ensure program correctness involve coordination protocols (like Paxos or Two-Phase Commit) to manage shared state and maintain memory consistency
+         - The Cost: Coordination can severely limit performance, scale, and availability. For example, some key-value stores spend 90% of their time waiting for coordination, while coordination-free alternatives (like Anna) can run two orders of magnitude faster.
+         - The Goal: Minimize or eliminate the need for coordination, as James Hamilton of Amazon Web Services advocated, to achieve high scalability.
+       - Relevant patterns 
+         - Avoid Bare Assignment: Mutable state and bare assignment are typically non-monotonic, as a new assignment can retract a previous value, making the final state order-sensitive
+         - Favor Immutability: Immutable variables and data structures are simple monotonic patterns (e.g., a variable transitions from undefined to a final value, never back).
+         - Use Conflict-Free Replicated Data Types (CRDTs):
+         - "Deletes" as Monotonic Inserts (Tombstones) 
+           - Shopping Cart Example: Instead of allowing actual deletes, the system tracks two monotonically growing sets: Items_Added and Items_Deleted (or "tombstones"). The final cart is the difference between the two sets.
   - Evolvable Architecture 
        - Guidelines
            - Understand the fragile places within your complex technology stack and automate protections via fitness functions. fitness functions should be used to ensure integrity of integration points.

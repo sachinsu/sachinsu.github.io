@@ -676,5 +676,10 @@ entanglement in agencies, is one which will have less entrepreneurship.
     - arbitrage is the basic human instinct of removing the difference between two different prices for the same thing, and earning a profit while doing this.
     - We should have greater respect for self-organizing systems that do not require state capacity
     - Institutionalized application of mind -is a way of ensuring that the right questions are asked, and alternatives evaluated, before a decision is made
-   - Little else is requisite to carry a state to the highest degree of opulence from the lowest barbarism, but peace, easy taxes, and a tolerable administration of justice; all the rest being brought about by the natural course of things. All governments which thwart this natural course, which force things into another channel, or which endeavour to arrest the progress of society at a particular point, are unnatural, and to support themselves are obliged to be oppressive and tyrannical.
+   - Little else is requisite to carry a state to the highest degree of opulence from the lowest barbarism, but peace, easy taxes, and a tolerable administration of justice; all the rest being brought about by the natural course of things. All governments which thwart this natural course, which force things into another channel, or which endeavour to arrest the progress of society at a particular point, are unnatural, and to support themselves are obliged to be oppressive and tyrannical.    
+   - Three pilars of economic growth, 
+     - High productivity firms, 
+       - Specialization (do few things and do that real well)
+       - Learning by doing 
+       - Globalization (Remove all barriers at border)
 

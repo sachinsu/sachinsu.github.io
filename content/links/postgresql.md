@@ -183,3 +183,9 @@ draft: false
 
 - [Electric - Sync data from PostgreSQL](https://electric-sql.com)
 - [Debezium - Stream changes from database](https://debezium.io)
+
+
+
+## Capacity Planning 
+
+- [Is your workload read-heavy or write-heavy](https://www.crunchydata.com/blog/is-postgres-read-heavy-or-write-heavy-and-why-should-you-care)
