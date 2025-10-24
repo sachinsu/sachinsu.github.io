@@ -9,7 +9,7 @@
       <url>https://sachinsu.github.io/images/papermod-cover.png</url>
       <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.151.0</generator>
+    <generator>Hugo -- 0.152.1</generator>
     <language>en</language>
     <copyright>©</copyright>
     <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
@@ -763,6 +763,13 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Debezium - Stream changes from database&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;capacity-planning&#34;&gt;Capacity Planning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/is-postgres-read-heavy-or-write-heavy-and-why-should-you-care
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Is your workload read-heavy or write-heavy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
