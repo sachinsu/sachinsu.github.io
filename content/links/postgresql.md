@@ -96,6 +96,7 @@ draft: false
 - [Queues in PostgreSQL](https://www.youtube.com/watch?v=WIRy1Ws47ic&list=PLlrxD0HtieHjSzUZYCMvqffEU5jykfPTd)
 - [How postgresql stores data on disk](https://drew.silcock.dev/blog/how-postgres-stores-data-on-disk/)
 - [Using Postgresql for job queueing and lessons learned](https://www.rudderstack.com/blog/scaling-postgres-queue/)
+- [Pgmq - A lightweight message queue as native extension](pgmq.github.io/pgmq/)
 
 ## Interesting Extensions/Products
 
