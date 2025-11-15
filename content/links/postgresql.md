@@ -97,7 +97,7 @@ draft: false
 - [How postgresql stores data on disk](https://drew.silcock.dev/blog/how-postgres-stores-data-on-disk/)
 - [Using Postgresql for job queueing and lessons learned](https://www.rudderstack.com/blog/scaling-postgres-queue/)
 - [Pgmq - A lightweight message queue as native extension](pgmq.github.io/pgmq/)
-
+- [PGQ - Asynchronous processing](https://wiki.postgresql.org/wiki/PGQ_Tutorial)
 ## Interesting Extensions/Products
 
 - [Using duckdb and postgres together](https://motherduck.com/blog/postgres-duckdb-options)
