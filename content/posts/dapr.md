@@ -197,15 +197,15 @@ Below is depiction of the flow,
     {{< figure src="/images/dapr/resiliency.png" alt="Resiliency configuration" >}}
 
 
-## All is good but what is trade-off?
+## All is good but what is the trade-off?
 
 All this abstraction isn't free. The Sidecar pattern introduces an extra "hop" for network traffic 
 
-(Service A $\rightarrow$ Sidecar A $\rightarrow$ Sidecar B $\rightarrow$ Service B).
+(Service A --> Sidecar A --> Sidecar B --> Service B).
 
 I ran a quick load test using [k6](https://k6.io) to quantify this overhead on a local development machine.
 
-- Load testing criteria is setup as below, 
+Load testing criteria is setup as below, 
 
     {{< figure src="/images/dapr/loadtest-criteria.png" alt="Load test criteria" >}}
 
