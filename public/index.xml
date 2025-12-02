@@ -12,8 +12,21 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Why use Dapr (Distributed Application Runtime)?</title>
+      <link>http://localhost:1313/posts/dapr/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/dapr/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns &lt;a href=https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-eBook-DesigningDistributedSystems.pdf
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.&lt;/p&gt;
+&lt;p&gt;Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Clean Architecture, Modular Monolith and Vertical Slice Architecture </title>
       <link>http://localhost:1313/posts/comparearchitecturestyles/</link>
@@ -56,6 +69,16 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;MCP Toolbox for Databases&lt;/a&gt; stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&amp;rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Taming Time: Strategies for Out-of-Order and Delayed Processing</title>
+      <link>http://localhost:1313/posts/outoforder/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/outoforder/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Explore various approaches to handle out-of-order or delayed processing, addressing scenarios like bulk operations and long-running tasks. Learn about message queues, background workers, and other techniques to improve application responsiveness.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the world of software development, we often encounter tasks that don&amp;rsquo;t need to or (should not) be completed immediately. Whether it&amp;rsquo;s sending mass emails, processing large datasets, or handling complex computations. Blocking the user&amp;rsquo;s main flow (Either on Web App or API) for these operations is rarely a good idea. That&amp;rsquo;s where out-of-order or delayed processing comes in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using Asynchronous programming to manage parallel processing </title>
@@ -143,6 +166,42 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;SMS&lt;/a&gt; to Customer&amp;rsquo;s  Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nuke as Build Automation tool for .NET projects</title>
+      <link>http://localhost:1313/posts/nukebuildautomation/</link>
+      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/nukebuildautomation/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;h2 id=&#34;how-nuke-helps&#34;&gt;How Nuke Helps&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Key Advantages of Nuke are,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C# based DSL to compose build pipeline&lt;/li&gt;
+&lt;li&gt;Build pipeline is part of solution (i.e. actual code)&lt;/li&gt;
+&lt;li&gt;display a dependency graph&lt;/li&gt;
+&lt;li&gt;logging&lt;/li&gt;
+&lt;li&gt;support for lot of CI/CD helper tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;useful-references&#34;&gt;Useful References,&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.nuke.build/docs/getting-started/philosophy.html
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Nuke - Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://github.com/cake-build/cake
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Cake&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://fake.build/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Fake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Code building !!&lt;/p&gt;
+&lt;hr&gt;
+&lt;script src=&#34;https://utteranc.es/client.js&#34; repo=&#34;sachinsu/sachinsu.github.io&#34; issue-term=&#34;title&#34; label=&#34;blogcomment&#34;
+    theme=&#34;github-light&#34; crossorigin=&#34;anonymous&#34; async&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>PostgreSQL</title>
@@ -289,8 +348,16 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Just use postgres&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;performance-tuning-configuration-etc&#34;&gt;Performance tuning, configuration etc.&lt;/h2&gt;
+&lt;h2 id=&#34;performance-tuning-configuration&#34;&gt;Performance tuning, configuration&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/postgres-toast-the-greatest-thing-since-sliced-bread
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;PostgreSQL Toast and why it matters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.shayon.dev/post/2025/40/scaling-with-postgresql-without-boiling-the-ocean/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Scaling postgresql - Practical Tips&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://github.com/nexsol-technologies/pgassistant
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -487,6 +554,14 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Using Postgresql for job queueing and lessons learned&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=pgmq.github.io/pgmq/
+    
+    
+&gt;Pgmq - A lightweight message queue as native extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://wiki.postgresql.org/wiki/PGQ_Tutorial
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;PGQ - Asynchronous processing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;interesting-extensionsproducts&#34;&gt;Interesting Extensions/Products&lt;/h2&gt;
 &lt;ul&gt;
@@ -733,6 +808,10 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Bulk import performance aspects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.thenile.dev/blog/uuidv7
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;UUIDV7 support for distributed databases now in Postgres 18&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;data-analysis&#34;&gt;Data Analysis&lt;/h2&gt;
 &lt;ul&gt;
@@ -751,6 +830,13 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Debezium - Stream changes from database&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;capacity-planning&#34;&gt;Capacity Planning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/is-postgres-read-heavy-or-write-heavy-and-why-should-you-care
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Is your workload read-heavy or write-heavy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -798,6 +884,21 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 &gt;Go&lt;/a&gt;] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Dapr - Distributed Application Runtime</title>
+      <link>http://localhost:1313/posts/daprold/</link>
+      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/daprold/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;key aspects,
+- Platform agnostic
+- Abstraction over Infrastructure
+- Cloud Agnostic
+- Open source
+- AI Agents (Dapr Agents etc.)&lt;/p&gt;
+&lt;p&gt;Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).&lt;/p&gt;
+&lt;p&gt;A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Database Reliability Engineering - My Notes</title>
       <link>http://localhost:1313/posts/dbre/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
@@ -828,6 +929,14 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p&gt;
 &lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Domain driven Design: Learnings</title>
+      <link>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</guid>
+      <description>&lt;p&gt;Course Overview
+Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we&amp;rsquo;d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design. DDD has proven to be a very effective approach for managing complex requirements. The original version of this course has helped many thousands of learners leverage domain‑driven design, and they have shared amazing feedback. Now, we&amp;rsquo;ve updated the course and its sample application to reflect ideas and tools that have emerged since that first version. Some of the major topics that we&amp;rsquo;ll cover include what are the essential ideas of domain‑driven design? What are the main patterns used in domain models? We&amp;rsquo;ll also talk about how to break up concepts into smaller parts and how these smaller aggregates and contexts communicate with one another. By the end of this course, you&amp;rsquo;ll know how to break down customer requirements into a maintainable domain model and structure a solution using domain‑driven design. Before beginning the course, you should at least be familiar with software development, ideally using C#. From here, you should feel comfortable diving into DDD and design patterns with courses on the DDD learning path and the design patterns learning path. We hope you&amp;rsquo;ll join us on this journey to learn domain‑driven design with the Domain‑Driven Design Fundamentals course, at Pluralsight.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Upgrading API: Learnings</title>
@@ -1538,6 +1647,13 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Kotaemon - An open-source RAG-based tool for chatting with your documents. &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;design-patterns&#34;&gt;Design Patterns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://github.com/microsoft/azure-genai-design-patterns
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Gen AI Design patterns(Azure)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

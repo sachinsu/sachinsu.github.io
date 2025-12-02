@@ -15,6 +15,21 @@
     <lastBuildDate>Sun, 05 Sep 2021 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Dapr - Distributed Application Runtime</title>
+      <link>http://localhost:1313/posts/daprold/</link>
+      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/daprold/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;key aspects,
+- Platform agnostic
+- Abstraction over Infrastructure
+- Cloud Agnostic
+- Open source
+- AI Agents (Dapr Agents etc.)&lt;/p&gt;
+&lt;p&gt;Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).&lt;/p&gt;
+&lt;p&gt;A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Database Reliability Engineering - My Notes</title>
       <link>http://localhost:1313/posts/dbre/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>

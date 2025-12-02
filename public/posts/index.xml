@@ -20,15 +20,18 @@
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/comparearchitecturestyles/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Architecture plays a pivotal role in the delivery of software in terms of achieving business goals set forth for the software like maintainability, availability, performance and many more. It helps introduce structured approach to development by means of having appropriate abstractions. Typical driving forces for a software are,&lt;/p&gt;
+&lt;p&gt;Good software architecture is crucial for a business to reach its goals. It provides a structured way to build software that is easy to maintain, reliable, and performs well.&lt;/p&gt;
+&lt;h3 id=&#34;key-drivers-of-software-architecture&#34;&gt;Key drivers of software architecture&lt;/h3&gt;
+&lt;p&gt;Several factors influence a software&amp;rsquo;s architecture:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Functional/Business requirements&lt;/li&gt;
-&lt;li&gt;Quality attributes (performance, scalability, availability etc.)&lt;/li&gt;
-&lt;li&gt;Agility (Need to respond fluently to changes)&lt;/li&gt;
-&lt;li&gt;Constraints (Deployment platform)&lt;/li&gt;
-&lt;li&gt;Principles (Automated testing, Automated deployment etc.)&lt;/li&gt;
+&lt;li&gt;Business requirements: What the software needs to do.&lt;/li&gt;
+&lt;li&gt;Quality attributes: How well the software performs, such as its speed, scalability, and availability.&lt;/li&gt;
+&lt;li&gt;Agility: How quickly the development team can adapt to changes.&lt;/li&gt;
+&lt;li&gt;Constraints: The limitations of the deployment environment, such as the hardware or operating system.&lt;/li&gt;
+&lt;li&gt;Principles: Established practices, like automated testing and deployment, that guide the development process.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this pursuit, there are alternate styles to structure software. Lets look at below ones which are dominant,&lt;/p&gt;</description>
+&lt;h3 id=&#34;different-ways-to-structure-software&#34;&gt;Different Ways to Structure Software&lt;/h3&gt;
+&lt;p&gt;There are two main ways to build software applications:&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is Software Bill of Material (SBOM)</title>
@@ -53,6 +56,16 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;MCP Toolbox for Databases&lt;/a&gt; stands out. This open-source server enables developers to connect generative AI applications to enterprise databases, facilitating prompt-based querying and natural language processing (NLP). Whether you&amp;rsquo;re setting up your LLM on-premises using OLLAMA or leveraging providers like Gemini, Claude, or OpenAI, this toolbox offers a versatile and powerful solution. Lets explore it in detail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Taming Time: Strategies for Out-of-Order and Delayed Processing</title>
+      <link>http://localhost:1313/posts/outoforder/</link>
+      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/outoforder/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Explore various approaches to handle out-of-order or delayed processing, addressing scenarios like bulk operations and long-running tasks. Learn about message queues, background workers, and other techniques to improve application responsiveness.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the world of software development, we often encounter tasks that don&amp;rsquo;t need to or (should not) be completed immediately. Whether it&amp;rsquo;s sending mass emails, processing large datasets, or handling complex computations. Blocking the user&amp;rsquo;s main flow (Either on Web App or API) for these operations is rarely a good idea. That&amp;rsquo;s where out-of-order or delayed processing comes in.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using Asynchronous programming to manage parallel processing </title>
@@ -112,6 +125,42 @@ malicious code, vulnerabilities in outdated components, and breaches by compromi
 &gt;SMS&lt;/a&gt; to Customer&amp;rsquo;s  Mobile number (and e-mail id) and customer is supposed to confirm this order placement by means of entering Code received in it. This code is valid for a short duration.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Nuke as Build Automation tool for .NET projects</title>
+      <link>http://localhost:1313/posts/nukebuildautomation/</link>
+      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
+      <guid>http://localhost:1313/posts/nukebuildautomation/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;h2 id=&#34;how-nuke-helps&#34;&gt;How Nuke Helps&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Key Advantages of Nuke are,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C# based DSL to compose build pipeline&lt;/li&gt;
+&lt;li&gt;Build pipeline is part of solution (i.e. actual code)&lt;/li&gt;
+&lt;li&gt;display a dependency graph&lt;/li&gt;
+&lt;li&gt;logging&lt;/li&gt;
+&lt;li&gt;support for lot of CI/CD helper tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;useful-references&#34;&gt;Useful References,&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.nuke.build/docs/getting-started/philosophy.html
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Nuke - Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://github.com/cake-build/cake
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Cake&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://fake.build/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Fake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Code building !!&lt;/p&gt;
+&lt;hr&gt;
+&lt;script src=&#34;https://utteranc.es/client.js&#34; repo=&#34;sachinsu/sachinsu.github.io&#34; issue-term=&#34;title&#34; label=&#34;blogcomment&#34;
+    theme=&#34;github-light&#34; crossorigin=&#34;anonymous&#34; async&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
       <title>Can SQLite be considered for Server Applications?</title>
       <link>http://localhost:1313/posts/is_sqlite_production_ready/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
@@ -156,6 +205,21 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
 &gt;Go&lt;/a&gt;] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Dapr - Distributed Application Runtime</title>
+      <link>http://localhost:1313/posts/daprold/</link>
+      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/daprold/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;key aspects,
+- Platform agnostic
+- Abstraction over Infrastructure
+- Cloud Agnostic
+- Open source
+- AI Agents (Dapr Agents etc.)&lt;/p&gt;
+&lt;p&gt;Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).&lt;/p&gt;
+&lt;p&gt;A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Database Reliability Engineering - My Notes</title>
       <link>http://localhost:1313/posts/dbre/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
@@ -186,6 +250,14 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Suppose you have a distributed application running in production and it is based on Micro services/Service Oriented Architecture and have SLA of being &amp;ldquo;always on&amp;rdquo; (be available 24*7, barring deployments of course !!). In such cases, having proper monitoring of Application health in place is absolutely essential.&lt;/p&gt;
 &lt;p&gt;What if Monitoring is an afterthought (i.e. application is already in production) ? and that there is little apetite for additional components like (Visualization tools, specialized storage for logs/metrics/traces) for monitoring?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Domain driven Design: Learnings</title>
+      <link>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</link>
+      <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</guid>
+      <description>&lt;p&gt;Course Overview
+Welcome to Pluralsight. My name is Julie Lerman, and this is Steve Smith. Together, we&amp;rsquo;d like to welcome you to our course, Domain‑Driven Design Fundamentals. Steve is a trainer and architect with NimblePros and spends a lot of time helping teams write better code, faster. And Julie is well known in the DDD community for helping reluctant teams embrace domain‑driven design. In this course, we give you a strong foundation for learning how to build applications and microservices using domain‑driven design. DDD has proven to be a very effective approach for managing complex requirements. The original version of this course has helped many thousands of learners leverage domain‑driven design, and they have shared amazing feedback. Now, we&amp;rsquo;ve updated the course and its sample application to reflect ideas and tools that have emerged since that first version. Some of the major topics that we&amp;rsquo;ll cover include what are the essential ideas of domain‑driven design? What are the main patterns used in domain models? We&amp;rsquo;ll also talk about how to break up concepts into smaller parts and how these smaller aggregates and contexts communicate with one another. By the end of this course, you&amp;rsquo;ll know how to break down customer requirements into a maintainable domain model and structure a solution using domain‑driven design. Before beginning the course, you should at least be familiar with software development, ideally using C#. From here, you should feel comfortable diving into DDD and design patterns with courses on the DDD learning path and the design patterns learning path. We hope you&amp;rsquo;ll join us on this journey to learn domain‑driven design with the Domain‑Driven Design Fundamentals course, at Pluralsight.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Upgrading API: Learnings</title>

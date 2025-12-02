@@ -177,8 +177,16 @@
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Just use postgres&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;performance-tuning-configuration-etc&#34;&gt;Performance tuning, configuration etc.&lt;/h2&gt;
+&lt;h2 id=&#34;performance-tuning-configuration&#34;&gt;Performance tuning, configuration&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/postgres-toast-the-greatest-thing-since-sliced-bread
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;PostgreSQL Toast and why it matters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.shayon.dev/post/2025/40/scaling-with-postgresql-without-boiling-the-ocean/
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Scaling postgresql - Practical Tips&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://github.com/nexsol-technologies/pgassistant
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -375,6 +383,14 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Using Postgresql for job queueing and lessons learned&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=pgmq.github.io/pgmq/
+    
+    
+&gt;Pgmq - A lightweight message queue as native extension&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://wiki.postgresql.org/wiki/PGQ_Tutorial
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;PGQ - Asynchronous processing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;interesting-extensionsproducts&#34;&gt;Interesting Extensions/Products&lt;/h2&gt;
 &lt;ul&gt;
@@ -621,6 +637,10 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Bulk import performance aspects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.thenile.dev/blog/uuidv7
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;UUIDV7 support for distributed databases now in Postgres 18&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;data-analysis&#34;&gt;Data Analysis&lt;/h2&gt;
 &lt;ul&gt;
@@ -639,6 +659,13 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Debezium - Stream changes from database&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;capacity-planning&#34;&gt;Capacity Planning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.crunchydata.com/blog/is-postgres-read-heavy-or-write-heavy-and-why-should-you-care
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Is your workload read-heavy or write-heavy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -1104,6 +1131,13 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Kotaemon - An open-source RAG-based tool for chatting with your documents. &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;design-patterns&#34;&gt;Design Patterns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=https://github.com/microsoft/azure-genai-design-patterns
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Gen AI Design patterns(Azure)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

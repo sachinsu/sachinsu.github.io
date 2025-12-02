@@ -3,7 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
+    <lastmod>2025-12-25T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-12-25T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
@@ -18,9 +21,6 @@
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/monolith/</loc>
-    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/services/</loc>
@@ -79,6 +79,27 @@
   </url><url>
     <loc>http://localhost:1313/tags/prompt/</loc>
     <lastmod>2025-06-01T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/asynchronous/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/background-jobs/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/concurrency/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/distributed-systems/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/message-broker/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/queue/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/outoforder/</loc>
+    <lastmod>2025-04-01T10:25:04+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/parallelprocessing/</loc>
     <lastmod>2024-07-30T10:25:04+05:30</lastmod>
@@ -167,6 +188,21 @@
     <loc>http://localhost:1313/tags/uuid/</loc>
     <lastmod>2022-05-15T01:00:00+05:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/automation/</loc>
+    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/msbuild/</loc>
+    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/net461/</loc>
+    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/netframework/</loc>
+    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/nukebuildautomation/</loc>
+    <lastmod>2022-04-02T10:25:04+05:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/links/postgresql/</loc>
     <lastmod>2022-01-10T15:08:50+05:30</lastmod>
   </url><url>
@@ -202,6 +238,9 @@
   </url><url>
     <loc>http://localhost:1313/tags/pyroscope/</loc>
     <lastmod>2021-12-12T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/daprold/</loc>
+    <lastmod>2021-09-05T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2021-09-05T01:00:00+05:30</lastmod>
@@ -246,6 +285,9 @@
     <lastmod>2021-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/corewcf/</loc>
+    <lastmod>2021-05-15T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/domain_driven_transcript_from_pluralsight/</loc>
     <lastmod>2021-05-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/soap/</loc>
