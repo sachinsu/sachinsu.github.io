@@ -20,24 +20,8 @@
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/dapr/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns &lt;a href=https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-eBook-DesigningDistributedSystems.pdf
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Distributed systems have it&amp;rsquo;s pros but also introduces challenges due to distribution of objects. Popular approaches like, Microservices,  promotes  services that represent a business capability and are independently deployed. This increases modularity, scalability but there are always trade-offs involved like,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Development&lt;/strong&gt; - They are harder to develop and operate. Programming models are often optimized for in-process communication in terms of development and testing. However, Services, in a distributed application, involve remote/out of process calls (e.g. https/gRPC). This makes it difficult to program, debug/test and operate them.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Eventual Consistency&lt;/strong&gt; - Microservices introduce eventual consistency  because of their laudable insistence on decentralized data management. One is most likely to face issue of &amp;ldquo;Dual writes&amp;rdquo; (The dual-write problem occurs when two external systems must be updated in an atomic fashion) in distributed application.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operability&lt;/strong&gt; - Managing multiple independent services have its pros but induce complexity when it comes to frequent deployments and monitoring. As aptly put by Martin fowler &lt;a href=https://martinfowler.com/articles/microservice-trade-offs.html#distribution
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;here&lt;/a&gt;, &amp;ldquo;Low bar for skill is higher in a microservice environment&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt; - Cloud brings in another dimension where companies want to leverage them for their benefits but want to be agnostic or avoid lock-in to a particular vendor.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;Fallacies of Distributed Computing&lt;/a&gt; articulates all these relevant aspects.&lt;/p&gt;</description>
+&lt;p&gt;If you build software today, you are likely building a distributed system. Whether it&amp;rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.&lt;/p&gt;
+&lt;p&gt;Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
