@@ -6,11 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title> Why use Dapr (Distributed Application Runtime)? | Learnings in IT</title>
-<meta name="keywords" content="Observability, Database, MySQL, Monitoring, Microservices, Distributed, Message Queues, Gen AI, Agentic">
+<meta name="keywords" content="Observability, Databases, Monitoring, Microservices, Distributed, Message Queues, Gen AI, Agentic">
 <meta name="description" content="Introduction
-Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns here.
-Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
-Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.">
+If you build software today, you are likely building a distributed system. Whether it&rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.
+Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.">
 <meta name="author" content="Sachin Sunkle">
 <link rel="canonical" href="http://localhost:1313/posts/dapr/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
@@ -61,28 +60,26 @@ Most organizations build distributed applications for two main reasons. First, t
 </noscript><meta property="og:url" content="http://localhost:1313/posts/dapr/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content=" Why use Dapr (Distributed Application Runtime)?">
-  <meta property="og:description" content="Introduction Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns here.
-Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
-Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.">
+  <meta property="og:description" content="Introduction If you build software today, you are likely building a distributed system. Whether it’s two services talking or a monolith calling a lambda, you have crossed the process boundary.
+Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-12-02T01:00:00+05:30">
     <meta property="article:modified_time" content="2025-12-02T01:00:00+05:30">
     <meta property="article:tag" content="Observability">
-    <meta property="article:tag" content="Database">
-    <meta property="article:tag" content="MySQL">
+    <meta property="article:tag" content="Databases">
     <meta property="article:tag" content="Monitoring">
     <meta property="article:tag" content="MicroServices">
     <meta property="article:tag" content="Distributed">
+    <meta property="article:tag" content="Message Queues">
       <meta property="og:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:title" content=" Why use Dapr (Distributed Application Runtime)?">
 <meta name="twitter:description" content="Introduction
-Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns here.
-Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
-Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.">
+If you build software today, you are likely building a distributed system. Whether it&rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.
+Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.">
 
 
 <script type="application/ld+json">
@@ -111,12 +108,12 @@ Most organizations build distributed applications for two main reasons. First, t
   "@type": "BlogPosting",
   "headline": " Why use Dapr (Distributed Application Runtime)?",
   "name": " Why use Dapr (Distributed Application Runtime)?",
-  "description": "Introduction Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns here.\nDistributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.\nMost organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.\n",
+  "description": "Introduction If you build software today, you are likely building a distributed system. Whether it\u0026rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.\nDistributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.\n",
   "keywords": [
-    "Observability", "Database", "MySQL", "Monitoring", "Microservices", "Distributed", "Message Queues", "Gen AI", "Agentic"
+    "Observability", "Databases", "Monitoring", "Microservices", "Distributed", "Message Queues", "Gen AI", "Agentic"
   ],
-  "articleBody": "Introduction Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns here.\nDistributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.\nMost organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.\nDeveloping distributed applications is challenging because numerous components need to work cohesively. Developers must consider resiliency, observability, security, and scalability across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.\nTo summarize,\nDevelopment - They are harder to develop and operate. Programming models are often optimized for in-process communication in terms of development and testing. However, Services, in a distributed application, involve remote/out of process calls (e.g. https/gRPC). This makes it difficult to program, debug/test and operate them. Eventual Consistency - Microservices introduce eventual consistency because of their laudable insistence on decentralized data management. One is most likely to face issue of “Dual writes” (The dual-write problem occurs when two external systems must be updated in an atomic fashion) in distributed application. Operability - Managing multiple independent services have its pros but induce complexity when it comes to frequent deployments and monitoring. As aptly put by Martin fowler here, “Low bar for skill is higher in a microservice environment”. Deployment - Cloud brings in another dimension where companies want to leverage them for their benefits but want to be agnostic or avoid lock-in to a particular vendor. Fallacies of Distributed Computing articulates all these relevant aspects.\nThis post details how Dapr helps with Distributed Applications Development as well as Agentic workloads.\nDapr Dapr, short for Distributed Application Runtime, is a CNCF graduated open source project.\nSince it’s inception in 2019, it has evolved and is battle tested. True to the moto of CNCF, It provides vendor-neutral approach that decouples the infrastructure from application code so developers can focus on business logic instead of infra. plumbing.\nIt uses a sidecar pattern that runs as a separate process alongside the application. It provides multiple building blocks, from service invocation and messaging, jobs, workflow to distributed lock, all of which are common patterns in distributed communication. It makes it seamless to design, develop and run distributed applications from local environment to remote (be it private data center or cloud).\nKey benefits of Dapr are,\nNo more boilerplate: Store state through the Dapr API and let the platform team pick Redis, Cosmos DB, DynamoDB, etc. Doing pub/sub messaging? Swap RabbitMQ for Kafka via config, not code. Polyglot by design: Java, .NET, Python, Go, JavaScript; mix and match safely across teams. Built-in Resilience and security : mTLS, retries, circuit breakers, and consistent observability patterns are part of the runtime “golden path.” Designed for Operations - Supports integration with observability tools to make it easier to run the system. sidecars, runtime, components, and configuration can all be managed and deployed easily and securely to match your organization’s needs. Below is summary of some of the interesting building blocks. For complete list, refer here.\nService invocation Helps abstract service discovery and perform secure calls between services.\nTypical use cases, - Abstract details (location etc.) needed for invoking services thus making them deployable on various target platforms\nWorkflows Code-first approach for authoring workflow steps. Diagrid offers workflow code generator which prompts for workflow modelled as diagram (UML, BPMN etc.) and generates boilerplate code that uses Dapr SDK. Check it out here.\nTypical use cases,\nEvent-driven data pipelines and ETL jobs Payment and transaction processing with compensations Customer onboarding and document verification flows Automated deployment or model training pipelines IoT device provisioning and firmware rollout sequences Pub/sub Provides a platform-agnostic API to send and receive messages for a service. Avoids hard dependency on specific Messaging system.\nState Management Provides HTTP API to persist and retrieve key-value pairs from State while having pluggable state store. supports automatic client encryption of application state with support for key rotations. As part of state management, it enables developers to use the outbox pattern for achieving a single transaction across a transactional state store and any message broker. Refer here for more details.\nJobs jobs API is an orchestrator for scheduling these future jobs, either at a specific time or for a specific interval.\nTypical use cases,\nBatch processing - Long running processing of large number of transactions. reports generation etc. Demo For the purpose of the Demo, Lets have hypothetical use case for a Tenant Management System with below services,\nTenant Service - Responsible for managing lifecycle of Tenant starting with onboarding. It receives request for new tenant, validates it and invokes notification to intimate tenant itself via e-mail.\nNotification Service - This services exposes interface to receive requests from notification and then pushes it to pub/sub queue for processing by specific services meant for sending e-mail, SMS and so on.\nBelow is depiction of the flow,\nSetup Dapr by following instructions here\nTenant service is developed using Spring Boot while Notification Service uses .NET Core.\nBelow snapshot shows Controller function that calls notification service, Below snapshot shows Notification service using Dapr .NET SDK to push message, Demo uses below building blocks are used for the demo,\nService invocation Pub/sub Dapr Multi-app run is very handy for local development lifecycle and same is used for this. Below is dapr configuration used,\nResiliency configuration looks like below,\nAll is good but what is trade-off? Lets do some load testing to assess impact of sidecar pattern of dapr vis-a-vis direct invocation. We will use k6 to perform load testing. Note that, below test was conducted on my development laptop with no specific optimizations and modalities.\nLoad testing criteria is setup as below,\nBelow are the results,\nWith dapr\nHTTP http_req_duration…………..: avg=6.51ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms { expected_response:true }…: avg=6.52ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms Without dapr\nHTTP http_req_duration…………..: avg=9.39ms min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.3ms { expected_response:true }…: avg=9.4ms min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.31ms It seems that dapr results in better throughput than direct. This will have to dealt in detail on why this happens as generally direct communication will not have any overhead associated with sidecar. Let me know your thoughts in comments.\nGen AI Dapr is keeping pace with tech. landscape changes and When it comes to Generative AI use cases and its implementation, it has a building block named Dapr Agents for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing with Large Language Models (LLM) and operate them at scale.\nIt excels at below aspects compared to other Agentic frameworks, - Guardrails - Obfuscation of Sensitive data while interacting with LLMs - Authentication over MCP (Built-in identity using SPIFEE) - mTLS for securing communication between Agents. - Durable workflows - Event driven ingestion\nSummary Dapr helps with\nStandardized vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions. Organizations gain full flexibility and control over their Distributed/microservices based applications. Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated). A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application. Happy Coding !!\n",
-  "wordCount" : "1286",
+  "articleBody": "Introduction If you build software today, you are likely building a distributed system. Whether it’s two services talking or a monolith calling a lambda, you have crossed the process boundary.\nDistributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.\nMost organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.\nDeveloping distributed applications is challenging because numerous components need to work cohesively. Developers must consider resiliency, observability, security, and scalability across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.\nTo summarize,\nDevelopment - They are harder to develop and operate. Programming models are often optimized for in-process communication in terms of development and testing. However, Services, in a distributed application, involve remote/out of process calls (e.g. https/gRPC). This makes it difficult to program, debug/test and operate them. Eventual Consistency - Microservices introduce eventual consistency because of their laudable insistence on decentralized data management. One is most likely to face issue of “Dual writes” (The dual-write problem occurs when two external systems must be updated in an atomic fashion) in distributed application. Operability - Managing multiple independent services have its pros but induce complexity when it comes to frequent deployments and monitoring. As aptly put by Martin fowler here, “Low bar for skill is higher in a microservice environment”. Deployment - Cloud brings in another dimension where companies want to leverage them for their benefits but want to be agnostic or avoid lock-in to a particular vendor. Fallacies of Distributed Computing articulates all these relevant aspects.\nThis post details how Dapr helps with Distributed Applications Development as well as Agentic workloads.\nDapr Dapr, short for Distributed Application Runtime, is a CNCF graduated open source project.\nSince it’s inception in 2019, it has evolved and is battle tested. True to the moto of CNCF, It provides vendor-neutral approach that decouples the infrastructure from application code so developers can focus on business logic instead of infra. plumbing.\nIt uses a sidecar pattern that runs as a separate process alongside the application. It provides multiple building blocks, from service invocation and messaging, jobs, workflow to distributed lock, all of which are common patterns in distributed communication. It makes it seamless to design, develop and run distributed applications from local environment to remote (be it private data center or cloud).\nKey benefits of Dapr are,\nNo more boilerplate: Store state through the Dapr API and let the platform team pick Redis, Cosmos DB, DynamoDB, etc. Doing pub/sub messaging? Swap RabbitMQ for Kafka via config, not code. Polyglot by design: Java, .NET, Python, Go, JavaScript; mix and match safely across teams. Built-in Resilience and security : mTLS, retries, circuit breakers, and consistent observability patterns are part of the runtime “golden path.” Designed for Operations - Supports integration with observability tools to make it easier to run the system. sidecars, runtime, components, and configuration can all be managed and deployed easily and securely to match your organization’s needs. Below is summary of some of the interesting building blocks. For complete list, refer here.\nNo more boilerplate Service invocation Helps abstract service discovery and perform secure calls between services.\nTypical use cases, - Abstract details (location etc.) needed for invoking services thus making them deployable on various target platforms\nWorkflows Code-first approach for authoring workflow steps. Diagrid offers workflow code generator which prompts for workflow modelled as diagram (UML, BPMN etc.) and generates boilerplate code that uses Dapr SDK. Check it out here.\nTypical use cases,\nEvent-driven data pipelines and ETL jobs Payment and transaction processing with compensations Customer onboarding and document verification flows Automated deployment or model training pipelines IoT device provisioning and firmware rollout sequences Pub/sub Provides a platform-agnostic API to send and receive messages for a service. Avoids hard dependency on specific Messaging system.\nState Management Provides HTTP API to persist and retrieve key-value pairs from State while having pluggable state store. supports automatic client encryption of application state with support for key rotations. As part of state management, it enables developers to use the outbox pattern for achieving a single transaction across a transactional state store and any message broker. Refer here for more details.\nJobs jobs API is an orchestrator for scheduling these future jobs, either at a specific time or for a specific interval.\nTypical use cases,\nBatch processing - Long running processing of large number of transactions. reports generation etc. Demo For the purpose of the Demo, Lets have hypothetical use case for a Tenant Management System with below services,\nTenant Service - Responsible for managing lifecycle of Tenant starting with onboarding. It receives request for new tenant, validates it and invokes notification to intimate tenant itself via e-mail.\nNotification Service - This services exposes interface to receive requests from notification and then pushes it to pub/sub queue for processing by specific services meant for sending e-mail, SMS and so on.\nBelow is depiction of the flow,\nSetup Dapr by following instructions here\nTenant service is developed using Spring Boot while Notification Service uses .NET Core.\nBelow snapshot shows Controller function that calls notification service,\n@PostMapping public ResponseEntity\u003cTenant\u003e createTenant(@Valid @RequestBody Tenant tenant) { log.info(\"POST /tenant - Create tenant request received\"); Tenant createdTenant = tenantService.createTenant(tenant); log.info(\"sending notification \"); //https://devblogs.microsoft.com/java/embracing-virtual-threads-migration-tips-for-java-developers/ virtualThreadExecutor.submit(() -\u003e { SendNotification(tenant); }); return ResponseEntity.status(HttpStatus.CREATED).body(createdTenant); } private void SendNotification(Tenant tenant) { String dapr_url = \"http://localhost:\" + DAPR_HTTP_PORT + \"/notification\"; // Example assuming tenant.getName() and tenant.getEmailId() return strings String tenantName = tenant.getName(); String tenantEmail = tenant.getEmailId(); // Proper JSON string construction String tBody = String.format(\"{\\\"Name\\\":\\\"%s\\\",\\\"Emailid\\\":\\\"%s\\\"}\", tenantName.replace(\"\\\"\", \"\\\\\\\"\"), // Escape any double quotes within the values tenantEmail.replace(\"\\\"\", \"\\\\\\\"\")); // Escape any double quotes within the values // System.out.println(\"notification service url \"+ dapr_url + \",\" + tBody); HttpRequest request = HttpRequest.newBuilder() .POST(HttpRequest.BodyPublishers.ofString(tBody)) .uri(URI.create(dapr_url)) .header(\"Content-Type\", \"application/json\") .header(\"dapr-app-id\", \"notification-service\") .build(); try { // System.out.println(\"Request URL: \" + dapr_url); // System.out.println(\"Request Body: \" + tBody); HttpResponse\u003cString\u003e response = httpClient.send(request, HttpResponse.BodyHandlers.ofString()); log.info(\"tenant notified: \"+ tenant.getId()); } catch (InterruptedException e) { log.error(\"Notification service call interrupted\"); // Or something more intellegent } catch (IOException e) { e.printStackTrace(); log.error(\"Notification service call failed - \" + e.getStackTrace().toString()); // Or something more intellegent } } Below snapshot shows Notification service using Dapr .NET SDK to push message,\nusing Dapr.Client; const string PUBSUB_NAME = \"my-pub-sub\"; const string TOPIC_NAME = \"tenants\"; var builder = WebApplication.CreateBuilder(args); builder.Services.AddDaprClient(); var random = new Random(); var app = builder.Build(); var client = app.Services.GetRequiredService\u003cDaprClient\u003e(); // Configure the HTTP request pipeline. if (app.Environment.IsDevelopment()) { app.MapOpenApi(); } app.UseHttpsRedirection(); app.MapPost(\"/notification\",async (CancellationToken token, Tenant tenant) =\u003e { await client.PublishEventAsync(PUBSUB_NAME, TOPIC_NAME, tenant.Id \u003c= 0 ? random.Next(1,1000) : tenant.Id, token); // await Task.Delay(10); app.Logger.LogInformation(\"Sending notification for \" + tenant); return tenant.ToString(); }); Demo uses below building blocks are used for the demo,\nService invocation Pub/sub Dapr Multi-app run is very handy for local development lifecycle and same is used for this. Below is dapr configuration used,\nResiliency configuration looks like below,\nAll is good but what is trade-off? All this abstraction isn’t free. The Sidecar pattern introduces an extra “hop” for network traffic\n(Service A $\\rightarrow$ Sidecar A $\\rightarrow$ Sidecar B $\\rightarrow$ Service B).\nI ran a quick load test using k6 to quantify this overhead on a local development machine.\nLoad testing criteria is setup as below,\nThe Results:\nDirect HTTP: ~4ms avg latency Via Dapr Sidecar: ~6ms avg latency The Verdict: Dapr, induced sidecar, added approximately 2ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 2ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.\nDapr and AI Wave Dapr is evolving to meet the needs of Agentic workflows. It recently introduced Dapr Agents for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing with Large Language Models (LLM) and operate them at scale.\nInstead of managing complex python scripts for agent coordination, Dapr Agents allows you to:\nControl Loop Management: It handles the “Reason $\\rightarrow$ Act” loop reliably using the underlying Dapr Actor model. Built-in Guardrails: Leverage Dapr bindings to obfuscate PII (Personally Identifiable Information) before it ever hits the LLM provider. Identity: Secure your agents. Since Dapr handles mTLS, your agents can authenticate via SPIFFE, ensuring that “Agent A” is authorized to talk to “Agent B”. Summary Dapr helps with\nStandardized, vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions. Organizations gain full flexibility and control over their Distributed/microservices based applications. Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated). A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application. While this article was meant to provide key aspects, Dapr provides much more than this. Do not forget to go through the documentation.\nHappy Coding !!\n",
+  "wordCount" : "1589",
   "inLanguage": "en",
   "image": "http://localhost:1313/images/papermod-cover.png","datePublished": "2025-12-02T01:00:00+05:30",
   "dateModified": "2025-12-02T01:00:00+05:30",
@@ -233,7 +230,7 @@ Most organizations build distributed applications for two main reasons. First, t
         </svg>
       </span>
     </h1>
-    <div class="post-meta"><span title='2025-12-02 01:00:00 +0530 IST'>December 2, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Sachin Sunkle
+    <div class="post-meta"><span title='2025-12-02 01:00:00 +0530 IST'>December 2, 2025</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Sachin Sunkle
 
 </div>
   </header> <div class="toc">
@@ -265,7 +262,7 @@ Most organizations build distributed applications for two main reasons. First, t
                     <a href="#all-is-good-but-what-is-trade-off" aria-label="All is good but what is trade-off?">All is good but what is trade-off?</a><ul>
                         
                 <li>
-                    <a href="#gen-ai" aria-label="Gen AI">Gen AI</a></li></ul>
+                    <a href="#dapr-and-ai-wave" aria-label="Dapr and AI Wave">Dapr and AI Wave</a></li></ul>
                 </li>
                 <li>
                     <a href="#summary" aria-label="Summary">Summary</a>
@@ -276,10 +273,7 @@ Most organizations build distributed applications for two main reasons. First, t
 </div>
 
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns <a href=https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-eBook-DesigningDistributedSystems.pdf
-    
-    target=_blank rel="noopener noreferrer"
->here</a>.</p>
+<p>If you build software today, you are likely building a distributed system. Whether it&rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.</p>
 <p>Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.</p>
 <p>Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.</p>
 <p>Developing distributed applications is challenging because numerous components need to work cohesively. Developers must consider resiliency, observability, security, and scalability across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.</p>
@@ -327,7 +321,9 @@ Most organizations build distributed applications for two main reasons. First, t
     target=_blank rel="noopener noreferrer"
 >here</a>.</p>
 <pre><code><figure>
-        <img loading="lazy" src="/images/dapr/modular_landscape.png"/> 
+        <img loading="lazy" src="/images/dapr/modular_landscape.png"/> <figcaption>
+                No more boilerplate
+            </figcaption>
     </figure>
 
 </code></pre>
@@ -388,27 +384,92 @@ Most organizations build distributed applications for two main reasons. First, t
 <li>
 <p>Tenant service is developed using Spring Boot while Notification Service uses .NET Core.</p>
 <ul>
-<li>Below snapshot shows Controller function that calls notification service,
-<ul>
 <li>
-<pre><code><figure>
-    <img loading="lazy" src="/images/dapr/tenant-service.png"
-         alt="Tenant service Controller"/> 
-</figure>
-
-</code></pre>
-</li>
-</ul>
-</li>
-<li>Below snapshot shows Notification service using Dapr .NET SDK to push message,
-<ul>
-<li><figure>
-    <img loading="lazy" src="/images/dapr/notification-service.png"
-         alt="Notification service Controller"/> 
-</figure>
-</li>
-</ul>
-</li>
+<p>Below snapshot shows Controller function that calls notification service,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nd">@PostMapping</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Tenant</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">createTenant</span><span class="p">(</span><span class="nd">@Valid</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">Tenant</span><span class="w"> </span><span class="n">tenant</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;POST /tenant - Create tenant request received&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Tenant</span><span class="w"> </span><span class="n">createdTenant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tenantService</span><span class="p">.</span><span class="na">createTenant</span><span class="p">(</span><span class="n">tenant</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;sending notification &#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//https://devblogs.microsoft.com/java/embracing-virtual-threads-migration-tips-for-java-developers/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">virtualThreadExecutor</span><span class="p">.</span><span class="na">submit</span><span class="p">(()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">SendNotification</span><span class="p">(</span><span class="n">tenant</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">CREATED</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">createdTenant</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">SendNotification</span><span class="p">(</span><span class="n">Tenant</span><span class="w"> </span><span class="n">tenant</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">dapr_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;http://localhost:&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DAPR_HTTP_PORT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;/notification&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Example assuming tenant.getName() and tenant.getEmailId() return strings</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">tenantName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tenant</span><span class="p">.</span><span class="na">getName</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">tenantEmail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tenant</span><span class="p">.</span><span class="na">getEmailId</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Proper JSON string construction</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">tBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;{\&#34;Name\&#34;:\&#34;%s\&#34;,\&#34;Emailid\&#34;:\&#34;%s\&#34;}&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">tenantName</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&#34;\&#34;&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;\\\&#34;&#34;</span><span class="p">),</span><span class="w"> </span><span class="c1">// Escape any double quotes within the values</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">tenantEmail</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&#34;\&#34;&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;\\\&#34;&#34;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Escape any double quotes within the values</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// System.out.println(&#34;notification service url &#34;+ dapr_url  + &#34;,&#34; + tBody);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">HttpRequest</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="p">.</span><span class="na">POST</span><span class="p">(</span><span class="n">HttpRequest</span><span class="p">.</span><span class="na">BodyPublishers</span><span class="p">.</span><span class="na">ofString</span><span class="p">(</span><span class="n">tBody</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">dapr_url</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&#34;Content-Type&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;application/json&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			    </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&#34;dapr-app-id&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;notification-service&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// System.out.println(&#34;Request URL: &#34; + dapr_url);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// System.out.println(&#34;Request Body: &#34; + tBody);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">httpClient</span><span class="p">.</span><span class="na">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpResponse</span><span class="p">.</span><span class="na">BodyHandlers</span><span class="p">.</span><span class="na">ofString</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;tenant notified: &#34;</span><span class="o">+</span><span class="w"> </span><span class="n">tenant</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&#34;Notification service call interrupted&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Or something more intellegent</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&#34;Notification service call failed - &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getStackTrace</span><span class="p">().</span><span class="na">toString</span><span class="p">());</span><span class="w"> </span><span class="c1">// Or something more intellegent</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div></li>
+<li>
+<p>Below snapshot shows Notification service using Dapr .NET SDK to push message,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Dapr.Client</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="kt">string</span> <span class="n">PUBSUB_NAME</span> <span class="p">=</span> <span class="s">&#34;my-pub-sub&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="kt">string</span> <span class="n">TOPIC_NAME</span> <span class="p">=</span> <span class="s">&#34;tenants&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDaprClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">random</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">app</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="n">app</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">GetRequiredService</span><span class="p">&lt;</span><span class="n">DaprClient</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Configure the HTTP request pipeline.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">Environment</span><span class="p">.</span><span class="n">IsDevelopment</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapOpenApi</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">UseHttpsRedirection</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">MapPost</span><span class="p">(</span><span class="s">&#34;/notification&#34;</span><span class="p">,</span><span class="kd">async</span> <span class="p">(</span><span class="n">CancellationToken</span> <span class="n">token</span><span class="p">,</span>  <span class="n">Tenant</span> <span class="n">tenant</span><span class="p">)</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">await</span> <span class="n">client</span><span class="p">.</span><span class="n">PublishEventAsync</span><span class="p">(</span><span class="n">PUBSUB_NAME</span><span class="p">,</span> <span class="n">TOPIC_NAME</span><span class="p">,</span> <span class="n">tenant</span><span class="p">.</span><span class="n">Id</span> <span class="p">&lt;=</span> <span class="m">0</span> <span class="p">?</span> <span class="n">random</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1000</span><span class="p">)</span> <span class="p">:</span> <span class="n">tenant</span><span class="p">.</span><span class="n">Id</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// await Task.Delay(10);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">app</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">LogInformation</span><span class="p">(</span><span class="s">&#34;Sending notification for &#34;</span> <span class="p">+</span> <span class="n">tenant</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="n">tenant</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -444,10 +505,12 @@ Most organizations build distributed applications for two main reasons. First, t
 </li>
 </ul>
 <h2 id="all-is-good-but-what-is-trade-off">All is good but what is trade-off?<a hidden class="anchor" aria-hidden="true" href="#all-is-good-but-what-is-trade-off">#</a></h2>
-<p>Lets do some load testing to assess impact of sidecar pattern of dapr vis-a-vis direct invocation. We will use <a href=https://k6.io/
+<p>All this abstraction isn&rsquo;t free. The Sidecar pattern introduces an extra &ldquo;hop&rdquo; for network traffic</p>
+<p>(Service A $\rightarrow$ Sidecar A $\rightarrow$ Sidecar B $\rightarrow$ Service B).</p>
+<p>I ran a quick load test using <a href=https://k6.io
     
     target=_blank rel="noopener noreferrer"
->k6</a> to perform  load testing. Note that, below test was conducted on my development laptop with no specific optimizations and modalities.</p>
+>k6</a> to quantify this overhead on a local development machine.</p>
 <ul>
 <li>
 <p>Load testing criteria is setup as below,</p>
@@ -457,48 +520,33 @@ Most organizations build distributed applications for two main reasons. First, t
     </figure>
 
 </li>
-<li>
-<p>Below are the results,</p>
+</ul>
+<p>The Results:</p>
 <ul>
-<li>
-<p>With dapr</p>
-<ul>
-<li>HTTP
-http_req_duration&hellip;&hellip;&hellip;&hellip;..: avg=6.51ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms
-{ expected_response:true }&hellip;: avg=6.52ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms</li>
+<li>Direct HTTP: ~4ms avg latency</li>
+<li>Via Dapr Sidecar: ~6ms avg latency</li>
 </ul>
-</li>
-<li>
-<p>Without dapr</p>
-<ul>
-<li>HTTP
-http_req_duration&hellip;&hellip;&hellip;&hellip;..: avg=9.39ms min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.3ms
-{ expected_response:true }&hellip;: avg=9.4ms  min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.31ms</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>It seems that dapr results in better throughput than direct. This will have to dealt in detail on why this happens as generally direct communication will not have any overhead associated with sidecar. Let me know your thoughts in comments.</p>
-<h3 id="gen-ai">Gen AI<a hidden class="anchor" aria-hidden="true" href="#gen-ai">#</a></h3>
-<p>Dapr is keeping pace with tech. landscape changes and When it comes to Generative AI use cases and its implementation, it has a  building block named <a href=https://github.com/dapr/dapr-agents
+<p>The Verdict: Dapr, induced sidecar, added approximately 2ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 2ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.</p>
+<h3 id="dapr-and-ai-wave">Dapr and AI Wave<a hidden class="anchor" aria-hidden="true" href="#dapr-and-ai-wave">#</a></h3>
+<p>Dapr is evolving to meet the needs of Agentic workflows. It recently introduced <a href=https://github.com/dapr/dapr-agents
     
     target=_blank rel="noopener noreferrer"
 >Dapr Agents</a> for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing  with Large Language Models (LLM) and operate them at scale.</p>
-<p>It excels at below aspects compared to other Agentic frameworks,
-- Guardrails - Obfuscation of Sensitive data while interacting with LLMs
-- Authentication over MCP (Built-in identity using SPIFEE)
-- mTLS for securing communication between Agents.
-- Durable workflows
-- Event driven ingestion</p>
+<p>Instead of managing complex python scripts for agent coordination, Dapr Agents allows you to:</p>
+<ul>
+<li>Control Loop Management: It handles the &ldquo;Reason $\rightarrow$ Act&rdquo; loop reliably using the underlying Dapr Actor model.</li>
+<li>Built-in Guardrails: Leverage Dapr bindings to obfuscate PII (Personally Identifiable Information) before it ever hits the LLM provider.</li>
+<li>Identity: Secure your agents. Since Dapr handles mTLS, your agents can authenticate via SPIFFE, ensuring that &ldquo;Agent A&rdquo; is authorized to talk to &ldquo;Agent B&rdquo;.</li>
+</ul>
 <h2 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h2>
 <p>Dapr helps with</p>
 <ul>
-<li>Standardized vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions.</li>
+<li>Standardized, vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions.</li>
 <li>Organizations gain full flexibility and control over their Distributed/microservices based applications.</li>
 <li>Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).</li>
 <li>A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.</li>
 </ul>
+<p>While this article was meant to provide key aspects, Dapr provides much more than this. Do not forget to go through the documentation.</p>
 <p>Happy Coding !!</p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
@@ -510,8 +558,7 @@ http_req_duration&hellip;&hellip;&hellip;&hellip;..: avg=9.39ms min=308.09µs me
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="http://localhost:1313/tags/observability/">Observability</a></li>
-      <li><a href="http://localhost:1313/tags/database/">Database</a></li>
-      <li><a href="http://localhost:1313/tags/mysql/">MySQL</a></li>
+      <li><a href="http://localhost:1313/tags/databases/">Databases</a></li>
       <li><a href="http://localhost:1313/tags/monitoring/">Monitoring</a></li>
       <li><a href="http://localhost:1313/tags/microservices/">MicroServices</a></li>
       <li><a href="http://localhost:1313/tags/distributed/">Distributed</a></li>
@@ -531,7 +578,7 @@ http_req_duration&hellip;&hellip;&hellip;&hellip;..: avg=9.39ms min=308.09µs me
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share  Why use Dapr (Distributed Application Runtime)? on x"
-            href="https://x.com/intent/tweet/?text=%20Why%20use%20Dapr%20%28Distributed%20Application%20Runtime%29%3f&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdapr%2f&amp;hashtags=Observability%2cDatabase%2cMySQL%2cMonitoring%2cMicroservices%2cDistributed%2cMessageQueues%2cGenAI%2cAgentic">
+            href="https://x.com/intent/tweet/?text=%20Why%20use%20Dapr%20%28Distributed%20Application%20Runtime%29%3f&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdapr%2f&amp;hashtags=Observability%2cDatabases%2cMonitoring%2cMicroservices%2cDistributed%2cMessageQueues%2cGenAI%2cAgentic">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

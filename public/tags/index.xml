@@ -12,20 +12,69 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
-      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
+      <title>Agentic</title>
+      <link>http://localhost:1313/tags/agentic/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/agentic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databases</title>
+      <link>http://localhost:1313/tags/databases/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/databases/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed</title>
+      <link>http://localhost:1313/tags/distributed/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/distributed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen AI</title>
+      <link>http://localhost:1313/tags/gen-ai/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/gen-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message Queues</title>
+      <link>http://localhost:1313/tags/message-queues/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/message-queues/</guid>
       <description></description>
     </item>
     <item>
       <title>MicroServices</title>
       <link>http://localhost:1313/tags/microservices/</link>
-      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>http://localhost:1313/tags/monitoring/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observability</title>
+      <link>http://localhost:1313/tags/observability/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/observability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/tags/architecture/</link>
+      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
@@ -96,13 +145,6 @@
       <link>http://localhost:1313/tags/syft/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/syft/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Databases</title>
-      <link>http://localhost:1313/tags/databases/</link>
-      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/databases/</guid>
       <description></description>
     </item>
     <item>
@@ -456,24 +498,10 @@
       <description></description>
     </item>
     <item>
-      <title>Monitoring</title>
-      <link>http://localhost:1313/tags/monitoring/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/monitoring/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>MySQL</title>
       <link>http://localhost:1313/tags/mysql/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Observability</title>
-      <link>http://localhost:1313/tags/observability/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/observability/</guid>
       <description></description>
     </item>
     <item>

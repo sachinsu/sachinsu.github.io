@@ -3,18 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-12-25T01:00:00+05:30</lastmod>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dapr/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/agentic/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/databases/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/distributed/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gen-ai/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/message-queues/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/microservices/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/monitoring/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/observability/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-12-25T01:00:00+05:30</lastmod>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/comparearchitecturestyles/</loc>
-    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/microservices/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/modularity/</loc>
@@ -24,9 +51,6 @@
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/services/</loc>
-    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/bom/</loc>
@@ -52,9 +76,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/sbom/</loc>
     <lastmod>2025-09-09T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/databases/</loc>
-    <lastmod>2025-06-01T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/genaidb/</loc>
     <lastmod>2025-06-01T01:00:00+05:30</lastmod>
@@ -251,13 +272,7 @@
     <loc>http://localhost:1313/tags/honeycomb/</loc>
     <lastmod>2021-09-05T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/monitoring/</loc>
-    <lastmod>2021-09-05T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/mysql/</loc>
-    <lastmod>2021-09-05T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/observability/</loc>
     <lastmod>2021-09-05T01:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/analytics/</loc>

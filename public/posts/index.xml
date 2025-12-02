@@ -12,8 +12,17 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Why use Dapr (Distributed Application Runtime)?</title>
+      <link>http://localhost:1313/posts/dapr/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/dapr/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;If you build software today, you are likely building a distributed system. Whether it&amp;rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.&lt;/p&gt;
+&lt;p&gt;Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Clean Architecture, Modular Monolith and Vertical Slice Architecture </title>
       <link>http://localhost:1313/posts/comparearchitecturestyles/</link>

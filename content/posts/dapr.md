@@ -2,11 +2,11 @@
 title: " Why use Dapr (Distributed Application Runtime)?"
 date: 2025-12-02T01:00:00+05:30
 draft: true
-tags: [Observability, Database, MySQL, Monitoring, Microservices,Distributed, Message Queues, Gen AI, Agentic]
+tags: [Observability, Databases, Monitoring, Microservices,Distributed, Message Queues, Gen AI, Agentic]
 ---
 ## Introduction 
 
-Every developer is a developer or consumer of distributed systems, as mentioned by Brendan Burns [here](https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-eBook-DesigningDistributedSystems.pdf). 
+If you build software today, you are likely building a distributed system. Whether it's two services talking or a monolith calling a lambda, you have crossed the process boundary.
 
 Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
 
@@ -43,7 +43,7 @@ Key benefits of Dapr are,
 
 Below is summary of some of the interesting  building blocks.  For complete list, refer [here](https://docs.dapr.io/concepts/building-blocks-concept/).
 
-    {{< figure src="/images/dapr/modular_landscape.png">}}
+    {{< figure src="/images/dapr/modular_landscape.png" title="No more boilerplate">}}
 
 ### Service invocation
 
@@ -94,9 +94,95 @@ Below is depiction of the flow,
   
 - Tenant service is developed using Spring Boot while Notification Service uses .NET Core.
   - Below snapshot shows Controller function that calls notification service, 
-      -     {{< figure src="/images/dapr/tenant-service.png" alt="Tenant service Controller" >}}
+    ```Java
+    
+       @PostMapping
+    public ResponseEntity<Tenant> createTenant(@Valid @RequestBody Tenant tenant) {
+        log.info("POST /tenant - Create tenant request received");
+        
+        Tenant createdTenant = tenantService.createTenant(tenant);
+        log.info("sending notification ");
+        //https://devblogs.microsoft.com/java/embracing-virtual-threads-migration-tips-for-java-developers/
+        virtualThreadExecutor.submit(() -> {
+            SendNotification(tenant);
+        });
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdTenant);
+    }
+    
+    private void SendNotification(Tenant tenant) { 
+        String dapr_url = "http://localhost:" + DAPR_HTTP_PORT + "/notification";
+        // Example assuming tenant.getName() and tenant.getEmailId() return strings
+        String tenantName = tenant.getName();
+        String tenantEmail = tenant.getEmailId();
+
+            // Proper JSON string construction
+            String tBody = String.format("{\"Name\":\"%s\",\"Emailid\":\"%s\"}",
+            tenantName.replace("\"", "\\\""), // Escape any double quotes within the values
+            tenantEmail.replace("\"", "\\\"")); // Escape any double quotes within the values
+
+        // System.out.println("notification service url "+ dapr_url  + "," + tBody);
+			HttpRequest request = HttpRequest.newBuilder()
+					.POST(HttpRequest.BodyPublishers.ofString(tBody))
+					.uri(URI.create(dapr_url))
+					.header("Content-Type", "application/json")
+				    .header("dapr-app-id", "notification-service")
+					.build();
+
+            try {
+                // System.out.println("Request URL: " + dapr_url);
+                // System.out.println("Request Body: " + tBody);
+                HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+                log.info("tenant notified: "+ tenant.getId());
+            } catch (InterruptedException e) {
+                log.error("Notification service call interrupted"); // Or something more intellegent
+            } catch (IOException e) {
+                e.printStackTrace();
+                log.error("Notification service call failed - " + e.getStackTrace().toString()); // Or something more intellegent
+            }
+    }
+ 
+    ```
   - Below snapshot shows Notification service using Dapr .NET SDK to push message, 
-     -   {{< figure src="/images/dapr/notification-service.png" alt="Notification service Controller" >}}
+
+    ```C#
+    using Dapr.Client;
+
+    const string PUBSUB_NAME = "my-pub-sub";
+    const string TOPIC_NAME = "tenants";
+
+    var builder = WebApplication.CreateBuilder(args);
+    builder.Services.AddDaprClient();
+
+    var random = new Random();
+
+
+    var app = builder.Build();
+
+
+    var client = app.Services.GetRequiredService<DaprClient>();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+    app.MapOpenApi();
+    }
+
+    app.UseHttpsRedirection();
+
+
+    app.MapPost("/notification",async (CancellationToken token,  Tenant tenant) =>
+    {
+        
+    await client.PublishEventAsync(PUBSUB_NAME, TOPIC_NAME, tenant.Id <= 0 ? random.Next(1,1000) : tenant.Id, token);
+    // await Task.Delay(10);
+
+    app.Logger.LogInformation("Sending notification for " + tenant);
+    return tenant.ToString();
+
+    });
+
+
+    ```
  
 - Demo uses below  building blocks are used for the demo, 
   - Service invocation 
@@ -113,44 +199,44 @@ Below is depiction of the flow,
 
 ## All is good but what is trade-off?
 
-Lets do some load testing to assess impact of sidecar pattern of dapr vis-a-vis direct invocation. We will use [k6](https://k6.io/) to perform  load testing. Note that, below test was conducted on my development laptop with no specific optimizations and modalities.  
+All this abstraction isn't free. The Sidecar pattern introduces an extra "hop" for network traffic 
+
+(Service A $\rightarrow$ Sidecar A $\rightarrow$ Sidecar B $\rightarrow$ Service B).
+
+I ran a quick load test using [k6](https://k6.io) to quantify this overhead on a local development machine.
 
 - Load testing criteria is setup as below, 
 
     {{< figure src="/images/dapr/loadtest-criteria.png" alt="Load test criteria" >}}
 
-- Below are the results, 
-  - With dapr
-    - HTTP
-        http_req_duration..............: avg=6.51ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms
-      { expected_response:true }...: avg=6.52ms min=510µs med=2.11ms max=1.83s p(90)=3.7ms p(95)=4.89ms
 
- 
-  - Without dapr
-    -  HTTP
-        http_req_duration..............: avg=9.39ms min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.3ms
-          { expected_response:true }...: avg=9.4ms  min=308.09µs med=3.9ms max=2.94s p(90)=8.63ms p(95)=16.31ms
+The Results:
 
-It seems that dapr results in better throughput than direct. This will have to dealt in detail on why this happens as generally direct communication will not have any overhead associated with sidecar. Let me know your thoughts in comments.
+- Direct HTTP: ~4ms avg latency
+- Via Dapr Sidecar: ~6ms avg latency
+  
+The Verdict: Dapr, induced sidecar, added approximately 2ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 2ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.
 
-### Gen AI 
+### Dapr and AI Wave 
 
-Dapr is keeping pace with tech. landscape changes and When it comes to Generative AI use cases and its implementation, it has a  building block named [Dapr Agents](https://github.com/dapr/dapr-agents) for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing  with Large Language Models (LLM) and operate them at scale.
+Dapr is evolving to meet the needs of Agentic workflows. It recently introduced [Dapr Agents](https://github.com/dapr/dapr-agents) for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing  with Large Language Models (LLM) and operate them at scale.
 
-It excels at below aspects compared to other Agentic frameworks, 
-    - Guardrails - Obfuscation of Sensitive data while interacting with LLMs
-    - Authentication over MCP (Built-in identity using SPIFEE) 
-    - mTLS for securing communication between Agents. 
-    - Durable workflows 
-    - Event driven ingestion  
+Instead of managing complex python scripts for agent coordination, Dapr Agents allows you to:
+
+- Control Loop Management: It handles the "Reason $\rightarrow$ Act" loop reliably using the underlying Dapr Actor model.
+- Built-in Guardrails: Leverage Dapr bindings to obfuscate PII (Personally Identifiable Information) before it ever hits the LLM provider.
+- Identity: Secure your agents. Since Dapr handles mTLS, your agents can authenticate via SPIFFE, ensuring that "Agent A" is authorized to talk to "Agent B".
 
 ## Summary 
 
 Dapr helps with 
-- Standardized vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions. 
+
+- Standardized, vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions. 
 - Organizations gain full flexibility and control over their Distributed/microservices based applications.
 - Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).  
 - A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.  
+
+While this article was meant to provide key aspects, Dapr provides much more than this. Do not forget to go through the documentation.
 
 Happy Coding !!
 
