@@ -212,10 +212,12 @@ I ran a quick load test using [k6](https://k6.io) to quantify this overhead on a
 
 The Results:
 
-- Direct HTTP: ~9.4ms avg latency
-- Via Dapr: ~13.4ms avg latency
+|Mode|Measure|Latency|
+|---|--|--|
+|Direct HTTP| P95| ~9.4ms 
+|Via Dapr| P95|~13.4ms|
   
-The Verdict: Dapr, induced sidecar, added approximately 4ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 4ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.
+**The Verdict**: Dapr, induced sidecar, added approximately 4ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 4ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.
 
 ### Dapr and AI Wave 
 
