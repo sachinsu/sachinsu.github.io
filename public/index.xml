@@ -21,7 +21,8 @@
       <guid>http://localhost:1313/posts/dapr/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;If you build software today, you are likely building a distributed system. Whether it&amp;rsquo;s two services talking or a monolith calling a lambda, you have crossed the process boundary.&lt;/p&gt;
-&lt;p&gt;Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.&lt;/p&gt;</description>
+&lt;p&gt;Distributed applications are software systems that consist of multiple components or modules running on independently within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.&lt;/p&gt;
+&lt;p&gt;Most organizations build distributed applications for two main reasons.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clean Architecture, Modular Monolith and Vertical Slice Architecture </title>
@@ -3879,6 +3880,10 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;p&gt;Platform where i have spent most time till now.&lt;/p&gt;
 &lt;h2 id=&#34;general-links&#34;&gt;General Links&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://www.diagrid.io/blog/net-aspire-dapr-what-are-they-and-how-they-complement-each-other
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;What is .NET Aspire Compared to Dapr&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://www.youtube.com/watch?time_continue&amp;#61;1&amp;amp;v&amp;#61;bEfBfBQq7EE&amp;amp;feature&amp;#61;emb_logo
     
     target=_blank rel=&#34;noopener noreferrer&#34;

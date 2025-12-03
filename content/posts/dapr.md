@@ -8,9 +8,12 @@ tags: [Observability, Databases, Monitoring, Microservices,Distributed, Message 
 
 If you build software today, you are likely building a distributed system. Whether it's two services talking or a monolith calling a lambda, you have crossed the process boundary.
 
-Distributed applications are software systems that consist of multiple components or modules running on different infrastructure within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
+Distributed applications are software systems that consist of multiple components or modules running on independently within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
 
-Most organizations build distributed applications for two main reasons. First, they have multiple development teams that need to work independently while contributing to a larger system. Second, they require a solution where components built using different programming languages can interact with each other.
+Most organizations build distributed applications for two main reasons. 
+1.  they have multiple development teams that need to work independently while contributing to a larger system.
+2.  They want to scale up or down specific parts of the application depending on business needs
+3.  they require a solution where components built using different programming languages can interact with each other.
 
 Developing distributed applications is challenging because numerous components need to work cohesively. Developers must consider resiliency, observability, security, and scalability across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.
 
@@ -27,7 +30,8 @@ This post details how [Dapr](https://dapr.io) helps with Distributed Application
 
 ## Dapr 
 
-[**Dapr**](https://dapr.io), short for Distributed Application Runtime, is a [CNCF graduated open source project](https://www.cncf.io/projects/dapr/). 
+[**Dapr**](https://dapr.io), short for Distributed Application Runtime, is a [CNCF graduated open source project](https://www.cncf.io/projects/dapr/). In a nutshell, it provides runtime containing building blocks (exposed over APIs) and is used during local development and running in production.
+
 
 Since it's inception in 2019, it has evolved and is battle tested. True to the moto of CNCF,  It provides vendor-neutral approach that decouples the infrastructure from application code so developers can focus on business logic instead of infra. plumbing.  
 
@@ -41,7 +45,7 @@ Key benefits of Dapr are,
 - Designed for [Operations](https://docs.dapr.io/operations/) - Supports integration with observability tools to make it easier to *run* the system.
 - sidecars, runtime, components, and configuration can all be managed and deployed easily and securely to match your organization’s needs.
 
-Below is summary of some of the interesting  building blocks.  For complete list, refer [here](https://docs.dapr.io/concepts/building-blocks-concept/).
+Below are some of the interesting  building blocks.  For complete list, refer [here](https://docs.dapr.io/concepts/building-blocks-concept/).
 
     {{< figure src="/images/dapr/modular_landscape.png" title="No more boilerplate">}}
 
@@ -199,6 +203,11 @@ Below is depiction of the flow,
 
 ## All is good but what is the trade-off?
 
+### Extensibility
+
+All of the building blocks and infrastructure to abstract implementation (Redis for State mgmt, SQS for messaging) are bundled as single binary. Any need to support new implementation may not be trivial to accommodate. Though , it provides [pluggable components](https://docs.dapr.io/developing-applications/develop-components/pluggable-components/pluggable-components-overview/) which run as distince process separate from runtime itself.
+
+### Performance
 All this abstraction isn't free. The Sidecar pattern introduces an extra "hop" for network traffic 
 
 (Service A --> Sidecar A --> Sidecar B --> Service B).
@@ -219,7 +228,22 @@ The Results:
   
 **The Verdict**: Dapr, induced sidecar, added approximately 4ms of overhead per request in this scenario.Is it worth it?If you are building a High Frequency Trading platform where microseconds count, Dapr might not be for you. However, for 99% of business applications, trading 4ms of latency for automatic mTLS, distributed tracing, and retry logic is a bargain. You would likely incur more latency implementing those features poorly in your own code.
 
-### Dapr and AI Wave 
+## Debugging with Dapr
+
+It is possible to debug your application by running dapr sidecar separately,
+
+-    Run dapr sidecar as follows (Note: better to use default ports for http and grpc. This is important if you are using dapr sdk which uses these ports and I am unable to find a way to update these from say VS Code in case sidecar is being run separately as below),
+  
+        ```
+        dapr run --app-id notification-service --app-port 8081 --dapr-http-port 3500 --dapr-grpc-port 50001 --resources-path  .\components
+        ```
+- Start debugging the application in your IDE (e.g. VS Code). Make sure that application is running as Dapr Sidecar keeps polling for it before starting relevant services/components.
+- Dapr Sidecar also starts metrics server where its own log is visible, below is snapshot, 
+
+    {{< figure src="/images/dapr/sidecarlog.png" alt="Log generation" >}}
+
+
+## Dapr and Gen. AI 
 
 Dapr is evolving to meet the needs of Agentic workflows. It recently introduced [Dapr Agents](https://github.com/dapr/dapr-agents) for it. In this, all the building blocks are extended to serve agentic Workload aimed at data crunching, inferencing  with Large Language Models (LLM) and operate them at scale.
 
@@ -238,7 +262,12 @@ Dapr helps with
 - Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).  
 - A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.  
 
-While this article was meant to provide key aspects, Dapr provides much more than this. Do not forget to go through the documentation.
+While this article is meant to provide key aspects, Dapr has much more to offer. Do not forget to go through the documentation [here](https://dapr.io).
+
+### Useful References,
+
+- [Dapr and Microsoft Aspire](https://www.diagrid.io/blog/net-aspire-dapr-what-are-they-and-how-they-complement-each-other)
+- [State of Dapr Survey 2025](https://www.diagrid.io/blog/the-state-of-dapr-2025-report)
 
 Happy Coding !!
 

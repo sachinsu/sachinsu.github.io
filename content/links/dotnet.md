@@ -10,6 +10,7 @@ Platform where i have spent most time till now.
 
 ## General Links
 
+- [What is .NET Aspire Compared to Dapr](https://www.diagrid.io/blog/net-aspire-dapr-what-are-they-and-how-they-complement-each-other)
 - [What is .NET? by Scott Hanselman](https://www.youtube.com/watch?time_continue=1&v=bEfBfBQq7EE&feature=emb_logo)
 - [Async in Depth](https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth)
 - [Using Async/Await in WCF or ASMX with AsyncEx](https://blog.stephencleary.com/2012/08/async-wcf-today-and-tomorrow.html)
