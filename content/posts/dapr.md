@@ -6,6 +6,8 @@ tags: [Observability, Databases, Monitoring, Microservices,Distributed, Message 
 ---
 ## Introduction 
 
+This article explores various ways in which  [Dapr](https://dapr.io) helps in the context of architecting distributed applications. 
+
 If you build software today, you are likely building a distributed system. Whether it's two services talking or a monolith calling a lambda, you have crossed the process boundary.
 
 Distributed applications are software systems that consist of multiple components or modules running on independently within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
