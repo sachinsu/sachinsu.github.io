@@ -189,6 +189,7 @@ Below is depiction of the flow,
 
         app.Logger.LogInformation("Sending notification for " + tenant);
         
+        // Publish to topic using Dapr HTTP API
         using HttpResponseMessage resp = await sharedClient.PostAsJsonAsync(
             $"/v1.0/publish/{PUBSUB_NAME}/{TOPIC_NAME}",(tenant: tenant),token)
         );
