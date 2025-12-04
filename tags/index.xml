@@ -12,8 +12,71 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agent-to-Agent</title>
+      <link>https://sachinsu.github.io/tags/agent-to-agent/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/agent-to-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic</title>
+      <link>https://sachinsu.github.io/tags/agentic/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/agentic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>https://sachinsu.github.io/tags/anthropic/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/anthropic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen AI</title>
+      <link>https://sachinsu.github.io/tags/gen-ai/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google A2A</title>
+      <link>https://sachinsu.github.io/tags/google-a2a/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/google-a2a/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lanchain</title>
+      <link>https://sachinsu.github.io/tags/lanchain/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/lanchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://sachinsu.github.io/tags/mcp/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://sachinsu.github.io/tags/rag/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Semantic Kernel</title>
+      <link>https://sachinsu.github.io/tags/semantic-kernel/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/semantic-kernel/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Architecture</title>
       <link>https://sachinsu.github.io/tags/architecture/</link>
@@ -124,13 +187,6 @@
       <link>https://sachinsu.github.io/tags/llm/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MCP</title>
-      <link>https://sachinsu.github.io/tags/mcp/</link>
-      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/mcp/</guid>
       <description></description>
     </item>
     <item>

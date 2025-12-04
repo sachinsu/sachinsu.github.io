@@ -12,8 +12,26 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Mon, 15 Sep 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter</title>
+      <link>https://sachinsu.github.io/posts/a2aarchitecture/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/a2aarchitecture/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using &lt;strong&gt;&lt;a href=https://a2a-protocol.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Google’s Agent-to-Agent (A2A) protocol&lt;/a&gt;&lt;/strong&gt; for coordination and &lt;strong&gt;&lt;a href=https://modelcontextprotocol.io/introduction
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Anthropic’s Model Context Protocol (MCP)&lt;/a&gt;&lt;/strong&gt; for tool integration.&lt;/p&gt;
+&lt;p&gt;It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article &lt;a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Clean Architecture, Modular Monolith and Vertical Slice Architecture </title>
       <link>https://sachinsu.github.io/posts/comparearchitecturestyles/</link>
