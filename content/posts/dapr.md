@@ -257,10 +257,11 @@ Instead of managing complex python scripts for agent coordination, Dapr Agents a
 
 Dapr helps with 
 
-- Standardized, vendor-neutral approach, eliminating concerns about lock-in, intellectual property risks, or proprietary restrictions. 
+- Standardized, vendor-neutral approach, eliminating concerns about lock-in or proprietary restrictions. 
 - Organizations gain full flexibility and control over their Distributed/microservices based applications.
 - Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).  
-- A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.  
+- A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.
+- Extending dapr , if required ,is supported via pluggable components which are not part of main binary  
 
 While this article is meant to provide key aspects, Dapr has much more to offer. Do not forget to go through the documentation [here](https://dapr.io).
 
