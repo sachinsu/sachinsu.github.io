@@ -31,6 +31,14 @@ Below are the notes,
 
 ### AI Agent process flow
 
+    {{< figure
+  src="/images/a2a/agent_flow.png"
+  alt="A2A process flow"
+  caption="A2A process flow"
+  class="ma0 w-75"  >}}
+
+
+
   - Each AI Agent specializes in discrete set of skills and likely to rely on other AI agents to complete portion of task. AI Agents accept input requests and reason over the request considering domain-specific knowledge the AI Agent has. This produces an execution plan and then performs actions utilizing various tools at its disposal. 
 
   - AI Agent is implemented as HTTP Service or can provide user interface and  exposes operations which expect imprecise input and return imprecise output.
@@ -59,13 +67,8 @@ Below are the notes,
   - MCP Server Sampling - An MCP Server might want to use an AI Model for some of its internal work. The MCP protocol accommodates this with a feature called sampling. With sampling, the MCP Server sends a sampling/createMessage message to the AI Agent asking it to use one of its AI Models to do the work. The benefit of this approach is that the MCP Server itself doesn’t need to configure, pay for, or manage API keys/secrets to access its own AI Model. Very few MCP clients support this feature. 
   - MCP Server roots - An AI Agent might want to focus its MCP Servers to a subset of potential resources. for e.g. root path of current project files in VS Code. 
 
-Jeff has covered lot of ground in the article. The whole process can be summarized at high level as below, 
+Jeff has covered lot of ground in the article than the above, so please check out the article itself. 
 
-    {{< figure
-  src="/images/a2a/agent_flow.png"
-  alt="A2A process flow"
-  caption="A2A process flow"
-  class="ma0 w-75"  >}}
 
 Happy Coding !!
 
