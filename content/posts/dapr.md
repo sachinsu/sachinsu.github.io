@@ -151,10 +151,18 @@ Below is depiction of the flow,
   - Below snapshot shows Notification service using Dapr .NET SDK to push message, 
 
     ```C#
-    using Dapr.Client;
 
     const string PUBSUB_NAME = "my-pub-sub";
     const string TOPIC_NAME = "tenants";
+
+    Environment.SetEnvironmentVariable("DAPR_HTTP_PORT","3500");
+
+    var dapr_port = Environment.GetEnvironmentVariable("DAPR_HTTP_PORT");
+
+    // initialize httpclient
+    var sharedClient = new HttpClient() { 
+        BaseAddress = new Uri($"http://localhost:{dapr_port}"),
+    }
 
     var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddDaprClient();
@@ -178,12 +186,16 @@ Below is depiction of the flow,
 
     app.MapPost("/notification",async (CancellationToken token,  Tenant tenant) =>
     {
-        
-    await client.PublishEventAsync(PUBSUB_NAME, TOPIC_NAME, tenant.Id <= 0 ? random.Next(1,1000) : tenant.Id, token);
-    // await Task.Delay(10);
 
-    app.Logger.LogInformation("Sending notification for " + tenant);
-    return tenant.ToString();
+        app.Logger.LogInformation("Sending notification for " + tenant);
+        
+        using HttpResponseMessage resp = await sharedClient.PostAsJsonAsync(
+            $"/v1.0/publish/{PUBSUB_NAME}/{TOPIC_NAME}",(tenant: tenant),token)
+        );
+
+        app.Logger.LogInformation($"Dapr Pubsub response\n Statuscode :{resp.StatusCode}");
+
+            return tenant.ToString();
 
     });
 
