@@ -6,11 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter | Learnings in IT</title>
-<meta name="keywords" content="Agent-to-Agent, MCP, Anthropic, RAG, Gen AI, Agentic">
+<meta name="keywords" content="Agent-to-Agent, MCP, Anthropic, Google A2A, Lanchain, Semantic Kernel, RAG, Gen AI, Agentic">
 <meta name="description" content="Introduction
-This article is more of my notes on excellent Article by Jeffrey Richter on architecting AI Agents using Google’s Agent-to-Agent (A2A) protocol and Anthropic’s Model Context Protocol. Do read it here
-How AI Models are different
-Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of  main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.">
+This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using Google’s Agent-to-Agent (A2A) protocol for coordination and Anthropic’s Model Context Protocol (MCP) for tool integration.
+It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article here.">
 <meta name="author" content="Sachin Sunkle">
 <link rel="canonical" href="http://localhost:1313/posts/a2aarchitecture/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
@@ -61,27 +60,26 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
 </noscript><meta property="og:url" content="http://localhost:1313/posts/a2aarchitecture/">
   <meta property="og:site_name" content="Learnings in IT">
   <meta property="og:title" content="Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter">
-  <meta property="og:description" content="Introduction This article is more of my notes on excellent Article by Jeffrey Richter on architecting AI Agents using Google’s Agent-to-Agent (A2A) protocol and Anthropic’s Model Context Protocol. Do read it here
-How AI Models are different Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.">
+  <meta property="og:description" content="Introduction This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using Google’s Agent-to-Agent (A2A) protocol for coordination and Anthropic’s Model Context Protocol (MCP) for tool integration.
+It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article here.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-01T01:00:00+05:30">
-    <meta property="article:modified_time" content="2025-12-01T01:00:00+05:30">
+    <meta property="article:published_time" content="2025-12-02T01:00:00+05:30">
+    <meta property="article:modified_time" content="2025-12-02T01:00:00+05:30">
     <meta property="article:tag" content="Agent-to-Agent">
     <meta property="article:tag" content="MCP">
     <meta property="article:tag" content="Anthropic">
-    <meta property="article:tag" content="RAG">
-    <meta property="article:tag" content="Gen AI">
-    <meta property="article:tag" content="Agentic">
+    <meta property="article:tag" content="Google A2A">
+    <meta property="article:tag" content="Lanchain">
+    <meta property="article:tag" content="Semantic Kernel">
       <meta property="og:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/images/papermod-cover.png">
 <meta name="twitter:title" content="Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter">
 <meta name="twitter:description" content="Introduction
-This article is more of my notes on excellent Article by Jeffrey Richter on architecting AI Agents using Google’s Agent-to-Agent (A2A) protocol and Anthropic’s Model Context Protocol. Do read it here
-How AI Models are different
-Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of  main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.">
+This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using Google’s Agent-to-Agent (A2A) protocol for coordination and Anthropic’s Model Context Protocol (MCP) for tool integration.
+It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article here.">
 
 
 <script type="application/ld+json">
@@ -110,15 +108,15 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
   "@type": "BlogPosting",
   "headline": "Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter",
   "name": "Notes on Excellent AI Agent Architecture via A2A\/MCP by Jeffrey Richter",
-  "description": "Introduction This article is more of my notes on excellent Article by Jeffrey Richter on architecting AI Agents using Google’s Agent-to-Agent (A2A) protocol and Anthropic’s Model Context Protocol. Do read it here\nHow AI Models are different Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.\n",
+  "description": "Introduction This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using Google’s Agent-to-Agent (A2A) protocol for coordination and Anthropic’s Model Context Protocol (MCP) for tool integration.\nIt is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article here.\n",
   "keywords": [
-    "Agent-to-Agent", "MCP", "Anthropic", "RAG", "Gen AI", "Agentic"
+    "Agent-to-Agent", "MCP", "Anthropic", "Google A2A", "Lanchain", "Semantic Kernel", "RAG", "Gen AI", "Agentic"
   ],
-  "articleBody": "Introduction This article is more of my notes on excellent Article by Jeffrey Richter on architecting AI Agents using Google’s Agent-to-Agent (A2A) protocol and Anthropic’s Model Context Protocol. Do read it here\nHow AI Models are different Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.\nBelow are the notes,\nHow AI Models differ from Software-centric approach,\nBoth humans and AI Models accept imprecise input such as natural language text, images/video, and audio and attempt to “understand” or “make sense” of it. And, since the imprecise input is subject to interpretation, different humans and AI Models are likely to produce different or imprecise outputs\nOn the other hand, software accepts precise input such as scalar values (Booleans, integers, floats), well-formatted strings (URLs, dates/times, UUIDs, JSON, XML, CSV, etc.), and structures/arrays composed of these. Since the precise input is not subject to interpretation, different software interpret the same input identically.\nHumans and AI Models typically produce imprecise output while Software produces precise output.\na human wants to convert an algorithm in their head (imprecise thoughts) and attempt to output source code in some programming language (precise output). Similarly, an AI Model can be asked via imprecise natural language to produce precise data output\nImprecise data is valid input to humans and AI Models, not to software.\nIf humans or AI Models output imprecise data, the output is intended for humans or other AI Models.\nIf humans or AI Models output precise data, the output is intended for humans, AI Models, or software. However, attempting to output precise data may fail and, in this case, passing the imprecise data on is likely to produce unpredictable results.\nAI Agent process flow A2A process flow\nEach AI Agent specializes in discrete set of skills and likely to rely on other AI agents to complete portion of task. AI Agents accept input requests and reason over the request considering domain-specific knowledge the AI Agent has. This produces an execution plan and then performs actions utilizing various tools at its disposal.\nAI Agent is implemented as HTTP Service or can provide user interface and exposes operations which expect imprecise input and return imprecise output.\nEach AI Agent has a name, description and set of skills (each skill is described as name and description)\nAI models are stateless. So AI Agents must maintain as much conversation history as possible and send it to the AI Model to advance the conversation. Each AI Model documents its context window indicating the maximum size of the conversation it supports. Each message includes 1 or more parts (text, file URI/data, or JSON data).\nInternally, an AI Agent has a main execution loop referred to as an orchestrator. The orchestrator’s job is to advance the task’s conversation through to completion. Several tools exist to assist developers with building orchestrators such as LangChain, Semantic Kernel, and AutoGen.\nProcessing a new message typically requires the orchestrator to augment the message’s prompt with AI Agent-specific knowledge to improve the quality of the output. This technique is known as Retrieval Augmented Generation (RAG). Specifically, the orchestrator obtains an embedding vector for the user message’s prompt and then does a similarity search against data files, PDFs, etc. to find source content similar to what the user’s prompt is about. The orchestrator embeds this content into the prompt.\nAt this point, orchestrator sends the entire conversation to an AI Model.\nAI Model outputs,\nan imprecise result which is appended to the task’s conversation. a precise set of specific tool names to call. A tool name either refers to another specialized AI Agent or some software function (usually implemented by an MCP Server) It is the orchestrator’s job to call any tools and calling a software function is what allows an AI Agent to perform actions and be agentic. MCP,\nOne or more MCP Servers must first be registered with Ai Agent. Right now, there is no standard way of achieving this. When AI Agent invokes MCP server, it itself is called MCP Host.\nSome MCP Servers are implemented as executable processes that run on the same/local PC as the AI Agent and communicate with them via standard input/output. Other MCP Servers are implemented as HTTP services; the MCP Client communicates with them remotely via HTTP requests to the service’s URL.\nEach MCP Server exposes to the AI Agent and its orchestrator tools (functions), resources, and prompts.\nEach MCP implementation exposes list of tools. Each tool has a name, description and schema (JSON) specifying input required.\nOrchestrator shares all the tool information with AI Model and Model chooses best tool to call. AI Model may have orchestrator call multiple tools.\nMCP Server Sampling - An MCP Server might want to use an AI Model for some of its internal work. The MCP protocol accommodates this with a feature called sampling. With sampling, the MCP Server sends a sampling/createMessage message to the AI Agent asking it to use one of its AI Models to do the work. The benefit of this approach is that the MCP Server itself doesn’t need to configure, pay for, or manage API keys/secrets to access its own AI Model. Very few MCP clients support this feature.\nMCP Server roots - An AI Agent might want to focus its MCP Servers to a subset of potential resources. for e.g. root path of current project files in VS Code.\nJeff has covered lot of ground in the article than the above, so please check out the article itself.\nHappy Coding !!\n",
-  "wordCount" : "961",
+  "articleBody": "Introduction This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using Google’s Agent-to-Agent (A2A) protocol for coordination and Anthropic’s Model Context Protocol (MCP) for tool integration.\nIt is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article here.\n1. First Principles: AI Models vs. Traditional Software Richter starts by contrasting the “probabilistic” nature of AI with the “deterministic” nature of software. This distinction drives the architecture.\nFeature Traditional Software AI Models (Humans) Input Precise: Scalars, JSON, XML, Structs. Imprecise: Natural language, audio, video. Processing Deterministic: Same input always = same output. Probabilistic: Subject to interpretation and context. Output Precise: Intended for other software. Imprecise: Intended for humans or other agents. Key Takeaway:\nImprecise data is valid input for Humans/AI, but toxic for software functions. Precise data is the goal of software, but when AI models attempt to output it (e.g., JSON), they may hallucinate or format it incorrectly. The Architecture Gap: We need a bridge to safely turn the Model’s “thoughts” into “executable actions.” 2. The AI Agent Process Flow An AI Agent is essentially a wrapper around a Model that gives it “hands” (tools) and “memory” (history).\nThe Agent Orchestration Loop\nThe Components The Agent Interface (A2A): The Agent itself is an HTTP service (or it may provide User Interface) that accepts imprecise input (instructions) and returns imprecise output (answers/results). Agent Card: To be discoverable, every Agent publishes an “Agent Card”—metadata containing its name, description, and the set of skills it possesses. State \u0026 History: Since AI Models are stateless, the Agent must maintain the conversation history. It manages the context window, often deciding which memories to keep or discard. The Orchestrator Loop The “Brain” of the agent is the Orchestrator (often built with LangChain, Semantic Kernel, Autogen etc.). Its main execution loop looks like this:\nReceive Message: The Agent receives a task/message. RAG Augmentation: The Orchestrator may augment the prompt with domain-specific knowledge (retrieved from vector databases, PDFs, etc.). Model Reasoning: The full context is sent to the AI Model. Decision Point: The Model outputs either: Imprecise Result: Natural language to be sent back to the user. Precise Tool Call: A specific request to call a function (e.g., get_weather(city=\"Mumbai\")). Tool Execution (MCP): If a tool is requested, the Orchestrator executes it (via MCP) and feeds the result back into the conversation for the Model to interpret. 3. The Power of MCP (Model Context Protocol) While A2A handles Agent-to-Agent chatter, MCP standardizes how Agents connect to their tools and data.\nThe Connection: Agents act as MCP Hosts. They connect to MCP Servers (which provide the actual tools). Deployment: MCP Servers can be local executables (stdio) or remote HTTP services. Discovery: Each MCP Server exposes three things: Tools: Executable functions with JSON schemas. Resources: Read-only data (like file contents or logs). Prompts: Reusable prompt templates. Advanced MCP Features Sampling: This allows an MCP Server to “ask for help.” Instead of just running code, the Server can request the Host Agent to process a prompt using the Agent’s LLM. This is powerful because the MCP Server doesn’t need its own API keys; it just borrows the Agent’s brain. Roots: A security/scoping feature where the Agent defines the “root” boundaries (e.g., a specific folder in VS Code) that the MCP Server is allowed to access. Jeff has covered much more than above summary in the original post, specifically regarding the specific JSON schemas and protocol nuances. Highly recommended reading!\nUseful References, Ai Agents with MCP explained Happy Coding !!\n",
+  "wordCount" : "598",
   "inLanguage": "en",
-  "image": "http://localhost:1313/images/papermod-cover.png","datePublished": "2025-12-01T01:00:00+05:30",
-  "dateModified": "2025-12-01T01:00:00+05:30",
+  "image": "http://localhost:1313/images/papermod-cover.png","datePublished": "2025-12-02T01:00:00+05:30",
+  "dateModified": "2025-12-02T01:00:00+05:30",
   "author":{
     "@type": "Person",
     "name": "Sachin Sunkle"
@@ -225,14 +223,8 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
-    <div class="post-meta"><span title='2025-12-01 01:00:00 +0530 IST'>December 1, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Sachin Sunkle
+    <div class="post-meta"><span title='2025-12-02 01:00:00 +0530 IST'>December 2, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Sachin Sunkle
 
 </div>
   </header> <div class="toc">
@@ -243,12 +235,24 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#introduction" aria-label="Introduction">Introduction</a><ul>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#1-first-principles-ai-models-vs-traditional-software" aria-label="1. First Principles: AI Models vs. Traditional Software">1. First Principles: AI Models vs. Traditional Software</a></li>
+                <li>
+                    <a href="#2-the-ai-agent-process-flow" aria-label="2. The AI Agent Process Flow">2. The AI Agent Process Flow</a><ul>
                         
                 <li>
-                    <a href="#how-ai-models-are-different" aria-label="How AI Models are different">How AI Models are different</a></li>
+                    <a href="#the-components" aria-label="The Components">The Components</a></li>
                 <li>
-                    <a href="#ai-agent-process-flow" aria-label="AI Agent process flow">AI Agent process flow</a>
+                    <a href="#the-orchestrator-loop" aria-label="The Orchestrator Loop">The Orchestrator Loop</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-the-power-of-mcp-model-context-protocol" aria-label="3. The Power of MCP (Model Context Protocol)">3. The Power of MCP (Model Context Protocol)</a><ul>
+                        
+                <li>
+                    <a href="#advanced-mcp-features" aria-label="Advanced MCP Features">Advanced MCP Features</a></li>
+                <li>
+                    <a href="#useful-references" aria-label="Useful References,">Useful References,</a>
                 </li>
             </ul>
             </li>
@@ -258,114 +262,116 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
 </div>
 
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>This article is more of my notes on excellent Article by Jeffrey Richter on <strong>architecting AI Agents using <a href=https://a2a-protocol.org
+<p>This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using <strong><a href=https://a2a-protocol.org
     
     target=_blank rel="noopener noreferrer"
->Google’s Agent-to-Agent (A2A) protocol</a> and <a href=https://modelcontextprotocol.io/introduction
+>Google’s Agent-to-Agent (A2A) protocol</a></strong> for coordination and <strong><a href=https://modelcontextprotocol.io/introduction
     
     target=_blank rel="noopener noreferrer"
->Anthropic’s Model Context Protocol</a></strong>. Do read it <a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
+>Anthropic’s Model Context Protocol (MCP)</a></strong> for tool integration.</p>
+<p>It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article <a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
     
     target=_blank rel="noopener noreferrer"
->here</a></p>
-<h3 id="how-ai-models-are-different">How AI Models are different<a hidden class="anchor" aria-hidden="true" href="#how-ai-models-are-different">#</a></h3>
-<p>Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of  main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.</p>
-<p>Below are the notes,</p>
+>here</a>.</p>
+<h2 id="1-first-principles-ai-models-vs-traditional-software">1. First Principles: AI Models vs. Traditional Software<a hidden class="anchor" aria-hidden="true" href="#1-first-principles-ai-models-vs-traditional-software">#</a></h2>
+<p>Richter starts by contrasting the &ldquo;probabilistic&rdquo; nature of AI with the &ldquo;deterministic&rdquo; nature of software. This distinction drives the architecture.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Feature</th>
+          <th style="text-align: left">Traditional Software</th>
+          <th style="text-align: left">AI Models (Humans)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Input</strong></td>
+          <td style="text-align: left"><strong>Precise:</strong> Scalars, JSON, XML, Structs.</td>
+          <td style="text-align: left"><strong>Imprecise:</strong> Natural language, audio, video.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Processing</strong></td>
+          <td style="text-align: left"><strong>Deterministic:</strong> Same input always = same output.</td>
+          <td style="text-align: left"><strong>Probabilistic:</strong> Subject to interpretation and context.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Output</strong></td>
+          <td style="text-align: left"><strong>Precise:</strong> Intended for other software.</td>
+          <td style="text-align: left"><strong>Imprecise:</strong> Intended for humans or other agents.</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Key Takeaway:</strong></p>
 <ul>
-<li>
-<p>How AI Models differ from Software-centric approach,</p>
-<ul>
-<li>
-<p>Both humans and AI Models accept imprecise input such as natural language text, images/video, and audio and attempt to “understand” or “make sense” of it. And, since the imprecise input is subject to interpretation, different humans and AI Models are likely to produce different or imprecise outputs</p>
-</li>
-<li>
-<p>On the other hand, software accepts precise input such as scalar values (Booleans, integers, floats), well-formatted strings (URLs, dates/times, UUIDs, JSON, XML, CSV, etc.), and structures/arrays composed of these. Since the precise input is not subject to interpretation, different software interpret the same input identically.</p>
-</li>
-<li>
-<p>Humans and AI Models typically produce imprecise output while Software produces precise output.</p>
-</li>
-<li>
-<p>a human wants to convert an algorithm in their head (imprecise thoughts) and attempt to output source code in some programming language (precise output). Similarly, an AI Model can be asked via imprecise natural language to produce precise data output</p>
-</li>
-<li>
-<p>Imprecise data is valid input to humans and AI Models, not to software.</p>
-</li>
-<li>
-<p>If humans or AI Models output imprecise data, the output is intended for humans or other AI Models.</p>
-</li>
-<li>
-<p>If humans or AI Models output precise data, the output is intended for humans, AI Models, or software. However, attempting to output precise data may fail and, in this case, passing the imprecise data on is likely to produce unpredictable results.</p>
-</li>
+<li><strong>Imprecise data</strong> is valid input for Humans/AI, but toxic for software functions.</li>
+<li><strong>Precise data</strong> is the goal of software, but when AI models attempt to output it (e.g., JSON), they may hallucinate or format it incorrectly.</li>
+<li><strong>The Architecture Gap:</strong> We need a bridge to safely turn the Model&rsquo;s &ldquo;thoughts&rdquo; into &ldquo;executable actions.&rdquo;</li>
 </ul>
-</li>
-</ul>
-<h3 id="ai-agent-process-flow">AI Agent process flow<a hidden class="anchor" aria-hidden="true" href="#ai-agent-process-flow">#</a></h3>
-<pre><code><figure class="ma0 w-75">
-        <img loading="lazy" src="/images/a2a/agent_flow.png"
-             alt="A2A process flow"/> <figcaption>
-                <p>A2A process flow</p>
-            </figcaption>
-    </figure>
+<h2 id="2-the-ai-agent-process-flow">2. The AI Agent Process Flow<a hidden class="anchor" aria-hidden="true" href="#2-the-ai-agent-process-flow">#</a></h2>
+<p>An AI Agent is essentially a wrapper around a Model that gives it &ldquo;hands&rdquo; (tools) and &ldquo;memory&rdquo; (history).</p>
+<figure class="ma0 w-75">
+    <img loading="lazy" src="/images/a2a/agent_flow.png"
+         alt="A2A process flow"/> <figcaption>
+            <p>The Agent Orchestration Loop</p>
+        </figcaption>
+</figure>
 
-</code></pre>
+<h3 id="the-components">The Components<a hidden class="anchor" aria-hidden="true" href="#the-components">#</a></h3>
 <ul>
-<li>
-<p>Each AI Agent specializes in discrete set of skills and likely to rely on other AI agents to complete portion of task. AI Agents accept input requests and reason over the request considering domain-specific knowledge the AI Agent has. This produces an execution plan and then performs actions utilizing various tools at its disposal.</p>
-</li>
-<li>
-<p>AI Agent is implemented as HTTP Service or can provide user interface and  exposes operations which expect imprecise input and return imprecise output.</p>
-</li>
-<li>
-<p>Each AI Agent has a name, description and set of skills (each skill is described as name and description)</p>
-</li>
-<li>
-<p>AI models are stateless. So AI Agents must maintain as much conversation history as possible and send it to the AI Model to advance the conversation. Each AI Model documents its context window indicating the maximum size of the conversation it supports. Each message includes 1 or more parts (text, file URI/data, or JSON data).</p>
-</li>
-<li>
-<p>Internally, an AI Agent has a main execution loop referred to as an orchestrator. The orchestrator’s job is to advance the task’s conversation through to completion. Several tools exist to assist developers with building orchestrators such as LangChain, Semantic Kernel, and AutoGen.</p>
-</li>
-<li>
-<p>Processing a new message typically requires the orchestrator to augment the message’s prompt with AI Agent-specific knowledge to improve the quality of the output. This technique is known as Retrieval Augmented Generation (RAG). Specifically, the orchestrator obtains an embedding vector for the user message’s prompt and then does a similarity search against data files, PDFs, etc. to find source content similar to what the user’s prompt is about. The orchestrator embeds this content into the prompt.</p>
-</li>
-<li>
-<p>At this point, orchestrator sends the entire conversation to an AI Model.</p>
-</li>
-<li>
-<p>AI Model outputs,</p>
+<li><strong>The Agent Interface (A2A):</strong> The Agent itself is an HTTP service  (or it may provide User Interface) that accepts <strong>imprecise input</strong> (instructions) and returns <strong>imprecise output</strong> (answers/results).</li>
+<li><strong>Agent Card:</strong> To be discoverable, every Agent publishes an &ldquo;Agent Card&rdquo;—metadata containing its name, description, and the set of skills it possesses.</li>
+<li><strong>State &amp; History:</strong> Since AI Models are stateless, the Agent must maintain the conversation history. It manages the context window, often deciding which memories to keep or discard.</li>
+</ul>
+<h3 id="the-orchestrator-loop">The Orchestrator Loop<a hidden class="anchor" aria-hidden="true" href="#the-orchestrator-loop">#</a></h3>
+<p>The &ldquo;Brain&rdquo; of the agent is the <strong>Orchestrator</strong> (often built with <a href=https://www.langchain.com/
+    
+    target=_blank rel="noopener noreferrer"
+>LangChain</a>, <a href=https://learn.microsoft.com/en-us/semantic-kernel/overview/
+    
+    target=_blank rel="noopener noreferrer"
+>Semantic Kernel</a>, <a href=https://microsoft.github.io/autogen/stable//index.html
+    
+    target=_blank rel="noopener noreferrer"
+>Autogen</a> etc.). Its main execution loop looks like this:</p>
+<ol>
+<li><strong>Receive Message:</strong> The Agent receives a task/message.</li>
+<li><strong>RAG Augmentation:</strong> The Orchestrator may augment the prompt with domain-specific knowledge (retrieved from vector databases, PDFs, etc.).</li>
+<li><strong>Model Reasoning:</strong> The full context is sent to the AI Model.</li>
+<li><strong>Decision Point:</strong> The Model outputs either:
 <ul>
-<li>an imprecise result which is appended to the task’s conversation.</li>
-<li>a precise set of specific tool names to call. A tool name either refers to another specialized AI Agent or some software function (usually implemented by an MCP Server)</li>
-<li>It is the orchestrator’s job to call any tools and calling a software function is what allows an AI Agent to perform actions and be agentic.</li>
+<li><strong>Imprecise Result:</strong> Natural language to be sent back to the user.</li>
+<li><strong>Precise Tool Call:</strong> A specific request to call a function (e.g., <code>get_weather(city=&quot;Mumbai&quot;)</code>).</li>
 </ul>
 </li>
-<li>
-<p>MCP,</p>
+<li><strong>Tool Execution (MCP):</strong> If a tool is requested, the Orchestrator executes it (via MCP) and feeds the result back into the conversation for the Model to interpret.</li>
+</ol>
+<h2 id="3-the-power-of-mcp-model-context-protocol">3. The Power of MCP (Model Context Protocol)<a hidden class="anchor" aria-hidden="true" href="#3-the-power-of-mcp-model-context-protocol">#</a></h2>
+<p>While A2A handles Agent-to-Agent chatter, <strong>MCP</strong> standardizes how Agents connect to their tools and data.</p>
 <ul>
-<li>
-<p>One or more MCP Servers must first be registered with Ai Agent. Right now, there is no standard way of achieving this. When AI Agent invokes MCP server, it itself is called MCP Host.</p>
-</li>
-<li>
-<p>Some MCP Servers are implemented as executable processes that run on the same/local PC as the AI Agent and communicate with them via standard input/output. Other MCP Servers are implemented as HTTP services; the MCP Client communicates with them remotely via HTTP requests to the service’s URL.</p>
-</li>
-<li>
-<p>Each MCP Server exposes to the AI Agent and its orchestrator tools (functions), resources, and prompts.</p>
-</li>
-<li>
-<p>Each MCP implementation exposes list of tools. Each tool has a name, description  and schema (JSON) specifying input required.</p>
-</li>
-<li>
-<p>Orchestrator shares all the tool information with AI Model and Model chooses best tool to call. AI Model may have orchestrator call multiple tools.</p>
-</li>
-<li>
-<p>MCP Server Sampling - An MCP Server might want to use an AI Model for some of its internal work. The MCP protocol accommodates this with a feature called sampling. With sampling, the MCP Server sends a sampling/createMessage message to the AI Agent asking it to use one of its AI Models to do the work. The benefit of this approach is that the MCP Server itself doesn’t need to configure, pay for, or manage API keys/secrets to access its own AI Model. Very few MCP clients support this feature.</p>
-</li>
-<li>
-<p>MCP Server roots - An AI Agent might want to focus its MCP Servers to a subset of potential resources. for e.g. root path of current project files in VS Code.</p>
+<li><strong>The Connection:</strong> Agents act as <strong>MCP Hosts</strong>. They connect to <strong>MCP Servers</strong> (which provide the actual tools).</li>
+<li><strong>Deployment:</strong> MCP Servers can be local executables (stdio) or remote HTTP services.</li>
+<li><strong>Discovery:</strong> Each MCP Server exposes three things:
+<ol>
+<li><strong>Tools:</strong> Executable functions with JSON schemas.</li>
+<li><strong>Resources:</strong> Read-only data (like file contents or logs).</li>
+<li><strong>Prompts:</strong> Reusable prompt templates.</li>
+</ol>
 </li>
 </ul>
-</li>
+<h3 id="advanced-mcp-features">Advanced MCP Features<a hidden class="anchor" aria-hidden="true" href="#advanced-mcp-features">#</a></h3>
+<ul>
+<li><strong>Sampling:</strong> This allows an MCP Server to &ldquo;ask for help.&rdquo; Instead of just running code, the Server can request the Host Agent to process a prompt using the Agent&rsquo;s LLM. This is powerful because the MCP Server doesn&rsquo;t need its own API keys; it just borrows the Agent&rsquo;s brain.</li>
+<li><strong>Roots:</strong> A security/scoping feature where the Agent defines the &ldquo;root&rdquo; boundaries (e.g., a specific folder in VS Code) that the MCP Server is allowed to access.</li>
 </ul>
-<p>Jeff has covered lot of ground in the article than the above, so please check out the article itself.</p>
+<hr>
+<p><em>Jeff has covered much more than above summary in the original post, specifically regarding the specific JSON schemas and protocol nuances. Highly recommended reading!</em></p>
+<h3 id="useful-references">Useful References,<a hidden class="anchor" aria-hidden="true" href="#useful-references">#</a></h3>
+<ul>
+<li><a href=https://youtu.be/wGz955ZeLpc
+    
+    target=_blank rel="noopener noreferrer"
+>Ai Agents with MCP explained</a></li>
+</ul>
 <p>Happy Coding !!</p>
 <hr>
 <script src="https://utteranc.es/client.js" repo="sachinsu/sachinsu.github.io" issue-term="title" label="blogcomment"
@@ -379,6 +385,9 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
       <li><a href="http://localhost:1313/tags/agent-to-agent/">Agent-to-Agent</a></li>
       <li><a href="http://localhost:1313/tags/mcp/">MCP</a></li>
       <li><a href="http://localhost:1313/tags/anthropic/">Anthropic</a></li>
+      <li><a href="http://localhost:1313/tags/google-a2a/">Google A2A</a></li>
+      <li><a href="http://localhost:1313/tags/lanchain/">Lanchain</a></li>
+      <li><a href="http://localhost:1313/tags/semantic-kernel/">Semantic Kernel</a></li>
       <li><a href="http://localhost:1313/tags/rag/">RAG</a></li>
       <li><a href="http://localhost:1313/tags/gen-ai/">Gen AI</a></li>
       <li><a href="http://localhost:1313/tags/agentic/">Agentic</a></li>
@@ -400,7 +409,7 @@ Jeff starts with first principle approach on explaining how Human and AI Models 
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter on x"
-            href="https://x.com/intent/tweet/?text=Notes%20on%20Excellent%20AI%20Agent%20Architecture%20via%20A2A%2fMCP%20by%20Jeffrey%20Richter&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fa2aarchitecture%2f&amp;hashtags=Agent-to-Agent%2cMCP%2cAnthropic%2cRAG%2cGenAI%2cAgentic">
+            href="https://x.com/intent/tweet/?text=Notes%20on%20Excellent%20AI%20Agent%20Architecture%20via%20A2A%2fMCP%20by%20Jeffrey%20Richter&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fa2aarchitecture%2f&amp;hashtags=Agent-to-Agent%2cMCP%2cAnthropic%2cGoogleA2A%2cLanchain%2cSemanticKernel%2cRAG%2cGenAI%2cAgentic">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

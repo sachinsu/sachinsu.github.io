@@ -1,73 +1,86 @@
 ---
 title: "Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter"
-date: 2025-12-01T01:00:00+05:30
-draft: true
-tags: [Agent-to-Agent,MCP,Anthropic, RAG, Gen AI, Agentic]
+date: 2025-12-02T01:00:00+05:30
+draft: false
+tags: [Agent-to-Agent,MCP,Anthropic,Google A2A, Lanchain, Semantic Kernel, RAG, Gen AI, Agentic]
 ---
-
 ## Introduction 
 
-This article is more of my notes on excellent Article by Jeffrey Richter on **architecting AI Agents using [Google's Agent-to-Agent (A2A) protocol](https://a2a-protocol.org) and [Anthropic's Model Context Protocol](https://modelcontextprotocol.io/introduction)**. Do read it [here](https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc) 
+This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using **[Google's Agent-to-Agent (A2A) protocol](https://a2a-protocol.org)** for coordination and **[Anthropic's Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction)** for tool integration. 
 
-### How AI Models are different
+It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article [here](https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc).
 
-Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of  main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop. 
+## 1. First Principles: AI Models vs. Traditional Software
 
-Below are the notes, 
+Richter starts by contrasting the "probabilistic" nature of AI with the "deterministic" nature of software. This distinction drives the architecture.
 
-- How AI Models differ from Software-centric approach,
+| Feature | Traditional Software | AI Models (Humans) |
+| :--- | :--- | :--- |
+| **Input** | **Precise:** Scalars, JSON, XML, Structs. | **Imprecise:** Natural language, audio, video. |
+| **Processing** | **Deterministic:** Same input always = same output. | **Probabilistic:** Subject to interpretation and context. |
+| **Output** | **Precise:** Intended for other software. | **Imprecise:** Intended for humans or other agents. |
 
-  - Both humans and AI Models accept imprecise input such as natural language text, images/video, and audio and attempt to “understand” or “make sense” of it. And, since the imprecise input is subject to interpretation, different humans and AI Models are likely to produce different or imprecise outputs
 
-  - On the other hand, software accepts precise input such as scalar values (Booleans, integers, floats), well-formatted strings (URLs, dates/times, UUIDs, JSON, XML, CSV, etc.), and structures/arrays composed of these. Since the precise input is not subject to interpretation, different software interpret the same input identically.
 
-  - Humans and AI Models typically produce imprecise output while Software produces precise output.
+**Key Takeaway:** 
 
-  - a human wants to convert an algorithm in their head (imprecise thoughts) and attempt to output source code in some programming language (precise output). Similarly, an AI Model can be asked via imprecise natural language to produce precise data output
+* **Imprecise data** is valid input for Humans/AI, but toxic for software functions.
+* **Precise data** is the goal of software, but when AI models attempt to output it (e.g., JSON), they may hallucinate or format it incorrectly. 
+* **The Architecture Gap:** We need a bridge to safely turn the Model's "thoughts" into "executable actions."
 
-  - Imprecise data is valid input to humans and AI Models, not to software.
-  - If humans or AI Models output imprecise data, the output is intended for humans or other AI Models.
-  - If humans or AI Models output precise data, the output is intended for humans, AI Models, or software. However, attempting to output precise data may fail and, in this case, passing the imprecise data on is likely to produce unpredictable results.
+## 2. The AI Agent Process Flow
 
-### AI Agent process flow
+An AI Agent is essentially a wrapper around a Model that gives it "hands" (tools) and "memory" (history).
 
-    {{< figure
+{{< figure
   src="/images/a2a/agent_flow.png"
   alt="A2A process flow"
-  caption="A2A process flow"
+  caption="The Agent Orchestration Loop"
   class="ma0 w-75"  >}}
 
 
 
-  - Each AI Agent specializes in discrete set of skills and likely to rely on other AI agents to complete portion of task. AI Agents accept input requests and reason over the request considering domain-specific knowledge the AI Agent has. This produces an execution plan and then performs actions utilizing various tools at its disposal. 
+### The Components
 
-  - AI Agent is implemented as HTTP Service or can provide user interface and  exposes operations which expect imprecise input and return imprecise output.
-  
-  - Each AI Agent has a name, description and set of skills (each skill is described as name and description)
-  
-  - AI models are stateless. So AI Agents must maintain as much conversation history as possible and send it to the AI Model to advance the conversation. Each AI Model documents its context window indicating the maximum size of the conversation it supports. Each message includes 1 or more parts (text, file URI/data, or JSON data).
+* **The Agent Interface (A2A):** The Agent itself is an HTTP service  (or it may provide User Interface) that accepts **imprecise input** (instructions) and returns **imprecise output** (answers/results).
+* **Agent Card:** To be discoverable, every Agent publishes an "Agent Card"—metadata containing its name, description, and the set of skills it possesses.
+* **State & History:** Since AI Models are stateless, the Agent must maintain the conversation history. It manages the context window, often deciding which memories to keep or discard.
 
-  - Internally, an AI Agent has a main execution loop referred to as an orchestrator. The orchestrator’s job is to advance the task’s conversation through to completion. Several tools exist to assist developers with building orchestrators such as LangChain, Semantic Kernel, and AutoGen.
+### The Orchestrator Loop
 
-  - Processing a new message typically requires the orchestrator to augment the message’s prompt with AI Agent-specific knowledge to improve the quality of the output. This technique is known as Retrieval Augmented Generation (RAG). Specifically, the orchestrator obtains an embedding vector for the user message’s prompt and then does a similarity search against data files, PDFs, etc. to find source content similar to what the user’s prompt is about. The orchestrator embeds this content into the prompt.
+The "Brain" of the agent is the **Orchestrator** (often built with [LangChain](https://www.langchain.com/), [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/), [Autogen](https://microsoft.github.io/autogen/stable//index.html) etc.). Its main execution loop looks like this:
 
-  - At this point, orchestrator sends the entire conversation to an AI Model. 
-  - AI Model outputs, 
-	- an imprecise result which is appended to the task’s conversation.
-	- a precise set of specific tool names to call. A tool name either refers to another specialized AI Agent or some software function (usually implemented by an MCP Server)
-	- It is the orchestrator’s job to call any tools and calling a software function is what allows an AI Agent to perform actions and be agentic. 
+1.  **Receive Message:** The Agent receives a task/message.
+2.  **RAG Augmentation:** The Orchestrator may augment the prompt with domain-specific knowledge (retrieved from vector databases, PDFs, etc.).
+3.  **Model Reasoning:** The full context is sent to the AI Model.
+4.  **Decision Point:** The Model outputs either:
+    * **Imprecise Result:** Natural language to be sent back to the user.
+    * **Precise Tool Call:** A specific request to call a function (e.g., `get_weather(city="Mumbai")`).
+5.  **Tool Execution (MCP):** If a tool is requested, the Orchestrator executes it (via MCP) and feeds the result back into the conversation for the Model to interpret.
 
-- MCP,
-  - One or more MCP Servers must first be registered with Ai Agent. Right now, there is no standard way of achieving this. When AI Agent invokes MCP server, it itself is called MCP Host. 
-  - Some MCP Servers are implemented as executable processes that run on the same/local PC as the AI Agent and communicate with them via standard input/output. Other MCP Servers are implemented as HTTP services; the MCP Client communicates with them remotely via HTTP requests to the service’s URL.
-  - Each MCP Server exposes to the AI Agent and its orchestrator tools (functions), resources, and prompts.
-  - Each MCP implementation exposes list of tools. Each tool has a name, description  and schema (JSON) specifying input required.
-  - Orchestrator shares all the tool information with AI Model and Model chooses best tool to call. AI Model may have orchestrator call multiple tools.
+## 3. The Power of MCP (Model Context Protocol)
 
-  - MCP Server Sampling - An MCP Server might want to use an AI Model for some of its internal work. The MCP protocol accommodates this with a feature called sampling. With sampling, the MCP Server sends a sampling/createMessage message to the AI Agent asking it to use one of its AI Models to do the work. The benefit of this approach is that the MCP Server itself doesn’t need to configure, pay for, or manage API keys/secrets to access its own AI Model. Very few MCP clients support this feature. 
-  - MCP Server roots - An AI Agent might want to focus its MCP Servers to a subset of potential resources. for e.g. root path of current project files in VS Code. 
+While A2A handles Agent-to-Agent chatter, **MCP** standardizes how Agents connect to their tools and data.
 
-Jeff has covered lot of ground in the article than the above, so please check out the article itself. 
+* **The Connection:** Agents act as **MCP Hosts**. They connect to **MCP Servers** (which provide the actual tools).
+* **Deployment:** MCP Servers can be local executables (stdio) or remote HTTP services.
+* **Discovery:** Each MCP Server exposes three things:
+    1.  **Tools:** Executable functions with JSON schemas.
+    2.  **Resources:** Read-only data (like file contents or logs).
+    3.  **Prompts:** Reusable prompt templates.
+
+### Advanced MCP Features
+* **Sampling:** This allows an MCP Server to "ask for help." Instead of just running code, the Server can request the Host Agent to process a prompt using the Agent's LLM. This is powerful because the MCP Server doesn't need its own API keys; it just borrows the Agent's brain.
+* **Roots:** A security/scoping feature where the Agent defines the "root" boundaries (e.g., a specific folder in VS Code) that the MCP Server is allowed to access.
+
+---
+
+  *Jeff has covered much more than above summary in the original post, specifically regarding the specific JSON schemas and protocol nuances. Highly recommended reading!*
+
+### Useful References,
+
+- [Ai Agents with MCP explained](https://youtu.be/wGz955ZeLpc)
+
 
 
 Happy Coding !!

@@ -20,18 +20,17 @@
       <pubDate>Mon, 01 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/a2aarchitecture/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This article is more of my notes on excellent Article by Jeffrey Richter on &lt;strong&gt;architecting AI Agents using &lt;a href=https://a2a-protocol.org
+&lt;p&gt;This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using &lt;strong&gt;&lt;a href=https://a2a-protocol.org
     
     target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;Google’s Agent-to-Agent (A2A) protocol&lt;/a&gt; and &lt;a href=https://modelcontextprotocol.io/introduction
+&gt;Google’s Agent-to-Agent (A2A) protocol&lt;/a&gt;&lt;/strong&gt; for coordination and &lt;strong&gt;&lt;a href=https://modelcontextprotocol.io/introduction
     
     target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;Anthropic’s Model Context Protocol&lt;/a&gt;&lt;/strong&gt;. Do read it &lt;a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
+&gt;Anthropic’s Model Context Protocol (MCP)&lt;/a&gt;&lt;/strong&gt; for tool integration.&lt;/p&gt;
+&lt;p&gt;It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article &lt;a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
     
     target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;how-ai-models-are-different&#34;&gt;How AI Models are different&lt;/h3&gt;
-&lt;p&gt;Jeff starts with first principle approach on explaining how Human and AI Models differ from typical Software in terms of precise input and output. He then describes what AI Agent is and its internal Working in terms of  main execution loop (Orchestrator), Need for maintaining conversation history and Agent to MCP interaction to complete the loop.&lt;/p&gt;</description>
+&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
