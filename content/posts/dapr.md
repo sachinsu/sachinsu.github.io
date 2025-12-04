@@ -10,14 +10,14 @@ This article explores various ways in which  [Dapr](https://dapr.io) helps in th
 
 If you build software today, you are likely building a distributed system. Whether it's two services talking or a monolith calling a lambda, you have crossed the process boundary.
 
-Distributed applications are software systems that consist of multiple components or modules running on independently within a network. These components work together to achieve a common goal or provide a service, communicating and coordinating their actions across the network.
+Distributed applications are software systems that consist of multiple components or modules running  independently over network. These components work together to achieve a common goal while communicating and coordinating their actions across the network.
 
 Most organizations build distributed applications for two main reasons. 
 1.  they have multiple development teams that need to work independently while contributing to a larger system.
 2.  They want to scale up or down specific parts of the application depending on business needs
 3.  they require a solution where components built using different programming languages can interact with each other.
 
-Developing distributed applications is challenging because numerous components need to work cohesively. Developers must consider resiliency, observability, security, and scalability across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.
+Developing distributed applications is challenging because numerous components need to work cohesively. Developers must consider *resiliency, observability, security, and scalability* across multiple services and runtimes. Furthermore, distributed applications typically don’t operate in isolation; they interact with message brokers, data stores, and external services. Integrating with these resources requires knowledge of specific APIs and SDKs which increases the complexity to build such systems.
 
 To summarize, 
 
@@ -47,16 +47,19 @@ Key benefits of Dapr are,
 - Designed for [Operations](https://docs.dapr.io/operations/) - Supports integration with observability tools to make it easier to *run* the system.
 - sidecars, runtime, components, and configuration can all be managed and deployed easily and securely to match your organization’s needs.
 
-Below are some of the interesting  building blocks.  For complete list, refer [here](https://docs.dapr.io/concepts/building-blocks-concept/).
 
-    {{< figure src="/images/dapr/modular_landscape.png" title="No more boilerplate">}}
+    {{< figure src="/images/dapr/modular_landscape.png" title="Abstractions by Dapr">}}
+
+Let us look at some of building blocks.  For complete list, refer [here](https://docs.dapr.io/concepts/building-blocks-concept/).
+
 
 ### Service invocation
 
-Helps abstract service discovery and perform secure calls between services. 
+Helps abstract service discovery and perform secure calls between services, transparently manages it via mDns in local setup and can be integrated with external store like Hashicorp consul. 
 
-Typical use cases, 
-        - Abstract details (location etc.) needed for invoking services thus making them deployable on various target platforms
+Typical use case(s), 
+
+- Abstract details (location etc.) needed for invoking services thus making them deployable on various target platforms without *code changes*
 
 ### Workflows 
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Semantic Kernel on Learnings in IT</title>
+    <link>http://localhost:1313/tags/semantic-kernel/</link>
+    <description>Recent content in Semantic Kernel on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/semantic-kernel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter</title>
+      <link>http://localhost:1313/posts/a2aarchitecture/</link>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/a2aarchitecture/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using &lt;strong&gt;&lt;a href=https://a2a-protocol.org
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Google’s Agent-to-Agent (A2A) protocol&lt;/a&gt;&lt;/strong&gt; for coordination and &lt;strong&gt;&lt;a href=https://modelcontextprotocol.io/introduction
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Anthropic’s Model Context Protocol (MCP)&lt;/a&gt;&lt;/strong&gt; for tool integration.&lt;/p&gt;
+&lt;p&gt;It is a must-read for anyone moving beyond simple chatbots to complex agentic workflows. You can read the original article &lt;a href=https://medium.com/@jeffreymrichter/ai-agent-architecture-b864080c4bbc
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

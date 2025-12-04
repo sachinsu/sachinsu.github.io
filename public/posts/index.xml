@@ -30,7 +30,7 @@
     <item>
       <title>Notes on Excellent AI Agent Architecture via A2A/MCP by Jeffrey Richter</title>
       <link>http://localhost:1313/posts/a2aarchitecture/</link>
-      <pubDate>Mon, 01 Dec 2025 01:00:00 +0530</pubDate>
+      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/a2aarchitecture/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This article compiles my notes on an excellent architectural deep-dive by Jeffrey Richter. He outlines how to architect robust AI Agents using &lt;strong&gt;&lt;a href=https://a2a-protocol.org
@@ -234,21 +234,6 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Go&lt;/a&gt;] has buil-in provision for the same while Benchmarking is typically performed on dedicated testing infrastructure.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dapr - Distributed Application Runtime</title>
-      <link>http://localhost:1313/posts/daprold/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/daprold/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;key aspects,
-- Platform agnostic
-- Abstraction over Infrastructure
-- Cloud Agnostic
-- Open source
-- AI Agents (Dapr Agents etc.)&lt;/p&gt;
-&lt;p&gt;Dapr works both for greenfield projects (built from scratch) and brownfield applications (existing applications being modernized or migrated).&lt;/p&gt;
-&lt;p&gt;A common scenario is migrating a monolithic or traditional service-based app to Kubernetes or another cloud-native infrastructure: Dapr can be introduced to handle inter-service communication, messaging, state, secrets — without rewriting the whole application.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Database Reliability Engineering - My Notes</title>
