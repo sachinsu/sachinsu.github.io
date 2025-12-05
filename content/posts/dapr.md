@@ -196,10 +196,21 @@ Below is depiction of the flow,
         using HttpResponseMessage resp = await sharedClient.PostAsJsonAsync(
             $"/v1.0/publish/{PUBSUB_NAME}/{TOPIC_NAME}",(tenant: tenant),token)
         );
+        
+        if (resp.IsSuccessStatusCode) {
+                string responseBody = await resp.Content.ReadAsStringAsync();
+                if (responseBody.Contains("errorCode")) {
+                    app.Logger.LogError("Error while pub/sub {responseBody}", responseBody);
+                    return string.Empty;
+                }
+        } else { 
+            app.Logger.LogError("Error while pub/sub with Status code {StatusCode}", app.StatusCode);
+            return string.Empty;
+
+        }
 
         app.Logger.LogInformation($"Dapr Pubsub response\n Statuscode :{resp.StatusCode}");
-
-            return tenant.ToString();
+        return tenant.ToString();
 
     });
 
