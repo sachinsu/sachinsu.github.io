@@ -12,8 +12,64 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstractions</title>
+      <link>http://localhost:1313/tags/abstractions/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/abstractions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic</title>
+      <link>http://localhost:1313/tags/agentic/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/agentic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dapr</title>
+      <link>http://localhost:1313/tags/dapr/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/dapr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed</title>
+      <link>http://localhost:1313/tags/distributed/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/distributed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen AI</title>
+      <link>http://localhost:1313/tags/gen-ai/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/gen-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MicroServices</title>
+      <link>http://localhost:1313/tags/microservices/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>http://localhost:1313/tags/monitoring/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observability</title>
+      <link>http://localhost:1313/tags/observability/</link>
+      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/observability/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agent-to-Agent</title>
       <link>http://localhost:1313/tags/agent-to-agent/</link>
@@ -22,38 +78,10 @@
       <description></description>
     </item>
     <item>
-      <title>Agentic</title>
-      <link>http://localhost:1313/tags/agentic/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/agentic/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Anthropic</title>
       <link>http://localhost:1313/tags/anthropic/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/anthropic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Databases</title>
-      <link>http://localhost:1313/tags/databases/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/databases/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Distributed</title>
-      <link>http://localhost:1313/tags/distributed/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/distributed/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gen AI</title>
-      <link>http://localhost:1313/tags/gen-ai/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/gen-ai/</guid>
       <description></description>
     </item>
     <item>
@@ -75,34 +103,6 @@
       <link>http://localhost:1313/tags/mcp/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/mcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Message Queues</title>
-      <link>http://localhost:1313/tags/message-queues/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/message-queues/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MicroServices</title>
-      <link>http://localhost:1313/tags/microservices/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/microservices/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Monitoring</title>
-      <link>http://localhost:1313/tags/monitoring/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/monitoring/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Observability</title>
-      <link>http://localhost:1313/tags/observability/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/observability/</guid>
       <description></description>
     </item>
     <item>
@@ -194,6 +194,13 @@
       <link>http://localhost:1313/tags/syft/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/tags/syft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databases</title>
+      <link>http://localhost:1313/tags/databases/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/tags/databases/</guid>
       <description></description>
     </item>
     <item>
