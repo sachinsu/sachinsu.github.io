@@ -1,7 +1,7 @@
 ---
 title: " Why use Dapr (Distributed Application Runtime)?"
 date: 2025-12-06T01:00:00+05:30
-draft: true
+draft: false
 tags: [Observability, Dapr,  Monitoring, Microservices,Distributed, Abstractions, Gen AI, Agentic]
 ---
 ## Introduction 
