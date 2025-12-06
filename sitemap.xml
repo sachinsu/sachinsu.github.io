@@ -3,18 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sachinsu.github.io/</loc>
-    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/dapr/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/abstractions/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/agentic/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/dapr/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/distributed/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/gen-ai/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/microservices/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/monitoring/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/observability/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/</loc>
+    <lastmod>2025-12-06T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/agent-to-agent/</loc>
     <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/tags/agentic/</loc>
-    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/anthropic/</loc>
-    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/gen-ai/</loc>
     <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/google-a2a/</loc>
@@ -29,25 +56,16 @@
     <loc>https://sachinsu.github.io/posts/a2aarchitecture/</loc>
     <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/posts/</loc>
-    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/rag/</loc>
     <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/semantic-kernel/</loc>
     <lastmod>2025-12-02T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/tags/</loc>
-    <lastmod>2025-12-02T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/architecture/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/posts/comparearchitecturestyles/</loc>
-    <lastmod>2025-09-15T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/microservices/</loc>
     <lastmod>2025-09-15T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/modularity/</loc>
@@ -239,13 +257,7 @@
     <loc>https://sachinsu.github.io/tags/honeycomb/</loc>
     <lastmod>2021-09-05T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/tags/monitoring/</loc>
-    <lastmod>2021-09-05T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/mysql/</loc>
-    <lastmod>2021-09-05T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/observability/</loc>
     <lastmod>2021-09-05T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/analytics/</loc>

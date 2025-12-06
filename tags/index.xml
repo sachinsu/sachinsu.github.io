@@ -12,8 +12,64 @@
     <generator>Hugo -- 0.152.2</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Tue, 02 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstractions</title>
+      <link>https://sachinsu.github.io/tags/abstractions/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/abstractions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic</title>
+      <link>https://sachinsu.github.io/tags/agentic/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/agentic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dapr</title>
+      <link>https://sachinsu.github.io/tags/dapr/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/dapr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed</title>
+      <link>https://sachinsu.github.io/tags/distributed/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/distributed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen AI</title>
+      <link>https://sachinsu.github.io/tags/gen-ai/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MicroServices</title>
+      <link>https://sachinsu.github.io/tags/microservices/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>https://sachinsu.github.io/tags/monitoring/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observability</title>
+      <link>https://sachinsu.github.io/tags/observability/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/observability/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agent-to-Agent</title>
       <link>https://sachinsu.github.io/tags/agent-to-agent/</link>
@@ -22,24 +78,10 @@
       <description></description>
     </item>
     <item>
-      <title>Agentic</title>
-      <link>https://sachinsu.github.io/tags/agentic/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/agentic/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Anthropic</title>
       <link>https://sachinsu.github.io/tags/anthropic/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/anthropic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gen AI</title>
-      <link>https://sachinsu.github.io/tags/gen-ai/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
       <description></description>
     </item>
     <item>
@@ -82,13 +124,6 @@
       <link>https://sachinsu.github.io/tags/architecture/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MicroServices</title>
-      <link>https://sachinsu.github.io/tags/microservices/</link>
-      <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
@@ -442,24 +477,10 @@
       <description></description>
     </item>
     <item>
-      <title>Monitoring</title>
-      <link>https://sachinsu.github.io/tags/monitoring/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/monitoring/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>MySQL</title>
       <link>https://sachinsu.github.io/tags/mysql/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Observability</title>
-      <link>https://sachinsu.github.io/tags/observability/</link>
-      <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/observability/</guid>
       <description></description>
     </item>
     <item>
