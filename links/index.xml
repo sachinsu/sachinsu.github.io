@@ -3078,6 +3078,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;sqlite&#34;&gt;SQLite&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://use.expensify.com/blog/scaling-sqlite-to-4m-qps-on-a-single-server
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Scaling SQLite to 4M QPS on a single server (EC2 vs Bare Metal)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://simonwillison.net/2021/Feb/21/cross-database-queries/
     
     target=_blank rel=&#34;noopener noreferrer&#34;
