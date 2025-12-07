@@ -166,8 +166,9 @@ Knowledge base around general database related topics.
 
 - [Growing importance of Metadata Management Systems](https://gradientflow.com/the-growing-importance-of-metadata-management-systems/)
 
-## SQLite 
+## SQLite
 
+- [Scaling SQLite to 4M QPS on a single server (EC2 vs Bare Metal)](https://use.expensify.com/blog/scaling-sqlite-to-4m-qps-on-a-single-server)
 - [Query against multiple SQLite databases using ATTACH Command](https://simonwillison.net/2021/Feb/21/cross-database-queries/)
 - [Online SQLite Fiddle](https://sqlite.org/fiddle/)
 - [Why you should be using SQLITE(2023)](https://www.epicweb.dev/why-you-should-probably-be-using-sqlite)
