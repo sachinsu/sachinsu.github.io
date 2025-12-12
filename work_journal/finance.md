@@ -683,3 +683,63 @@ entanglement in agencies, is one which will have less entrepreneurship.
        - Learning by doing 
        - Globalization (Remove all barriers at border)
 
+- Some useful reminders
+  - Implications
+    - We confuse complexity with deep insight.
+    - Wrong & delayed feedback in markets often rewards storytellers in the short term.
+    - Simple rules seem naïve in a volatile, uncertain, complex & ambiguous world.
+    - Social exclusion feels to the brain like breaking a bone, so we are wired to do what everyone else is doing.
+    - Fund managers also want to belong. Often, they copy the index & peers, so they do not look stupid if they are wrong alone.
+    - Inside firms and boards, the fear of exclusion makes people stay quiet instead of challenging the main story. This lets risks build up over time.
+    - People are sometimes reluctant to trust hybrid strategies because they are not the ones making the allocation decisions, even when a sound, objective mechanical process has been shown to deliver better results over time.
+    - Manual stock and fund picking provides strong cues of skill such as research, effort & compelling narratives, even though it typically drives pro cyclical behaviour & inefficient outcomes for most investors.
+    - We often misuse Peter Lynch’s idea, assuming that any product or service we personally use must be safe and therefore a good investment
+    - The smarter an investor is, the more brilliant arguments they can generate for their existing position, which can dangerously boost conviction & position size even when the evidence is mixed.
+    - When your ideas underperform, you do not just see it as a loss of capital, you experience it as a loss of self. That triggers Identity Protective Cognition & nudges you to double down instead of cutting your losses.
+    - In markets we are bombarded with research notes, tweets, and headlines, and because we usually just skim them, our brains treat what we understand as true unless we actively stop and question it.
+    - The same bullish or bearish lines get repeated across brokers, media, and social feeds, and that repetition makes the story feel familiar & it increases our conviction, even if nothing new has been learned.
+    -    You will care about how your returns compare to friends and benchmarks, so a decent absolute gain can feel “unfair” & push you to chase whatever is winning now driven by FOMO.
+    -    You may avoid good but “unfair” opportunities, such as buying into a great business after insiders have already made a fortune, even though your expected return from this point can still be attractive
+
+  - Guardrails
+        Focus more on clarity rather than cleverness (many managements/managers talk a lot without saying anything).
+
+        Simple asset allocation plans & products usually work the best.
+
+        Set clear limits on the most exciting and popular themes of the day, especially those that have run up strongly in the recent past.
+
+        Ask whether you would still buy the same themes after a sharp fall in price, assuming the core economic story has not really changed.
+
+        Write down in advance the clear conditions under which you will exit the crowded trades.
+
+        Do not speculate, automate. Systematic allocation and rebalancing are far more effective for most people than trying to actively manage them.
+
+        Consciously gravitate toward ideas and products that require you to do less. Make fewer decisions.
+
+        Build frictions for tinkering. Any change to your allocation must survive a cooling off period.
+
+        Premortem: Imagine it is exactly 12 months from now. The investment has been a total disaster. Write down the story of exactly how it happened.
+
+        Before you buy, write down 2 quantifiable events that would force you to sell.
+
+        Create a Red Team whose sole job is to argue against the idea.
+
+        Belief can be fine in other parts of life, but in investing your default stance should be skepticism.
+
+        As you read, tag each claim as either supported by hard data or still just a hypothesis that needs testing.
+
+        Treat strong conviction as a risk signal as well, not just a strength.
+
+        Separate information that truly changes value from information that just makes the story feel richer.
+
+        If many data points share the same source or underlying factor, count them as one.
+
+        Anchor yourself to your own objectives, not other people’s returns: write down a few concrete money goals and track progress against those.
+
+        Cut comparison fuel at the source by limiting financial social media and “how much did you make” conversations.
+
+        Write a short personal investment policy statement that fixes your target allocation, rebalancing rules and when you are allowed to trade etc.
+
+        
+
+        
