@@ -4350,3 +4350,35 @@ an independent executable.
      - Asynchronous communication - Two artifacts communicate asynchronously if the caller does not wait for the response before proceeding. Optionally, the caller can be notified by the receiver through a separate channel when the request has completed.
      - Choreographed coordination - A workflow is choreographed when it lacks an orchestrator; rather, the services in the workflow share the coordination responsibilities of the workflow.
   
+- TIL: 23012026
+  -  Experience with LLM for Architects
+     -  domain modelling is not only about data structures but also modelling computation that works with it.
+     - LLM generated code is often procedural and harder to understand 
+     - LLM outputs are an averaged rehash of the familiar, by design ( writer Will Wilkinson said: “The very best writing ‘defamiliarizes’ the familiar - makes it fresh, conjures it anew, etc.)
+     - it's often useful to ask an LLM to generate three different alternatives, so the human can pick the best one
+     - Prefer to use LLMs as a translation layer inside my what/how loop. I use them to quickly sketch a first version, but I still rely on writing and refactoring to shape the structure
+     - Aim is to solidify and build the structure of the solution so it can accommodate future scenarios/changes.
+  - Aim of design, 
+    - Cohesion: Grouping parts that share the same “what” (business intent).
+    - Decoupling: Separating parts that have different reasons to change.
+   - Useful Patterns 
+     ---- Decision tables - Decision Tables can only handle a certain degree of complexity—no more than what you can capture in a single (if complex) conditional expression
+     ---- Production rule system - For more complex rules but it can get very difficult to modify. Try this with caution before going for a full-fledged tool.
+
+ - Database Connection pooling
+   - The hidden cost of database connections
+     - In many application architectures, particularly those involving frequent, short-lived interactions like web applications or serverless functions, a common pattern is to open a new database connection for each request and close it afterward. While seemingly straightforward, this approach carries significant hidden costs, especially when running at scale.
+     - Frequently establishing new database connections (common in web apps or serverless functions) is resource-intensive. Each new connection involves network handshakes, potential Transport Layer Security (TLS) negotiation, authentication, session initialization, and resource allocation, adding latency and consuming server CPU and memory. When multiplied across hundreds or thousands of concurrent requests, the cumulative impact of this connection overhead can be substantial:
+     - Performance degradation: The time spent setting up and tearing down connections adds directly to application response times. Users experience slower interactions as the application waits for new connections before executing queries.
+     - Resource exhaustion and scalability bottlenecks: Databases dedicate resources for each client connection. Even idle connections consume memory and CPU. This isn't just about the number of connections, but also the inefficiency caused by the constant churn of creation and destruction, consuming valuable resources, and capping how much a database can scale. 
+    Reliability concerns: Traffic spikes causing connection surges can overwhelm the server, leading to degraded performance, connection timeouts, or even outages.  
+    - While client-side connection pooling libraries exist within application frameworks, managing these effectively across distributed systems or microservices architectures can introduce significant complexities. Ensuring consistent configuration, behavior, and efficient resource utilization across numerous independent client pools is a non-trivial challenge. A centralized, server-managed approach offers a more robust and simpler solution in such environments.
+    - Pgbouncer vs pg-pool-II , https://stackoverflow.blog/2020/10/14/improve-database-performance-with-connection-pooling/
+ 
+
+ 
+ 
+
+ 
+
+        
