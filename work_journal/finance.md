@@ -740,6 +740,10 @@ entanglement in agencies, is one which will have less entrepreneurship.
 
         Write a short personal investment policy statement that fixes your target allocation, rebalancing rules and when you are allowed to trade etc.
 
-        
-
-        
+- precious metals
+    - silver is corollory/side effects to whats happens to gold.
+    - Gold's supply and demand are inelastic to prices.
+    - Outlook for Gold is positive owing to debasement of dollar (Jan-26) 
+    - silver has lot of industrial uses and much more available to gold. As prices go up, supply goes up. Silver is less of proxy for currency than gold. 
+    - Devaluation of dollar is need of US to address it's economic issues.
+    - The debasement trade is a bet that government borrowing and money printing will erode the value of the U.S. dollar, so investors are shifting cash into assets like gold, crypto, stocks and real estate that can hold their value.

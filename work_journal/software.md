@@ -4374,11 +4374,3 @@ an independent executable.
     Reliability concerns: Traffic spikes causing connection surges can overwhelm the server, leading to degraded performance, connection timeouts, or even outages.  
     - While client-side connection pooling libraries exist within application frameworks, managing these effectively across distributed systems or microservices architectures can introduce significant complexities. Ensuring consistent configuration, behavior, and efficient resource utilization across numerous independent client pools is a non-trivial challenge. A centralized, server-managed approach offers a more robust and simpler solution in such environments.
     - Pgbouncer vs pg-pool-II , https://stackoverflow.blog/2020/10/14/improve-database-performance-with-connection-pooling/
- 
-
- 
- 
-
- 
-
-        
