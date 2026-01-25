@@ -30,6 +30,7 @@ draft: false
 
 ## Redis
 
+- [Four ways to shoot yourself in the foot with Redis](https://philbooth.me/blog/four-ways-to-shoot-yourself-in-the-foot-with-redis)
 - [About Redis](https://architecturenotes.co/redis/)
 - [DragonflyDB - Alternative to Redis](https://dragonflydb.io/)
 - [Redis High Availability](https://alex.dzyoba.com/blog/redis-ha/)
