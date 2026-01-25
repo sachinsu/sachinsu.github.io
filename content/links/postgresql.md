@@ -9,6 +9,8 @@ draft: false
 ## General Articles
 
 - [Mistakes to avoid while using PostgreSQL](https://philbooth.me/blog/nine-ways-to-shoot-yourself-in-the-foot-with-postgresql)
+- [The Part of PostgreSQL We Hate the Most](https://www.cs.cmu.edu/~pavlo/blog/2023/04/the-part-of-postgresql-we-hate-the-most.html)
+- [We are sticking with postgresql ](https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html)
 - [Free Postgres database (or SQLite) from fly.io](https://fly.io/blog/free-postgres/?utm_source=hackernewsletter&utm_medium=email&utm_term=code)
 - [Using generate_series feature for reporting](https://rob.conery.io/2018/08/01/simple-monthly-reports-in-postgresql-using-generate_series/)
 - [When Postgres blocks: 7 tips for dealing with locks](https://www.citusdata.com/blog/2018/02/22/seven-tips-for-dealing-with-postgres-locks/)
