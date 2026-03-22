@@ -9,7 +9,7 @@
       <url>https://sachinsu.github.io/images/papermod-cover.png</url>
       <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.154.5</generator>
+    <generator>Hugo -- 0.158.0</generator>
     <language>en</language>
     <copyright>©</copyright>
     <lastBuildDate>Sat, 06 Dec 2025 01:00:00 +0530</lastBuildDate>
@@ -50,7 +50,7 @@
       <description></description>
     </item>
     <item>
-      <title>MicroServices</title>
+      <title>Microservices</title>
       <link>https://sachinsu.github.io/tags/microservices/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/microservices/</guid>
@@ -232,7 +232,7 @@
       <description></description>
     </item>
     <item>
-      <title>Postgresql</title>
+      <title>PostgreSQL</title>
       <link>https://sachinsu.github.io/tags/postgresql/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/postgresql/</guid>
@@ -505,7 +505,7 @@
       <description></description>
     </item>
     <item>
-      <title>Sql</title>
+      <title>SQL</title>
       <link>https://sachinsu.github.io/tags/sql/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/sql/</guid>
