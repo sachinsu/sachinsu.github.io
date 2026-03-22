@@ -1180,3 +1180,100 @@ Madhuri Roy 1 year ago
     - That head also knows (or can request) a comprehensive list of all the projects the department has shipped in the last quarter
     - That head has the ability to plan work at least one quarter ahead (ideally longer)
     - That head can, in an emergency, direct the entire resources of the department at immediate work
+
+- Questioning in particular context, 
+- SKIP THE ADVICE. ASK THESE SEVEN QUESTIONS TO HELP SOMEONE FIGURE IT OUT
+
+FOR THEMSELVES
+
+What is the challenge that you’re facing?
+
+What have you tried already?
+
+If you could try anything to solve this, what would you try?
+
+And what else? (Repeat this two or three times, as needed, to surface additional ideas.)
+
+Which of these options interests you most?
+
+What might stand in the way of this idea, and what could be done about that?
+
+What is one step you could take to begin acting on this, right away?
+
+---------------------------
+
+BEFORE YOU CRITICIZE SOMEONE, ASK YOURSELF THESE QUESTIONS
+
+What’s motivating this critical urge?
+
+How am I guilty of the thing I’m criticizing?
+
+How would I react if someone said something similar to me?
+
+What positive result do I hope will come of saying this?
+
+Am I deriving pleasure from criticizing?
+
+----------------------------
+
+USE THESE QUESTIONS TO “CRACK YOUR CODE” AS A LEADER
+
+Who are my formative influencers? Leadership values are instilled early, often from relatives or teachers; revisit those lessons.
+
+When have I been at my best? Study your past successes to assess strengths and productive behaviors.
+
+When have I come up short—and why? Failures usually contain lessons that may be useful in developing guiding principles.
+
+What have I taken a stand for (and against)? This question can help clarify what matters most to you—which should shape your leadership code.
+
+
+------------------------------
+
+QUESTIONS TO ASK INSTEAD OF HOW ARE YOU?
+
+What’s the best thing that happened to you today? This can be adapted to ask about this week, the weekend, etc.
+
+What are you excited about in your life right now?
+
+What are you most looking forward to at this gathering? This one is good for conferences and other social events.
+
+
+What are you most passionate about? This is a great way to shift from a job (which may be boring) to interests.
+
+What problem do you wish you could solve? This shifts from present realities to larger goals and possibilities.
+
+What did you want to be when you were growing up? This question invites a story about growing up and the road that led to the present.
+
+--------------------------------------
+
+QUESTIONS TO ASK YOUR SPOUSE INSTEAD OF HOW WAS YOUR DAY? 14
+
+Sara Goldstein of Mother.ly came up with twenty-one questions; here are six of them.
+
+When did you feel appreciated today?
+
+Will you remember any specific part of today a year from now?
+
+How can I make your day easier in five minutes?
+
+If we were leaving for vacation tonight, where do you wish we were heading?
+
+What made you laugh today?
+
+What do you wish you did more of today?
+
+-----------------------------
+
+ASKING THESE QUESTIONS WILL MAKE YOU A BETTER LISTENER
+
+Just to be clear, are you saying ___? At key points, repeat back a paraphrase of what you’ve heard.
+
+Can you explain what you mean by that? This is a classic “clarifying” question used by interviewers to invite people to better explain themselves. (Tone is important: Go for curious,
+
+not puzzled or antagonistic.)
+
+I imagine that made you feel __ , right? A variation of How did it make you feel? (which sounds too much like a psychiatrist’s question).
+
+And what else? The “AWE” question may be the best way to draw out deeper insights—and keep you in listening mode.
+
+

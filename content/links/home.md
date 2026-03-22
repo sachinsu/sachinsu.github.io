@@ -37,6 +37,7 @@ draft: false
 
 #### Miscellaneous
 
+- [Rosettacode - Solution implemented in various languages](https://rosettacode.org/wiki/Category:Solutions_by_Programming_Task)
 - [OSS alternatives to Popular tools/Systems](https://github.com/Runacapital/awesome-oss-alternatives)
 - [Open Source alternative tools](https://degoogle.jmoore.dev/)
 - [Attention is all Manager need  - Techniques and processes](https://philcalcado.com/2023/07/21/attention_is_all_a_manager_needs.html)
@@ -56,3 +57,4 @@ draft: false
 - [All About Public key Infrastructure(PKI)](https://smallstep.com/blog/everything-pki/)
 - [Most data work seems fundamentally Worthless](https://ludic.mataroa.blog/blog/most-data-work-seems-fundamentally-worthless)
 - [100 tips for Better Life](https://www.lesswrong.com/posts/7hFeMWC6Y5eaSixbD/100-tips-for-a-better-life)
+- [DevDocs -  Multiple API Documentations in a fast, organized and searchable interface ](https://devdocs.io)

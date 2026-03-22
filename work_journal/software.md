@@ -119,7 +119,7 @@
        - Scalability. If traffic goes up 10x, will the system fall over? What about 100x? Does the system have to be over-provisioned or can it scale automatically? What bottlenecks will require engineering intervention?
        - Development speed. If I need to extend the system, how fast can it be done? Can most engineers work on it, or does it require a domain expert?
 
-         - Performance:
+       - Performance:
          - Latency (e.g., sub-millisecond, milliseconds)
          - Throughput (e.g., requests per second, data transfer rates)
          - Scalability (e.g., handle X concurrent users, scale to Y transactions/second)
@@ -165,7 +165,7 @@
       - “Remove needless variability” through adoption of immutable infrastructure, long-lived -feature flags, and so on.
       - “Make decisions reversible” by making it easy to undo deploys and such. Prefer immediately shifting traffic off a broken new version to slowly deploying a previous revision. Prefer  flipping flags to disable new features over deployment, etc.
       - “Prefer evolvable over predictable.” If you optimize for the known challenges for an architecture, you’ll get stuck because there are at least as many unknown challenges as known challenges. It’s better to be able to respond to problems quickly than to cleanly address -what you’re currently aware of.
-      - “Build anticorruption layers.” Mostly this means building good interfaces so you can shift -out the implementation underneath. The act of adding interfaces can be expensive as well, so -balance this with finding the last responsible moment to make the decision.
+      - “Build anti-corruption layers.” Mostly this means building good interfaces so you can shift -out the implementation underneath. The act of adding interfaces can be expensive as well, so -balance this with finding the last responsible moment to make the decision.
       - “Build sacrificial architectures.” Assume that you’ll make tradeoffs that won’t last forever, and be okay with occasionally throwing away your implementations. Uses example of Ebray rewriting from Perl to C++ to Java over course of seven years.
      -   “Mitigate external change.” For example, don’t rely on global package repositories, but instead pull in copies of packages you need locally. Then you can manage your upgrade timing in addition to owning your build pipeline reliability.
      -    “Libraries versus frameworks.” Argues against frameworks, since you write code that integrates with frameworks, as opposed to writing code that calls out to libraries. Consequently, there is tighter coupling in frameworks.
@@ -229,8 +229,7 @@
            - Understand the fragile places within your complex technology stack and automate protections via fitness functions. fitness functions should be used to ensure integrity of integration points.
            - When coupling points impede evolution or other importance architectural characteristics, break the coupling by forking or duplication.
            - Don’t become irrationally attached to handcrafted artifacts. 
-           - Reporting in Microservices Architecture  - Many microservices architectures solve the reporting problem by separating behavior, where the isolation of services benefits separation but not consolidation. Architects commonly build these architectures using event streaming or message queues to populate domain “system of record” databases, each embedded within the architectural quantum of the service, using eventual consistency rather than transactional behavior. A set of reporting services also listens to the event stream, populating a denormalized reporting database optimized for reporting. Using eventual consistency frees architects from coordination—a form of coupling from an architectural standpoint—allowing different abstractions for different uses of the application.
-         
+           - Reporting in Microservices Architecture  - Many microservices architectures solve the reporting problem by separating behavior, where the isolation of services benefits separation but not consolidation. Architects commonly build these architectures using event streaming or message queues to populate domain “system of record” databases, each embedded within the architectural quantum of the service, using eventual consistency rather than transactional behavior. A set of reporting services also listens to the event stream, populating a denormalized reporting database optimized for reporting. Using eventual consistency frees architects from coordination—a form of coupling from an architectural standpoint—allowing different abstractions for different uses of the application.         
           - Reduce needless variability  - Immutable Infrastructure (including Development environment), Pair Programming
           - Make Decisions Reversible - Blue/green deployments, Feature Toggles
           - Prefer evolvable over predictable - Use incidental plumbing like message queues, search engines etc. Avoid "wiring" too much to external dependencies by isolating them behind interfaces  .
@@ -254,7 +253,6 @@
                        - Calculates the number of incoming calls in production to verify the maximum number of requests that the service needs to support and what would be the auto-scaling factor to guarantee availability with horizontal scaling
                        - Make new load and concurrency tests using the new number of requests per second
                        - Monitor the memory and CPU, and define the stress point
-
 
   - Generative AI
     - Context Engineering 
@@ -358,7 +356,7 @@
 
       - Criteria for Identification of component/service:
          - Cohesion / Single Responsibility Principle (SRP):
-            - Criterion: Does the logic represent a singe, well-defined responsibility or concept? Does it all relate to one primary purpose?
+            - Criterion: Does the logic represent a single, well-defined responsibility or concept? Does it all relate to one primary purpose?
             - Evaluation: Highly cohesive logic (focused on one task) is a strong candidate for separation. If a potential component does many unrelated things, it might need further decomposition. Group things together that change together for the same reasons.
             - Goal: Improve clarity, maintainability, and testability by ensuring components have a clear focus.
          - Volatility / Rate and Reason for Change:
@@ -401,7 +399,6 @@
           -   Criterion: Is the logic itself complex? Would separating it make both the new component and the remaining system easier to understand and reason about?
           -   Evaluation: Sometimes separation is justified simply to break down a large, complex problem into smaller, more manageable pieces.
           -   Goal: Reduce cognitive load for developers, improve understandability.
-
          - Important Considerations:
           -  Trade-offs: Separation is not free. It can introduce new complexities like network latency (for services), data consistency challenges, more complex deployment orchestration, and the need for inter-component communication protocols.
           -  Granularity: The "size" of the component matters. The criteria apply differently when deciding between classes versus microservices. The cost/benefit ratio changes with granularity.
@@ -474,7 +471,7 @@
                · Reproducible results on all environments like dev, test, prod etc.
           ○ Stability patterns for distributed Architecture 
                ○ Application Resilience 
-                    § RPO	How much data can you afford to lose and recreate?
+                    § RPO - How much data can you afford to lose and recreate?
                     RTO	How quickly must you recover? What is the cost of downtime?
                ○ Integrations are #1 risk to stability 
                     § Every out of process call can kill system including database calls
@@ -554,7 +551,7 @@
              * Delivery: You can entrust over your messages and the   messaging system will try its best not lose them. It will then attempt   to deliver them to the right parties and will retry as often as necessary.
              * Buffering: A messaging infrastructure is generally great at   accepting bursts of messages at once and organizing them for later   retrieval. The retrieval can then occur at the pace that your   application can handle. That is also called load-leveling.
              * Network-Bridging: Messaging infrastructures can often be   attached to multiple networks, allowing information to pass between   applications in those networks without there being IP-level connectivity   between them.
-         - Queues are One of the most fundamental and most important data  structures in computing
+         - Queues are one of the most fundamental and most important data  structures in computing
              - Sequence of records , commonly ordered by moment of arrival
              - Write/add at the bottom , read/consume at the top
              - Consumed records are removed
@@ -579,7 +576,7 @@
                - Load leveling - allows a business process to handle   transactions at optimal capacity use and without getting overwhelmed.Spiky loads are buffered by the queue until the processor   can handle them .
                - Discrete event router - Push style distribution of   discrete events to serverless workloads or other messaging infrastructures (Azure event grid)
                - Queue pub/sub broker - Pull-style, queue based transfer   of  jobs (RabbitMQ)
-               - Event Stream engine - Partitioned, high volume,   sequential recording and unlimited pull style re-reads of event streams.   (kafka, pulsar)
+               - Event Stream engine - Partitioned, high volume,   sequential recording and unlimited pull style re-reads of event streams.  (kafka, pulsar)
                - Event stream aggregator - Stateful processing of event   streams yielding event streams (Apache Samza, Apache Flink)
 
 - Data Architecture
@@ -588,7 +585,8 @@
          -  Lineage - The ability to find data origin, trace data back, understand and visualize data as it flows through data sources
          -  Accessibility - Ask for Security credentials while accessing data asset. Networking infrastructure to facilitate efficient access
          -  Interoperability - Using format acceptable to most internal processing systems
-         -  Reusability - Data  is part of known schema.
+         -  Reusability - Data is part of known schema.
+        
   - Aspects
     - Property                 OLTP                                             OLAP 
      Main read pattern        Point queries (fetch individual records by key)   Aggregate over large number of records
@@ -603,7 +601,7 @@
 
      State of data            Latest state of data (current point in time)      History of events that happened over time
 
-     - Data/Database
+    - Data/Database
         - Aggregate  orientation  is  the  preference  to  operate  on  data  that  is  related  and  has  a complex  data  structure.
         - Identify Data Domains - Data domain is logical/physical segregation of database objects related to a particular domain e.g. customer, Survey and so on.
         - Why Disintegrate Operational Data? 
@@ -691,8 +689,8 @@
          - INFO: Record major events in the flow to help the developer reading it understand what was being executed.
          - DEBUG: Like INFO but more detailed, including inspection into objects, data structures, etc.
     - scenario based 
-	- The requirement is An online retailer runs a flash sale with 500 units of a hot product. Within minutes, they've processed 742 orders. Their inventory shows -242 units. You are 		using postgresql and thinking about using locks on inventory table to overcome this issue however it impacts throughput. What are different approaches to handle this?
-		- Use optimistic locking - Have version being maintained in inventory table and check version every time stock level is to be updated. Retry if stock level update fails due 		to retries.  It offers a good balance of performance and data consistency, pushing the complexity to the application for retries, which is often manageable.
+	- The requirement is an online retailer runs a flash sale with 500 units of a hot product. Within minutes, they've processed 742 orders. Their inventory shows -242 units. You are using postgresql and thinking about using locks on inventory table to overcome this issue however it impacts throughput. What are different approaches to handle this?
+		- Use optimistic locking - Have version being maintained in inventory table and check version every time stock level is to be updated. Retry if stock level update fails due to retries.  It offers a good balance of performance and data consistency, pushing the complexity to the application for retries, which is often manageable.
 		- Queue-Based Order Processing (Where all updates are queued and processed by separate worker(s)) is a strong contender, especially if the volume of orders during the flash sale is truly enormous. It provides excellent scalability and resilience, but at the cost of increased architectural complexity and eventual consistency.
 		- Avoid pessimistic locking using 'For update'  as its not scalable 
 
@@ -728,7 +726,7 @@
     tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
          - In absense of observability setup, start with logs.
          - Key Non-functional aspects of a Payments System
-             - Reliability and fauly tolerance
+             - Reliability and fault tolerance
              - Reconciliation
          - Non relational databases are good for below requirements,
              - Application requires super-low latency
@@ -819,7 +817,6 @@
 
 
 =========================================================================================================
-
 
   - Understanding distributed systems through patterns
     -     Write-ahead log - to sync multiple data stores while performing update one at a time in atomic way.
@@ -1061,11 +1058,10 @@
              - Throttling
              - CPU and Memory Utilization
              - Exception counts
-         - Relevant Metrics should be available to slice by endpoint or job,
-    tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
-         - In absense of observability setup, start with logs.
+         - Relevant Metrics should be available to slice by endpoint or job,tenant_id, app_id, worker_id, zone, hostname, and queue (for jobs).
+         - In absence of observability setup, start with logs.
          - Key Non-functional aspects of a Payments System
-             - Reliability and fauly tolerance
+             - Reliability and faulty tolerance
              - Reconciliation
          - Non relational databases are good for below requirements,
              - Application requires super-low latency
@@ -1107,13 +1103,13 @@
              - Buy non-core competencies whenever prudent.
 
     - Things to consider in software engineering 
-         - I don't know - The reason many of us love software is because we   are lifelong learners, and in software no matter which direction you   look, there are wide vistas of knowledge going off in every direction     and expanding by the day. This means that you can spend decades in your     career, and still have a huge knowledge gap compared to someone who has also spent decades in a seemingly similar role. The sooner you realize     this, the sooner you can start to shed your imposter syndrome and     instead delight in learning from and teaching others.
-         - The hardest part is building the right thing - Due to Complexity and irrationality of the environments. Designing software is mostly a     listening activity, and we often have to be part software engineer, part     psychic, and part anthropologist. Investing in this design process,     whether through dedicated UX team members or by simply educating yourself, will deliver enormous dividends.
-         - Think like Designers - Concentrate on User experience of the Code. Be it API, UI ; consider who will be using it , why and how it     will be used and what is important to the users.
+         - I don't know - The reason many of us love software is because we   are lifelong learners, and in software no matter which direction you   look, there are wide vistas of knowledge going off in every direction     and expanding by the day. This means that you can spend decades in your career, and still have a huge knowledge gap compared to someone who has also spent decades in a seemingly similar role. The sooner you realize this, the sooner you can start to shed your imposter syndrome and     instead delight in learning from and teaching others.
+         - The hardest part is building the right thing - Due to Complexity and irrationality of the environments. Designing software is mostly a listening activity, and we often have to be part software engineer, part     psychic, and part anthropologist. Investing in this design process, whether through dedicated UX team members or by simply educating yourself, will deliver enormous dividends.
+         - Think like Designers - Concentrate on User experience of the Code. Be it API, UI ; consider who will be using it , why and how it will be used and what is important to the users.
          - the best code is no code or the one you don't have to maintain
          - The primary job of software engineer is delivering value
-         - Maintain balance between research and getting started with     implementation
-         - be wary of people designing systems who haven't written code in     long time. keep up with developer ecosystem.
+         - Maintain balance between research and getting started with implementation
+         - be wary of people designing systems who haven't written code in long time. keep up with developer ecosystem.
          - Worry less about elegance and perfection; instead strive for continuous improvement and creating a livable system that your team enjoys working in and sustainably delivers value.
          - keep asking questions about assumptions and approaches even if they sound dumb.
          - Avoid programmers who wastes time, doesn’t ask for feedback, doesn’t test their code, doesn’t consider edge cases.
@@ -1137,34 +1133,20 @@
            -    Tech debt is like fast food. Occasionally it’s acceptable but   if you get used to it, it’ll kill the product faster than you think (and   in a painful way).
            -    When making decisions about the solution all things equal,  go for this priority:But don’t follow that blindly because it is dependent on the nature of the product. Like any career, the more experience you earn, the more you can find the right balance for each given situation. For example,
       when designing a game engine, performance has the highest priority, but when creating a banking app, security is the most important factor.
-           -    Bugs’ genitals are called copy & paste. That’s how they
-      reproduce. Always read what you copy, always audit what you import. Bugs
-      take shelter in complexity. “Magic” is fine in my dependency but not in
-      my code.
-           -    Don’t only write code for the happy scenario. Write good
-      errors that answer why it happened, how it was detected and what can be
-      done to resolve it. Validate all system input (including user input):
-      fail early but recover from errors whenever possible. Assume the user
-      hold a gun: put enough effort into your errors to convince them to shoot
-      something other than your head!
-           -    Don’t use dependencies unless the cost of importing,
-      maintaining, dealing with their edge cases/bugs and refactoring when
-      they don’t satisfy the needs is significantly less than the code that
-      you own.
-           -    Stay clear from hype-driven development. But learn all you
-      can. Always have pet projects.
-           -    Get out of your comfort zone. Learn every day. Teach what
-      you learn. If you’re the master, you’re not learning. Expose yourself to
-      other languages, technologies, culture and stay curious.
-           -    Good code doesn’t need documentation, great code is well
-      documented so that anyone who hasn’t been part of the evolution, trial &
-      error process and requirements that led to the current status can be
-      productive with it. An undocumented feature is a non-existing feature. A
-      non-existing feature shouldn’t have code.
+           -    Bugs’ genitals are called copy & paste. That’s how they reproduce. Always read what you copy, always audit what you import. Bugs take shelter in complexity. “Magic” is fine in my dependency but not in my code.
+           -    Don’t only write code for the happy scenario. Write good errors that answer why it happened, how it was detected and what can be done to resolve it. Validate all system input (including user input):
+                fail early but recover from errors whenever possible. Assume the user
+                hold a gun: put enough effort into your errors to convince them to shoot
+                something other than your head!
+           -    Don’t use dependencies unless the cost of importing, maintaining, dealing with their edge cases/bugs and refactoring when
+      they don’t satisfy the needs is significantly less than the code that you own.
+           -    Stay clear from hype-driven development. But learn all you can. Always have pet projects.
+           -    Get out of your comfort zone. Learn every day. Teach what       you learn. If you’re the master, you’re not learning. Expose yourself to       other languages, technologies, culture and stay curious.
+           -    Good code doesn’t need documentation, great code is well documented so that anyone who hasn’t been part of the evolution, trial & error process and requirements that led to the current status can be productive with it. An undocumented feature is a non-existing feature. A non-existing feature shouldn’t have code.
            -    Avoid overriding, inheritance and implicit smartness as much as possible. Write pure functions. They are easier to test and reason about. Any function that’s not pure should be a class. Any code construct that has a different function, should have a different name.
-           -    Never start coding (making a solution) unless you fully understand the problem. It’s very normal to spend more time listening and reading than typing code. Understand the domain before starting to code. A problem is like a maze. You need to progressively go through the code-test-improve cycle and explore the problem space till you reach the end.
-           -    Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t overengineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
-           -    Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
+           - Never start coding (making a solution) unless you fully understand the problem. It’s very normal to spend more time listening and reading than typing code. Understand the domain before starting to code. A problem is like a maze. You need to progressively go through the code-test-improve cycle and explore the problem space till you reach the end.
+           - Don’t solve a problem that doesn’t exist. Don’t do speculative programming. Only make the code extensible if it is a validated assumption that it’ll be extended. Chances are by the time it gets extended, the problem definition looks different from when you wrote the code. Don’t over engineer: focus on solving the problem at hand and an effective solution implemented in an efficient manner.
+           - Software is more fun when it’s made together. Build a sustainable community. Listen. Inspire. Learn. Share.
 
      - Software Architecture cannot be created in a vacuum and solid technical foundation is not enough.
      - Non-technical and cultural implications of the technology are important i.e. receptivity, speed to market and long term maintenance.
@@ -1342,13 +1324,11 @@
            - Concurrency, with async/await (in several languages)
            - Centering in CSS, with flexbox/grid
            - Building fast programs, with Go
-           - Image recognition, with transfer learning (someone pointed out
-      that the joke in this XKCD doesn’t make sense anymore)
+           - Image recognition, with transfer learning (someone pointed out that the joke in this XKCD doesn’t make sense anymore)
            - Building cross-platform GUIs, with Electron
            - VPNs, with Wireguard
            - Running your own code inside the Linux kernel, with eBPF
-           - Cross-compilation (Go and Rust ship with cross-compilation
-      support out of the box)
+           - Cross-compilation (Go and Rust ship with cross-compilation support out of the box)
            - Configuring cloud infrastructure, with Terraform
            - Setting up a dev environment, with Docker
            - Sharing memory safely with threads, with Rust
@@ -1362,8 +1342,7 @@
            - Realtime web applications, with Firebase
            - Image recognition, with hosted ML services like Teachable Machine
            - Cryptography, with opinionated crypto primitives like libsodium
-           - Live updates to web pages pushed by the web server, with
-      LiveView/Hotwire
+           - Live updates to web pages pushed by the web server, with  LiveView/Hotwire
            - Embedded programming, with MicroPython
            - Building videogames, with Roblox / Unity
            - Writing code that runs on GPU in the browser (maybe with Unity?)
@@ -1374,18 +1353,13 @@
            - ESP microcontrollers
            - Batch data processing, with Spark
 
-
     - Data Architecture
-
         - Database Workloads
              - OLTP
-                 - Characterstics,
+                 - Characteristics,
                      - Inserts, updates, and deletes only affect a single row. An example: Adding an item to a user’s shopping cart.
-                     - Read operations only read a handful of items from the
-        database. An example: listing the items in a shopping cart for a user.
-                     - Aggregations are used rarely, and when they are used they
-        are only used on small sets of data. Example: getting the total price of
-        all items in a user their shopping cart.
+                     - Read operations only read a handful of items from the database. An example: listing the items in a shopping cart for a user.
+                     - Aggregations are used rarely, and when they are used they are only used on small sets of data. Example: getting the total price of all items in a user their shopping cart.
                  - Relevant benchmarks
                      - Throughput in TPS (transactions per second)
                      - Query latency, usually at different percentiles (p95, etc.)
@@ -1397,17 +1371,12 @@
                      - Queries are large and complex.
                      - Not a lot of concurrent users
                  - Relevant benchmarks
-                     - How long it took to run all of the queries that are part
-        of the benchmark
-                     - How long it took to run each of the queries, measured
-        separately per query
+                     - How long it took to run all of the queries that are part of the benchmark
+                     - How long it took to run each of the queries, measured separately per query
              - HTAP (Hybrid transactional/analytical processing)
                  - Combines characteristics from OLTP and OLAP
              - Important questions while benchmarking
-                 - Is it running on production infrastructure? A lot more
-        performance can usually be achieved when critical production features
-        have been disabled. Things like backups, High Availability (HA) or
-        security features (like TLS) can all impact performance.
+                 - Is it running on production infrastructure? A lot more performance can usually be achieved when critical production features have been disabled. Things like backups, High Availability (HA) or security features (like TLS) can all impact performance.
                  - How big is the dataset that was used? Does it fit in RAM or
         not? Reading from disk is much slower than reading from RAM. So, it
         matters a lot for the results of a benchmark if all the data fits in RAM.
@@ -1423,12 +1392,9 @@
       - PostgreSQL Connection Pool size 
          - If a server is provisioned with 128 cores. With hyperthreading on, it can handle 256 processes. EDB expects factor of 4 to be acceptable while setting max_connections parameter. 
          - Connection pooler (e.g. pgbouncer) allows thousands of clients/application connections to share a relatively small pool of database sessions
-         - A connection pooler is a vital part of any high-throughput databasesystem, as it eliminates connection overhead and reserves larger portions
-      of memory and CPU time to a smaller set of database connection,
-      preventing unwanted resource contention and performace degradation.
+         - A connection pooler is a vital part of any high-throughput databasesystem, as it eliminates connection overhead and reserves larger portions of memory and CPU time to a smaller set of database connection, preventing unwanted resource contention and performace degradation.
            - Formula
-               pool size = min(num_cores,
-      max_parallel_ios)/active_Factor*Parallelism
+               pool size = min(num_cores, max_parallel_ios)/active_Factor*Parallelism
            - Determining Active Factor
                - PostgreSQL 14,
                    - easy with the new session statistics in PostgreSQL v14:
@@ -1451,7 +1417,6 @@
       that the disk can handle
             - “parallelism” is the average number of server processes used for
       a single SQL statement
-
 
      - Best practices for Data Ingestion
          - Write down all of the most important connectors for your business, the skills and time your team has to offer, and your budget when deciding on the right ingestion tool.
@@ -1489,7 +1454,7 @@
      - Streaming
          - All the ETL use cases are potentially candidates for streaming
 
-     - A data warehouse is a relational database in which the data is tored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
+     - A data warehouse is a relational database in which the data is stored in a schema that is optimized for data analytics rather than transactional workloads. Commonly, the data from a transactional store is de-normalized into a schema in which numeric values are stored in central fact tables, which are related to one or more dimension tables that represent entities by which the data can be aggregated. For example a fact table might contain sales order data, which can be aggregated by customer, product, store, and time dimensions (enabling you, for example, to easily find monthly total sales revenue by product for each store). This kind of fact and dimension table schema is called a star schema; though it's often extended into a snowflake schema by adding additional tables related to the dimension tables to represent dimensional hierarchies (for example, product might be related to product categories). A data warehouse is a great choice when you have transactional data that can be organized into a structured schema of tables, and you want to use SQL to query them.
          - Star schema
              - Fact table - 1 table usually. Typically very large. Updated frequently and usually append only. They reference dimension tables.
                  - Examples - Sales transactions, Course enrollments, Page views
@@ -1557,8 +1522,7 @@
          -  designed for historical tracking all aspects of data 
          -  relationships and attributes as well as where the data is being sourced from over time. Satellites, which are similar to dimensions.
          - Puts forth a set of design principles & structures for increasing historical tracking performance within the Vault (PiT and Bridge). The Data Vault model is flexible enough to adopt these structures at any point in time within the iterative modeling process and does not require advanced planning.
-         - Data Vault is essentially a layer between the information mart / star schema and staging. There is some additional overhead that comes with developing this layer both in terms of ETL development and modeling. If the project is on a small scale or the project’s life is
-        short-lived, it may not be worth pursuing a Data Vault model.
+         - Data Vault is essentially a layer between the information mart / star schema and staging. There is some additional overhead that comes with developing this layer both in terms of ETL development and modeling. If the project is on a small scale or the project’s life is short-lived, it may not be worth pursuing a Data Vault model.
          - One of the main driving factors behind using Data Vault is for both audit and historical tracking purposes. If none of these are important to you or your organization, it can be difficult to eat the overhead required to introduce another layer into your modeling. However, speaking from long-term requirements, it may be a worthwhile investment upfront.
         - Wherescape
             - Additional layer between Staging and Star schema
@@ -1580,9 +1544,7 @@
               - Sharding. Citus handles all of the sharding, so applications do not need to be shard-aware.
               - Multi-tenancy. Applications built to colocate multiple customers’ databases on a shared cluster—like most SaaS applications—are called multi-tenant. Sharding, scaling, resharding, rebalancing, and so on are common pain points in modern SaaS platforms, all of which Citus solves.
               - Analytics. Citus is not exclusively an analytical database, but it certainly is deployed for distributed, massively parallel analytics workloads a lot. Part of this is because Citus supports complex queries, building upon Postgres’s own very robust SQL support. Citus can shard queries that do combinations of things like distributed GROUP BY and JOIN together.
-
               - A Citus cluster is composed of PostgreSQL nodes with one of two roles: coordinator or worker. A coordinator receives queries, then decomposes them into smaller queries that execute on shards of data in the worker nodes. The coordinator then reassembles the results and returns them to the client.
-
               - Citus is not middleware: it’s an extension to Postgres that turns a collection of nodes into a clustered database. This means that all of the query rewriting, scatter-gather MPP processing, etc happens within the PostgreSQL server process, so it can take advantage of lots of PostgreSQL’s existing codebase and functionality.
 
         - Data Mesh
@@ -1629,16 +1591,11 @@
                - If multiple concurrent requests are detected with the same idempotency key, only one request is processed and the others receive the “429 Too Many Requests” status code.
                - To support idempotency, we can use the database's unique key constraint.
 
-
      - Handling long-running operations in REST API (Azure Way),
          - The client sends the initial request to the resource to initiate the long-running operation. This initial request could be a PUT, PATCH, POST, or DELETE method.
-
          - The resource validates the request and initiates the operation processing. It sends a response to client with a 200-OK HTTP status code (or 201-Created if the operation is a create operation) and a representation of the resource where the status field is set to a value indicating that the operation processing has been started.
-
          - The client then issues a GET request to the resource to determine if the operation processing has completed.
-
          - The resource responds with a representation of the resource. While the operation is still being processed, the status field will contain a "non-terminal" value, like Processing.
-
          - After the operation processing has completed, a GET request from the client will receive a response where the status field contains a "terminal" value -- Succeeded, Failed, or Canceled -- that indicates the result of the operation
 
     - OpenAPI Specification
@@ -1648,7 +1605,7 @@
          - Postman can be used to generate test cases basis OpenAPI Document
          - API platforms are systems with integrated tools and processes that allow producers and consumers to effectively build, manage, publish and consume APIs.
              - Tools
-                 - API Client - to send PAI Calls
+                 - API Client - to send API Calls
                  - API Designing and mocking
                  - API testing and automation
                  - API Documentation
@@ -1704,11 +1661,10 @@
 
     - .NET Performance 
        - Avoid LINQ. LINQ is great in application code, but rarely belongs on a hot path in library/framework code. LINQ is difficult for the JIT   to optimize (IEnumerable<T>...) and tends to be allocation-happy.
-       - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most common being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> fo+r foreach.
+       - Use concrete types instead of interfaces or abstract types. This was mentioned above in the context of inlining, but this has other benefits. Perhaps the most comlmon being that if you are iterating over a List<T>, it's best to not cast that list to IEnumerable<T> first (eg, by using LINQ or passing it to a method as an IEnumerable<T> parameter). The reason for this is that enumerating over a list using foreach uses a non-allocating List<T>.Enumerator struct, but when it's cast to IEnumerable<T>, that struct must be boxed to IEnumerator<T> fo+r foreach.
        - Mark classes as sealed by default. When a class/method is marked as sealed, RyuJIT can take that into account and is likely able to inline a method call.
        - Mark override methods as sealed if possible.
        - Pass Struct by ref to minimize on-stack copies
-
        - Use Streams/pipelines for large data sets
          - If streams are using Buffers then always FlushAsync.
          - Pool and re-use buffers when you need to operate on in-memory data.
@@ -1814,36 +1770,24 @@
 
 
 - Interview Tips 
-       - If the interviewer interrupts you, it's probably because you’re
-  going off track.
-       - It's more important to cover everything broadly than it is to
-  explain every small thing in detail.Interviewers are not looking for
-  specific answers with ironclad certainty. They want to see
-  well-reasoned, qualified decisions based on engineering trade-offs.
-       - Whatever decision you make, explain why. In a system design
-  interview, why is more important than what. For anything you say, be
-  prepared to explain why.
-       - Your interviewer cares less about whether your design is good in
-  itself, and more about whether you are able to talk about the trade-offs
-  (positives and negatives) of your decisions.
+       - If the interviewer interrupts you, it's probably because you’re going off track.
+       - It's more important to cover everything broadly than it is to explain every small thing in detail.Interviewers are not looking for specific answers with ironclad certainty. They want to see well-reasoned, qualified decisions based on engineering trade-offs.
+       - Whatever decision you make, explain why. In a system design  interview, why is more important than what. For anything you say, be prepared to explain why.
+       - Your interviewer cares less about whether your design is good in  itself, and more about whether you are able to talk about the trade-offs  (positives and negatives) of your decisions.
        - For a System design interview, Interviewer looks for,
-               - a broad, base-level understanding of system design
-  fundamentals.
-               - back-and-forth about problem constraints and parameters.
-               - well-reasoned, qualified decisions based on engineering
-  trade-offs.
-               - the unique direction your experience and decisions take them.
-               - a holistic view of a system and its users.
-               - Not interested in deep expertise in the given problem
-  domain.
+            - a broad, base-level understanding of system design fundamentals.
+            - back-and-forth about problem constraints and parameters.
+            - well-reasoned, qualified decisions based on engineering trade-offs.
+            - the unique direction your experience and decisions take them.
+            - a holistic view of a system and its users.
+            - Not interested in deep expertise in the given problem  domain.
 
     -  STAR (Situation, Task, Action, Result):
          - “What was the situation?”
          - “What were you tasked with?”
          - “What actions did you take?”
          - “What was the result?”
-         - Bar Raiser process steps such as preparing a set of behavior-based interview questions in advance of the interview, insisting on written transcripts of the interview, rereading the
-    transcript post interview (before making an assessment), conducting debriefs, basing debriefs on the interview transcripts, and making assessments based on well-understood principles are all steps that seek to eliminate individual biases. Having a diverse group of people involved in the process obviously reduces the chance of unconscious bias worming its way in.
+         - Bar Raiser process steps such as preparing a set of behavior-based interview questions in advance of the interview, insisting on written transcripts of the interview, rereading the    transcript post interview (before making an assessment), conducting debriefs, basing debriefs on the interview transcripts, and making assessments based on well-understood principles are all steps that seek to eliminate individual biases. Having a diverse group of people involved in the process obviously reduces the chance of unconscious bias worming its way in.
 
      - Lessons learned,
          - Soft skills (people skills) matter in software architecture 
@@ -1955,16 +1899,13 @@
          - If the read data is consumed in records (i.e., most or all of the columns are requested) and the workload consists mostly of point queries and range scans, the row-oriented approach is likely to yield better results. If scans span many rows, or compute aggregate over a subset of columns, it is worth considering a column-oriented approach.
          - Wide column stores
              - data is represented as a multidimensional map, columns are grouped into column families (usually storing data of the same type), and inside each column family, data is stored row-wise. This layout is best for storing data retrieved by a key or a sequence of keys.
-             -Each row is indexed by its row key. Related columns are grouped together in column families.
+             - Each row is indexed by its row key. Related columns are grouped together in column families.
              - Each column inside a column family is identified by the column key, which is a combination of the column family name and a qualifier.
              - Column families store multiple versions of data by timestamp.
 
 
 - [Postgres indexes][Databases],
-     - B-tree indexes are the most common type of index and would be the
-default if you create an index and don’t specify the type. B-tree
-indexes are great for general purpose indexing on information you
-frequently query.
+     - B-tree indexes are the most common type of index and would be the default if you create an index and don’t specify the type. B-tree indexes are great for general purpose indexing on information you frequently query.
      - BRIN indexes are block range indexes, specially targeted at very
 large datasets where the data you’re searching is in blocks, like
 timestamps and date ranges. They are known to be very performant and
@@ -2065,8 +2006,7 @@ count correction Rows, JOIN sequence enforcer Leading, and the index
 override IndexScan. Though the latter may strike back.
 
 - When should NOSQL be used?
-     - Massive write scaling is required, more than a single server can
-provide
+     - Massive write scaling is required, more than a single server can provide
      - Only simple data access pattern is required
      - Strong transactional or data retention guarantees are not required
      - Unstructured duplicate data that greatly benefits from column
@@ -2083,32 +2023,22 @@ compression
      - Strong data retention
 
 - Postgres High availability with Patroni,
-     - When used in a single datacenter, the environment is typically
-setup as a 3-node cluster on three separate database hosts.
+     - When used in a single datacenter, the environment is typically setup as a 3-node cluster on three separate database hosts.
      - Basic components,
-         - PostgreSQL cluster: the database cluster, usually consisting
-of a primary and two or more replicas
+         - PostgreSQL cluster: the database cluster, usually consisting of a primary and two or more replicas
          - Patroni: used as the failover management utility
-         - etcd: used as a distributed configuration store (DCS),
-containing cluster information such as configuration, health, and
+         - etcd: used as a distributed configuration store (DCS), containing cluster information such as configuration, health, and
 current status.
      - How HA Works,
-         - Each PostgreSQL instance within the cluster has one
-application database. These instances are kept in sync through streaming
+         - Each PostgreSQL instance within the cluster has one application database. These instances are kept in sync through streaming
 replication.
-         -  Each database host has its own Patroni instance which
-monitors the health of its PostgreSQL database and stores this
+         -  Each database host has its own Patroni instance which monitors the health of its PostgreSQL database and stores this
 information in etcd.
          - The Patroni instances use this data to:
              - keep track of which database instance is primary
-             - maintain quorum among available replicas and keep track
-of which replica is the most "current"
-             - determine what to do in order to keep the cluster healthy
-as a whole
-             - Patroni manages the instances by periodically sending out
-a heartbeat request to etcd which communicates the health and status of
-the PostgreSQL instance. etcd records this information and sends a
-response back to Patroni.
+             - maintain quorum among available replicas and keep track of which replica is the most "current"
+             - determine what to do in order to keep the cluster healthy as a whole
+             - Patroni manages the instances by periodically sending out a heartbeat request to etcd which communicates the health and status of the PostgreSQL instance. etcd records this information and sends a response back to Patroni.
          - Streaming replication
              - Keeps replica more up to date compared to file based log
 shipping.
@@ -2762,8 +2692,7 @@ ideas,be imperical, have small meetings and make decision quickly.
 
 - Statistics
      - Median
-         - If set of values are odd then, the middle value when ordered
-is Median
+         - If set of values are odd then, the middle value when ordered is Median
          - If set of values are even then, the average of 2 middle
 values is Median
          - Median is not affected by outliers (Extremes in data set)
@@ -2922,13 +2851,9 @@ to deal with EXE and DLLs.
          - the financial costs
          - the payoff periods
          - the opportunity costs
-     - focused on work that paid off sooner than later - engineers
-should avoid work that pays off too far into the future. This mistake
-happens particularly when it comes to engineering migrations.I have a
-rule that any engineering work must have a minimum of 2x of the rewards
-to justify the cost.
-     - calculated if the work was worth their time or not before diving
-into it
+     - focused on work that paid off sooner than later - engineers should avoid work that pays off too far into the future. This mistake
+happens particularly when it comes to engineering migrations.I have a rule that any engineering work must have a minimum of 2x of the rewards to justify the cost.
+     - calculated if the work was worth their time or not before diving into it
      - weighed the opportunity costs of their work
 
 - Approach for modernization of problematic source code
@@ -3164,11 +3089,8 @@ fifteen network hops where a single socket write() could have sufficed
          * Queues can get you out of a bind when you've chosen a poor
 runtime
 
-- P2PE (Point to point Encryption) -  is an encryption standard
-established by the Payment Card Industry Security Standards Council. It
-stipulates that cardholder information is encrypted immediately after
-the card is used with the merchant’s point-of-sale terminal and isn’t
-decrypted until it has been processed by the payment processor.
+- P2PE (Point to point Encryption) -  is an encryption standard established by the Payment Card Industry Security Standards Council. It
+stipulates that cardholder information is encrypted immediately after the card is used with the merchant’s point-of-sale terminal and isn’t decrypted until it has been processed by the payment processor.
      - Encryption of card information at the POI/payment terminal
      - Secure management of all encryption and decryption devices
      - P2PE applications at the POI
@@ -3677,16 +3599,9 @@ Amazon S3 at no additional cost.
                  - Static websites
                  - Static content
          - When to use what,
-             - EC2 instance store - well suited for temporary storage of
-information that is constantly changing, such as buffers, caches, and
-scratch data. It is not meant for data that is persistent or long lasting.
-             - EBS - meant for data that changes frequently and must
-persist through instance stops, terminations, or hardware failures.
-             - S3 - If your data doesn’t change often, Amazon S3 might
-be a cost-effective and scalable storage solution for you. Amazon S3 is
-ideal for storing static web content and media, backups and archiving,
-and data for analytics. It can also host entire static websites with
-custom domain names.
+             - EC2 instance store - well suited for temporary storage of information that is constantly changing, such as buffers, caches, and scratch data. It is not meant for data that is persistent or long lasting.
+             - EBS - meant for data that changes frequently and must persist through instance stops, terminations, or hardware failures.
+             - S3 - If your data doesn’t change often, Amazon S3 might be a cost-effective and scalable storage solution for you. Amazon S3 is ideal for storing static web content and media, backups and archiving, and data for analytics. It can also host entire static websites with custom domain names.
              - EFS -  ideal for workloads that require the highest
 levels of durability and availability. EFS One Zone storage classes are
 ideal for workloads such as development, build, and staging environments.
@@ -3731,11 +3646,8 @@ Management (IAM) policies.
                  - Open source: MySQL, PostgreSQL, MariaDB
                  - Cloud native: Aurora
          - Purpose built
-             -  DynamoDB is the database of choice for high-scale and
-serverless applications, it can work for nearly all online transaction
-processing (OLTP) application workloads.
-             - Easticcache - Provides in-memory cache using Redis or
-Memcached
+             -  DynamoDB is the database of choice for high-scale and serverless applications, it can work for nearly all online transaction processing (OLTP) application workloads.
+             - Easticcache - Provides in-memory cache using Redis or Memcached
              - MemoryDB - a fully managed, primary database to build
 high-performance applications. You do not need to separately manage a
 cache, durable database, or the required underlying infrastructure.
@@ -3815,7 +3727,7 @@ guarantees.
                  - Only once.
 
 
-- Hardware Sizing using Ratio Modelling
+- Hardware Sizing using Ratio Modelling (from Oracle COTS product)
      - Used for quick, low-precision forecast.
      - These ratios can be gathered using Oracle Instrumentation (e.g.
 v$Session etc.)
@@ -3864,22 +3776,13 @@ store activity log.
 - Solution Architecture
      - Solution architecture is not just about providing a software solution. It covers all aspects of a system, which includes, but is not limited to, system infrastructure, networking, security, compliance requirement, system operation, cost, and reliability.
      - Business Requirement and Vision: A solution architect works with business stakeholders to understand their vision.
- -  - Requirement Analysis and Technical Vision: Analysis of the
-requirements, defining a technical vision in order to execute the
-business strategy.
-     - Prototyping and Recommendation: Makes a technology selection by
-developing POC and showcasing prototypes.
-     - Solution Design: A solution architect develops solution designs
-in line with an organization's standards and in collaboration with other
-impacted groups.
-     - Development: Works with the development team on solution
-development,and as a bridge between the business and technical team.
-     - Integration and Testing: Makes sure that the final solution is
-working as expected with all functional and non-functional requirements.
-     - Implementation: Works with the development and deployment team
-for smooth implementation and guides them through any issues.
-     - Operation and Maintenance: Ensures logging and monitoring are in
-place and guides the team on scaling and disaster recovery as required.
+     - Requirement Analysis and Technical Vision: Analysis of the requirements, defining a technical vision in order to execute the business strategy.
+     - Prototyping and Recommendation: Makes a technology selection by developing POC and showcasing prototypes.
+     - Solution Design: A solution architect develops solution designs in line with an organization's standards and in collaboration with other impacted groups.
+     - Development: Works with the development team on solution development,and as a bridge between the business and technical team.
+     - Integration and Testing: Makes sure that the final solution is working as expected with all functional and non-functional requirements.
+     - Implementation: Works with the development and deployment team for smooth implementation and guides them through any issues.
+     - Operation and Maintenance: Ensures logging and monitoring are in place and guides the team on scaling and disaster recovery as required.
 
 
 - Cloud Architect
@@ -3887,8 +3790,7 @@ place and guides the team on scaling and disaster recovery as required.
      - Responsible for deploying and managing Cloud computing Strategy
      - Provide depth and breadth of Cloud Services
      - be able to define cloud-native design
-     - Advise how on-premises applications will connect to the cloud and
-how different traditional offerings fit into a cloud environment.
+     - Advise how on-premises applications will connect to the cloud and how different traditional offerings fit into a cloud environment.
 
 - Data Architect
      - Selection of database technology
@@ -3999,11 +3901,9 @@ does its business and
 
 - Wireshark is a great open-source tool for interpreting network packets
 
-- Make the client-side timeouts around twice as long as server-side
-ones, unless you have an extremely good reason to do otherwise.
+- Make the client-side timeouts around twice as long as server-side ones, unless you have an extremely good reason to do otherwise.
 
-- Inspecting logs and dashboards is helpful in investigating such cases,
-so make sure that observability tools are available.
+- Inspecting logs and dashboards is helpful in investigating such cases, so make sure that observability tools are available.
 
 - Estimate the characteristics of your workload,
      - Is it likely to be a predictable, steady flow of requests (e.g., updates being fetched from other systems periodically)?
@@ -4093,7 +3993,7 @@ understand the highest number of IOPS that the database can sustain.
 Throughput-focused benchmarks are often the focus for analytics use
 cases (fraud detection, cybersecurity, etc.)
           - The number of requests per second, or the data volume per second, that the system is processing. For a given a particular allocation of hardware resources, there is a maximum throughput that can be handled. The unit of measurement is “somethings per second”
-          - 
+          
      - Latency focus: You assess how many IOPS the database can handle
 without compromising latency. This is usually the focus for most
 user-facing and real-time applications.
@@ -4321,26 +4221,18 @@ the question.
 
 
 - REDIS
-   - Employs asynchronous replication for high availability and read
-scaling and an on-disk transaction log for local durability
-   - Does not offer replication solution that can tolerate loss of nodes
-without data loss or can offer scalable strongly-consistent reads. This
-limites its ability to be leveraged for use cases beyond caching
-   - Supports server-side execution of lua scripts which also execute
-atomically. it allows to implement complex logic wholly within cluster
-   - Supports point-in-time snapshots and on disk transaction log. It
-can also persist mutations to disk using an append-only file (AOF)
-feature that appends all mutating commands to a file. In a single node
-configuration, AOF could provide durability at the expense of availability.
-   - Single threaded and sequentially executes all commands it receives.
-however, it may lose committed writes across failovers due to
+   - Employs asynchronous replication for high availability and read scaling and an on-disk transaction log for local durability
+   - Does not offer replication solution that can tolerate loss of nodes without data loss or can offer scalable strongly-consistent reads. This limites its ability to be leveraged for use cases beyond caching
+   - Supports server-side execution of lua scripts which also execute atomically. it allows to implement complex logic wholly within cluster
+   - Supports point-in-time snapshots and on disk transaction log. It can also persist mutations to disk using an append-only file (AOF)
+feature that appends all mutating commands to a file. In a single node configuration, AOF could provide durability at the expense of availability.
+   - Single threaded and sequentially executes all commands it receives. however, it may lose committed writes across failovers due to
 asychronous propagation.
 
 
 - Service based Architecture 
   - Terms and their defintions
-    - Service - is a cohesive collection of functionality deployed as
-an independent executable.
+    - Service - is a cohesive collection of functionality deployed as an independent executable.
      - Coupling - Two artifacts (including services) are coupled if a change in one might require a change in the other to maintain proper functionality.Static coupling refers to
      the way architectural parts (classes, components, services, and so on) are wired
      together: dependencies, coupling degree, connection points, and so on.Dynamic coupling refers to how architecture parts call one another: what kind of communication, what information is passed, strictness of contracts, and so on.
