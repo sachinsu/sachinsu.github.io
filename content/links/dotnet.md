@@ -105,6 +105,7 @@ Platform where i have spent most time till now.
 
 ## .NET Core
 
+- [QR coder generation library](https://github.com/shane32/qrcoder)
 - [Approach for Incremental Migration from ASP.NET to ASP.NET Core](https://devblogs.microsoft.com/dotnet/incremental-asp-net-to-asp-net-core-migration/)
 - [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport/blob/dev/docs/Console/README.md)
 - [ASP.NET Core Architecture Overview](https://speakerdeck.com/davidfowl/asp-dot-net-core-architecture-overview)
@@ -144,3 +145,4 @@ Platform where i have spent most time till now.
 - [.NET Conf 2021 Videos, Slides etc.](https://github.com/dotnet-presentations/dotNETConf/tree/master/2021/MainEvent/Technical)
 - [Nuke - Alternate (to MSBUILD) Build system for .NET](https://nuke.build/)
 - [Design patterns implementations in C#](https://github.com/skimedic/presentations/tree/main/Patterns)
+- [Videos on Async await](https://www.youtube.com/playlist?list=PLIebvSMVr_ddthopqpwY_Xr4kV-huCWFZ)
