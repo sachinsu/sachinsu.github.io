@@ -9,7 +9,7 @@
       <url>https://sachinsu.github.io/images/papermod-cover.png</url>
       <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.158.0</generator>
+    <generator>Hugo -- 0.159.1</generator>
     <language>en</language>
     <copyright>©</copyright>
     <lastBuildDate>Sun, 03 Mar 2024 14:13:27 +0530</lastBuildDate>
@@ -3551,6 +3551,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;net-core&#34;&gt;.NET Core&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://github.com/shane32/qrcoder
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;QR coder generation library&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://devblogs.microsoft.com/dotnet/incremental-asp-net-to-asp-net-core-migration/
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -3667,6 +3671,10 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Design patterns implementations in C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.youtube.com/playlist?list&amp;#61;PLIebvSMVr_ddthopqpwY_Xr4kV-huCWFZ
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Videos on Async await&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
