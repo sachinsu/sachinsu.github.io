@@ -19,13 +19,24 @@ Imagine your data warehouse is built on a SQL-based DBMS with a custom web inter
 
 AI-First Analytics applies Generative AI to automate analysis, interpret complex datasets, derive instant insights, and provide predictive recommendations.
 
-### Can Gen. AI be used f or this purpose? 
+### Can Generative AI be used for this purpose? 
 
 Recent improvements in Large Language Models (LLMs) have made this a reality, specifically in:
        - **Writing Complex SQL Queries** basis real time intelligence provided by Harness (i.e. Schema information, database documentation, type of database)
        - **Visualization** - Generating interactive charts and visualizations on-the-fly using MCP/tools
        - **MCPs/tools and skills** that form harness around Model to provide real-time intellgence 
        - Emergence of improved **Open weight models**, that offer better intelligence while allowing deployment in Private cloud or on edge devices
+
+### Why local?
+ 
+For highly regulated industries, Open source models are worth the look. Progress in Open source Models have made them more accurate and performant. Language models with techniques like quantization can now run locally in Private cloud/Data center. Key advantages are, 
+
+- **Data Privacy**  - Data never leaves organization's private cloud
+- **Reduced Latency**  - Local inferencing within private cloud network instead of round trip to public cloud
+- **Cost Control** - Only cost is in infrastructure in terms of VMs, GPUs (if needed)
+- Quality of a harness (coding agent + “skills” + extensions) can matter as least as much as the model
+  
+
 
 ### What is Harness?
 
@@ -36,18 +47,8 @@ The LLM Model contains intellgence built on public data. However, In the context
       - **Tools, skills, MCP servers**, and their descriptions to access data in Datawarehouse as well as Warehouse data model and related documentation
       - **Bundled infrastructure** (filesystem, sandbox, browser)
       - **Observability** (logs, traces, cost and latency metering
-)
     - AI Agent is typically defined as 'Model + Harness'. 
 
-### What Go local?
- 
-Open Models are apt for highly regulated industries, Open source models are worth the look. Progress in Open source Models have made them more accurate and performant. Small language models with techniques like quantization can now run locally in Private cloud/Data center. Key advantages are, 
-
-- **Data Privacy**  - Data never leaves organization's private cloud
-- **Reduced Latency**  - Local inferencing within private cloud network instead of round trip to public cloud
-- **Cost Control** - Only cost is in infrastructure in terms of VMs, GPUs (if needed)
-- Quality of a harness (coding agent + “skills” + extensions) can matter as least as much as the model
-  
 
 Below diagram depicts typical harness , 
 
@@ -62,8 +63,8 @@ While there are multiple approaches to solve a given problem, for the purpose of
 - [ADK-Go](google.github.io/adk-docs/) - An open-source, code-first Go toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control. 
 - [Ollama](https://ollama.com/) - The easiest way to build with open models (Other alternative is [llama.cpp](https://llama-cpp.com/)). 
 - [Gemma 4](https://deepmind.google/models/gemma/gemma-4/) - Lastest Open multimodal model released by google (as of this writing). Gemma 4 excels at reasoning, coding, tool use, long-context and agentic workflows, and multimodal tasks. It is possible to run it  edge devices like Mobile using [LiteRT-LM](https://ai.google.dev/edge/litert-lm/overview). 
-- I have used `Gemma4 : Effective 2B (E2B)` variant for this and it runs reasonably ok on my laptop with 4 cores and 16GB RAM. Its available [here](https://ollama.com/library/gemma4).
-- [SQLite](https://sqlite.org/) - Demo database for Proof-of-concept
+- I have used `Gemma4 : Effective 2B (E2B)` variant for this and it runs reasonably ok on my laptop with 4 cores and 16GB RAM. It is available [here](https://ollama.com/library/gemma4).
+- [SQLite](https://sqlite.org/) - Dummy database for proof of concept putposes. However, the same concept can be extended for any other database like PostgreSQL , duckDB etc.
 
 {{< figure src="/images/agentic_analytics/data-flow.svg" title="AI Agent Flow">}}
 
@@ -145,7 +146,7 @@ While there are multiple approaches to solve a given problem, for the purpose of
 
 This approach demonstrates how an AI-First strategy can amplify traditional analytics. However, moving this to production requires additional measures:
 
-- **Guard rails** to ensure that Model does not execute any DML statements
+- **Guard rails** to ensure that Model does not execute any DML statements. Refer [here](https://adk.dev/safety/#in-tool-guardrails) for details.
 - **PII Data Anonymization** - Handling PII data before it reaches the model.
 - Support for exporting the results to formats like **CSV, Excel** etc. 
 - Support for showing **charts**.
