@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Harness on Learnings in IT</title>
+    <link>http://localhost:1313/tags/harness/</link>
+    <description>Recent content in Harness on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sat, 02 May 2026 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/harness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Analytics for Data warehouse using local models</title>
+      <link>http://localhost:1313/posts/agentic_analytics/</link>
+      <pubDate>Sat, 02 May 2026 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/agentic_analytics/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Traditionally, Business Intelligence (BI) involves custom built dashboards, reports that query datawarehouse or BI Tools to do the same. This involves involvement/intervention by engineering team to analyze requirements and spend time to develop, deliver and maintain required artifacts (i.e. dashboards, Reports etc.). Lets say your data ware house is built on SQL based DBMS and you have custom-built Web interface for Analytics and reporting.&lt;/p&gt;
+&lt;p&gt;What are the typical challenges?
+- &lt;strong&gt;Time consuming change management&lt;/strong&gt; - Engineering team intervention needed for ad-hoc requirements for reports/dashboard or any specific analytics.
+- &lt;strong&gt;Lack of flexibility&lt;/strong&gt; - Need for faster go to market (GTM)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
