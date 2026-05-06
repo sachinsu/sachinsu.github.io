@@ -44,6 +44,14 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Mistakes to avoid while using PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.cs.cmu.edu/~pavlo/blog/2023/04/the-part-of-postgresql-we-hate-the-most.html
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;The Part of PostgreSQL We Hate the Most&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;We are sticking with postgresql &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://fly.io/blog/free-postgres/?utm_source&amp;#61;hackernewsletter&amp;amp;utm_medium&amp;#61;email&amp;amp;utm_term&amp;#61;code
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -2407,6 +2415,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;redis&#34;&gt;Redis&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://philbooth.me/blog/four-ways-to-shoot-yourself-in-the-foot-with-redis
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Four ways to shoot yourself in the foot with Redis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://architecturenotes.co/redis/
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -3078,6 +3090,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;sqlite&#34;&gt;SQLite&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://use.expensify.com/blog/scaling-sqlite-to-4m-qps-on-a-single-server
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Scaling SQLite to 4M QPS on a single server (EC2 vs Bare Metal)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://simonwillison.net/2021/Feb/21/cross-database-queries/
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -3535,6 +3551,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;net-core&#34;&gt;.NET Core&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://github.com/shane32/qrcoder
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;QR coder generation library&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://devblogs.microsoft.com/dotnet/incremental-asp-net-to-asp-net-core-migration/
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -3651,6 +3671,10 @@
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;Design patterns implementations in C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://www.youtube.com/playlist?list&amp;#61;PLIebvSMVr_ddthopqpwY_Xr4kV-huCWFZ
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Videos on Async await&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -4716,6 +4740,10 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=https://rosettacode.org/wiki/Category:Solutions_by_Programming_Task
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;Rosettacode - Solution implemented in various languages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=https://github.com/Runacapital/awesome-oss-alternatives
     
     target=_blank rel=&#34;noopener noreferrer&#34;
@@ -4792,6 +4820,10 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;100 tips for Better Life&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=https://devdocs.io
+    
+    target=_blank rel=&#34;noopener noreferrer&#34;
+&gt;DevDocs -  Multiple API Documentations in a fast, organized and searchable interface &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
   </channel>

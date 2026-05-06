@@ -12,12 +12,23 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Fri, 05 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/agentic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Analytics for Data warehouse using local models</title>
+      <link>http://localhost:1313/posts/agentic_analytics/</link>
+      <pubDate>Sat, 02 May 2026 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/agentic_analytics/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Traditionally, Business Intelligence (BI) involves custom built dashboards, reports that query datawarehouse or BI Tools to do the same. This involves involvement/intervention by engineering team to analyze requirements and spend time to develop, deliver and maintain required artifacts (i.e. dashboards, Reports etc.). Lets say your data ware house is built on SQL based DBMS and you have custom-built Web interface for Analytics and reporting.&lt;/p&gt;
+&lt;p&gt;What are the typical challenges?
+- &lt;strong&gt;Time consuming change management&lt;/strong&gt; - Engineering team intervention needed for ad-hoc requirements for reports/dashboard or any specific analytics.
+- &lt;strong&gt;Lack of flexibility&lt;/strong&gt; - Need for faster go to market (GTM)&lt;/p&gt;</description>
+    </item>
     <item>
       <title> Why use Dapr (Distributed Application Runtime)?</title>
       <link>http://localhost:1313/posts/dapr/</link>
-      <pubDate>Fri, 05 Dec 2025 01:00:00 +0530</pubDate>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/dapr/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This article explores various ways in which  &lt;a href=https://dapr.io
