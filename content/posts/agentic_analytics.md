@@ -143,6 +143,13 @@ While there are multiple approaches to solve a given problem, for the purpose of
 
         ```
 
+Below is screenshot of Web UI provided by ADK, 
+
+{{< figure src="/images/agentic_analytics/agentic_ui.png" title="ADK Web UI for AI Agent">}}
+
+
+
+
 ### Summary and the Road Ahead
 
 This approach demonstrates how an AI-First strategy can amplify traditional analytics. However, moving this to production requires additional measures:
