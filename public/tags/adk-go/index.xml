@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ADK-Go on Learnings in IT</title>
+    <link>http://localhost:1313/tags/adk-go/</link>
+    <description>Recent content in ADK-Go on Learnings in IT</description>
+    <image>
+      <title>Learnings in IT</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.149.0</generator>
+    <language>en</language>
+    <copyright>©</copyright>
+    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/adk-go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Analytics: Supercharging Ad-hoc Analytics with Local LLMs</title>
+      <link>http://localhost:1313/posts/agentic_analytics/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/agentic_analytics/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;While much of the online discourse related to Generative AI is focussed on Automated code Generation. Lets look at alternate use case of it.&lt;br&gt;
+Traditionally, Business Intelligence (BI) relies on custom-built dashboards and reports that query a data warehouse. This often requires heavy intervention from engineering teams to analyze requirements, develop artifacts, and maintain them over time.&lt;/p&gt;
+&lt;p&gt;Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

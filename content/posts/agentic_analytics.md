@@ -1,16 +1,17 @@
 ---
-title: "Agentic Analytics: Supercharging Data Warehouse Analytics with Local LLMs"
-date: 2026-05-02T01:00:00+05:30
-draft: true
-tags: [Agent-to-Agent,MCP,Anthropic,Google A2A, Lanchain, Semantic Kernel, RAG, Gen AI, Agentic, Harness]
+title: "Agentic Analytics: Supercharging Ad-hoc Analytics with Local LLMs"
+date: 2026-05-03T01:00:00+05:30
+draft: false
+tags: [Agent-to-Agent,MCP,Anthropic,Google A2A,ADK-Go, RAG,MCP, Gen AI, Agentic, Harness]
 ---
 ## Introduction 
 
+While much of the online discourse related to Generative AI is focussed on Automated code Generation. Lets look at alternate use case of it.  
 Traditionally, Business Intelligence (BI) relies on custom-built dashboards and reports that query a data warehouse. This often requires heavy intervention from engineering teams to analyze requirements, develop artifacts, and maintain them over time.
 
 Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:
 
--    **Agile Bottlenecks**: Engineering intervention is required for every ad-hoc report or specific analytical insight.
+-    **SDLC Bottlenecks**: Engineering intervention is required for every ad-hoc report or specific analytical insight.
 
 -    **Rigidity**: Slow "Time-to-Market" (GTM) for data-driven decisions due to change management cycles.
 
@@ -18,6 +19,8 @@ Imagine your data warehouse is built on a SQL-based DBMS with a custom web inter
 ### What is AI-First Analytics?
 
 AI-First Analytics applies Generative AI to automate analysis, interpret complex datasets, derive instant insights, and provide predictive recommendations.
+
+Apart from Datawarehouse, this can very well be extended for any requirement to perform analytics (for e.g.  Logs and Metrics store).
 
 ### Can Generative AI be used for this purpose? 
 
@@ -34,9 +37,6 @@ For highly regulated industries, Open source models are worth the look. Progress
 - **Data Privacy**  - Data never leaves organization's private cloud
 - **Reduced Latency**  - Local inferencing within private cloud network instead of round trip to public cloud
 - **Cost Control** - Only cost is in infrastructure in terms of VMs, GPUs (if needed)
-- Quality of a harness (coding agent + “skills” + extensions) can matter as least as much as the model
-  
-
 
 ### What is Harness?
 
@@ -49,6 +49,7 @@ The LLM Model contains intellgence built on public data. However, In the context
       - **Observability** (logs, traces, cost and latency metering
     - AI Agent is typically defined as 'Model + Harness'. 
 
+Quality of a Harness (coding agent + “skills” + "Tools" + extensions) can matter as least as LLM Model itself
 
 Below diagram depicts typical harness , 
 
