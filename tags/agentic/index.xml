@@ -12,8 +12,18 @@
     <generator>Hugo -- 0.161.1</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Sat, 06 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/agentic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Analytics: Supercharging Ad-hoc Analytics with Local LLMs</title>
+      <link>https://sachinsu.github.io/posts/agentic_analytics/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/posts/agentic_analytics/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;While much of the online discourse related to Generative AI is focussed on Automated code Generation. Lets look at alternate use case of it.&lt;br&gt;
+Traditionally, Business Intelligence (BI) relies on custom-built dashboards and reports that query a data warehouse. This often requires heavy intervention from engineering teams to analyze requirements, develop artifacts, and maintain them over time.&lt;/p&gt;
+&lt;p&gt;Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:&lt;/p&gt;</description>
+    </item>
     <item>
       <title> Why use Dapr (Distributed Application Runtime)?</title>
       <link>https://sachinsu.github.io/posts/dapr/</link>

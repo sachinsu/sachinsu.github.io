@@ -12,20 +12,76 @@
     <generator>Hugo -- 0.161.1</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Sat, 06 Dec 2025 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Abstractions</title>
-      <link>https://sachinsu.github.io/tags/abstractions/</link>
-      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/abstractions/</guid>
+      <title>ADK-Go</title>
+      <link>https://sachinsu.github.io/tags/adk-go/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/adk-go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent-to-Agent</title>
+      <link>https://sachinsu.github.io/tags/agent-to-agent/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/agent-to-agent/</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic</title>
       <link>https://sachinsu.github.io/tags/agentic/</link>
-      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/agentic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>https://sachinsu.github.io/tags/anthropic/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/anthropic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen AI</title>
+      <link>https://sachinsu.github.io/tags/gen-ai/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google A2A</title>
+      <link>https://sachinsu.github.io/tags/google-a2a/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/google-a2a/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Harness</title>
+      <link>https://sachinsu.github.io/tags/harness/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/harness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://sachinsu.github.io/tags/mcp/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://sachinsu.github.io/tags/rag/</link>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Abstractions</title>
+      <link>https://sachinsu.github.io/tags/abstractions/</link>
+      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/abstractions/</guid>
       <description></description>
     </item>
     <item>
@@ -40,13 +96,6 @@
       <link>https://sachinsu.github.io/tags/distributed/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/distributed/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gen AI</title>
-      <link>https://sachinsu.github.io/tags/gen-ai/</link>
-      <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
       <description></description>
     </item>
     <item>
@@ -71,45 +120,10 @@
       <description></description>
     </item>
     <item>
-      <title>Agent-to-Agent</title>
-      <link>https://sachinsu.github.io/tags/agent-to-agent/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/agent-to-agent/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Anthropic</title>
-      <link>https://sachinsu.github.io/tags/anthropic/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/anthropic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google A2A</title>
-      <link>https://sachinsu.github.io/tags/google-a2a/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/google-a2a/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Lanchain</title>
       <link>https://sachinsu.github.io/tags/lanchain/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/lanchain/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MCP</title>
-      <link>https://sachinsu.github.io/tags/mcp/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/mcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>RAG</title>
-      <link>https://sachinsu.github.io/tags/rag/</link>
-      <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/rag/</guid>
       <description></description>
     </item>
     <item>
@@ -505,7 +519,7 @@
       <description></description>
     </item>
     <item>
-      <title>Sql</title>
+      <title>SQL</title>
       <link>https://sachinsu.github.io/tags/sql/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/sql/</guid>
