@@ -92,8 +92,8 @@ Below diagram summarizes the logical flow ,
 | Discovery  |          | & Validation   |                  |
 +-----+------+          +-------+--------+                  |
       |                         |                           |
-      | get_table_list()        |                           |
-      | get_column_info()       | query_db()                |
+      | listtables()            |                           |
+      | listcolumns()           | execute_query()           |
       |                         |                           |
       v                         v                           |
 +----------------------------------------+                  |
