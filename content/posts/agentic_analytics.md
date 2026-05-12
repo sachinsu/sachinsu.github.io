@@ -121,7 +121,7 @@ While there are multiple approaches to solve a given problem, for the purpose of
 
 ### Implementation 
 
-- It uses below tools that allow agents to interact with database, 
+It uses below tools that allow agents to interact with database, 
 - **ListTables** - Used by Model to get details on schema of the database.
 - **ListColumns** - Used by Model to get details on columns, data types and foreign key relationships
 - **ExecuteQuery** - Model uses above tools to construct SQL Query in response to User's Question and then uses this to execute it.
