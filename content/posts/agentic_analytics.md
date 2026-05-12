@@ -103,7 +103,7 @@ Below diagram summarizes the logical flow ,
                    | (Logic Satisfied)
                    v
        +-----------------------+
-       |  Final Verified SQL   |
+       |      Final results    |
        +-----------------------+
 ```
 
