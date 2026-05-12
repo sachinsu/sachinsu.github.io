@@ -52,9 +52,10 @@ The LLM Model contains intellgence built on public data. However, In the context
       - **Observability** (logs, traces, cost and latency metering
     - AI Agent is typically defined as 'Model + Harness'. 
 
-In the case of Analytics Agent, below are **must-have**, 
-    - Field level metadata (column types , constraints etc)
-    - Documentation (Meaning of fields etc.)
+In the case of Analytics Agent, below are **must-have**,
+ 
+- **Field level metadata** (column types , constraints etc)
+- **Documentation** (Meaning of fields etc.)
 
 Quality of a Harness (coding agent + “skills” + "Tools" + extensions) can matter as least as much as LLM Model itself. 
 
