@@ -6,7 +6,8 @@ tags: [Agent-to-Agent,MCP,Anthropic,Google A2A,ADK-Go, RAG,MCP, Gen AI, Agentic,
 ---
 ## Introduction 
 
-While much of the online discourse related to Generative AI is focussed on Automated code Generation. Lets look at alternate use case of it.  
+Nowadays, much of the online commentary related to Generative AI is focussed on Automated code Generation and rightly so. But Lets look at alternate use case of it.
+
 Traditionally, Business Intelligence (BI) relies on custom-built dashboards and reports that query a data warehouse. This often requires heavy intervention from engineering teams to analyze requirements, develop artifacts, and maintain them over time.
 
 Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:
@@ -30,6 +31,8 @@ Recent improvements in Large Language Models (LLMs) have made this a reality, sp
        - **MCPs/tools and skills** that form harness around Model to provide real-time intellgence 
        - Emergence of improved **Open weight models**, that offer better intelligence while allowing deployment in Private cloud or on edge devices
 
+[Microsoft](https://devblogs.microsoft.com/ise/llm-sql-query-generation/#introduction) has reported approximately 75% accuracy for NLP-to-SQL  generation tasks on industry-standard, real-life database.  
+
 ### Why local?
  
 For highly regulated industries, Open source models are worth the look. Progress in Open source Models have made them more accurate and performant. Language models with techniques like quantization can now run locally in Private cloud/Data center. Key advantages are, 
@@ -42,20 +45,67 @@ For highly regulated industries, Open source models are worth the look. Progress
 
 The LLM Model contains intellgence built on public data. However, In the context of Analytics, it needs to have access to private data to gather intelligence and respond accordingly. Additionally, a Model can not execute code, Maintain durable state across interactions, Access real-time intelligence.  A harness is every piece of code, configuration, and execution logic that isn't the model itself. 
 
-    - A harness for AI based Analytics will typically include (but not limited to), 
+    - A harness  will typically include (but not limited to), 
       - **System prompts,  skill files**
       - **Tools, skills, MCP servers**, and their descriptions to access data in Datawarehouse as well as Warehouse data model and related documentation
       - **Bundled infrastructure** (filesystem, sandbox, browser)
       - **Observability** (logs, traces, cost and latency metering
     - AI Agent is typically defined as 'Model + Harness'. 
 
-Quality of a Harness (coding agent + “skills” + "Tools" + extensions) can matter as least as LLM Model itself
+In the case of Analytics Agent, below are **must-have**, 
+    - Field level metadata (column types , constraints etc)
+    - Documentation (Meaning of fields etc.)
+
+Quality of a Harness (coding agent + “skills” + "Tools" + extensions) can matter as least as much as LLM Model itself. 
 
 Below diagram depicts typical harness , 
 
 {{< figure src="/images/agentic_analytics/harness.jpg" title="Typical Harness for AI Agent">}}
 
 ### How 
+
+Below diagram summarizes the logical flow , 
+
+```goat
+
+       +-----------------------+         +------------------+
+       |   User Question (NL)  |         | Domain Knowledge |
+       +-----------+-----------+         +--------+---------+
+                   |                              |
+                   |       +----------------------+
+                   |       |
+                   v       v
+       +-----------------------+
+       |    Agent Reasoning    |------------+
+       |     (Iterative)       |<----+      |          
+       +-----------+-----------+     |      |
+                   |                 |      |
+        /----------+----------\      |      |  
+       |   Tool Selection      |-----+      |
+        \----------+----------/             |
+                   |                        |
+     +-------------+-------------+          |
+     |                           |          |
+     v                           v          | Iterative
++------------+          +----------------+  | Feedback
+| DB Schema  |          | SQL Execution  |  | Loop
+| Discovery  |          | & Validation   |  |
++-----+------+          +-------+--------+  |
+      |                         |           |
+      | get_table_list()        |           |
+      | get_column_info()       | query_db()|
+      |                         |           |
+      v                         v           |
++----------------------------------------+  |
+|          Database Instance             |  |
++----------------------------------------+  |
+                   +------------------------+
+                   | (Logic Satisfied)
+                   v
+       +-----------------------+
+       |  Final Verified SQL   |
+       +-----------------------+
+```
 
 While there are multiple approaches to solve a given problem, for the purpose of this article, lets zero-in on below,
 
@@ -148,6 +198,9 @@ Below is screenshot of Web UI provided by ADK,
 {{< figure src="/images/agentic_analytics/agent_ui.png" title="ADK Web UI for AI Agent">}}
 
 
+### Evaluation
+
+The evaluation can leverage approach by [LiveSQLbench](https://livesqlbench.ai/). It is specifically developed for evaluating LLMs on real-world Text-to-SQL tasks. This is to-do for me and hopefully i will have time to do this and update this blog post. :grinning:
 
 
 ### Summary and the Road Ahead
@@ -160,6 +213,7 @@ This approach demonstrates how an AI-First strategy can amplify traditional anal
 - Support for showing **charts**.
 - **Sandbox** for Testing e.g. Docker
 - Error handling
+- **Evaluation** using LiveSQLBench and iterative improvement
 
 As such, companies are reporting that this does not entirely replace traditional Analytics stack (i.e. standardized reports, dashboards etc. ) but amplifies it. 
 

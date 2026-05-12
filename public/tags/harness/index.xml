@@ -12,19 +12,17 @@
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>©</copyright>
-    <lastBuildDate>Sat, 02 May 2026 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/harness/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agentic Analytics: Supercharging Ad-hoc Analytics with Local LLMs</title>
       <link>http://localhost:1313/posts/agentic_analytics/</link>
-      <pubDate>Sat, 02 May 2026 01:00:00 +0530</pubDate>
+      <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
       <guid>http://localhost:1313/posts/agentic_analytics/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Nowadays, much of the online commentary related to Generative AI is focussed on Automated code Generation and rightly so. But Lets look at alternate use case of it.&lt;/p&gt;
 &lt;p&gt;Traditionally, Business Intelligence (BI) relies on custom-built dashboards and reports that query a data warehouse. This often requires heavy intervention from engineering teams to analyze requirements, develop artifacts, and maintain them over time.&lt;/p&gt;
-&lt;p&gt;Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Agile Bottlenecks&lt;/strong&gt;: Engineering intervention is required for every ad-hoc report or specific analytical insight.&lt;/p&gt;</description>
+&lt;p&gt;Imagine your data warehouse is built on a SQL-based DBMS with a custom web interface for analytics. Even with this setup, typical challenges remain:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
