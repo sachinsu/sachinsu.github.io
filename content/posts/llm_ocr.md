@@ -1,4 +1,4 @@
----
+-m--
 title: "OCR using LLM: evaluating capabilities"
 date: 2026-05-23T01:00:00+05:30
 draft: true
