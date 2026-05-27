@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AWS on Learnings in IT</title>
-    <link>http://localhost:1313/tags/aws/</link>
+    <link>https://sachinsu.github.io/tags/aws/</link>
     <description>Recent content in AWS on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sachinsu.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learnings from Jeff Richter&#39;s Designing and Versioning HTTP REST APIs Video Course</title>
-      <link>http://localhost:1313/posts/restapiversioning/</link>
+      <link>https://sachinsu.github.io/posts/restapiversioning/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/restapiversioning/</guid>
+      <guid>https://sachinsu.github.io/posts/restapiversioning/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;Recently, i went through excellent video series on  &lt;code&gt;Designing &amp;amp; Versioning HTTP_REST APIs&lt;/code&gt; presented by &lt;a href=https://www.linkedin.com/in/jeffrichter/
     

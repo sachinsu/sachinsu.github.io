@@ -2,919 +2,821 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Learnings in IT</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://sachinsu.github.io/tags/</link>
     <description>Recent content in Tags on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
-    <lastBuildDate>Sat, 23 May 2026 01:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Glm</title>
-      <link>http://localhost:1313/tags/glm/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/glm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>http://localhost:1313/tags/go/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Golang</title>
-      <link>http://localhost:1313/tags/golang/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/golang/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llm</title>
-      <link>http://localhost:1313/tags/llm/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Localai</title>
-      <link>http://localhost:1313/tags/localai/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/localai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OCR</title>
-      <link>http://localhost:1313/tags/ocr/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ocr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ollama</title>
-      <link>http://localhost:1313/tags/ollama/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ollama/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Zai</title>
-      <link>http://localhost:1313/tags/zai/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/zai/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADK-Go</title>
-      <link>http://localhost:1313/tags/adk-go/</link>
+      <link>https://sachinsu.github.io/tags/adk-go/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/adk-go/</guid>
+      <guid>https://sachinsu.github.io/tags/adk-go/</guid>
       <description></description>
     </item>
     <item>
       <title>Agent-to-Agent</title>
-      <link>http://localhost:1313/tags/agent-to-agent/</link>
+      <link>https://sachinsu.github.io/tags/agent-to-agent/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/agent-to-agent/</guid>
+      <guid>https://sachinsu.github.io/tags/agent-to-agent/</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic</title>
-      <link>http://localhost:1313/tags/agentic/</link>
+      <link>https://sachinsu.github.io/tags/agentic/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/agentic/</guid>
+      <guid>https://sachinsu.github.io/tags/agentic/</guid>
       <description></description>
     </item>
     <item>
       <title>Anthropic</title>
-      <link>http://localhost:1313/tags/anthropic/</link>
+      <link>https://sachinsu.github.io/tags/anthropic/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/anthropic/</guid>
+      <guid>https://sachinsu.github.io/tags/anthropic/</guid>
       <description></description>
     </item>
     <item>
       <title>Gen AI</title>
-      <link>http://localhost:1313/tags/gen-ai/</link>
+      <link>https://sachinsu.github.io/tags/gen-ai/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/gen-ai/</guid>
+      <guid>https://sachinsu.github.io/tags/gen-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Google A2A</title>
-      <link>http://localhost:1313/tags/google-a2a/</link>
+      <link>https://sachinsu.github.io/tags/google-a2a/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/google-a2a/</guid>
+      <guid>https://sachinsu.github.io/tags/google-a2a/</guid>
       <description></description>
     </item>
     <item>
       <title>Harness</title>
-      <link>http://localhost:1313/tags/harness/</link>
+      <link>https://sachinsu.github.io/tags/harness/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/harness/</guid>
+      <guid>https://sachinsu.github.io/tags/harness/</guid>
       <description></description>
     </item>
     <item>
       <title>MCP</title>
-      <link>http://localhost:1313/tags/mcp/</link>
+      <link>https://sachinsu.github.io/tags/mcp/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/mcp/</guid>
+      <guid>https://sachinsu.github.io/tags/mcp/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG</title>
-      <link>http://localhost:1313/tags/rag/</link>
+      <link>https://sachinsu.github.io/tags/rag/</link>
       <pubDate>Sun, 03 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/rag/</guid>
+      <guid>https://sachinsu.github.io/tags/rag/</guid>
       <description></description>
     </item>
     <item>
       <title>Abstractions</title>
-      <link>http://localhost:1313/tags/abstractions/</link>
+      <link>https://sachinsu.github.io/tags/abstractions/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/abstractions/</guid>
+      <guid>https://sachinsu.github.io/tags/abstractions/</guid>
       <description></description>
     </item>
     <item>
       <title>Dapr</title>
-      <link>http://localhost:1313/tags/dapr/</link>
+      <link>https://sachinsu.github.io/tags/dapr/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/dapr/</guid>
+      <guid>https://sachinsu.github.io/tags/dapr/</guid>
       <description></description>
     </item>
     <item>
       <title>Distributed</title>
-      <link>http://localhost:1313/tags/distributed/</link>
+      <link>https://sachinsu.github.io/tags/distributed/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/distributed/</guid>
+      <guid>https://sachinsu.github.io/tags/distributed/</guid>
       <description></description>
     </item>
     <item>
       <title>MicroServices</title>
-      <link>http://localhost:1313/tags/microservices/</link>
+      <link>https://sachinsu.github.io/tags/microservices/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/microservices/</guid>
+      <guid>https://sachinsu.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     <item>
       <title>Monitoring</title>
-      <link>http://localhost:1313/tags/monitoring/</link>
+      <link>https://sachinsu.github.io/tags/monitoring/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <guid>https://sachinsu.github.io/tags/monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Observability</title>
-      <link>http://localhost:1313/tags/observability/</link>
+      <link>https://sachinsu.github.io/tags/observability/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/observability/</guid>
+      <guid>https://sachinsu.github.io/tags/observability/</guid>
       <description></description>
     </item>
     <item>
       <title>Lanchain</title>
-      <link>http://localhost:1313/tags/lanchain/</link>
+      <link>https://sachinsu.github.io/tags/lanchain/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/lanchain/</guid>
+      <guid>https://sachinsu.github.io/tags/lanchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Semantic Kernel</title>
-      <link>http://localhost:1313/tags/semantic-kernel/</link>
+      <link>https://sachinsu.github.io/tags/semantic-kernel/</link>
       <pubDate>Tue, 02 Dec 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/semantic-kernel/</guid>
+      <guid>https://sachinsu.github.io/tags/semantic-kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
+      <link>https://sachinsu.github.io/tags/architecture/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
+      <guid>https://sachinsu.github.io/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Modularity</title>
-      <link>http://localhost:1313/tags/modularity/</link>
+      <link>https://sachinsu.github.io/tags/modularity/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/modularity/</guid>
+      <guid>https://sachinsu.github.io/tags/modularity/</guid>
       <description></description>
     </item>
     <item>
       <title>Monolith</title>
-      <link>http://localhost:1313/tags/monolith/</link>
+      <link>https://sachinsu.github.io/tags/monolith/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/monolith/</guid>
+      <guid>https://sachinsu.github.io/tags/monolith/</guid>
       <description></description>
     </item>
     <item>
       <title>Services</title>
-      <link>http://localhost:1313/tags/services/</link>
+      <link>https://sachinsu.github.io/tags/services/</link>
       <pubDate>Mon, 15 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/services/</guid>
+      <guid>https://sachinsu.github.io/tags/services/</guid>
       <description></description>
     </item>
     <item>
       <title>BOM</title>
-      <link>http://localhost:1313/tags/bom/</link>
+      <link>https://sachinsu.github.io/tags/bom/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/bom/</guid>
+      <guid>https://sachinsu.github.io/tags/bom/</guid>
       <description></description>
     </item>
     <item>
       <title>CycloneDX</title>
-      <link>http://localhost:1313/tags/cyclonedx/</link>
+      <link>https://sachinsu.github.io/tags/cyclonedx/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/cyclonedx/</guid>
+      <guid>https://sachinsu.github.io/tags/cyclonedx/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://sachinsu.github.io/tags/devops/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://sachinsu.github.io/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>SBOM</title>
-      <link>http://localhost:1313/tags/sbom/</link>
+      <link>https://sachinsu.github.io/tags/sbom/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sbom/</guid>
+      <guid>https://sachinsu.github.io/tags/sbom/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>http://localhost:1313/tags/software/</link>
+      <link>https://sachinsu.github.io/tags/software/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/software/</guid>
+      <guid>https://sachinsu.github.io/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>SPDX</title>
-      <link>http://localhost:1313/tags/spdx/</link>
+      <link>https://sachinsu.github.io/tags/spdx/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/spdx/</guid>
+      <guid>https://sachinsu.github.io/tags/spdx/</guid>
       <description></description>
     </item>
     <item>
       <title>Syft</title>
-      <link>http://localhost:1313/tags/syft/</link>
+      <link>https://sachinsu.github.io/tags/syft/</link>
       <pubDate>Tue, 09 Sep 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/syft/</guid>
+      <guid>https://sachinsu.github.io/tags/syft/</guid>
       <description></description>
     </item>
     <item>
       <title>Databases</title>
-      <link>http://localhost:1313/tags/databases/</link>
+      <link>https://sachinsu.github.io/tags/databases/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/databases/</guid>
+      <guid>https://sachinsu.github.io/tags/databases/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>http://localhost:1313/tags/gemini/</link>
+      <link>https://sachinsu.github.io/tags/gemini/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/gemini/</guid>
+      <guid>https://sachinsu.github.io/tags/gemini/</guid>
       <description></description>
     </item>
     <item>
       <title>Genai</title>
-      <link>http://localhost:1313/tags/genai/</link>
+      <link>https://sachinsu.github.io/tags/genai/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/genai/</guid>
+      <guid>https://sachinsu.github.io/tags/genai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>https://sachinsu.github.io/tags/llm/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ollama</title>
+      <link>https://sachinsu.github.io/tags/ollama/</link>
+      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/ollama/</guid>
       <description></description>
     </item>
     <item>
       <title>Postgresql</title>
-      <link>http://localhost:1313/tags/postgresql/</link>
+      <link>https://sachinsu.github.io/tags/postgresql/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <guid>https://sachinsu.github.io/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt</title>
-      <link>http://localhost:1313/tags/prompt/</link>
+      <link>https://sachinsu.github.io/tags/prompt/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/prompt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Asynchronous</title>
-      <link>http://localhost:1313/tags/asynchronous/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/asynchronous/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Background-Jobs</title>
-      <link>http://localhost:1313/tags/background-jobs/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/background-jobs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Concurrency</title>
-      <link>http://localhost:1313/tags/concurrency/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/concurrency/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Distributed-Systems</title>
-      <link>http://localhost:1313/tags/distributed-systems/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/distributed-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Message-Broker</title>
-      <link>http://localhost:1313/tags/message-broker/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/message-broker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Queue</title>
-      <link>http://localhost:1313/tags/queue/</link>
-      <pubDate>Tue, 01 Apr 2025 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/queue/</guid>
+      <guid>https://sachinsu.github.io/tags/prompt/</guid>
       <description></description>
     </item>
     <item>
       <title>.Net Core</title>
-      <link>http://localhost:1313/tags/.net-core/</link>
+      <link>https://sachinsu.github.io/tags/.net-core/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/.net-core/</guid>
+      <guid>https://sachinsu.github.io/tags/.net-core/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://sachinsu.github.io/tags/golang/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Gpt</title>
-      <link>http://localhost:1313/tags/gpt/</link>
+      <link>https://sachinsu.github.io/tags/gpt/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/gpt/</guid>
+      <guid>https://sachinsu.github.io/tags/gpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Localai</title>
+      <link>https://sachinsu.github.io/tags/localai/</link>
+      <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/localai/</guid>
       <description></description>
     </item>
     <item>
       <title>Phi-3</title>
-      <link>http://localhost:1313/tags/phi-3/</link>
+      <link>https://sachinsu.github.io/tags/phi-3/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/phi-3/</guid>
+      <guid>https://sachinsu.github.io/tags/phi-3/</guid>
       <description></description>
     </item>
     <item>
       <title>Semantickernel</title>
-      <link>http://localhost:1313/tags/semantickernel/</link>
+      <link>https://sachinsu.github.io/tags/semantickernel/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/semantickernel/</guid>
+      <guid>https://sachinsu.github.io/tags/semantickernel/</guid>
       <description></description>
     </item>
     <item>
       <title>.NET</title>
-      <link>http://localhost:1313/tags/.net/</link>
+      <link>https://sachinsu.github.io/tags/.net/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/.net/</guid>
+      <guid>https://sachinsu.github.io/tags/.net/</guid>
       <description></description>
     </item>
     <item>
       <title>Bouncy Castle</title>
-      <link>http://localhost:1313/tags/bouncy-castle/</link>
+      <link>https://sachinsu.github.io/tags/bouncy-castle/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/bouncy-castle/</guid>
+      <guid>https://sachinsu.github.io/tags/bouncy-castle/</guid>
       <description></description>
     </item>
     <item>
       <title>Schannel</title>
-      <link>http://localhost:1313/tags/schannel/</link>
+      <link>https://sachinsu.github.io/tags/schannel/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/schannel/</guid>
+      <guid>https://sachinsu.github.io/tags/schannel/</guid>
       <description></description>
     </item>
     <item>
       <title>SSPI</title>
-      <link>http://localhost:1313/tags/sspi/</link>
+      <link>https://sachinsu.github.io/tags/sspi/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sspi/</guid>
+      <guid>https://sachinsu.github.io/tags/sspi/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP</title>
-      <link>http://localhost:1313/tags/tcp/</link>
+      <link>https://sachinsu.github.io/tags/tcp/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/tcp/</guid>
+      <guid>https://sachinsu.github.io/tags/tcp/</guid>
       <description></description>
     </item>
     <item>
       <title>TLS</title>
-      <link>http://localhost:1313/tags/tls/</link>
+      <link>https://sachinsu.github.io/tags/tls/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/tls/</guid>
+      <guid>https://sachinsu.github.io/tags/tls/</guid>
       <description></description>
     </item>
     <item>
       <title>Wireshark</title>
-      <link>http://localhost:1313/tags/wireshark/</link>
+      <link>https://sachinsu.github.io/tags/wireshark/</link>
       <pubDate>Sat, 25 Feb 2023 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/wireshark/</guid>
+      <guid>https://sachinsu.github.io/tags/wireshark/</guid>
       <description></description>
     </item>
     <item>
       <title>C#</title>
-      <link>http://localhost:1313/tags/c%23/</link>
+      <link>https://sachinsu.github.io/tags/c%23/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/c%23/</guid>
+      <guid>https://sachinsu.github.io/tags/c%23/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTP</title>
-      <link>http://localhost:1313/tags/http/</link>
+      <link>https://sachinsu.github.io/tags/http/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/http/</guid>
+      <guid>https://sachinsu.github.io/tags/http/</guid>
       <description></description>
     </item>
     <item>
       <title>Latency</title>
-      <link>http://localhost:1313/tags/latency/</link>
+      <link>https://sachinsu.github.io/tags/latency/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/latency/</guid>
+      <guid>https://sachinsu.github.io/tags/latency/</guid>
       <description></description>
     </item>
     <item>
       <title>Nanoid</title>
-      <link>http://localhost:1313/tags/nanoid/</link>
+      <link>https://sachinsu.github.io/tags/nanoid/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/nanoid/</guid>
+      <guid>https://sachinsu.github.io/tags/nanoid/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle</title>
-      <link>http://localhost:1313/tags/oracle/</link>
+      <link>https://sachinsu.github.io/tags/oracle/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/oracle/</guid>
+      <guid>https://sachinsu.github.io/tags/oracle/</guid>
       <description></description>
     </item>
     <item>
       <title>REST</title>
-      <link>http://localhost:1313/tags/rest/</link>
+      <link>https://sachinsu.github.io/tags/rest/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/rest/</guid>
+      <guid>https://sachinsu.github.io/tags/rest/</guid>
       <description></description>
     </item>
     <item>
       <title>SMS</title>
-      <link>http://localhost:1313/tags/sms/</link>
+      <link>https://sachinsu.github.io/tags/sms/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sms/</guid>
+      <guid>https://sachinsu.github.io/tags/sms/</guid>
       <description></description>
     </item>
     <item>
       <title>URL</title>
-      <link>http://localhost:1313/tags/url/</link>
+      <link>https://sachinsu.github.io/tags/url/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/url/</guid>
+      <guid>https://sachinsu.github.io/tags/url/</guid>
       <description></description>
     </item>
     <item>
       <title>UUID</title>
-      <link>http://localhost:1313/tags/uuid/</link>
+      <link>https://sachinsu.github.io/tags/uuid/</link>
       <pubDate>Sun, 15 May 2022 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/uuid/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Msbuild</title>
-      <link>http://localhost:1313/tags/msbuild/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/msbuild/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Net461</title>
-      <link>http://localhost:1313/tags/net461/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/net461/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Netframework</title>
-      <link>http://localhost:1313/tags/netframework/</link>
-      <pubDate>Sat, 02 Apr 2022 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/netframework/</guid>
+      <guid>https://sachinsu.github.io/tags/uuid/</guid>
       <description></description>
     </item>
     <item>
       <title>Bombardier</title>
-      <link>http://localhost:1313/tags/bombardier/</link>
+      <link>https://sachinsu.github.io/tags/bombardier/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/bombardier/</guid>
+      <guid>https://sachinsu.github.io/tags/bombardier/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://sachinsu.github.io/tags/go/</link>
+      <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Litestream</title>
-      <link>http://localhost:1313/tags/litestream/</link>
+      <link>https://sachinsu.github.io/tags/litestream/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/litestream/</guid>
+      <guid>https://sachinsu.github.io/tags/litestream/</guid>
       <description></description>
     </item>
     <item>
       <title>Rqlite</title>
-      <link>http://localhost:1313/tags/rqlite/</link>
+      <link>https://sachinsu.github.io/tags/rqlite/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/rqlite/</guid>
+      <guid>https://sachinsu.github.io/tags/rqlite/</guid>
       <description></description>
     </item>
     <item>
       <title>SQLite</title>
-      <link>http://localhost:1313/tags/sqlite/</link>
+      <link>https://sachinsu.github.io/tags/sqlite/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sqlite/</guid>
+      <guid>https://sachinsu.github.io/tags/sqlite/</guid>
       <description></description>
     </item>
     <item>
       <title>CPU</title>
-      <link>http://localhost:1313/tags/cpu/</link>
+      <link>https://sachinsu.github.io/tags/cpu/</link>
       <pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/cpu/</guid>
+      <guid>https://sachinsu.github.io/tags/cpu/</guid>
       <description></description>
     </item>
     <item>
       <title>Crank</title>
-      <link>http://localhost:1313/tags/crank/</link>
+      <link>https://sachinsu.github.io/tags/crank/</link>
       <pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/crank/</guid>
+      <guid>https://sachinsu.github.io/tags/crank/</guid>
       <description></description>
     </item>
     <item>
       <title>Flame Graph</title>
-      <link>http://localhost:1313/tags/flame-graph/</link>
+      <link>https://sachinsu.github.io/tags/flame-graph/</link>
       <pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/flame-graph/</guid>
+      <guid>https://sachinsu.github.io/tags/flame-graph/</guid>
       <description></description>
     </item>
     <item>
       <title>Pyroscope</title>
-      <link>http://localhost:1313/tags/pyroscope/</link>
+      <link>https://sachinsu.github.io/tags/pyroscope/</link>
       <pubDate>Sun, 12 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/pyroscope/</guid>
+      <guid>https://sachinsu.github.io/tags/pyroscope/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/tags/database/</link>
+      <link>https://sachinsu.github.io/tags/database/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/database/</guid>
+      <guid>https://sachinsu.github.io/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Honeycomb</title>
-      <link>http://localhost:1313/tags/honeycomb/</link>
+      <link>https://sachinsu.github.io/tags/honeycomb/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/honeycomb/</guid>
+      <guid>https://sachinsu.github.io/tags/honeycomb/</guid>
       <description></description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>http://localhost:1313/tags/mysql/</link>
+      <link>https://sachinsu.github.io/tags/mysql/</link>
       <pubDate>Sun, 05 Sep 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/mysql/</guid>
+      <guid>https://sachinsu.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Analytics</title>
-      <link>http://localhost:1313/tags/analytics/</link>
+      <link>https://sachinsu.github.io/tags/analytics/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/analytics/</guid>
+      <guid>https://sachinsu.github.io/tags/analytics/</guid>
       <description></description>
     </item>
     <item>
       <title>Grafana</title>
-      <link>http://localhost:1313/tags/grafana/</link>
+      <link>https://sachinsu.github.io/tags/grafana/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/grafana/</guid>
+      <guid>https://sachinsu.github.io/tags/grafana/</guid>
       <description></description>
     </item>
     <item>
       <title>Real-Time</title>
-      <link>http://localhost:1313/tags/real-time/</link>
+      <link>https://sachinsu.github.io/tags/real-time/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/real-time/</guid>
+      <guid>https://sachinsu.github.io/tags/real-time/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>http://localhost:1313/tags/sql/</link>
+      <link>https://sachinsu.github.io/tags/sql/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sql/</guid>
+      <guid>https://sachinsu.github.io/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Time Series</title>
-      <link>http://localhost:1313/tags/time-series/</link>
+      <link>https://sachinsu.github.io/tags/time-series/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/time-series/</guid>
+      <guid>https://sachinsu.github.io/tags/time-series/</guid>
       <description></description>
     </item>
     <item>
       <title>Timescaledb</title>
-      <link>http://localhost:1313/tags/timescaledb/</link>
+      <link>https://sachinsu.github.io/tags/timescaledb/</link>
       <pubDate>Thu, 15 Jul 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/timescaledb/</guid>
+      <guid>https://sachinsu.github.io/tags/timescaledb/</guid>
       <description></description>
     </item>
     <item>
       <title>ASMX</title>
-      <link>http://localhost:1313/tags/asmx/</link>
+      <link>https://sachinsu.github.io/tags/asmx/</link>
       <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/asmx/</guid>
+      <guid>https://sachinsu.github.io/tags/asmx/</guid>
       <description></description>
     </item>
     <item>
       <title>CoreWCF</title>
-      <link>http://localhost:1313/tags/corewcf/</link>
+      <link>https://sachinsu.github.io/tags/corewcf/</link>
       <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/corewcf/</guid>
+      <guid>https://sachinsu.github.io/tags/corewcf/</guid>
       <description></description>
     </item>
     <item>
       <title>SOAP</title>
-      <link>http://localhost:1313/tags/soap/</link>
+      <link>https://sachinsu.github.io/tags/soap/</link>
       <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/soap/</guid>
+      <guid>https://sachinsu.github.io/tags/soap/</guid>
       <description></description>
     </item>
     <item>
       <title>WCF</title>
-      <link>http://localhost:1313/tags/wcf/</link>
+      <link>https://sachinsu.github.io/tags/wcf/</link>
       <pubDate>Sat, 15 May 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/wcf/</guid>
+      <guid>https://sachinsu.github.io/tags/wcf/</guid>
       <description></description>
     </item>
     <item>
       <title>Parquet</title>
-      <link>http://localhost:1313/tags/parquet/</link>
+      <link>https://sachinsu.github.io/tags/parquet/</link>
       <pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/parquet/</guid>
+      <guid>https://sachinsu.github.io/tags/parquet/</guid>
       <description></description>
     </item>
     <item>
       <title>Presto</title>
-      <link>http://localhost:1313/tags/presto/</link>
+      <link>https://sachinsu.github.io/tags/presto/</link>
       <pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/presto/</guid>
+      <guid>https://sachinsu.github.io/tags/presto/</guid>
       <description></description>
     </item>
     <item>
       <title>Trino</title>
-      <link>http://localhost:1313/tags/trino/</link>
+      <link>https://sachinsu.github.io/tags/trino/</link>
       <pubDate>Mon, 29 Mar 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/trino/</guid>
+      <guid>https://sachinsu.github.io/tags/trino/</guid>
       <description></description>
     </item>
     <item>
       <title>CSV</title>
-      <link>http://localhost:1313/tags/csv/</link>
+      <link>https://sachinsu.github.io/tags/csv/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/csv/</guid>
+      <guid>https://sachinsu.github.io/tags/csv/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Pipeline</title>
-      <link>http://localhost:1313/tags/data-pipeline/</link>
+      <link>https://sachinsu.github.io/tags/data-pipeline/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/data-pipeline/</guid>
+      <guid>https://sachinsu.github.io/tags/data-pipeline/</guid>
       <description></description>
     </item>
     <item>
       <title>DBT</title>
-      <link>http://localhost:1313/tags/dbt/</link>
+      <link>https://sachinsu.github.io/tags/dbt/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/dbt/</guid>
+      <guid>https://sachinsu.github.io/tags/dbt/</guid>
       <description></description>
     </item>
     <item>
       <title>ELT</title>
-      <link>http://localhost:1313/tags/elt/</link>
+      <link>https://sachinsu.github.io/tags/elt/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/elt/</guid>
+      <guid>https://sachinsu.github.io/tags/elt/</guid>
       <description></description>
     </item>
     <item>
       <title>ETL</title>
-      <link>http://localhost:1313/tags/etl/</link>
+      <link>https://sachinsu.github.io/tags/etl/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/etl/</guid>
+      <guid>https://sachinsu.github.io/tags/etl/</guid>
       <description></description>
     </item>
     <item>
       <title>Nsetools</title>
-      <link>http://localhost:1313/tags/nsetools/</link>
+      <link>https://sachinsu.github.io/tags/nsetools/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/nsetools/</guid>
+      <guid>https://sachinsu.github.io/tags/nsetools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://sachinsu.github.io/tags/python/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
+      <guid>https://sachinsu.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>API</title>
-      <link>http://localhost:1313/tags/api/</link>
+      <link>https://sachinsu.github.io/tags/api/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/api/</guid>
+      <guid>https://sachinsu.github.io/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
+      <link>https://sachinsu.github.io/tags/aws/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
+      <guid>https://sachinsu.github.io/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/tags/azure/</link>
+      <link>https://sachinsu.github.io/tags/azure/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/azure/</guid>
+      <guid>https://sachinsu.github.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Jeffrey Richter</title>
-      <link>http://localhost:1313/tags/jeffrey-richter/</link>
+      <link>https://sachinsu.github.io/tags/jeffrey-richter/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/jeffrey-richter/</guid>
+      <guid>https://sachinsu.github.io/tags/jeffrey-richter/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft</title>
-      <link>http://localhost:1313/tags/microsoft/</link>
+      <link>https://sachinsu.github.io/tags/microsoft/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/microsoft/</guid>
+      <guid>https://sachinsu.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
     <item>
       <title>Chaosengineering</title>
-      <link>http://localhost:1313/tags/chaosengineering/</link>
+      <link>https://sachinsu.github.io/tags/chaosengineering/</link>
       <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/chaosengineering/</guid>
+      <guid>https://sachinsu.github.io/tags/chaosengineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Shopify</title>
-      <link>http://localhost:1313/tags/shopify/</link>
+      <link>https://sachinsu.github.io/tags/shopify/</link>
       <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/shopify/</guid>
+      <guid>https://sachinsu.github.io/tags/shopify/</guid>
       <description></description>
     </item>
     <item>
       <title>Toxiproxy</title>
-      <link>http://localhost:1313/tags/toxiproxy/</link>
+      <link>https://sachinsu.github.io/tags/toxiproxy/</link>
       <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/toxiproxy/</guid>
+      <guid>https://sachinsu.github.io/tags/toxiproxy/</guid>
       <description></description>
     </item>
     <item>
       <title>Cadence</title>
-      <link>http://localhost:1313/tags/cadence/</link>
+      <link>https://sachinsu.github.io/tags/cadence/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/cadence/</guid>
+      <guid>https://sachinsu.github.io/tags/cadence/</guid>
       <description></description>
     </item>
     <item>
       <title>Cassandra</title>
-      <link>http://localhost:1313/tags/cassandra/</link>
+      <link>https://sachinsu.github.io/tags/cassandra/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/cassandra/</guid>
+      <guid>https://sachinsu.github.io/tags/cassandra/</guid>
       <description></description>
     </item>
     <item>
       <title>Temporal.io</title>
-      <link>http://localhost:1313/tags/temporal.io/</link>
+      <link>https://sachinsu.github.io/tags/temporal.io/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/temporal.io/</guid>
+      <guid>https://sachinsu.github.io/tags/temporal.io/</guid>
       <description></description>
     </item>
     <item>
       <title>Uber</title>
-      <link>http://localhost:1313/tags/uber/</link>
+      <link>https://sachinsu.github.io/tags/uber/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/uber/</guid>
+      <guid>https://sachinsu.github.io/tags/uber/</guid>
       <description></description>
     </item>
     <item>
       <title>.Net Framework</title>
-      <link>http://localhost:1313/tags/.net-framework/</link>
+      <link>https://sachinsu.github.io/tags/.net-framework/</link>
       <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/.net-framework/</guid>
+      <guid>https://sachinsu.github.io/tags/.net-framework/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenTelemetry</title>
-      <link>http://localhost:1313/tags/opentelemetry/</link>
+      <link>https://sachinsu.github.io/tags/opentelemetry/</link>
       <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/opentelemetry/</guid>
+      <guid>https://sachinsu.github.io/tags/opentelemetry/</guid>
       <description></description>
     </item>
     <item>
       <title>Cmake</title>
-      <link>http://localhost:1313/tags/cmake/</link>
+      <link>https://sachinsu.github.io/tags/cmake/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/cmake/</guid>
+      <guid>https://sachinsu.github.io/tags/cmake/</guid>
       <description></description>
     </item>
     <item>
       <title>Make</title>
-      <link>http://localhost:1313/tags/make/</link>
+      <link>https://sachinsu.github.io/tags/make/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/make/</guid>
+      <guid>https://sachinsu.github.io/tags/make/</guid>
       <description></description>
     </item>
     <item>
       <title>Ninja</title>
-      <link>http://localhost:1313/tags/ninja/</link>
+      <link>https://sachinsu.github.io/tags/ninja/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/ninja/</guid>
+      <guid>https://sachinsu.github.io/tags/ninja/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>http://localhost:1313/tags/bash/</link>
+      <link>https://sachinsu.github.io/tags/bash/</link>
       <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/bash/</guid>
+      <guid>https://sachinsu.github.io/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Curl</title>
-      <link>http://localhost:1313/tags/curl/</link>
+      <link>https://sachinsu.github.io/tags/curl/</link>
       <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/curl/</guid>
+      <guid>https://sachinsu.github.io/tags/curl/</guid>
       <description></description>
     </item>
     <item>
       <title>Grep</title>
-      <link>http://localhost:1313/tags/grep/</link>
+      <link>https://sachinsu.github.io/tags/grep/</link>
       <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/grep/</guid>
+      <guid>https://sachinsu.github.io/tags/grep/</guid>
       <description></description>
     </item>
     <item>
       <title>Sed</title>
-      <link>http://localhost:1313/tags/sed/</link>
+      <link>https://sachinsu.github.io/tags/sed/</link>
       <pubDate>Thu, 15 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/sed/</guid>
+      <guid>https://sachinsu.github.io/tags/sed/</guid>
       <description></description>
     </item>
     <item>
       <title>Firewall</title>
-      <link>http://localhost:1313/tags/firewall/</link>
+      <link>https://sachinsu.github.io/tags/firewall/</link>
       <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/firewall/</guid>
+      <guid>https://sachinsu.github.io/tags/firewall/</guid>
       <description></description>
     </item>
     <item>
       <title>Polly</title>
-      <link>http://localhost:1313/tags/polly/</link>
+      <link>https://sachinsu.github.io/tags/polly/</link>
       <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/polly/</guid>
+      <guid>https://sachinsu.github.io/tags/polly/</guid>
       <description></description>
     </item>
     <item>
       <title>Twitter</title>
-      <link>http://localhost:1313/tags/twitter/</link>
+      <link>https://sachinsu.github.io/tags/twitter/</link>
       <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/twitter/</guid>
+      <guid>https://sachinsu.github.io/tags/twitter/</guid>
       <description></description>
     </item>
     <item>
       <title>WebAssembly</title>
-      <link>http://localhost:1313/tags/webassembly/</link>
+      <link>https://sachinsu.github.io/tags/webassembly/</link>
       <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/webassembly/</guid>
+      <guid>https://sachinsu.github.io/tags/webassembly/</guid>
       <description></description>
     </item>
     <item>
       <title>Channels</title>
-      <link>http://localhost:1313/tags/channels/</link>
+      <link>https://sachinsu.github.io/tags/channels/</link>
       <pubDate>Wed, 12 Feb 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/tags/channels/</guid>
+      <guid>https://sachinsu.github.io/tags/channels/</guid>
       <description></description>
     </item>
   </channel>

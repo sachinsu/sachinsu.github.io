@@ -2,39 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Go on Learnings in IT</title>
-    <link>http://localhost:1313/tags/go/</link>
+    <link>https://sachinsu.github.io/tags/go/</link>
     <description>Recent content in Go on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
-    <lastBuildDate>Sat, 23 May 2026 01:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OCR using LLM: evaluating capabilities</title>
-      <link>http://localhost:1313/posts/llm_ocr/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/llm_ocr/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;l
-&lt;a href=https://github.com/vas3k/TaxHacker
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;Taxhacker&lt;/a&gt;, is interesting open source project that uses LLM for &lt;a href=https://en.wikipedia.org/wiki/Optical_character_recognition
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;OCR&lt;/a&gt; to extract text and other useful information from images (e.g. invoices) and builds Tracker (using extracted information) for income/expenses or whatever else that needs to be tracked and involves performing scanning to extract data. It uses LiteLLM Proxy so that any AI Provider can be plugged in.&lt;/p&gt;
-&lt;p&gt;I decided to try OCR capabilities of LLM locally with below setup,&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Thu, 30 Dec 2021 01:00:00 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Can SQLite be considered for Server Applications?</title>
-      <link>http://localhost:1313/posts/is_sqlite_production_ready/</link>
+      <link>https://sachinsu.github.io/posts/is_sqlite_production_ready/</link>
       <pubDate>Thu, 30 Dec 2021 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/is_sqlite_production_ready/</guid>
+      <guid>https://sachinsu.github.io/posts/is_sqlite_production_ready/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;While embarking on building any new server application, one of the key requirement is whether it needs durable, persistent storage of data (and in most cases, it does). This is followed by evaluating suitable data store. Likely evaluation criteria is Application&amp;rsquo;s Requirement (Tolerance for eventual consistency, High Availability etc.), Team&amp;rsquo;s familiarity, Costs, Tech. support availability and so on.
 In case of choices in relational databases, typical go to options are MySQL, PostgreSQL or even proprietary databases like Oracle , SQL Server. Seldom one considers &lt;a href=https://SQLite.org
@@ -44,9 +28,9 @@ In case of choices in relational databases, typical go to options are MySQL, Pos
     </item>
     <item>
       <title>ELT approach for Data Pipelines</title>
-      <link>http://localhost:1313/posts/elt/</link>
+      <link>https://sachinsu.github.io/posts/elt/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/elt/</guid>
+      <guid>https://sachinsu.github.io/posts/elt/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;While gathering data for Analytics, one often has to source data from multiple sources. Traditionally, the approach has been to do ETL (Extract-Transform-load) where,&lt;/p&gt;
 &lt;ul&gt;
@@ -68,9 +52,9 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
     </item>
     <item>
       <title>Using Temporal.io to build Long running Workflows</title>
-      <link>http://localhost:1313/posts/temporalworkflow/</link>
+      <link>https://sachinsu.github.io/posts/temporalworkflow/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/temporalworkflow/</guid>
+      <guid>https://sachinsu.github.io/posts/temporalworkflow/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;In a typical business Application, there are often requirements for,&lt;/p&gt;
 &lt;ul&gt;
@@ -81,26 +65,26 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
     </item>
     <item>
       <title>Getting Started with OpenTelemetry</title>
-      <link>http://localhost:1313/posts/opentelemetry/</link>
+      <link>https://sachinsu.github.io/posts/opentelemetry/</link>
       <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/opentelemetry/</guid>
+      <guid>https://sachinsu.github.io/posts/opentelemetry/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with  trace/logs that are available from O/S, databases etc. and trying to figure out &amp;ldquo;Root cause&amp;rdquo; of the issue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ninja - Using lightweight build system for Go projects </title>
-      <link>http://localhost:1313/posts/ninjabuildsystem/</link>
+      <link>https://sachinsu.github.io/posts/ninjabuildsystem/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/ninjabuildsystem/</guid>
+      <guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.&lt;/p&gt;
 &lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tool to mass DM followers on Twitter in Go</title>
-      <link>http://localhost:1313/posts/massdmgolang/</link>
+      <link>https://sachinsu.github.io/posts/massdmgolang/</link>
       <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/massdmgolang/</guid>
+      <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
     

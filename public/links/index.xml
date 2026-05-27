@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Links on Learnings in IT</title>
-    <link>http://localhost:1313/links/</link>
+    <link>https://sachinsu.github.io/links/</link>
     <description>Recent content in Links on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
     <lastBuildDate>Sun, 03 Mar 2024 14:13:27 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/links/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sachinsu.github.io/links/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming Languages - Java</title>
-      <link>http://localhost:1313/links/java/</link>
+      <link>https://sachinsu.github.io/links/java/</link>
       <pubDate>Sun, 03 Mar 2024 14:13:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/java/</guid>
+      <guid>https://sachinsu.github.io/links/java/</guid>
       <description>&lt;h2 id=&#34;java-language&#34;&gt;Java Language&lt;/h2&gt;
 &lt;h3 id=&#34;articles-e-books&#34;&gt;Articles, E-books&lt;/h3&gt;
 &lt;ul&gt;
@@ -34,9 +34,9 @@
     </item>
     <item>
       <title>PostgreSQL</title>
-      <link>http://localhost:1313/links/postgresql/</link>
+      <link>https://sachinsu.github.io/links/postgresql/</link>
       <pubDate>Mon, 10 Jan 2022 15:08:50 +0530</pubDate>
-      <guid>http://localhost:1313/links/postgresql/</guid>
+      <guid>https://sachinsu.github.io/links/postgresql/</guid>
       <description>&lt;h1 id=&#34;postgresql&#34;&gt;PostgreSQL&lt;/h1&gt;
 &lt;h2 id=&#34;general-articles&#34;&gt;General Articles&lt;/h2&gt;
 &lt;ul&gt;
@@ -678,9 +678,9 @@
     </item>
     <item>
       <title>Resources for Online Learning</title>
-      <link>http://localhost:1313/links/onlearn/</link>
+      <link>https://sachinsu.github.io/links/onlearn/</link>
       <pubDate>Thu, 18 Jun 2020 12:33:07 +0530</pubDate>
-      <guid>http://localhost:1313/links/onlearn/</guid>
+      <guid>https://sachinsu.github.io/links/onlearn/</guid>
       <description>&lt;p&gt;Section covering resources for  Online learning etc.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=https://medium.com/basecs
@@ -711,9 +711,9 @@
     </item>
     <item>
       <title>Programming Languages - Python</title>
-      <link>http://localhost:1313/links/python/</link>
+      <link>https://sachinsu.github.io/links/python/</link>
       <pubDate>Sun, 07 Jun 2020 14:13:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/python/</guid>
+      <guid>https://sachinsu.github.io/links/python/</guid>
       <description>&lt;p&gt;Python has become pervasive all throught Data Science be it Machine learning, Deep learning, Data Processing and general purpose tasks like Web Development.&lt;/p&gt;
 &lt;h2 id=&#34;courses-trainings&#34;&gt;Courses, Trainings&lt;/h2&gt;
 &lt;ul&gt;
@@ -790,9 +790,9 @@
     </item>
     <item>
       <title>Cloud Tech</title>
-      <link>http://localhost:1313/links/cloud/</link>
+      <link>https://sachinsu.github.io/links/cloud/</link>
       <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/cloud/</guid>
+      <guid>https://sachinsu.github.io/links/cloud/</guid>
       <description>&lt;p&gt;Useful links for deep diving in various Cloud Ecosystems&lt;/p&gt;
 &lt;h3 id=&#34;articles&#34;&gt;Articles&lt;/h3&gt;
 &lt;ul&gt;
@@ -948,9 +948,9 @@
     </item>
     <item>
       <title>Generative AI, Machine Learning</title>
-      <link>http://localhost:1313/links/aiml/</link>
+      <link>https://sachinsu.github.io/links/aiml/</link>
       <pubDate>Tue, 26 May 2020 14:13:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/aiml/</guid>
+      <guid>https://sachinsu.github.io/links/aiml/</guid>
       <description>&lt;p&gt;Useful links related from Generative AI, ML space&lt;/p&gt;
 &lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
 &lt;ul&gt;
@@ -1150,9 +1150,9 @@
     </item>
     <item>
       <title>UI/UX</title>
-      <link>http://localhost:1313/links/uiux/</link>
+      <link>https://sachinsu.github.io/links/uiux/</link>
       <pubDate>Fri, 08 May 2020 15:07:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/uiux/</guid>
+      <guid>https://sachinsu.github.io/links/uiux/</guid>
       <description>&lt;h1 id=&#34;user-interface--user-experience&#34;&gt;User Interface / User Experience&lt;/h1&gt;
 &lt;h2 id=&#34;design-approach&#34;&gt;Design Approach&lt;/h2&gt;
 &lt;ul&gt;
@@ -1505,9 +1505,9 @@
     </item>
     <item>
       <title>Perspectives</title>
-      <link>http://localhost:1313/links/perspectives/</link>
+      <link>https://sachinsu.github.io/links/perspectives/</link>
       <pubDate>Tue, 18 Feb 2020 12:33:07 +0530</pubDate>
-      <guid>http://localhost:1313/links/perspectives/</guid>
+      <guid>https://sachinsu.github.io/links/perspectives/</guid>
       <description>&lt;h1 id=&#34;perspectives&#34;&gt;Perspectives&lt;/h1&gt;
 &lt;p&gt;Section covering Business, project/programming perspectives&lt;/p&gt;
 &lt;ul&gt;
@@ -1866,9 +1866,9 @@
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/links/tools/</link>
+      <link>https://sachinsu.github.io/links/tools/</link>
       <pubDate>Tue, 18 Feb 2020 12:33:07 +0530</pubDate>
-      <guid>http://localhost:1313/links/tools/</guid>
+      <guid>https://sachinsu.github.io/links/tools/</guid>
       <description>&lt;h1 id=&#34;general-purpose-tools&#34;&gt;General Purpose tools&lt;/h1&gt;
 &lt;p&gt;Section covering useful tools for every day activities, Online learning etc.&lt;/p&gt;
 &lt;ul&gt;
@@ -2203,9 +2203,9 @@
     </item>
     <item>
       <title>Oracle</title>
-      <link>http://localhost:1313/links/oracle/</link>
+      <link>https://sachinsu.github.io/links/oracle/</link>
       <pubDate>Fri, 07 Feb 2020 15:09:50 +0530</pubDate>
-      <guid>http://localhost:1313/links/oracle/</guid>
+      <guid>https://sachinsu.github.io/links/oracle/</guid>
       <description>&lt;h2 id=&#34;oracle-database&#34;&gt;Oracle Database&lt;/h2&gt;
 &lt;h3 id=&#34;performance-best-practices&#34;&gt;Performance, Best Practices&lt;/h3&gt;
 &lt;ul&gt;
@@ -2366,9 +2366,9 @@
     </item>
     <item>
       <title>NOSQL</title>
-      <link>http://localhost:1313/links/nosql/</link>
+      <link>https://sachinsu.github.io/links/nosql/</link>
       <pubDate>Fri, 07 Feb 2020 15:08:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/nosql/</guid>
+      <guid>https://sachinsu.github.io/links/nosql/</guid>
       <description>&lt;h1 id=&#34;nosql-databases&#34;&gt;NOSQL Databases&lt;/h1&gt;
 &lt;h2 id=&#34;mongodb&#34;&gt;MongoDB&lt;/h2&gt;
 &lt;ul&gt;
@@ -2489,9 +2489,9 @@
     </item>
     <item>
       <title>MySQL</title>
-      <link>http://localhost:1313/links/mysql/</link>
+      <link>https://sachinsu.github.io/links/mysql/</link>
       <pubDate>Fri, 07 Feb 2020 15:07:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/mysql/</guid>
+      <guid>https://sachinsu.github.io/links/mysql/</guid>
       <description>&lt;h1 id=&#34;mysql&#34;&gt;MySQL&lt;/h1&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -2561,9 +2561,9 @@
     </item>
     <item>
       <title>Databases</title>
-      <link>http://localhost:1313/links/databases/</link>
+      <link>https://sachinsu.github.io/links/databases/</link>
       <pubDate>Fri, 07 Feb 2020 15:02:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/databases/</guid>
+      <guid>https://sachinsu.github.io/links/databases/</guid>
       <description>&lt;h1 id=&#34;database&#34;&gt;Database&lt;/h1&gt;
 &lt;p&gt;Knowledge base around general database related topics.&lt;/p&gt;
 &lt;h2 id=&#34;general-links&#34;&gt;General Links&lt;/h2&gt;
@@ -3261,9 +3261,9 @@
     </item>
     <item>
       <title>Programming Languages - .NET</title>
-      <link>http://localhost:1313/links/dotnet/</link>
+      <link>https://sachinsu.github.io/links/dotnet/</link>
       <pubDate>Fri, 07 Feb 2020 14:14:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/dotnet/</guid>
+      <guid>https://sachinsu.github.io/links/dotnet/</guid>
       <description>&lt;h1 id=&#34;microsoft-net&#34;&gt;Microsoft .NET&lt;/h1&gt;
 &lt;p&gt;Platform where i have spent most time till now.&lt;/p&gt;
 &lt;h2 id=&#34;general-links&#34;&gt;General Links&lt;/h2&gt;
@@ -3679,9 +3679,9 @@
     </item>
     <item>
       <title>Programming Languages - Go</title>
-      <link>http://localhost:1313/links/go/</link>
+      <link>https://sachinsu.github.io/links/go/</link>
       <pubDate>Fri, 07 Feb 2020 14:13:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/go/</guid>
+      <guid>https://sachinsu.github.io/links/go/</guid>
       <description>&lt;h2 id=&#34;go-language&#34;&gt;Go Language&lt;/h2&gt;
 &lt;p&gt;My current Favorite Language&lt;/p&gt;
 &lt;h3 id=&#34;articles-e-books&#34;&gt;Articles, E-books&lt;/h3&gt;
@@ -4128,9 +4128,9 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     </item>
     <item>
       <title>Programming - Testing</title>
-      <link>http://localhost:1313/links/testing/</link>
+      <link>https://sachinsu.github.io/links/testing/</link>
       <pubDate>Fri, 07 Feb 2020 14:05:07 +0530</pubDate>
-      <guid>http://localhost:1313/links/testing/</guid>
+      <guid>https://sachinsu.github.io/links/testing/</guid>
       <description>&lt;h1 id=&#34;testing&#34;&gt;Testing&lt;/h1&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -4204,9 +4204,9 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     </item>
     <item>
       <title>Programming Languages</title>
-      <link>http://localhost:1313/links/planguages/</link>
+      <link>https://sachinsu.github.io/links/planguages/</link>
       <pubDate>Fri, 07 Feb 2020 13:38:46 +0530</pubDate>
-      <guid>http://localhost:1313/links/planguages/</guid>
+      <guid>https://sachinsu.github.io/links/planguages/</guid>
       <description>&lt;h1 id=&#34;programming-languages&#34;&gt;Programming Languages&lt;/h1&gt;
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
@@ -4272,9 +4272,9 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/links/programming/</link>
+      <link>https://sachinsu.github.io/links/programming/</link>
       <pubDate>Fri, 07 Feb 2020 12:33:07 +0530</pubDate>
-      <guid>http://localhost:1313/links/programming/</guid>
+      <guid>https://sachinsu.github.io/links/programming/</guid>
       <description>&lt;h1 id=&#34;system-design-architecture&#34;&gt;System Design, Architecture&lt;/h1&gt;
 &lt;p&gt;Links covering concepts and approaches around Distributed Systems, DevOps, Observability etc.&lt;/p&gt;
 &lt;h2 id=&#34;architectural-case-studies&#34;&gt;Architectural Case studies&lt;/h2&gt;
@@ -4627,9 +4627,9 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     </item>
     <item>
       <title>Useful Links</title>
-      <link>http://localhost:1313/links/home/</link>
+      <link>https://sachinsu.github.io/links/home/</link>
       <pubDate>Fri, 07 Feb 2020 11:38:27 +0530</pubDate>
-      <guid>http://localhost:1313/links/home/</guid>
+      <guid>https://sachinsu.github.io/links/home/</guid>
       <description>&lt;h4 id=&#34;below-is-list-of-curated-links-for-various-technical-topics&#34;&gt;Below is list of curated links for various technical topics,&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=http://awesome.re/
@@ -4644,81 +4644,81 @@ b.com/hoanhan101/ultimate-go)&lt;/li&gt;
     
     target=_blank rel=&#34;noopener noreferrer&#34;
 &gt;List of Open source Alternatives to SASS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/onlearn/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/onlearn/
     
     
 &gt;Online Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/perspectives/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/perspectives/
     
     
 &gt;Perspectives&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/programming/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/programming/
     
     
 &gt;Distributed Systems Design, Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/testing/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/testing/
     
     
 &gt;Testing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/uiux
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/uiux
     
     
 &gt;UI/UX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/planguages/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/planguages/
     
     
 &gt;Languages&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/go/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/go/
     
     
 &gt;Go&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/dotnet/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/dotnet/
     
     
 &gt;.NET/C#&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/python
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/python
     
     
 &gt;Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/databases/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/databases/
     
     
 &gt;Databases&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/mysql/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/mysql/
     
     
 &gt;MySQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/oracle/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/oracle/
     
     
 &gt;Oracle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/postgresql/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/postgresql/
     
     
 &gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/nosql/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/nosql/
     
     
 &gt;NoSQL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/cloud/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/cloud/
     
     
 &gt;Cloud Tech&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;AI/Machine Learning
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/aiml/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/aiml/
     
     
 &gt;Generative AI&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=http://localhost:1313/links/tools/
+&lt;li&gt;&lt;a href=https://sachinsu.github.io/links/tools/
     
     
 &gt;General Purpose tools&lt;/a&gt;&lt;/li&gt;

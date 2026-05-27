@@ -2,39 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Golang on Learnings in IT</title>
-    <link>http://localhost:1313/tags/golang/</link>
+    <link>https://sachinsu.github.io/tags/golang/</link>
     <description>Recent content in Golang on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
-    <lastBuildDate>Sat, 23 May 2026 01:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OCR using LLM: evaluating capabilities</title>
-      <link>http://localhost:1313/posts/llm_ocr/</link>
-      <pubDate>Sat, 23 May 2026 01:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/posts/llm_ocr/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;l
-&lt;a href=https://github.com/vas3k/TaxHacker
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;Taxhacker&lt;/a&gt;, is interesting open source project that uses LLM for &lt;a href=https://en.wikipedia.org/wiki/Optical_character_recognition
-    
-    target=_blank rel=&#34;noopener noreferrer&#34;
-&gt;OCR&lt;/a&gt; to extract text and other useful information from images (e.g. invoices) and builds Tracker (using extracted information) for income/expenses or whatever else that needs to be tracked and involves performing scanning to extract data. It uses LiteLLM Proxy so that any AI Provider can be plugged in.&lt;/p&gt;
-&lt;p&gt;I decided to try OCR capabilities of LLM locally with below setup,&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sat, 11 May 2024 10:25:04 +0530</lastBuildDate>
+    <atom:link href="https://sachinsu.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using local LLM with Ollama and Semantic Kernel</title>
-      <link>http://localhost:1313/posts/ollamasemantickernel/</link>
+      <link>https://sachinsu.github.io/posts/ollamasemantickernel/</link>
       <pubDate>Sat, 11 May 2024 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/ollamasemantickernel/</guid>
+      <guid>https://sachinsu.github.io/posts/ollamasemantickernel/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Artificial Intelligence, especially Large language models (LLMs) are all in high demand. Since OpenAI released ChatGPT, interest has gone up multi-fold. Since 2023, Powerful LLMs can be run on local machines. Local Large Language Models  offer advantages in terms of data privacy and security and can be enriched using enterprise-specific data using Retrieval augmentation generation (RAG).Several tools exist that make it relatively easy to obtain, run and manage such models locally on our machines. Few examples are &lt;a href=https://ollama.com/
     
@@ -49,9 +33,9 @@
     </item>
     <item>
       <title>Resiliency Testing with Toxiproxy</title>
-      <link>http://localhost:1313/posts/resiliencytoxiproxy/</link>
+      <link>https://sachinsu.github.io/posts/resiliencytoxiproxy/</link>
       <pubDate>Sat, 09 Jan 2021 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/resiliencytoxiproxy/</guid>
+      <guid>https://sachinsu.github.io/posts/resiliencytoxiproxy/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;In a typical workflow of software development, Developer implements a Unit/component, tests it and pushes  the changes to source control repository. It then goes through Continuous integration, automated testing, provisioning and deployment. Given High availability requirements expected (or should i say assumed) nowadays,  As much as functional correctness of the Unit, it is also important to test how a Unit/Component handles failures, delays etc. in distributed environment.  Often, such behavior is observed in production itself, unless project team is following practices of &lt;a href=https://netflixtechblog.com/tagged/chaos-engineering
     
@@ -60,9 +44,9 @@
     </item>
     <item>
       <title>Using Temporal.io to build Long running Workflows</title>
-      <link>http://localhost:1313/posts/temporalworkflow/</link>
+      <link>https://sachinsu.github.io/posts/temporalworkflow/</link>
       <pubDate>Mon, 07 Dec 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/temporalworkflow/</guid>
+      <guid>https://sachinsu.github.io/posts/temporalworkflow/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;In a typical business Application, there are often requirements for,&lt;/p&gt;
 &lt;ul&gt;
@@ -73,26 +57,26 @@
     </item>
     <item>
       <title>Getting Started with OpenTelemetry</title>
-      <link>http://localhost:1313/posts/opentelemetry/</link>
+      <link>https://sachinsu.github.io/posts/opentelemetry/</link>
       <pubDate>Sat, 07 Nov 2020 08:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/opentelemetry/</guid>
+      <guid>https://sachinsu.github.io/posts/opentelemetry/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;How many times have we landed up in a meeting staring at random slowness or such production issues in a distributed Application ? only to experience helplessness with limited (or often times no) visibility available about the runtime behavior of the Application. It often ends up in manually correlating whatever diagnostic data available from Application and combining it with  trace/logs that are available from O/S, databases etc. and trying to figure out &amp;ldquo;Root cause&amp;rdquo; of the issue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ninja - Using lightweight build system for Go projects </title>
-      <link>http://localhost:1313/posts/ninjabuildsystem/</link>
+      <link>https://sachinsu.github.io/posts/ninjabuildsystem/</link>
       <pubDate>Tue, 27 Oct 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/ninjabuildsystem/</guid>
+      <guid>https://sachinsu.github.io/posts/ninjabuildsystem/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I primarily work on Windows for development purposes. Whenever its about writing code in Golang, invariably one comes across usage of Make. A quick check on popular Go projects on Github will show Makefile being used to automate tasks like linting, build, testing and deployment.&lt;/p&gt;
 &lt;p&gt;Being on Windows, i have been looking for alternative build tool that is easy to setup (i.e. doesn&amp;rsquo;t require mingw and such environments) and use compared to Make (which is primarily targetted at Unix and Unix like Operating Systems).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Is WebAssembly future of Web Development</title>
-      <link>http://localhost:1313/posts/webassembly/</link>
+      <link>https://sachinsu.github.io/posts/webassembly/</link>
       <pubDate>Tue, 02 Jun 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/webassembly/</guid>
+      <guid>https://sachinsu.github.io/posts/webassembly/</guid>
       <description>&lt;p&gt;Over the last many years, de-facto language of the Web (specifically front-end) has been Javascript (and variants like Typescript, ECMAScript versions and so on). The Web development has been revolving around HTML+CSS+Javascript trio. It all started with support for Javascript in browsers, followed by addition of XMLHTTP API, Rich DOM Manipulation Support in Javascript. To induce order and apply patterns to Javascript&amp;rsquo;s usage in browsers, numerous frameworks and libraries were introduced like &lt;a href=https://reactjs.org
     
     target=_blank rel=&#34;noopener noreferrer&#34;

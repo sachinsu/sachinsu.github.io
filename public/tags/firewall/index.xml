@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Firewall on Learnings in IT</title>
-    <link>http://localhost:1313/tags/firewall/</link>
+    <link>https://sachinsu.github.io/tags/firewall/</link>
     <description>Recent content in Firewall on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
     <lastBuildDate>Tue, 25 Aug 2020 10:25:04 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sachinsu.github.io/tags/firewall/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trobleshooting TCP Connection request time outs</title>
-      <link>http://localhost:1313/posts/connectiontimeouts/</link>
+      <link>https://sachinsu.github.io/posts/connectiontimeouts/</link>
       <pubDate>Tue, 25 Aug 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/connectiontimeouts/</guid>
+      <guid>https://sachinsu.github.io/posts/connectiontimeouts/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently had opportunity to support team who has been battling with Intermittent (scary i know :)) issues with TCP connectivity in Production.&lt;/p&gt;
 &lt;p&gt;Simplified deployment Architecture is as below,&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/conntimeoutarch.png&#34;/&gt; &lt;figcaption&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://sachinsu.github.io/images/conntimeoutarch.png&#34;/&gt; &lt;figcaption&gt;
             High Level Architecture
         &lt;/figcaption&gt;
 &lt;/figure&gt;

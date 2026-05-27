@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Twitter on Learnings in IT</title>
-    <link>http://localhost:1313/tags/twitter/</link>
+    <link>https://sachinsu.github.io/tags/twitter/</link>
     <description>Recent content in Twitter on Learnings in IT</description>
     <image>
       <title>Learnings in IT</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://sachinsu.github.io/images/papermod-cover.png</url>
+      <link>https://sachinsu.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.149.0</generator>
     <language>en</language>
     <copyright>2026</copyright>
     <lastBuildDate>Sat, 25 Jul 2020 10:25:04 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sachinsu.github.io/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tool to mass DM followers on Twitter in Go</title>
-      <link>http://localhost:1313/posts/massdmgolang/</link>
+      <link>https://sachinsu.github.io/posts/massdmgolang/</link>
       <pubDate>Sat, 25 Jul 2020 10:25:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/massdmgolang/</guid>
+      <guid>https://sachinsu.github.io/posts/massdmgolang/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
 &lt;p&gt;I recently came across bounty by &lt;a href=https://twitter.com/balajis/status/1271945241881268224?s&amp;#61;20
     
