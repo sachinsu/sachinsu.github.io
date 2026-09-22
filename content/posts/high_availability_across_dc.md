@@ -1,9 +1,9 @@
-+++
-title = 'High availability For Critical Applications'
-date = 2026-09-24T07:07:07+01:00
-draft = false
-tags = [postgresql,HA,high availability,yugabytedb,patroni,citus]
-+++
+---
+title: "High availability For Critical Applications"
+date: 2026-09-24T07:07:07+01:00
+draft: false
+tags: [postgresql,HA,high availability,yugabytedb,patroni,citus]
+---
 
 # Executive Summary and key Constraints
 
