@@ -3,7 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sachinsu.github.io/</loc>
-    <lastmod>2026-05-03T01:00:00+05:30</lastmod>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/citus/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/ha/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/high-availability/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/high_availability_across_dc/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/patroni/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/postgresql/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/posts/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>https://sachinsu.github.io/tags/yugabytedb/</loc>
+    <lastmod>2026-09-22T07:07:07+01:00</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/adk-go/</loc>
     <lastmod>2026-05-03T01:00:00+05:30</lastmod>
@@ -32,13 +59,7 @@
     <loc>https://sachinsu.github.io/tags/mcp/</loc>
     <lastmod>2026-05-03T01:00:00+05:30</lastmod>
   </url><url>
-    <loc>https://sachinsu.github.io/posts/</loc>
-    <lastmod>2026-05-03T01:00:00+05:30</lastmod>
-  </url><url>
     <loc>https://sachinsu.github.io/tags/rag/</loc>
-    <lastmod>2026-05-03T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/</loc>
     <lastmod>2026-05-03T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/posts/dapr/</loc>
@@ -126,9 +147,6 @@
     <lastmod>2025-06-01T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/ollama/</loc>
-    <lastmod>2025-06-01T01:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://sachinsu.github.io/tags/postgresql/</loc>
     <lastmod>2025-06-01T01:00:00+05:30</lastmod>
   </url><url>
     <loc>https://sachinsu.github.io/tags/prompt/</loc>

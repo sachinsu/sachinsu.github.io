@@ -12,8 +12,50 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>2026</copyright>
-    <lastBuildDate>Sun, 03 May 2026 01:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 07:07:07 +0100</lastBuildDate>
     <atom:link href="https://sachinsu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Citus</title>
+      <link>https://sachinsu.github.io/tags/citus/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/citus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HA</title>
+      <link>https://sachinsu.github.io/tags/ha/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/ha/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>High Availability</title>
+      <link>https://sachinsu.github.io/tags/high-availability/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/high-availability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Patroni</title>
+      <link>https://sachinsu.github.io/tags/patroni/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/patroni/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://sachinsu.github.io/tags/postgresql/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yugabytedb</title>
+      <link>https://sachinsu.github.io/tags/yugabytedb/</link>
+      <pubDate>Tue, 22 Sep 2026 07:07:07 +0100</pubDate>
+      <guid>https://sachinsu.github.io/tags/yugabytedb/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ADK-Go</title>
       <link>https://sachinsu.github.io/tags/adk-go/</link>
@@ -99,7 +141,7 @@
       <description></description>
     </item>
     <item>
-      <title>Microservices</title>
+      <title>MicroServices</title>
       <link>https://sachinsu.github.io/tags/microservices/</link>
       <pubDate>Sat, 06 Dec 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/microservices/</guid>
@@ -243,13 +285,6 @@
       <link>https://sachinsu.github.io/tags/ollama/</link>
       <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
       <guid>https://sachinsu.github.io/tags/ollama/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Postgresql</title>
-      <link>https://sachinsu.github.io/tags/postgresql/</link>
-      <pubDate>Sun, 01 Jun 2025 01:00:00 +0530</pubDate>
-      <guid>https://sachinsu.github.io/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
