@@ -77,27 +77,28 @@ Given this limitation,a Data Partitioning (sharding) based approach can be consi
   
       ![Sharding Approach](/images/hadc_image3.svg)
 
-  - Sharding at Application level
+### Sharding at Application level
    
-    One possible implementation approach is as follows:
-    
-    - Use a modulo-based function to map a sharding key to a database identifier. Initially, each shard may exist as a logical PostgreSQL database rather than on dedicated physical hardware. 
-    - Provision PostgreSQL servers in an Active-Passive configuration and estimate future growth requirements. 
-    - For e.g., start with 2 servers with 32 databases each, each of these will be provisioned as logic databases with exact same schema on these servers. Refer below diagram, 
+One possible implementation approach is as follows
 
-    ![Manual Sharding at Database](/images/hadc_bookimage.png)
+ - Use a modulo-based function to map a sharding key to a database identifier. Initially, each shard may exist as a logical PostgreSQL database rather than on dedicated physical hardware. 
+ - Provision PostgreSQL servers in an Active-Passive configuration and estimate future growth requirements. 
+ - For e.g., start with 2 servers with 32 databases each, each of these will be provisioned as logic databases with exact same schema on these servers. Refer below diagram, 
 
-    - Implement mapping functions within the application:
-      - ```getDbNumber()``` maps the sharding key (such as Institution ID) to a logical database.
-      - ```getServerNumber()``` maps the logical database to a physical server.
-      - As capacity requirements grow, physical servers can be added and logical databases redistributed. Only the server-mapping logic requires modification.
+ 
+![Manual Sharding at Database](/images/hadc_bookimage.png)
+
+ - Implement mapping functions within the application:
+   - ```getDbNumber()``` maps the sharding key (such as Institution ID) to a logical database.
+   - ```getServerNumber()``` maps the logical database to a physical server.
+   - As capacity requirements grow, physical servers can be added and logical databases redistributed. Only the server-mapping logic requires modification.
 
     - *No data loss* requirement requires us to use *Streaming replication/Hot standy* within a data center. However, this can only address failure of primary database and not the failure of Application nodes or data center itself. This confiuration can be deployed using [Patroni](https://github.com/zalando/patroni) or [pg_auto_failover](https://github.com/hapostgres/pg_auto_failover).
 
-   - Challenges 
-     - *Modulo* function based approach  works for static shard counts, but for dynamic shards, alternate approaches  `Consistent Hashing` or `Directory-based mapping` will have to be considered. Refer [here](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#advantages-and-considerations-for-each-strategy) for comparison of sharding strategy. Selection of strategy will have impact on infrastructure required as well as on operational complexity.
-     -  Future horizontal scaling requires shard migration procedures and corresponding application configuration updates. 
-     -  Cross-shard queries will require additional consideration as it will require "Scatter-gather" approach to connect to multiple databases and then aggregating results. 
+- Challenges 
+  - *Modulo* function based approach  works for static shard counts, but for dynamic shards, alternate approaches  `Consistent Hashing` or `Directory-based mapping` will have to be considered. Refer [here](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#advantages-and-considerations-for-each-strategy) for comparison of sharding strategy. Selection of strategy will have impact on infrastructure required as well as on operational complexit
+  -  Future horizontal scaling requires shard migration procedures and corresponding application configuration updates. 
+  -  Cross-shard queries will require additional consideration as it will require "Scatter-gather" approach to connect to multiple databases and then aggregating results. 
   
   This is one of the many approaches for sharding and will need careful consideration before finalizing it.
 
@@ -111,30 +112,32 @@ Given this limitation,a Data Partitioning (sharding) based approach can be consi
     -  Such service can implement health check check/Liveness probs for endpoint in other data center to continuously monitor the health and proactively respond with error for requests that require such routing. 
 
 
-    -  Drawbacks ,
-       -  This is not a true High availability configuration since In case of disruption at any data center, significant percentage (up to 50% if shards are evenly distributed across data centers) of transactions will be impacted. Measures like provisioning exact replica of Application + Database servers will have to be planned in corresponding data center. This will result in additional expenditure and operational considerations.
-       -  Horizontal scaling of database and movement of respective shards (logical databases) will require careful operating procedure to minimize down time. 
-       -  Routing of requests between shards results in additional network round trips and will impact throughput. 
+-  Drawbacks,
+
+   -  This is not a true High availability configuration since In case of disruption at any data center, significant percentage (up to 50% if shards are evenly distributed across data centers) of transactions will be  impacted. Measures like provisioning exact replica of Application + Database servers will have to be planned in corresponding data center. This will result in additional expenditure and operational considerations.
+   -  Horizontal scaling of database and movement of respective shards (logical databases) will require careful operating procedure to minimize down time. 
+   -  Routing of requests between shards results in additional network round trips and will impact throughput. 
         
 
-  - Sharding at Database level (Automatic Sharding)
-    - Although application-level sharding is a great way to increase your I/O capacity and allow your application to handle more data, a lot of challenges come with it. Code becomes much more complex, cross-shard queries are a pain point, and adding hardware and migrating data can be a challenge.
-    -  Within PostgreSQL Universe, Citus (ref: [here](https://docs.citusdata.com/en/stable/get_started/concepts.html)), open source extension, provides sharding at database level.  It provides row-based and schema-based sharding. With schema-based sharding (ref: here), the schema becomes the logical shard within the database. Multi-tenant apps can a use a schema per tenant to easily shard along the tenant dimension. Query changes are not required and the application usually only needs a small modification to set the proper search_path when switching tenants.  While  row-based sharding is claimed to be suitable for analytical workload , schema based can be considered for Multi-tenant or microservices based OLTP workload.
+### Sharding at Database level (Automatic Sharding)
+
+- Although application-level sharding is a great way to increase your I/O capacity and allow your application to handle more data, a lot of challenges come with it. Code becomes much more complex, cross-shard queries are a pain point, and adding hardware and migrating data can be a challenge.
+-  Within PostgreSQL Universe, Citus (ref: [here](https://docs.citusdata.com/en/stable/get_started/concepts.html)), open source extension, provides sharding at database level.  It provides row-based and schema-based sharding. With schema-based sharding (ref: here), the schema becomes the logical shard within the database. Multi-tenant apps can a use a schema per tenant to easily shard along the tenant dimension. Query changes are not required and the application usually only needs a small modification to set the proper search_path when switching tenants.  While  row-based sharding is claimed to be suitable for analytical workload , schema based can be considered for Multi-tenant or microservices based OLTP workload.
   
-     - Citus provides,
-        - Schema management with appropriate transactions and locking
-        - automatic zero-downtime rebalancing
-        - reference tables enable more compact data models
+ - Citus provides,
+    - Schema management with appropriate transactions and locking
+    - automatic zero-downtime rebalancing
+    - reference tables enable more compact data models
 
-    ![Automatic Sharding using Citus](/images/hadc_image6.svg)
+![Automatic Sharding using Citus](/images/hadc_image6.svg)
 
-      - Pros and Cons
-        - Leveraging open source extension backed by Microsoft.
-        - Application instance still needs to decide if it can serve the request but connection management to connect to sharded schema is not needed in Application 
-        - Automatic rebalancing of shards
-        - Additional database nodes for coordinator 
-        - Cross-shard queries are not natively supported.
-        - Read and write latency needs to be verified against expected SLOs
+- Pros and Cons
+  - Leveraging open source extension backed by Microsoft.
+  - Application instance still needs to decide if it can serve the request but connection management to connect to sharded schema is not needed in Application 
+  - Automatic rebalancing of shards
+  - Additional database nodes for coordinator 
+  - Cross-shard queries are not natively supported.
+  - Read and write latency needs to be verified against expected SLOs
 
 ## Summary
   
@@ -152,21 +155,27 @@ Given this limitation,a Data Partitioning (sharding) based approach can be consi
 
  ![Using Yugabyte OSS as Data store](/images/hadc_image5.svg)
 
-  - Pros
-	  - No need for Application level routing/sharding as both Data centers can be in Active mode.
-		- Automatic partitioning by the database 
-		- Xcluster bi-directional /two-way works with 2 data centers.
+### Pros
+- No need for Application level routing/sharding as both Data centers can be in Active mode.
+- Automatic partitioning by the database 
+- Xcluster bi-directional /two-way works with 2 data centers.
 
-  - Cons
-    - To achieve a fault tolerance of 1 data Center, the primary cluster has to be configured with a RF of at least 3 [] 2*(1) + 1].Accordingly, additional infrastructure (Bare metal or VM Servers) will be needed as well as for control pane (for monitoring, configuration etc.) 
-		- In bi-directional replication mode, 
-			- Only supports Asynchronous replication.
-			- For conflict resolution, it implements "Last write wins" approach.
-			- Potential data loss: In the event of a data center failure, any data that has not yet been replicated to the secondary data center will be lost.
-			- Stale reads: When reading from the secondary data center, there may be a delay in data availability due to the asynchronous nature of the replication. This can result in stale reads
-			- Read and write latency needs to be analyzed.
-		- May lead to inconsistencies if schemas or data modifications are not carefully coordinated across clusters.
-		- Tools and interfaces are only provided in Commercial version. This may make operational management (via command line tools) cumbersome.
+### Cons
+- To achieve a fault tolerance of 1 data Center, the primary cluster has to be configured with a RF of at least 3 [] 2*(1) + 1].Accordingly, additional infrastructure (Bare metal or VM Servers) will be needed as well as for control pane (for monitoring, configuration etc.) 
+	- In bi-directional replication mode, 
+		- Only supports Asynchronous replication.
+		- For conflict resolution, it implements "Last write wins" approach.
+		- Potential data loss: In the event of a data center failure, any data that has not yet been replicated to the secondary data center will be lost.
+		- Stale reads: When reading from the secondary data center, there may be a delay in data availability due to the asynchronous nature of the replication. This can result in stale reads
+		- Read and write latency needs to be analyzed.
+   	    - May lead to inconsistencies if schemas or data modifications are not carefully coordinated across clusters.
+ 		- Tools and interfaces are only provided in Commercial version. This may make operational management (via command line tools) cumbersome.
+
+## Summary
+  
+- This approach is based on using YugabyteDB, distributed key-value store, with support postgresql protocol for providing high availability . 
+- Using yugabytedb allows for horizontal scaling within cluster though it requires additional infrastructure to confirm with intended replication factor and for control pane.
+- Since yugabytedb only supports asychronous replication for Bi-direction XCluser configuration, achieving ```RPO=0``` will be challenging. 
 
 # Comparison of Options 
 
