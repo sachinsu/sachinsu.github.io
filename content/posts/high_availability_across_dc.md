@@ -1,43 +1,41 @@
 ---
-title: "High availability For Critical Applications"
-date: 2026-09-24T07:07:07+01:00
+title: "High availability for critical applications"
+date: 2026-09-22T07:07:07+01:00
 draft: false
 tags: [postgresql,HA,high availability,yugabytedb,patroni,citus]
 ---
 
 # Executive Summary and key Constraints
 
-In every enterprise, there are applications with specific high availability requirements.  Deploying high-availability (HA) architectures for Online Transaction Processing (OLTP) workloads across multi-site environments requires balancing *data consistency*, *recovery objectives*, and *operational complexity* while adhering to constraints.
+In enterprise, there are applications with specific high availability requirements. Online transaction processing (OLTP) applications are prime examples of this requirement.  Deploying high-availability (HA) architectures for these applications across multi-site environments requires balancing *data consistency*, *recovery objectives*, and *operational complexity* while adhering to constraints.
 
 This post evaluates architecture options for a **write-heavy, mission-critical OLTP application** deployed across two on-premise data centers using open-source tools.
 
 ## Current State (Deployment)
 
-
  ![Current Deployment Architecture](/images/hadc_image1.svg)
-
 
 ## Objectives and Constraints
 
-The requirement is to provide High availability for mission-critical  Applications with below objectives,
+The goal is to provide High availability for mission-critical Applications with below objectives,
 
   - 99.9% (~ 8.8 hours of downtime/year) availability for the Application utilizing two on-premise/private data centers. Distance between these 2 is approx. 1000 KM and are connected by 1 Gbps network. This bandwidth is shared.
-  - Application has write-heavy access pattern.
-  - Current Application throughput must be maintained as per the SLO along side availability target.
-  - Aim for near Zero Recovery Point Objective (```RPO = 0```).
-  - To be cost effective by means of using open source tools/applications as much as possible.
-  - Aim for lesser operational complexity. 
+  - The application has write-heavy access pattern.
+  - Current Application throughput must contiue to meet SLO while achieving the target availability level.
+  - Achieve a near-zero Recovery Point Objective (```RPO = 0```).
+  - Remain cost-effective by leveraging open-source software wherever possible.
+  - Minimize operational complexity. 
 
 
-Basis objectives and current state, important points to note are, 
-  - *No Data loss* (i.e. RPO = 0)  will require synchronous replication between database nodes. In this, data-modifying transaction is not considered committed until all servers have committed the transaction. This will force a harsh write-latency penalty.
-  - With no 3rd physical data center, consensus based approaches like RAFT or using patroni for PG Failover can not operate in case of failure at both data centers as they required odd (```2n+1```) participants. 
+Following key considerations based on the objectives and current state,
 
-Referring to "Current state deployment" above, the authoritative state of the application is stored in PostgreSQL (Community Edition)  Database.  standard single-primary deployments present a single point of failure (SPOF). 
+  - *No data loss* (RPO = 0) requires synchronous replication between database nodes. In such a setup, a data-modifying transaction is not considered committed until all participating servers acknowledge the transaction. This introduces a significant write-latency penalty.
+  - Without a third physical data center, consensus-based approaches such as Raft or failover solutions such as Patroni cannot guarantee cluster availability during certain failure scenarios because they require an odd number (2n + 1) of voting participants to maintain quorum.. 
+  - Referring to "Current state deployment" above, the authoritative state of the application is stored in PostgreSQL (Community Edition)  Database.  standard single-primary deployments present a single point of failure (SPOF). 
 
 ## Landscape of PostgreSQL Distributed Architectures
 
-Current landscape of PostgreSQL Distributed Architectures is as follows (Some of the options like "Read replicas", "Cloud database offerings" are not listed as they are not relevant for the use case),
+The Current landscape of PostgreSQL Distributed Architectures includes following options. Some of the options like "Read replicas", "Cloud database offerings" are not listed as they are not relevant for the use case,
 
 | Type |	Description	| Pros and Cons|
 |:--- |:--- |:--- |
@@ -53,62 +51,68 @@ Based on above comparison, lets us go through couple of approaches in detail.
  
 ## Brief
  
-  As of this writing, PostgreSQL Community Edition does not offer Synchronous Multi-master deployment (ref: [here](https://www.postgresql.org/docs/current/different-replication-solutions.html)) where any server can accept write requests. 
+As of this writing, PostgreSQL Community Edition does not provide Synchronous Multi-master deployment (ref: [here](https://www.postgresql.org/docs/current/different-replication-solutions.html)) where any server can accept write requests. 
   
- Considering above, Data Partitioning based approach can be considered. In a nutshell, Data Partitioning is one of the basic scalability technique.
- It works by dividing the data into smaller sets and assigning it to a Server (in this case PG Database). So a server becomes independant of others as they share nothing.
+Given this limitation,a Data Partitioning (sharding) based approach can be considered. In a nutshell, Data Partitioning is one of the basic scalability technique. It works by dividing the data into smaller sets and assigning it to a Server (in this case PG Database). So a server becomes independant of others as they share nothing.
 
  - Why data partitioning/Sharding?
-     - The core motivation behind data partitioning is to divide the data set so that it could be distributed across servers such that there is no data overlap.
+     - The primary motivation behind data partitioning is to divide the data set so that it could be distributed across servers such that there is no data overlap.
      - Without data overlap, each server can make authoritative decisions about data modifications without communication overhead and without affecting availability during partial system failures.
-
- - Since PG only supports single-primary architecture, all application writes must be routed to designated primary node in respective data centers. Data partitioning can help achieve this.
- - Overall approach is to assign tenants per data center so as to achieve shared nothing scheme. 
+    - Since PG only supports single-primary architecture, all application writes must be routed to designated primary node in respective data centers. Data partitioning can help achieve this.
+    - A practical implementation would be to assign tenants to specific data centers, thereby achieving a shared-nothing architecture.
  
 ## Approach 
 
 ![Proposed Architecture with Sharding](/images/hadc_image2.svg)
 
-  - Sharding can be implemented at Application level or Database level. We will look at both the options. 
-  - Sharding helps address the concerns with  data size per server by distributing them across. However, for the purpose at hand, primary interest is in shared nothing approach it offers so as to overcome lack of "Active-Active"/Multi-master support in PostgreSQL. 
+  - Sharding can be implemented at Application level or Database level. Both options are discussed below. 
+  - While sharding is often introduced to overcome limits on data volume and throughput, the primary objective in this case is to achieve a shared-nothing architecture and compensate for PostgreSQL's lack of active-active support. 
   - **Sharding key** - is the information that is used to decide which server is responsible for the data that you are looking for (e.g. Institution ID). It helps to split the data so it could live in separate databases and then find a way to route all of your queries to the right database server. The data store does not need to support sharding for application to use it.
-  - For sharded systems, below are concerns from operational perspective, 
+  - Operational Considerations,
     - *Monitoring* - Aggregate metrics and logs across data centers to get view of system health
-    - *Backup and restore* - Need to plan back up and restore process for shards.A point-in-time restore of one shard can create inconsistencies with other shards.
-    - *Schema changes* - Data definition language (DDL) changes need to be planned across shards. 
+    - *Backup and restore* - Backup and restore procedures must be planned carefully across shards. A point-in-time recovery of a single shard can introduce inconsistencies with other shards.
+    - *Schema changes* - Data definition language (DDL) changes must be applied consistently across shards. 
 
   - Below image shows how sharding looks like,  
   
       ![Sharding Approach](/images/hadc_image3.svg)
 
-  - Sharding at Application level 
-      - Within Application, one probable approach (among many) is to, 
-        - Use modulo function to map from the sharding key value to the database number, but to start with, each database can be  a logical PG database rather than a physical machine 
-        - To start with,  initial number of PG Servers will have to provisioned in Active-Passive mode  and forecast how many more servers will be needed down the road. 
-        - For e.g., to begin with 2 servers with 32 databases each, each of these will be provisioned as logic databases with exact same schema on these servers. Refer below diagram, 
+  - Sharding at Application level
+   
+    One possible implementation approach is as follows:
+    
+    - Use a modulo-based function to map a sharding key to a database identifier. Initially, each shard may exist as a logical PostgreSQL database rather than on dedicated physical hardware. 
+    - Provision PostgreSQL servers in an Active-Passive configuration and estimate future growth requirements. 
+    - For e.g., start with 2 servers with 32 databases each, each of these will be provisioned as logic databases with exact same schema on these servers. Refer below diagram, 
 
-            ![Manual Sharding at Database](/images/hadc_bookimage.png)
+    ![Manual Sharding at Database](/images/hadc_bookimage.png)
 
-        - At Application level, implement mapping functions that allow you to find the database number and the physical server number based on the sharding key value. For e.g.  ```getDbNumber``` function that maps the sharding key value (like a Institution ID) to the database number (in this case, 32 of them) and ```getServerNumber```, which maps the database number to a physical server number (in this case, we have two). 
-        - As the database grows and need is to scale out, simply split your physical servers in two. For e.g.  take half of the logical database and move it to new hardware. At the same time,  modify  mapping code so that getServerNumber would return the correct server number for each logical database number.
-        - *No data loss* requirement requires us to use *Streaming replication/Hot standy* within a data center. However, this can only address failure of primary database and not the failure of Application nodes or data center itself. This confiuration can be deployed using [Patroni](https://github.com/zalando/patroni) or [pg_auto_failover](https://github.com/hapostgres/pg_auto_failover).
+    - Implement mapping functions within the application:
+      - ```getDbNumber()``` maps the sharding key (such as Institution ID) to a logical database.
+      - ```getServerNumber()``` maps the logical database to a physical server.
+      - As capacity requirements grow, physical servers can be added and logical databases redistributed. Only the server-mapping logic requires modification.
 
-        - Challenges 
-           - *Modulo* function based approach  works for static shard counts, but for dynamic shards, alternate approaches  `Consistent Hashing` or `Directory-based mapping` will have to be considered. Refer [here](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#advantages-and-considerations-for-each-strategy) for comparison of sharding strategy. Selection of strategy will have impact on infrastructure required as well as on operational complexity.
-           -  For future horizontal scalability of database, shard-specific database will have to be migrated to new servers with appropriate configuration changes to application sharding logic. 
-           -  Cross-shard queries will require additional consideration as it will require "Scatter-gather" approach to connect to multiple databases and then aggregating results. 
-         This is one of the many approaches for sharding and will need careful consideration before finalizing it.
+    - *No data loss* requirement requires us to use *Streaming replication/Hot standy* within a data center. However, this can only address failure of primary database and not the failure of Application nodes or data center itself. This confiuration can be deployed using [Patroni](https://github.com/zalando/patroni) or [pg_auto_failover](https://github.com/hapostgres/pg_auto_failover).
 
-    -  For the business case at hand, The load balancer is likely to route requests in round-robin or using any other algorithm, with no consideration for sharding across data centers. Hence, application in each data center will have to determine if it can process the request based on sharding key or else route the request to other data center.
+   - Challenges 
+     - *Modulo* function based approach  works for static shard counts, but for dynamic shards, alternate approaches  `Consistent Hashing` or `Directory-based mapping` will have to be considered. Refer [here](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#advantages-and-considerations-for-each-strategy) for comparison of sharding strategy. Selection of strategy will have impact on infrastructure required as well as on operational complexity.
+     -  Future horizontal scaling requires shard migration procedures and corresponding application configuration updates. 
+     -  Cross-shard queries will require additional consideration as it will require "Scatter-gather" approach to connect to multiple databases and then aggregating results. 
+  
+  This is one of the many approaches for sharding and will need careful consideration before finalizing it.
+
+  -  For the business case at hand, The load balancer is likely to route requests in round-robin or using any other algorithm, with no consideration for sharding across data centers. Hence, application in each data center will have to determine if it can process the request based on sharding key or else route the request to other data center.
         
-    ![Sequence showing routing](/images/hadc_image4.svg)
+  ![Sequence showing routing](/images/hadc_image4.svg)
 
-    - This approach can be further enhanced as below, 
-       -  Routing logic can be implemented as service  which can be independently deployed in redundant configuration if required.
-       -  This service will act as *pass-through* proxy where it decrypts the request and either forwards it to local App for processing or routes it to  other data center depending on sharding logic. 
-       -  Such service can implement health check check/Liveness probs for endpoint in other data center to continuously monitor the health and proactively respond with error for requests that require such routing. 
+ - This approach can be further enhanced as below, 
+    -  Routing logic can be implemented as service  which can be independently deployed in redundant configuration if required.
+    -  This service will act as *pass-through* proxy where it decrypts the request and either forwards it to local App for processing or routes it to  other data center depending on sharding logic. 
+    -  Such service can implement health check check/Liveness probs for endpoint in other data center to continuously monitor the health and proactively respond with error for requests that require such routing. 
+
+
     -  Drawbacks ,
-       -  This is not a truly High availability configuration since In case of disruption at any data center, significant percentage (up to 50% if shards are evenly distributed across data centers) of transactions will be impacted. Measures like provisioning exact replica of Application + Database servers will have to be planned in corresponding data center. This will result in additional expenditure and operational considerations.
+       -  This is not a true High availability configuration since In case of disruption at any data center, significant percentage (up to 50% if shards are evenly distributed across data centers) of transactions will be impacted. Measures like provisioning exact replica of Application + Database servers will have to be planned in corresponding data center. This will result in additional expenditure and operational considerations.
        -  Horizontal scaling of database and movement of respective shards (logical databases) will require careful operating procedure to minimize down time. 
        -  Routing of requests between shards results in additional network round trips and will impact throughput. 
         
@@ -184,3 +188,4 @@ Based on above comparison, lets us go through couple of approaches in detail.
 - [Sharding Pattern - Azure Architecture Center | Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding)
 - [PostgreSQL: Documentation: 18: 26.1. Comparison of Different Solutions](https://www.postgresql.org/docs/current/different-replication-solutions.html)
 - [What is data sharding | Google Cloud](https://cloud.google.com/discover/what-is-database-sharding)
+
