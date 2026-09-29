@@ -112,7 +112,34 @@ Refer &lt;a href=https://www.sas.com/en_us/insights/data-management/what-is-etl.
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Notes,&lt;/p&gt;</description>
+&lt;p&gt;Notes,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to Daily DM Limit, Follower details will have to be persisted alongside flag indicating if DM has been sent. SQLIte is used from simplicity perspective.&lt;/li&gt;
+&lt;li&gt;There should be a scheduled job that will send the DM upto daily DM Limit. At the same time, it needs to refetch any new followers and push them in the flow (reconcile).&lt;/li&gt;
+&lt;li&gt;Potentially, this could be extended to other social media providers other than twitter.&lt;/li&gt;
+&lt;li&gt;Milestones,
+&lt;ul&gt;
+&lt;li&gt;Create code structure
+&lt;ul&gt;
+&lt;li&gt;Plan is to have separation between CLI &amp;amp; have twitter as go package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept Arguments and Connect to Twitter&lt;/li&gt;
+&lt;li&gt;Study and complete follower retrieval&lt;/li&gt;
+&lt;li&gt;Ranking of followers&lt;/li&gt;
+&lt;li&gt;Persisting followers&lt;/li&gt;
+&lt;li&gt;Sending DM upto Daily limit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rules,
+&lt;ul&gt;
+&lt;li&gt;Use golang&amp;rsquo;s in-built packages as much as possible&lt;/li&gt;
+&lt;li&gt;Every milestone to have associated Unit test cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
