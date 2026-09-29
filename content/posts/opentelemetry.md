@@ -29,7 +29,8 @@ So is this standard already available? As of this writing, it is about to go **G
 
 Below diagram depicts what OpenTelemetry does in Nutshell (Source: [Opentelemetry.io](https://opentelmetry.io)),
 
-{{< figure src="https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Reference_Architecture.svg" title="OpenTelemetry in Nutshell" >}}
+![OpenTelemetry in nutshell](/images/otel/otel-diagram.svg)
+ 
 
 The general process of using OpenTelemetry is,
 
@@ -166,6 +167,42 @@ In Summary, this default telemetry can obviously be enhanced by adding Tags. Whe
 Hope this provides overview of instrumentation as provided by OpenTelemetry. Let me know if you have any questions or suggestions in Comments section below. 
 
 Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder `Opentelemetry` in repository [here](https://github.com/sachinsu/opentelemetrydotnet)
+
+**Update:- 29-sep-2026** 
+
+Nowadays, there are several tools available for Application performance Monitoring (APM). APM is A tool that monitors and reports the performance of an application. Current trend is to adhere to OpenTelemtry standard where below performance signals are captured,
+ 
+- Types of Performance Signals (Ref: [here](https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/monitoring))
+  § Metrics for aggregated performance behavior (latency distributions, throughput, error rates)
+  § Traces for understanding how time is distributed across request paths and system components
+  § Logs for detailed execution context at specific steps or events
+	
+	- There are APM tools available that use Telemetry for providing real-time insights. These systems use use two fundamental collection models. In a pull model, a component collects telemetry by querying a target system. In a push model, components emit telemetry as they send data outward. It's common to use a combined approach. For example, monitoring agents can use a pull model, running locally alongside each application instance to periodically collect data and write it to shared storage. At the same time, you can use a push model for application telemetry, where each instance emits logs, traces, and metrics to a message queue or eventstream as events occur.
+	- Examples of OpenTelemetry (OTEL) based tools that also provide APM features are [Signoz](https://signoz.io/), [ClickStack](https://clickhouse.com/clickstack), [Elastic APM](https://www.elastic.co/guide/en/apm/get-started/7.6/quick-start-overview.html) among others. Below are some of the screenshots
+
+- Best practices, 
+    - Ensure logs, metrics, and traces share common identifiers.
+	- Align monitoring to business value:
+	- Define business KPIs alongside technical SLIs.
+	- Instrument business events.
+	- Build dashboards that show business KPIs with supporting technical indicators.
+	- Align alerts severity with customer impact.
+	- Design dashboards for decisions
+	- Define audience (Executive, Ops, Engineering).
+    - Align to health model (Availability, Latency, Errors, Saturation).
+	- Focus on clarity and actionable insights.
+	- Remove decorative or redundant metrics.
+	
+    Below are screenshots from Signoz , open source APM platform, when used for visualization for a go languge code that exposes API.
+
+ ![Latency visualiation for service](/images/otel/otel1.png)
+
+
+ ![Latency visualiation for service](/images/otel/otel2.png)
+
+
+ ![Trace visualiation for service](/images/otel/otel3.png)
+
 
 ### Useful References,
 - [OpenTelemetry in 2023](https://bit.kevinslin.com/p/opentelemetry-in-2023)
