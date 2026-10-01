@@ -158,7 +158,7 @@ Lets start,
         - Web Service,
             {{< figure src="/images/ot_service.png" title="Default Telemetry" >}}
         
-        - Observations
+        - Observatio
             - Check Activity ID being shown is same as one reported by Console Application. So correlation has been established across process boundaries. This is important when tracing end to end across processes. This is achieved by means of passing Activity ID as HTTP Header.  In a Visualization tool, this correlation is used to depict end to end flow with time at each step.
             - By default, it logs start and end time. For any HTTP request, it generates additional telemetry covering URL to which request was sent and start and end time. 
 
@@ -167,6 +167,8 @@ In Summary, this default telemetry can obviously be enhanced by adding Tags. Whe
 Hope this provides overview of instrumentation as provided by OpenTelemetry. Let me know if you have any questions or suggestions in Comments section below. 
 
 Instrumenting .NET framework based Apps for same scenario is similar to above, refer folder `Opentelemetry` in repository [here](https://github.com/sachinsu/opentelemetrydotnet)
+
+*Note* - Tracing is not free. For every request, the OpenTelemetry SDK creates spans, fills them with attributes, passes the trace context along, and then serializes the spans and ships them to a backend. How much all of this costs depends a lot on the language, so we measured it. Consider using Sampling or Compile-time options where available.
 
 **Update:- 29-sep-2026** 
 
@@ -193,7 +195,7 @@ Nowadays, there are several tools available for Application performance Monitori
 	- Focus on clarity and actionable insights.
 	- Remove decorative or redundant metrics.
 	
-    Below are screenshots from Signoz , open source APM platform, when used for visualization for a go languge code that exposes API.
+    Below are screenshots from Signoz , open source APM platform, mwhen used for visualization for a go languge code that exposes API.
 
  ![Latency visualiation for service](/images/otel/otel1.png)
 
@@ -205,6 +207,7 @@ Nowadays, there are several tools available for Application performance Monitori
 
 
 ### Useful References,
+- [Cost of OpenTelemetry in terms of CPU , Memory usage](https://docs.coroot.com/tracing/opentelemetry-overhead/)
 - [OpenTelemetry in 2023](https://bit.kevinslin.com/p/opentelemetry-in-2023)
 - [OpenTelemetry in .NET](https://devblogs.microsoft.com/dotnet/opentelemetry-net-reaches-v1-0/)
 - [Short course on OpenTelemetry](https://www.youtube.com/watch?v=r8UvWSX3KA8))
